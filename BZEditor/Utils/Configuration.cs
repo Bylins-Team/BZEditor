@@ -245,7 +245,8 @@ namespace BZEditor
         /// <returns>Value</returns>
         internal DockState Read(string name, DockState defaultValue)
         {
-            return StringToDockState(ReadString(name, ((int)defaultValue).ToString()));
+            var value = ReadString(name, ((int)defaultValue).ToString());
+            return Enum.TryParse<DockState>(value, out var result) ? result : defaultValue;
         }
 
         /// <summary>
@@ -362,16 +363,6 @@ namespace BZEditor
         private FormWindowState StringToFormWindowState(string data)
         {
             return (FormWindowState)(int.Parse(data));
-        }
-
-        /// <summary>
-        /// Convert ascii representation to DockState
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        private DockState StringToDockState(string data)
-        {
-            return (DockState)(int.Parse(data));
         }
 
         /// <summary>

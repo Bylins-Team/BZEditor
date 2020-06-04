@@ -172,27 +172,22 @@ namespace BZEditor
             }
 
             var templatesFormState = settings.Read("templatesFormDockState", DockState.DockLeftAutoHide);
-            if (templatesFormState != DockState.Hidden && templatesFormState != DockState.Unknown)
-            {
-                templatesForm = new TemplatesForm(ref templatesDm);
-                templatesForm.Show(dockContainerMain, templatesFormState);
-                templatesForm.TemplateApplyingFired += TemplatesFormTemplateApplyingFired;
-            }
+            templatesForm = new TemplatesForm(ref templatesDm);
+            templatesForm.Show(dockContainerMain, GetValidDockState(templatesFormState));
+            templatesForm.TemplateApplyingFired += TemplatesFormTemplateApplyingFired;
 
             var zonesListFormState = settings.Read("zonesListFormDockState", DockState.DockLeftAutoHide);
-            if (zonesListFormState != DockState.Hidden && zonesListFormState != DockState.Unknown)
-            {
-                zonesListForm = new ZonesListForm(ref FileListsDm);
-                zonesListForm.ItemDoubleClicked += TreeFormItemDoubleClicked;
-                zonesListForm.ZoneLoadingActivated += TreeFormZoneLoadingActivated;
-                zonesListForm.ZoneSavingActivated += ZonesListFormZoneSavingActivated;
-                zonesListForm.ZoneUnloadingActivated += TreeFormZoneUnloadingActivated;
-                zonesListForm.ZonePrepareToSendActivated += ZonesListFormZonePrepareToSendActivated;
-                zonesListForm.SketchCreated += ZonesListFormSketchCreated;
-                zonesListForm.SketchSavingActivated += ZonesListFormSketchSavingActivated;
-                zonesListForm.SketchRemoved += ZonesListFormSketchRemoved;
-                zonesListForm.Show(dockContainerMain, zonesListFormState);
-            }
+            zonesListForm = new ZonesListForm(ref FileListsDm);
+            zonesListForm.ItemDoubleClicked += TreeFormItemDoubleClicked;
+            zonesListForm.ZoneLoadingActivated += TreeFormZoneLoadingActivated;
+            zonesListForm.ZoneSavingActivated += ZonesListFormZoneSavingActivated;
+            zonesListForm.ZoneUnloadingActivated += TreeFormZoneUnloadingActivated;
+            zonesListForm.ZonePrepareToSendActivated += ZonesListFormZonePrepareToSendActivated;
+            zonesListForm.SketchCreated += ZonesListFormSketchCreated;
+            zonesListForm.SketchSavingActivated += ZonesListFormSketchSavingActivated;
+            zonesListForm.SketchRemoved += ZonesListFormSketchRemoved;
+            zonesListForm.Show(dockContainerMain, GetValidDockState(templatesFormState));
+
 
 #if !DEBUG
             sf.SetNextState(100, "Инициализация...");
@@ -229,6 +224,9 @@ namespace BZEditor
                 }
             }
         }
+
+        private DockState GetValidDockState(DockState state)
+            => state == DockState.Hidden || state == DockState.Unknown ? DockState.DockLeftAutoHide : state;
 
         private void SetText()
         {
@@ -502,14 +500,13 @@ namespace BZEditor
             {
                 zonesListForm = new ZonesListForm(ref FileListsDm);
                 zonesListForm.ItemDoubleClicked += TreeFormItemDoubleClicked;
-                zonesListForm.ZoneLoadingActivated +=
-                    TreeFormZoneLoadingActivated;
-                zonesListForm.ZoneSavingActivated +=
-                    ZonesListFormZoneSavingActivated;
-                zonesListForm.ZoneUnloadingActivated +=
-                    TreeFormZoneUnloadingActivated;
-                zonesListForm.ZonePrepareToSendActivated +=
-                    ZonesListFormZonePrepareToSendActivated;
+                zonesListForm.ZoneLoadingActivated += TreeFormZoneLoadingActivated;
+                zonesListForm.ZoneSavingActivated += ZonesListFormZoneSavingActivated;
+                zonesListForm.ZoneUnloadingActivated += TreeFormZoneUnloadingActivated;
+                zonesListForm.ZonePrepareToSendActivated += ZonesListFormZonePrepareToSendActivated;
+                zonesListForm.SketchCreated += ZonesListFormSketchCreated;
+                zonesListForm.SketchSavingActivated += ZonesListFormSketchSavingActivated;
+                zonesListForm.SketchRemoved += ZonesListFormSketchRemoved;
             }
             zonesListForm.Show(dockContainerMain, DockState.DockLeftAutoHide);
         }
@@ -519,8 +516,7 @@ namespace BZEditor
             if (!dockContainerMain.Contents.Contains(templatesForm))
             {
                 templatesForm = new TemplatesForm(ref templatesDm);
-                templatesForm.TemplateApplyingFired +=
-                    TemplatesFormTemplateApplyingFired;
+                templatesForm.TemplateApplyingFired +=TemplatesFormTemplateApplyingFired;
             }
             templatesForm.Show(dockContainerMain, DockState.DockLeftAutoHide);
         }
