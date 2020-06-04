@@ -180,19 +180,7 @@ namespace BZEditor
             }
 
             var zonesListFormState = settings.Read("zonesListFormDockState", DockState.DockLeftAutoHide);
-            if (zonesListFormState != DockState.Hidden && zonesListFormState != DockState.Unknown)
-            {
-                zonesListForm = new ZonesListForm(ref FileListsDm);
-                zonesListForm.ItemDoubleClicked += TreeFormItemDoubleClicked;
-                zonesListForm.ZoneLoadingActivated += TreeFormZoneLoadingActivated;
-                zonesListForm.ZoneSavingActivated += ZonesListFormZoneSavingActivated;
-                zonesListForm.ZoneUnloadingActivated += TreeFormZoneUnloadingActivated;
-                zonesListForm.ZonePrepareToSendActivated += ZonesListFormZonePrepareToSendActivated;
-                zonesListForm.SketchCreated += ZonesListFormSketchCreated;
-                zonesListForm.SketchSavingActivated += ZonesListFormSketchSavingActivated;
-                zonesListForm.SketchRemoved += ZonesListFormSketchRemoved;
-                zonesListForm.Show(dockContainerMain, zonesListFormState);
-            }
+            ShowZoneListForm(zonesListFormState);
 
 #if !DEBUG
             sf.SetNextState(100, "»ÌËˆË‡ÎËÁ‡ˆËˇ...");
@@ -205,6 +193,7 @@ namespace BZEditor
                 else
                     OpenSketchWindow(wname, zonesListForm.GetSketchGuidByFileName(wname));
             }
+
             sf.Hide();
             sf.Dispose();
             Invalidate(true);
@@ -461,7 +450,7 @@ namespace BZEditor
 
         private void SaveSettings()
         {
-            settings.Write("templatesFormDockState", templatesForm.DockState);
+            settings.Write("templatesFormDockState", templatesForm?.DockState ?? DockState.Unknown); 
             settings.Write("zonesListFormDockState", zonesListForm.DockState);
             foreach (var t in dockContainerMain.Contents)
             {
@@ -496,22 +485,26 @@ namespace BZEditor
             settings.Save();
         }
 
-        private void —ÔËÒÓÍ«ÓÌToolStripMenuItemClick(object sender, EventArgs e)
+        private void —ÔËÒÓÍ«ÓÌToolStripMenuItemClick(object sender, EventArgs e) =>
+           ShowZoneListForm(DockState.DockLeftAutoHide);
+
+        private void ShowZoneListForm(DockState dockState)
         {
-            if (!dockContainerMain.Contents.Contains(zonesListForm))
+            if (zonesListForm == null)
             {
                 zonesListForm = new ZonesListForm(ref FileListsDm);
                 zonesListForm.ItemDoubleClicked += TreeFormItemDoubleClicked;
-                zonesListForm.ZoneLoadingActivated +=
-                    TreeFormZoneLoadingActivated;
-                zonesListForm.ZoneSavingActivated +=
-                    ZonesListFormZoneSavingActivated;
-                zonesListForm.ZoneUnloadingActivated +=
-                    TreeFormZoneUnloadingActivated;
-                zonesListForm.ZonePrepareToSendActivated +=
-                    ZonesListFormZonePrepareToSendActivated;
+                zonesListForm.ZoneLoadingActivated += TreeFormZoneLoadingActivated;
+                zonesListForm.ZoneSavingActivated += ZonesListFormZoneSavingActivated;
+                zonesListForm.ZoneUnloadingActivated += TreeFormZoneUnloadingActivated;
+                zonesListForm.ZonePrepareToSendActivated += ZonesListFormZonePrepareToSendActivated;
+                zonesListForm.SketchCreated += ZonesListFormSketchCreated;
+                zonesListForm.SketchSavingActivated += ZonesListFormSketchSavingActivated;
+                zonesListForm.SketchRemoved += ZonesListFormSketchRemoved;
             }
-            zonesListForm.Show(dockContainerMain, DockState.DockLeftAutoHide);
+
+            if (dockState != DockState.Hidden && dockState != DockState.Unknown)
+                zonesListForm.Show(dockContainerMain, dockState);
         }
 
         private void ÿ‡·ÎÓÌ˚ToolStripMenuItemClick(object sender, EventArgs e)
