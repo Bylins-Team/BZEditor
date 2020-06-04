@@ -1664,8 +1664,9 @@ namespace BZEditor
                 BackupManager bm = new BackupManager();
                 bm.BackupFinished += BackupFinished;
                 bm.Backup(zdm);
-            }
-            zdm.SaveData();
+            } 
+            else 
+                zdm.SaveData();
         }
 
         private void BackupFinished(bool cucces, ZoneDataManager zdm)
