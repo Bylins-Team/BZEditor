@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{611E6202-D036-41CA-BCAB-FD46B83A1FCA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BZEditor</RootNamespace>
+    <AssemblyName>BZEditor</AssemblyName>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BZEditorBuild\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\BZEditorBuild\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fireball.CodeEditor, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalComponents\Fireball.CodeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.CodeEditor.SyntaxFiles, Version=1.0.0.2, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalComponents\Fireball.CodeEditor.SyntaxFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.Core, Version=1.1.0.1, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalComponents\Fireball.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.SyntaxDocument, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalComponents\Fireball.SyntaxDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.Win32, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalComponents\Fireball.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.Windows.Forms, Version=1.9.0.0, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalComponents\Fireball.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.3.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalComponents\Interop.Microsoft.Office.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Word, Version=8.3.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalComponents\Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\BaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseDialog.Designer.cs">
+      <DependentUpon>BaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseDropParamsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseDropParamsForm.Designer.cs">
+      <DependentUpon>BaseDropParamsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseMDIChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBasesDataManager.cs" />
+    <Compile Include="Forms\CreateSketchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateSketchForm.Designer.cs">
+      <DependentUpon>CreateSketchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateSketchZoneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateSketchZoneForm.Designer.cs">
+      <DependentUpon>CreateSketchZoneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scrollbar\HorizontalScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\SetEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SetEditorForm.Designer.cs">
+      <DependentUpon>SetEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SketchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SketchForm.Designer.cs">
+      <DependentUpon>SketchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IngrSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IngrSelectForm.Designer.cs">
+      <DependentUpon>IngrSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SpellSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SpellSelectForm.Designer.cs">
+      <DependentUpon>SpellSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DropMobParamsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DropMobParamsForm.Designer.cs">
+      <DependentUpon>DropMobParamsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DropObjectParamsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DropObjectParamsForm.Designer.cs">
+      <DependentUpon>DropObjectParamsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\BackupManager.cs" />
+    <Compile Include="Scrollbar\VerticalScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Logic\ZoneValidator.cs" />
+    <Compile Include="Utils\Configuration.cs" />
+    <Compile Include="Utils\WinApi.cs" />
+    <Compile Include="Forms\ZoneSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ZoneSelectForm.Designer.cs">
+      <DependentUpon>ZoneSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateClonesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateClonesForm.Designer.cs">
+      <DependentUpon>CreateClonesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrepareZoneToSendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrepareZoneToSendForm.Designer.cs">
+      <DependentUpon>PrepareZoneToSendForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\AsyncOperation.cs" />
+    <Compile Include="Utils\AutoCases.cs" />
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateZoneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateZoneForm.Designer.cs">
+      <DependentUpon>CreateZoneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateNewEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateNewEntityForm.Designer.cs">
+      <DependentUpon>CreateNewEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectBackDirectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectBackDirectionForm.Designer.cs">
+      <DependentUpon>SelectBackDirectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CtreateTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CtreateTemplateForm.Designer.cs">
+      <DependentUpon>CtreateTemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\TextFormatter.cs" />
+    <Compile Include="Utils\ProcessCaller.cs" />
+    <Compile Include="Utils\TaggedComboBoxItem.cs" />
+    <Compile Include="Forms\TemplatesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TemplatesForm.Designer.cs">
+      <DependentUpon>TemplatesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ZonesListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ZonesListForm.Designer.cs">
+      <DependentUpon>ZonesListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TrgSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrgSelectForm.Designer.cs">
+      <DependentUpon>TrgSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RoomSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RoomSelectForm.Designer.cs">
+      <DependentUpon>RoomSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ObjSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ObjSelectForm.Designer.cs">
+      <DependentUpon>ObjSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCDiceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\BaseMDIChildForm.resx">
+      <DependentUpon>BaseMDIChildForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateSketchForm.resx">
+      <DependentUpon>CreateSketchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateSketchZoneForm.resx">
+      <DependentUpon>CreateSketchZoneForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetEditorForm.resx">
+      <DependentUpon>SetEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SketchForm.resx">
+      <DependentUpon>SketchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IngrSelectForm.resx">
+      <DependentUpon>IngrSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SpellSelectForm.resx">
+      <DependentUpon>SpellSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCDiceControl.resx">
+      <DependentUpon>UCDiceControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\MobSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MobSelectForm.Designer.cs">
+      <DependentUpon>MobSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\SpellingChecker.cs" />
+    <Compile Include="Forms\SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCObjectType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCObjectType.Designer.cs">
+      <DependentUpon>UCObjectType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCTwoPanelsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCTwoPanelsList.Designer.cs">
+      <DependentUpon>UCTwoPanelsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WldForm.Designer.cs">
+      <DependentUpon>WldForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseDropParamsForm.resx">
+      <DependentUpon>BaseDropParamsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DropMobParamsForm.resx">
+      <DependentUpon>DropMobParamsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DropObjectParamsForm.resx">
+      <DependentUpon>DropObjectParamsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ZoneSelectForm.resx">
+      <DependentUpon>ZoneSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateClonesForm.resx">
+      <DependentUpon>CreateClonesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateZoneForm.resx">
+      <DependentUpon>CreateZoneForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateNewEntityForm.resx">
+      <DependentUpon>CreateNewEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrepareZoneToSendForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrepareZoneToSendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectBackDirectionForm.resx">
+      <DependentUpon>SelectBackDirectionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CtreateTemplateForm.resx">
+      <DependentUpon>CtreateTemplateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TemplatesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TemplatesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ZonesListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ZonesListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrgSelectForm.resx">
+      <DependentUpon>TrgSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoomSelectForm.resx">
+      <DependentUpon>RoomSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ObjSelectForm.resx">
+      <DependentUpon>ObjSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MobSelectForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MobSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCObjectType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCObjectType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCTwoPanelsList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCTwoPanelsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WldForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WldForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataUtils\DataUtils.csproj">
+      <Project>{80877700-6E44-49E7-B0AB-FF83EF0183D1}</Project>
+      <Name>DataUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExtControls\ExtControls.csproj">
+      <Project>{93DB406B-B1B9-4982-BB43-3CF47B3E0DE7}</Project>
+      <Name>ExtControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemFrameworks\SystemFrameworks.csproj">
+      <Project>{CA555BFF-0750-46BD-81E4-9591612FC1B8}</Project>
+      <Name>SystemFrameworks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cfgnew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cfgload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filesave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filesaveas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\button_edit.png" />
+    <None Include="Resources\ToFirstRoom.png" />
+    <None Include="Resources\MapMisc.png" />
+    <Content Include="app.ico" />
+    <None Include="Resources\alert.png" />
+    <None Include="WhatsNew.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DOC\Падежи.txt" />
+    <None Include="DOC\ReadMe.txt" />
+    <None Include="Resources\alert16.png" />
+    <None Include="DOC\список ингров.txt" />
+    <Content Include="Resources\autolink.png" />
+    <None Include="Resources\button_remove.png" />
+    <None Include="Resources\button_add1.png" />
+    <None Include="Resources\brush2.png" />
+    <Content Include="Resources\button_add.png" />
+    <None Include="Resources\map16.png" />
+    <None Include="Resources\ZoomIn.png" />
+    <None Include="Resources\ZoomOut.png" />
+    <None Include="Resources\SelFromList.png" />
+    <None Include="Resources\spellcheck.png" />
+    <None Include="Resources\formattext.png" />
+    <None Include="Resources\formattext2.png" />
+    <None Include="Resources\button_GoToLine.png" />
+    <None Include="Resources\button_undo.png" />
+    <None Include="Resources\button_redo.png" />
+    <None Include="Resources\button_find.png" />
+    <None Include="Resources\button_find_next.png" />
+    <None Include="Resources\button_replace.png" />
+    <None Include="Resources\button_copy.png" />
+    <None Include="Resources\button_cut.png" />
+    <None Include="Resources\button_paste.png" />
+    <None Include="Resources\button_bookmark.png" />
+    <None Include="Resources\button_prevbookmark.png" />
+    <None Include="Resources\button_nextbookmark.png" />
+    <None Include="Resources\button_outdent.png" />
+    <None Include="Resources\button_indent.png" />
+    <None Include="Resources\button_addtemplate.png" />
+    <None Include="Resources\button_usetemplate.png" />
+    <None Include="Resources\button_addzone.png" />
+    <None Include="Resources\button_clone.png" />
+    <None Include="Resources\button_autolink_x.png" />
+    <None Include="Resources\button_autolink_y.png" />
+    <None Include="Resources\button_autolink_z.png" />
+    <None Include="Resources\button_addsketch.png" />
+    <None Include="Resources\button_cancel.png" />
+    <Content Include="Resources\button_createsmth.png" />
+    <None Include="Resources\button_pastetemplate.png" />
+    <None Include="Resources\button_exitapp.png" />
+    <None Include="Resources\button_oppositeexit.png" />
+    <None Include="Resources\button_gotosomething.png" />
+    <None Include="Resources\button_historyback.png" />
+    <None Include="Resources\button_historyforward.png" />
+    <None Include="Resources\button_reloadzone.png" />
+    <None Include="Resources\button_info.png" />
+    <None Include="Resources\button_details.png" />
+    <None Include="Resources\button_home_page.png" />
+    <None Include="Resources\button_insert_spell_num.png" />
+    <None Include="Resources\button_refreshsktlist.png" />
+    <None Include="Resources\button_editsketch.png" />
+    <Content Include="Resources\button_remove1.png" />
+    <Content Include="Resources\button_removesmth.png" />
+    <None Include="Resources\button_save.png" />
+    <None Include="Resources\button_selectpath.png" />
+    <None Include="Resources\button_saveall.png" />
+    <None Include="Resources\button_savesmall.png" />
+    <None Include="Resources\ktip.png" />
+    <None Include="Resources\ktip1.png" />
+    <None Include="Resources\help_content.png" />
+    <None Include="Resources\button_zinc.png" />
+    <None Include="Resources\button_zdec.png" />
+    <None Include="Resources\button_showtriggers.png" />
+    <None Include="Resources\button_showmobs.png" />
+    <None Include="Resources\button_showobjects.png" />
+    <None Include="Resources\button_shownumbers.png" />
+    <None Include="Resources\button_to0room.png" />
+    <None Include="Resources\button_whatsnew.png" />
+    <None Include="Resources\button_setworldfolder.png" />
+    <None Include="Resources\file_close1.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\button_show_room_on_map.png" />
+    <None Include="Resources\CheckUpdates.png" />
+    <None Include="Resources\button_save_cur_tab.png" />
+    <None Include="Resources\button_savesketch.png" />
+    <Content Include="Resources\splash.png" />
+    <None Include="Resources\zonechanged.png" />
+    <None Include="Resources\zoneineditmode.png" />
+    <None Include="Resources\zonenormal.png" />
+    <None Include="Resources\zonesend.png" />
+    <None Include="Resources\zoneslistrefresh.png" />
+    <None Include="Resources\zonesave.png" />
+    <None Include="Resources\zoneunload.png" />
+    <None Include="Resources\zoneload1.png" />
+    <None Include="Resources\zoneloadwin.png" />
+    <None Include="Resources\zoneload1251.png" />
+    <None Include="DOC\!Q.txt" />
+    <None Include="DOC\кодировка.txt" />
+    <None Include="DOC\TODO.txt" />
+    <None Include="DOC\Tips.txt" />
+    <None Include="DOC\Этапы.txt" />
+    <None Include="DOC\Рулесы.txt" />
+    <None Include="DOC\Global.txt" />
+    <None Include="Resources\validate.png" />
+    <None Include="Resources\zonengenerate.png" />
+    <None Include="Resources\ластик.png" />
+    <None Include="Resources\Выбор цвета.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

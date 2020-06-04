@@ -1,0 +1,4 @@
+* ExtraAttack
+FROM 0 TO 10 STEP 1
+FROM 15 TO 100 STEP 5
+255	255

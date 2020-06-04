@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80877700-6E44-49E7-B0AB-FF83EF0183D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataUtils</RootNamespace>
+    <AssemblyName>DataUtils</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BZEditorBuild\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\BZEditorBuild\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bounds.cs" />
+    <Compile Include="DataObjects\Direction.cs" />
+    <Compile Include="DataObjects\MobObjAfterDeath.cs" />
+    <Compile Include="DataObjects\MobObjsAfterDeathCollection.cs" />
+    <Compile Include="DataObjects\Ingredient.cs" />
+    <Compile Include="DataObjects\IngredientsCollection.cs" />
+    <Compile Include="SetsFileManager.cs" />
+    <Compile Include="DataObjects\Sets\ActivationMethod.cs" />
+    <Compile Include="DataObjects\Sets\ActivationMethodsCollection.cs" />
+    <Compile Include="DataObjects\Sets\StuffActivation.cs" />
+    <Compile Include="DataObjects\Sets\StuffActivationsCollection.cs" />
+    <Compile Include="DataObjects\Sets\SetStuff.cs" />
+    <Compile Include="DataObjects\Sets\SetStuffCollection.cs" />
+    <Compile Include="DataObjects\Sets\Set.cs" />
+    <Compile Include="DataObjects\Sets\SetsCollection.cs" />
+    <Compile Include="ZonesComplexGenerator.cs" />
+    <Compile Include="MobsFileManager.cs" />
+    <Compile Include="ObjectsFileManager.cs" />
+    <Compile Include="BaseManager.cs" />
+    <Compile Include="GlobalSketchFileManager.cs" />
+    <Compile Include="SketchFileManager.cs" />
+    <Compile Include="WorldFileManager.cs" />
+    <Compile Include="TriggersFileManager.cs" />
+    <Compile Include="ExitColors.cs" />
+    <Compile Include="ZoneFileManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataObjects\BaseDataObject.cs" />
+    <Compile Include="DataObjects\LoadedObjAfterDeath.cs" />
+    <Compile Include="DataObjects\LoadedObjAfterDeathCollection.cs" />
+    <Compile Include="DataObjects\BaseDataArrayList.cs" />
+    <Compile Include="DataObjects\GlobalSketch.cs" />
+    <Compile Include="DataObjects\GlobalSketchRoom.cs" />
+    <Compile Include="DataObjects\SketchRoomsCollection.cs" />
+    <Compile Include="DataObjects\ZoneData.cs" />
+    <Compile Include="DataObjects\ZonesDataList.cs" />
+    <Compile Include="DataObjects\Point3D.cs" />
+    <Compile Include="DataObjects\SketchRoom.cs" />
+    <Compile Include="SingleMapGenerator.cs" />
+    <Compile Include="Static.cs" />
+    <Compile Include="TemplatesDataManager.cs" />
+    <Compile Include="DataObjects\Exit.cs" />
+    <Compile Include="DataObjects\MobsCollection.cs" />
+    <Compile Include="DataObjects\Cases.cs" />
+    <Compile Include="DataObjects\OperatedMob.cs" />
+    <Compile Include="DataObjects\MobParameters.cs" />
+    <Compile Include="DataObjects\MobSpell.cs" />
+    <Compile Include="DataObjects\MobSpellsCollection.cs" />
+    <Compile Include="DataObjects\MobSkill.cs" />
+    <Compile Include="DataObjects\MobSkillsCollection.cs" />
+    <Compile Include="DataObjects\ObjsCollection.cs" />
+    <Compile Include="DataObjects\Obj.cs" />
+    <Compile Include="DataObjects\Bonus.cs" />
+    <Compile Include="DataObjects\BonusesCollection.cs" />
+    <Compile Include="DataObjects\OperatedObj.cs" />
+    <Compile Include="DataObjects\Mob.cs" />
+    <Compile Include="DataObjects\OperatedObjCollection.cs" />
+    <Compile Include="DataObjects\OperatedMobsCollection.cs" />
+    <Compile Include="DataObjects\MobObjsCollection.cs" />
+    <Compile Include="DataObjects\MobObj.cs" />
+    <Compile Include="DataObjects\Trigger.cs" />
+    <Compile Include="DataObjects\TriggersCollection.cs" />
+    <Compile Include="DataObjects\RoomDescription.cs" />
+    <Compile Include="DataObjects\Room.cs" />
+    <Compile Include="DataObjects\ExtraDesc.cs" />
+    <Compile Include="DataObjects\ExtraDescCollection.cs" />
+    <Compile Include="DataObjects\RoomsCollection.cs" />
+    <Compile Include="DataObjects\Zone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZoneDataManager.cs" />
+    <Compile Include="FileListsDataManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SystemFrameworks\SystemFrameworks.csproj">
+      <Project>{CA555BFF-0750-46BD-81E4-9591612FC1B8}</Project>
+      <Name>SystemFrameworks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
