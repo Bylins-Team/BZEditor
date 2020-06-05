@@ -5552,7 +5552,9 @@ namespace BZEditor
 
         private void ObjTypeSpecParamChanged(object sender, EventArgs e)
         {
-            if (lvMainList.SelectedItems.Count <= 0 || !MustUpdateTypeSpecParams) return;
+            if (lvMainList.SelectedItems == null || lvMainList.SelectedItems.Count <= 0 || !MustUpdateTypeSpecParams) 
+                return;
+
             Obj curObject = ZoneDm.Objects[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
             switch (((Control)sender).Name)
             {
