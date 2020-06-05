@@ -1321,22 +1321,29 @@ namespace BZEditor
         {
             string err = "";
             string grammarerr = "";
-            if (sender is TextBox)
+            try
             {
-                err = SpellingChecker.SpellingCheck((TextBox)sender);
-                grammarerr = SpellingChecker.CheckGrammar(((TextBox)sender).Text);
+                if (sender is TextBox)
+                {
+                    err = SpellingChecker.SpellingCheck((TextBox)sender);
+                    grammarerr = SpellingChecker.CheckGrammar(((TextBox)sender).Text);
+                }
+                else if (sender is CExtRichTextBox)
+                {
+                    err = SpellingChecker.SpellingCheck((CExtRichTextBox)sender);
+                    grammarerr = SpellingChecker.CheckGrammar(((CExtRichTextBox)sender).Text);
+                }
+                string reserr = err;
+                if (grammarerr.Length > 0)
+                    reserr += "\r\n" + grammarerr;
+                else
+                    reserr += grammarerr;
+                errorProvider.SetError((Control)sender, reserr);
             }
-            else if (sender is CExtRichTextBox)
+            catch (Exception)
             {
-                err = SpellingChecker.SpellingCheck((CExtRichTextBox)sender);
-                grammarerr = SpellingChecker.CheckGrammar(((CExtRichTextBox)sender).Text);
+                MessageBox.Show("Не удалась иницализация правописания от Microsoft Office. Microsoft Office не установлен, или версия слишком старая/новая.");
             }
-            string reserr = err;
-            if (grammarerr.Length > 0)
-                reserr += "\r\n" + grammarerr;
-            else
-                reserr += grammarerr;
-            errorProvider.SetError((Control)sender, reserr);
         }
 
         private void RefreshMainList()
@@ -1665,8 +1672,7 @@ namespace BZEditor
                 bm.BackupFinished += BackupFinished;
                 bm.Backup(zdm);
             } 
-            else 
-                zdm.SaveData();
+            zdm.SaveData();
         }
 
         private void BackupFinished(bool cucces, ZoneDataManager zdm)

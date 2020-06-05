@@ -3141,6 +3141,7 @@ namespace BZEditor
             this.elvRoomObjInObj.ContextMenuStrip = this.cmsGridMenu;
             this.elvRoomObjInObj.FullRowSelect = true;
             this.elvRoomObjInObj.GridLines = true;
+            this.elvRoomObjInObj.HideSelection = false;
             this.elvRoomObjInObj.LabelWrap = false;
             this.elvRoomObjInObj.Location = new System.Drawing.Point(3, 14);
             this.elvRoomObjInObj.MultiSelect = false;
@@ -4021,6 +4022,7 @@ namespace BZEditor
             this.elvVitrualRoomMobObjects.ContextMenuStrip = this.cmsGridMenu;
             this.elvVitrualRoomMobObjects.FullRowSelect = true;
             this.elvVitrualRoomMobObjects.GridLines = true;
+            this.elvVitrualRoomMobObjects.HideSelection = false;
             this.elvVitrualRoomMobObjects.LabelWrap = false;
             this.elvVitrualRoomMobObjects.Location = new System.Drawing.Point(3, 51);
             this.elvVitrualRoomMobObjects.MultiSelect = false;
@@ -4115,6 +4117,7 @@ namespace BZEditor
             this.elvRoomMobObjectsLoadingAfterDeath.ContextMenuStrip = this.cmsGridMenu;
             this.elvRoomMobObjectsLoadingAfterDeath.FullRowSelect = true;
             this.elvRoomMobObjectsLoadingAfterDeath.GridLines = true;
+            this.elvRoomMobObjectsLoadingAfterDeath.HideSelection = false;
             this.elvRoomMobObjectsLoadingAfterDeath.LabelWrap = false;
             this.elvRoomMobObjectsLoadingAfterDeath.Location = new System.Drawing.Point(3, 3);
             this.elvRoomMobObjectsLoadingAfterDeath.MultiSelect = false;
@@ -4171,6 +4174,7 @@ namespace BZEditor
             this.elvRoomMobObjects.ContextMenuStrip = this.cmsGridMenu;
             this.elvRoomMobObjects.FullRowSelect = true;
             this.elvRoomMobObjects.GridLines = true;
+            this.elvRoomMobObjects.HideSelection = false;
             this.elvRoomMobObjects.LabelWrap = false;
             this.elvRoomMobObjects.Location = new System.Drawing.Point(3, 3);
             this.elvRoomMobObjects.MultiSelect = false;
@@ -4272,6 +4276,7 @@ namespace BZEditor
             | System.Windows.Forms.AnchorStyles.Right)));
             this.elvRoomIngredients.FullRowSelect = true;
             this.elvRoomIngredients.GridLines = true;
+            this.elvRoomIngredients.HideSelection = false;
             this.elvRoomIngredients.LabelWrap = false;
             this.elvRoomIngredients.Location = new System.Drawing.Point(3, 3);
             this.elvRoomIngredients.Name = "elvRoomIngredients";
@@ -4292,6 +4297,7 @@ namespace BZEditor
             | System.Windows.Forms.AnchorStyles.Right)));
             this.elvMobIngredients.FullRowSelect = true;
             this.elvMobIngredients.GridLines = true;
+            this.elvMobIngredients.HideSelection = false;
             this.elvMobIngredients.LabelWrap = false;
             this.elvMobIngredients.Location = new System.Drawing.Point(3, 3);
             this.elvMobIngredients.Name = "elvMobIngredients";
@@ -4930,6 +4936,7 @@ namespace BZEditor
             this.lvZoneInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvZoneInfo.FullRowSelect = true;
             this.lvZoneInfo.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lvZoneInfo.HideSelection = false;
             this.lvZoneInfo.Location = new System.Drawing.Point(3, 3);
             this.lvZoneInfo.MultiSelect = false;
             this.lvZoneInfo.Name = "lvZoneInfo";
@@ -5487,6 +5494,7 @@ namespace BZEditor
             this.elvVitrualRoomMobObjectsAfterDeath.ContextMenuStrip = this.cmsGridMenu;
             this.elvVitrualRoomMobObjectsAfterDeath.FullRowSelect = true;
             this.elvVitrualRoomMobObjectsAfterDeath.GridLines = true;
+            this.elvVitrualRoomMobObjectsAfterDeath.HideSelection = false;
             this.elvVitrualRoomMobObjectsAfterDeath.LabelWrap = false;
             this.elvVitrualRoomMobObjectsAfterDeath.Location = new System.Drawing.Point(3, 16);
             this.elvVitrualRoomMobObjectsAfterDeath.MultiSelect = false;
@@ -6353,6 +6361,7 @@ namespace BZEditor
             this.elvObjectsInRoom.ContextMenuStrip = this.cmsGridMenu;
             this.elvObjectsInRoom.FullRowSelect = true;
             this.elvObjectsInRoom.GridLines = true;
+            this.elvObjectsInRoom.HideSelection = false;
             this.elvObjectsInRoom.LabelWrap = false;
             this.elvObjectsInRoom.Location = new System.Drawing.Point(3, 3);
             this.elvObjectsInRoom.MultiSelect = false;
@@ -9246,11 +9255,6 @@ namespace BZEditor
             // nudMobCha
             // 
             this.nudMobCha.Location = new System.Drawing.Point(286, 20);
-            this.nudMobCha.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.nudMobCha.Name = "nudMobCha";
             this.nudMobCha.Size = new System.Drawing.Size(52, 20);
             this.nudMobCha.TabIndex = 6;
@@ -9259,11 +9263,6 @@ namespace BZEditor
             // nudMobDex
             // 
             this.nudMobDex.Location = new System.Drawing.Point(174, 20);
-            this.nudMobDex.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.nudMobDex.Name = "nudMobDex";
             this.nudMobDex.Size = new System.Drawing.Size(52, 20);
             this.nudMobDex.TabIndex = 4;
@@ -9272,11 +9271,6 @@ namespace BZEditor
             // nudMobInt
             // 
             this.nudMobInt.Location = new System.Drawing.Point(62, 20);
-            this.nudMobInt.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.nudMobInt.Name = "nudMobInt";
             this.nudMobInt.Size = new System.Drawing.Size(52, 20);
             this.nudMobInt.TabIndex = 2;
@@ -9293,11 +9287,6 @@ namespace BZEditor
             // nudMobCon
             // 
             this.nudMobCon.Location = new System.Drawing.Point(230, 20);
-            this.nudMobCon.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.nudMobCon.Name = "nudMobCon";
             this.nudMobCon.Size = new System.Drawing.Size(52, 20);
             this.nudMobCon.TabIndex = 5;
@@ -9306,11 +9295,6 @@ namespace BZEditor
             // nudMobWis
             // 
             this.nudMobWis.Location = new System.Drawing.Point(118, 20);
-            this.nudMobWis.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.nudMobWis.Name = "nudMobWis";
             this.nudMobWis.Size = new System.Drawing.Size(52, 20);
             this.nudMobWis.TabIndex = 3;
@@ -9328,11 +9312,6 @@ namespace BZEditor
             // nudMobStr
             // 
             this.nudMobStr.Location = new System.Drawing.Point(6, 20);
-            this.nudMobStr.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.nudMobStr.Name = "nudMobStr";
             this.nudMobStr.Size = new System.Drawing.Size(52, 20);
             this.nudMobStr.TabIndex = 1;
@@ -10032,6 +10011,7 @@ namespace BZEditor
             this.lvTrgActivationConditions.FullRowSelect = true;
             this.lvTrgActivationConditions.GridLines = true;
             this.lvTrgActivationConditions.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lvTrgActivationConditions.HideSelection = false;
             this.lvTrgActivationConditions.Location = new System.Drawing.Point(3, 16);
             this.lvTrgActivationConditions.Name = "lvTrgActivationConditions";
             this.lvTrgActivationConditions.ShowItemToolTips = true;
