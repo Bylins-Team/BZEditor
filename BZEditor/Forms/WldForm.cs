@@ -5854,11 +5854,11 @@ namespace BZEditor
         {
             switch (cboxObjType.SelectedIndex)
             {
-                case 0: //Источник света
+                case 1: //Источник света
                     SetNumericParam(nudObjLighterValue, obj.Param1);
                     pObjLighter.Visible = true;
                     break;
-                case 1: //Магический свиток
+                case 2: //Магический свиток
                     SetNumericParam(nudObjMagScrollMinLev, obj.Param1);
                     SetCBoxsSelectedItem(cboxObjMagScrollSpell1, obj.Param2);
                     SetCBoxsSelectedItem(cboxObjMagScrollSpell2, obj.Param3);
@@ -5867,7 +5867,7 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;
                     break;
-                case 2: //Волшебная палочка
+                case 3: //Волшебная палочка
                     SetNumericParam(nudObjMagWandMinLev, obj.Param1);
                     SetNumericParam(nudObjMagWandZarCnt, obj.Param2);
                     SetNumericParam(nudObjMagWandZarCntCurr, obj.Param3);
@@ -5876,7 +5876,7 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;
                     break;
-                case 3: //Магический посох
+                case 4: //Магический посох
                     SetNumericParam(nudObjMagStaffMinLev, obj.Param1);
                     SetNumericParam(nudObjMagStaffZarCnt, obj.Param2);
                     SetNumericParam(nudObjMagStaffZarCntCur, obj.Param3);
@@ -5885,7 +5885,7 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;
                     break;
-                case 4: //Оружие
+                case 5: //Оружие
                     SetNumericParam(nudObjWeaponD1, obj.Param2);
                     SetNumericParam(nudObjWeaponD2, obj.Param3);
                     lObjAverageDam.Text = "Ср: " +
@@ -5894,12 +5894,12 @@ namespace BZEditor
                     SetCBoxsSelectedItem(cboxObjWeaponSrikeType, obj.Param4);
                     pObjWeapon.Visible = true;
                     break;
-                case 8: //Броня
+                case 9: //Броня
                     SetNumericParam(nudObjArmorAC, obj.Param1);
                     SetNumericParam(nudObjArmorArm, obj.Param2);
                     pObjArmor.Visible = true;
                     break;
-                case 9: //Магический напиток
+                case 10: //Магический напиток
                     SetNumericParam(nudObjPotionMinLev, obj.Param1);
                     SetCBoxsSelectedItem(cboxObjPotionSpell1, obj.Param2);
                     SetCBoxsSelectedItem(cboxObjPotionSpell2, obj.Param3);
@@ -5908,7 +5908,7 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;
                     break;
-                case 14: //Контейнер
+                case 15: //Контейнер
                     SetNumericParam(nudObjContainerValue, obj.Param1);
                     SetNumericParam(nudObjLockVal, obj.Param4);
                     SetNumericParam(nudObjContainerKeyVNum, obj.Param3);
@@ -5931,7 +5931,7 @@ namespace BZEditor
                         SetListViewItemChecked(lvObjContainerFlags, 8, false);
                     pObjContainer.Visible = true;
                     break;
-                case 16: //Контейнер для жидкостей
+                case 17: //Контейнер для жидкостей
                     SetNumericParam(nudObjLiquidContainerMaxVal, obj.Param1);
                     SetNumericParam(nudObjLiquidContainerCurVal, obj.Param2);
                     SetCBoxsSelectedItem(cboxObjLiquidContainerDrinkType, obj.Param3);
@@ -5942,28 +5942,28 @@ namespace BZEditor
                     cboxObjSkill.Enabled = false;
                     pObjLiquidContainer.Visible = true;
                     break;
-                case 18: //Корм
+                case 19: //Корм
                     SetNumericParam(nudObjFoodVal, obj.Param1);
                     SetNumericParam(nudObjFoodPoison, obj.Param2);
                     pObjFood.Visible = true;
                     break;
-                case 19: //Бабло
+                case 20: //Бабло
                     SetNumericParam(nudObjMoneyValue, obj.Param1);
                     SetCBoxsSelectedItem(cboxMoneyCurrency, obj.Param2);
                     pObjMoney.Visible = true;
                     break;
-                case 22: //Фонтан
+                case 23: //Фонтан
                     SetNumericParam(nudObjFontanMaxVal, obj.Param1);
                     SetNumericParam(nudObjFontanCurVal, obj.Param2);
                     SetCBoxsSelectedItem(cboxObjFontanDrinkType, obj.Param3);
                     SetNumericParam(nudObjFontanPoison, obj.Param4);
                     pObjFontan.Visible = true;
                     break;
-                case 23: //Магическая книга
+                case 24: //Магическая книга
                     SetCBoxsSelectedItem(cboxObjMagBookSpell, obj.Param2);
                     pObjMagBook.Visible = true;
                     break;
-                case 24: //Магический ингредиент
+                case 25: //Магический ингредиент
                     foreach (ListViewItem lvi in lvObjMagIngrFlags.Items)
                         lvi.Checked = obj.MagicFlags.ToLower().Contains(lvi.Tag.ToString().ToLower());
                     string param1 = obj.Param1;
@@ -5981,9 +5981,9 @@ namespace BZEditor
                     SetNumericParam(nudObjMagIngrUseRemain, param3);
                     pObjMagIngr.Visible = true;
                     break;
-                case 25: //Ингридиент для отвара
+                case 26: //Ингридиент для отвара
                     break;
-                case 26: //Бинт
+                case 27: //Бинт
                     SetNumericParam(nudObjBandageValue, obj.Param1);
                     pObjBandage.Visible = true;
                     break;
