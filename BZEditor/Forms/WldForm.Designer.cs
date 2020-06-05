@@ -3215,7 +3215,7 @@ namespace BZEditor
             1,
             0,
             0,
-            0});
+            -2147483648});
             this.nudMaxInRoom.Name = "nudMaxInRoom";
             this.nudMaxInRoom.Size = new System.Drawing.Size(61, 20);
             this.nudMaxInRoom.TabIndex = 84;
