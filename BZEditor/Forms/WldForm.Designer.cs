@@ -1910,7 +1910,6 @@ namespace BZEditor
             label22.TabIndex = 8;
             label22.Text = "Макс.в мире";
             label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            label22.Visible = false;
             // 
             // label10
             // 
@@ -3646,11 +3645,15 @@ namespace BZEditor
             0,
             0,
             0});
+            this.nudMobMaxInWorld.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
             this.nudMobMaxInWorld.Name = "nudMobMaxInWorld";
             this.nudMobMaxInWorld.Size = new System.Drawing.Size(52, 20);
             this.nudMobMaxInWorld.TabIndex = 13;
             this.toolTip.SetToolTip(this.nudMobMaxInWorld, "Максимальное количество \r\nмобов такого типа в мире.");
-            this.nudMobMaxInWorld.Visible = false;
             this.nudMobMaxInWorld.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // dctrlMobHP

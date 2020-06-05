@@ -6642,9 +6642,9 @@ namespace BZEditor
                 case "nudMobHitroll":
                     mob.Hitroll = Convert.ToInt32(nudMobHitroll.Value);
                     break;
-                /*case "nudMobMaxInWorld":
+                case "nudMobMaxInWorld":
                     mob.MaxInWorld = Convert.ToInt32(nudMobMaxInWorld.Value);
-                    break;*/
+                    break;
                 case "dctrlMobHP":
                     mob.Hits = dctrlMobHP.Value;
                     break;
@@ -7389,7 +7389,7 @@ namespace BZEditor
                     nudMobWeight.Value = mob.Stats.Weight;
                     nudMobAC.Value = mob.Ac;
                     nudMobHitroll.Value = mob.Hitroll;
-                    //nudMobMaxInWorld.Value = mob.MaxInWorld; //скрыто на странице моба
+                    nudMobMaxInWorld.Value = mob.MaxInWorld;
                     if (mob.Align < 0)
                         cboxMobAlign.SelectedIndex = 0;
                     else cboxMobAlign.SelectedIndex = mob.Align == 0 ? 1 : 2;
