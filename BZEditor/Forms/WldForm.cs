@@ -5124,7 +5124,7 @@ namespace BZEditor
         {
             if (lvMainList.SelectedItems.Count <= 0) return;
             Obj curObject = ZoneDm.Objects[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
-            curObject.Type = cboxObjType.SelectedIndex + 1;
+            curObject.Type = cboxObjType.SelectedIndex;
             foreach (Control c in gbObjType.Controls)
             {
                 if (c is Panel)
@@ -6277,7 +6277,7 @@ namespace BZEditor
             if (curObject == null) return;
             SetCBoxsSelectedItem(cboxObjectGender, curObject.Sex);
             MustRefreshTypeSpecParams = false;
-            cboxObjType.SelectedIndex = curObject.Type - 1;
+            cboxObjType.SelectedIndex = curObject.Type;
             MustRefreshTypeSpecParams = true;
             RefreshSpecParams(curObject);
             if (curObject.Type - 1 != 16)
