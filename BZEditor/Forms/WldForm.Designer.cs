@@ -5155,7 +5155,7 @@ namespace BZEditor
             // 
             this.nudZoneLevel.Location = new System.Drawing.Point(4, 285);
             this.nudZoneLevel.Maximum = new decimal(new int[] {
-            32,
+            34,
             0,
             0,
             0});
