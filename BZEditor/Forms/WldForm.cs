@@ -571,7 +571,7 @@ namespace BZEditor
             cbZoneReopopType.SelectedIndex = ZoneDm.Zone.RepopType;
             cboxZonType.SelectedIndex = ZoneDm.Zone.Type;
             //Закладка ZON-файл
-            nudZoneLevel.Value = ZoneDm.Zone.Level;
+            nudZoneLevel.Value = Math.Min(nudZoneLevel.Maximum, ZoneDm.Zone.Level);
 
             elvVitrualRoomMobObjects.MySortBrush = SystemBrushes.ControlLight;
             NumericUpDown nudObjLoadInMobProb = new NumericUpDown { Minimum = (-1) };
