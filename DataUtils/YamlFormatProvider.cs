@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -23,13 +24,14 @@ namespace DataUtils
 
         public YamlFormatProvider()
         {
+            // Engine (bylins/mud yaml_world_data_source.cpp) reads snake_case keys.
             serializer = new SerializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                .WithNamingConvention(UnderscoredNamingConvention.Instance)
                 .ConfigureDefaultValuesHandling(DefaultValuesHandling.OmitNull | DefaultValuesHandling.OmitDefaults)
                 .Build();
 
             deserializer = new DeserializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                .WithNamingConvention(UnderscoredNamingConvention.Instance)
                 .IgnoreUnmatchedProperties()
                 .Build();
         }
@@ -37,6 +39,75 @@ namespace DataUtils
         private string GetZoneDir(string zoneNumber)
         {
             return Path.Combine(StaticData.WorldFolderPath, "zones", zoneNumber);
+        }
+
+        /// <summary>
+        /// Entity file name as the engine expects it: rel = vnum % 100, zero-padded to 2 digits.
+        /// </summary>
+        private static string RelFileName(int vnum)
+        {
+            return (((vnum % 100) + 100) % 100).ToString("00") + ".yaml";
+        }
+
+        private static bool IsIndexFile(string path)
+        {
+            return string.Equals(Path.GetFileName(path), "index.yaml", StringComparison.OrdinalIgnoreCase);
+        }
+
+        /// <summary>
+        /// Writes a per-directory index.yaml: { &lt;key&gt;: [rel, rel, ...] } sorted ascending.
+        /// </summary>
+        private void WriteEntityIndex(string dir, string key, List<int> vnums)
+        {
+            var rels = new List<int>();
+            foreach (int v in vnums)
+            {
+                int rel = ((v % 100) + 100) % 100;
+                if (!rels.Contains(rel)) rels.Add(rel);
+            }
+            rels.Sort();
+            var index = new Dictionary<string, List<int>> { { key, rels } };
+            File.WriteAllText(Path.Combine(dir, "index.yaml"), serializer.Serialize(index), DefaultEncoding);
+        }
+
+        /// <summary>
+        /// Ensures zones/index.yaml exists and contains the given zone vnum.
+        /// </summary>
+        private void EnsureZoneInGlobalIndex(int zoneVnum)
+        {
+            string zonesDir = Path.Combine(StaticData.WorldFolderPath, "zones");
+            Directory.CreateDirectory(zonesDir);
+            string indexPath = Path.Combine(zonesDir, "index.yaml");
+
+            var zones = new List<int>();
+            if (File.Exists(indexPath))
+            {
+                try
+                {
+                    var existing = deserializer.Deserialize<Dictionary<string, List<int>>>(
+                        File.ReadAllText(indexPath, DefaultEncoding));
+                    if (existing != null && existing.TryGetValue("zones", out var list) && list != null)
+                        zones = list;
+                }
+                catch { /* malformed index is rebuilt below */ }
+            }
+
+            if (!zones.Contains(zoneVnum)) zones.Add(zoneVnum);
+            zones.Sort();
+            var index = new Dictionary<string, List<int>> { { "zones", zones } };
+            File.WriteAllText(indexPath, serializer.Serialize(index), DefaultEncoding);
+        }
+
+        /// <summary>
+        /// world_config.yaml is required by the engine; create a default if missing.
+        /// </summary>
+        private void EnsureWorldConfig()
+        {
+            string configPath = Path.Combine(StaticData.WorldFolderPath, "world_config.yaml");
+            if (File.Exists(configPath)) return;
+            Directory.CreateDirectory(StaticData.WorldFolderPath);
+            var config = new Dictionary<string, string> { { "line_endings", "unix" } };
+            File.WriteAllText(configPath, serializer.Serialize(config), DefaultEncoding);
         }
 
         #region Load Operations
@@ -77,6 +148,7 @@ namespace DataUtils
 
                 foreach (var file in Directory.GetFiles(roomsDir, "*.yaml"))
                 {
+                    if (IsIndexFile(file)) continue;
                     string yamlContent = File.ReadAllText(file, encoding ?? DefaultEncoding);
                     var yamlRoom = deserializer.Deserialize<YamlRoom>(yamlContent);
                     var room = YamlRoomMapper.FromYaml(yamlRoom);
@@ -104,6 +176,7 @@ namespace DataUtils
 
                 foreach (var file in Directory.GetFiles(mobsDir, "*.yaml"))
                 {
+                    if (IsIndexFile(file)) continue;
                     string yamlContent = File.ReadAllText(file, encoding ?? DefaultEncoding);
                     var yamlMob = deserializer.Deserialize<YamlMob>(yamlContent);
                     var mob = YamlMobMapper.FromYaml(yamlMob);
@@ -131,6 +204,7 @@ namespace DataUtils
 
                 foreach (var file in Directory.GetFiles(objsDir, "*.yaml"))
                 {
+                    if (IsIndexFile(file)) continue;
                     string yamlContent = File.ReadAllText(file, encoding ?? DefaultEncoding);
                     var yamlObj = deserializer.Deserialize<YamlObj>(yamlContent);
                     var obj = YamlObjMapper.FromYaml(yamlObj);
@@ -158,6 +232,7 @@ namespace DataUtils
 
                 foreach (var file in Directory.GetFiles(trigsDir, "*.yaml"))
                 {
+                    if (IsIndexFile(file)) continue;
                     string yamlContent = File.ReadAllText(file, encoding ?? DefaultEncoding);
                     var yamlTrigger = deserializer.Deserialize<YamlTrigger>(yamlContent);
                     var trigger = YamlTriggerMapper.FromYaml(yamlTrigger);
@@ -195,6 +270,9 @@ namespace DataUtils
                 string yaml = serializer.Serialize(yamlZone);
                 string zonePath = Path.Combine(zoneDir, "zone.yaml");
                 File.WriteAllText(zonePath, yaml, DefaultEncoding);
+
+                EnsureZoneInGlobalIndex(zone.Number);
+                EnsureWorldConfig();
             }
             catch (Exception ex)
             {
@@ -215,13 +293,15 @@ namespace DataUtils
                     File.Delete(oldFile);
                 }
 
+                var vnums = new List<int>();
                 foreach (Room room in rooms)
                 {
                     var yamlRoom = YamlRoomMapper.ToYaml(room);
                     string yaml = serializer.Serialize(yamlRoom);
-                    string filePath = Path.Combine(roomsDir, $"{room.VNum}.yaml");
-                    File.WriteAllText(filePath, yaml, DefaultEncoding);
+                    File.WriteAllText(Path.Combine(roomsDir, RelFileName(room.VNum)), yaml, DefaultEncoding);
+                    vnums.Add(room.VNum);
                 }
+                WriteEntityIndex(roomsDir, "rooms", vnums);
             }
             catch (Exception ex)
             {
@@ -242,13 +322,15 @@ namespace DataUtils
                     File.Delete(oldFile);
                 }
 
+                var vnums = new List<int>();
                 foreach (Mob mob in mobs)
                 {
                     var yamlMob = YamlMobMapper.ToYaml(mob);
                     string yaml = serializer.Serialize(yamlMob);
-                    string filePath = Path.Combine(mobsDir, $"{mob.VNum}.yaml");
-                    File.WriteAllText(filePath, yaml, DefaultEncoding);
+                    File.WriteAllText(Path.Combine(mobsDir, RelFileName(mob.VNum)), yaml, DefaultEncoding);
+                    vnums.Add(mob.VNum);
                 }
+                WriteEntityIndex(mobsDir, "mobs", vnums);
             }
             catch (Exception ex)
             {
@@ -269,13 +351,15 @@ namespace DataUtils
                     File.Delete(oldFile);
                 }
 
+                var vnums = new List<int>();
                 foreach (Obj obj in objects)
                 {
                     var yamlObj = YamlObjMapper.ToYaml(obj);
                     string yaml = serializer.Serialize(yamlObj);
-                    string filePath = Path.Combine(objsDir, $"{obj.VNum}.yaml");
-                    File.WriteAllText(filePath, yaml, DefaultEncoding);
+                    File.WriteAllText(Path.Combine(objsDir, RelFileName(obj.VNum)), yaml, DefaultEncoding);
+                    vnums.Add(obj.VNum);
                 }
+                WriteEntityIndex(objsDir, "objects", vnums);
             }
             catch (Exception ex)
             {
@@ -296,13 +380,15 @@ namespace DataUtils
                     File.Delete(oldFile);
                 }
 
+                var vnums = new List<int>();
                 foreach (Trigger trigger in triggers)
                 {
                     var yamlTrigger = YamlTriggerMapper.ToYaml(trigger);
                     string yaml = serializer.Serialize(yamlTrigger);
-                    string filePath = Path.Combine(trigsDir, $"{trigger.VNum}.yaml");
-                    File.WriteAllText(filePath, yaml, DefaultEncoding);
+                    File.WriteAllText(Path.Combine(trigsDir, RelFileName(trigger.VNum)), yaml, DefaultEncoding);
+                    vnums.Add(trigger.VNum);
                 }
+                WriteEntityIndex(trigsDir, "triggers", vnums);
             }
             catch (Exception ex)
             {

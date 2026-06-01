@@ -14,17 +14,17 @@ namespace DataUtils.YamlMappers
 
             var yaml = new YamlObj
             {
-                VNum = obj.VNum,
-                Alias = obj.Alias ?? ""
+                VNum = obj.VNum
             };
 
-            // Names (Russian grammatical cases)
-            yaml.Names["imen"] = obj.Cases.Imen ?? "";
-            yaml.Names["rod"] = obj.Cases.Rod ?? "";
-            yaml.Names["dat"] = obj.Cases.Dat ?? "";
-            yaml.Names["vin"] = obj.Cases.Vin ?? "";
-            yaml.Names["tvor"] = obj.Cases.Tvor ?? "";
-            yaml.Names["pred"] = obj.Cases.Pred ?? "";
+            // Names: aliases + the six Russian grammatical cases, using the engine's key names.
+            yaml.Names["aliases"] = obj.Alias ?? "";
+            yaml.Names["nominative"] = obj.Cases.Imen ?? "";
+            yaml.Names["genitive"] = obj.Cases.Rod ?? "";
+            yaml.Names["dative"] = obj.Cases.Dat ?? "";
+            yaml.Names["accusative"] = obj.Cases.Vin ?? "";
+            yaml.Names["instrumental"] = obj.Cases.Tvor ?? "";
+            yaml.Names["prepositional"] = obj.Cases.Pred ?? "";
 
             yaml.ShortDesc = obj.Desc ?? "";
             yaml.ActionDesc = obj.ActionDesc ?? "";
@@ -122,21 +122,19 @@ namespace DataUtils.YamlMappers
         {
             if (yaml == null) return null;
 
-            var obj = new Obj(yaml.VNum)
-            {
-                Alias = yaml.Alias ?? ""
-            };
+            var obj = new Obj(yaml.VNum);
 
             // Names
             if (yaml.Names != null)
             {
                 string val;
-                if (yaml.Names.TryGetValue("imen", out val)) obj.Cases.Imen = val;
-                if (yaml.Names.TryGetValue("rod", out val)) obj.Cases.Rod = val;
-                if (yaml.Names.TryGetValue("dat", out val)) obj.Cases.Dat = val;
-                if (yaml.Names.TryGetValue("vin", out val)) obj.Cases.Vin = val;
-                if (yaml.Names.TryGetValue("tvor", out val)) obj.Cases.Tvor = val;
-                if (yaml.Names.TryGetValue("pred", out val)) obj.Cases.Pred = val;
+                if (yaml.Names.TryGetValue("aliases", out val)) obj.Alias = val ?? "";
+                if (yaml.Names.TryGetValue("nominative", out val)) obj.Cases.Imen = val;
+                if (yaml.Names.TryGetValue("genitive", out val)) obj.Cases.Rod = val;
+                if (yaml.Names.TryGetValue("dative", out val)) obj.Cases.Dat = val;
+                if (yaml.Names.TryGetValue("accusative", out val)) obj.Cases.Vin = val;
+                if (yaml.Names.TryGetValue("instrumental", out val)) obj.Cases.Tvor = val;
+                if (yaml.Names.TryGetValue("prepositional", out val)) obj.Cases.Pred = val;
             }
 
             obj.Desc = yaml.ShortDesc ?? "";

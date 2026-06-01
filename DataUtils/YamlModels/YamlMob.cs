@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using YamlDotNet.Serialization;
 
 namespace DataUtils.YamlModels
 {
@@ -7,11 +8,11 @@ namespace DataUtils.YamlModels
     /// </summary>
     public class YamlMob
     {
+        [YamlMember(Alias = "vnum")]
         public int VNum { get; set; }
 
         /// <summary>
-        /// Names in Russian grammatical cases
-        /// Keys: imen (nominative), rod (genitive), dat (dative), vin (accusative), tvor (instrumental), pred (prepositional)
+        /// Names: aliases, nominative, genitive, dative, accusative, instrumental, prepositional
         /// </summary>
         public Dictionary<string, string> Names { get; set; } = new Dictionary<string, string>();
 
@@ -19,11 +20,6 @@ namespace DataUtils.YamlModels
         /// Descriptions: room_desc, short_desc
         /// </summary>
         public YamlMobDescriptions Descriptions { get; set; } = new YamlMobDescriptions();
-
-        /// <summary>
-        /// Keywords/aliases for mob
-        /// </summary>
-        public string Alias { get; set; } = "";
 
         /// <summary>
         /// Action flags as list of strings
@@ -126,8 +122,9 @@ namespace DataUtils.YamlModels
         public List<YamlIngredient> Ingredients { get; set; } = new List<YamlIngredient>();
 
         /// <summary>
-        /// Objects loaded after death
+        /// Objects loaded after death (engine key: dead_load)
         /// </summary>
+        [YamlMember(Alias = "dead_load")]
         public List<YamlLoadedObjAfterDeath> LoadedObjectAfterDeath { get; set; } = new List<YamlLoadedObjAfterDeath>();
     }
 

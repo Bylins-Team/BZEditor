@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using YamlDotNet.Serialization;
 
 namespace DataUtils.YamlModels
 {
@@ -7,16 +8,11 @@ namespace DataUtils.YamlModels
     /// </summary>
     public class YamlObj
     {
+        [YamlMember(Alias = "vnum")]
         public int VNum { get; set; }
 
         /// <summary>
-        /// Keyword/aliases for object
-        /// </summary>
-        public string Alias { get; set; } = "";
-
-        /// <summary>
-        /// Names in Russian grammatical cases
-        /// Keys: imen (nominative), rod (genitive), dat (dative), vin (accusative), tvor (instrumental), pred (prepositional)
+        /// Names: aliases, nominative, genitive, dative, accusative, instrumental, prepositional
         /// </summary>
         public Dictionary<string, string> Names { get; set; } = new Dictionary<string, string>();
 

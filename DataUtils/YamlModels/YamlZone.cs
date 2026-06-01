@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using YamlDotNet.Serialization;
 
 namespace DataUtils.YamlModels
 {
@@ -7,6 +8,7 @@ namespace DataUtils.YamlModels
     /// </summary>
     public class YamlZone
     {
+        [YamlMember(Alias = "vnum")]
         public int VNum { get; set; }
         public string Name { get; set; } = "";
 

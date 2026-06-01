@@ -17,17 +17,17 @@ namespace DataUtils.YamlMappers
 
             var yaml = new YamlMob
             {
-                VNum = mob.VNum,
-                Alias = mob.Alias ?? ""
+                VNum = mob.VNum
             };
 
-            // Names (Russian grammatical cases)
-            yaml.Names["imen"] = mob.Cases.Imen ?? "";
-            yaml.Names["rod"] = mob.Cases.Rod ?? "";
-            yaml.Names["dat"] = mob.Cases.Dat ?? "";
-            yaml.Names["vin"] = mob.Cases.Vin ?? "";
-            yaml.Names["tvor"] = mob.Cases.Tvor ?? "";
-            yaml.Names["pred"] = mob.Cases.Pred ?? "";
+            // Names: aliases + the six Russian grammatical cases, using the engine's key names.
+            yaml.Names["aliases"] = mob.Alias ?? "";
+            yaml.Names["nominative"] = mob.Cases.Imen ?? "";
+            yaml.Names["genitive"] = mob.Cases.Rod ?? "";
+            yaml.Names["dative"] = mob.Cases.Dat ?? "";
+            yaml.Names["accusative"] = mob.Cases.Vin ?? "";
+            yaml.Names["instrumental"] = mob.Cases.Tvor ?? "";
+            yaml.Names["prepositional"] = mob.Cases.Pred ?? "";
 
             // Descriptions
             yaml.Descriptions = new YamlMobDescriptions
@@ -77,13 +77,13 @@ namespace DataUtils.YamlMappers
 
             yaml.Sex = mob.Sex;
 
-            // Attributes from MobStats
-            yaml.Attributes["str"] = mob.Stats.Str;
-            yaml.Attributes["int"] = mob.Stats.Int;
-            yaml.Attributes["wis"] = mob.Stats.Wis;
-            yaml.Attributes["dex"] = mob.Stats.Dex;
-            yaml.Attributes["con"] = mob.Stats.Con;
-            yaml.Attributes["cha"] = mob.Stats.Cha;
+            // Attributes from MobStats (engine key names)
+            yaml.Attributes["strength"] = mob.Stats.Str;
+            yaml.Attributes["dexterity"] = mob.Stats.Dex;
+            yaml.Attributes["intelligence"] = mob.Stats.Int;
+            yaml.Attributes["wisdom"] = mob.Stats.Wis;
+            yaml.Attributes["constitution"] = mob.Stats.Con;
+            yaml.Attributes["charisma"] = mob.Stats.Cha;
 
             yaml.Size = mob.Stats.Size;
             yaml.Height = mob.Stats.Height;
@@ -236,21 +236,19 @@ namespace DataUtils.YamlMappers
         {
             if (yaml == null) return null;
 
-            var mob = new Mob(yaml.VNum)
-            {
-                Alias = yaml.Alias ?? ""
-            };
+            var mob = new Mob(yaml.VNum);
 
             // Names
             if (yaml.Names != null)
             {
                 string val;
-                if (yaml.Names.TryGetValue("imen", out val)) mob.Cases.Imen = val;
-                if (yaml.Names.TryGetValue("rod", out val)) mob.Cases.Rod = val;
-                if (yaml.Names.TryGetValue("dat", out val)) mob.Cases.Dat = val;
-                if (yaml.Names.TryGetValue("vin", out val)) mob.Cases.Vin = val;
-                if (yaml.Names.TryGetValue("tvor", out val)) mob.Cases.Tvor = val;
-                if (yaml.Names.TryGetValue("pred", out val)) mob.Cases.Pred = val;
+                if (yaml.Names.TryGetValue("aliases", out val)) mob.Alias = val ?? "";
+                if (yaml.Names.TryGetValue("nominative", out val)) mob.Cases.Imen = val;
+                if (yaml.Names.TryGetValue("genitive", out val)) mob.Cases.Rod = val;
+                if (yaml.Names.TryGetValue("dative", out val)) mob.Cases.Dat = val;
+                if (yaml.Names.TryGetValue("accusative", out val)) mob.Cases.Vin = val;
+                if (yaml.Names.TryGetValue("instrumental", out val)) mob.Cases.Tvor = val;
+                if (yaml.Names.TryGetValue("prepositional", out val)) mob.Cases.Pred = val;
             }
 
             // Descriptions
@@ -298,12 +296,12 @@ namespace DataUtils.YamlMappers
             if (yaml.Attributes != null)
             {
                 int attrVal;
-                if (yaml.Attributes.TryGetValue("str", out attrVal)) mob.Stats.Str = attrVal;
-                if (yaml.Attributes.TryGetValue("int", out attrVal)) mob.Stats.Int = attrVal;
-                if (yaml.Attributes.TryGetValue("wis", out attrVal)) mob.Stats.Wis = attrVal;
-                if (yaml.Attributes.TryGetValue("dex", out attrVal)) mob.Stats.Dex = attrVal;
-                if (yaml.Attributes.TryGetValue("con", out attrVal)) mob.Stats.Con = attrVal;
-                if (yaml.Attributes.TryGetValue("cha", out attrVal)) mob.Stats.Cha = attrVal;
+                if (yaml.Attributes.TryGetValue("strength", out attrVal)) mob.Stats.Str = attrVal;
+                if (yaml.Attributes.TryGetValue("dexterity", out attrVal)) mob.Stats.Dex = attrVal;
+                if (yaml.Attributes.TryGetValue("intelligence", out attrVal)) mob.Stats.Int = attrVal;
+                if (yaml.Attributes.TryGetValue("wisdom", out attrVal)) mob.Stats.Wis = attrVal;
+                if (yaml.Attributes.TryGetValue("constitution", out attrVal)) mob.Stats.Con = attrVal;
+                if (yaml.Attributes.TryGetValue("charisma", out attrVal)) mob.Stats.Cha = attrVal;
             }
 
             mob.Stats.Size = yaml.Size;
