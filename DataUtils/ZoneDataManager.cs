@@ -20,6 +20,11 @@ namespace DataUtils
         private readonly Encoding encoding = Encoding.Default;
 
         /// <summary>
+        /// Провайдер формата данных
+        /// </summary>
+        private readonly IFormatProvider formatProvider;
+
+        /// <summary>
         /// Название зоны (по номеру)
         /// </summary>
         private readonly string zoneName;
@@ -61,6 +66,7 @@ namespace DataUtils
         {
             encoding = currentEncoding;
             this.zoneName = zoneName;
+            formatProvider = FormatProviderFactory.GetProvider(StaticData.WorldDataFormat);
             Recreate();
         }
 
@@ -114,30 +120,26 @@ namespace DataUtils
         {
             StaticData.CanFireChangeEvent = false;
             Recreate();
-            var tfm = new TriggersFileManager();
-            tfm.ExceptionThrowed += FireZoneLoadingExceptionEvent;
-            if (!tfm.Load(Triggers, zoneName, encoding))
+
+            // передаём обработчик исключений загрузки в провайдер формата
+            if (formatProvider != null)
+            {
+                formatProvider.ExceptionThrowed += FireZoneLoadingExceptionEvent;
+            }
+
+            if (!formatProvider.LoadTriggers(Triggers, zoneName, encoding))
                 return false;
-            var ofm = new ObjectsFileManager();
-            ofm.ExceptionThrowed += FireZoneLoadingExceptionEvent;
-            if (!ofm.Load(Objects, zoneName, encoding))
+            if (!formatProvider.LoadObjects(Objects, zoneName, encoding))
                 return false;
-            var wfm = new WorldFileManager();
-            wfm.ExceptionThrowed += FireZoneLoadingExceptionEvent;
-            if (!wfm.Load(Rooms, zoneName, encoding))
+            if (!formatProvider.LoadRooms(Rooms, zoneName, encoding))
                 return false;
-            var sktfm = new SketchFileManager();
-            sktfm.ExceptionThrowed += FireZoneLoadingExceptionEvent;
-            if (!sktfm.Load(SketchRooms, zoneName, encoding))
+            if (!formatProvider.LoadSketches(SketchRooms, zoneName, encoding))
                 return false;
-            var mfm = new MobsFileManager();
-            mfm.ExceptionThrowed += FireZoneLoadingExceptionEvent;
-            if (!mfm.Load(Mobs, zoneName, encoding))
+            if (!formatProvider.LoadMobs(Mobs, zoneName, encoding))
                 return false;
-            var zfm = new ZoneFileManager();
-            zfm.ExceptionThrowed += FireZoneLoadingExceptionEvent;
-            if (!zfm.Load(Zone, Mobs, Rooms, zoneName, encoding)) 
+            if (!formatProvider.LoadZone(Zone, Mobs, Rooms, zoneName, encoding))
                 return false;
+
             StaticData.CurrentEncoding = Encoding.GetEncoding("koi8-r");
             CheckMapForZLimit();
             StaticData.CanFireChangeEvent = true;
@@ -174,9 +176,7 @@ namespace DataUtils
         /// </summary>
         public void SaveMobs()
         {
-            var mfm = new MobsFileManager();
-            //mfm.ExceptionThrowed += FireExceptionEvent;
-            mfm.Save(Mobs, Zone.Number.ToString());
+            formatProvider.SaveMobs(Mobs, Zone.Number.ToString());
         }
 
         /// <summary>
@@ -184,9 +184,7 @@ namespace DataUtils
         /// </summary>
         public void SaveObjects()
         {
-            var ofm = new ObjectsFileManager();
-            //ofm.ExceptionThrowed += FireExceptionEvent;
-            ofm.Save(Objects, Zone.Number.ToString());
+            formatProvider.SaveObjects(Objects, Zone.Number.ToString());
         }
 
         /// <summary>
@@ -194,9 +192,7 @@ namespace DataUtils
         /// </summary>
         public void SaveTriggers()
         {
-            var tfm = new TriggersFileManager();
-            //tfm.ExceptionThrowed += FireExceptionEvent;
-            tfm.Save(Triggers, Zone.Number.ToString());
+            formatProvider.SaveTriggers(Triggers, Zone.Number.ToString());
         }
 
         /// <summary>
@@ -204,12 +200,8 @@ namespace DataUtils
         /// </summary>
         public void SaveRooms()
         {
-            var wfm = new WorldFileManager();
-            //wfm.ExceptionThrowed += FireExceptionEvent;
-            wfm.Save(Rooms, Zone.Number.ToString());
-            var sktfm = new SketchFileManager();
-            //sktfm.ExceptionThrowed += FireExceptionEvent;
-            sktfm.Save(SketchRooms, Zone.Number.ToString());
+            formatProvider.SaveRooms(Rooms, Zone.Number.ToString());
+            formatProvider.SaveSketches(SketchRooms, Zone.Number.ToString());
         }
 
         /// <summary>
@@ -217,9 +209,7 @@ namespace DataUtils
         /// </summary>
         public void SaveZone()
         {
-            var zfm = new ZoneFileManager();
-            //zfm.ExceptionThrowed += FireExceptionEvent;
-            zfm.Save(Zone, Objects, Mobs, Rooms);
+            formatProvider.SaveZone(Zone, Objects, Mobs, Rooms);
         }
 
 

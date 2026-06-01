@@ -76,6 +76,7 @@ namespace BZEditor
         private ToolStripMenuItem tsmiBackupZones;
         private ToolStripSeparator toolStripMenuItemNoConflict;
         private ToolStripMenuItem browseZonesToSend;
+        private ToolStripMenuItem tsmiSelectDataFormat;
         private ToolStripMenuItem ¯‡·ÎÓÌ˚ToolStripMenuItem;
 
         public MainForm()
@@ -106,6 +107,7 @@ namespace BZEditor
             tsmiSameOptionsForAllZones.Checked = settings.Read("tsmiSameOptionsForAllZones", tsmiSameOptionsForAllZones.Checked);
             tsmiCheckUpdatesOnStartup.Checked = settings.Read("tsmiCheckUpdatesOnStartup", tsmiCheckUpdatesOnStartup.Checked);
             tsmiBackupZones.Checked = settings.Read("tsmiBackupZones", tsmiBackupZones.Checked);
+            StaticData.WorldDataFormat = settings.Read("WorldDataFormat", StaticData.WorldDataFormat);
 
             var sf = new SplashForm
                          {
@@ -1079,6 +1081,7 @@ namespace BZEditor
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiBackupZones = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCheckUpdatesOnStartup = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSelectDataFormat = new System.Windows.Forms.ToolStripMenuItem();
             this.ÒÔ‡‚Í‡ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
@@ -1216,6 +1219,7 @@ namespace BZEditor
             // 
             this.tsmiOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiPathToWorldFolder,
+            this.tsmiSelectDataFormat,
             this.tsmiSameOptionsForAllZones,
             this.toolStripMenuItem5,
             this.tsmiBackupZones,
@@ -1231,6 +1235,13 @@ namespace BZEditor
             this.tsmiPathToWorldFolder.Size = new System.Drawing.Size(289, 22);
             this.tsmiPathToWorldFolder.Text = "»ÁÏÂÌËÚ¸ ÔÛÚ¸ Í Ô‡ÔÍÂ \"world\"";
             this.tsmiPathToWorldFolder.Click += new System.EventHandler(this.TsmiPathToWorldFolderClick);
+            //
+            // tsmiSelectDataFormat
+            //
+            this.tsmiSelectDataFormat.Name = "tsmiSelectDataFormat";
+            this.tsmiSelectDataFormat.Size = new System.Drawing.Size(289, 22);
+            this.tsmiSelectDataFormat.Text = "Format dannyh zony...";
+            this.tsmiSelectDataFormat.Click += new System.EventHandler(this.TsmiSelectDataFormatClick);
             // 
             // tsmiSameOptionsForAllZones
             // 
@@ -1482,6 +1493,21 @@ namespace BZEditor
         private void BrowseZonesToSendClick(object sender, EventArgs e)
         {
             Process.Start(Path.Combine(Application.StartupPath, "ZonesToSend"));
+        }
+
+        private void TsmiSelectDataFormatClick(object sender, EventArgs e)
+        {
+            using (var dialog = new FormatSelectionDialog())
+            {
+                if (dialog.ShowDialog(this) == DialogResult.OK)
+                {
+                    MessageBox.Show(
+                        "Novyi format budet ispolzovatsa dlya vnov zagrujaemyh zon.",
+                        "Format vybran",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }
