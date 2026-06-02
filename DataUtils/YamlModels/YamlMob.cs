@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using YamlDotNet.Core;
 using YamlDotNet.Serialization;
 
 namespace DataUtils.YamlModels
@@ -62,9 +63,15 @@ namespace DataUtils.YamlModels
         public YamlMobPosition Position { get; set; } = new YamlMobPosition();
 
         /// <summary>
-        /// Sex (0=neutral, 1=male, 2=female)
+        /// Sex as engine name (kNeutral, kMale, kFemale, kPoly)
         /// </summary>
-        public int Sex { get; set; } = 1;
+        public string Sex { get; set; }
+
+        /// <summary>
+        /// Movement speed (4th position-line field); -1 = default cadence, omitted then
+        /// </summary>
+        [YamlMember(Alias = "speed")]
+        public int? Speed { get; set; }
 
         /// <summary>
         /// Attributes (str, int, wis, dex, con, cha)
@@ -133,17 +140,20 @@ namespace DataUtils.YamlModels
     /// </summary>
     public class YamlMobDescriptions
     {
-        public string RoomDesc { get; set; } = "";
+        [YamlMember(ScalarStyle = ScalarStyle.Literal)]
         public string ShortDesc { get; set; } = "";
+
+        [YamlMember(ScalarStyle = ScalarStyle.Literal)]
+        public string LongDesc { get; set; } = "";
     }
 
     /// <summary>
-    /// Mob position
+    /// Mob position (engine names: kStand, kSit, ...)
     /// </summary>
     public class YamlMobPosition
     {
-        public int Default { get; set; } = 8;
-        public int Start { get; set; } = 8;
+        public string Default { get; set; }
+        public string Start { get; set; }
     }
 
     /// <summary>

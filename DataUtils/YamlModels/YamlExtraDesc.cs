@@ -1,3 +1,6 @@
+using YamlDotNet.Core;
+using YamlDotNet.Serialization;
+
 namespace DataUtils.YamlModels
 {
     /// <summary>
@@ -6,6 +9,8 @@ namespace DataUtils.YamlModels
     public class YamlExtraDesc
     {
         public string Keywords { get; set; } = "";
+
+        [YamlMember(ScalarStyle = ScalarStyle.Literal)]
         public string Description { get; set; } = "";
     }
 }

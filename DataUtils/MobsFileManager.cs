@@ -116,6 +116,7 @@ namespace DataUtils
                         mob.PosLoad = StringUtils.ToIntFast(parts[0]);
                         mob.PosDefault = StringUtils.ToIntFast(parts[1]);
                         mob.Sex = StringUtils.ToIntFast(parts[2]);
+                        mob.Speed = parts.Length > 3 ? StringUtils.ToIntFast(parts[3]) : -1;
 
                         input = ReadLine(sr);
                         while (input[0] != '#' && input[0] != '$') //Читаем все параметры моба
@@ -328,7 +329,7 @@ namespace DataUtils
                         (20 - mob.Hitroll) //Так сделано для того, чтоб хитролл отображался как в ОЛЦ
                         + " " + mob.Ac + " " + mob.Hits + " " + mob.Damage);//Уровень, Хитролл, АС, Хиты, Повреждения
                     sw.WriteLine(mob.Money + " " + mob.Exp); //Бабло, Экспа
-                    sw.WriteLine(mob.PosLoad + " " + mob.PosDefault + " " + mob.Sex);//Позиция при загрузке, Позиция по умолчанию, Пол
+                    sw.WriteLine(mob.PosLoad + " " + mob.PosDefault + " " + mob.Sex + (mob.Speed != -1 ? " " + mob.Speed : ""));//Позиция при загрузке, Позиция по умолчанию, Пол
                     //спас-броски: Если все спас-броски равны нулю, то строка не пишется.
                     if (mob.SaveParalyzeCast != 0 || mob.SaveMagBreathes != 0 || mob.SaveMagDamages != 0 ||
                         mob.SaveFightSkills != 0)

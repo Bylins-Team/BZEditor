@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using YamlDotNet.Core;
 using YamlDotNet.Serialization;
 
 namespace DataUtils.YamlModels
@@ -19,7 +20,7 @@ namespace DataUtils.YamlModels
         /// <summary>
         /// Attach type: 0=mob, 1=obj, 2=room
         /// </summary>
-        public int AttachType { get; set; }
+        public string AttachType { get; set; }
 
         /// <summary>
         /// Trigger types as list of strings
@@ -39,6 +40,7 @@ namespace DataUtils.YamlModels
         /// <summary>
         /// Script body
         /// </summary>
+        [YamlMember(ScalarStyle = ScalarStyle.Literal)]
         public string Script { get; set; } = "";
     }
 }

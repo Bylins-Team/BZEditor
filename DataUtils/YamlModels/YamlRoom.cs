@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using YamlDotNet.Core;
 using YamlDotNet.Serialization;
 
 namespace DataUtils.YamlModels
@@ -24,6 +25,7 @@ namespace DataUtils.YamlModels
         /// <summary>
         /// Room description
         /// </summary>
+        [YamlMember(ScalarStyle = ScalarStyle.Literal)]
         public string Description { get; set; } = "";
 
         /// <summary>
@@ -34,7 +36,7 @@ namespace DataUtils.YamlModels
         /// <summary>
         /// Sector type (terrain)
         /// </summary>
-        public int Sector { get; set; }
+        public string Sector { get; set; }
 
         /// <summary>
         /// Exits as list with direction names

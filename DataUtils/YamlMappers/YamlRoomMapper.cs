@@ -20,16 +20,13 @@ namespace DataUtils.YamlMappers
                 VNum = room.VNum,
                 Zone = room.ZoneNum,
                 Name = room.Name ?? "",
-                Description = room.Description.Main ?? "",
-                Sector = room.SectorType
+                Description = (room.Description.Main ?? "").TrimEnd('\r', '\n'),
+                Sector = EngineCodec.EnumName(room.SectorType, EngineDictionaries.Sectors)
             };
 
-            // Flags (split space-separated string to list)
-            if (!string.IsNullOrEmpty(room.Flags))
-            {
-                foreach (var flag in room.Flags.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
-                    yaml.Flags.Add(flag);
-            }
+            // Flags as engine symbolic names
+            foreach (var name in EngineCodec.FlagsToNames(room.Flags, EngineDictionaries.RoomFlags))
+                yaml.Flags.Add(name);
 
             // Exits as list with direction names
             AddExitToList(yaml.Exits, "north", room.ExitNorth);
@@ -96,8 +93,8 @@ namespace DataUtils.YamlMappers
             exits.Add(new YamlExit
             {
                 Direction = direction,
-                Description = exit.Description ?? "",
-                Keywords = exit.Aliases ?? "",
+                Description = string.IsNullOrEmpty(exit.Description) ? null : exit.Description,
+                Keywords = string.IsNullOrEmpty(exit.Aliases) ? null : exit.Aliases,
                 ExitFlags = exit.ExitFlag,
                 Key = exit.Key,
                 ToRoom = exit.RoomVNum,
@@ -113,15 +110,14 @@ namespace DataUtils.YamlMappers
             {
                 Name = yaml.Name ?? "",
                 ZoneNum = yaml.Zone,
-                SectorType = yaml.Sector
+                SectorType = EngineCodec.EnumValue(yaml.Sector, EngineDictionaries.Sectors)
             };
 
             // Description
             room.Description.Main = yaml.Description ?? "";
 
-            // Flags (join list to space-separated string)
-            if (yaml.Flags != null && yaml.Flags.Count > 0)
-                room.Flags = string.Join(" ", yaml.Flags.ToArray());
+            // Flags from engine names back to asciiflag string
+            room.Flags = EngineCodec.NamesToFlags(yaml.Flags, EngineDictionaries.RoomFlags);
 
             // Exits from list
             if (yaml.Exits != null)

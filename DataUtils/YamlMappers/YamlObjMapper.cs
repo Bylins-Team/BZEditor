@@ -27,43 +27,20 @@ namespace DataUtils.YamlMappers
             yaml.Names["prepositional"] = obj.Cases.Pred ?? "";
 
             yaml.ShortDesc = obj.Desc ?? "";
-            yaml.ActionDesc = obj.ActionDesc ?? "";
-            yaml.Type = obj.Type;
+            yaml.ActionDesc = string.IsNullOrEmpty(obj.ActionDesc) ? null : obj.ActionDesc;
+            yaml.Type = EngineCodec.EnumName(obj.Type, EngineDictionaries.ObjTypes);
 
-            // Extra flags (split space-separated string to list)
-            if (!string.IsNullOrEmpty(obj.Affects))
-            {
-                foreach (var flag in obj.Affects.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
-                    yaml.ExtraFlags.Add(flag);
-            }
-
-            // Wear flags
-            if (!string.IsNullOrEmpty(obj.WearFlags))
-            {
-                foreach (var flag in obj.WearFlags.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
-                    yaml.WearFlags.Add(flag);
-            }
-
-            // No-touch flags
-            if (!string.IsNullOrEmpty(obj.CantTouch))
-            {
-                foreach (var flag in obj.CantTouch.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
-                    yaml.NoFlags.Add(flag);
-            }
-
-            // Anti-use flags
-            if (!string.IsNullOrEmpty(obj.CantUse))
-            {
-                foreach (var flag in obj.CantUse.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
-                    yaml.AntiFlags.Add(flag);
-            }
-
-            // Affect flags (magic flags)
-            if (!string.IsNullOrEmpty(obj.MagicFlags))
-            {
-                foreach (var flag in obj.MagicFlags.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
-                    yaml.AffectFlags.Add(flag);
-            }
+            // Flag bitvectors as engine symbolic names
+            foreach (var name in EngineCodec.FlagsToNames(obj.Affects, EngineDictionaries.ExtraFlags))
+                yaml.ExtraFlags.Add(name);
+            foreach (var name in EngineCodec.FlagsToNames(obj.WearFlags, EngineDictionaries.WearFlags))
+                yaml.WearFlags.Add(name);
+            foreach (var name in EngineCodec.FlagsToNames(obj.CantTouch, EngineDictionaries.NoFlags))
+                yaml.NoFlags.Add(name);
+            foreach (var name in EngineCodec.FlagsToNames(obj.CantUse, EngineDictionaries.AntiFlags))
+                yaml.AntiFlags.Add(name);
+            foreach (var name in EngineCodec.FlagsToNames(obj.MagicFlags, EngineDictionaries.AffectFlags))
+                yaml.AffectFlags.Add(name);
 
             yaml.Material = obj.Material;
 
@@ -88,7 +65,7 @@ namespace DataUtils.YamlMappers
             yaml.Timer = obj.Timer;
             yaml.Spell = obj.Spell;
             yaml.Level = obj.SpellLevel;
-            yaml.Sex = obj.Sex;
+            yaml.Sex = EngineCodec.EnumName(obj.Sex, EngineDictionaries.Genders);
             yaml.MaxInWorld = obj.MaxInWorld;
             yaml.MinimumRemorts = obj.MinimumRemorts;
 
@@ -145,27 +122,14 @@ namespace DataUtils.YamlMappers
 
             obj.Desc = yaml.ShortDesc ?? "";
             obj.ActionDesc = yaml.ActionDesc ?? "";
-            obj.Type = yaml.Type;
+            obj.Type = EngineCodec.EnumValue(yaml.Type, EngineDictionaries.ObjTypes, 12);
 
-            // Extra flags (join list to space-separated string)
-            if (yaml.ExtraFlags != null && yaml.ExtraFlags.Count > 0)
-                obj.Affects = string.Join(" ", yaml.ExtraFlags.ToArray());
-
-            // Wear flags
-            if (yaml.WearFlags != null && yaml.WearFlags.Count > 0)
-                obj.WearFlags = string.Join(" ", yaml.WearFlags.ToArray());
-
-            // No-touch flags
-            if (yaml.NoFlags != null && yaml.NoFlags.Count > 0)
-                obj.CantTouch = string.Join(" ", yaml.NoFlags.ToArray());
-
-            // Anti-use flags
-            if (yaml.AntiFlags != null && yaml.AntiFlags.Count > 0)
-                obj.CantUse = string.Join(" ", yaml.AntiFlags.ToArray());
-
-            // Affect flags (magic flags)
-            if (yaml.AffectFlags != null && yaml.AffectFlags.Count > 0)
-                obj.MagicFlags = string.Join(" ", yaml.AffectFlags.ToArray());
+            // Flag bitvectors from engine names back to asciiflag strings
+            obj.Affects = EngineCodec.NamesToFlags(yaml.ExtraFlags, EngineDictionaries.ExtraFlags);
+            obj.WearFlags = EngineCodec.NamesToFlags(yaml.WearFlags, EngineDictionaries.WearFlags);
+            obj.CantTouch = EngineCodec.NamesToFlags(yaml.NoFlags, EngineDictionaries.NoFlags);
+            obj.CantUse = EngineCodec.NamesToFlags(yaml.AntiFlags, EngineDictionaries.AntiFlags);
+            obj.MagicFlags = EngineCodec.NamesToFlags(yaml.AffectFlags, EngineDictionaries.AffectFlags);
 
             obj.Material = yaml.Material;
 
@@ -187,7 +151,7 @@ namespace DataUtils.YamlMappers
             obj.Timer = yaml.Timer;
             obj.Spell = yaml.Spell;
             obj.SpellLevel = yaml.Level;
-            obj.Sex = yaml.Sex;
+            obj.Sex = EngineCodec.EnumValue(yaml.Sex, EngineDictionaries.Genders);
             obj.MaxInWorld = yaml.MaxInWorld;
             obj.MinimumRemorts = yaml.MinimumRemorts;
 

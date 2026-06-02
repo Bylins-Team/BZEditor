@@ -147,6 +147,8 @@
     <Compile Include="CircleMudFormatProvider.cs" />
     <Compile Include="YamlFormatProvider.cs" />
     <Compile Include="SqliteFormatProvider.cs" />
+    <Compile Include="EngineDictionaries.cs" />
+    <Compile Include="YamlMappers\EngineCodec.cs" />
     <Compile Include="YamlModels\YamlDice.cs" />
     <Compile Include="YamlModels\YamlExit.cs" />
     <Compile Include="YamlModels\YamlExtraDesc.cs" />

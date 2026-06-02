@@ -29,26 +29,18 @@ namespace DataUtils.YamlMappers
             yaml.Names["instrumental"] = mob.Cases.Tvor ?? "";
             yaml.Names["prepositional"] = mob.Cases.Pred ?? "";
 
-            // Descriptions
+            // Descriptions: engine short_desc = room one-liner, long_desc = look text
             yaml.Descriptions = new YamlMobDescriptions
             {
-                RoomDesc = mob.Desc ?? "",
-                ShortDesc = mob.DetailDescr ?? ""
+                ShortDesc = (mob.Desc ?? "").TrimEnd('\r', '\n'),
+                LongDesc = (mob.DetailDescr ?? "").TrimEnd('\r', '\n')
             };
 
-            // Action flags (split space-separated string to list)
-            if (!string.IsNullOrEmpty(mob.Flags))
-            {
-                foreach (var flag in mob.Flags.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
-                    yaml.ActionFlags.Add(flag);
-            }
-
-            // Affect flags
-            if (!string.IsNullOrEmpty(mob.Affects))
-            {
-                foreach (var flag in mob.Affects.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
-                    yaml.AffectFlags.Add(flag);
-            }
+            // Action / affect flags as engine symbolic names
+            foreach (var name in EngineCodec.FlagsToNames(mob.Flags, EngineDictionaries.ActionFlags))
+                yaml.ActionFlags.Add(name);
+            foreach (var name in EngineCodec.FlagsToNames(mob.Affects, EngineDictionaries.AffectFlags))
+                yaml.AffectFlags.Add(name);
 
             yaml.Alignment = mob.Align;
             yaml.MobType = "E"; // Extended mob type
@@ -68,14 +60,18 @@ namespace DataUtils.YamlMappers
 
             yaml.Experience = mob.Exp;
 
-            // Position
+            // Position (engine names)
             yaml.Position = new YamlMobPosition
             {
-                Default = mob.PosDefault,
-                Start = mob.PosLoad
+                Default = EngineCodec.EnumName(mob.PosDefault, EngineDictionaries.Positions),
+                Start = EngineCodec.EnumName(mob.PosLoad, EngineDictionaries.Positions)
             };
 
-            yaml.Sex = mob.Sex;
+            yaml.Sex = EngineCodec.EnumName(mob.Sex, EngineDictionaries.Genders);
+
+            // Movement speed (-1 = default cadence, omitted)
+            if (mob.Speed != -1)
+                yaml.Speed = mob.Speed;
 
             // Attributes from MobStats (engine key names)
             yaml.Attributes["strength"] = mob.Stats.Str;
@@ -254,17 +250,13 @@ namespace DataUtils.YamlMappers
             // Descriptions
             if (yaml.Descriptions != null)
             {
-                mob.Desc = yaml.Descriptions.RoomDesc ?? "";
-                mob.DetailDescr = yaml.Descriptions.ShortDesc ?? "";
+                mob.Desc = yaml.Descriptions.ShortDesc ?? "";
+                mob.DetailDescr = yaml.Descriptions.LongDesc ?? "";
             }
 
-            // Action flags (join list to space-separated string)
-            if (yaml.ActionFlags != null && yaml.ActionFlags.Count > 0)
-                mob.Flags = string.Join(" ", yaml.ActionFlags.ToArray());
-
-            // Affect flags
-            if (yaml.AffectFlags != null && yaml.AffectFlags.Count > 0)
-                mob.Affects = string.Join(" ", yaml.AffectFlags.ToArray());
+            // Action / affect flags from engine names back to asciiflag strings
+            mob.Flags = EngineCodec.NamesToFlags(yaml.ActionFlags, EngineDictionaries.ActionFlags);
+            mob.Affects = EngineCodec.NamesToFlags(yaml.AffectFlags, EngineDictionaries.AffectFlags);
 
             mob.Align = yaml.Alignment;
 
@@ -286,11 +278,12 @@ namespace DataUtils.YamlMappers
             // Position
             if (yaml.Position != null)
             {
-                mob.PosDefault = yaml.Position.Default;
-                mob.PosLoad = yaml.Position.Start;
+                mob.PosDefault = EngineCodec.EnumValue(yaml.Position.Default, EngineDictionaries.Positions, 8);
+                mob.PosLoad = EngineCodec.EnumValue(yaml.Position.Start, EngineDictionaries.Positions, 8);
             }
 
-            mob.Sex = yaml.Sex;
+            mob.Sex = EngineCodec.EnumValue(yaml.Sex, EngineDictionaries.Genders);
+            if (yaml.Speed.HasValue) mob.Speed = yaml.Speed.Value;
 
             // Attributes
             if (yaml.Attributes != null)

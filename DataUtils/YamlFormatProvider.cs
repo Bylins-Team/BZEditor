@@ -25,9 +25,14 @@ namespace DataUtils
         public YamlFormatProvider()
         {
             // Engine (bylins/mud yaml_world_data_source.cpp) reads snake_case keys.
+            // Do NOT omit default scalars: the engine applies its own (sometimes non-zero)
+            // defaults for missing keys, and omitting a zero would corrupt such fields on
+            // load. Only null (unset enum names / optional speed) and empty collections are
+            // omitted. This also makes the editor's own YAML round-trip idempotent.
             serializer = new SerializerBuilder()
                 .WithNamingConvention(UnderscoredNamingConvention.Instance)
-                .ConfigureDefaultValuesHandling(DefaultValuesHandling.OmitNull | DefaultValuesHandling.OmitDefaults)
+                .ConfigureDefaultValuesHandling(DefaultValuesHandling.OmitNull
+                    | DefaultValuesHandling.OmitEmptyCollections)
                 .Build();
 
             deserializer = new DeserializerBuilder()

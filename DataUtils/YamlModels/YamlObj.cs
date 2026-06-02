@@ -29,7 +29,7 @@ namespace DataUtils.YamlModels
         /// <summary>
         /// Object type number
         /// </summary>
-        public int Type { get; set; } = 12;
+        public string Type { get; set; }
 
         /// <summary>
         /// Extra flags as list of strings
@@ -119,7 +119,7 @@ namespace DataUtils.YamlModels
         /// <summary>
         /// Sex (0=neutral, 1=male, 2=female, 3=plural)
         /// </summary>
-        public int Sex { get; set; }
+        public string Sex { get; set; }
 
         /// <summary>
         /// Applies (bonuses) as list of {location, modifier}

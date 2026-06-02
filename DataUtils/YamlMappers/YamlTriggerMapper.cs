@@ -16,18 +16,15 @@ namespace DataUtils.YamlMappers
             {
                 VNum = trigger.VNum,
                 Name = trigger.Name ?? "",
-                AttachType = trigger.Class,
+                AttachType = EngineCodec.EnumName(trigger.Class, EngineDictionaries.AttachTypes),
                 Narg = trigger.NumArg,
                 Arglist = trigger.Arg ?? "",
-                Script = trigger.Body ?? ""
+                Script = (trigger.Body ?? "").TrimEnd('\r', '\n')
             };
 
-            // Trigger types (split space-separated string to list)
-            if (!string.IsNullOrEmpty(trigger.Type))
-            {
-                foreach (var t in trigger.Type.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
-                    yaml.TriggerTypes.Add(t);
-            }
+            // Trigger types as engine symbolic names (single-plane letter flags)
+            foreach (var name in EngineCodec.LetterFlagsToNames(trigger.Type, EngineDictionaries.TriggerTypes))
+                yaml.TriggerTypes.Add(name);
 
             return yaml;
         }
@@ -39,15 +36,14 @@ namespace DataUtils.YamlMappers
             var trigger = new Trigger(yaml.VNum)
             {
                 Name = yaml.Name ?? "",
-                Class = yaml.AttachType,
+                Class = EngineCodec.EnumValue(yaml.AttachType, EngineDictionaries.AttachTypes),
                 NumArg = yaml.Narg,
                 Arg = yaml.Arglist ?? "",
                 Body = yaml.Script ?? ""
             };
 
-            // Trigger types (join list to space-separated string)
-            if (yaml.TriggerTypes != null && yaml.TriggerTypes.Count > 0)
-                trigger.Type = string.Join(" ", yaml.TriggerTypes.ToArray());
+            // Trigger types from engine names back to single-plane letter flags
+            trigger.Type = EngineCodec.NamesToLetterFlags(yaml.TriggerTypes, EngineDictionaries.TriggerTypes);
 
             return trigger;
         }
