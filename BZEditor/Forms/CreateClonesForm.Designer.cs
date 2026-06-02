@@ -33,7 +33,7 @@ namespace BZEditor
             this.btnCancel = new System.Windows.Forms.Button();
             this.cbChangeName = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.nbCount = new Fireball.Windows.Forms.NumericBox();
+            this.nbCount = new System.Windows.Forms.NumericUpDown();
             this.tbNewName = new System.Windows.Forms.TextBox();
             this.cboxFullCopy = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -83,8 +83,7 @@ namespace BZEditor
             // 
             // nbCount
             // 
-            this.nbCount.AllowError = true;
-            this.nbCount.DecimalPlace = 0;
+            this.nbCount.DecimalPlaces = 0;
             this.nbCount.Location = new System.Drawing.Point(234, 8);
             this.nbCount.Name = "nbCount";
             this.nbCount.Size = new System.Drawing.Size(22, 17);
@@ -144,7 +143,7 @@ namespace BZEditor
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.CheckBox cbChangeName;
         private System.Windows.Forms.Label label1;
-        private Fireball.Windows.Forms.NumericBox nbCount;
+        private System.Windows.Forms.NumericUpDown nbCount;
         private System.Windows.Forms.TextBox tbNewName;
         private System.Windows.Forms.CheckBox cboxFullCopy;
     }

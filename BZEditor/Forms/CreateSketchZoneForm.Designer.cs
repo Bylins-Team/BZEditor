@@ -32,9 +32,9 @@ namespace BZEditor
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.nbCount = new Fireball.Windows.Forms.NumericBox();
+            this.nbCount = new System.Windows.Forms.NumericUpDown();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flcAlert = new Fireball.Windows.Forms.FormatLabelControl();
+            this.flcAlert = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.tbZoneName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -77,8 +77,7 @@ namespace BZEditor
             // 
             // nbCount
             // 
-            this.nbCount.AllowError = true;
-            this.nbCount.DecimalPlace = 0;
+            this.nbCount.DecimalPlaces = 0;
             this.nbCount.Location = new System.Drawing.Point(77, 43);
             this.nbCount.Name = "nbCount";
             this.nbCount.Size = new System.Drawing.Size(54, 17);
@@ -97,26 +96,16 @@ namespace BZEditor
             // 
             // flcAlert
             // 
-            this.flcAlert.AutoSizeHorizontal = false;
-            this.flcAlert.AutoSizeVertical = false;
             this.flcAlert.BackColor = System.Drawing.SystemColors.Control;
-            this.flcAlert.BorderColor = System.Drawing.SystemColors.Control;
-            this.flcAlert.BorderStyle = Fireball.Windows.Forms.ControlBorderStyle.FixedSingle;
-            this.flcAlert.ImageList = null;
-            this.flcAlert.LabelMargin = 0;
-            this.flcAlert.Link_Color = System.Drawing.Color.Blue;
-            this.flcAlert.Link_Color_Hover = System.Drawing.Color.Blue;
-            this.flcAlert.Link_UnderLine = true;
-            this.flcAlert.Link_UnderLine_Hover = true;
+            this.flcAlert.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flcAlert.LinkColor = System.Drawing.Color.Blue;
             this.flcAlert.Location = new System.Drawing.Point(45, 4);
             this.flcAlert.Name = "flcAlert";
-            this.flcAlert.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.flcAlert.Size = new System.Drawing.Size(244, 36);
             this.flcAlert.TabIndex = 7;
             this.flcAlert.Text = "Перед созданием зоны свяжитесь с <a href=\'http://www.mud.ru\'><b>Белобогом</b></a>" +
                 " и получите номер зоны";
-            this.flcAlert.WordWrap = true;
-            this.flcAlert.ClickLink += new Fireball.Windows.Forms.ClickLinkEventHandler(this.flcAlert_ClickLink);
+            this.flcAlert.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.flcAlert_LinkClicked);
             // 
             // label2
             // 
@@ -204,9 +193,9 @@ namespace BZEditor
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label1;
-        private Fireball.Windows.Forms.NumericBox nbCount;
+        private System.Windows.Forms.NumericUpDown nbCount;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Fireball.Windows.Forms.FormatLabelControl flcAlert;
+        private System.Windows.Forms.LinkLabel flcAlert;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbZoneName;
         private System.Windows.Forms.Label label3;

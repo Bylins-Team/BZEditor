@@ -1,7 +1,6 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using Fireball.Windows.Forms;
 
 namespace BZEditor
 {
@@ -37,7 +36,7 @@ namespace BZEditor
             btnCreate.Enabled = (nbCount.Text != "");
         }
 
-        private void flcAlert_ClickLink(object sender, ClickLinkEventArgs e)
+        private void flcAlert_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(
                 "mailto:belobog@mud.ru?subject=Жажду билдить, дайте номер&body=Ну дайте же мне скорее номер зоны!!!НУ ПАЖАЛАСТА!!!Я такой ленивый что даже не написал ни строчки сам");

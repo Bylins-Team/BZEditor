@@ -1,0 +1,2 @@
+# Bundled world/base data: preserve bytes exactly (no EOL conversion).
+redist/** -text

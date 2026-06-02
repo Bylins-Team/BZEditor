@@ -2,7 +2,6 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using DataUtils;
-using Fireball.Windows.Forms;
 
 namespace BZEditor
 {
@@ -113,7 +112,7 @@ namespace BZEditor
             if (maxAvail > 0)
             {
                 label1.Text = "Количество создаваемых " + name + " от 1 до " + maxAvail;
-                nbCount.Ranges.Add(new NumericRange(1, maxAvail));
+                nbCount.Maximum = maxAvail; nbCount.Minimum = 1;
                 nbCount.Enabled = true;
             }
             else
@@ -188,7 +187,7 @@ namespace BZEditor
             if (maxAvail > 0)
             {
                 label1.Text = "Количество создаваемых " + name + " от 1 до " + maxAvail;
-                nbCount.Ranges[0].MaxValue = maxAvail;
+                nbCount.Maximum = maxAvail;
                 nbCount.Enabled = true;
             }
             else
