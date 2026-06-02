@@ -3,7 +3,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using DataUtils;
 using ExtControls;
-using Fireball.Windows.Forms;
 using Object = DataUtils.Obj;
 
 namespace BZEditor
@@ -740,7 +739,7 @@ namespace BZEditor
         {
             if (IgnoreExitDirChanged) return;
             if (ActiveRoom == null) return;
-            int newVNum = (((NumericBox)sender).Text.Length > 0) ? Convert.ToInt32(((NumericBox)sender).Text) : -1;
+            int newVNum = (((TextBox)sender).Text.Length > 0) ? Convert.ToInt32(((TextBox)sender).Text) : -1;
             Room trgRoom = ZoneDM.RoomsCollection[newVNum, 0];
             if (tsbSetOppositeExit.Checked && trgRoom != null)
             {
@@ -776,7 +775,7 @@ namespace BZEditor
                 sbdf.Dispose();
             }
             Exit exit = null;
-            switch (((NumericBox)sender).Name)
+            switch (((TextBox)sender).Name)
             {
                 case "tbExitNorth":
                     exit = ActiveRoom.ExitNorth;
