@@ -115,6 +115,106 @@ namespace DataUtils
             File.WriteAllText(configPath, serializer.Serialize(config), DefaultEncoding);
         }
 
+        /// <summary>
+        /// Builds the engine `commands` list (and typeA/typeB zone links) by reusing the
+        /// existing legacy zone serializer: it writes a throwaway .zon, then reads the
+        /// reset-command lines back. The engine accepts these letter-keyword strings
+        /// verbatim; the trailing "(comment)" the editor appends is stripped.
+        /// </summary>
+        private void PopulateZoneCommands(YamlZone yamlZone, Zone zone, ObjsCollection objects,
+            MobsCollection mobs, RoomsCollection rooms)
+        {
+            string tmp = Path.Combine(Path.GetTempPath(), "bzed_zon_" + zone.Number);
+            string savedWorld = StaticData.WorldFolderPath;
+            string[] lines;
+            try
+            {
+                if (Directory.Exists(tmp)) Directory.Delete(tmp, true);
+                Directory.CreateDirectory(Path.Combine(tmp, "ZON"));
+                StaticData.WorldFolderPath = tmp;
+                new ZoneFileManager().Save(zone, objects, mobs, rooms);
+            }
+            finally
+            {
+                StaticData.WorldFolderPath = savedWorld;
+            }
+
+            string zonPath = Path.Combine(Path.Combine(tmp, "ZON"), zone.Number + ".zon");
+            if (!File.Exists(zonPath)) return;
+            lines = File.ReadAllLines(zonPath, DefaultEncoding);
+            try { Directory.Delete(tmp, true); } catch { }
+
+            const string CommandLetters = "MOGEPDRTVQF";
+            foreach (string raw in lines)
+            {
+                // A command line is "<LETTER> <digit|->..."; this excludes headers,
+                // the zone name and the numeric repop line.
+                if (raw.Length < 3 || raw[1] != ' ') continue;
+                char c = raw[0];
+                if (c < 'A' || c > 'Z') continue;
+                char d = raw[2];
+                if (d != '-' && (d < '0' || d > '9')) continue;
+
+                // A/B (typeA/typeB zone links) are handled by the zone mapper, not here.
+                // 'L' (mob death loot) is excluded: it lives in the mob's dead_load.
+                if (CommandLetters.IndexOf(c) < 0) continue;
+
+                string line = raw;
+                int tab = line.IndexOf('\t');
+                if (tab >= 0) line = line.Substring(0, tab);
+                yamlZone.Commands.Add(line.TrimEnd());
+            }
+        }
+
+        /// <summary>
+        /// Reverse of PopulateZoneCommands: replays the command strings into the room spawn
+        /// model by reusing the legacy parser. A throwaway .zon (minimal header + the commands)
+        /// is written and loaded; spawns land on the real rooms, while a throwaway Zone absorbs
+        /// the header. typeA/typeB links are copied onto the real zone afterwards.
+        /// </summary>
+        private void LoadZoneCommands(YamlZone yamlZone, Zone zone, MobsCollection mobs,
+            RoomsCollection rooms, Encoding encoding)
+        {
+            // typeA/typeB zone links are restored by the zone mapper; here we only replay
+            // the reset commands (including 'Q'/EXTRACT, which is not modelled by the mapper).
+            if (yamlZone.Commands == null || yamlZone.Commands.Count == 0) return;
+
+            string num = zone.Number.ToString();
+            string tmp = Path.Combine(Path.GetTempPath(), "bzed_zonload_" + num);
+            string savedWorld = StaticData.WorldFolderPath;
+            try
+            {
+                if (Directory.Exists(tmp)) Directory.Delete(tmp, true);
+                Directory.CreateDirectory(Path.Combine(tmp, "ZON"));
+
+                var sb = new StringBuilder();
+                sb.Append("#").Append(num).Append("\n");
+                sb.Append("z~\n");
+                sb.Append("#0 0 1\n");
+                sb.Append(zone.Number * 100 + 99).Append(" ")
+                  .Append(yamlZone.Lifespan).Append(" ")
+                  .Append(yamlZone.ResetMode).Append(" ")
+                  .Append(yamlZone.ResetIdle).Append("\n");
+                foreach (string c in yamlZone.Commands) sb.Append(c).Append("\n");
+                sb.Append("S\n$\n");
+
+                File.WriteAllText(Path.Combine(Path.Combine(tmp, "ZON"), num + ".zon"), sb.ToString(), encoding);
+
+                StaticData.WorldFolderPath = tmp;
+                var throwaway = new Zone();
+                new ZoneFileManager().Load(throwaway, mobs, rooms, num, encoding);
+
+                // 'Q' (EXTRACT) commands are zone-level and not handled by the mapper.
+                foreach (OperatedMob m in throwaway.MobsToRemove)
+                    zone.MobsToRemove.Add(m.VNum, m.ConditionFlag, -1);
+            }
+            finally
+            {
+                StaticData.WorldFolderPath = savedWorld;
+                try { Directory.Delete(tmp, true); } catch { }
+            }
+        }
+
         #region Load Operations
 
         public override bool LoadZone(Zone zone, MobsCollection mobs, RoomsCollection rooms, string zoneNumber, Encoding encoding)
@@ -131,6 +231,7 @@ namespace DataUtils
                 string yamlContent = File.ReadAllText(zonePath, encoding ?? DefaultEncoding);
                 var yamlZone = deserializer.Deserialize<YamlZone>(yamlContent);
                 YamlZoneMapper.FromYaml(yamlZone, zone);
+                LoadZoneCommands(yamlZone, zone, mobs, rooms, encoding ?? DefaultEncoding);
                 return true;
             }
             catch (Exception ex)
@@ -272,6 +373,7 @@ namespace DataUtils
                 Directory.CreateDirectory(zoneDir);
 
                 var yamlZone = YamlZoneMapper.ToYaml(zone);
+                PopulateZoneCommands(yamlZone, zone, objects, mobs, rooms);
                 string yaml = serializer.Serialize(yamlZone);
                 string zonePath = Path.Combine(zoneDir, "zone.yaml");
                 File.WriteAllText(zonePath, yaml, DefaultEncoding);

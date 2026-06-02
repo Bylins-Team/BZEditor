@@ -87,7 +87,7 @@ namespace DataUtils.YamlMappers
                 yaml.ExtraDescriptions.Add(new YamlExtraDesc
                 {
                     Keywords = ed.Aliases ?? "",
-                    Description = ed.Description ?? ""
+                    Description = (ed.Description ?? "").TrimEnd('\r', '\n')
                 });
             }
 

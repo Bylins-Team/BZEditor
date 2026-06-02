@@ -212,8 +212,13 @@ namespace DataUtils.YamlModels
         public int? MaxFactor { get; set; }
         public int? ExtraAttack { get; set; }
         public int? MobRemort { get; set; }
+
+        [YamlMember(ScalarStyle = ScalarStyle.SingleQuoted)]
         public string SpecialBitvector { get; set; }
-        public int? Role { get; set; }
+
+        /// <summary>Role bitvector as a 9-char binary string (e.g. "000000001"), engine reads it as a string.</summary>
+        [YamlMember(ScalarStyle = ScalarStyle.SingleQuoted)]
+        public string Role { get; set; }
 
         // Array fields
         public List<int> Resistances { get; set; }

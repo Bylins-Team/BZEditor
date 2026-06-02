@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DataUtils.YamlModels;
+using SystemFrameworks;
 
 namespace DataUtils.YamlMappers
 {
@@ -120,6 +121,11 @@ namespace DataUtils.YamlMappers
             if (mob.MaxFactor != 0) { enhanced.MaxFactor = mob.MaxFactor; hasEnhanced = true; }
             if (mob.ExtraAttack != 0) { enhanced.ExtraAttack = mob.ExtraAttack; hasEnhanced = true; }
             if (!string.IsNullOrEmpty(mob.SpecialBitvector)) { enhanced.SpecialBitvector = mob.SpecialBitvector; hasEnhanced = true; }
+
+            // Role bitvector as a 9-char binary string (same encoding as the legacy "Role:" line)
+            int roleBits = 0;
+            foreach (int r in mob.Roles) roleBits += Convert.ToInt32(Math.Pow(2, r - 1));
+            if (roleBits > 0) { enhanced.Role = BinaryUtils.NumberToBinary(roleBits, 9); hasEnhanced = true; }
 
             // Resistances
             var resistances = new List<int>
@@ -338,6 +344,17 @@ namespace DataUtils.YamlMappers
                 if (enh.MaxFactor.HasValue) mob.MaxFactor = enh.MaxFactor.Value;
                 if (enh.ExtraAttack.HasValue) mob.ExtraAttack = enh.ExtraAttack.Value;
                 if (!string.IsNullOrEmpty(enh.SpecialBitvector)) mob.SpecialBitvector = enh.SpecialBitvector;
+
+                // Role bitvector: positions of set bits (mirrors MobsFileManager "Role:" parsing)
+                if (!string.IsNullOrEmpty(enh.Role))
+                {
+                    int cntr = enh.Role.Length;
+                    foreach (char bit in enh.Role)
+                    {
+                        if (bit == '1') mob.Roles.Add(cntr);
+                        cntr--;
+                    }
+                }
 
                 // Resistances
                 if (enh.Resistances != null && enh.Resistances.Count >= 8)

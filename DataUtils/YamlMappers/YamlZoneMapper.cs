@@ -25,7 +25,7 @@ namespace DataUtils.YamlMappers
                 Lifespan = zone.RepopTimer,
                 ResetMode = zone.RepopType,
                 ResetIdle = zone.ResetIdle,
-                UnderConstruction = zone.Test
+                UnderConstruction = zone.Test ? 1 : 0
             };
 
             // Metadata
@@ -85,7 +85,7 @@ namespace DataUtils.YamlMappers
             target.RepopTimer = yaml.Lifespan;
             target.RepopType = yaml.ResetMode;
             target.ResetIdle = yaml.ResetIdle;
-            target.Test = yaml.UnderConstruction;
+            target.Test = yaml.UnderConstruction != 0;
 
             // Metadata
             if (yaml.Metadata != null)
