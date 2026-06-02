@@ -127,6 +127,11 @@ namespace DataUtils.YamlModels
         public List<YamlObjApply> Applies { get; set; } = new List<YamlObjApply>();
 
         /// <summary>
+        /// Skills granted by the object (legacy 'S' lines) as list of {skill_id, value}
+        /// </summary>
+        public List<YamlMobSkill> Skills { get; set; } = new List<YamlMobSkill>();
+
+        /// <summary>
         /// Extra descriptions
         /// </summary>
         public List<YamlExtraDesc> ExtraDescriptions { get; set; } = new List<YamlExtraDesc>();

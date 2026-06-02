@@ -98,6 +98,12 @@ namespace DataUtils.YamlMappers
                 yaml.Applies.Add(new YamlObjApply(bonus.VNum, bonus.Value));
             }
 
+            // Skills granted by the object (legacy 'S' lines) - engine key: skills
+            foreach (Bonus skill in obj.SkillBonusesCollection)
+            {
+                yaml.Skills.Add(new YamlMobSkill(skill.VNum, skill.Value));
+            }
+
             // Extra descriptions
             foreach (ExtraDesc ed in obj.ExtraDescriptions)
             {
@@ -190,6 +196,13 @@ namespace DataUtils.YamlMappers
             {
                 foreach (var apply in yaml.Applies)
                     obj.BonusesCollection.Add(new Bonus(apply.Location, apply.Modifier));
+            }
+
+            // Skills granted by the object (legacy 'S' lines)
+            if (yaml.Skills != null)
+            {
+                foreach (var skill in yaml.Skills)
+                    obj.AddSkillBonus(skill.SkillId, skill.Value);
             }
 
             // Extra descriptions

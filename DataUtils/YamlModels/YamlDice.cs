@@ -48,27 +48,24 @@ namespace DataUtils.YamlModels
                     result.DiceCount = diceCount;
             }
 
+            // After 'd': dice size is the leading digits, the rest is the (signed) bonus.
+            // A negative bonus is written by the engine/converter as "+-N" (e.g. "0d0+-56"),
+            // so the leading '+' separator must be stripped before parsing the signed value.
             string rest = diceString.Substring(dPos + 1);
-            int plusPos = rest.IndexOf('+');
-            int minusPos = rest.IndexOf('-');
-            int signPos = plusPos >= 0 ? plusPos : minusPos;
+            int i = 0;
+            while (i < rest.Length && char.IsDigit(rest[i])) i++;
 
-            if (signPos >= 0)
-            {
-                int diceSize;
-                if (int.TryParse(rest.Substring(0, signPos), out diceSize))
-                    result.DiceSize = diceSize;
+            int diceSize;
+            if (int.TryParse(rest.Substring(0, i), out diceSize))
+                result.DiceSize = diceSize;
 
-                int bonus;
-                if (int.TryParse(rest.Substring(signPos), out bonus))
-                    result.Bonus = bonus;
-            }
-            else
-            {
-                int diceSize;
-                if (int.TryParse(rest, out diceSize))
-                    result.DiceSize = diceSize;
-            }
+            string bonusStr = rest.Substring(i);
+            if (bonusStr.StartsWith("+"))
+                bonusStr = bonusStr.Substring(1); // "+-56" -> "-56", "+56" -> "56"
+
+            int bonus;
+            if (bonusStr.Length > 0 && int.TryParse(bonusStr, out bonus))
+                result.Bonus = bonus;
 
             return result;
         }
@@ -78,9 +75,9 @@ namespace DataUtils.YamlModels
         /// </summary>
         public override string ToString()
         {
-            if (Bonus >= 0)
-                return string.Format("{0}d{1}+{2}", DiceCount, DiceSize, Bonus);
-            return string.Format("{0}d{1}{2}", DiceCount, DiceSize, Bonus);
+            // Legacy format always uses an explicit '+' separator; a negative bonus
+            // therefore renders as "+-N" (e.g. "0d0+-56"), matching the engine/converter.
+            return string.Format("{0}d{1}+{2}", DiceCount, DiceSize, Bonus);
         }
     }
 }
