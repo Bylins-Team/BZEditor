@@ -264,3 +264,6 @@ __pycache__/
 .tools/
 dist/
 BZEditor.zip
+
+# Scratch / experiments (local only)
+workbench/
