@@ -492,6 +492,7 @@ namespace BZEditor
             settings.Write("tsmiSameOptionsForAllZones", tsmiSameOptionsForAllZones.Checked);
             settings.Write("tsmiCheckUpdatesOnStartup", tsmiCheckUpdatesOnStartup.Checked);
             settings.Write("tsmiBackupZones", tsmiBackupZones.Checked);
+            settings.Write("WorldDataFormat", StaticData.WorldDataFormat);
             
             settings.Save();
         }
@@ -1240,7 +1241,7 @@ namespace BZEditor
             //
             this.tsmiSelectDataFormat.Name = "tsmiSelectDataFormat";
             this.tsmiSelectDataFormat.Size = new System.Drawing.Size(289, 22);
-            this.tsmiSelectDataFormat.Text = "Format dannyh zony...";
+            this.tsmiSelectDataFormat.Text = "Формат данных мира...";
             this.tsmiSelectDataFormat.Click += new System.EventHandler(this.TsmiSelectDataFormatClick);
             // 
             // tsmiSameOptionsForAllZones
@@ -1502,8 +1503,8 @@ namespace BZEditor
                 if (dialog.ShowDialog(this) == DialogResult.OK)
                 {
                     MessageBox.Show(
-                        "Novyi format budet ispolzovatsa dlya vnov zagrujaemyh zon.",
-                        "Format vybran",
+                        "Формат данных мира изменён. Мир будет сохранён в выбранном формате при следующем сохранении.",
+                        "Формат данных",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }

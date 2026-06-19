@@ -22,7 +22,7 @@ namespace DataUtils
         /// <summary>
         /// Провайдер формата данных
         /// </summary>
-        private readonly IFormatProvider formatProvider;
+        private IFormatProvider formatProvider { get { return FormatProviderFactory.GetProvider(StaticData.WorldDataFormat); } }
 
         /// <summary>
         /// Название зоны (по номеру)
@@ -66,7 +66,6 @@ namespace DataUtils
         {
             encoding = currentEncoding;
             this.zoneName = zoneName;
-            formatProvider = FormatProviderFactory.GetProvider(StaticData.WorldDataFormat);
             Recreate();
         }
 

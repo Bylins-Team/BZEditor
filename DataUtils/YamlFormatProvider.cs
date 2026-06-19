@@ -129,10 +129,18 @@ namespace DataUtils
             string[] lines;
             try
             {
+                if (StaticData.CurrentEncoding == null) StaticData.CurrentEncoding = DefaultEncoding;
                 if (Directory.Exists(tmp)) Directory.Delete(tmp, true);
                 Directory.CreateDirectory(Path.Combine(tmp, "ZON"));
                 StaticData.WorldFolderPath = tmp;
                 new ZoneFileManager().Save(zone, objects, mobs, rooms);
+            }
+            catch (Exception ex)
+            {
+                // Reset commands are best-effort: never let a failure here abort the YAML save.
+                FireExceptionEvent("Zone reset commands could not be generated for zone " + zone.Number
+                    + " (the zone is saved without them).", ex, EventLogEntryType.Warning);
+                return;
             }
             finally
             {

@@ -29,7 +29,7 @@ namespace BZEditor
 
         private void InitializeComponent()
         {
-            Text = "Data Format";
+            Text = "Формат данных";
             Size = new Size(400, 200);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             StartPosition = FormStartPosition.CenterParent;
@@ -38,7 +38,7 @@ namespace BZEditor
 
             lblFormatLabel = new Label
             {
-                Text = "World data format:",
+                Text = "Формат данных мира:",
                 Location = new Point(12, 20),
                 Size = new Size(150, 20)
             };
@@ -69,7 +69,7 @@ namespace BZEditor
 
             btnCancel = new Button
             {
-                Text = "Cancel",
+                Text = "Отмена",
                 DialogResult = DialogResult.Cancel,
                 Location = new Point(297, 130),
                 Size = new Size(75, 25)
