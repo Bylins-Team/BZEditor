@@ -36,13 +36,20 @@ jobs:
           Copy-Item BZEditorBuild/*.exe, BZEditorBuild/*.dll, BZEditorBuild/*.config -Destination $dist
           # default data + sample world (ready to run)
           Copy-Item redist/* -Destination $dist -Recurse -Force
-          Compress-Archive -Path "$dist/*" -DestinationPath "BZEditor.zip" -Force
 
       - name: Upload build artifact
+        # Upload the folder, not a pre-made zip: upload-artifact already zips its
+        # contents, so zipping ourselves first would nest BZEditor.zip inside the
+        # downloaded BZEditor.zip.
         uses: actions/upload-artifact@v4
         with:
           name: BZEditor
-          path: BZEditor.zip
+          path: dist/BZEditor
+
+      - name: Package zip for release (on version tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        run: Compress-Archive -Path "dist/BZEditor/*" -DestinationPath "BZEditor.zip" -Force
 
       - name: Publish release (on version tag)
         if: startsWith(github.ref, 'refs/tags/v')
