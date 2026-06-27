@@ -62,10 +62,6 @@
       <HintPath>..\packages\YamlDotNet.13.7.1\lib\net47\YamlDotNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bounds.cs" />
@@ -144,7 +140,6 @@
     <Compile Include="FormatProviderFactory.cs" />
     <Compile Include="CircleMudFormatProvider.cs" />
     <Compile Include="YamlFormatProvider.cs" />
-    <Compile Include="SqliteFormatProvider.cs" />
     <Compile Include="EngineDictionaries.cs" />
     <Compile Include="YamlMappers\EngineCodec.cs" />
     <Compile Include="YamlModels\YamlDice.cs" />

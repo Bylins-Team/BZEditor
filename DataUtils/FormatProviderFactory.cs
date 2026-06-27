@@ -25,9 +25,6 @@ namespace DataUtils
             // Register the YAML provider
             RegisterProvider(new YamlFormatProvider());
 
-            // Register the SQLite provider
-            RegisterProvider(new SqliteFormatProvider());
-
             initialized = true;
         }
 
@@ -82,8 +79,8 @@ namespace DataUtils
             EnsureInitialized();
 
             // First, try to find a provider that can load this zone
-            // Priority: YAML > SQLite > CircleMUD (we want to try newer formats first)
-            string[] priorityOrder = new string[] { "yaml", "sqlite", "circlemud" };
+            // Priority: YAML > CircleMUD (we want to try newer formats first)
+            string[] priorityOrder = new string[] { "yaml", "circlemud" };
 
             foreach (string formatName in priorityOrder)
             {

@@ -59,7 +59,7 @@ namespace DataUtils
         public static bool BackupZones;
 
         /// <summary>
-        /// Формат данных мира (circlemud, yaml, sqlite)
+        /// Формат данных мира (circlemud, yaml)
         /// </summary>
         public static string WorldDataFormat = "circlemud";
     }

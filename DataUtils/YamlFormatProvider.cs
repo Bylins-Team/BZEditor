@@ -46,12 +46,18 @@ namespace DataUtils
             return Path.Combine(StaticData.WorldFolderPath, "zones", zoneNumber);
         }
 
-        /// <summary>
-        /// Entity file name as the engine expects it: rel = vnum % 100, zero-padded to 2 digits.
-        /// </summary>
-        private static string RelFileName(int vnum)
+        /// <summary>Entity rel-number the engine keys flat entries by: vnum % 100.</summary>
+        private static int RelNum(int vnum)
         {
-            return (((vnum % 100) + 100) % 100).ToString("00") + ".yaml";
+            return ((vnum % 100) + 100) % 100;
+        }
+
+        /// <summary>Zone number as int; entity vnum = zone * 100 + rel.</summary>
+        private static int ParseZone(string zoneNumber)
+        {
+            int z;
+            int.TryParse(zoneNumber, out z);
+            return z;
         }
 
         private static bool IsIndexFile(string path)
@@ -60,19 +66,74 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Writes a per-directory index.yaml: { &lt;key&gt;: [rel, rel, ...] } sorted ascending.
+        /// Removes the top-level "vnum:" line from a serialized entity body. In the flat
+        /// layout the vnum is the map key, not a body field (matches the engine emitter,
+        /// which drops the internal vnum). Only a column-0 "vnum:" is removed; indented
+        /// occurrences (e.g. inside a literal-block description) are left untouched.
         /// </summary>
-        private void WriteEntityIndex(string dir, string key, List<int> vnums)
+        private static string StripVnumLine(string body)
         {
-            var rels = new List<int>();
-            foreach (int v in vnums)
+            var sb = new StringBuilder();
+            foreach (string line in body.Replace("\r\n", "\n").Split('\n'))
             {
-                int rel = ((v % 100) + 100) % 100;
-                if (!rels.Contains(rel)) rels.Add(rel);
+                if (line.StartsWith("vnum:", StringComparison.Ordinal)) continue;
+                sb.Append(line).Append('\n');
             }
-            rels.Sort();
-            var index = new Dictionary<string, List<int>> { { key, rels } };
-            File.WriteAllText(Path.Combine(dir, "index.yaml"), serializer.Serialize(index), DefaultEncoding);
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Nests one entity body under a bare-int rel key, indenting every non-empty line
+        /// two spaces. Uniform indentation keeps literal-block indicators valid (they are
+        /// relative to the parent key) -- this mirrors the engine/converter flat emitter.
+        /// </summary>
+        private static string NestUnderRel(int rel, string body)
+        {
+            var sb = new StringBuilder();
+            sb.Append(rel).Append(":\n");
+            foreach (string line in body.TrimEnd('\n').Replace("\r\n", "\n").Split('\n'))
+            {
+                if (line.Length == 0) sb.Append('\n');
+                else sb.Append("  ").Append(line).Append('\n');
+            }
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Writes the flat zone file zones/&lt;z&gt;/&lt;sub&gt;.yaml as a "rel-number -> body"
+        /// map (its own index -- no per-dir index.yaml). Self-cleaning: removes the old
+        /// per-file &lt;sub&gt;/ directory, and deletes the flat file if there are no entries.
+        /// </summary>
+        private void WriteFlatZoneFile(string zoneNumber, string sub, string label,
+            List<KeyValuePair<int, string>> entries)
+        {
+            string zoneDir = GetZoneDir(zoneNumber);
+            Directory.CreateDirectory(zoneDir);
+            string flatPath = Path.Combine(zoneDir, sub + ".yaml");
+            string perFileDir = Path.Combine(zoneDir, sub);
+
+            if (entries.Count == 0)
+            {
+                if (File.Exists(flatPath)) File.Delete(flatPath);
+            }
+            else
+            {
+                entries.Sort((a, b) => a.Key.CompareTo(b.Key));
+                var sb = new StringBuilder();
+                sb.Append("# ").Append(label).Append(" for zone ").Append(zoneNumber).Append('\n');
+                foreach (var e in entries)
+                {
+                    sb.Append('\n');
+                    sb.Append(NestUnderRel(e.Key, e.Value));
+                }
+                File.WriteAllText(flatPath, sb.ToString(), DefaultEncoding);
+            }
+
+            // A zone must not keep both layouts; the engine warns and ignores one otherwise.
+            if (Directory.Exists(perFileDir))
+            {
+                try { Directory.Delete(perFileDir, true); } catch { }
+            }
         }
 
         /// <summary>
@@ -109,9 +170,22 @@ namespace DataUtils
         private void EnsureWorldConfig()
         {
             string configPath = Path.Combine(StaticData.WorldFolderPath, "world_config.yaml");
-            if (File.Exists(configPath)) return;
             Directory.CreateDirectory(StaticData.WorldFolderPath);
-            var config = new Dictionary<string, string> { { "line_endings", "unix" } };
+
+            var config = new Dictionary<string, string>();
+            if (File.Exists(configPath))
+            {
+                try
+                {
+                    var existing = deserializer.Deserialize<Dictionary<string, string>>(
+                        File.ReadAllText(configPath, DefaultEncoding));
+                    if (existing != null) config = existing;
+                }
+                catch { /* malformed config is rebuilt below */ }
+            }
+
+            if (!config.ContainsKey("line_endings")) config["line_endings"] = "unix";
+            config["layout"] = "flat"; // the editor always writes the flat layout
             File.WriteAllText(configPath, serializer.Serialize(config), DefaultEncoding);
         }
 
@@ -253,18 +327,38 @@ namespace DataUtils
         {
             try
             {
+                var enc = encoding ?? DefaultEncoding;
+
+                // Flat layout (default): zones/<z>/rooms.yaml is a rel -> body map.
+                string flatPath = Path.Combine(GetZoneDir(zoneNumber), "rooms.yaml");
+                if (File.Exists(flatPath))
+                {
+                    int zone = ParseZone(zoneNumber);
+                    var map = deserializer.Deserialize<Dictionary<int, YamlRoom>>(File.ReadAllText(flatPath, enc));
+                    if (map != null)
+                        foreach (var kv in map)
+                        {
+                            var yamlRoom = kv.Value;
+                            if (yamlRoom == null) continue;
+                            yamlRoom.VNum = zone * 100 + kv.Key;
+                            var room = YamlRoomMapper.FromYaml(yamlRoom);
+                            if (room != null) rooms.Add(room);
+                        }
+                    return true;
+                }
+
+                // Per-file layout (legacy): zones/<z>/rooms/NN.yaml + index.yaml.
                 string roomsDir = Path.Combine(GetZoneDir(zoneNumber), "rooms");
                 if (!Directory.Exists(roomsDir))
                 {
-                    // No rooms directory is not an error - zone may have no rooms yet
+                    // No rooms is not an error - zone may have no rooms yet
                     return true;
                 }
 
                 foreach (var file in Directory.GetFiles(roomsDir, "*.yaml"))
                 {
                     if (IsIndexFile(file)) continue;
-                    string yamlContent = File.ReadAllText(file, encoding ?? DefaultEncoding);
-                    var yamlRoom = deserializer.Deserialize<YamlRoom>(yamlContent);
+                    var yamlRoom = deserializer.Deserialize<YamlRoom>(File.ReadAllText(file, enc));
                     var room = YamlRoomMapper.FromYaml(yamlRoom);
                     if (room != null)
                         rooms.Add(room);
@@ -282,6 +376,25 @@ namespace DataUtils
         {
             try
             {
+                var enc = encoding ?? DefaultEncoding;
+
+                string flatPath = Path.Combine(GetZoneDir(zoneNumber), "mobs.yaml");
+                if (File.Exists(flatPath))
+                {
+                    int zone = ParseZone(zoneNumber);
+                    var map = deserializer.Deserialize<Dictionary<int, YamlMob>>(File.ReadAllText(flatPath, enc));
+                    if (map != null)
+                        foreach (var kv in map)
+                        {
+                            var yamlMob = kv.Value;
+                            if (yamlMob == null) continue;
+                            yamlMob.VNum = zone * 100 + kv.Key;
+                            var mob = YamlMobMapper.FromYaml(yamlMob);
+                            if (mob != null) mobs.Add(mob);
+                        }
+                    return true;
+                }
+
                 string mobsDir = Path.Combine(GetZoneDir(zoneNumber), "mobs");
                 if (!Directory.Exists(mobsDir))
                 {
@@ -291,8 +404,7 @@ namespace DataUtils
                 foreach (var file in Directory.GetFiles(mobsDir, "*.yaml"))
                 {
                     if (IsIndexFile(file)) continue;
-                    string yamlContent = File.ReadAllText(file, encoding ?? DefaultEncoding);
-                    var yamlMob = deserializer.Deserialize<YamlMob>(yamlContent);
+                    var yamlMob = deserializer.Deserialize<YamlMob>(File.ReadAllText(file, enc));
                     var mob = YamlMobMapper.FromYaml(yamlMob);
                     if (mob != null)
                         mobs.Add(mob);
@@ -310,6 +422,25 @@ namespace DataUtils
         {
             try
             {
+                var enc = encoding ?? DefaultEncoding;
+
+                string flatPath = Path.Combine(GetZoneDir(zoneNumber), "objects.yaml");
+                if (File.Exists(flatPath))
+                {
+                    int zone = ParseZone(zoneNumber);
+                    var map = deserializer.Deserialize<Dictionary<int, YamlObj>>(File.ReadAllText(flatPath, enc));
+                    if (map != null)
+                        foreach (var kv in map)
+                        {
+                            var yamlObj = kv.Value;
+                            if (yamlObj == null) continue;
+                            yamlObj.VNum = zone * 100 + kv.Key;
+                            var obj = YamlObjMapper.FromYaml(yamlObj);
+                            if (obj != null) objects.Add(obj);
+                        }
+                    return true;
+                }
+
                 string objsDir = Path.Combine(GetZoneDir(zoneNumber), "objects");
                 if (!Directory.Exists(objsDir))
                 {
@@ -319,8 +450,7 @@ namespace DataUtils
                 foreach (var file in Directory.GetFiles(objsDir, "*.yaml"))
                 {
                     if (IsIndexFile(file)) continue;
-                    string yamlContent = File.ReadAllText(file, encoding ?? DefaultEncoding);
-                    var yamlObj = deserializer.Deserialize<YamlObj>(yamlContent);
+                    var yamlObj = deserializer.Deserialize<YamlObj>(File.ReadAllText(file, enc));
                     var obj = YamlObjMapper.FromYaml(yamlObj);
                     if (obj != null)
                         objects.Add(obj);
@@ -338,6 +468,25 @@ namespace DataUtils
         {
             try
             {
+                var enc = encoding ?? DefaultEncoding;
+
+                string flatPath = Path.Combine(GetZoneDir(zoneNumber), "triggers.yaml");
+                if (File.Exists(flatPath))
+                {
+                    int zone = ParseZone(zoneNumber);
+                    var map = deserializer.Deserialize<Dictionary<int, YamlTrigger>>(File.ReadAllText(flatPath, enc));
+                    if (map != null)
+                        foreach (var kv in map)
+                        {
+                            var yamlTrigger = kv.Value;
+                            if (yamlTrigger == null) continue;
+                            yamlTrigger.VNum = zone * 100 + kv.Key;
+                            var trigger = YamlTriggerMapper.FromYaml(yamlTrigger);
+                            if (trigger != null) triggers.Add(trigger);
+                        }
+                    return true;
+                }
+
                 string trigsDir = Path.Combine(GetZoneDir(zoneNumber), "triggers");
                 if (!Directory.Exists(trigsDir))
                 {
@@ -347,8 +496,7 @@ namespace DataUtils
                 foreach (var file in Directory.GetFiles(trigsDir, "*.yaml"))
                 {
                     if (IsIndexFile(file)) continue;
-                    string yamlContent = File.ReadAllText(file, encoding ?? DefaultEncoding);
-                    var yamlTrigger = deserializer.Deserialize<YamlTrigger>(yamlContent);
+                    var yamlTrigger = deserializer.Deserialize<YamlTrigger>(File.ReadAllText(file, enc));
                     var trigger = YamlTriggerMapper.FromYaml(yamlTrigger);
                     if (trigger != null)
                         triggers.Add(trigger);
@@ -399,24 +547,14 @@ namespace DataUtils
         {
             try
             {
-                string roomsDir = Path.Combine(GetZoneDir(zoneNumber), "rooms");
-                Directory.CreateDirectory(roomsDir);
-
-                // Clean up old files
-                foreach (var oldFile in Directory.GetFiles(roomsDir, "*.yaml"))
-                {
-                    File.Delete(oldFile);
-                }
-
-                var vnums = new List<int>();
+                var entries = new List<KeyValuePair<int, string>>();
                 foreach (Room room in rooms)
                 {
                     var yamlRoom = YamlRoomMapper.ToYaml(room);
-                    string yaml = serializer.Serialize(yamlRoom);
-                    File.WriteAllText(Path.Combine(roomsDir, RelFileName(room.VNum)), yaml, DefaultEncoding);
-                    vnums.Add(room.VNum);
+                    string body = StripVnumLine(serializer.Serialize(yamlRoom));
+                    entries.Add(new KeyValuePair<int, string>(RelNum(room.VNum), body));
                 }
-                WriteEntityIndex(roomsDir, "rooms", vnums);
+                WriteFlatZoneFile(zoneNumber, "rooms", "Rooms", entries);
             }
             catch (Exception ex)
             {
@@ -428,24 +566,14 @@ namespace DataUtils
         {
             try
             {
-                string mobsDir = Path.Combine(GetZoneDir(zoneNumber), "mobs");
-                Directory.CreateDirectory(mobsDir);
-
-                // Clean up old files
-                foreach (var oldFile in Directory.GetFiles(mobsDir, "*.yaml"))
-                {
-                    File.Delete(oldFile);
-                }
-
-                var vnums = new List<int>();
+                var entries = new List<KeyValuePair<int, string>>();
                 foreach (Mob mob in mobs)
                 {
                     var yamlMob = YamlMobMapper.ToYaml(mob);
-                    string yaml = serializer.Serialize(yamlMob);
-                    File.WriteAllText(Path.Combine(mobsDir, RelFileName(mob.VNum)), yaml, DefaultEncoding);
-                    vnums.Add(mob.VNum);
+                    string body = StripVnumLine(serializer.Serialize(yamlMob));
+                    entries.Add(new KeyValuePair<int, string>(RelNum(mob.VNum), body));
                 }
-                WriteEntityIndex(mobsDir, "mobs", vnums);
+                WriteFlatZoneFile(zoneNumber, "mobs", "Mobs", entries);
             }
             catch (Exception ex)
             {
@@ -457,24 +585,14 @@ namespace DataUtils
         {
             try
             {
-                string objsDir = Path.Combine(GetZoneDir(zoneNumber), "objects");
-                Directory.CreateDirectory(objsDir);
-
-                // Clean up old files
-                foreach (var oldFile in Directory.GetFiles(objsDir, "*.yaml"))
-                {
-                    File.Delete(oldFile);
-                }
-
-                var vnums = new List<int>();
+                var entries = new List<KeyValuePair<int, string>>();
                 foreach (Obj obj in objects)
                 {
                     var yamlObj = YamlObjMapper.ToYaml(obj);
-                    string yaml = serializer.Serialize(yamlObj);
-                    File.WriteAllText(Path.Combine(objsDir, RelFileName(obj.VNum)), yaml, DefaultEncoding);
-                    vnums.Add(obj.VNum);
+                    string body = StripVnumLine(serializer.Serialize(yamlObj));
+                    entries.Add(new KeyValuePair<int, string>(RelNum(obj.VNum), body));
                 }
-                WriteEntityIndex(objsDir, "objects", vnums);
+                WriteFlatZoneFile(zoneNumber, "objects", "Objects", entries);
             }
             catch (Exception ex)
             {
@@ -486,24 +604,14 @@ namespace DataUtils
         {
             try
             {
-                string trigsDir = Path.Combine(GetZoneDir(zoneNumber), "triggers");
-                Directory.CreateDirectory(trigsDir);
-
-                // Clean up old files
-                foreach (var oldFile in Directory.GetFiles(trigsDir, "*.yaml"))
-                {
-                    File.Delete(oldFile);
-                }
-
-                var vnums = new List<int>();
+                var entries = new List<KeyValuePair<int, string>>();
                 foreach (Trigger trigger in triggers)
                 {
                     var yamlTrigger = YamlTriggerMapper.ToYaml(trigger);
-                    string yaml = serializer.Serialize(yamlTrigger);
-                    File.WriteAllText(Path.Combine(trigsDir, RelFileName(trigger.VNum)), yaml, DefaultEncoding);
-                    vnums.Add(trigger.VNum);
+                    string body = StripVnumLine(serializer.Serialize(yamlTrigger));
+                    entries.Add(new KeyValuePair<int, string>(RelNum(trigger.VNum), body));
                 }
-                WriteEntityIndex(trigsDir, "triggers", vnums);
+                WriteFlatZoneFile(zoneNumber, "triggers", "Triggers", entries);
             }
             catch (Exception ex)
             {

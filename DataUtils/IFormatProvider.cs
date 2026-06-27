@@ -6,12 +6,12 @@ namespace DataUtils
 {
     /// <summary>
     /// Interface for zone data format providers.
-    /// Allows loading and saving zone data in different formats (CircleMUD text, YAML, SQLite, etc.)
+    /// Allows loading and saving zone data in different formats (CircleMUD text, YAML, etc.)
     /// </summary>
     public interface IFormatProvider
     {
         /// <summary>
-        /// Short name of the format (e.g., "circlemud", "yaml", "sqlite")
+        /// Short name of the format (e.g., "circlemud", "yaml")
         /// </summary>
         string FormatName { get; }
 
