@@ -272,6 +272,10 @@ namespace DataUtils
             ZoneData zd = zonesFileList[number];
             if (zd != null)
             {
+                // Preloading is what RefreshZonesList partitions on, so it must be
+                // cleared too -- otherwise the zone stays in the "loaded" list and
+                // only its icon changes.
+                zd.Preloading = false;
                 zd.State = ZoneState.Available;
                 loadedZonesCount--;
             }
