@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <appSettings>
+        <add key="MobSelectFormSize" value="{Width=350, Height=285}" />
+        <add key="MobSelectFormLocation" value="{X=785,Y=437}" />
+        <add key="ObjSelectFormSize" value="{Width=350, Height=285}" />
+        <add key="ObjSelectFormLocation" value="{X=785,Y=437}" />
+        <add key="IngrSelectFormSize" value="{Width=356, Height=401}" />
+        <add key="IngrSelectFormLocation" value="{X=346,Y=306}" />
+        <add key="CreateZoneFormSize" value="{Width=297, Height=135}" />
+        <add key="CreateZoneFormLocation" value="{X=375,Y=439}" />
+        <add key="RoomSelectFormSize" value="{Width=350, Height=285}" />
+        <add key="RoomSelectFormLocation" value="{X=2705,Y=373}" />
+    </appSettings>
+</configuration>

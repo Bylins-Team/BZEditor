@@ -4,7 +4,6 @@ using System.Data;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using Fireball.Windows.Forms.CodeEditor;
 
 namespace BZEditor
 {
@@ -195,8 +194,7 @@ namespace BZEditor
                     if (m.Success)
                     {
                         ListItemsArray.Add(
-                            new ListItem(m.Groups["token"].ToString(), 1, m.Groups["descr"].ToString(),
-                                         m.Groups["token"].ToString()));
+                            m.Groups["token"].ToString());
                     }
                 }
             }
@@ -213,8 +211,7 @@ namespace BZEditor
                     if (m.Success)
                     {
                         ListItemsArray.Add(
-                            new ListItem(m.Groups["token"].ToString(), 1, m.Groups["descr"].ToString(),
-                                         m.Groups["insert"].ToString()));
+                            m.Groups["token"].ToString());
                     }
                 }
             }
@@ -227,8 +224,7 @@ namespace BZEditor
                     if (m.Success)
                     {
                         ListItemsArray.Add(
-                            new ListItem(m.Groups["token"].ToString(), 1, m.Groups["descr"].ToString(),
-                                         m.Groups["insert"].ToString()));
+                            m.Groups["token"].ToString());
                     }
                 }
             }

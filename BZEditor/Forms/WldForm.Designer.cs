@@ -149,7 +149,6 @@ namespace BZEditor
             System.Windows.Forms.Label label68;
             System.Windows.Forms.Label label74;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WldForm));
-            Fireball.Windows.Forms.LineMarginRender lineMarginRender1 = new Fireball.Windows.Forms.LineMarginRender();
             this.nudPResist = new System.Windows.Forms.NumericUpDown();
             this.nudMResist = new System.Windows.Forms.NumericUpDown();
             this.nudAResist = new System.Windows.Forms.NumericUpDown();
@@ -194,7 +193,6 @@ namespace BZEditor
             this.tsmiCutDesc = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiPasteDesc = new System.Windows.Forms.ToolStripMenuItem();
-            this.syntaxDocument = new Fireball.Syntax.SyntaxDocument(this.components);
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -213,12 +211,12 @@ namespace BZEditor
             this.btnAddBZones = new System.Windows.Forms.Button();
             this.btnRemoveBZones = new System.Windows.Forms.Button();
             this.btnValidate = new System.Windows.Forms.Button();
-            this.tbExitSouth = new Fireball.Windows.Forms.NumericBox();
-            this.tbExitNorth = new Fireball.Windows.Forms.NumericBox();
-            this.tbExitDown = new Fireball.Windows.Forms.NumericBox();
-            this.tbExitUp = new Fireball.Windows.Forms.NumericBox();
-            this.tbExitEast = new Fireball.Windows.Forms.NumericBox();
-            this.tbExitWest = new Fireball.Windows.Forms.NumericBox();
+            this.tbExitSouth = new System.Windows.Forms.TextBox();
+            this.tbExitNorth = new System.Windows.Forms.TextBox();
+            this.tbExitDown = new System.Windows.Forms.TextBox();
+            this.tbExitUp = new System.Windows.Forms.TextBox();
+            this.tbExitEast = new System.Windows.Forms.TextBox();
+            this.tbExitWest = new System.Windows.Forms.TextBox();
             this.label93 = new System.Windows.Forms.Label();
             this.btnSelectDoorKey = new System.Windows.Forms.Button();
             this.tbDoorNameVin = new System.Windows.Forms.TextBox();
@@ -232,7 +230,6 @@ namespace BZEditor
             this.nudMaxInRoom = new System.Windows.Forms.NumericUpDown();
             this.label85 = new System.Windows.Forms.Label();
             this.btnRoomSpecFormatCommonDesc = new System.Windows.Forms.Button();
-            this.btnRoomSpellCheckCommonDesc = new System.Windows.Forms.Button();
             this.cbInsertSpaces = new System.Windows.Forms.CheckBox();
             this.btnRoomFormatCommonDesc = new System.Windows.Forms.Button();
             this.btnObjSetAutoCases = new System.Windows.Forms.Button();
@@ -300,7 +297,6 @@ namespace BZEditor
             this.btnRoomAddObjToMob = new System.Windows.Forms.Button();
             this.elvRoomMobObjects = new ExtControls.ExtListView();
             this.btnMobSpecFormatCommonDesc = new System.Windows.Forms.Button();
-            this.btnMobSpellCheckCommonDesc = new System.Windows.Forms.Button();
             this.btnMobFormatCommonDesc = new System.Windows.Forms.Button();
             this.nudObjMinRemorts = new System.Windows.Forms.NumericUpDown();
             this.btnAddRoomIngredient = new System.Windows.Forms.Button();
@@ -755,7 +751,7 @@ namespace BZEditor
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.codeEditor = new Fireball.Windows.Forms.CodeEditorControl();
+            this.codeEditor = new BZEditor.DgScriptEditor();
             this.toolStripPanelTrgTop = new System.Windows.Forms.ToolStripPanel();
             this.toolStripTrgEditor = new System.Windows.Forms.ToolStrip();
             this.tsbTrgClear = new System.Windows.Forms.ToolStripButton();
@@ -2822,11 +2818,6 @@ namespace BZEditor
             // 
             // syntaxDocument
             // 
-            this.syntaxDocument.Lines = new string[] {
-        ""};
-            this.syntaxDocument.MaxUndoBufferSize = 1000;
-            this.syntaxDocument.Modified = false;
-            this.syntaxDocument.UndoStep = 0;
             // 
             // toolStripSeparator1
             // 
@@ -3008,8 +2999,6 @@ namespace BZEditor
             // 
             // tbExitSouth
             // 
-            this.tbExitSouth.AllowError = true;
-            this.tbExitSouth.DecimalPlace = 0;
             this.tbExitSouth.Location = new System.Drawing.Point(69, 73);
             this.tbExitSouth.Name = "tbExitSouth";
             this.tbExitSouth.Size = new System.Drawing.Size(54, 17);
@@ -3019,8 +3008,6 @@ namespace BZEditor
             // 
             // tbExitNorth
             // 
-            this.tbExitNorth.AllowError = true;
-            this.tbExitNorth.DecimalPlace = 0;
             this.tbExitNorth.Location = new System.Drawing.Point(69, 20);
             this.tbExitNorth.Name = "tbExitNorth";
             this.tbExitNorth.Size = new System.Drawing.Size(54, 17);
@@ -3030,8 +3017,6 @@ namespace BZEditor
             // 
             // tbExitDown
             // 
-            this.tbExitDown.AllowError = true;
-            this.tbExitDown.DecimalPlace = 0;
             this.tbExitDown.Location = new System.Drawing.Point(200, 73);
             this.tbExitDown.Name = "tbExitDown";
             this.tbExitDown.Size = new System.Drawing.Size(54, 17);
@@ -3041,8 +3026,6 @@ namespace BZEditor
             // 
             // tbExitUp
             // 
-            this.tbExitUp.AllowError = true;
-            this.tbExitUp.DecimalPlace = 0;
             this.tbExitUp.Location = new System.Drawing.Point(200, 20);
             this.tbExitUp.Name = "tbExitUp";
             this.tbExitUp.Size = new System.Drawing.Size(54, 17);
@@ -3052,8 +3035,6 @@ namespace BZEditor
             // 
             // tbExitEast
             // 
-            this.tbExitEast.AllowError = true;
-            this.tbExitEast.DecimalPlace = 0;
             this.tbExitEast.Location = new System.Drawing.Point(109, 46);
             this.tbExitEast.Name = "tbExitEast";
             this.tbExitEast.Size = new System.Drawing.Size(54, 17);
@@ -3063,8 +3044,6 @@ namespace BZEditor
             // 
             // tbExitWest
             // 
-            this.tbExitWest.AllowError = true;
-            this.tbExitWest.DecimalPlace = 0;
             this.tbExitWest.Location = new System.Drawing.Point(27, 46);
             this.tbExitWest.Name = "tbExitWest";
             this.tbExitWest.Size = new System.Drawing.Size(54, 17);
@@ -3248,16 +3227,7 @@ namespace BZEditor
             this.toolTip.SetToolTip(this.btnRoomSpecFormatCommonDesc, "Выровнять по ширине\r\n(без сохранения абзацев).");
             this.btnRoomSpecFormatCommonDesc.Click += new System.EventHandler(this.BtnRoomFormatClick);
             // 
-            // btnRoomSpellCheckCommonDesc
             // 
-            this.btnRoomSpellCheckCommonDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRoomSpellCheckCommonDesc.Image = ((System.Drawing.Image)(resources.GetObject("btnRoomSpellCheckCommonDesc.Image")));
-            this.btnRoomSpellCheckCommonDesc.Location = new System.Drawing.Point(3, 3);
-            this.btnRoomSpellCheckCommonDesc.Name = "btnRoomSpellCheckCommonDesc";
-            this.btnRoomSpellCheckCommonDesc.Size = new System.Drawing.Size(28, 28);
-            this.btnRoomSpellCheckCommonDesc.TabIndex = 44;
-            this.toolTip.SetToolTip(this.btnRoomSpellCheckCommonDesc, "Проверка ошибок.");
-            this.btnRoomSpellCheckCommonDesc.Click += new System.EventHandler(this.BtnRoomSpellCheckCommonDescClick);
             // 
             // cbInsertSpaces
             // 
@@ -4204,16 +4174,7 @@ namespace BZEditor
             this.toolTip.SetToolTip(this.btnMobSpecFormatCommonDesc, "Выровнять по ширине\r\n(без сохранения абзацев).");
             this.btnMobSpecFormatCommonDesc.Click += new System.EventHandler(this.btnMobSpecFormatCommonDesc_Click);
             // 
-            // btnMobSpellCheckCommonDesc
             // 
-            this.btnMobSpellCheckCommonDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMobSpellCheckCommonDesc.Image = ((System.Drawing.Image)(resources.GetObject("btnMobSpellCheckCommonDesc.Image")));
-            this.btnMobSpellCheckCommonDesc.Location = new System.Drawing.Point(3, 3);
-            this.btnMobSpellCheckCommonDesc.Name = "btnMobSpellCheckCommonDesc";
-            this.btnMobSpellCheckCommonDesc.Size = new System.Drawing.Size(28, 28);
-            this.btnMobSpellCheckCommonDesc.TabIndex = 44;
-            this.toolTip.SetToolTip(this.btnMobSpellCheckCommonDesc, "Проверка ошибок.");
-            this.btnMobSpellCheckCommonDesc.Click += new System.EventHandler(this.btnMobSpellCheckCommonDesc_Click);
             // 
             // btnMobFormatCommonDesc
             // 
@@ -6937,7 +6898,6 @@ namespace BZEditor
             this.pnlFormating.BackColor = System.Drawing.SystemColors.Control;
             this.pnlFormating.Controls.Add(this.cbDescReplace);
             this.pnlFormating.Controls.Add(this.btnRoomSpecFormatCommonDesc);
-            this.pnlFormating.Controls.Add(this.btnRoomSpellCheckCommonDesc);
             this.pnlFormating.Controls.Add(this.cbInsertSpaces);
             this.pnlFormating.Controls.Add(this.btnRoomFormatCommonDesc);
             this.pnlFormating.Controls.Add(this.cbAllowHyp);
@@ -9899,7 +9859,6 @@ namespace BZEditor
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.btnMobSpecFormatCommonDesc);
-            this.panel1.Controls.Add(this.btnMobSpellCheckCommonDesc);
             this.panel1.Controls.Add(this.btnMobFormatCommonDesc);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(715, 0);
@@ -10151,30 +10110,13 @@ namespace BZEditor
             // 
             // codeEditor
             // 
-            this.codeEditor.ActiveView = Fireball.Windows.Forms.CodeEditor.ActiveView.BottomRight;
-            this.codeEditor.AutoListPosition = null;
-            this.codeEditor.AutoListSelectedText = "";
-            this.codeEditor.AutoListVisible = false;
             this.codeEditor.ContextMenuStrip = this.cmsCodeEditor;
-            this.codeEditor.CopyAsRTF = false;
             this.codeEditor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.codeEditor.Document = this.syntaxDocument;
-            this.codeEditor.InfoTipPosition = null;
-            lineMarginRender1.Bounds = new System.Drawing.Rectangle(19, 0, 19, 16);
-            this.codeEditor.LineMarginRender = lineMarginRender1;
             this.codeEditor.Location = new System.Drawing.Point(0, 0);
-            this.codeEditor.LockCursorUpdate = false;
             this.codeEditor.Name = "codeEditor";
-            this.codeEditor.Saved = false;
-            this.codeEditor.ShowScopeIndicator = false;
             this.codeEditor.Size = new System.Drawing.Size(561, 464);
-            this.codeEditor.SmoothScroll = false;
-            this.codeEditor.SplitviewH = -4;
-            this.codeEditor.SplitviewV = -4;
-            this.codeEditor.TabGuideColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(234)))));
             this.codeEditor.TabIndex = 9;
             this.codeEditor.Text = " ";
-            this.codeEditor.WhitespaceColor = System.Drawing.SystemColors.ControlDark;
             this.codeEditor.TextChanged += new System.EventHandler(this.CodeEditorTextChanged);
             // 
             // toolStripPanelTrgTop
@@ -11564,7 +11506,6 @@ namespace BZEditor
         public System.Windows.Forms.Button btnRoomRemoveObjFromObj;
         public UcTwoPanelsList tplRoomFlags;
         public System.Windows.Forms.Button btnRoomFormatCommonDesc;
-        public System.Windows.Forms.Button btnRoomSpellCheckCommonDesc;
         public System.Windows.Forms.Button btnRoomSpecFormatCommonDesc;
         public System.Windows.Forms.CheckBox cbIsertSpaces;
         public System.Windows.Forms.CheckBox cbRoomDescAllowHyp;
@@ -11607,8 +11548,7 @@ namespace BZEditor
         public CExtRichTextBox CExtRichTextBox12;
         public System.Windows.Forms.ColumnHeader columnHeader14;
         public System.Windows.Forms.ColumnHeader columnHeader15;
-        public Fireball.Windows.Forms.CodeEditorControl codeEditor;
-        public Fireball.Syntax.SyntaxDocument syntaxDocument;
+        public BZEditor.DgScriptEditor codeEditor;
         public System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         public System.Windows.Forms.ToolStripButton tsbTrgGoToLine;
         public System.Windows.Forms.ToolStripButton tsbTrgSearch;
@@ -11636,12 +11576,12 @@ namespace BZEditor
         public ExtControls.ExtListView elvRoomObjInObj;
         public System.Windows.Forms.ColumnHeader columnHeader20;
         public System.Windows.Forms.ColumnHeader columnHeader21;
-        public Fireball.Windows.Forms.NumericBox tbExitSouth;
-        public Fireball.Windows.Forms.NumericBox tbExitNorth;
-        public Fireball.Windows.Forms.NumericBox tbExitEast;
-        public Fireball.Windows.Forms.NumericBox tbExitWest;
-        public Fireball.Windows.Forms.NumericBox tbExitDown;
-        public Fireball.Windows.Forms.NumericBox tbExitUp;
+        public System.Windows.Forms.TextBox tbExitSouth;
+        public System.Windows.Forms.TextBox tbExitNorth;
+        public System.Windows.Forms.TextBox tbExitEast;
+        public System.Windows.Forms.TextBox tbExitWest;
+        public System.Windows.Forms.TextBox tbExitDown;
+        public System.Windows.Forms.TextBox tbExitUp;
         public System.Windows.Forms.TextBox tbRoomDoorKeyName;
         public System.Windows.Forms.Button btnSelectDoorKey;
         public System.Windows.Forms.ToolStripButton tsbAddTemplate;
@@ -11856,7 +11796,6 @@ namespace BZEditor
         private SplitContainer splitContainer1;
         public Panel panel1;
         public Button btnMobSpecFormatCommonDesc;
-        public Button btnMobSpellCheckCommonDesc;
         public Button btnMobFormatCommonDesc;
         private Label label67;
         public CExtRichTextBox ertbMobDescription;

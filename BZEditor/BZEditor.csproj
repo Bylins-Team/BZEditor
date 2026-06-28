@@ -17,7 +17,6 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -57,38 +56,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Fireball.CodeEditor, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalComponents\Fireball.CodeEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Fireball.CodeEditor.SyntaxFiles, Version=1.0.0.2, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalComponents\Fireball.CodeEditor.SyntaxFiles.dll</HintPath>
-    </Reference>
-    <Reference Include="Fireball.Core, Version=1.1.0.1, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalComponents\Fireball.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Fireball.SyntaxDocument, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalComponents\Fireball.SyntaxDocument.dll</HintPath>
-    </Reference>
-    <Reference Include="Fireball.Win32, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalComponents\Fireball.Win32.dll</HintPath>
-    </Reference>
-    <Reference Include="Fireball.Windows.Forms, Version=1.9.0.0, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalComponents\Fireball.Windows.Forms.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.Microsoft.Office.Core, Version=2.3.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalComponents\Interop.Microsoft.Office.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.Word, Version=8.3.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalComponents\Interop.Word.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
@@ -99,6 +66,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
       <HintPath>..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNET">
+      <HintPath>..\packages\jacobslusser.ScintillaNET.3.6.3\lib\net40\ScintillaNET.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +88,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CBasesDataManager.cs" />
+    <Compile Include="DgScriptEditor.cs" />
     <Compile Include="Forms\CreateSketchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +236,9 @@
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FormatSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\BaseMDIChildForm.resx">
       <DependentUpon>BaseMDIChildForm.cs</DependentUpon>
@@ -330,7 +304,6 @@
     <Compile Include="Forms\MobSelectForm.Designer.cs">
       <DependentUpon>MobSelectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\SpellingChecker.cs" />
     <Compile Include="Forms\SplashForm.cs">
       <SubType>Form</SubType>
     </Compile>

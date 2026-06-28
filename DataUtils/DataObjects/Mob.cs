@@ -46,6 +46,7 @@ namespace DataUtils
         private int plusMem;
         private int posDefault = 8; //моб стоит
         private int posLoad = 8; //моб стоит
+        private int speed = -1; // -1 = default movement cadence
         private int pResist;
         private int race = 100;
         private int resistDark;
@@ -324,6 +325,20 @@ namespace DataUtils
             {
                 if (posDefault == value) return;
                 posDefault = value;
+                FireChangeEvent(this);
+            }
+        }
+
+        /// <summary>
+        /// Movement speed (4th position-line field); -1 = default cadence
+        /// </summary>
+        public int Speed
+        {
+            get => speed;
+            set
+            {
+                if (speed == value) return;
+                speed = value;
                 FireChangeEvent(this);
             }
         }

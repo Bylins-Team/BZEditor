@@ -34,7 +34,7 @@ namespace BZEditor
             this.cbUseTemplate = new System.Windows.Forms.CheckBox();
             this.cboxTemplate = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.nbCount = new Fireball.Windows.Forms.NumericBox();
+            this.nbCount = new System.Windows.Forms.NumericUpDown();
             this.SuspendLayout();
             // 
             // btnCreate
@@ -93,8 +93,7 @@ namespace BZEditor
             // 
             // nbCount
             // 
-            this.nbCount.AllowError = true;
-            this.nbCount.DecimalPlace = 0;
+            this.nbCount.DecimalPlaces = 0;
             this.nbCount.Location = new System.Drawing.Point(243, 7);
             this.nbCount.Name = "nbCount";
             this.nbCount.Size = new System.Drawing.Size(22, 17);
@@ -135,6 +134,6 @@ namespace BZEditor
         private System.Windows.Forms.CheckBox cbUseTemplate;
         private System.Windows.Forms.ComboBox cboxTemplate;
         private System.Windows.Forms.Label label1;
-        private Fireball.Windows.Forms.NumericBox nbCount;
+        private System.Windows.Forms.NumericUpDown nbCount;
     }
 }

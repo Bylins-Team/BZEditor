@@ -15,7 +15,6 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -59,6 +58,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
+    <Reference Include="YamlDotNet">
+      <HintPath>..\packages\YamlDotNet.13.7.1\lib\net47\YamlDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bounds.cs" />
@@ -132,6 +135,39 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ZoneDataManager.cs" />
     <Compile Include="FileListsDataManager.cs" />
+    <Compile Include="IFormatProvider.cs" />
+    <Compile Include="BaseFormatProvider.cs" />
+    <Compile Include="FormatProviderFactory.cs" />
+    <Compile Include="CircleMudFormatProvider.cs" />
+    <Compile Include="YamlFormatProvider.cs" />
+    <Compile Include="EngineDictionaries.cs" />
+    <Compile Include="YamlMappers\EngineCodec.cs" />
+    <Compile Include="YamlModels\YamlDice.cs" />
+    <Compile Include="YamlModels\YamlExit.cs" />
+    <Compile Include="YamlModels\YamlExtraDesc.cs" />
+    <Compile Include="YamlModels\YamlIngredient.cs" />
+    <Compile Include="YamlModels\YamlLoadedObjAfterDeath.cs" />
+    <Compile Include="YamlModels\YamlMob.cs" />
+    <Compile Include="YamlModels\YamlMobObj.cs" />
+    <Compile Include="YamlModels\YamlMobStats.cs" />
+    <Compile Include="YamlModels\YamlObj.cs" />
+    <Compile Include="YamlModels\YamlOperatedMob.cs" />
+    <Compile Include="YamlModels\YamlOperatedObj.cs" />
+    <Compile Include="YamlModels\YamlRoom.cs" />
+    <Compile Include="YamlModels\YamlRoomDescription.cs" />
+    <Compile Include="YamlModels\YamlTrigger.cs" />
+    <Compile Include="YamlModels\YamlZone.cs" />
+    <Compile Include="YamlMappers\YamlMobMapper.cs" />
+    <Compile Include="YamlMappers\YamlObjMapper.cs" />
+    <Compile Include="YamlMappers\YamlOperatedMobMapper.cs" />
+    <Compile Include="YamlMappers\YamlOperatedObjMapper.cs" />
+    <Compile Include="YamlMappers\YamlRoomDescriptionMapper.cs" />
+    <Compile Include="YamlMappers\YamlRoomMapper.cs" />
+    <Compile Include="YamlMappers\YamlTriggerMapper.cs" />
+    <Compile Include="YamlMappers\YamlZoneMapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SystemFrameworks\SystemFrameworks.csproj">

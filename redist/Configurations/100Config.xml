@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <appSettings>
+        <add key="splitContainerBase" value="0.64354527938343" />
+        <add key="splitContainerMap" value="0.581530343007916" />
+        <add key="splitContainerZon" value="0.622671633847791" />
+        <add key="splitContainerRooms" value="0.653580901856764" />
+        <add key="splitContainerRoomsDesc" value="0.330708661417323" />
+        <add key="splitContainerRoomObjects" value="0.53904282115869" />
+        <add key="splitContainerRoomMobs" value="0.687657430730479" />
+        <add key="splitContainerObj" value="0.558807876530069" />
+        <add key="tplObjEffects" value="0.52992277992278" />
+        <add key="tplObjAffects" value="0.52992277992278" />
+        <add key="tplObjWearTo" value="0.52992277992278" />
+        <add key="tplObjCantTouch" value="0.52992277992278" />
+        <add key="tplObjCantUse" value="0.52992277992278" />
+        <add key="splitContainerAddAff" value="0.534749034749035" />
+        <add key="splitContainerSkillBonus" value="0.534749034749035" />
+        <add key="splitContainerMob" value="0.58179581795818" />
+        <add key="tplMobFeats" value="0.529411764705882" />
+        <add key="tplMobAffects" value="0.529411764705882" />
+        <add key="tplMobFlags" value="0.529411764705882" />
+        <add key="tplMobSpecFlags" value="0.529411764705882" />
+        <add key="tplMobRoles" value="0.529411764705882" />
+        <add key="splitContainerTrg" value="0.697416974169742" />
+    </appSettings>
+</configuration>

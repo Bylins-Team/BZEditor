@@ -1,7 +1,6 @@
 using System;
 using System.Windows.Forms;
 using DataUtils;
-using Fireball.Windows.Forms;
 using Object = DataUtils.Obj;
 
 namespace BZEditor
@@ -57,7 +56,7 @@ namespace BZEditor
             if (maxAvail > 0)
             {
                 label1.Text = $"Количество добавляемых клонов от 1 до {maxAvail}";
-                nbCount.Ranges.Add(new NumericRange(1, maxAvail));
+                nbCount.Maximum = maxAvail; nbCount.Minimum = 1;
                 nbCount.Enabled = true;
                 btnCreate.Enabled = true;
             }

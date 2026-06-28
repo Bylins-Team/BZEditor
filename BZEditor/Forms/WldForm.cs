@@ -6,8 +6,6 @@ using System.IO;
 using System.Windows.Forms;
 using DataUtils;
 using ExtControls;
-using Fireball.CodeEditor.SyntaxFiles;
-using Fireball.Windows.Forms;
 using System.Data;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -105,7 +103,6 @@ namespace BZEditor
             this.templatesDm = templatesDm;
             WindowParentForm = parentForm;
             //подготовка скриптэдитора
-            CodeEditorSyntaxLoader.SetSyntax(codeEditor, SyntaxLanguage.DGScript);
             codeEditor.SetListItemsArray(BasesDm.ListItemsArray);
 
             this.ZoneDm = ZoneDm;
@@ -1317,35 +1314,6 @@ namespace BZEditor
             canDolvMainListSelectedIndexChanged = true;
         }*/
 
-        private void CheckSpelling(object sender)
-        {
-            string err = "";
-            string grammarerr = "";
-            try
-            {
-                if (sender is TextBox)
-                {
-                    err = SpellingChecker.SpellingCheck((TextBox)sender);
-                    grammarerr = SpellingChecker.CheckGrammar(((TextBox)sender).Text);
-                }
-                else if (sender is CExtRichTextBox)
-                {
-                    err = SpellingChecker.SpellingCheck((CExtRichTextBox)sender);
-                    grammarerr = SpellingChecker.CheckGrammar(((CExtRichTextBox)sender).Text);
-                }
-                string reserr = err;
-                if (grammarerr.Length > 0)
-                    reserr += "\r\n" + grammarerr;
-                else
-                    reserr += grammarerr;
-                errorProvider.SetError((Control)sender, reserr);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Не удалась иницализация правописания от Microsoft Office. Microsoft Office не установлен, или версия слишком старая/новая.");
-            }
-        }
-
         private void RefreshMainList()
         {
             RefreshMainList(true);
@@ -2186,11 +2154,6 @@ namespace BZEditor
         private void TabControlRoomDescriptionsSelectedIndexChanged(object sender, EventArgs e)
         {
             RefreshRoomDescription();
-        }
-
-        private void BtnRoomSpellCheckCommonDescClick(object sender, EventArgs e)
-        {
-            CheckSpelling(rtbRoomDesc);
         }
 
         private void BtnRoomFormatClick(object sender, EventArgs e)
@@ -3609,7 +3572,7 @@ namespace BZEditor
         {
             if (IgnoreExitDirChanged) return;
             if (ActiveRoom == null) return;
-            int newVNum = (((NumericBox)sender).Text.Length > 0) ? Convert.ToInt32(((NumericBox)sender).Text) : -1;
+            int newVNum = (((TextBox)sender).Text.Length > 0) ? Convert.ToInt32(((TextBox)sender).Text) : -1;
             Room trgRoom = ZoneDm.Rooms[newVNum, 0];
             if (tsbSetOppositeExit.Checked && trgRoom != null)
             {
@@ -3645,7 +3608,7 @@ namespace BZEditor
                 sbdf.Dispose();
             }
             Exit exit = null;
-            switch (((NumericBox)sender).Name)
+            switch (((TextBox)sender).Name)
             {
                 case "tbExitNorth":
                     exit = ActiveRoom.ExitNorth;
@@ -6488,11 +6451,6 @@ namespace BZEditor
                 ZoneDm.Zone.MobsToRemove.Add(mob.VNum, false, -1);
             else
                 ZoneDm.Zone.MobsToRemove.RemoveMob(mob.VNum);
-        }
-
-        private void btnMobSpellCheckCommonDesc_Click(object sender, EventArgs e)
-        {
-            CheckSpelling(ertbMobDescription);
         }
 
         private void btnMobSpecFormatCommonDesc_Click(object sender, EventArgs e)

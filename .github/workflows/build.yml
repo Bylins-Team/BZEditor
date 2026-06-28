@@ -1,0 +1,58 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore BZEditor.sln
+
+      - name: Build (Release)
+        run: msbuild BZEditor.sln -p:Configuration=Release -m
+
+      - name: Assemble installable package
+        shell: pwsh
+        run: |
+          $dist = "dist/BZEditor"
+          New-Item -ItemType Directory -Force $dist | Out-Null
+          # binaries (exe + dlls + app config), excluding debug symbols
+          Copy-Item BZEditorBuild/*.exe, BZEditorBuild/*.dll, BZEditorBuild/*.config -Destination $dist
+          # default data + sample world (ready to run)
+          Copy-Item redist/* -Destination $dist -Recurse -Force
+
+      - name: Upload build artifact
+        # Upload the folder, not a pre-made zip: upload-artifact already zips its
+        # contents, so zipping ourselves first would nest BZEditor.zip inside the
+        # downloaded BZEditor.zip.
+        uses: actions/upload-artifact@v4
+        with:
+          name: BZEditor
+          path: dist/BZEditor
+
+      - name: Package zip for release (on version tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        run: Compress-Archive -Path "dist/BZEditor/*" -DestinationPath "BZEditor.zip" -Force
+
+      - name: Publish release (on version tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: BZEditor.zip
