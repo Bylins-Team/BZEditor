@@ -626,6 +626,19 @@ namespace BZEditor
 
         private void TreeFormZoneUnloadingActivated(string zoneNum)
         {
+            // If the zone is open in an editor tab, close it first -- otherwise the
+            // tab would be left pointing at a zone that is no longer loaded.
+            WldForm openForm = null;
+            foreach (var w in dockContainerMain.Documents)
+            {
+                if (w is WldForm && ((WldForm)w).ZoneDm.Zone.Number.ToString() == zoneNum)
+                {
+                    openForm = (WldForm)w;
+                    break;
+                }
+            }
+            openForm?.Close();
+
             ZoneDataManager zdm = GetDataManagerByName(zoneNum);
             if (zdm == null) return;
             dmArray.Remove(zdm);
