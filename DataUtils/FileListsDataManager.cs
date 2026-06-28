@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
@@ -49,7 +49,7 @@ namespace DataUtils
                     }
                     catch (SerializationException e)
                     {
-                        throw new Exception("Ошибка сериализации при сохранении списка зон.", e);
+                        throw new Exception("РћС€РёР±РєР° СЃРµСЂРёР°Р»РёР·Р°С†РёРё РїСЂРё СЃРѕС…СЂР°РЅРµРЅРёРё СЃРїРёСЃРєР° Р·РѕРЅ.", e);
                     }
                     finally
                     {
@@ -69,7 +69,7 @@ namespace DataUtils
                     }
                     catch (SerializationException e)
                     {
-                        throw new Exception("Ошибка сериализации при сохранении списка эскизов.", e);
+                        throw new Exception("РћС€РёР±РєР° СЃРµСЂРёР°Р»РёР·Р°С†РёРё РїСЂРё СЃРѕС…СЂР°РЅРµРЅРёРё СЃРїРёСЃРєР° СЌСЃРєРёР·РѕРІ.", e);
                     }
                     finally
                     {
@@ -93,7 +93,7 @@ namespace DataUtils
                 }
                 catch (SerializationException e)
                 {
-                    throw new Exception("Ошибка десериализации при загрузке списка зон.", e);
+                    throw new Exception("РћС€РёР±РєР° РґРµСЃРµСЂРёР°Р»РёР·Р°С†РёРё РїСЂРё Р·Р°РіСЂСѓР·РєРµ СЃРїРёСЃРєР° Р·РѕРЅ.", e);
                 }
                 finally
                 {
@@ -111,7 +111,7 @@ namespace DataUtils
                 }
                 catch (SerializationException e)
                 {
-                    throw new Exception("Ошибка десериализации при загрузке списка эскизов.", e);
+                    throw new Exception("РћС€РёР±РєР° РґРµСЃРµСЂРёР°Р»РёР·Р°С†РёРё РїСЂРё Р·Р°РіСЂСѓР·РєРµ СЃРїРёСЃРєР° СЌСЃРєРёР·РѕРІ.", e);
                 }
                 finally
                 {
@@ -289,7 +289,7 @@ namespace DataUtils
 
         public void AddZoneToList(string number)
         {
-            AddZoneToList(number, "Новая зона");
+            AddZoneToList(number, "РќРѕРІР°СЏ Р·РѕРЅР°");
         }
 
         public void AddZoneToList(string number, string newName)
@@ -342,7 +342,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Удаление файлов зоны с диска
+        /// РЈРґР°Р»РµРЅРёРµ С„Р°Р№Р»РѕРІ Р·РѕРЅС‹ СЃ РґРёСЃРєР°
         /// </summary>
         /// <param name="number"></param>
         public void RemoveZone(string number)
@@ -374,7 +374,7 @@ namespace DataUtils
         public void ReloadSketchesList()
         {
             var targetFolder = new DirectoryInfo(StaticData.WorldFolderPath + @"\GSKT\");
-            //Не очищается полностью так как этот список делится на загруженные и доступные и флаг загруженности хранится в списке
+            //РќРµ РѕС‡РёС‰Р°РµС‚СЃСЏ РїРѕР»РЅРѕСЃС‚СЊСЋ С‚Р°Рє РєР°Рє СЌС‚РѕС‚ СЃРїРёСЃРѕРє РґРµР»РёС‚СЃСЏ РЅР° Р·Р°РіСЂСѓР¶РµРЅРЅС‹Рµ Рё РґРѕСЃС‚СѓРїРЅС‹Рµ Рё С„Р»Р°Рі Р·Р°РіСЂСѓР¶РµРЅРЅРѕСЃС‚Рё С…СЂР°РЅРёС‚СЃСЏ РІ СЃРїРёСЃРєРµ
             List<ZoneData> toRemove = new List<ZoneData>(sketchesFileList.Count);
             foreach (ZoneData zd in sketchesFileList)
                 if (!File.Exists(targetFolder + zd.FileName + ".gskt"))
@@ -417,7 +417,7 @@ namespace DataUtils
                 sketchesFileList.Add(zd);
             }
             else
-                return "Эскиз с именем "+ newName +" уже существует";
+                return "Р­СЃРєРёР· СЃ РёРјРµРЅРµРј "+ newName +" СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚";
             SaveData();
             return string.Empty;
         }

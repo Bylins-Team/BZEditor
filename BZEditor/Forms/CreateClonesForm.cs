@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Windows.Forms;
 using DataUtils;
 using Object = DataUtils.Obj;
@@ -27,13 +27,13 @@ namespace BZEditor
             switch (prototype)
             {
                 case EntityType.Room:
-                    tbNewName.Text = $"Клон комнаты {templatesDm.RoomClip.Name}";
+                    tbNewName.Text = $"РљР»РѕРЅ РєРѕРјРЅР°С‚С‹ {templatesDm.RoomClip.Name}";
                     break;
                 case EntityType.Mob:
-                    tbNewName.Text = $"Клон моба {templatesDm.MobClip.Cases.Imen}";
+                    tbNewName.Text = $"РљР»РѕРЅ РјРѕР±Р° {templatesDm.MobClip.Cases.Imen}";
                     break;
                 case EntityType.Object:
-                    tbNewName.Text = $"Клон объекта {templatesDm.ObjClip.Cases.Imen}";
+                    tbNewName.Text = $"РљР»РѕРЅ РѕР±СЉРµРєС‚Р° {templatesDm.ObjClip.Cases.Imen}";
                     break;
             }
             RefreshData();
@@ -55,21 +55,21 @@ namespace BZEditor
             }
             if (maxAvail > 0)
             {
-                label1.Text = $"Количество добавляемых клонов от 1 до {maxAvail}";
+                label1.Text = $"РљРѕР»РёС‡РµСЃС‚РІРѕ РґРѕР±Р°РІР»СЏРµРјС‹С… РєР»РѕРЅРѕРІ РѕС‚ 1 РґРѕ {maxAvail}";
                 nbCount.Maximum = maxAvail; nbCount.Minimum = 1;
                 nbCount.Enabled = true;
                 btnCreate.Enabled = true;
             }
             else
             {
-                label1.Text = "Достигнуто максимальное колич.клонов";
+                label1.Text = "Р”РѕСЃС‚РёРіРЅСѓС‚Рѕ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡.РєР»РѕРЅРѕРІ";
                 nbCount.Enabled = false;
                 btnCreate.Enabled = false;
             }
         }
 
         /// <summary>
-        /// Обработка хотекеев
+        /// РћР±СЂР°Р±РѕС‚РєР° С…РѕС‚РµРєРµРµРІ
         /// </summary>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {

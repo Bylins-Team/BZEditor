@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Configuration;
 using System.Drawing;
 using System.IO;
@@ -376,7 +376,7 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Проверяет наличие указанного пути, и если путь не верен, создает указанный путь
+        /// РџСЂРѕРІРµСЂСЏРµС‚ РЅР°Р»РёС‡РёРµ СѓРєР°Р·Р°РЅРЅРѕРіРѕ РїСѓС‚Рё, Рё РµСЃР»Рё РїСѓС‚СЊ РЅРµ РІРµСЂРµРЅ, СЃРѕР·РґР°РµС‚ СѓРєР°Р·Р°РЅРЅС‹Р№ РїСѓС‚СЊ
         /// </summary>
         /// <param name="path"></param>
         public static void EnsureDirectory(string path)

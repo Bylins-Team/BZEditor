@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.IO;
 
 namespace DataUtils
@@ -379,7 +379,7 @@ namespace DataUtils
             Mob m = MobClip;
             if (mt == null || m == null) return;
             ApplyTemplate(ref mt, m);
-            if (fullCopy) //Точная копия
+            if (fullCopy) //РўРѕС‡РЅР°СЏ РєРѕРїРёСЏ
             {
                 mt.Alias = m.Alias;
                 mt.Cases = m.Cases.Clone();
@@ -675,7 +675,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Применить к переданному объекту объект из буфера как шаблон
+        /// РџСЂРёРјРµРЅРёС‚СЊ Рє РїРµСЂРµРґР°РЅРЅРѕРјСѓ РѕР±СЉРµРєС‚Сѓ РѕР±СЉРµРєС‚ РёР· Р±СѓС„РµСЂР° РєР°Рє С€Р°Р±Р»РѕРЅ
         /// </summary>
         public void ApplyClipAsTemplate(ref Obj ot, bool isFullCopy)
         {
@@ -793,7 +793,7 @@ namespace DataUtils
             trg.Class = TrgClip.Class;
             trg.NumArg = TrgClip.NumArg;
             trg.Type = TrgClip.Type;
-            trg.Name = "Копия триггера \"" + TrgClip.Name + "\"";
+            trg.Name = "РљРѕРїРёСЏ С‚СЂРёРіРіРµСЂР° \"" + TrgClip.Name + "\"";
         }
 
         #endregion

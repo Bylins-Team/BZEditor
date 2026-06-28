@@ -1,4 +1,4 @@
-using DataUtils.YamlModels;
+﻿using DataUtils.YamlModels;
 
 namespace DataUtils.YamlMappers
 {

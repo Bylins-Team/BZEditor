@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Windows.Forms;
 using DataUtils;
 
@@ -67,7 +67,7 @@ namespace BZEditor
             {
                 Trigger trigger = new Trigger(Convert.ToInt32(nudVnum.Value))
                 {
-                    Name = "Отсутствует в имеющихся зонах."
+                    Name = "РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РІ РёРјРµСЋС‰РёС…СЃСЏ Р·РѕРЅР°С…."
                 };
                 SelectedTriggers.Add(trigger);
             }

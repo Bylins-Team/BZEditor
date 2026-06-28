@@ -1,4 +1,4 @@
-namespace DataUtils.YamlModels
+﻿namespace DataUtils.YamlModels
 {
     /// <summary>
     /// YAML model for mob basic stats - matches reference format

@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class UcTwoPanelsList
     {
@@ -94,7 +94,7 @@ namespace BZEditor
             this.lLeft.Name = "lLeft";
             this.lLeft.Size = new System.Drawing.Size(200, 13);
             this.lLeft.TabIndex = 106;
-            this.lLeft.Text = "Установленные значения";
+            this.lLeft.Text = "РЈСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ";
             this.lLeft.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lvRight
@@ -127,7 +127,7 @@ namespace BZEditor
             this.lRight.Name = "lRight";
             this.lRight.Size = new System.Drawing.Size(197, 13);
             this.lRight.TabIndex = 2;
-            this.lRight.Text = "Доступные значения";
+            this.lRight.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ";
             this.lRight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toolStrip1

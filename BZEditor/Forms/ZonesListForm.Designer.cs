@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class ZonesListForm
     {
@@ -104,7 +104,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Быстрый поиск зоны";
+            this.label1.Text = "Р‘С‹СЃС‚СЂС‹Р№ РїРѕРёСЃРє Р·РѕРЅС‹";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tbQuickSearch
@@ -156,7 +156,7 @@ namespace BZEditor
             this.tsmiEditLoaded.Image = global::BZEditor.Properties.Resources.zoneineditmode;
             this.tsmiEditLoaded.Name = "tsmiEditLoaded";
             this.tsmiEditLoaded.Size = new System.Drawing.Size(207, 22);
-            this.tsmiEditLoaded.Text = "Редактировать";
+            this.tsmiEditLoaded.Text = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ";
             this.tsmiEditLoaded.Click += new System.EventHandler(this.TsmiEditLoadedClick);
             // 
             // toolStripMenuItem1
@@ -169,7 +169,7 @@ namespace BZEditor
             this.tsmiUnloadZone.Image = global::BZEditor.Properties.Resources.zoneunload;
             this.tsmiUnloadZone.Name = "tsmiUnloadZone";
             this.tsmiUnloadZone.Size = new System.Drawing.Size(207, 22);
-            this.tsmiUnloadZone.Text = "Выгрузить";
+            this.tsmiUnloadZone.Text = "Р’С‹РіСЂСѓР·РёС‚СЊ";
             this.tsmiUnloadZone.Click += new System.EventHandler(this.TsmiUnloadZoneClick);
             // 
             // toolStripMenuItem3
@@ -182,7 +182,7 @@ namespace BZEditor
             this.tsmiSaveZone.Image = global::BZEditor.Properties.Resources.zonesave;
             this.tsmiSaveZone.Name = "tsmiSaveZone";
             this.tsmiSaveZone.Size = new System.Drawing.Size(207, 22);
-            this.tsmiSaveZone.Text = "Сохранить";
+            this.tsmiSaveZone.Text = "РЎРѕС…СЂР°РЅРёС‚СЊ";
             this.tsmiSaveZone.Click += new System.EventHandler(this.TsmiSaveZoneClick);
             // 
             // tsmiPrepareLoadedToSedind
@@ -190,7 +190,7 @@ namespace BZEditor
             this.tsmiPrepareLoadedToSedind.Image = global::BZEditor.Properties.Resources.zonesend;
             this.tsmiPrepareLoadedToSedind.Name = "tsmiPrepareLoadedToSedind";
             this.tsmiPrepareLoadedToSedind.Size = new System.Drawing.Size(207, 22);
-            this.tsmiPrepareLoadedToSedind.Text = "Приготовить к отправке";
+            this.tsmiPrepareLoadedToSedind.Text = "РџСЂРёРіРѕС‚РѕРІРёС‚СЊ Рє РѕС‚РїСЂР°РІРєРµ";
             this.tsmiPrepareLoadedToSedind.Click += new System.EventHandler(this.TsmiPrepareLoadedToSedindClick);
             // 
             // tabControl
@@ -218,8 +218,8 @@ namespace BZEditor
             this.tpLoaded.Padding = new System.Windows.Forms.Padding(3);
             this.tpLoaded.Size = new System.Drawing.Size(266, 403);
             this.tpLoaded.TabIndex = 0;
-            this.tpLoaded.Text = "Загруженные";
-            this.tpLoaded.ToolTipText = "Загруженные в память зоны";
+            this.tpLoaded.Text = "Р—Р°РіСЂСѓР¶РµРЅРЅС‹Рµ";
+            this.tpLoaded.ToolTipText = "Р—Р°РіСЂСѓР¶РµРЅРЅС‹Рµ РІ РїР°РјСЏС‚СЊ Р·РѕРЅС‹";
             this.tpLoaded.UseVisualStyleBackColor = true;
             // 
             // tpAvailable
@@ -233,8 +233,8 @@ namespace BZEditor
             this.tpAvailable.Padding = new System.Windows.Forms.Padding(3);
             this.tpAvailable.Size = new System.Drawing.Size(266, 403);
             this.tpAvailable.TabIndex = 1;
-            this.tpAvailable.Text = "Доступные";
-            this.tpAvailable.ToolTipText = "Доступные для загрузки зоны";
+            this.tpAvailable.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ";
+            this.tpAvailable.ToolTipText = "Р”РѕСЃС‚СѓРїРЅС‹Рµ РґР»СЏ Р·Р°РіСЂСѓР·РєРё Р·РѕРЅС‹";
             this.tpAvailable.UseVisualStyleBackColor = true;
             // 
             // lvZonesAvail
@@ -276,7 +276,7 @@ namespace BZEditor
             this.tsmiLoadAndEdit.Image = global::BZEditor.Properties.Resources.zoneineditmode;
             this.tsmiLoadAndEdit.Name = "tsmiLoadAndEdit";
             this.tsmiLoadAndEdit.Size = new System.Drawing.Size(206, 22);
-            this.tsmiLoadAndEdit.Text = "Редактировать";
+            this.tsmiLoadAndEdit.Text = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ";
             this.tsmiLoadAndEdit.Click += new System.EventHandler(this.TsmiLoadAndEditClick);
             // 
             // tsmiLoadZone
@@ -284,7 +284,7 @@ namespace BZEditor
             this.tsmiLoadZone.Image = global::BZEditor.Properties.Resources.zoneload1;
             this.tsmiLoadZone.Name = "tsmiLoadZone";
             this.tsmiLoadZone.Size = new System.Drawing.Size(206, 22);
-            this.tsmiLoadZone.Text = "Загрузить";
+            this.tsmiLoadZone.Text = "Р—Р°РіСЂСѓР·РёС‚СЊ";
             this.tsmiLoadZone.Click += new System.EventHandler(this.TsmiLoadZoneClick);
             // 
             // tsmiLoadZoneWin
@@ -292,7 +292,7 @@ namespace BZEditor
             this.tsmiLoadZoneWin.Image = global::BZEditor.Properties.Resources.zoneload1251;
             this.tsmiLoadZoneWin.Name = "tsmiLoadZoneWin";
             this.tsmiLoadZoneWin.Size = new System.Drawing.Size(206, 22);
-            this.tsmiLoadZoneWin.Text = "Загрузить в Win1251";
+            this.tsmiLoadZoneWin.Text = "Р—Р°РіСЂСѓР·РёС‚СЊ РІ Win1251";
             this.tsmiLoadZoneWin.Click += new System.EventHandler(this.TsmiLoadZoneWinClick);
             // 
             // toolStripMenuItem4
@@ -305,7 +305,7 @@ namespace BZEditor
             this.tsmiRefreshList.Image = global::BZEditor.Properties.Resources.zoneslistrefresh;
             this.tsmiRefreshList.Name = "tsmiRefreshList";
             this.tsmiRefreshList.Size = new System.Drawing.Size(206, 22);
-            this.tsmiRefreshList.Text = "Обновить список";
+            this.tsmiRefreshList.Text = "РћР±РЅРѕРІРёС‚СЊ СЃРїРёСЃРѕРє";
             this.tsmiRefreshList.Click += new System.EventHandler(this.TsmiRefreshListClick);
             // 
             // toolStripMenuItem2
@@ -318,7 +318,7 @@ namespace BZEditor
             this.tsmiPrepareAvailToSedind.Image = global::BZEditor.Properties.Resources.zonesend;
             this.tsmiPrepareAvailToSedind.Name = "tsmiPrepareAvailToSedind";
             this.tsmiPrepareAvailToSedind.Size = new System.Drawing.Size(206, 22);
-            this.tsmiPrepareAvailToSedind.Text = "Подготовить к отправке";
+            this.tsmiPrepareAvailToSedind.Text = "РџРѕРґРіРѕС‚РѕРІРёС‚СЊ Рє РѕС‚РїСЂР°РІРєРµ";
             this.tsmiPrepareAvailToSedind.Click += new System.EventHandler(this.TsmiPrepareAvailToSedindClick);
             // 
             // tbQuickSearchAvail
@@ -341,7 +341,7 @@ namespace BZEditor
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Быстрый поиск зоны";
+            this.label2.Text = "Р‘С‹СЃС‚СЂС‹Р№ РїРѕРёСЃРє Р·РѕРЅС‹";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tpSketches
@@ -355,8 +355,8 @@ namespace BZEditor
             this.tpSketches.Padding = new System.Windows.Forms.Padding(3);
             this.tpSketches.Size = new System.Drawing.Size(266, 403);
             this.tpSketches.TabIndex = 2;
-            this.tpSketches.Text = "Эскизы";
-            this.tpSketches.ToolTipText = "Эскизы комплексов зон";
+            this.tpSketches.Text = "Р­СЃРєРёР·С‹";
+            this.tpSketches.ToolTipText = "Р­СЃРєРёР·С‹ РєРѕРјРїР»РµРєСЃРѕРІ Р·РѕРЅ";
             this.tpSketches.UseVisualStyleBackColor = true;
             // 
             // lvSketches
@@ -400,14 +400,14 @@ namespace BZEditor
             this.tsmiEditSketch.Image = global::BZEditor.Properties.Resources.button_editsketch;
             this.tsmiEditSketch.Name = "tsmiEditSketch";
             this.tsmiEditSketch.Size = new System.Drawing.Size(235, 22);
-            this.tsmiEditSketch.Text = "Редактировать эскиз";
+            this.tsmiEditSketch.Text = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ СЌСЃРєРёР·";
             // 
             // tsmiCreateSketch
             // 
             this.tsmiCreateSketch.Image = global::BZEditor.Properties.Resources.button_addsketch;
             this.tsmiCreateSketch.Name = "tsmiCreateSketch";
             this.tsmiCreateSketch.Size = new System.Drawing.Size(235, 22);
-            this.tsmiCreateSketch.Text = "Создать эскиз комплекса зон";
+            this.tsmiCreateSketch.Text = "РЎРѕР·РґР°С‚СЊ СЌСЃРєРёР· РєРѕРјРїР»РµРєСЃР° Р·РѕРЅ";
             this.tsmiCreateSketch.Click += new System.EventHandler(this.CreateSketchClick);
             // 
             // toolStripMenuItem6
@@ -420,7 +420,7 @@ namespace BZEditor
             this.tsmiSaveSketch.Image = global::BZEditor.Properties.Resources.button_savesketch;
             this.tsmiSaveSketch.Name = "tsmiSaveSketch";
             this.tsmiSaveSketch.Size = new System.Drawing.Size(235, 22);
-            this.tsmiSaveSketch.Text = "Сохранить эскиз";
+            this.tsmiSaveSketch.Text = "РЎРѕС…СЂР°РЅРёС‚СЊ СЌСЃРєРёР·";
             this.tsmiSaveSketch.Click += new System.EventHandler(this.SaveSketchClick);
             // 
             // toolStripMenuItem7
@@ -433,7 +433,7 @@ namespace BZEditor
             this.tsmiRefreshSketchesList.Image = global::BZEditor.Properties.Resources.button_refreshsktlist;
             this.tsmiRefreshSketchesList.Name = "tsmiRefreshSketchesList";
             this.tsmiRefreshSketchesList.Size = new System.Drawing.Size(235, 22);
-            this.tsmiRefreshSketchesList.Text = "Обновить список";
+            this.tsmiRefreshSketchesList.Text = "РћР±РЅРѕРІРёС‚СЊ СЃРїРёСЃРѕРє";
             this.tsmiRefreshSketchesList.Click += new System.EventHandler(this.RefreshSketchesListClick);
             // 
             // toolStripMenuItem5
@@ -446,7 +446,7 @@ namespace BZEditor
             this.tsmiRemoveSketch.Image = global::BZEditor.Properties.Resources.button_cancel;
             this.tsmiRemoveSketch.Name = "tsmiRemoveSketch";
             this.tsmiRemoveSketch.Size = new System.Drawing.Size(235, 22);
-            this.tsmiRemoveSketch.Text = "Удалить эскиз";
+            this.tsmiRemoveSketch.Text = "РЈРґР°Р»РёС‚СЊ СЌСЃРєРёР·";
             this.tsmiRemoveSketch.Click += new System.EventHandler(this.RemoveSketchClick);
             // 
             // tbQuickSearchSketch
@@ -469,7 +469,7 @@ namespace BZEditor
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Быстрый поиск эскиза";
+            this.label3.Text = "Р‘С‹СЃС‚СЂС‹Р№ РїРѕРёСЃРє СЌСЃРєРёР·Р°";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ZonesListForm
@@ -481,9 +481,9 @@ namespace BZEditor
             this.Controls.Add(this.tabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ZonesListForm";
-            this.TabText = "Зоны и Эскизы";
-            this.Text = "Зоны и Эскизы";
-            this.ToolTipText = "Зоны и Эскизы";
+            this.TabText = "Р—РѕРЅС‹ Рё Р­СЃРєРёР·С‹";
+            this.Text = "Р—РѕРЅС‹ Рё Р­СЃРєРёР·С‹";
+            this.ToolTipText = "Р—РѕРЅС‹ Рё Р­СЃРєРёР·С‹";
             this.cmsLoadedZones.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tpLoaded.ResumeLayout(false);

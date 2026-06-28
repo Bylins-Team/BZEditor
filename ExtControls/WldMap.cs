@@ -1,4 +1,4 @@
-namespace ExtControls
+п»їnamespace ExtControls
 {
     using System;
     using System.Drawing;
@@ -79,7 +79,7 @@ namespace ExtControls
 
         #endregion
 
-        #region Доступные пользователю параметры
+        #region Р”РѕСЃС‚СѓРїРЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ РїР°СЂР°РјРµС‚СЂС‹
 
         private const int RoomSelectionAlphaFactor = 65;
         private int selectionAlphaFactor = 50;
@@ -114,9 +114,9 @@ namespace ExtControls
         protected int LastDragX;
         protected int LastDragY;
 
-        //Рамка выбора
+        //Р Р°РјРєР° РІС‹Р±РѕСЂР°
 
-        //Комнаты
+        //РљРѕРјРЅР°С‚С‹
         private Color roomSelectionRegionBgColor = Color.Blue;
 
         private Color selectionRegionBgColor = Color.DarkSlateBlue;
@@ -126,7 +126,7 @@ namespace ExtControls
         private bool showVNums;
         private bool roomDetailsVisible = true;
 
-        //Сетка
+        //РЎРµС‚РєР°
         private bool showSketchMode = true;
         private SketchRoomsCollection sketchRoomsCollection;
         private ToolStripMenuItem tsmiMoveRoomDown;
@@ -140,7 +140,7 @@ namespace ExtControls
         #region Get/Set
 
         /// <summary>
-        /// Прозрачность области выделения
+        /// РџСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ РѕР±Р»Р°СЃС‚Рё РІС‹РґРµР»РµРЅРёСЏ
         /// </summary>
         public int SelectionAlphaFactor
         {
@@ -167,7 +167,7 @@ namespace ExtControls
         public SketchRoomsCollection SketchRoomsCollection => sketchRoomsCollection;
 
         /// <summary>
-        /// Флаг переключения в режим рисования эскиза карты
+        /// Р¤Р»Р°Рі РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ РІ СЂРµР¶РёРј СЂРёСЃРѕРІР°РЅРёСЏ СЌСЃРєРёР·Р° РєР°СЂС‚С‹
         /// </summary>
         public bool DrawSketchMode
         {
@@ -180,7 +180,7 @@ namespace ExtControls
         }
 
         /// <summary>
-        /// Флаг переключения в режим отображения эскиза карты
+        /// Р¤Р»Р°Рі РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ РІ СЂРµР¶РёРј РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЌСЃРєРёР·Р° РєР°СЂС‚С‹
         /// </summary>
         public bool ShowSketchMode
         {
@@ -498,10 +498,10 @@ namespace ExtControls
             ZoneNumber = inZoneNumber;
             roomsCollection = rooms;
             sketchRoomsCollection = sketchRooms;
-            /*if (mSketchRoomsCollection.Count > 0) //Получение последнего используемого цвета в клетке
+            /*if (mSketchRoomsCollection.Count > 0) //РџРѕР»СѓС‡РµРЅРёРµ РїРѕСЃР»РµРґРЅРµРіРѕ РёСЃРїРѕР»СЊР·СѓРµРјРѕРіРѕ С†РІРµС‚Р° РІ РєР»РµС‚РєРµ
             {
             }
-            else //Установка цвета по умолчанию
+            else //РЈСЃС‚Р°РЅРѕРІРєР° С†РІРµС‚Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
             {
             }*/
             if (roomsCollection.Count > 0)
@@ -530,7 +530,7 @@ namespace ExtControls
 
         #region Drawing
 
-        //Заглушка для устранения мерцания
+        //Р—Р°РіР»СѓС€РєР° РґР»СЏ СѓСЃС‚СЂР°РЅРµРЅРёСЏ РјРµСЂС†Р°РЅРёСЏ
         protected override void OnPaintBackground(PaintEventArgs pevent)
         {
         }
@@ -549,12 +549,12 @@ namespace ExtControls
             }
             pevent.Graphics.DrawImageUnscaled(bmp, 0, 0);
             pevent.Graphics.SmoothingMode = SmoothMode;
-            //Тут рисуется сетка
+            //РўСѓС‚ СЂРёСЃСѓРµС‚СЃСЏ СЃРµС‚РєР°
             //DrawGrid(pevent.Graphics);
-            //Отрисовка статуса
+            //РћС‚СЂРёСЃРѕРІРєР° СЃС‚Р°С‚СѓСЃР°
             DrawInfo(pevent.Graphics);
 
-            //Отрисовка выделения
+            //РћС‚СЂРёСЃРѕРІРєР° РІС‹РґРµР»РµРЅРёСЏ
             using (var p = new Pen(selectionRegionBorderColor))
             {
                 if (selectionStarted)
@@ -579,7 +579,7 @@ namespace ExtControls
                     }
                 }
             }
-            //Отрисовка признака что карта в фокусе
+            //РћС‚СЂРёСЃРѕРІРєР° РїСЂРёР·РЅР°РєР° С‡С‚Рѕ РєР°СЂС‚Р° РІ С„РѕРєСѓСЃРµ
             if (Focused)
                 pevent.Graphics.DrawRectangle(new Pen(focusHighlightColor, (float)0.5), 0, 0, Width - 1, Height - 1);
 
@@ -600,7 +600,7 @@ namespace ExtControls
         }
 
         /// <summary>
-        /// Перерисовывает кэш карты
+        /// РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµС‚ РєСЌС€ РєР°СЂС‚С‹
         /// </summary>
         public void RedrawBitmap()
         {
@@ -609,14 +609,14 @@ namespace ExtControls
             gr.SmoothingMode = SmoothMode;
             gr.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
             gr.Clear(BackColor);
-            //Тут собсна рисовать карту :)
+            //РўСѓС‚ СЃРѕР±СЃРЅР° СЂРёСЃРѕРІР°С‚СЊ РєР°СЂС‚Сѓ :)
             DrawSketch(gr);
             DrawMap(gr);
-            //Тут рисуется сетка
+            //РўСѓС‚ СЂРёСЃСѓРµС‚СЃСЏ СЃРµС‚РєР°
             DrawGrid(gr);
 
 
-            //Тут возможно какая то отрисовка поверх
+            //РўСѓС‚ РІРѕР·РјРѕР¶РЅРѕ РєР°РєР°СЏ С‚Рѕ РѕС‚СЂРёСЃРѕРІРєР° РїРѕРІРµСЂС…
 
             //DrawInfo(gr);
             gr.Dispose();
@@ -632,47 +632,47 @@ namespace ExtControls
                 string modetxt = string.Empty;
                 if (externalPathSelection)
                 {
-                    modetxt = "Режим: Выбор пути моба";
+                    modetxt = "Р РµР¶РёРј: Р’С‹Р±РѕСЂ РїСѓС‚Рё РјРѕР±Р°";
                     b1 = new SolidBrush(Color.FromArgb(100, 0, 0, 255));
                 }
                 else if (externalRoomRoomSelection)
                 {
-                    modetxt = "Режим: Выбор комнаты для выхода";
+                    modetxt = "Р РµР¶РёРј: Р’С‹Р±РѕСЂ РєРѕРјРЅР°С‚С‹ РґР»СЏ РІС‹С…РѕРґР°";
                     b1 = new SolidBrush(Color.FromArgb(100, 255, 0, 0));
                 }
                 string text = string.IsNullOrEmpty(modetxt) ? "" : modetxt + "\n";
-                text += (curRoom.VNum != -1) ? $"Координаты: [{curRoom.X}:{curRoom.Y}:{curRoom.Z}]" : "";
+                text += (curRoom.VNum != -1) ? $"РљРѕРѕСЂРґРёРЅР°С‚С‹: [{curRoom.X}:{curRoom.Y}:{curRoom.Z}]" : "";
 
                 if (curRoom != null)
-                    text += (curRoom.VNum != -1) ? $"\nКомната: [{curRoom.VNum}] {curRoom.Name}" : "";
+                    text += (curRoom.VNum != -1) ? $"\nРљРѕРјРЅР°С‚Р°: [{curRoom.VNum}] {curRoom.Name}" : "";
 
-                if (curRoom != null && roomDetailsVisible)//ToDo:отключаемость детальной инфы
+                if (curRoom != null && roomDetailsVisible)//ToDo:РѕС‚РєР»СЋС‡Р°РµРјРѕСЃС‚СЊ РґРµС‚Р°Р»СЊРЅРѕР№ РёРЅС„С‹
                 {
                     if (curRoom.LoadingMobsCollection.Count > 0)
                     {
-                        text += "\nМобы:";
+                        text += "\nРњРѕР±С‹:";
                         foreach (OperatedMob lm in curRoom.LoadingMobsCollection)
                         {
                             Mob mob = zoneDm?.Mobs[lm.VNum, 0];
-                            text += $"\n  • {((mob != null) ? mob.ToString() : lm.VNum + " -моб из другой зоны-")}";
+                            text += $"\n  вЂў {((mob != null) ? mob.ToString() : lm.VNum + " -РјРѕР± РёР· РґСЂСѓРіРѕР№ Р·РѕРЅС‹-")}";
                         }
                     }
                     if (curRoom.LoadingObjectsCollection.Count > 0)
                     {
-                        text += "\nОбъекты:";
+                        text += "\nРћР±СЉРµРєС‚С‹:";
                         foreach (OperatedObj lo in curRoom.LoadingObjectsCollection)
                         {
                             Obj obj = zoneDm?.Objects[lo.VNum, 0];
-                            text += $"\n  • {((obj != null) ? obj.ToString() : lo.VNum + " -предмет из другой зоны-")} <{lo.Probability}%>";
+                            text += $"\n  вЂў {((obj != null) ? obj.ToString() : lo.VNum + " -РїСЂРµРґРјРµС‚ РёР· РґСЂСѓРіРѕР№ Р·РѕРЅС‹-")} <{lo.Probability}%>";
                         }
                     }
                     if (curRoom.TriggersList.Count > 0)
                     {
-                        text += "\nТриггеры:";
+                        text += "\nРўСЂРёРіРіРµСЂС‹:";
                         foreach (int trVnum in curRoom.TriggersList)
                         {
                             Trigger trg = zoneDm?.Triggers[trVnum, 0];
-                            text += $"\n  • {((trg != null) ? trg.ToString() : trVnum + " -триггер из другой зоны-")}";
+                            text += $"\n  вЂў {((trg != null) ? trg.ToString() : trVnum + " -С‚СЂРёРіРіРµСЂ РёР· РґСЂСѓРіРѕР№ Р·РѕРЅС‹-")}";
                         }
                     }
                 }
@@ -698,7 +698,7 @@ namespace ExtControls
             int dx = GetVisibleColumns()/2;
             int dy = GetVisibleRows()/2;
             var b = new Bitmap(1, 1);
-            const int delta = 4; //Желательно четное
+            const int delta = 4; //Р–РµР»Р°С‚РµР»СЊРЅРѕ С‡РµС‚РЅРѕРµ
             Point p = GetStartRoomPoint();
             foreach (SketchRoom room in sketchRoomsCollection)
             {
@@ -721,7 +721,7 @@ namespace ExtControls
             if (roomsCollection == null) return;
             int dx = GetVisibleColumns()/2;
             int dy = GetVisibleRows()/2;
-            const int delta = 4; //Желательно четное
+            const int delta = 4; //Р–РµР»Р°С‚РµР»СЊРЅРѕ С‡РµС‚РЅРѕРµ
             foreach (Room room in roomsCollection)
             {
                 if (mustRecalcExitColors)
@@ -733,9 +733,9 @@ namespace ExtControls
                     //CRoom Room = new CRoom(dr["vnum"].ToString(), Convert.ToInt32(dr["x"]), Convert.ToInt32(dr["y"]), Convert.ToInt32(dr["z"]));
                     /* if (mSelectionType == 1)
                      {
-                         if (iSelectedRooms.RoomExist(Room))//Отрисовка выбранных комнат
+                         if (iSelectedRooms.RoomExist(Room))//РћС‚СЂРёСЃРѕРІРєР° РІС‹Р±СЂР°РЅРЅС‹С… РєРѕРјРЅР°С‚
                              b = CRoomDrawer.GetRoom(this.mSmoothMode, iConstGSize, mMapScale, mExitScale, mSelectedRoomBGColorTop, mSelectedRoomBGColorBottom, Room.ExitColors);
-                         else//Отрисовка невыбранных комнат
+                         else//РћС‚СЂРёСЃРѕРІРєР° РЅРµРІС‹Р±СЂР°РЅРЅС‹С… РєРѕРјРЅР°С‚
                              b = CRoomDrawer.GetRoom(this.mSmoothMode, iConstGSize, mMapScale, mExitScale, mRoomBGColorTop, mRoomBGColorBottom, Room.ExitColors);
                          Point p = GetStartRoomPoint();
                          gr.DrawImageUnscaled(b, p.X + iRoomSideSize * (Room.X - mCenterRoom.X), p.Y + iRoomSideSize * (Room.Y - mCenterRoom.Y));
@@ -829,7 +829,7 @@ namespace ExtControls
         private void CalcExitColors(Room inRoom)
         {
             inRoom.ExitColors.Reset();
-            //тут явно нужна логика по обработке выходов с дверями
+            //С‚СѓС‚ СЏРІРЅРѕ РЅСѓР¶РЅР° Р»РѕРіРёРєР° РїРѕ РѕР±СЂР°Р±РѕС‚РєРµ РІС‹С…РѕРґРѕРІ СЃ РґРІРµСЂСЏРјРё
             Room room;
             if (inRoom.ExitNorth.RoomVNum != -1)
             {
@@ -841,7 +841,7 @@ namespace ExtControls
                     inRoom.ExitColors.ColorExitN = inRoom.Y != room.Y + 1 ? teleportExitColor : simpleExitColor;
                 }
                 else
-                    inRoom.ExitColors.ColorExitN = zoneExitColor; //Выход в несуществующую в этой зоне клетку
+                    inRoom.ExitColors.ColorExitN = zoneExitColor; //Р’С‹С…РѕРґ РІ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰СѓСЋ РІ СЌС‚РѕР№ Р·РѕРЅРµ РєР»РµС‚РєСѓ
             }
             if (inRoom.ExitEast.RoomVNum != -1)
             {
@@ -928,7 +928,7 @@ namespace ExtControls
         #region Mouse and Keyboard Events
 
         /// <summary>
-        /// Обработка хотекеев
+        /// РћР±СЂР°Р±РѕС‚РєР° С…РѕС‚РµРєРµРµРІ
         /// </summary>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -1017,7 +1017,7 @@ namespace ExtControls
                 room = roomsCollection[roomCoordinates.X, roomCoordinates.Y, roomCoordinates.Z];
                 if (shiftPushed || room == null)
                     selectionStarted = true;
-                else //начинаем драгдроп клетки
+                else //РЅР°С‡РёРЅР°РµРј РґСЂР°РіРґСЂРѕРї РєР»РµС‚РєРё
                 {
                     startPointVnum = room.VNum;
                     mustStartDragging = true;
@@ -1034,7 +1034,7 @@ namespace ExtControls
         protected override void OnMouseUp(MouseEventArgs e)
         {
             mustStartDragging = false;
-            //ToDo если выделено более чем 1 комната, то данные на форму не грузить но все изменения применять ко всем выбранным комнатам
+            //ToDo РµСЃР»Рё РІС‹РґРµР»РµРЅРѕ Р±РѕР»РµРµ С‡РµРј 1 РєРѕРјРЅР°С‚Р°, С‚Рѕ РґР°РЅРЅС‹Рµ РЅР° С„РѕСЂРјСѓ РЅРµ РіСЂСѓР·РёС‚СЊ РЅРѕ РІСЃРµ РёР·РјРµРЅРµРЅРёСЏ РїСЂРёРјРµРЅСЏС‚СЊ РєРѕ РІСЃРµРј РІС‹Р±СЂР°РЅРЅС‹Рј РєРѕРјРЅР°С‚Р°Рј
             switch (e.Button)
             {
                 case MouseButtons.Left:
@@ -1042,10 +1042,10 @@ namespace ExtControls
                         leftMouseBtnPushed = false;
                         Point3D point1 = GetRoomCoordinatesByPoint(mouseClickedPoint);
                         Point3D point2 = GetRoomCoordinatesByPoint(e.Location);
-                        if (selectionStarted) //Отрабатываем мультиселект
+                        if (selectionStarted) //РћС‚СЂР°Р±Р°С‚С‹РІР°РµРј РјСѓР»СЊС‚РёСЃРµР»РµРєС‚
                         {
                             selectionStarted = false;
-                            //Если добавляем без контрола и это не выбор пути, то чистим массив выбранных точек
+                            //Р•СЃР»Рё РґРѕР±Р°РІР»СЏРµРј Р±РµР· РєРѕРЅС‚СЂРѕР»Р° Рё СЌС‚Рѕ РЅРµ РІС‹Р±РѕСЂ РїСѓС‚Рё, С‚Рѕ С‡РёСЃС‚РёРј РјР°СЃСЃРёРІ РІС‹Р±СЂР°РЅРЅС‹С… С‚РѕС‡РµРє
                             if (!controlPushed && !externalPathSelection) selectedRooms.Clear();
                             //int cnt = (Math.Max(Point1.X, Point2.X) - Math.Min(Point1.X, Point2.X)) * (Math.Max(Point1.Y, Point2.Y) - Math.Min(Point1.Y, Point2.Y));
                             for (int x = Math.Min(point1.X, point2.X); x <= Math.Max(point1.X, point2.X); x++)
@@ -1077,10 +1077,10 @@ namespace ExtControls
                             }
                             RedrawBitmap();
                         }
-                            //else if (Point1.Equals(Point2)) //Отрабатываем синглселект
+                            //else if (Point1.Equals(Point2)) //РћС‚СЂР°Р±Р°С‚С‹РІР°РµРј СЃРёРЅРіР»СЃРµР»РµРєС‚
                         else if (Math.Abs(point1.X - point2.X) < 6 && Math.Abs(point1.Y - point2.Y) < 6 &&
                                  point1.Z == point2.Z)
-                            //Отрабатываем синглселект
+                            //РћС‚СЂР°Р±Р°С‚С‹РІР°РµРј СЃРёРЅРіР»СЃРµР»РµРєС‚
                         {
                             if (drawSketchMode)
                             {
@@ -1096,14 +1096,14 @@ namespace ExtControls
                                 return;
                             }
                             Room room = roomsCollection[point1.X, point1.Y, point1.Z];
-                            if (externalRoomRoomSelection && room != null) //Выдача номера кликнутой клетки наружу
+                            if (externalRoomRoomSelection && room != null) //Р’С‹РґР°С‡Р° РЅРѕРјРµСЂР° РєР»РёРєРЅСѓС‚РѕР№ РєР»РµС‚РєРё РЅР°СЂСѓР¶Сѓ
                             {
                                 externalRoomRoomSelection = false;
                                 RoomSelected?.Invoke(room.VNum);
                             }
                             else
                             {
-                                //Если добавляем без контрола и это не выбор пути, то чистим массив выбранных точек
+                                //Р•СЃР»Рё РґРѕР±Р°РІР»СЏРµРј Р±РµР· РєРѕРЅС‚СЂРѕР»Р° Рё СЌС‚Рѕ РЅРµ РІС‹Р±РѕСЂ РїСѓС‚Рё, С‚Рѕ С‡РёСЃС‚РёРј РјР°СЃСЃРёРІ РІС‹Р±СЂР°РЅРЅС‹С… С‚РѕС‡РµРє
                                 if (!controlPushed && !externalPathSelection) selectedRooms.Clear();
                                 if (room != null)
                                 {
@@ -1114,11 +1114,11 @@ namespace ExtControls
                             }
                             RedrawBitmap();
                         }
-                        //else //Отрабатываем драгдроп
+                        //else //РћС‚СЂР°Р±Р°С‚С‹РІР°РµРј РґСЂР°РіРґСЂРѕРї
                         //{
                         //}
                         if (RoomsSelectionChanged != null && !externalPathSelection && !ExternalRoomRoomSelection)
-                            //Инициируем событие "Изменился список выбранных комнат"
+                            //РРЅРёС†РёРёСЂСѓРµРј СЃРѕР±С‹С‚РёРµ "РР·РјРµРЅРёР»СЃСЏ СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… РєРѕРјРЅР°С‚"
                             RoomsSelectionChanged(selectedRooms);
                     }
                     break;
@@ -1142,7 +1142,7 @@ namespace ExtControls
         protected override void OnMouseMove(MouseEventArgs e)
         {
             mouseCurrentPoint = e.Location;
-            //Драгдроп начинается тут из-за того, что надо иметь возможность просто кликнуть клетку для выделения
+            //Р”СЂР°РіРґСЂРѕРї РЅР°С‡РёРЅР°РµС‚СЃСЏ С‚СѓС‚ РёР·-Р·Р° С‚РѕРіРѕ, С‡С‚Рѕ РЅР°РґРѕ РёРјРµС‚СЊ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Рѕ РєР»РёРєРЅСѓС‚СЊ РєР»РµС‚РєСѓ РґР»СЏ РІС‹РґРµР»РµРЅРёСЏ
             //if (iMustStartDragging && !iMouseClickedPoint.Equals(e.Location) && iLeftMouseBtnPushed)
             if (mustStartDragging &&
                 Math.Abs(mouseClickedPoint.X - e.Location.X) + Math.Abs(mouseClickedPoint.Y - e.Location.Y) > 5 &&
@@ -1204,19 +1204,19 @@ namespace ExtControls
         protected override void OnMouseWheel(MouseEventArgs e)
         {
             int step = e.Delta/120;
-            if (controlPushed) //Изменение масштаба
+            if (controlPushed) //РР·РјРµРЅРµРЅРёРµ РјР°СЃС€С‚Р°Р±Р°
             {
                 MapScale += step;
                 return;
                 //RecreateAllRoomsBitmaps();
             }
-            if (shiftPushed && centerRoom.Z - step >= StaticData.MinZ && centerRoom.Z - step <= StaticData.MaxZ) //Изменение уровня по Z
+            if (shiftPushed && centerRoom.Z - step >= StaticData.MinZ && centerRoom.Z - step <= StaticData.MaxZ) //РР·РјРµРЅРµРЅРёРµ СѓСЂРѕРІРЅСЏ РїРѕ Z
                 //_centerRoom.Z -= step;
                 CenterRoomZ -= step;
-            else if (altPushed) //Горизонтальное перемещение
+            else if (altPushed) //Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРµ РїРµСЂРµРјРµС‰РµРЅРёРµ
                 //_centerRoom.X -= step;
                 CenterRoomX -= step;
-            else //Вертикальное перемещение
+            else //Р’РµСЂС‚РёРєР°Р»СЊРЅРѕРµ РїРµСЂРµРјРµС‰РµРЅРёРµ
                 //_centerRoom.Y -= step;
                 CenterRoomY -= step;
             //RedrawBitmap();
@@ -1258,15 +1258,15 @@ namespace ExtControls
         {
             selectedRooms.Add(roomVNum);
             if (RoomsSelectionChanged != null && !externalPathSelection && !ExternalRoomRoomSelection)
-                //Инициируем событие "Изменился список выбранных комнат"
+                //РРЅРёС†РёРёСЂСѓРµРј СЃРѕР±С‹С‚РёРµ "РР·РјРµРЅРёР»СЃСЏ СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… РєРѕРјРЅР°С‚"
                 RoomsSelectionChanged(selectedRooms);
         }
 
         /// <summary>
-        /// Расставляет комнаты на карте
+        /// Р Р°СЃСЃС‚Р°РІР»СЏРµС‚ РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ
         /// </summary>
         /// <param name="centerRoomVNum"></param>
-        /// <returns>Количество комнат оставшихся нерасставленными</returns>
+        /// <returns>РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ РѕСЃС‚Р°РІС€РёС…СЃСЏ РЅРµСЂР°СЃСЃС‚Р°РІР»РµРЅРЅС‹РјРё</returns>
         public void GenerateMap(int centerRoomVNum)
         {
             if (roomsCollection.Count == 0) return;
@@ -1287,12 +1287,12 @@ namespace ExtControls
             if (roomsCollection[inLocation.X, inLocation.Y, inLocation.Z] != null)
                 return true;
             Room newRoom = roomsCollection.AddDefRoom(ZoneNumber, -1);
-            //Тип можно указывать если сделать меню с выбором типа зоны для автодобавления (горы, лес и т.п.)
+            //РўРёРї РјРѕР¶РЅРѕ СѓРєР°Р·С‹РІР°С‚СЊ РµСЃР»Рё СЃРґРµР»Р°С‚СЊ РјРµРЅСЋ СЃ РІС‹Р±РѕСЂРѕРј С‚РёРїР° Р·РѕРЅС‹ РґР»СЏ Р°РІС‚РѕРґРѕР±Р°РІР»РµРЅРёСЏ (РіРѕСЂС‹, Р»РµСЃ Рё С‚.Рї.)
             if (newRoom == null)
             {
-                MessageBox.Show("Максимальное число комнат в зоне достигнуто!", "Сообщение", MessageBoxButtons.OK,
+                MessageBox.Show("РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РєРѕРјРЅР°С‚ РІ Р·РѕРЅРµ РґРѕСЃС‚РёРіРЅСѓС‚Рѕ!", "РЎРѕРѕР±С‰РµРЅРёРµ", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-                //TODO: Тут можно предложить начать новую зону как продолжение данной зоны
+                //TODO: РўСѓС‚ РјРѕР¶РЅРѕ РїСЂРµРґР»РѕР¶РёС‚СЊ РЅР°С‡Р°С‚СЊ РЅРѕРІСѓСЋ Р·РѕРЅСѓ РєР°Рє РїСЂРѕРґРѕР»Р¶РµРЅРёРµ РґР°РЅРЅРѕР№ Р·РѕРЅС‹
                 return false;
             }
             newRoom.Location = inLocation;
@@ -1347,16 +1347,16 @@ namespace ExtControls
         }
 
         /// <summary>
-        /// Автолинковка
+        /// РђРІС‚РѕР»РёРЅРєРѕРІРєР°
         /// </summary>
         /// <param name="room"></param>
-        /// <returns>да, если произведена</returns>
+        /// <returns>РґР°, РµСЃР»Рё РїСЂРѕРёР·РІРµРґРµРЅР°</returns>
         private bool DoAutolinking(Room room)
         {
             Point3D trgPoint = room.Location;
             Room tmpRoom;
             bool flag = false;
-            //Следующее условие введено для того, чтоб не чистить выходы если если в новой локации у комнаты нет соседей
+            //РЎР»РµРґСѓСЋС‰РµРµ СѓСЃР»РѕРІРёРµ РІРІРµРґРµРЅРѕ РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР± РЅРµ С‡РёСЃС‚РёС‚СЊ РІС‹С…РѕРґС‹ РµСЃР»Рё РµСЃР»Рё РІ РЅРѕРІРѕР№ Р»РѕРєР°С†РёРё Сѓ РєРѕРјРЅР°С‚С‹ РЅРµС‚ СЃРѕСЃРµРґРµР№
             if (autolinkingX && (roomsCollection[trgPoint.X + 1, trgPoint.Y, trgPoint.Z] != null ||
                                   roomsCollection[trgPoint.X - 1, trgPoint.Y, trgPoint.Z] != null))
             {
@@ -1492,7 +1492,7 @@ namespace ExtControls
                 LastDragX = drgevent.X;
                 LastDragY = drgevent.Y;
                 Room tr = roomsCollection[newPoint.X, newPoint.Y, newPoint.Z];
-                if (tr != null) //(клетка занята)                   
+                if (tr != null) //(РєР»РµС‚РєР° Р·Р°РЅСЏС‚Р°)                   
                 {                    
                     if (data[1] == "room" && tr.PlacedOnMap && tr.VNum.ToString() != data[0])
                     {
@@ -1501,9 +1501,9 @@ namespace ExtControls
                         Point p = PointToClient(new Point(drgevent.X, drgevent.Y));
                         int tmp = Height/2 - (CenterRoomY - newPoint.Y)*roomSideSize;
                         //Debug.WriteLine(tr +" ********** " +tmp + " " + p.Y);
-                        if (tmp > p.Y) //А вот тут надо правильно переводить координаты комнаты в реальные
+                        if (tmp > p.Y) //Рђ РІРѕС‚ С‚СѓС‚ РЅР°РґРѕ РїСЂР°РІРёР»СЊРЅРѕ РїРµСЂРµРІРѕРґРёС‚СЊ РєРѕРѕСЂРґРёРЅР°С‚С‹ РєРѕРјРЅР°С‚С‹ РІ СЂРµР°Р»СЊРЅС‹Рµ
                         {
-                            //Добавляем комнату уровнем выше
+                            //Р”РѕР±Р°РІР»СЏРµРј РєРѕРјРЅР°С‚Сѓ СѓСЂРѕРІРЅРµРј РІС‹С€Рµ
                             Room trup = roomsCollection[newPoint.X, newPoint.Y, newPoint.Z + 1];
                             if (trup != null)
                                 drgevent.Effect = DragDropEffects.None;
@@ -1522,7 +1522,7 @@ namespace ExtControls
                         }
                         else
                         {
-                            //Добавляем комнату уровнем ниже
+                            //Р”РѕР±Р°РІР»СЏРµРј РєРѕРјРЅР°С‚Сѓ СѓСЂРѕРІРЅРµРј РЅРёР¶Рµ
                             Room trdown = roomsCollection[newPoint.X, newPoint.Y, newPoint.Z - 1];
                             if (trdown != null)
                                 drgevent.Effect = DragDropEffects.None;
@@ -1592,7 +1592,7 @@ namespace ExtControls
 
         private ExitColors GenerateExitColors(Point3D newPoint)
         {
-            //Тут возможна обработка на то, чтоб не учитывалась стартовая позиция клетки
+            //РўСѓС‚ РІРѕР·РјРѕР¶РЅР° РѕР±СЂР°Р±РѕС‚РєР° РЅР° С‚Рѕ, С‡С‚РѕР± РЅРµ СѓС‡РёС‚С‹РІР°Р»Р°СЃСЊ СЃС‚Р°СЂС‚РѕРІР°СЏ РїРѕР·РёС†РёСЏ РєР»РµС‚РєРё
             var exitColors = new ExitColors();
             Room nr = roomsCollection[newPoint.X, newPoint.Y - 1, newPoint.Z];
             if (nr != null)
@@ -1638,13 +1638,13 @@ namespace ExtControls
                             if (!room.PlacedOnMap)
                                 room.PlacedOnMap = true;
                             else if (startPoint.Equals(newPoint))
-                                return; //Исключение перетаскивания клетки на то место с которого ее взяли
+                                return; //РСЃРєР»СЋС‡РµРЅРёРµ РїРµСЂРµС‚Р°СЃРєРёРІР°РЅРёСЏ РєР»РµС‚РєРё РЅР° С‚Рѕ РјРµСЃС‚Рѕ СЃ РєРѕС‚РѕСЂРѕРіРѕ РµРµ РІР·СЏР»Рё
                             newPoint.Z = dropZLevel;
                             var lastRoomPos = new Point3D(room.X, room.Y, room.Z);
                             room.Location = newPoint;
                             if (autolinkingX || autolinkingY || autolinkingZ)
                             {
-                                if (DoAutolinking(room)) //Если автолинковка произведена, тогда чистим старые выходы
+                                if (DoAutolinking(room)) //Р•СЃР»Рё Р°РІС‚РѕР»РёРЅРєРѕРІРєР° РїСЂРѕРёР·РІРµРґРµРЅР°, С‚РѕРіРґР° С‡РёСЃС‚РёРј СЃС‚Р°СЂС‹Рµ РІС‹С…РѕРґС‹
                                 {
                                     Room tmpRoom;
                                     
@@ -1653,13 +1653,13 @@ namespace ExtControls
                                         tmpRoom = roomsCollection[lastRoomPos.X + 1, lastRoomPos.Y, lastRoomPos.Z];
                                         if (tmpRoom != null)
                                         {
-                                            //Возможно надо проверять на наличие этой комнаты на карте
+                                            //Р’РѕР·РјРѕР¶РЅРѕ РЅР°РґРѕ РїСЂРѕРІРµСЂСЏС‚СЊ РЅР° РЅР°Р»РёС‡РёРµ СЌС‚РѕР№ РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ
                                             tmpRoom.ExitWest.RoomVNum = -1;
                                         }
                                         tmpRoom = roomsCollection[lastRoomPos.X - 1, lastRoomPos.Y, lastRoomPos.Z];
                                         if (tmpRoom != null)
                                         {
-                                            //Возможно надо проверять на наличие этой комнаты на карте
+                                            //Р’РѕР·РјРѕР¶РЅРѕ РЅР°РґРѕ РїСЂРѕРІРµСЂСЏС‚СЊ РЅР° РЅР°Р»РёС‡РёРµ СЌС‚РѕР№ РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ
                                             tmpRoom.ExitEast.RoomVNum = -1;
                                         }
                                         tmpRoom = roomsCollection[lastRoomPos.X + 1, lastRoomPos.Y, lastRoomPos.Z];
@@ -1675,13 +1675,13 @@ namespace ExtControls
                                         tmpRoom = roomsCollection[lastRoomPos.X, lastRoomPos.Y - 1, lastRoomPos.Z];
                                         if (tmpRoom != null)
                                         {
-                                            //Возможно надо проверять на наличие этой комнаты на карте
+                                            //Р’РѕР·РјРѕР¶РЅРѕ РЅР°РґРѕ РїСЂРѕРІРµСЂСЏС‚СЊ РЅР° РЅР°Р»РёС‡РёРµ СЌС‚РѕР№ РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ
                                             tmpRoom.ExitSouth.RoomVNum = -1;
                                         }
                                         tmpRoom = roomsCollection[lastRoomPos.X, lastRoomPos.Y + 1, lastRoomPos.Z];
                                         if (tmpRoom != null)
                                         {
-                                            //Возможно надо проверять на наличие этой комнаты на карте
+                                            //Р’РѕР·РјРѕР¶РЅРѕ РЅР°РґРѕ РїСЂРѕРІРµСЂСЏС‚СЊ РЅР° РЅР°Р»РёС‡РёРµ СЌС‚РѕР№ РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ
                                             tmpRoom.ExitNorth.RoomVNum = -1;
                                         }
                                         tmpRoom = roomsCollection[lastRoomPos.X, lastRoomPos.Y - 1, lastRoomPos.Z];
@@ -1697,13 +1697,13 @@ namespace ExtControls
                                         tmpRoom = roomsCollection[lastRoomPos.X, lastRoomPos.Y, lastRoomPos.Z + 1];
                                         if (tmpRoom != null)
                                         {
-                                            //Возможно надо проверять на наличие этой комнаты на карте
+                                            //Р’РѕР·РјРѕР¶РЅРѕ РЅР°РґРѕ РїСЂРѕРІРµСЂСЏС‚СЊ РЅР° РЅР°Р»РёС‡РёРµ СЌС‚РѕР№ РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ
                                             tmpRoom.ExitDown.RoomVNum = -1;
                                         }
                                         tmpRoom = roomsCollection[lastRoomPos.X, lastRoomPos.Y, lastRoomPos.Z - 1];
                                         if (tmpRoom != null)
                                         {
-                                            //Возможно надо проверять на наличие этой комнаты на карте
+                                            //Р’РѕР·РјРѕР¶РЅРѕ РЅР°РґРѕ РїСЂРѕРІРµСЂСЏС‚СЊ РЅР° РЅР°Р»РёС‡РёРµ СЌС‚РѕР№ РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ
                                             tmpRoom.ExitUp.RoomVNum = -1;
                                         }
                                         tmpRoom = roomsCollection[lastRoomPos.X, lastRoomPos.Y, lastRoomPos.Z + 1];
@@ -1729,8 +1729,8 @@ namespace ExtControls
             }
             /*else
                 {
-                    //Тут надо реализовать добавление клетки в список 
-                    //и дальнейшую обработку при драгдропе из списка непривязанных клеток
+                    //РўСѓС‚ РЅР°РґРѕ СЂРµР°Р»РёР·РѕРІР°С‚СЊ РґРѕР±Р°РІР»РµРЅРёРµ РєР»РµС‚РєРё РІ СЃРїРёСЃРѕРє 
+                    //Рё РґР°Р»СЊРЅРµР№С€СѓСЋ РѕР±СЂР°Р±РѕС‚РєСѓ РїСЂРё РґСЂР°РіРґСЂРѕРїРµ РёР· СЃРїРёСЃРєР° РЅРµРїСЂРёРІСЏР·Р°РЅРЅС‹С… РєР»РµС‚РѕРє
                 }*/
             RedrawBitmap();
         }
@@ -1741,7 +1741,7 @@ namespace ExtControls
         }
 
         /// <summary>
-        /// Перерисовка перетаскиваемой иконки
+        /// РџРµСЂРµСЂРёСЃРѕРІРєР° РїРµСЂРµС‚Р°СЃРєРёРІР°РµРјРѕР№ РёРєРѕРЅРєРё
         /// </summary>
         /// <param name="p"></param>
         protected void SetThumbnailLocation(Point p)
@@ -1775,7 +1775,7 @@ namespace ExtControls
             }
             RedrawBitmap();
             if (!string.IsNullOrEmpty(unmoved))
-                MessageBox.Show(this, "По причине занятости клеток уровнем выше, не были перенесены комнаты:\n" + unmoved);
+                MessageBox.Show(this, "РџРѕ РїСЂРёС‡РёРЅРµ Р·Р°РЅСЏС‚РѕСЃС‚Рё РєР»РµС‚РѕРє СѓСЂРѕРІРЅРµРј РІС‹С€Рµ, РЅРµ Р±С‹Р»Рё РїРµСЂРµРЅРµСЃРµРЅС‹ РєРѕРјРЅР°С‚С‹:\n" + unmoved);
         }
 
         private void TsmiMoveRoomDownClick(object sender, EventArgs e)
@@ -1791,7 +1791,7 @@ namespace ExtControls
             }
             RedrawBitmap();
             if (!string.IsNullOrEmpty(unmoved))
-                MessageBox.Show(this, "По причине занятости клеток уровнем ниже, не были перенесены комнаты:\n" + unmoved);
+                MessageBox.Show(this, "РџРѕ РїСЂРёС‡РёРЅРµ Р·Р°РЅСЏС‚РѕСЃС‚Рё РєР»РµС‚РѕРє СѓСЂРѕРІРЅРµРј РЅРёР¶Рµ, РЅРµ Р±С‹Р»Рё РїРµСЂРµРЅРµСЃРµРЅС‹ РєРѕРјРЅР°С‚С‹:\n" + unmoved);
         }
 
         // ReSharper disable RedundantThisQualifier
@@ -1819,7 +1819,7 @@ namespace ExtControls
             this.tsmiMoveRoomUp.Image = global::ExtControls.Properties.Resources.button_zinc;
             this.tsmiMoveRoomUp.Name = "tsmiMoveRoomUp";
             this.tsmiMoveRoomUp.Size = new System.Drawing.Size(351, 22);
-            this.tsmiMoveRoomUp.Text = "Переместить выбранные комнаты уровнем выше";
+            this.tsmiMoveRoomUp.Text = "РџРµСЂРµРјРµСЃС‚РёС‚СЊ РІС‹Р±СЂР°РЅРЅС‹Рµ РєРѕРјРЅР°С‚С‹ СѓСЂРѕРІРЅРµРј РІС‹С€Рµ";
             this.tsmiMoveRoomUp.Click += new System.EventHandler(this.TsmiMoveRoomUpClick);
             // 
             // tsmiMoveRoomDown
@@ -1827,7 +1827,7 @@ namespace ExtControls
             this.tsmiMoveRoomDown.Image = global::ExtControls.Properties.Resources.button_zdec;
             this.tsmiMoveRoomDown.Name = "tsmiMoveRoomDown";
             this.tsmiMoveRoomDown.Size = new System.Drawing.Size(351, 22);
-            this.tsmiMoveRoomDown.Text = "Переместить выбранные комнаты уровнем ниже";
+            this.tsmiMoveRoomDown.Text = "РџРµСЂРµРјРµСЃС‚РёС‚СЊ РІС‹Р±СЂР°РЅРЅС‹Рµ РєРѕРјРЅР°С‚С‹ СѓСЂРѕРІРЅРµРј РЅРёР¶Рµ";
             this.tsmiMoveRoomDown.Click += new System.EventHandler(this.TsmiMoveRoomDownClick);
             // 
             // WldMap

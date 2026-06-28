@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Data;
 using System.Windows.Forms;
 using DataUtils;
@@ -47,21 +47,21 @@ namespace BZEditor
             switch (type)
             {
                 case EntityType.Mob:
-                    name = "мобов";
+                    name = "РјРѕР±РѕРІ";
                     break;
                 case EntityType.Object:
-                    name = "объектов";
+                    name = "РѕР±СЉРµРєС‚РѕРІ";
                     break;
                 case EntityType.Room:
-                    name = "комнат";
-                    cbUseTemplate.Text = "Выбрать тип сектора";
+                    name = "РєРѕРјРЅР°С‚";
+                    cbUseTemplate.Text = "Р’С‹Р±СЂР°С‚СЊ С‚РёРї СЃРµРєС‚РѕСЂР°";
                     break;
             }
-            Text = "Добавление новых " + name;
+            Text = "Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІС‹С… " + name;
         }
 
         /// <summary>
-        /// Обработка хотекеев
+        /// РћР±СЂР°Р±РѕС‚РєР° С…РѕС‚РµРєРµРµРІ
         /// </summary>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -111,13 +111,13 @@ namespace BZEditor
 
             if (maxAvail > 0)
             {
-                label1.Text = "Количество создаваемых " + name + " от 1 до " + maxAvail;
+                label1.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕР·РґР°РІР°РµРјС‹С… " + name + " РѕС‚ 1 РґРѕ " + maxAvail;
                 nbCount.Maximum = maxAvail; nbCount.Minimum = 1;
                 nbCount.Enabled = true;
             }
             else
             {
-                label1.Text = "Достигнуто максимальное колич." + name;
+                label1.Text = "Р”РѕСЃС‚РёРіРЅСѓС‚Рѕ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡." + name;
                 nbCount.Enabled = false;
             }
 
@@ -186,13 +186,13 @@ namespace BZEditor
             }
             if (maxAvail > 0)
             {
-                label1.Text = "Количество создаваемых " + name + " от 1 до " + maxAvail;
+                label1.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕР·РґР°РІР°РµРјС‹С… " + name + " РѕС‚ 1 РґРѕ " + maxAvail;
                 nbCount.Maximum = maxAvail;
                 nbCount.Enabled = true;
             }
             else
             {
-                label1.Text = "Достигнуто максимальное колич." + name;
+                label1.Text = "Р”РѕСЃС‚РёРіРЅСѓС‚Рѕ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡." + name;
                 nbCount.Enabled = false;
             }
             DialogResult = DialogResult.OK;

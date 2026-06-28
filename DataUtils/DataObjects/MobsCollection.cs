@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
@@ -19,7 +19,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Возвращает ссылку
+        /// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСЃС‹Р»РєСѓ
         /// </summary>
         public Mob this[int vNum, int tmp] => GetMob(vNum);
 
@@ -57,13 +57,13 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Создает заданное количество новых мобов
+        /// РЎРѕР·РґР°РµС‚ Р·Р°РґР°РЅРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЅРѕРІС‹С… РјРѕР±РѕРІ
         /// </summary>
-        /// <param name="count">Требуемое количество мобов</param>
+        /// <param name="count">РўСЂРµР±СѓРµРјРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјРѕР±РѕРІ</param>
         /// <param name="zoneNum"></param>
         /// <param name="templatesDm"></param>
         /// <param name="guid"></param>
-        /// <returns>Идентификатор первого из созданных мобов</returns>
+        /// <returns>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂРІРѕРіРѕ РёР· СЃРѕР·РґР°РЅРЅС‹С… РјРѕР±РѕРІ</returns>
         public int AddMobs(int count, int zoneNum, TemplatesDataManager templatesDm, Guid guid)
         {
             int firstId = -1;
@@ -73,7 +73,7 @@ namespace DataUtils
                 if (vnum < 0) break;
                 if (firstId == -1)
                     firstId = vnum;
-                var mob = new Mob(vnum) { Cases = { Imen = ("Новый моб " + vnum) } };
+                var mob = new Mob(vnum) { Cases = { Imen = ("РќРѕРІС‹Р№ РјРѕР± " + vnum) } };
                 if (guid != Guid.Empty)
                     templatesDm.ApplyTemplate(ref mob, guid);
                 Add(mob);

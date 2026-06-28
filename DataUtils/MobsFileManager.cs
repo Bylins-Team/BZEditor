@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -36,21 +36,21 @@ namespace DataUtils
                 {
                     while (true)
                     {
-                        additionalInfo = "отсутствует...";
+                        additionalInfo = "РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚...";
                         var mob = new Mob(-1);
 
-                        while (input.IndexOf("#", StringComparison.Ordinal) == -1) //Смещаемся на начало описания объекта
+                        while (input.IndexOf("#", StringComparison.Ordinal) == -1) //РЎРјРµС‰Р°РµРјСЃСЏ РЅР° РЅР°С‡Р°Р»Рѕ РѕРїРёСЃР°РЅРёСЏ РѕР±СЉРµРєС‚Р°
                         {
                             input = ReadLine(sr);
-                            if (input == null) break; //если конец файла, то прекращаем искать начало след.объекта
+                            if (input == null) break; //РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, С‚Рѕ РїСЂРµРєСЂР°С‰Р°РµРј РёСЃРєР°С‚СЊ РЅР°С‡Р°Р»Рѕ СЃР»РµРґ.РѕР±СЉРµРєС‚Р°
                         }
-                        if (input == null) break; //если конец файла, прекращаем обработку файла
+                        if (input == null) break; //РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, РїСЂРµРєСЂР°С‰Р°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ С„Р°Р№Р»Р°
 
                         Match m = tnum.Match(input);
                         if (m.Success)
                         {
                             mob = new Mob(StringUtils.ToIntFast(m.Groups["Num"].ToString()));
-                            additionalInfo = "моб [" + m.Groups["Num"] + "]";
+                            additionalInfo = "РјРѕР± [" + m.Groups["Num"] + "]";
                         }
                         mob.Alias = ReadLine(sr).Replace("~", "");
                         mob.Cases.Imen = ReadLine(sr).Replace("~", "");
@@ -61,7 +61,7 @@ namespace DataUtils
                         mob.Cases.Tvor = ReadLine(sr).Replace("~", "");
                         mob.Cases.Pred = ReadLine(sr).Replace("~", "");
                         input = ReadLine(sr);
-                        while (input != "~") //Читаем все описание моба до завершающей тильды
+                        while (input != "~") //Р§РёС‚Р°РµРј РІСЃРµ РѕРїРёСЃР°РЅРёРµ РјРѕР±Р° РґРѕ Р·Р°РІРµСЂС€Р°СЋС‰РµР№ С‚РёР»СЊРґС‹
                         {
                             if (input.IndexOf("~", StringComparison.Ordinal) >= 0)
                             {
@@ -76,7 +76,7 @@ namespace DataUtils
                             }
                         }
                         input = ReadLine(sr);
-                        while (input != "~") //Читаем все описание моба до завершающей тильды
+                        while (input != "~") //Р§РёС‚Р°РµРј РІСЃРµ РѕРїРёСЃР°РЅРёРµ РјРѕР±Р° РґРѕ Р·Р°РІРµСЂС€Р°СЋС‰РµР№ С‚РёР»СЊРґС‹
                         {
                             if (input.IndexOf("~", StringComparison.Ordinal) >= 0)
                             {
@@ -93,14 +93,14 @@ namespace DataUtils
 
                         input = ReadLine(sr);
                         string[] parts = input.Split(' ');
-                        mob.Flags = parts[0] == "0" ? "" : parts[0]; //флаги
-                        mob.Affects = parts[1] == "0" ? "" : parts[1]; //аффекты
+                        mob.Flags = parts[0] == "0" ? "" : parts[0]; //С„Р»Р°РіРё
+                        mob.Affects = parts[1] == "0" ? "" : parts[1]; //Р°С„С„РµРєС‚С‹
                         mob.Align = StringUtils.ToIntFast(parts[2]);
 
                         input = ReadLine(sr);
                         parts = input.Split(' ');
                         mob.Level = StringUtils.ToIntFast(parts[0]);
-                        mob.Hitroll = 20-StringUtils.ToIntFast(parts[1]);//20-значение для того, чтоб отображать как в ОЛЦ
+                        mob.Hitroll = 20-StringUtils.ToIntFast(parts[1]);//20-Р·РЅР°С‡РµРЅРёРµ РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР± РѕС‚РѕР±СЂР°Р¶Р°С‚СЊ РєР°Рє РІ РћР›Р¦
                         mob.Ac = StringUtils.ToIntFast(parts[2]);
                         mob.Hits = parts[3];
                         mob.Damage = parts[4];
@@ -109,7 +109,7 @@ namespace DataUtils
                         parts = input.Split(' ');
                         mob.Money = parts[0];
                         mob.Exp = StringUtils.ToIntFast(parts[1]);
-                        if (mob.Exp < 0) mob.Exp = 0;//Глюк в старом эдиторе, например  зона 114 моб 11400 с экспой -1 - ошибка
+                        if (mob.Exp < 0) mob.Exp = 0;//Р“Р»СЋРє РІ СЃС‚Р°СЂРѕРј СЌРґРёС‚РѕСЂРµ, РЅР°РїСЂРёРјРµСЂ  Р·РѕРЅР° 114 РјРѕР± 11400 СЃ СЌРєСЃРїРѕР№ -1 - РѕС€РёР±РєР°
 
                         input = ReadLine(sr);
                         parts = input.Split(' ');
@@ -119,7 +119,7 @@ namespace DataUtils
                         mob.Speed = parts.Length > 3 ? StringUtils.ToIntFast(parts[3]) : -1;
 
                         input = ReadLine(sr);
-                        while (input[0] != '#' && input[0] != '$') //Читаем все параметры моба
+                        while (input[0] != '#' && input[0] != '$') //Р§РёС‚Р°РµРј РІСЃРµ РїР°СЂР°РјРµС‚СЂС‹ РјРѕР±Р°
                         {
                             parts = input.Split(' ');
                             switch (input.Split(':')[0])
@@ -138,7 +138,7 @@ namespace DataUtils
                                     mob.Vitality = StringUtils.ToIntFast(parts[5]);
                                     mob.Mind = StringUtils.ToIntFast(parts[6]);
                                     mob.Immunitet = StringUtils.ToIntFast(parts[7]);
-                                    if (parts.Length == 9) // 8й резист (от тьмы) не во всех зонах сохранен пока
+                                    if (parts.Length == 9) // 8Р№ СЂРµР·РёСЃС‚ (РѕС‚ С‚СЊРјС‹) РЅРµ РІРѕ РІСЃРµС… Р·РѕРЅР°С… СЃРѕС…СЂР°РЅРµРЅ РїРѕРєР°
                                         mob.ResistDark = StringUtils.ToIntFast(parts[8]);
                                     break;
                                 case "HPreg":
@@ -175,7 +175,7 @@ namespace DataUtils
                                     if (parts.Length == 2)
                                         mob.BareHandAttack = StringUtils.ToIntFast(parts[1]);
                                     else if (parts.Length == 3)
-                                        // Клюк в зонах 1101 и еще каких то, ибо там схранено __0, _13 типо форматировано непонятно нахуя
+                                        // РљР»СЋРє РІ Р·РѕРЅР°С… 1101 Рё РµС‰Рµ РєР°РєРёС… С‚Рѕ, РёР±Рѕ С‚Р°Рј СЃС…СЂР°РЅРµРЅРѕ __0, _13 С‚РёРїРѕ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРѕ РЅРµРїРѕРЅСЏС‚РЅРѕ РЅР°С…СѓСЏ
                                         mob.BareHandAttack = StringUtils.ToIntFast(parts[2]);
                                     break;
                                 case "Destination":
@@ -257,7 +257,7 @@ namespace DataUtils
                                     mob.LoadedObjectAfterDeath.Add(StringUtils.ToIntFast(parts[1]), StringUtils.ToIntFast(parts[2]),
                                         StringUtils.ToIntFast(parts[3]), StringUtils.ToIntFast(parts[4]));
                                     break;
-                                case "I"://I зубы,10:3 или I крылья:5
+                                case "I"://I Р·СѓР±С‹,10:3 РёР»Рё I РєСЂС‹Р»СЊСЏ:5
                                     parts = parts[1].Split(':');
                                     var prob = StringUtils.ToIntFast(parts[1]);
                                     parts = parts[0].Split(',');
@@ -279,8 +279,8 @@ namespace DataUtils
                 }
                 catch (Exception ex)
                 {
-                    FireExceptionEvent("Ошибка при загрузке мобов:\nФайл: \"" + filePath + "\"\nСтрока #" + filePos + ": " +
-                            lastString + "\nДополнительная информация: " + additionalInfo, ex, EventLogEntryType.Warning);
+                    FireExceptionEvent("РћС€РёР±РєР° РїСЂРё Р·Р°РіСЂСѓР·РєРµ РјРѕР±РѕРІ:\nР¤Р°Р№Р»: \"" + filePath + "\"\nРЎС‚СЂРѕРєР° #" + filePos + ": " +
+                            lastString + "\nР”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ: " + additionalInfo, ex, EventLogEntryType.Warning);
                     sr.Close();
                     return false;
                 }
@@ -295,9 +295,9 @@ namespace DataUtils
                 new FileStream(StaticData.WorldFolderPath + @"\MOB\" + zoneNumber + ".mob", FileMode.Create,
                                FileAccess.Write);
             var sw = new StreamWriter(fs, StaticData.CurrentEncoding) {NewLine = "\n"};
-            //sw.WriteLine("* Сгенерировано BZEditor");
-            //sw.WriteLine("* Количество мобов : " + mobsCollection.Count);
-            //sw.WriteLine("* Сохранено " + DateTime.Now);
+            //sw.WriteLine("* РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРѕ BZEditor");
+            //sw.WriteLine("* РљРѕР»РёС‡РµСЃС‚РІРѕ РјРѕР±РѕРІ : " + mobsCollection.Count);
+            //sw.WriteLine("* РЎРѕС…СЂР°РЅРµРЅРѕ " + DateTime.Now);
             if (mobsCollection.Count > 0)
             {
                 mobsCollection.Sort(new BaseDataObjectComparer());
@@ -314,82 +314,82 @@ namespace DataUtils
                     sw.WriteLine(mob.Cases.Vin + "~");
                     sw.WriteLine(mob.Cases.Tvor + "~");
                     sw.WriteLine(mob.Cases.Pred + "~");
-                    string[] parts = mob.Desc.Replace("\r", "").TrimEnd('\n').Split('\n'); //Описание
+                    string[] parts = mob.Desc.Replace("\r", "").TrimEnd('\n').Split('\n'); //РћРїРёСЃР°РЅРёРµ
                     foreach (string s in parts)
                         sw.WriteLine(s);
                     sw.WriteLine("~");
-                    parts = mob.DetailDescr.Replace("\r", "").TrimEnd('\n').Split('\n'); //Детальное описание
+                    parts = mob.DetailDescr.Replace("\r", "").TrimEnd('\n').Split('\n'); //Р”РµС‚Р°Р»СЊРЅРѕРµ РѕРїРёСЃР°РЅРёРµ
                     foreach (string s in parts)
                         sw.WriteLine(s);
                     sw.WriteLine("~");
                     string flags = (mob.Flags == "") ? "0" : mob.Flags;
                     string affects = (mob.Affects == "") ? "0" : mob.Affects;
-                    sw.WriteLine(flags + " " + affects + " " + mob.Align + " E"); //Флаги, Аффекты, Наклонность                         
+                    sw.WriteLine(flags + " " + affects + " " + mob.Align + " E"); //Р¤Р»Р°РіРё, РђС„С„РµРєС‚С‹, РќР°РєР»РѕРЅРЅРѕСЃС‚СЊ                         
                     sw.WriteLine(mob.Level + " " +
-                        (20 - mob.Hitroll) //Так сделано для того, чтоб хитролл отображался как в ОЛЦ
-                        + " " + mob.Ac + " " + mob.Hits + " " + mob.Damage);//Уровень, Хитролл, АС, Хиты, Повреждения
-                    sw.WriteLine(mob.Money + " " + mob.Exp); //Бабло, Экспа
-                    sw.WriteLine(mob.PosLoad + " " + mob.PosDefault + " " + mob.Sex + (mob.Speed != -1 ? " " + mob.Speed : ""));//Позиция при загрузке, Позиция по умолчанию, Пол
-                    //спас-броски: Если все спас-броски равны нулю, то строка не пишется.
+                        (20 - mob.Hitroll) //РўР°Рє СЃРґРµР»Р°РЅРѕ РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР± С…РёС‚СЂРѕР»Р» РѕС‚РѕР±СЂР°Р¶Р°Р»СЃСЏ РєР°Рє РІ РћР›Р¦
+                        + " " + mob.Ac + " " + mob.Hits + " " + mob.Damage);//РЈСЂРѕРІРµРЅСЊ, РҐРёС‚СЂРѕР»Р», РђРЎ, РҐРёС‚С‹, РџРѕРІСЂРµР¶РґРµРЅРёСЏ
+                    sw.WriteLine(mob.Money + " " + mob.Exp); //Р‘Р°Р±Р»Рѕ, Р­РєСЃРїР°
+                    sw.WriteLine(mob.PosLoad + " " + mob.PosDefault + " " + mob.Sex + (mob.Speed != -1 ? " " + mob.Speed : ""));//РџРѕР·РёС†РёСЏ РїСЂРё Р·Р°РіСЂСѓР·РєРµ, РџРѕР·РёС†РёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, РџРѕР»
+                    //СЃРїР°СЃ-Р±СЂРѕСЃРєРё: Р•СЃР»Рё РІСЃРµ СЃРїР°СЃ-Р±СЂРѕСЃРєРё СЂР°РІРЅС‹ РЅСѓР»СЋ, С‚Рѕ СЃС‚СЂРѕРєР° РЅРµ РїРёС€РµС‚СЃСЏ.
                     if (mob.SaveParalyzeCast != 0 || mob.SaveMagBreathes != 0 || mob.SaveMagDamages != 0 ||
                         mob.SaveFightSkills != 0)
                     {
                         sw.WriteLine($"Saves: {mob.SaveParalyzeCast} {mob.SaveMagBreathes} {mob.SaveMagDamages} {mob.SaveFightSkills}");
                     }
-                    //Резисты
+                    //Р РµР·РёСЃС‚С‹
                     if (mob.ResistFromFire != 0 || mob.ResistFromAir != 0 || mob.ResistFromWater != 0 ||
                         mob.ResistFromEarth != 0 || mob.Vitality != 0 || mob.Mind != 0 || mob.Immunitet != 0)
                     {
                         sw.WriteLine($"Resistances: {mob.ResistFromFire} {mob.ResistFromAir} {mob.ResistFromWater} {mob.ResistFromEarth} {mob.Vitality} {mob.Mind} {mob.Immunitet} {mob.ResistDark}");
                     }
                     if (mob.HPreg != 0)
-                        sw.WriteLine($"HPreg: {mob.HPreg}"); //Регенерация  хитов
+                        sw.WriteLine($"HPreg: {mob.HPreg}"); //Р РµРіРµРЅРµСЂР°С†РёСЏ  С…РёС‚РѕРІ
                     if (mob.Armour != 0)
-                        sw.WriteLine($"Armour: {mob.Armour}"); //Броня
+                        sw.WriteLine($"Armour: {mob.Armour}"); //Р‘СЂРѕРЅСЏ
                     if (mob.PlusMem != 0)
-                        sw.WriteLine($"PlusMem: {mob.PlusMem}"); //Бонус мема
+                        sw.WriteLine($"PlusMem: {mob.PlusMem}"); //Р‘РѕРЅСѓСЃ РјРµРјР°
                     if (mob.CastSuccess != 0)
-                        sw.WriteLine($"CastSuccess: {mob.CastSuccess}"); //Успех каста
+                        sw.WriteLine($"CastSuccess: {mob.CastSuccess}"); //РЈСЃРїРµС… РєР°СЃС‚Р°
                     if (mob.Luck != 0)
-                        sw.WriteLine($"Success: {mob.Luck}"); //Удача
+                        sw.WriteLine($"Success: {mob.Luck}"); //РЈРґР°С‡Р°
                     if (mob.Initiative != 0)
-                        sw.WriteLine($"Initiative: {mob.Initiative}"); //Инициатива
+                        sw.WriteLine($"Initiative: {mob.Initiative}"); //РРЅРёС†РёР°С‚РёРІР°
                     if (mob.Absorbe != 0)
-                        sw.WriteLine($"Absorbe: {mob.Absorbe}"); //Поглощение
+                        sw.WriteLine($"Absorbe: {mob.Absorbe}"); //РџРѕРіР»РѕС‰РµРЅРёРµ
                     if (mob.AResist != 0)
-                        sw.WriteLine($"AResist: {mob.AResist}"); //Имуннитет к маг.афф.
+                        sw.WriteLine($"AResist: {mob.AResist}"); //РРјСѓРЅРЅРёС‚РµС‚ Рє РјР°Рі.Р°С„С„.
                     if (mob.MResist != 0)
-                        sw.WriteLine($"MResist: {mob.MResist}"); //Имуннитет к маг.повр.
+                        sw.WriteLine($"MResist: {mob.MResist}"); //РРјСѓРЅРЅРёС‚РµС‚ Рє РјР°Рі.РїРѕРІСЂ.
                     if (mob.PResist != 0)
-                        sw.WriteLine($"PResist: {mob.PResist}"); //Имуннитет к физ.повр.
+                        sw.WriteLine($"PResist: {mob.PResist}"); //РРјСѓРЅРЅРёС‚РµС‚ Рє С„РёР·.РїРѕРІСЂ.
                     if (mob.BareHandAttack != 0)
-                        sw.WriteLine($"BareHandAttack: {mob.BareHandAttack}"); //Тип атаки
+                        sw.WriteLine($"BareHandAttack: {mob.BareHandAttack}"); //РўРёРї Р°С‚Р°РєРё
                     foreach (int d in mob.Destination)
                         sw.WriteLine($"Destination: {d}");
                     if (mob.Stats.Str != 11)
-                        sw.WriteLine($"Str: {mob.Stats.Str}"); //Сила
+                        sw.WriteLine($"Str: {mob.Stats.Str}"); //РЎРёР»Р°
                     if (mob.Stats.Dex != 11)
-                        sw.WriteLine($"Dex: {mob.Stats.Dex}"); //Ловкость
+                        sw.WriteLine($"Dex: {mob.Stats.Dex}"); //Р›РѕРІРєРѕСЃС‚СЊ
                     if (mob.Stats.Int != 11)
-                        sw.WriteLine($"Int: {mob.Stats.Int}"); //Интеллект
+                        sw.WriteLine($"Int: {mob.Stats.Int}"); //РРЅС‚РµР»Р»РµРєС‚
                     if (mob.Stats.Wis != 11)
-                        sw.WriteLine($"Wis: {mob.Stats.Wis}"); //Мудрость
+                        sw.WriteLine($"Wis: {mob.Stats.Wis}"); //РњСѓРґСЂРѕСЃС‚СЊ
                     if (mob.Stats.Con != 11)
-                        sw.WriteLine($"Con: {mob.Stats.Con}"); //Тело
+                        sw.WriteLine($"Con: {mob.Stats.Con}"); //РўРµР»Рѕ
                     if (mob.Stats.Cha != 11)
-                        sw.WriteLine($"Cha: {mob.Stats.Cha}"); //Обаяние
-                    //if (mob.Stats.Size != 50) // (пока решили выводить все размеры, включая дефолтные)
-                    sw.WriteLine($"Size: {mob.Stats.Size}"); //Размер 
+                        sw.WriteLine($"Cha: {mob.Stats.Cha}"); //РћР±Р°СЏРЅРёРµ
+                    //if (mob.Stats.Size != 50) // (РїРѕРєР° СЂРµС€РёР»Рё РІС‹РІРѕРґРёС‚СЊ РІСЃРµ СЂР°Р·РјРµСЂС‹, РІРєР»СЋС‡Р°СЏ РґРµС„РѕР»С‚РЅС‹Рµ)
+                    sw.WriteLine($"Size: {mob.Stats.Size}"); //Р Р°Р·РјРµСЂ 
                     if (mob.LikeWork > 0)
                         sw.WriteLine($"LikeWork: {mob.LikeWork}"); //
                     if (mob.MaxFactor > 0)
                         sw.WriteLine($"MaxFactor: {mob.MaxFactor}"); //
                     if (mob.ExtraAttack > 0)
                         sw.WriteLine($"ExtraAttack: {mob.ExtraAttack}"); //
-                    sw.WriteLine($"Class: {mob.Class}"); //Класс
-                    sw.WriteLine($"Race: {mob.Race}"); //Тип
-                    sw.WriteLine($"Height: {mob.Stats.Height}"); //Рост
-                    sw.WriteLine($"Weight: {mob.Stats.Weight}"); //Вес
+                    sw.WriteLine($"Class: {mob.Class}"); //РљР»Р°СЃСЃ
+                    sw.WriteLine($"Race: {mob.Race}"); //РўРёРї
+                    sw.WriteLine($"Height: {mob.Stats.Height}"); //Р РѕСЃС‚
+                    sw.WriteLine($"Weight: {mob.Stats.Weight}"); //Р’РµСЃ
                     if (mob.SpecialBitvector != "")
                         sw.WriteLine($"Special_Bitvector: {mob.SpecialBitvector} "); //
                     foreach (int f in mob.Feats)

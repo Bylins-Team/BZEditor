@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace SystemFrameworks
 {
     /// <summary>
-    /// Обрабатывает исключения и производит необходимые записи в лог.
+    /// РћР±СЂР°Р±Р°С‚С‹РІР°РµС‚ РёСЃРєР»СЋС‡РµРЅРёСЏ Рё РїСЂРѕРёР·РІРѕРґРёС‚ РЅРµРѕР±С…РѕРґРёРјС‹Рµ Р·Р°РїРёСЃРё РІ Р»РѕРі.
     /// </summary>
     /// 
     public class BZedExceptionCatcher
@@ -28,7 +28,7 @@ namespace SystemFrameworks
         #endregion
 
         /// <summary>
-        /// Конструктор
+        /// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
         /// </summary>
         public BZedExceptionCatcher(Exception InExeption)
         {
@@ -41,7 +41,7 @@ namespace SystemFrameworks
         }
 
         /// <summary>
-        /// Определяет это ошибка потери связи
+        /// РћРїСЂРµРґРµР»СЏРµС‚ СЌС‚Рѕ РѕС€РёР±РєР° РїРѕС‚РµСЂРё СЃРІСЏР·Рё
         /// </summary>
         public bool IsConnectionLostError
         {
@@ -74,23 +74,23 @@ namespace SystemFrameworks
         }
 
         /// <summary>
-        /// Расшифровывает тип исключения.
+        /// Р Р°СЃС€РёС„СЂРѕРІС‹РІР°РµС‚ С‚РёРї РёСЃРєР»СЋС‡РµРЅРёСЏ.
         /// </summary>
         public void DecodeException()
         {
-            FullMessage = " Сообщение=" + CurrentException.Message + " Стэк=" + CurrentException.StackTrace + " Источник=" +
+            FullMessage = " РЎРѕРѕР±С‰РµРЅРёРµ=" + CurrentException.Message + " РЎС‚СЌРє=" + CurrentException.StackTrace + " РСЃС‚РѕС‡РЅРёРє=" +
                           CurrentException.Source;
             UserMessage = CurrentException.Message;
             LogMessage = FullMessage;
 
-            // если есть вложенная ошибка
+            // РµСЃР»Рё РµСЃС‚СЊ РІР»РѕР¶РµРЅРЅР°СЏ РѕС€РёР±РєР°
             if (CurrentException.InnerException != null)
             {
                 WrappedMessage = CurrentException.InnerException.Message;
-                LogMessage = FullMessage + "\n" + "Вложенное сообщение: " + WrappedMessage;
+                LogMessage = FullMessage + "\n" + "Р’Р»РѕР¶РµРЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ: " + WrappedMessage;
             }
 
-            //если ошибка сгенерирована в коде Редактора
+            //РµСЃР»Рё РѕС€РёР±РєР° СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅР° РІ РєРѕРґРµ Р РµРґР°РєС‚РѕСЂР°
             if (IsNoLogingException())
             {
                 BZedException e = (BZedException)CurrentException;
@@ -105,7 +105,7 @@ namespace SystemFrameworks
         }
 
         /// <summary>
-        /// Определяет тип иконки по типу ошибки есиап
+        /// РћРїСЂРµРґРµР»СЏРµС‚ С‚РёРї РёРєРѕРЅРєРё РїРѕ С‚РёРїСѓ РѕС€РёР±РєРё РµСЃРёР°Рї
         /// </summary>
         private static MessageBoxIcon GetIconByEventLogEntryType(EventLogEntryType inExceptionType)
         {
@@ -126,7 +126,7 @@ namespace SystemFrameworks
         }
 
         /// <summary>
-        /// Определяет ошибку Oracle
+        /// РћРїСЂРµРґРµР»СЏРµС‚ РѕС€РёР±РєСѓ Oracle
         /// </summary>
         public bool DecodeOracleError()
         {
@@ -147,7 +147,7 @@ namespace SystemFrameworks
         }
 
         /// <summary>
-        /// Проверяет, является ли ошибка записываемой в лог
+        /// РџСЂРѕРІРµСЂСЏРµС‚, СЏРІР»СЏРµС‚СЃСЏ Р»Рё РѕС€РёР±РєР° Р·Р°РїРёСЃС‹РІР°РµРјРѕР№ РІ Р»РѕРі
         /// </summary>
         public bool IsNoLogingException()
         {

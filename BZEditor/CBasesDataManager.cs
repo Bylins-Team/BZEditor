@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Data;
 using System.IO;
@@ -322,7 +322,7 @@ namespace BZEditor
                 sr.Close();
             }
 
-            string group = "Ïðî÷åå";
+            string group = "ÐŸÑ€Ð¾Ñ‡ÐµÐµ";
             t = new Regex("(?<val>.+)\t(?<desc>.+)");
             foreach (string fname in grouppedTwoParamsFiles)
             {
@@ -348,7 +348,7 @@ namespace BZEditor
                 sr.Close();
             }
 
-            group = "Ïðî÷åå";
+            group = "ÐŸÑ€Ð¾Ñ‡ÐµÐµ";
             t = new Regex("(?<val>.+)\t(?<desc>.+)\t(?<forecolor>.+)\t(?<backcolor>.+)\t(?<order>.+)");
             var tgr = new Regex("[G|g]\t(?<desc>.+)");
             foreach (string fname in grouppedFiveParamsFiles)

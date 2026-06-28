@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -64,7 +64,7 @@ namespace BZEditor
 
         public void BindComboBox(ComboBox cb, DataTable table, bool mustClear)
         {
-            //чтоб не запариваться и не проставлять везде эту парашу
+            //С‡С‚РѕР± РЅРµ Р·Р°РїР°СЂРёРІР°С‚СЊСЃСЏ Рё РЅРµ РїСЂРѕСЃС‚Р°РІР»СЏС‚СЊ РІРµР·РґРµ СЌС‚Сѓ РїР°СЂР°С€Сѓ
             cb.DropDownStyle = ComboBoxStyle.DropDownList;
             //
             if (mustClear)

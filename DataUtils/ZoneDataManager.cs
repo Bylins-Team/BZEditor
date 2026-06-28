@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections;
 using System.Diagnostics;
 using System.Text;
@@ -20,47 +20,47 @@ namespace DataUtils
         private readonly Encoding encoding = Encoding.Default;
 
         /// <summary>
-        /// Провайдер формата данных
+        /// РџСЂРѕРІР°Р№РґРµСЂ С„РѕСЂРјР°С‚Р° РґР°РЅРЅС‹С…
         /// </summary>
         private IFormatProvider formatProvider { get { return FormatProviderFactory.GetProvider(StaticData.WorldDataFormat); } }
 
         /// <summary>
-        /// Название зоны (по номеру)
+        /// РќР°Р·РІР°РЅРёРµ Р·РѕРЅС‹ (РїРѕ РЅРѕРјРµСЂСѓ)
         /// </summary>
         private readonly string zoneName;
 
         /// <summary>
-        /// Коллекция мобов зоны
+        /// РљРѕР»Р»РµРєС†РёСЏ РјРѕР±РѕРІ Р·РѕРЅС‹
         /// </summary>
         public MobsCollection Mobs;
 
         /// <summary>
-        /// Коллекция предметов зоны
+        /// РљРѕР»Р»РµРєС†РёСЏ РїСЂРµРґРјРµС‚РѕРІ Р·РѕРЅС‹
         /// </summary>
         public ObjsCollection Objects;
 
         /// <summary>
-        /// Коллекция комнат зоны
+        /// РљРѕР»Р»РµРєС†РёСЏ РєРѕРјРЅР°С‚ Р·РѕРЅС‹
         /// </summary>
         public RoomsCollection Rooms;
 
         /// <summary>
-        /// Комнаты эскиза
+        /// РљРѕРјРЅР°С‚С‹ СЌСЃРєРёР·Р°
         /// </summary>
         public SketchRoomsCollection SketchRooms;
 
         /// <summary>
-        /// Коллекция триггеров зоны
+        /// РљРѕР»Р»РµРєС†РёСЏ С‚СЂРёРіРіРµСЂРѕРІ Р·РѕРЅС‹
         /// </summary>
         public TriggersCollection Triggers;
 
         /// <summary>
-        /// Объект, хранящий параметры зоны
+        /// РћР±СЉРµРєС‚, С…СЂР°РЅСЏС‰РёР№ РїР°СЂР°РјРµС‚СЂС‹ Р·РѕРЅС‹
         /// </summary>
         public Zone Zone;
 
         /// <summary>
-        /// Основной класс работы с данными зон и файлами в которых они хранятся
+        /// РћСЃРЅРѕРІРЅРѕР№ РєР»Р°СЃСЃ СЂР°Р±РѕС‚С‹ СЃ РґР°РЅРЅС‹РјРё Р·РѕРЅ Рё С„Р°Р№Р»Р°РјРё РІ РєРѕС‚РѕСЂС‹С… РѕРЅРё С…СЂР°РЅСЏС‚СЃСЏ
         /// </summary>
         public ZoneDataManager(string zoneName, Encoding currentEncoding)
         {
@@ -90,7 +90,7 @@ namespace DataUtils
 
         public virtual void FireZoneLoadingExceptionEvent(string message, Exception exception, EventLogEntryType type)
         {
-            ExceptionThrowed?.Invoke("Зона не может быть загружена. Ошибка парсинга:\n" + message, exception, type);
+            ExceptionThrowed?.Invoke("Р—РѕРЅР° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ Р·Р°РіСЂСѓР¶РµРЅР°. РћС€РёР±РєР° РїР°СЂСЃРёРЅРіР°:\n" + message, exception, type);
         }
 
         private void Recreate()
@@ -113,14 +113,14 @@ namespace DataUtils
         #region [!] LoadData [!]
 
         /// <summary>
-        /// Загрузка всех файлов зоны
+        /// Р—Р°РіСЂСѓР·РєР° РІСЃРµС… С„Р°Р№Р»РѕРІ Р·РѕРЅС‹
         /// </summary>
         public bool LoadData()
         {
             StaticData.CanFireChangeEvent = false;
             Recreate();
 
-            // передаём обработчик исключений загрузки в провайдер формата
+            // РїРµСЂРµРґР°С‘Рј РѕР±СЂР°Р±РѕС‚С‡РёРє РёСЃРєР»СЋС‡РµРЅРёР№ Р·Р°РіСЂСѓР·РєРё РІ РїСЂРѕРІР°Р№РґРµСЂ С„РѕСЂРјР°С‚Р°
             if (formatProvider != null)
             {
                 formatProvider.ExceptionThrowed += FireZoneLoadingExceptionEvent;
@@ -158,7 +158,7 @@ namespace DataUtils
         #region [!] SaveData [!]
 
         /// <summary>
-        /// Сохранение всех файлов зоны
+        /// РЎРѕС…СЂР°РЅРµРЅРёРµ РІСЃРµС… С„Р°Р№Р»РѕРІ Р·РѕРЅС‹
         /// </summary>
         public void SaveData()
         {            
@@ -171,7 +171,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сохранение мобов
+        /// РЎРѕС…СЂР°РЅРµРЅРёРµ РјРѕР±РѕРІ
         /// </summary>
         public void SaveMobs()
         {
@@ -179,7 +179,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сохранение объектов
+        /// РЎРѕС…СЂР°РЅРµРЅРёРµ РѕР±СЉРµРєС‚РѕРІ
         /// </summary>
         public void SaveObjects()
         {
@@ -187,7 +187,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сохранение триггеров
+        /// РЎРѕС…СЂР°РЅРµРЅРёРµ С‚СЂРёРіРіРµСЂРѕРІ
         /// </summary>
         public void SaveTriggers()
         {
@@ -195,7 +195,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сохранение комнат и эскиза
+        /// РЎРѕС…СЂР°РЅРµРЅРёРµ РєРѕРјРЅР°С‚ Рё СЌСЃРєРёР·Р°
         /// </summary>
         public void SaveRooms()
         {
@@ -204,7 +204,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сохранение данных зоны
+        /// РЎРѕС…СЂР°РЅРµРЅРёРµ РґР°РЅРЅС‹С… Р·РѕРЅС‹
         /// </summary>
         public void SaveZone()
         {
@@ -217,9 +217,9 @@ namespace DataUtils
         #region [!] ChangeZoneNumber [!]
 
         /// <summary>
-        /// Изменение номера текущей зоны
+        /// РР·РјРµРЅРµРЅРёРµ РЅРѕРјРµСЂР° С‚РµРєСѓС‰РµР№ Р·РѕРЅС‹
         /// </summary>
-        /// <param name="newNumber">Новый номер зоны</param>
+        /// <param name="newNumber">РќРѕРІС‹Р№ РЅРѕРјРµСЂ Р·РѕРЅС‹</param>
         public void ChangeZoneNumber(int newNumber)
         {
             int oldNum = Zone.Number*100;
@@ -227,7 +227,7 @@ namespace DataUtils
             int delta = newNum - oldNum;
             foreach (Room r in Rooms)
             {
-                //Выходы
+                //Р’С‹С…РѕРґС‹
                 r.ExitDown.Key = (r.ExitDown.Key != -1 && Math.Abs(r.ExitDown.Key - oldNum) < 100)
                                      ? r.ExitDown.Key + delta
                                      : r.ExitDown.Key;
@@ -264,7 +264,7 @@ namespace DataUtils
                 r.ExitWest.RoomVNum = (r.ExitWest.RoomVNum != -1 && Math.Abs(r.ExitWest.RoomVNum - oldNum) < 100)
                                           ? r.ExitWest.RoomVNum + delta
                                           : r.ExitWest.RoomVNum;
-                //Загружаемые в комнату мобы
+                //Р—Р°РіСЂСѓР¶Р°РµРјС‹Рµ РІ РєРѕРјРЅР°С‚Сѓ РјРѕР±С‹
                 foreach (OperatedMob lm in r.LoadingMobsCollection)
                 {
                     lm.FollowsBy = (lm.FollowsBy != -1 && Math.Abs(lm.FollowsBy - oldNum) < 100)
@@ -274,17 +274,17 @@ namespace DataUtils
                     foreach (MobObj mlo in lm.Items)
                         mlo.VNum = (Math.Abs(mlo.VNum - oldNum) < 100) ? mlo.VNum + delta : mlo.VNum;
                 }
-                //Загружаемые в комнату объекты
+                //Р—Р°РіСЂСѓР¶Р°РµРјС‹Рµ РІ РєРѕРјРЅР°С‚Сѓ РѕР±СЉРµРєС‚С‹
                 foreach (OperatedObj lo in r.LoadingObjectsCollection)
                 {
                     lo.VNum = (Math.Abs(lo.VNum - oldNum) < 100) ? lo.VNum + delta : lo.VNum;
                     foreach (OperatedObj olo in lo.ObjectsInObject)
                         olo.VNum = (Math.Abs(olo.VNum - oldNum) < 100) ? olo.VNum + delta : olo.VNum;
                 }
-                //Удаляемые из комнаты объекты
+                //РЈРґР°Р»СЏРµРјС‹Рµ РёР· РєРѕРјРЅР°С‚С‹ РѕР±СЉРµРєС‚С‹
                 foreach (OperatedObj lo in r.RemoovingObjects)
                     lo.VNum = (Math.Abs(lo.VNum - oldNum) < 100) ? lo.VNum + delta : lo.VNum;
-                //Триггеры комнаты
+                //РўСЂРёРіРіРµСЂС‹ РєРѕРјРЅР°С‚С‹
                 if (r.TriggersList.Count > 0)
                 {
                     for (int i = 0; i < r.TriggersList.Count; i++)
@@ -299,7 +299,7 @@ namespace DataUtils
             }
             foreach (Obj o in Objects)
             {
-                //Триггеры объекта
+                //РўСЂРёРіРіРµСЂС‹ РѕР±СЉРµРєС‚Р°
                 if (o.TriggersList.Count > 0)
                 {
                     for (int i = 0; i < o.TriggersList.Count; i++)
@@ -313,7 +313,7 @@ namespace DataUtils
             }
             foreach (Mob m in Mobs)
             {
-                //Путь моба
+                //РџСѓС‚СЊ РјРѕР±Р°
                 if (m.Destination.Count > 0)
                 {
                     for (int i = 0; i < m.Destination.Count; i++)
@@ -323,7 +323,7 @@ namespace DataUtils
                                                : ((int) (m.Destination[i]));
                     }
                 }
-                //Асистеры
+                //РђСЃРёСЃС‚РµСЂС‹
                 if (m.Helpers.Count > 0)
                 {
                     for (int i = 0; i < m.Helpers.Count; i++)
@@ -333,7 +333,7 @@ namespace DataUtils
                                            : ((int) (m.Helpers[i]));
                     }
                 }
-                //Триггеры моба
+                //РўСЂРёРіРіРµСЂС‹ РјРѕР±Р°
                 if (m.TriggersList.Count > 0)
                 {
                     for (int i = 0; i < m.TriggersList.Count; i++)
@@ -347,10 +347,10 @@ namespace DataUtils
             }
             foreach (Trigger t in Triggers)
             {
-                //возможно производить замену и в теле триггера
+                //РІРѕР·РјРѕР¶РЅРѕ РїСЂРѕРёР·РІРѕРґРёС‚СЊ Р·Р°РјРµРЅСѓ Рё РІ С‚РµР»Рµ С‚СЂРёРіРіРµСЂР°
                 t.VNum += delta;
             }
-            //Удаляемые мобы
+            //РЈРґР°Р»СЏРµРјС‹Рµ РјРѕР±С‹
             foreach (OperatedMob lm in Zone.MobsToRemove)
                 lm.VNum = (Math.Abs(lm.VNum - oldNum) < 100) ? lm.VNum + delta : lm.VNum;
             Zone.Number = newNumber;
@@ -361,12 +361,12 @@ namespace DataUtils
         #region [!] Removing [!]
 
         /// <summary>
-        /// Удаление комнаты
+        /// РЈРґР°Р»РµРЅРёРµ РєРѕРјРЅР°С‚С‹
         /// </summary>
-        /// <param name="vNum">Виртуальный номер удаляемой комнаты</param>
+        /// <param name="vNum">Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ СѓРґР°Р»СЏРµРјРѕР№ РєРѕРјРЅР°С‚С‹</param>
         public void RemoveRoom(int vNum)
         {
-            //После этого надо перерисовывать комнаты
+            //РџРѕСЃР»Рµ СЌС‚РѕРіРѕ РЅР°РґРѕ РїРµСЂРµСЂРёСЃРѕРІС‹РІР°С‚СЊ РєРѕРјРЅР°С‚С‹
             var rooms = new ArrayList();
             foreach (Room r in Rooms)
             {
@@ -385,7 +385,7 @@ namespace DataUtils
                 if (r.VNum == vNum)
                     rooms.Add(r);
             }
-            //путь моба
+            //РїСѓС‚СЊ РјРѕР±Р°
             foreach (Mob m in Mobs)
             {
                 if (m.Destination.Contains(vNum))
@@ -396,9 +396,9 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Удаление объекта
+        /// РЈРґР°Р»РµРЅРёРµ РѕР±СЉРµРєС‚Р°
         /// </summary>
-        /// <param name="vNum">Виртуальный номер удаляемого объекта</param>
+        /// <param name="vNum">Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ СѓРґР°Р»СЏРµРјРѕРіРѕ РѕР±СЉРµРєС‚Р°</param>
         public void RemoveObject(int vNum)
         {
             var objects = new ArrayList();
@@ -450,9 +450,9 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Удаление моба
+        /// РЈРґР°Р»РµРЅРёРµ РјРѕР±Р°
         /// </summary>
-        /// <param name="vNum">Виртуальный номер удаляемого моба</param>
+        /// <param name="vNum">Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ СѓРґР°Р»СЏРµРјРѕРіРѕ РјРѕР±Р°</param>
         public void RemoveMob(int vNum)
         {
             var delmobs = new ArrayList();
@@ -489,9 +489,9 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Удаление триггера
+        /// РЈРґР°Р»РµРЅРёРµ С‚СЂРёРіРіРµСЂР°
         /// </summary>
-        /// <param name="vNum">Виртуальный номер удаляемого триггера</param>
+        /// <param name="vNum">Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ СѓРґР°Р»СЏРµРјРѕРіРѕ С‚СЂРёРіРіРµСЂР°</param>
         public void RemoveTrigger(int vNum)
         {
             var deltriggers = new ArrayList();

@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class Exit : BaseDataObject
     {
@@ -14,7 +14,7 @@ namespace DataUtils
         private int roomVNum = -1;
 
         /// <summary>
-        /// Описание выхода
+        /// РћРїРёСЃР°РЅРёРµ РІС‹С…РѕРґР°
         /// </summary>
         public string Description
         {
@@ -28,7 +28,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Альясы выхода
+        /// РђР»СЊСЏСЃС‹ РІС‹С…РѕРґР°
         /// </summary>
         public string Aliases
         {
@@ -42,7 +42,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Название выхода в винительном падеже
+        /// РќР°Р·РІР°РЅРёРµ РІС‹С…РѕРґР° РІ РІРёРЅРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ
         /// </summary>
         public string ExinNameVin
         {
@@ -56,7 +56,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Флаг выхода
+        /// Р¤Р»Р°Рі РІС‹С…РѕРґР°
         /// </summary>
         public int ExitFlag
         {
@@ -70,7 +70,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Виртуальный номер ключа
+        /// Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ РєР»СЋС‡Р°
         /// </summary>
         public int Key
         {
@@ -84,7 +84,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Уровень замка
+        /// РЈСЂРѕРІРµРЅСЊ Р·Р°РјРєР°
         /// </summary>
         public int LockLevel
         {
@@ -98,7 +98,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Виртуальный номер комнаты в которую ведет выход
+        /// Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ РєРѕРјРЅР°С‚С‹ РІ РєРѕС‚РѕСЂСѓСЋ РІРµРґРµС‚ РІС‹С…РѕРґ
         /// </summary>
         public int RoomVNum
         {
@@ -112,7 +112,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Флаг выхода
+        /// Р¤Р»Р°Рі РІС‹С…РѕРґР°
         /// </summary>
         public bool ConditionFlag
         {
@@ -126,7 +126,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Состояние двери по умолчанию
+        /// РЎРѕСЃС‚РѕСЏРЅРёРµ РґРІРµСЂРё РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
         /// </summary>
         public int DoorState
         {

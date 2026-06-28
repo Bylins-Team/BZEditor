@@ -1,4 +1,4 @@
-namespace ExtControls
+﻿namespace ExtControls
 {
     /// <summary>
     /// This class provides more informations about the items in the listbox.

@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class Cases : BaseDataObject
     {
@@ -10,7 +10,7 @@ namespace DataUtils
         private string vin = "";
 
         /// <summary>
-        /// Именительный падеж
+        /// РРјРµРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶
         /// </summary>
         public string Imen
         {
@@ -24,7 +24,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Родительный падеж
+        /// Р РѕРґРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶
         /// </summary>
         public string Rod
         {
@@ -38,7 +38,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Дательный падеж
+        /// Р”Р°С‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶
         /// </summary>
         public string Dat
         {
@@ -52,7 +52,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Винительный падеж
+        /// Р’РёРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶
         /// </summary>
         public string Vin
         {
@@ -66,7 +66,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Творительный падеж
+        /// РўРІРѕСЂРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶
         /// </summary>
         public string Tvor
         {
@@ -80,7 +80,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Предложный падеж
+        /// РџСЂРµРґР»РѕР¶РЅС‹Р№ РїР°РґРµР¶
         /// </summary>
         public string Pred
         {

@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Diagnostics;
 
 namespace SystemFrameworks
@@ -30,7 +30,7 @@ namespace SystemFrameworks
         }
 
         /// <summary>
-        /// Указывает является ли данное исключение оберткой для системного исключения
+        /// РЈРєР°Р·С‹РІР°РµС‚ СЏРІР»СЏРµС‚СЃСЏ Р»Рё РґР°РЅРЅРѕРµ РёСЃРєР»СЋС‡РµРЅРёРµ РѕР±РµСЂС‚РєРѕР№ РґР»СЏ СЃРёСЃС‚РµРјРЅРѕРіРѕ РёСЃРєР»СЋС‡РµРЅРёСЏ
         /// </summary>
         public bool IsWrapped
         {
@@ -42,21 +42,21 @@ namespace SystemFrameworks
         }
 
         /// <summary>
-        /// Возвращает тип исключительной ситуации
+        /// Р’РѕР·РІСЂР°С‰Р°РµС‚ С‚РёРї РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅРѕР№ СЃРёС‚СѓР°С†РёРё
         /// </summary>
-        /// <returns>тип исключительной ситуации</returns>
+        /// <returns>С‚РёРї РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅРѕР№ СЃРёС‚СѓР°С†РёРё</returns>
         public EventLogEntryType GetErrorType()
         {
             return errorType;
         }
 
         /// <summary>
-        /// Возвращает информацию первоначального исключения
+        /// Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РїРµСЂРІРѕРЅР°С‡Р°Р»СЊРЅРѕРіРѕ РёСЃРєР»СЋС‡РµРЅРёСЏ
         /// </summary>
         /// <returns></returns>
         public string GetWrappInfo()
         {
-            return $" Вложенная ошибка\n\n Message={initException.Message} Stack = {initException.StackTrace} Source = {initException.Source}";
+            return $" Р’Р»РѕР¶РµРЅРЅР°СЏ РѕС€РёР±РєР°\n\n Message={initException.Message} Stack = {initException.StackTrace} Source = {initException.Source}";
         }
     }
 }

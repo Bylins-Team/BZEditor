@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
@@ -280,7 +280,7 @@ namespace BZEditor
             ExtListViewItem elvi = ((ExtListViewItem)(lvZones.GetItemAt(e.X, e.Y)));
             if (elvi == null) return;
             tsmiUnloadZone.Enabled = (elvi.StateImageIndex == 0 || elvi.StateImageIndex == 4);
-            tsmiUnloadZone.Text = (elvi.StateImageIndex == 4) ? "Убрать из списка" : "Выгрузить";
+            tsmiUnloadZone.Text = (elvi.StateImageIndex == 4) ? "РЈР±СЂР°С‚СЊ РёР· СЃРїРёСЃРєР°" : "Р’С‹РіСЂСѓР·РёС‚СЊ";
             tsmiSaveZone.Enabled = (elvi.StateImageIndex == 3);
             tsmiEditLoaded.Enabled = (elvi.StateImageIndex != 2);
             tsmiPrepareAvailToSedind.Enabled = (elvi.StateImageIndex != 3 && elvi.StateImageIndex != 4);
@@ -365,7 +365,7 @@ namespace BZEditor
 
         private void TabControlSelectedIndexChanged(object sender, EventArgs e)
         {
-            //Если при обн6овлении списка зон были какие-то изменения, то рефрешим листвью
+            //Р•СЃР»Рё РїСЂРё РѕР±РЅ6РѕРІР»РµРЅРёРё СЃРїРёСЃРєР° Р·РѕРЅ Р±С‹Р»Рё РєР°РєРёРµ-С‚Рѕ РёР·РјРµРЅРµРЅРёСЏ, С‚Рѕ СЂРµС„СЂРµС€РёРј Р»РёСЃС‚РІСЊСЋ
             if (fileListsDm.LoadAvailZones())
                 RefreshZonesList();
         }
@@ -378,7 +378,7 @@ namespace BZEditor
                 string res = fileListsDm.AddSketchToList(csf.Sketch.FileName, csf.Sketch.Name);
                 if (!string.IsNullOrEmpty(res))
                 {
-                    MessageBox.Show(this, res, "Ошибка");
+                    MessageBox.Show(this, res, "РћС€РёР±РєР°");
                     return;
                 }
                 RefreshSketchesList();
@@ -390,7 +390,7 @@ namespace BZEditor
         {
             if (lvSketches.SelectedItems.Count == 0) return;
             ExtListViewItem elvi = ((ExtListViewItem)(lvSketches.SelectedItems[0]));
-            if (MessageBox.Show(this, "Подтверждаете удаление эскиза \"" + elvi.Text + "\"?", "Удаление эскиза", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            if (MessageBox.Show(this, "РџРѕРґС‚РІРµСЂР¶РґР°РµС‚Рµ СѓРґР°Р»РµРЅРёРµ СЌСЃРєРёР·Р° \"" + elvi.Text + "\"?", "РЈРґР°Р»РµРЅРёРµ СЌСЃРєРёР·Р°", MessageBoxButtons.YesNo) != DialogResult.Yes)
                 return;
             fileListsDm.RemoveSketch(elvi.FileName);
             RefreshSketchesList();

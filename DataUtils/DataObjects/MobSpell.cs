@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class MobSpell : BaseDataObject
     {
@@ -11,7 +11,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Количество заклинаний данного типа
+        /// РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РєР»РёРЅР°РЅРёР№ РґР°РЅРЅРѕРіРѕ С‚РёРїР°
         /// </summary>
         public int Count
         {

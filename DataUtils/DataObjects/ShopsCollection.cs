@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class ShopsCollection : BaseDataArrayList
     {
@@ -17,7 +17,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Возвращает ссылку
+        /// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСЃС‹Р»РєСѓ
         /// </summary>
         public Shop this[int vNum, int tmp]
         {

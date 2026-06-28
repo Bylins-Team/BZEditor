@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
@@ -57,7 +57,7 @@ namespace BZEditor
         private void flcAlert_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(
-                "mailto:belobog@mud.ru?subject=Жажду билдить, дайте номер&body=Ну дайте же мне скорее номер зоны!!!НУ ПАЖАЛАСТА!!!Я такой ленивый что даже не написал ни строчки сам");
+                "mailto:belobog@mud.ru?subject=Р–Р°Р¶РґСѓ Р±РёР»РґРёС‚СЊ, РґР°Р№С‚Рµ РЅРѕРјРµСЂ&body=РќСѓ РґР°Р№С‚Рµ Р¶Рµ РјРЅРµ СЃРєРѕСЂРµРµ РЅРѕРјРµСЂ Р·РѕРЅС‹!!!РќРЈ РџРђР–РђР›РђРЎРўРђ!!!РЇ С‚Р°РєРѕР№ Р»РµРЅРёРІС‹Р№ С‡С‚Рѕ РґР°Р¶Рµ РЅРµ РЅР°РїРёСЃР°Р» РЅРё СЃС‚СЂРѕС‡РєРё СЃР°Рј");
         }
 
         private void btnGenerateRndColor_Click(object sender, EventArgs e)

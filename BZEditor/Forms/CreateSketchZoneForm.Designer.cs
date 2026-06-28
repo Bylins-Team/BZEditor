@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class CreateSketchZoneForm
     {
@@ -50,7 +50,7 @@ namespace BZEditor
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 4;
-            this.btnCreate.Text = "Добавить";
+            this.btnCreate.Text = "Р”РѕР±Р°РІРёС‚СЊ";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
@@ -62,7 +62,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Отмена";
+            this.btnCancel.Text = "РћС‚РјРµРЅР°";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -73,7 +73,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Номер зоны";
+            this.label1.Text = "РќРѕРјРµСЂ Р·РѕРЅС‹";
             // 
             // nbCount
             // 
@@ -103,8 +103,8 @@ namespace BZEditor
             this.flcAlert.Name = "flcAlert";
             this.flcAlert.Size = new System.Drawing.Size(244, 36);
             this.flcAlert.TabIndex = 7;
-            this.flcAlert.Text = "Перед созданием зоны свяжитесь с <a href=\'http://www.mud.ru\'><b>Белобогом</b></a>" +
-                " и получите номер зоны";
+            this.flcAlert.Text = "РџРµСЂРµРґ СЃРѕР·РґР°РЅРёРµРј Р·РѕРЅС‹ СЃРІСЏР¶РёС‚РµСЃСЊ СЃ <a href=\'http://www.mud.ru\'><b>Р‘РµР»РѕР±РѕРіРѕРј</b></a>" +
+                " Рё РїРѕР»СѓС‡РёС‚Рµ РЅРѕРјРµСЂ Р·РѕРЅС‹";
             this.flcAlert.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.flcAlert_LinkClicked);
             // 
             // label2
@@ -114,7 +114,7 @@ namespace BZEditor
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Название зоны";
+            this.label2.Text = "РќР°Р·РІР°РЅРёРµ Р·РѕРЅС‹";
             // 
             // tbZoneName
             // 
@@ -132,7 +132,7 @@ namespace BZEditor
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Цвет для эскиза";
+            this.label3.Text = "Р¦РІРµС‚ РґР»СЏ СЌСЃРєРёР·Р°";
             // 
             // btnSketchColor
             // 
@@ -153,7 +153,7 @@ namespace BZEditor
             this.btnGenerateRndColor.Name = "btnGenerateRndColor";
             this.btnGenerateRndColor.Size = new System.Drawing.Size(181, 23);
             this.btnGenerateRndColor.TabIndex = 3;
-            this.btnGenerateRndColor.Text = "Сгенерировать случайный цвет";
+            this.btnGenerateRndColor.Text = "РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ СЃР»СѓС‡Р°Р№РЅС‹Р№ С†РІРµС‚";
             this.btnGenerateRndColor.UseVisualStyleBackColor = true;
             this.btnGenerateRndColor.Click += new System.EventHandler(this.btnGenerateRndColor_Click);
             // 
@@ -181,7 +181,7 @@ namespace BZEditor
             this.Name = "CreateSketchZoneForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Добавление зоны в эскиз";
+            this.Text = "Р”РѕР±Р°РІР»РµРЅРёРµ Р·РѕРЅС‹ РІ СЌСЃРєРёР·";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

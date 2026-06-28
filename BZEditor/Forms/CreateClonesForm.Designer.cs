@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class CreateClonesForm
     {
@@ -45,7 +45,7 @@ namespace BZEditor
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(83, 23);
             this.btnCreate.TabIndex = 0;
-            this.btnCreate.Text = "Клонировать";
+            this.btnCreate.Text = "РљР»РѕРЅРёСЂРѕРІР°С‚СЊ";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.BtnCreateClick);
             // 
@@ -57,7 +57,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Отмена";
+            this.btnCancel.Text = "РћС‚РјРµРЅР°";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
             // 
@@ -68,7 +68,7 @@ namespace BZEditor
             this.cbChangeName.Name = "cbChangeName";
             this.cbChangeName.Size = new System.Drawing.Size(128, 17);
             this.cbChangeName.TabIndex = 4;
-            this.cbChangeName.Text = "Изменить название";
+            this.cbChangeName.Text = "РР·РјРµРЅРёС‚СЊ РЅР°Р·РІР°РЅРёРµ";
             this.cbChangeName.UseVisualStyleBackColor = true;
             this.cbChangeName.CheckedChanged += new System.EventHandler(this.CbChangeNameCheckedChanged);
             // 
@@ -79,7 +79,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Количество создаваемых клонов от 1 до 98";
+            this.label1.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕР·РґР°РІР°РµРјС‹С… РєР»РѕРЅРѕРІ РѕС‚ 1 РґРѕ 98";
             // 
             // nbCount
             // 
@@ -108,7 +108,7 @@ namespace BZEditor
             this.cboxFullCopy.Name = "cboxFullCopy";
             this.cboxFullCopy.Size = new System.Drawing.Size(95, 17);
             this.cboxFullCopy.TabIndex = 3;
-            this.cboxFullCopy.Text = "Точная копия";
+            this.cboxFullCopy.Text = "РўРѕС‡РЅР°СЏ РєРѕРїРёСЏ";
             this.cboxFullCopy.UseVisualStyleBackColor = true;
             // 
             // CreateClonesForm
@@ -131,7 +131,7 @@ namespace BZEditor
             this.Name = "CreateClonesForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Клонирование";
+            this.Text = "РљР»РѕРЅРёСЂРѕРІР°РЅРёРµ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

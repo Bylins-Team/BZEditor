@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Windows.Forms;
 using DataUtils;
 using Object = DataUtils.Obj;
@@ -15,7 +15,7 @@ namespace BZEditor
                     if (lvMainList.SelectedItems.Count > 0)
                     {
                         //CObject Object = ZoneDM.ObjectsCollection[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
-                        //CtreateTemplateForm ctf = new CtreateTemplateForm("На основе объекта [" + Object.VNum.ToString() + "] " + Object.Cases.Imen);
+                        //CtreateTemplateForm ctf = new CtreateTemplateForm("РќР° РѕСЃРЅРѕРІРµ РѕР±СЉРµРєС‚Р° [" + Object.VNum.ToString() + "] " + Object.Cases.Imen);
                         //DialogResult dres = ctf.ShowDialog();
                         //if (dres == DialogResult.OK)
                         //    TemplatesDM.AddTemplate(Object, ctf.TemplateName);
@@ -27,7 +27,7 @@ namespace BZEditor
                     {
                         Obj obj = ZoneDM.ObjectsCollection[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
                         CtreateTemplateForm ctf =
-                            new CtreateTemplateForm(string.Format("На основе объекта [{0}] {1}", obj.VNum, obj.Cases.Imen));
+                            new CtreateTemplateForm(string.Format("РќР° РѕСЃРЅРѕРІРµ РѕР±СЉРµРєС‚Р° [{0}] {1}", obj.VNum, obj.Cases.Imen));
                         DialogResult dres = ctf.ShowDialog();
                         if (dres == DialogResult.OK)
                             _templatesDM.AddTemplate(obj, ctf.TemplateName);
@@ -39,7 +39,7 @@ namespace BZEditor
                     {
                         Mob mob = ZoneDM.MobsCollection[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
                         CtreateTemplateForm ctf =
-                            new CtreateTemplateForm(string.Format("На основе моба [{0}] {1}", mob.VNum, mob.Cases.Imen));
+                            new CtreateTemplateForm(string.Format("РќР° РѕСЃРЅРѕРІРµ РјРѕР±Р° [{0}] {1}", mob.VNum, mob.Cases.Imen));
                         DialogResult dres = ctf.ShowDialog();
                         if (dres == DialogResult.OK)
                             _templatesDM.AddTemplate(mob, ctf.TemplateName);

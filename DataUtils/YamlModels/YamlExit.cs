@@ -1,4 +1,4 @@
-namespace DataUtils.YamlModels
+﻿namespace DataUtils.YamlModels
 {
     /// <summary>
     /// YAML model for a room exit - matches reference format

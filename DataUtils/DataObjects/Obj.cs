@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 
 namespace DataUtils
@@ -9,7 +9,7 @@ namespace DataUtils
         public readonly BonusesCollection SkillBonusesCollection = new BonusesCollection();
 
         /// <summary>
-        /// Падежи
+        /// РџР°РґРµР¶Рё
         /// </summary>
         public Cases Cases = new Cases();
 
@@ -56,7 +56,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Альяс
+        /// РђР»СЊСЏСЃ
         /// </summary>
         public string Alias
         {
@@ -70,7 +70,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Описание
+        /// РћРїРёСЃР°РЅРёРµ
         /// </summary>
         public string Desc
         {
@@ -84,7 +84,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Описание при действии
+        /// РћРїРёСЃР°РЅРёРµ РїСЂРё РґРµР№СЃС‚РІРёРё
         /// </summary>
         public string ActionDesc
         {
@@ -98,7 +98,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Флаги для магического ингредиента
+        /// Р¤Р»Р°РіРё РґР»СЏ РјР°РіРёС‡РµСЃРєРѕРіРѕ РёРЅРіСЂРµРґРёРµРЅС‚Р°
         /// </summary>
         public string MagicFlags
         {
@@ -112,7 +112,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тренируемый скилл
+        /// РўСЂРµРЅРёСЂСѓРµРјС‹Р№ СЃРєРёР»Р»
         /// </summary>
         public int TrenSkill
         {
@@ -126,7 +126,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Максимальная прочность
+        /// РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РїСЂРѕС‡РЅРѕСЃС‚СЊ
         /// </summary>
         public int MaxDurab
         {
@@ -140,7 +140,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Текущая прочность
+        /// РўРµРєСѓС‰Р°СЏ РїСЂРѕС‡РЅРѕСЃС‚СЊ
         /// </summary>
         public int CurrDurab
         {
@@ -154,7 +154,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Материал
+        /// РњР°С‚РµСЂРёР°Р»
         /// </summary>
         public int Material
         {
@@ -168,7 +168,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Пол
+        /// РџРѕР»
         /// </summary>
         public int Sex
         {
@@ -182,7 +182,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Максимум в мире
+        /// РњР°РєСЃРёРјСѓРј РІ РјРёСЂРµ
         /// </summary>
         public int MaxInWorld
         {
@@ -196,7 +196,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Мнимальное количество ремортов
+        /// РњРЅРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЂРµРјРѕСЂС‚РѕРІ
         /// </summary>
         public int MinimumRemorts
         {
@@ -210,7 +210,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Таймер
+        /// РўР°Р№РјРµСЂ
         /// </summary>
         public int Timer
         {
@@ -224,7 +224,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Заклинание
+        /// Р—Р°РєР»РёРЅР°РЅРёРµ
         /// </summary>
         public int Spell
         {
@@ -238,7 +238,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Уровень заклинания
+        /// РЈСЂРѕРІРµРЅСЊ Р·Р°РєР»РёРЅР°РЅРёСЏ
         /// </summary>
         public int SpellLevel
         {
@@ -252,7 +252,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Эффекты
+        /// Р­С„С„РµРєС‚С‹
         /// </summary>
         public string ExctraEffects
         {
@@ -266,7 +266,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        ///Флаги запрета
+        ///Р¤Р»Р°РіРё Р·Р°РїСЂРµС‚Р°
         /// </summary>
         public string CantTouch
         {
@@ -280,7 +280,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Флаги неудобства
+        /// Р¤Р»Р°РіРё РЅРµСѓРґРѕР±СЃС‚РІР°
         /// </summary>
         public string CantUse
         {
@@ -294,8 +294,8 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тип предмета
-        /// Тип 12 по умолчанию при создании по просьбе Свентовита
+        /// РўРёРї РїСЂРµРґРјРµС‚Р°
+        /// РўРёРї 12 РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РїСЂРё СЃРѕР·РґР°РЅРёРё РїРѕ РїСЂРѕСЃСЊР±Рµ РЎРІРµРЅС‚РѕРІРёС‚Р°
         /// </summary>
         public int Type
         {
@@ -309,7 +309,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Экстрафлаги
+        /// Р­РєСЃС‚СЂР°С„Р»Р°РіРё
         /// </summary>
         public string Affects
         {
@@ -323,7 +323,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Флаги, куда можно одеть
+        /// Р¤Р»Р°РіРё, РєСѓРґР° РјРѕР¶РЅРѕ РѕРґРµС‚СЊ
         /// </summary>
         public string WearFlags
         {
@@ -337,7 +337,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Параметр 1
+        /// РџР°СЂР°РјРµС‚СЂ 1
         /// </summary>
         public string Param1
         {
@@ -351,7 +351,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Параметр 2
+        /// РџР°СЂР°РјРµС‚СЂ 2
         /// </summary>
         public string Param2
         {
@@ -365,7 +365,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Параметр 3
+        /// РџР°СЂР°РјРµС‚СЂ 3
         /// </summary>
         public string Param3
         {
@@ -379,7 +379,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Параметр 4
+        /// РџР°СЂР°РјРµС‚СЂ 4
         /// </summary>
         public string Param4
         {
@@ -393,7 +393,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Вес предмета
+        /// Р’РµСЃ РїСЂРµРґРјРµС‚Р°
         /// </summary>
         public int Weight
         {
@@ -407,7 +407,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Цена
+        /// Р¦РµРЅР°
         /// </summary>
         public int Price
         {
@@ -421,7 +421,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Цена ренты в инвентаре
+        /// Р¦РµРЅР° СЂРµРЅС‚С‹ РІ РёРЅРІРµРЅС‚Р°СЂРµ
         /// </summary>
         public int RentInv
         {
@@ -435,7 +435,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Цена ренты когда предмет экипирован
+        /// Р¦РµРЅР° СЂРµРЅС‚С‹ РєРѕРіРґР° РїСЂРµРґРјРµС‚ СЌРєРёРїРёСЂРѕРІР°РЅ
         /// </summary>
         public int RentWear
         {

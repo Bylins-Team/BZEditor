@@ -1,4 +1,4 @@
-using System.Reflection;
+ï»¿using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly : AssemblyTitle("BZ Editor")]
-[assembly : AssemblyDescription("Ğåäàêòîğ çîí äëÿ ÌÏÌ \"Áûëèíû\"")]
+[assembly : AssemblyDescription("Ğ ĞµĞ´Ğ°ĞºÑ‚Ğ¾Ñ€ Ğ·Ğ¾Ğ½ Ğ´Ğ»Ñ ĞœĞŸĞœ \"Ğ‘Ñ‹Ğ»Ğ¸Ğ½Ñ‹\"")]
 [assembly : AssemblyConfiguration("")]
 [assembly : AssemblyCompany("Dolgof.RU")]
 [assembly : AssemblyProduct("BZ Editor")]
-[assembly : AssemblyCopyright("© Scream 2012")]
+[assembly : AssemblyCopyright("Â© Scream 2012")]
 [assembly : AssemblyTrademark("")]
 [assembly : AssemblyCulture("")]
 

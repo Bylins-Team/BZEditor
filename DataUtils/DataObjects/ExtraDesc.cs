@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class ExtraDesc : BaseDataObject
     {
@@ -12,7 +12,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Алиасы доп.описания
+        /// РђР»РёР°СЃС‹ РґРѕРї.РѕРїРёСЃР°РЅРёСЏ
         /// </summary>
         public string Aliases
         {
@@ -26,7 +26,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Текст доп.описания
+        /// РўРµРєСЃС‚ РґРѕРї.РѕРїРёСЃР°РЅРёСЏ
         /// </summary>
         public string Description
         {

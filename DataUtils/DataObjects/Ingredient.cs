@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class Ingredient : BaseDataObject
     {
@@ -22,7 +22,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Наименование типа
+        /// РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РёРїР°
         /// </summary>
         public string TypeName
         {
@@ -36,7 +36,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сила ингра
+        /// РЎРёР»Р° РёРЅРіСЂР°
         /// </summary>
         public int Power
         {
@@ -50,7 +50,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сила ингра определяется движком
+        /// РЎРёР»Р° РёРЅРіСЂР° РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РґРІРёР¶РєРѕРј
         /// </summary>
         public bool PowerAuto
         {
@@ -64,7 +64,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Процент падения ингра
+        /// РџСЂРѕС†РµРЅС‚ РїР°РґРµРЅРёСЏ РёРЅРіСЂР°
         /// </summary>
         public int Probability
         {

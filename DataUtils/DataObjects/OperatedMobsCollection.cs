@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
@@ -70,7 +70,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Удаление без учета позиции например для списка мобов, удаляемых из зоны 
+        /// РЈРґР°Р»РµРЅРёРµ Р±РµР· СѓС‡РµС‚Р° РїРѕР·РёС†РёРё РЅР°РїСЂРёРјРµСЂ РґР»СЏ СЃРїРёСЃРєР° РјРѕР±РѕРІ, СѓРґР°Р»СЏРµРјС‹С… РёР· Р·РѕРЅС‹ 
         /// </summary>
         /// <param name="vNum"></param>
         public void RemoveMob(int vNum)

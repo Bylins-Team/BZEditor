@@ -7,8 +7,9 @@
   -->
   <PropertyGroup>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <!-- Source files are Windows-1251 (Russian); make the compiler read them
-         that way regardless of the build machine's locale. -->
-    <CodePage>1251</CodePage>
+    <!-- Source files are UTF-8 (with BOM). 65001 is a safety net so a stray
+         BOM-less UTF-8 file still compiles correctly regardless of the build
+         machine's locale. -->
+    <CodePage>65001</CodePage>
   </PropertyGroup>
 </Project>

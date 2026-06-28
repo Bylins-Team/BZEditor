@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class CreateSketchForm
     {
@@ -47,7 +47,7 @@ namespace BZEditor
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 2;
-            this.btnCreate.Text = "Добавить";
+            this.btnCreate.Text = "Р”РѕР±Р°РІРёС‚СЊ";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.CreateClick);
             // 
@@ -59,7 +59,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Отмена";
+            this.btnCancel.Text = "РћС‚РјРµРЅР°";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.CancelClick);
             // 
@@ -70,7 +70,7 @@ namespace BZEditor
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Название эскиза";
+            this.label2.Text = "РќР°Р·РІР°РЅРёРµ СЌСЃРєРёР·Р°";
             // 
             // tbSketchName
             // 
@@ -90,7 +90,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(281, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Имя файла без расширения (клик для ввода вручную)";
+            this.label1.Text = "РРјСЏ С„Р°Р№Р»Р° Р±РµР· СЂР°СЃС€РёСЂРµРЅРёСЏ (РєР»РёРє РґР»СЏ РІРІРѕРґР° РІСЂСѓС‡РЅСѓСЋ)";
             // 
             // tbFileName
             // 
@@ -129,7 +129,7 @@ namespace BZEditor
             this.Name = "CreateSketchForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Добавление зоны";
+            this.Text = "Р”РѕР±Р°РІР»РµРЅРёРµ Р·РѕРЅС‹";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

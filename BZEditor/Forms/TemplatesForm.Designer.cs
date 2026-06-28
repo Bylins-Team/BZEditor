@@ -1,4 +1,4 @@
-using WeifenLuo.WinFormsUI.Docking;
+п»їusing WeifenLuo.WinFormsUI.Docking;
 
 namespace BZEditor
 {
@@ -69,7 +69,7 @@ namespace BZEditor
             this.tabPageObj.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageObj.Size = new System.Drawing.Size(217, 501);
             this.tabPageObj.TabIndex = 0;
-            this.tabPageObj.Text = "Объектов";
+            this.tabPageObj.Text = "РћР±СЉРµРєС‚РѕРІ";
             this.tabPageObj.UseVisualStyleBackColor = true;
             // 
             // listViewObjTemplates
@@ -101,7 +101,7 @@ namespace BZEditor
             this.tabPageMob.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageMob.Size = new System.Drawing.Size(217, 501);
             this.tabPageMob.TabIndex = 1;
-            this.tabPageMob.Text = "Мобов";
+            this.tabPageMob.Text = "РњРѕР±РѕРІ";
             this.tabPageMob.UseVisualStyleBackColor = true;
             // 
             // listViewMobTemplates
@@ -139,7 +139,7 @@ namespace BZEditor
             this.tsmiApplyTemlate.Image = global::BZEditor.Properties.Resources.button_usetemplate;
             this.tsmiApplyTemlate.Name = "tsmiApplyTemlate";
             this.tsmiApplyTemlate.Size = new System.Drawing.Size(214, 22);
-            this.tsmiApplyTemlate.Text = "Применить к выбранному";
+            this.tsmiApplyTemlate.Text = "РџСЂРёРјРµРЅРёС‚СЊ Рє РІС‹Р±СЂР°РЅРЅРѕРјСѓ";
             this.tsmiApplyTemlate.Click += new System.EventHandler(this.TsmiApplyTemlateClick);
             // 
             // toolStripMenuItem1
@@ -152,7 +152,7 @@ namespace BZEditor
             this.tsmiRemoveTemplate.Image = global::BZEditor.Properties.Resources.button_removesmth;
             this.tsmiRemoveTemplate.Name = "tsmiRemoveTemplate";
             this.tsmiRemoveTemplate.Size = new System.Drawing.Size(214, 22);
-            this.tsmiRemoveTemplate.Text = "Удалить шаблон";
+            this.tsmiRemoveTemplate.Text = "РЈРґР°Р»РёС‚СЊ С€Р°Р±Р»РѕРЅ";
             this.tsmiRemoveTemplate.Click += new System.EventHandler(this.TsmiRemoveTemplateClick);
             // 
             // TemplatesForm
@@ -167,8 +167,8 @@ namespace BZEditor
                         | DockAreas.DockBottom)));*/
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TemplatesForm";
-            this.TabText = "Шаблоны";
-            this.Text = "Шаблоны";
+            this.TabText = "РЁР°Р±Р»РѕРЅС‹";
+            this.Text = "РЁР°Р±Р»РѕРЅС‹";
             this.tabControlTemplates.ResumeLayout(false);
             this.tabPageObj.ResumeLayout(false);
             this.tabPageMob.ResumeLayout(false);

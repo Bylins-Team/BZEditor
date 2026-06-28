@@ -1,4 +1,4 @@
-namespace BZEditor
+ï»¿namespace BZEditor
 {
     partial class AboutForm
     {
@@ -84,7 +84,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 23);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Çàêðûòü";
+            this.label1.Text = "Ð—Ð°ÐºÑ€Ñ‹Ñ‚ÑŒ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Click += new System.EventHandler(this.CreateZoneForm_Click);
             // 
@@ -103,7 +103,7 @@ namespace BZEditor
             this.Name = "AboutForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Î ïðîãðàììå...";
+            this.Text = "Ðž Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ðµ...";
             this.Click += new System.EventHandler(this.CreateZoneForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

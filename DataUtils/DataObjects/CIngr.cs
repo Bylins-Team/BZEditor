@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
@@ -17,7 +17,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Наименование
+        /// РќР°РёРјРµРЅРѕРІР°РЅРёРµ
         /// </summary>
         public string Name
         {
@@ -40,7 +40,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сила ингра
+        /// РЎРёР»Р° РёРЅРіСЂР°
         /// </summary>
         public int Percent
         {

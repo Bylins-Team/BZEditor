@@ -1,4 +1,4 @@
-#region
+п»ї#region
 
 using System;
 using System.Drawing;
@@ -40,7 +40,7 @@ namespace ExtControls
                 gr.DrawLine(new Pen(colorDark), roomSize.Width, 0, roomSize.Width, roomSize.Height);
                 gr.DrawLine(new Pen(colorDark), 0, roomSize.Height, roomSize.Width, roomSize.Height);
 
-                //Выходы
+                //Р’С‹С…РѕРґС‹
                 if (exitColors.ColorExitN != Color.Transparent)
                 {
                     gr.FillRectangle(new SolidBrush(exitColors.ColorExitN), GetCenterX(roomSize) - exitSizeX/2, 0,

@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Drawing;
 using System.Windows.Forms;
 using DataUtils;
@@ -22,10 +22,10 @@ namespace BZEditor
                               ? SelectedRooms.Count == 1
                               : lvMainList.SelectedItems.Count == 1;
 
-            #region Установка ридонли
+            #region РЈСЃС‚Р°РЅРѕРІРєР° СЂРёРґРѕРЅР»Рё
 
             gboxExits.Enabled = enabledFlag;
-            //ОБЪЕКТЫ
+            //РћР‘РЄР•РљРўР«
             splitContainerRoomObjects.Enabled = enabledFlag;
             /*lvObjectsInRoom.Enabled = DisabledFlag;
             btnAddObjInRoom.Enabled = DisabledFlag;
@@ -35,7 +35,7 @@ namespace BZEditor
             btnAddObiInObj.Enabled = DisabledFlag;
             btnEditObjInObj.Enabled = DisabledFlag;
             btnRomoveObjFromObj.Enabled = DisabledFlag;*/
-            //МОБЫ
+            //РњРћР‘Р«
             splitContainerRoomMobs.Enabled = enabledFlag;
             /*lvMobsInRoom.Enabled = DisabledFlag;
             btnAddMobInRoom.Enabled = DisabledFlag;
@@ -47,22 +47,22 @@ namespace BZEditor
             btnAddObjInMob.Enabled = DisabledFlag;
             btnEditObjInMob.Enabled = DisabledFlag;
             btnRemoveObjFromMob.Enabled = DisabledFlag;*/
-            //ТРИГГЕРЫ
+            //РўР РР“Р“Р•Р Р«
             lvRoomTriggers.Enabled = enabledFlag;
             btnAddRoomTrigger.Enabled = enabledFlag;
             btnRemoveRoomTrigger.Enabled = enabledFlag;
-            //УДАЛЯЕМЫЕ ОБЪЕКТЫ
+            //РЈР”РђР›РЇР•РњР«Р• РћР‘РЄР•РљРўР«
             lvObjectsToRemove.Enabled = enabledFlag;
             btnAddRoomObjectToRemove.Enabled = enabledFlag;
             btnRemoveRoomObjectToRemove.Enabled = enabledFlag;
-            //ДОП.ОПИСАНИЯ
+            //Р”РћРџ.РћРџРРЎРђРќРРЇ
             tbRoomAddDescAliases.Enabled = enabledFlag;
             cbRoomAddDescWordwrap.Enabled = enabledFlag;
             rtbRoomAddDescText.Enabled = enabledFlag;
             btnAddRoomAddDesc.Enabled = enabledFlag;
             btnRemoveRoomAddDesc.Enabled = enabledFlag;
             lvRoomAddDescriptions.Enabled = enabledFlag;
-            //ДВЕРИ
+            //Р”Р’Р•Р Р
             pDoors.Enabled = enabledFlag;
 
             #endregion
@@ -134,7 +134,7 @@ namespace BZEditor
             if (WindowParentForm == null) return;
             CTriggersCollection allTriggers = WindowParentForm.GetAllKnownTriggers(2);
             var tsf =
-                new TrgSelectForm("Выберите триггеры для комнаты", allTriggers, ZoneDM.Zone.Number, true, false);
+                new TrgSelectForm("Р’С‹Р±РµСЂРёС‚Рµ С‚СЂРёРіРіРµСЂС‹ РґР»СЏ РєРѕРјРЅР°С‚С‹", allTriggers, ZoneDM.Zone.Number, true, false);
             DialogResult dres = tsf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -168,7 +168,7 @@ namespace BZEditor
         {
             if (WindowParentForm == null) return;
             ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects();
-            var osf = new ObjSelectForm("Выберите предмет", allObjects, ZoneDM.Zone.Number, false, false);
+            var osf = new ObjSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РїСЂРµРґРјРµС‚", allObjects, ZoneDM.Zone.Number, false, false);
             DialogResult dres = osf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -222,7 +222,7 @@ namespace BZEditor
             if (ActiveRoom == null) return;
             if (WindowParentForm == null) return;
             ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects();
-            var osf = new ObjSelectForm("Выберите предмет", allObjects, ZoneDM.Zone.Number, false, false);
+            var osf = new ObjSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РїСЂРµРґРјРµС‚", allObjects, ZoneDM.Zone.Number, false, false);
             DialogResult dres = osf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -263,9 +263,9 @@ namespace BZEditor
             elvRoomObjInObj.Items.Clear();
             if (elvObjectsInRoom.SelectedItems.Count <= 0 || WindowParentForm == null)
                 return;
-            //Загрузка списка объектов выбранного объекта по тагу
+            //Р—Р°РіСЂСѓР·РєР° СЃРїРёСЃРєР° РѕР±СЉРµРєС‚РѕРІ РІС‹Р±СЂР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РїРѕ С‚Р°РіСѓ
             ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects();
-            //Проверка, в контейнер ли добавляем объект
+            //РџСЂРѕРІРµСЂРєР°, РІ РєРѕРЅС‚РµР№РЅРµСЂ Р»Рё РґРѕР±Р°РІР»СЏРµРј РѕР±СЉРµРєС‚
             Obj lObj = allObjects[Convert.ToInt32(elvObjectsInRoom.SelectedItems[0].SubItems[1].Text), 0];
             if (lObj != null)
             {
@@ -283,7 +283,7 @@ namespace BZEditor
                 return;
             }
 
-            gbObjInObj.Text = "Объекты загружаемые в объект [" + elvObjectsInRoom.SelectedItems[0].SubItems[1].Text +
+            gbObjInObj.Text = "РћР±СЉРµРєС‚С‹ Р·Р°РіСЂСѓР¶Р°РµРјС‹Рµ РІ РѕР±СЉРµРєС‚ [" + elvObjectsInRoom.SelectedItems[0].SubItems[1].Text +
                               "] " + elvObjectsInRoom.SelectedItems[0].SubItems[1].Text;
             if (ActiveRoom != null)
             {
@@ -374,8 +374,8 @@ namespace BZEditor
                 LoadedMob lMob =
                     ActiveRoom.LoadedMobsCollection[((EXListViewItem)(lvMobsInRoom.SelectedItems[0])).GUID];
 
-                //Готовим список лидеров
-                cboxMobFollowBy.Items.Add(new TaggedComboBoxItem(-1, "[-1] Сам по себе", -1));
+                //Р“РѕС‚РѕРІРёРј СЃРїРёСЃРѕРє Р»РёРґРµСЂРѕРІ
+                cboxMobFollowBy.Items.Add(new TaggedComboBoxItem(-1, "[-1] РЎР°Рј РїРѕ СЃРµР±Рµ", -1));
                 for (int i = 0; i < lvMobsInRoom.Items.Count; i++)
                 {
                     ListViewItem lvi = lvMobsInRoom.Items[i];
@@ -385,7 +385,7 @@ namespace BZEditor
                     cboxMobFollowBy.Items.Add(tcbi);
                 }
                 SetCBoxsSelectedItem(cboxMobFollowBy, lMob.FollowsBy);
-                //Отключено из за нелепости параметра максимум_в_мире
+                //РћС‚РєР»СЋС‡РµРЅРѕ РёР· Р·Р° РЅРµР»РµРїРѕСЃС‚Рё РїР°СЂР°РјРµС‚СЂР° РјР°РєСЃРёРјСѓРј_РІ_РјРёСЂРµ
                 /*nudMaxInRoom.Maximum = 10000;
                 if (Mob != null)
                 {
@@ -423,8 +423,8 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Проверить, можно ли это экипировать туда куда пытаюсь экипировать
-        /// Не запрещать выбирать любую позицию если объект не найден в списке и нет возможности проверить
+        /// РџСЂРѕРІРµСЂРёС‚СЊ, РјРѕР¶РЅРѕ Р»Рё СЌС‚Рѕ СЌРєРёРїРёСЂРѕРІР°С‚СЊ С‚СѓРґР° РєСѓРґР° РїС‹С‚Р°СЋСЃСЊ СЌРєРёРїРёСЂРѕРІР°С‚СЊ
+        /// РќРµ Р·Р°РїСЂРµС‰Р°С‚СЊ РІС‹Р±РёСЂР°С‚СЊ Р»СЋР±СѓСЋ РїРѕР·РёС†РёСЋ РµСЃР»Рё РѕР±СЉРµРєС‚ РЅРµ РЅР°Р№РґРµРЅ РІ СЃРїРёСЃРєРµ Рё РЅРµС‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РїСЂРѕРІРµСЂРёС‚СЊ
         /// </summary>
         /// <param name="pos"></param>
         /// <param name="vNum"></param>
@@ -437,47 +437,47 @@ namespace BZEditor
             if (curObject == null) return true;
             switch (pos)
             {
-                case -1: //В инвентаре
+                case -1: //Р’ РёРЅРІРµРЅС‚Р°СЂРµ
                     return true;
-                case 0: //Свет
+                case 0: //РЎРІРµС‚
                     return (curObject.Type == 1);
-                case 1: //Одето на пальце правой руки
-                case 2: //Одето на пальце левой руки
+                case 1: //РћРґРµС‚Рѕ РЅР° РїР°Р»СЊС†Рµ РїСЂР°РІРѕР№ СЂСѓРєРё
+                case 2: //РћРґРµС‚Рѕ РЅР° РїР°Р»СЊС†Рµ Р»РµРІРѕР№ СЂСѓРєРё
                     return curObject.WearFlags.ToLower().Contains("b0");
-                case 3: //Первый предмет, надетый вокруг шеи
-                case 4: //Второй предмет, надетый вокруг шеи
-                    return curObject.WearFlags.ToLower().Contains("с0");
-                case 5: //Одето на теле
+                case 3: //РџРµСЂРІС‹Р№ РїСЂРµРґРјРµС‚, РЅР°РґРµС‚С‹Р№ РІРѕРєСЂСѓРі С€РµРё
+                case 4: //Р’С‚РѕСЂРѕР№ РїСЂРµРґРјРµС‚, РЅР°РґРµС‚С‹Р№ РІРѕРєСЂСѓРі С€РµРё
+                    return curObject.WearFlags.ToLower().Contains("СЃ0");
+                case 5: //РћРґРµС‚Рѕ РЅР° С‚РµР»Рµ
                     return curObject.WearFlags.ToLower().Contains("d0");
-                case 6: //Одето на голове
+                case 6: //РћРґРµС‚Рѕ РЅР° РіРѕР»РѕРІРµ
                     return curObject.WearFlags.ToLower().Contains("e0");
-                case 7: //Одето на ногах
+                case 7: //РћРґРµС‚Рѕ РЅР° РЅРѕРіР°С…
                     return curObject.WearFlags.ToLower().Contains("f0");
-                case 8: //Одето на ступнях
+                case 8: //РћРґРµС‚Рѕ РЅР° СЃС‚СѓРїРЅСЏС…
                     return curObject.WearFlags.ToLower().Contains("g0");
-                case 9: //Одето на кистях рук
+                case 9: //РћРґРµС‚Рѕ РЅР° РєРёСЃС‚СЏС… СЂСѓРє
                     return curObject.WearFlags.ToLower().Contains("h0");
-                case 10: //Одето на руках
+                case 10: //РћРґРµС‚Рѕ РЅР° СЂСѓРєР°С…
                     return curObject.WearFlags.ToLower().Contains("i0");
-                case 11: //Используется как щит
+                case 11: //РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєР°Рє С‰РёС‚
                     return curObject.WearFlags.ToLower().Contains("j0");
-                case 12: //Накинуто на плечи
+                case 12: //РќР°РєРёРЅСѓС‚Рѕ РЅР° РїР»РµС‡Рё
                     return curObject.WearFlags.ToLower().Contains("k0");
-                case 13: //Одето вокруг талии
+                case 13: //РћРґРµС‚Рѕ РІРѕРєСЂСѓРі С‚Р°Р»РёРё
                     return curObject.WearFlags.ToLower().Contains("l0");
-                case 14: //Одето вокруг правого запястья
-                case 15: //Одето вокруг левого запяться
+                case 14: //РћРґРµС‚Рѕ РІРѕРєСЂСѓРі РїСЂР°РІРѕРіРѕ Р·Р°РїСЏСЃС‚СЊСЏ
+                case 15: //РћРґРµС‚Рѕ РІРѕРєСЂСѓРі Р»РµРІРѕРіРѕ Р·Р°РїСЏС‚СЊСЃСЏ
                     return curObject.WearFlags.ToLower().Contains("m0");
-                case 16: //Моб вооружен предметом в правой руке
+                case 16: //РњРѕР± РІРѕРѕСЂСѓР¶РµРЅ РїСЂРµРґРјРµС‚РѕРј РІ РїСЂР°РІРѕР№ СЂСѓРєРµ
                     return curObject.WearFlags.ToLower().Contains("n0");
-                case 17: //Моб держит предмет в левой руке
+                case 17: //РњРѕР± РґРµСЂР¶РёС‚ РїСЂРµРґРјРµС‚ РІ Р»РµРІРѕР№ СЂСѓРєРµ
                     return (
                                curObject.WearFlags.ToLower().Contains("o0") ||
-                               curObject.Type == 2 || //Магический свиток
-                               curObject.Type == 3 || //Волшебная палочка
-                               curObject.Type == 10 //Магический напиток
+                               curObject.Type == 2 || //РњР°РіРёС‡РµСЃРєРёР№ СЃРІРёС‚РѕРє
+                               curObject.Type == 3 || //Р’РѕР»С€РµР±РЅР°СЏ РїР°Р»РѕС‡РєР°
+                               curObject.Type == 10 //РњР°РіРёС‡РµСЃРєРёР№ РЅР°РїРёС‚РѕРє
                            );
-                case 18: //Моб вооружен предметом в обеих руках
+                case 18: //РњРѕР± РІРѕРѕСЂСѓР¶РµРЅ РїСЂРµРґРјРµС‚РѕРј РІ РѕР±РµРёС… СЂСѓРєР°С…
                     return curObject.WearFlags.ToLower().Contains("p0");
             }
             return true;
@@ -487,7 +487,7 @@ namespace BZEditor
         {
             if (WindowParentForm == null) return;
             MobsCollection allMobs = WindowParentForm.GetAllKnownMobs();
-            var msf = new MobSelectForm("Выберите моба", allMobs, ZoneDM.Zone.Number, true, false);
+            var msf = new MobSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РјРѕР±Р°", allMobs, ZoneDM.Zone.Number, true, false);
             DialogResult dres = msf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -498,7 +498,7 @@ namespace BZEditor
                 foreach (Mob mob in msf.SelectedMobs)
                 {
                     ActiveRoom.LoadedMobsCollection.Add(mob.VNum, false, mob.MaxInWorld, mob.MaxInWorld);
-                    //пока по умолчанию макс в комнате равно макс в мире
+                    //РїРѕРєР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РјР°РєСЃ РІ РєРѕРјРЅР°С‚Рµ СЂР°РІРЅРѕ РјР°РєСЃ РІ РјРёСЂРµ
                 }
                 RefreshRoomMobsList(ActiveRoom);
                 lvMobsInRoom.Items[lvMobsInRoom.Items.Count - 1].Selected = true;
@@ -539,7 +539,7 @@ namespace BZEditor
             if (ActiveRoom == null) return;
             if (WindowParentForm == null) return;
             ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects();
-            var osf = new ObjSelectForm("Выберите предмет", allObjects, ZoneDM.Zone.Number, true, false);
+            var osf = new ObjSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РїСЂРµРґРјРµС‚", allObjects, ZoneDM.Zone.Number, true, false);
             DialogResult dres = osf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -597,7 +597,7 @@ namespace BZEditor
             if (WindowParentForm == null) return;
             ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects();
             var osf =
-                new ObjSelectForm("Выберите предмет для удаления", allObjects, ZoneDM.Zone.Number, true, false);
+                new ObjSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РїСЂРµРґРјРµС‚ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ", allObjects, ZoneDM.Zone.Number, true, false);
             DialogResult dres = osf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -771,7 +771,7 @@ namespace BZEditor
                     wldMap.RecreateRoomBitmap(trgRoom);
                 }
                 /*else
-                    return; //Выход если нажата кнопка ОТМЕНА*/
+                    return; //Р’С‹С…РѕРґ РµСЃР»Рё РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° РћРўРњР•РќРђ*/
                 sbdf.Dispose();
             }
             Exit exit = null;
@@ -829,8 +829,8 @@ namespace BZEditor
         private void BtnSelectDoorKeyClick(object sender, EventArgs e)
         {
             if (WindowParentForm == null) return;
-            ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects(18); //Только ключи
-            var osf = new ObjSelectForm("Выберите ключ", allObjects, ZoneDM.Zone.Number, false, false);
+            ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects(18); //РўРѕР»СЊРєРѕ РєР»СЋС‡Рё
+            var osf = new ObjSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РєР»СЋС‡", allObjects, ZoneDM.Zone.Number, false, false);
             DialogResult dres = osf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -843,11 +843,11 @@ namespace BZEditor
         private void NudDoorKeyVNumValueChanged(object sender, EventArgs e)
         {
             if (WindowParentForm == null) return;
-            ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects(18); //Только ключи
+            ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects(18); //РўРѕР»СЊРєРѕ РєР»СЋС‡Рё
             Obj keyObject = allObjects[Convert.ToInt32(nudDoorKeyVNum.Value), 0];
             if (nudDoorKeyVNum.Value == -1)
-                tbRoomDoorKeyName.Text = "Ключ здесь не надо";
-            else tbRoomDoorKeyName.Text = keyObject != null ? keyObject.Cases.Imen : "!!!Ключа с таким номером не найдено.";
+                tbRoomDoorKeyName.Text = "РљР»СЋС‡ Р·РґРµСЃСЊ РЅРµ РЅР°РґРѕ";
+            else tbRoomDoorKeyName.Text = keyObject != null ? keyObject.Cases.Imen : "!!!РљР»СЋС‡Р° СЃ С‚Р°РєРёРј РЅРѕРјРµСЂРѕРј РЅРµ РЅР°Р№РґРµРЅРѕ.";
             /*if (lvMainList.SelectedItems.Count <= 0) return;
             CRoom Room = ZoneDM.RoomsCollection[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];*/
             if (ActiveRoom == null) return;
@@ -1067,7 +1067,7 @@ namespace BZEditor
             nudDoorKeyVNum.Enabled = cbExitDoor.Checked;
             btnSelectDoorKey.Enabled = cbExitDoor.Checked;
 
-            //Обработка изменений типа и состояния по умолчанию для выхода
+            //РћР±СЂР°Р±РѕС‚РєР° РёР·РјРµРЅРµРЅРёР№ С‚РёРїР° Рё СЃРѕСЃС‚РѕСЏРЅРёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РІС‹С…РѕРґР°
 
             int doorFlag = 0;
             int doorDefaultValue = -1;
@@ -1091,7 +1091,7 @@ namespace BZEditor
             if (cbDoorPeekproof.Checked)
                 doorFlag += 8;
 #if DEBUG
-            gbDoorType.Text = "Тип выхода:: doorFlag|" + doorFlag + " doorDefaultValue|" + doorDefaultValue;
+            gbDoorType.Text = "РўРёРї РІС‹С…РѕРґР°:: doorFlag|" + doorFlag + " doorDefaultValue|" + doorDefaultValue;
 #endif
             Exit curExit = null;
             switch (_exitDir)
@@ -1207,9 +1207,9 @@ namespace BZEditor
         private void BtnSelectPorionProtoClick(object sender, EventArgs e)
         {
             if (WindowParentForm == null) return;
-            ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects(10); //10.Магический напиток
+            ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects(10); //10.РњР°РіРёС‡РµСЃРєРёР№ РЅР°РїРёС‚РѕРє
             var osf =
-                new ObjSelectForm("Выберите прототип напитка", allObjects, ZoneDM.Zone.Number, false, true);
+                new ObjSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РїСЂРѕС‚РѕС‚РёРї РЅР°РїРёС‚РєР°", allObjects, ZoneDM.Zone.Number, false, true);
             DialogResult dres = osf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -1421,7 +1421,7 @@ namespace BZEditor
             if (ActiveRoom == null) return;
             LoadedMob lMob = ActiveRoom.LoadedMobsCollection[((EXListViewItem)(lvMobsInRoom.SelectedItems[0])).GUID];
             if (lMob == null) return;
-            //ToDo: надо ли следующую строчку?
+            //ToDo: РЅР°РґРѕ Р»Рё СЃР»РµРґСѓСЋС‰СѓСЋ СЃС‚СЂРѕС‡РєСѓ?
             lMob.Leader = false;
             lMob.FollowsBy = Convert.ToInt32(((TaggedComboBoxItem)(cboxMobFollowBy.SelectedItem)).Tag);
         }
@@ -1434,10 +1434,10 @@ namespace BZEditor
                 if (room.PlacedOnMap)
                     wldMap.CenterRoomCoord = room.Location;
                 else
-                    MessageBox.Show(this, "Комната \"" + room.Name + "\" не размещена на карте.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(this, "РљРѕРјРЅР°С‚Р° \"" + room.Name + "\" РЅРµ СЂР°Р·РјРµС‰РµРЅР° РЅР° РєР°СЂС‚Рµ.", "Р’РЅРёРјР°РЅРёРµ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (lvMainList.SelectedItems.Count > 1)
-                MessageBox.Show(this, "Перейти на карте к нескольким выбранным комнатам невозможно!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "РџРµСЂРµР№С‚Рё РЅР° РєР°СЂС‚Рµ Рє РЅРµСЃРєРѕР»СЊРєРёРј РІС‹Р±СЂР°РЅРЅС‹Рј РєРѕРјРЅР°С‚Р°Рј РЅРµРІРѕР·РјРѕР¶РЅРѕ!", "Р’РЅРёРјР°РЅРёРµ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public void RefreshRoomsList()
@@ -1509,7 +1509,7 @@ namespace BZEditor
             foreach (int vNum in room.TriggersList)
             {
                 Trigger t = allTriggers.GetTrigger(vNum);
-                string triggerName = (t != null) ? t.Name : "Триггер из незагруженной зоны";
+                string triggerName = (t != null) ? t.Name : "РўСЂРёРіРіРµСЂ РёР· РЅРµР·Р°РіСЂСѓР¶РµРЅРЅРѕР№ Р·РѕРЅС‹";
                 //string TriggerName = AllTriggers.GetTrigger(VNum).Name;
                 ListViewItem lvi = new ListViewItem(new[] { vNum.ToString(), triggerName }) { Tag = vNum };
                 lvRoomTriggers.Items.Add(lvi);
@@ -1523,7 +1523,7 @@ namespace BZEditor
             foreach (LoadedObj obj in room.RemoovingObjects)
             {
                 Obj o = allObjects.GetObject(obj.VNum);
-                string objectName = (o != null) ? o.Cases.Imen : "Отбъект из незагруженной зоны";
+                string objectName = (o != null) ? o.Cases.Imen : "РћС‚Р±СЉРµРєС‚ РёР· РЅРµР·Р°РіСЂСѓР¶РµРЅРЅРѕР№ Р·РѕРЅС‹";
                 //string ObjectName = AllObjects.GetObject(Object.VNum).Cases.Imen;
                 ListViewItem lvi = new ListViewItem(new[] { obj.VNum.ToString(), objectName }) { Tag = obj.VNum };
                 lvObjectsToRemove.Items.Add(lvi);
@@ -1539,7 +1539,7 @@ namespace BZEditor
             foreach (LoadedObj obj in room.LoadedObjectsCollection)
             {
                 Obj o = allObjects.GetObject(obj.VNum);
-                string objectName = (o != null) ? o.Cases.Imen : "Отбъект из незагруженной зоны";
+                string objectName = (o != null) ? o.Cases.Imen : "РћС‚Р±СЉРµРєС‚ РёР· РЅРµР·Р°РіСЂСѓР¶РµРЅРЅРѕР№ Р·РѕРЅС‹";
                 //string ObjectName = AllObjects.GetObject(Object.VNum).Cases.Imen;
                 EXListViewItem elvi = new EXListViewItem(obj.Probability.ToString()) { Tag = obj.VNum };
                 elvi.SubItems.Add(new EXListViewSubItem(obj.VNum.ToString()));
@@ -1573,7 +1573,7 @@ namespace BZEditor
             foreach (LoadedMob mob in room.LoadedMobsCollection)
             {
                 Mob m = allMobs[mob.VNum, 0];
-                string mobName = (m != null) ? m.Cases.Imen : "Моб из незагруженной зоны";
+                string mobName = (m != null) ? m.Cases.Imen : "РњРѕР± РёР· РЅРµР·Р°РіСЂСѓР¶РµРЅРЅРѕР№ Р·РѕРЅС‹";
                 EXListViewItem lvi = new EXListViewItem(new[] { mob.VNum.ToString(), mobName })
                                          {
                                              GUID = mob.Guid,
@@ -1592,7 +1592,7 @@ namespace BZEditor
             foreach (MobObj obj in loadedMob.Items)
             {
                 Obj o = allObjects.GetObject(obj.VNum);
-                string objectName = (o != null) ? o.Cases.Imen : "Отбъект из незагруженной зоны";
+                string objectName = (o != null) ? o.Cases.Imen : "РћС‚Р±СЉРµРєС‚ РёР· РЅРµР·Р°РіСЂСѓР¶РµРЅРЅРѕР№ Р·РѕРЅС‹";
                 EXListViewItem elvi = new EXListViewItem(obj.Probability.ToString())
                                           {
                                               Tag = obj.VNum,
@@ -1640,17 +1640,17 @@ namespace BZEditor
         public void RefreshRoomData()
         {
             IgnoreExitDirChanged = true;
-            //для упрощения кода сначала выставляю ридонли, а потом полный рефреш всех данных по первому выбранному номеру комнаты
-            //Параметры, загружаемые всегда (по первой выбранной комнате)
+            //РґР»СЏ СѓРїСЂРѕС‰РµРЅРёСЏ РєРѕРґР° СЃРЅР°С‡Р°Р»Р° РІС‹СЃС‚Р°РІР»СЏСЋ СЂРёРґРѕРЅР»Рё, Р° РїРѕС‚РѕРј РїРѕР»РЅС‹Р№ СЂРµС„СЂРµС€ РІСЃРµС… РґР°РЅРЅС‹С… РїРѕ РїРµСЂРІРѕРјСѓ РІС‹Р±СЂР°РЅРЅРѕРјСѓ РЅРѕРјРµСЂСѓ РєРѕРјРЅР°С‚С‹
+            //РџР°СЂР°РјРµС‚СЂС‹, Р·Р°РіСЂСѓР¶Р°РµРјС‹Рµ РІСЃРµРіРґР° (РїРѕ РїРµСЂРІРѕР№ РІС‹Р±СЂР°РЅРЅРѕР№ РєРѕРјРЅР°С‚Рµ)
             //CRoom Room = ZoneDM.RoomsCollection[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
             if (ActiveRoom == null) return;
 
-            //Следующий лейбл добавлен по просьбе Свентовита
+            //РЎР»РµРґСѓСЋС‰РёР№ Р»РµР№Р±Р» РґРѕР±Р°РІР»РµРЅ РїРѕ РїСЂРѕСЃСЊР±Рµ РЎРІРµРЅС‚РѕРІРёС‚Р°
             lRoomDesc.Text = "[" + ActiveRoom.VNum + "] " + ActiveRoom.Name;
             tbRoomName.Text = ActiveRoom.Name;
             cboxSectorType.SelectedIndex = ActiveRoom.SectorType;
 
-            //Описание комнаты по сезонам
+            //РћРїРёСЃР°РЅРёРµ РєРѕРјРЅР°С‚С‹ РїРѕ СЃРµР·РѕРЅР°Рј
             RefreshRoomDescription();
             RefreshDescriptionTabsIcons();
 

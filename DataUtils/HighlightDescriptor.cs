@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Drawing;
 
 namespace DataUtils
@@ -17,7 +17,7 @@ namespace DataUtils
             Token = token;
 			Description = description;
 			Result = "";
-			Type = "Тип отсутствует";
+			Type = "РўРёРї РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚";
 			DescriptorType = descriptorType;
 			DescriptorRecognition = dr;
 			CloseToken = null;

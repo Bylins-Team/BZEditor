@@ -1,4 +1,4 @@
-using System.ComponentModel;
+п»їusing System.ComponentModel;
 using System.Windows.Forms;
 using ExtControls;
 
@@ -92,7 +92,7 @@ namespace BZEditor
             this.extSplashProgressBar.SteepDistance = ((byte)(1));
             this.extSplashProgressBar.TabIndex = 1;
             this.extSplashProgressBar.TabStop = false;
-            this.extSplashProgressBar.Text = "Загрузка параметров";
+            this.extSplashProgressBar.Text = "Р—Р°РіСЂСѓР·РєР° РїР°СЂР°РјРµС‚СЂРѕРІ";
             this.extSplashProgressBar.TextShadowAlpha = ((byte)(255));
             // 
             // lVersion

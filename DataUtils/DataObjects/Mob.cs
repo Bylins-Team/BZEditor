@@ -1,16 +1,16 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
     public class Mob : BaseDataObject
     {
         /// <summary>
-        /// Падежи
+        /// РџР°РґРµР¶Рё
         /// </summary>
         public Cases Cases = new Cases();
 
         /// <summary>
-        /// Путь моба
+        /// РџСѓС‚СЊ РјРѕР±Р°
         /// </summary>
         public readonly BaseDataArrayList Destination = new BaseDataArrayList();
 
@@ -44,8 +44,8 @@ namespace DataUtils
         private string money = "0d0+0";
         private int mResist;
         private int plusMem;
-        private int posDefault = 8; //моб стоит
-        private int posLoad = 8; //моб стоит
+        private int posDefault = 8; //РјРѕР± СЃС‚РѕРёС‚
+        private int posLoad = 8; //РјРѕР± СЃС‚РѕРёС‚
         private int speed = -1; // -1 = default movement cadence
         private int pResist;
         private int race = 100;
@@ -64,38 +64,38 @@ namespace DataUtils
         private int vitality;
 
         /// <summary>
-        /// Глобальный идентификатор (внутр.)
+        /// Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ (РІРЅСѓС‚СЂ.)
         /// </summary>
         public Guid Guid = Guid.NewGuid();
 
         public readonly BaseDataArrayList Helpers = new BaseDataArrayList();
 
         /// <summary>
-        /// Список предметов, загружаемых после смерти моба
+        /// РЎРїРёСЃРѕРє РїСЂРµРґРјРµС‚РѕРІ, Р·Р°РіСЂСѓР¶Р°РµРјС‹С… РїРѕСЃР»Рµ СЃРјРµСЂС‚Рё РјРѕР±Р°
         /// </summary>
         public readonly LoadedObjAfterDeathCollection LoadedObjectAfterDeath = new LoadedObjAfterDeathCollection();
 
         public MobSkillsCollection Skills = new MobSkillsCollection();
 
         /// <summary>
-        /// Коллекчия заклинаний моба
+        /// РљРѕР»Р»РµРєС‡РёСЏ Р·Р°РєР»РёРЅР°РЅРёР№ РјРѕР±Р°
         /// </summary>
         public MobSpellsCollection Spells = new MobSpellsCollection();
 
         /// <summary>
-        /// Параметры моба
+        /// РџР°СЂР°РјРµС‚СЂС‹ РјРѕР±Р°
         /// </summary>
         public MobStats Stats = new MobStats();
 
         public BaseDataArrayList TriggersList = new BaseDataArrayList();
 
         /// <summary>
-        /// Роли моба
+        /// Р РѕР»Рё РјРѕР±Р°
         /// </summary>
         public BaseDataArrayList Roles = new BaseDataArrayList();
 
         /// <summary>
-        /// Ингредиенты
+        /// РРЅРіСЂРµРґРёРµРЅС‚С‹
         /// </summary>
         public IngredientsCollection Ingredients = new IngredientsCollection();
 
@@ -106,7 +106,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Максимум в мире
+        /// РњР°РєСЃРёРјСѓРј РІ РјРёСЂРµ
         /// </summary>
         public int MaxInWorld
         {
@@ -120,7 +120,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Альясы
+        /// РђР»СЊСЏСЃС‹
         /// </summary>
         public string Alias
         {
@@ -134,7 +134,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Описание
+        /// РћРїРёСЃР°РЅРёРµ
         /// </summary>
         public string Desc
         {
@@ -148,7 +148,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Детальное описание моба
+        /// Р”РµС‚Р°Р»СЊРЅРѕРµ РѕРїРёСЃР°РЅРёРµ РјРѕР±Р°
         /// </summary>
         public string DetailDescr
         {
@@ -162,7 +162,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Флаги моба
+        /// Р¤Р»Р°РіРё РјРѕР±Р°
         /// </summary>
         public string Flags
         {
@@ -176,7 +176,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Аффекты моба
+        /// РђС„С„РµРєС‚С‹ РјРѕР±Р°
         /// </summary>
         public string Affects
         {
@@ -190,7 +190,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Наклонность
+        /// РќР°РєР»РѕРЅРЅРѕСЃС‚СЊ
         /// </summary>
         public int Align
         {
@@ -204,7 +204,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Уровень
+        /// РЈСЂРѕРІРµРЅСЊ
         /// </summary>
         public int Level
         {
@@ -218,7 +218,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Хитролл
+        /// РҐРёС‚СЂРѕР»Р»
         /// </summary>
         public int Hitroll
         {
@@ -232,7 +232,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// АС
+        /// РђРЎ
         /// </summary>
         public int Ac
         {
@@ -246,7 +246,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Хиты
+        /// РҐРёС‚С‹
         /// </summary>
         public string Hits
         {
@@ -260,7 +260,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Повреждения
+        /// РџРѕРІСЂРµР¶РґРµРЅРёСЏ
         /// </summary>
         public string Damage
         {
@@ -274,7 +274,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Деньги
+        /// Р”РµРЅСЊРіРё
         /// </summary>
         public string Money
         {
@@ -288,7 +288,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Опыт
+        /// РћРїС‹С‚
         /// </summary>
         public int Exp
         {
@@ -302,7 +302,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Позиция при загрузке
+        /// РџРѕР·РёС†РёСЏ РїСЂРё Р·Р°РіСЂСѓР·РєРµ
         /// </summary>
         public int PosLoad
         {
@@ -316,7 +316,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Позиция по умолчанию
+        /// РџРѕР·РёС†РёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
         /// </summary>
         public int PosDefault
         {
@@ -344,7 +344,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Пол
+        /// РџРѕР»
         /// </summary>
         public int Sex
         {
@@ -358,7 +358,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Воля
+        /// Р’РѕР»СЏ
         /// </summary>
         public int SaveParalyzeCast
         {
@@ -372,7 +372,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Здоровье
+        /// Р—РґРѕСЂРѕРІСЊРµ
         /// </summary>
         public int SaveMagBreathes
         {
@@ -386,7 +386,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Стойкость
+        /// РЎС‚РѕР№РєРѕСЃС‚СЊ
         /// </summary>
         public int SaveMagDamages
         {
@@ -400,7 +400,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Реакция
+        /// Р РµР°РєС†РёСЏ
         /// </summary>
         public int SaveFightSkills
         {
@@ -414,7 +414,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Защита от огня
+        /// Р—Р°С‰РёС‚Р° РѕС‚ РѕРіРЅСЏ
         /// </summary>
         public int ResistFromFire
         {
@@ -428,7 +428,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Защита от воздуха
+        /// Р—Р°С‰РёС‚Р° РѕС‚ РІРѕР·РґСѓС…Р°
         /// </summary>
         public int ResistFromAir
         {
@@ -442,7 +442,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Защита от воды
+        /// Р—Р°С‰РёС‚Р° РѕС‚ РІРѕРґС‹
         /// </summary>
         public int ResistFromWater
         {
@@ -456,7 +456,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Защита от земли
+        /// Р—Р°С‰РёС‚Р° РѕС‚ Р·РµРјР»Рё
         /// </summary>
         public int ResistFromEarth
         {
@@ -470,7 +470,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Живучесть
+        /// Р–РёРІСѓС‡РµСЃС‚СЊ
         /// </summary>
         public int Vitality
         {
@@ -484,7 +484,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Разум
+        /// Р Р°Р·СѓРј
         /// </summary>
         public int Mind
         {
@@ -498,7 +498,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Иммунитет
+        /// РРјРјСѓРЅРёС‚РµС‚
         /// </summary>
         public int Immunitet
         {
@@ -512,7 +512,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Иммунитет
+        /// РРјРјСѓРЅРёС‚РµС‚
         /// </summary>
         public int ResistDark
         {
@@ -526,7 +526,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Ругенерация хитов
+        /// Р СѓРіРµРЅРµСЂР°С†РёСЏ С…РёС‚РѕРІ
         /// </summary>
         public int HPreg
         {
@@ -540,7 +540,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Броня
+        /// Р‘СЂРѕРЅСЏ
         /// </summary>
         public int Armour
         {
@@ -554,7 +554,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Запоминание
+        /// Р—Р°РїРѕРјРёРЅР°РЅРёРµ
         /// </summary>
         public int PlusMem
         {
@@ -568,7 +568,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Успех колдовства
+        /// РЈСЃРїРµС… РєРѕР»РґРѕРІСЃС‚РІР°
         /// </summary>
         public int CastSuccess
         {
@@ -582,7 +582,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Удача
+        /// РЈРґР°С‡Р°
         /// </summary>
         public int Luck
         {
@@ -596,7 +596,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Инициатива
+        /// РРЅРёС†РёР°С‚РёРІР°
         /// </summary>
         public int Initiative
         {
@@ -610,7 +610,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Поглощение
+        /// РџРѕРіР»РѕС‰РµРЅРёРµ
         /// </summary>
         public int Absorbe
         {
@@ -624,7 +624,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Иммунитет к магическим аффектам
+        /// РРјРјСѓРЅРёС‚РµС‚ Рє РјР°РіРёС‡РµСЃРєРёРј Р°С„С„РµРєС‚Р°Рј
         /// </summary>
         public int AResist
         {
@@ -638,7 +638,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Иммунитет к магическим повреждениям
+        /// РРјРјСѓРЅРёС‚РµС‚ Рє РјР°РіРёС‡РµСЃРєРёРј РїРѕРІСЂРµР¶РґРµРЅРёСЏРј
         /// </summary>
         public int MResist
         {
@@ -652,7 +652,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Иммунитет к физическим повреждениям
+        /// РРјРјСѓРЅРёС‚РµС‚ Рє С„РёР·РёС‡РµСЃРєРёРј РїРѕРІСЂРµР¶РґРµРЅРёСЏРј
         /// </summary>
         public int PResist
         {
@@ -666,7 +666,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тип атаки (кажется)
+        /// РўРёРї Р°С‚Р°РєРё (РєР°Р¶РµС‚СЃСЏ)
         /// </summary>
         public int BareHandAttack
         {
@@ -691,7 +691,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Скорость замакса
+        /// РЎРєРѕСЂРѕСЃС‚СЊ Р·Р°РјР°РєСЃР°
         /// </summary>
         public int MaxFactor
         {
@@ -705,7 +705,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Количество доп.атак
+        /// РљРѕР»РёС‡РµСЃС‚РІРѕ РґРѕРї.Р°С‚Р°Рє
         /// </summary>
         public int ExtraAttack
         {
@@ -732,7 +732,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Класс моба
+        /// РљР»Р°СЃСЃ РјРѕР±Р°
         /// </summary>
         public int Class
         {
@@ -746,7 +746,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тип моба
+        /// РўРёРї РјРѕР±Р°
         /// </summary>
         public int Race
         {

@@ -1,0 +1,12 @@
+root = true
+
+# All source is UTF-8 with BOM (the Visual Studio / .NET default). The BOM lets
+# VS, the C# compiler and GitHub all detect the encoding unambiguously, so the
+# Russian text in the sources renders correctly everywhere. Keep it that way.
+[*.{cs,txt}]
+charset = utf-8-bom
+end_of_line = crlf
+
+[*.{csproj,props,config,resx,xml,yml,yaml,md}]
+charset = utf-8
+end_of_line = crlf

@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DataUtils.YamlMappers;
 using NUnit.Framework;
 

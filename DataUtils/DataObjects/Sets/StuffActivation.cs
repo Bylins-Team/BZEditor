@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
@@ -13,7 +13,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Количество необходимых шмоток для активации
+        /// РљРѕР»РёС‡РµСЃС‚РІРѕ РЅРµРѕР±С…РѕРґРёРјС‹С… С€РјРѕС‚РѕРє РґР»СЏ Р°РєС‚РёРІР°С†РёРё
         /// </summary>
         public int ObjectsQuontity
         {

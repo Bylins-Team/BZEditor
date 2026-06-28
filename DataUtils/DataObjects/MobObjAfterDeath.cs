@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
@@ -15,7 +15,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тип загрузки
+        /// РўРёРї Р·Р°РіСЂСѓР·РєРё
         /// </summary>
         public int LoadType
         {
@@ -29,7 +29,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Спец.параметр
+        /// РЎРїРµС†.РїР°СЂР°РјРµС‚СЂ
         /// </summary>
         public int SpecParam
         {
@@ -43,7 +43,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Вероятность загрузки
+        /// Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ Р·Р°РіСЂСѓР·РєРё
         /// </summary>
         public int Probability
         {

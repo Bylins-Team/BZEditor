@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Windows.Forms;
 
 namespace BZEditor
@@ -12,7 +12,7 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Обработка хотекеев
+        /// РћР±СЂР°Р±РѕС‚РєР° С…РѕС‚РµРєРµРµРІ
         /// </summary>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -39,7 +39,7 @@ namespace BZEditor
         private void btnCreate_Click(object sender, EventArgs e)
         {
             if (tboxTemplateName.Text == "")
-                tboxTemplateName.Text = "Тему впиши, ДА ?";
+                tboxTemplateName.Text = "РўРµРјСѓ РІРїРёС€Рё, Р”Рђ ?";
             else
             {
                 DialogResult = DialogResult.OK;

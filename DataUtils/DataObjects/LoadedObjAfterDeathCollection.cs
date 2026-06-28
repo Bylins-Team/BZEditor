@@ -1,4 +1,4 @@
-namespace DataUtils
+﻿namespace DataUtils
 {
     public class LoadedObjAfterDeathCollection : BaseDataArrayList
     {

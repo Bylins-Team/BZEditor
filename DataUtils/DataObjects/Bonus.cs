@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class Bonus : BaseDataObject
     {
@@ -11,7 +11,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Величина бонуса
+        /// Р’РµР»РёС‡РёРЅР° Р±РѕРЅСѓСЃР°
         /// </summary>
         public int Value
         {

@@ -1,4 +1,4 @@
-using System.ComponentModel;
+п»їusing System.ComponentModel;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -85,7 +85,7 @@ namespace ExtControls
             }
 
             //draw image
-            if (item.MessageType != ParseMessageType.Отсутствует)
+            if (item.MessageType != ParseMessageType.РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚)
             {
                 iconList.Draw(
                     e.Graphics,

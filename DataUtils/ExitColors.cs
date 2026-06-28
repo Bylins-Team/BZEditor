@@ -1,4 +1,4 @@
-using System.Drawing;
+п»їusing System.Drawing;
 
 namespace DataUtils
 {
@@ -27,7 +27,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Цвет выхода на север
+        /// Р¦РІРµС‚ РІС‹С…РѕРґР° РЅР° СЃРµРІРµСЂ
         /// </summary>
         public Color ColorExitN
         {
@@ -40,7 +40,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Цвет выхода на восток
+        /// Р¦РІРµС‚ РІС‹С…РѕРґР° РЅР° РІРѕСЃС‚РѕРє
         /// </summary>
         public Color ColorExitE
         {
@@ -53,7 +53,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Цвет выхода на юг
+        /// Р¦РІРµС‚ РІС‹С…РѕРґР° РЅР° СЋРі
         /// </summary>
         public Color ColorExitS
         {
@@ -66,7 +66,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Цвет выхода на запад
+        /// Р¦РІРµС‚ РІС‹С…РѕРґР° РЅР° Р·Р°РїР°Рґ
         /// </summary>
         public Color ColorExitW
         {
@@ -79,7 +79,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Цвет выхода вверх
+        /// Р¦РІРµС‚ РІС‹С…РѕРґР° РІРІРµСЂС…
         /// </summary>
         public Color ColorExitU
         {
@@ -92,7 +92,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Цвет выхода вниз
+        /// Р¦РІРµС‚ РІС‹С…РѕРґР° РІРЅРёР·
         /// </summary>
         public Color ColorExitD
         {
@@ -105,8 +105,8 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сброс выходов в исходное состояние (отобрадение выхода на карте зависит от цвета выхода)
-        /// Color.Transparent не отображается
+        /// РЎР±СЂРѕСЃ РІС‹С…РѕРґРѕРІ РІ РёСЃС…РѕРґРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ (РѕС‚РѕР±СЂР°РґРµРЅРёРµ РІС‹С…РѕРґР° РЅР° РєР°СЂС‚Рµ Р·Р°РІРёСЃРёС‚ РѕС‚ С†РІРµС‚Р° РІС‹С…РѕРґР°)
+        /// Color.Transparent РЅРµ РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ
         /// </summary>
         public void Reset()
         {

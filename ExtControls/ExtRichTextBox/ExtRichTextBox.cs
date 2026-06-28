@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -34,7 +34,7 @@ namespace ExtControls
         }
 
         /// <summary>
-        /// Œ·‡·ÓÚÍ‡ ıÓÚÂÍÂÂ‚
+        /// –û–±—Ä–∞–±–æ—Ç–∫–∞ —Ö–æ—Ç–µ–∫–µ–µ–≤
         /// </summary>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -133,7 +133,7 @@ namespace ExtControls
                     Marshal.StructureToPtr(par, m.LParam, false);
                 }
 
-                // force the control to redraw it¥s client area
+                // force the control to redraw it“ës client area
                 m.Result = new IntPtr(NativeMethods.WVR_REDRAW);
             }
 
@@ -155,7 +155,7 @@ namespace ExtControls
                 return;
 
             /////////////////////////////////////////////////////////////////////////////
-            // Get the DC of the window frame and paint the border using uxTheme API¥s
+            // Get the DC of the window frame and paint the border using uxTheme API“ës
             /////////////////////////////////////////////////////////////////////////////
 
             // set the part id to TextBox

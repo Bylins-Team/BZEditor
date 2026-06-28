@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Drawing;
 using System.Windows.Forms;
 using DataUtils;
@@ -29,7 +29,7 @@ namespace BZEditor
 
         private void InitializeComponent()
         {
-            Text = "Формат данных";
+            Text = "Р¤РѕСЂРјР°С‚ РґР°РЅРЅС‹С…";
             Size = new Size(400, 200);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             StartPosition = FormStartPosition.CenterParent;
@@ -38,7 +38,7 @@ namespace BZEditor
 
             lblFormatLabel = new Label
             {
-                Text = "Формат данных мира:",
+                Text = "Р¤РѕСЂРјР°С‚ РґР°РЅРЅС‹С… РјРёСЂР°:",
                 Location = new Point(12, 20),
                 Size = new Size(150, 20)
             };
@@ -69,7 +69,7 @@ namespace BZEditor
 
             btnCancel = new Button
             {
-                Text = "Отмена",
+                Text = "РћС‚РјРµРЅР°",
                 DialogResult = DialogResult.Cancel,
                 Location = new Point(297, 130),
                 Size = new Size(75, 25)
