@@ -99,6 +99,8 @@ namespace BZEditor
             StaticData.WorldFolderPath = Path.IsPathRooted(worldFolderSetting)
                 ? worldFolderSetting
                 : Path.Combine(Application.StartupPath, worldFolderSetting);
+            Log("WorldFolderPath=" + StaticData.WorldFolderPath +
+                " exists=" + Directory.Exists(StaticData.WorldFolderPath));
             string ozl = settings.Read("OpenedZonesList", "");
             try
             {
@@ -120,7 +122,11 @@ namespace BZEditor
             //DateTime StartTime = DateTime.Now;
 
             if (!ValidateDirStruct())
+            {
+                Log("ValidateDirStruct failed -> Close");
                 Close();
+            }
+            else Log("ValidateDirStruct ok");
 #if !DEBUG
             sf.Show();
 #endif
@@ -131,20 +137,25 @@ namespace BZEditor
                 sf.SetNextState(0, "Поиск обновлений");
                 Application.DoEvents();
 #endif
+                Log("CheckUpdates: begin");
                 CheckUpdates(true);
+                Log("CheckUpdates: end");
             }
 #if !DEBUG
             sf.SetNextState(5, "Загрузка базовых данных");
             Application.DoEvents();
 #endif
+            Log("bases: loading");
             basesDm = new CBasesDataManager(Application.StartupPath);
             basesDm.LoadData();
+            Log("bases: loaded");
 #if !DEBUG
             sf.SetNextState(7, "Загрузка списка зон");
             Application.DoEvents();
 #endif
             FileListsDm = new FileListsDataManager();
             FileListsDm.LoadData();
+            Log("zones discovered=" + FileListsDm.ZonesDataList.Count);
 #if !DEBUG
             sf.SetNextState(10, "Загрузка шаблонов");
             float step = 90/(float) FileListsDm.LoadedZonesCount;
@@ -231,6 +242,9 @@ namespace BZEditor
                     }
                 }
             }
+            int openCount = 0;
+            foreach (var w in dockContainerMain.Documents) openCount++;
+            Log("ctor: startup complete, open windows=" + openCount);
         }
 
         private DockState GetValidDockState(DockState state)
@@ -284,6 +298,18 @@ namespace BZEditor
             base.Dispose(disposing);
         }
 
+        /// <summary>Appends a line to startup.log next to the exe (best effort).</summary>
+        internal static void Log(string msg)
+        {
+            try
+            {
+                File.AppendAllText(
+                    Path.Combine(Application.StartupPath, "startup.log"),
+                    DateTime.Now.ToString("HH:mm:ss.fff") + "  " + msg + Environment.NewLine);
+            }
+            catch { /* logging must never break startup */ }
+        }
+
         /// <summary>
         ///   The main entry point for the application.
         /// </summary>
@@ -296,15 +322,18 @@ namespace BZEditor
             // Route unhandled UI-thread exceptions to the error dialog instead of
             // terminating the process ("crashes on any little error").
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+            Log("=== Main start (StartupPath=" + Application.StartupPath + ") ===");
             try
             {
                 Application.Run(new MainForm());
+                Log("Application.Run returned");
             }
             catch (Exception ex)
             {
                 // An exception while constructing the main window (e.g. loading the
                 // world at startup) is thrown before the message loop starts, so the
                 // ThreadException handler never sees it -- show it rather than crash.
+                Log("FATAL in Main: " + ex);
                 ExceptionForm.ExceptionCatcher(ex);
             }
         }
@@ -723,7 +752,16 @@ namespace BZEditor
         private void OpenZoneWindow(string num, Guid itemGuid)
         {
             ZoneDataManager zdm = GetDataManagerByName(num);
-            if (zdm == null) return;
+            if (zdm == null)
+            {
+                // The zone is known but not loaded yet (e.g. restored from OpenedZonesList
+                // on a fresh world where nothing is preloaded). Load it on demand so the
+                // window actually opens instead of silently doing nothing.
+                Log("OpenZoneWindow: zone " + num + " not loaded, loading on demand");
+                TreeFormZoneLoadingActivated(num, null, false);
+                zdm = GetDataManagerByName(num);
+            }
+            if (zdm == null) { Log("OpenZoneWindow: zone " + num + " could not be loaded"); return; }
             var wf = new WldForm(templatesDm, ref zdm, ref basesDm, this, clearSketchAfterGeneratingRooms, tsmiSameOptionsForAllZones.Checked);
             if (!openedWindowsList.Contains(zdm.Zone.Number.ToString()))
                 openedWindowsList.Add(zdm.Zone.Number.ToString());
