@@ -238,9 +238,6 @@
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormatSelectionDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\BaseMDIChildForm.resx">
       <DependentUpon>BaseMDIChildForm.cs</DependentUpon>

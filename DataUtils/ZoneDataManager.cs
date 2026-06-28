@@ -20,9 +20,9 @@ namespace DataUtils
         private readonly Encoding encoding = Encoding.Default;
 
         /// <summary>
-        /// Провайдер формата данных
+        /// Провайдер формата данных (мир всегда в YAML)
         /// </summary>
-        private IFormatProvider formatProvider { get { return FormatProviderFactory.GetProvider(StaticData.WorldDataFormat); } }
+        private readonly IFormatProvider formatProvider = new YamlFormatProvider();
 
         /// <summary>
         /// Название зоны (по номеру)

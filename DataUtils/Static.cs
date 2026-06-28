@@ -57,11 +57,6 @@ namespace DataUtils
         /// Необходимость бэкапа зоны перед сохранением
         /// </summary>
         public static bool BackupZones;
-
-        /// <summary>
-        /// Формат данных мира (circlemud, yaml). По умолчанию yaml.
-        /// </summary>
-        public static string WorldDataFormat = "yaml";
     }
 
     public static class Utils

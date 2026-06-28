@@ -146,9 +146,6 @@ namespace DataUtils
             }
         }*/
 
-        readonly Regex num = new Regex("^#(?<Num>\\d+)$", RegexOptions.Compiled);
-        readonly Regex name = new Regex("^(?<Name>.+)~", RegexOptions.Compiled);
-
         // Zone-name regex for the YAML layout's zone.yaml (a simple single-line scalar).
         private static readonly Regex yamlZoneName =
             new Regex("^name:\\s*(?<Name>.+?)\\s*$", RegexOptions.Compiled);
@@ -197,43 +194,10 @@ namespace DataUtils
             return res;
         }
 
-        /// <summary>Discover (number -> name) of zones in the current world for the selected format.</summary>
+        /// <summary>Discover (number -> name) of zones in the world (always YAML).</summary>
         private List<KeyValuePair<string, string>> DiscoverZones()
         {
-            if (string.Equals(StaticData.WorldDataFormat, "yaml", StringComparison.OrdinalIgnoreCase))
-                return DiscoverZonesYaml();
-            return DiscoverZonesCircle();
-        }
-
-        /// <summary>Legacy layout: parse number + name from each world/ZON/*.zon file.</summary>
-        private List<KeyValuePair<string, string>> DiscoverZonesCircle()
-        {
-            var result = new List<KeyValuePair<string, string>>();
-            var targetFolder = new DirectoryInfo(StaticData.WorldFolderPath + @"\ZON\");
-            if (!targetFolder.Exists) return result;
-
-            foreach (FileInfo nextFile in targetFolder.GetFiles())
-            {
-                if (nextFile.Extension != ".zon") continue;
-                string newnumber = "";
-                string newname = "";
-                using (var sr = new StreamReader(nextFile.FullName, StaticData.CurrentEncoding))
-                {
-                    string input;
-                    while ((input = sr.ReadLine()) != null)
-                    {
-                        if (input == "$") break;
-                        if (input.IndexOf("*") == 0) continue;
-                        Match match = num.Match(input);
-                        if (match.Success) { newnumber = match.Groups["Num"].ToString(); continue; }
-                        match = name.Match(input);
-                        if (match.Success) { newname = match.Groups["Name"].ToString(); break; }
-                    }
-                }
-                if (newnumber.Length > 0)
-                    result.Add(new KeyValuePair<string, string>(newnumber, newname));
-            }
-            return result;
+            return DiscoverZonesYaml();
         }
 
         /// <summary>Flat/per-file YAML layout: a zone is a world/zones/&lt;n&gt;/ dir with a zone.yaml.</summary>

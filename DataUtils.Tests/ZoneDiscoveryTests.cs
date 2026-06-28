@@ -33,7 +33,6 @@ namespace DataUtils.Tests
         [Test]
         public void DiscoversYamlZones_FromZonesDir()
         {
-            StaticData.WorldDataFormat = "yaml";
             string zoneDir = Path.Combine(_tmp, "zones", "42");
             Directory.CreateDirectory(zoneDir);
             File.WriteAllText(Path.Combine(zoneDir, "zone.yaml"),
@@ -48,27 +47,9 @@ namespace DataUtils.Tests
         }
 
         [Test]
-        public void DiscoversLegacyZones_FromZonDir()
+        public void IgnoresLegacyZonDir()
         {
-            StaticData.WorldDataFormat = "circlemud";
-            string zonDir = Path.Combine(_tmp, "ZON");
-            Directory.CreateDirectory(zonDir);
-            File.WriteAllText(Path.Combine(zonDir, "42.zon"),
-                "#42\nLegacy Name~\nS\n$\n", StaticData.CurrentEncoding);
-
-            var m = new FileListsDataManager();
-            m.LoadAvailZones();
-
-            ZoneData z = m.ZonesDataList["42"];
-            Assert.That(z, Is.Not.Null, "zone 42 should be discovered from ZON/42.zon");
-            Assert.That(z.Name, Is.EqualTo("Legacy Name"));
-        }
-
-        [Test]
-        public void YamlFormat_IgnoresLegacyZonDir()
-        {
-            // With YAML selected, a stray ZON/ must not be required or scanned.
-            StaticData.WorldDataFormat = "yaml";
+            // A stray legacy ZON/ must not be required or scanned (the world is YAML).
             Directory.CreateDirectory(Path.Combine(_tmp, "ZON"));
             File.WriteAllText(Path.Combine(_tmp, "ZON", "9.zon"),
                 "#9\nLegacy Only~\nS\n$\n", StaticData.CurrentEncoding);
