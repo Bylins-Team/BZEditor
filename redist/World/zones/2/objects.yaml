@@ -1,6 +1,7 @@
 # Objects for zone 2
 
 0:
+  # Object #200
   names:
     aliases: руна твердыня
     nominative: руна твердыни
@@ -13,27 +14,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 200
-  - 1000
-  - 0
+  - '0'
+  - '200'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 1:
+  # Object #201
   names:
     aliases: руна хлябь
     nominative: руна хляби
@@ -46,27 +46,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 201
-  - 1000
-  - 0
+  - '0'
+  - '201'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 2:
+  # Object #202
   names:
     aliases: руна заполнение
     nominative: Руна заполнения
@@ -79,27 +78,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 202
-  - 1000
-  - 0
+  - '0'
+  - '202'
+  - '1000'
+  - '0'
   weight: 1
   cost: 200
   rent_off: 20
   rent_on: 0
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 3:
+  # Object #203
   names:
     aliases: руна опустошение
     nominative: Руна опустошения
@@ -112,27 +110,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 203
-  - 1000
-  - 0
+  - '0'
+  - '203'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 4:
+  # Object #204
   names:
     aliases: руна восхожденчество
     nominative: Руна восхожденчества
@@ -145,27 +142,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 204
-  - 1000
-  - 0
+  - '0'
+  - '204'
+  - '1000'
+  - '0'
   weight: 1
   cost: 10
   rent_off: 10
   rent_on: 10
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 5:
+  # Object #205
   names:
     aliases: руна низложения
     nominative: руна низложения
@@ -178,27 +174,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 205
-  - 500
-  - 0
+  - '0'
+  - '205'
+  - '500'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 6:
+  # Object #206
   names:
     aliases: руна свет
     nominative: руна света
@@ -211,27 +206,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 206
-  - 1000
-  - 0
+  - '0'
+  - '206'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 7:
+  # Object #207
   names:
     aliases: руна тьмы
     nominative: руна тьмы
@@ -244,27 +238,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 207
-  - 1000
-  - 0
+  - '0'
+  - '207'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 8:
+  # Object #208
   names:
     aliases: руна разрушение
     nominative: Руна разрушения
@@ -277,27 +270,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 208
-  - 1000
-  - 0
+  - '0'
+  - '208'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 9:
+  # Object #209
   names:
     aliases: руна созидание
     nominative: руна созидания
@@ -310,27 +302,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 209
-  - 1000
-  - 0
+  - '0'
+  - '209'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 10:
+  # Object #210
   names:
     aliases: руна движение
     nominative: руна движения
@@ -343,27 +334,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 210
-  - 1000
-  - 0
+  - '0'
+  - '210'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 11:
+  # Object #211
   names:
     aliases: руна покой
     nominative: руна покоя
@@ -376,27 +366,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 211
-  - 1000
-  - 0
+  - '0'
+  - '211'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 12:
+  # Object #212
   names:
     aliases: руна истина
     nominative: руна истины
@@ -409,27 +398,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 212
-  - 1000
-  - 0
+  - '0'
+  - '212'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 13:
+  # Object #213
   names:
     aliases: руна лжи
     nominative: Руна лжи
@@ -442,17 +430,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 213
-  - 1000
-  - 0
+  - '0'
+  - '213'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
@@ -460,9 +448,9 @@
   level: 1
   sex: kFemale
   max_in_world: 50
-  minimum_remorts: 0
 
 14:
+  # Object #214
   names:
     aliases: руна души
     nominative: Руна души
@@ -475,27 +463,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 214
-  - 1000
-  - 0
+  - '0'
+  - '214'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 15:
+  # Object #215
   names:
     aliases: руна тела
     nominative: руна тела
@@ -508,27 +495,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 215
-  - 1000
-  - 0
+  - '0'
+  - '215'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 16:
+  # Object #216
   names:
     aliases: руна указующий перст
     nominative: руна указующего перста
@@ -541,27 +527,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 216
-  - 1000
-  - 0
+  - '0'
+  - '216'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 17:
+  # Object #217
   names:
     aliases: руна единение
     nominative: Руна единения
@@ -574,27 +559,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 217
-  - 1000
-  - 0
+  - '0'
+  - '217'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 18:
+  # Object #218
   names:
     aliases: руна разобщение
     nominative: Руна разобщения
@@ -607,27 +591,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 218
-  - 1000
-  - 0
+  - '0'
+  - '218'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 19:
+  # Object #219
   names:
     aliases: руна трансформация
     nominative: руна трансформации
@@ -640,27 +623,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 219
-  - 1000
-  - 0
+  - '0'
+  - '219'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 20:
+  # Object #220
   names:
     aliases: руна власти
     nominative: руна власти
@@ -673,27 +655,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 220
-  - 1000
-  - 0
+  - '0'
+  - '220'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 21:
+  # Object #221
   names:
     aliases: руна небес
     nominative: Руна небес
@@ -706,27 +687,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 221
-  - 1000
-  - 0
+  - '0'
+  - '221'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 22:
+  # Object #222
   names:
     aliases: руна земли
     nominative: руна земли
@@ -739,17 +719,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 222
-  - 1000
-  - 0
+  - '0'
+  - '222'
+  - '1000'
+  - '0'
   weight: 1
   cost: 10
   rent_off: 10
   rent_on: 10
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
@@ -757,9 +737,9 @@
   level: 1
   sex: kFemale
   max_in_world: 100000
-  minimum_remorts: 0
 
 23:
+  # Object #223
   names:
     aliases: руна воды
     nominative: руна воды
@@ -772,17 +752,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 223
-  - 1000
-  - 0
+  - '0'
+  - '223'
+  - '1000'
+  - '0'
   weight: 1
   cost: 10
   rent_off: 10
   rent_on: 10
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
@@ -790,9 +770,9 @@
   level: 1
   sex: kFemale
   max_in_world: 100000
-  minimum_remorts: 0
 
 24:
+  # Object #224
   names:
     aliases: руна огня
     nominative: руна огня
@@ -805,17 +785,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 224
-  - 1000
-  - 0
+  - '0'
+  - '224'
+  - '1000'
+  - '0'
   weight: 1
   cost: 10
   rent_off: 10
   rent_on: 10
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
@@ -823,9 +803,9 @@
   level: 1
   sex: kFemale
   max_in_world: 100000
-  minimum_remorts: 0
 
 25:
+  # Object #225
   names:
     aliases: руна воздуха
     nominative: руна воздуха
@@ -838,17 +818,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 225
-  - 1000
-  - 0
+  - '0'
+  - '225'
+  - '1000'
+  - '0'
   weight: 1
   cost: 10
   rent_off: 10
   rent_on: 10
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
@@ -856,9 +836,9 @@
   level: 1
   sex: kFemale
   max_in_world: 100000
-  minimum_remorts: 0
 
 26:
+  # Object #226
   names:
     aliases: руна богов
     nominative: Руна богов
@@ -871,27 +851,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 226
-  - 1000
-  - 0
+  - '0'
+  - '226'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 27:
+  # Object #227
   names:
     aliases: руна смерти
     nominative: руна смерти
@@ -904,27 +883,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 227
-  - 1000
-  - 0
+  - '0'
+  - '227'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 28:
+  # Object #228
   names:
     aliases: руна движения
     nominative: руна движения
@@ -935,29 +913,30 @@
     prepositional: руне движения
   short_desc: Магическая руна лежит тут на земле.
   type: kMagicIngredient
+  extra_flags:
+  - kTicktimer
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 228
-  - 1000
-  - 0
+  - '0'
+  - '228'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 29:
+  # Object #229
   names:
     aliases: руна сознания
     nominative: руна сознания
@@ -970,27 +949,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 229
-  - 1000
-  - 0
+  - '0'
+  - '229'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 30:
+  # Object #230
   names:
     aliases: руна отражения
     nominative: Руна отражения
@@ -1003,27 +981,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 230
-  - 1000
-  - 0
+  - '0'
+  - '230'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 31:
+  # Object #231
   names:
     aliases: руна грома
     nominative: руна грома
@@ -1036,27 +1013,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 231
-  - 1000
-  - 0
+  - '0'
+  - '231'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 32:
+  # Object #232
   names:
     aliases: руна благости
     nominative: Руна благости
@@ -1069,17 +1045,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 232
-  - 1000
-  - 0
+  - '0'
+  - '232'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
@@ -1087,9 +1063,9 @@
   level: 1
   sex: kFemale
   max_in_world: 50
-  minimum_remorts: 0
 
 34:
+  # Object #234
   names:
     aliases: руна ярости
     nominative: Руна ярости
@@ -1102,27 +1078,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 234
-  - 1000
-  - 0
+  - '0'
+  - '234'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 35:
+  # Object #235
   names:
     aliases: руна вражды
     nominative: Руна вражды
@@ -1135,27 +1110,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 235
-  - 1000
-  - 0
+  - '0'
+  - '235'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 36:
+  # Object #236
   names:
     aliases: руна разума
     nominative: руна разума
@@ -1168,27 +1142,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 236
-  - 1000
-  - 0
+  - '0'
+  - '236'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 38:
+  # Object #238
   names:
     aliases: руна живота
     nominative: руна живота
@@ -1201,17 +1174,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 238
-  - 1000
-  - 0
+  - '0'
+  - '238'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
@@ -1219,9 +1192,9 @@
   level: 1
   sex: kFemale
   max_in_world: 50
-  minimum_remorts: 0
 
 39:
+  # Object #239
   names:
     aliases: руна подобия
     nominative: Руна подобия
@@ -1234,27 +1207,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 239
-  - 1000
-  - 0
+  - '0'
+  - '239'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 40:
+  # Object #240
   names:
     aliases: руна погибели
     nominative: руна погибели
@@ -1267,17 +1239,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 240
-  - 1000
-  - 0
+  - '0'
+  - '240'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
@@ -1285,9 +1257,9 @@
   level: 1
   sex: kFemale
   max_in_world: -1
-  minimum_remorts: 0
 
 41:
+  # Object #241
   names:
     aliases: руна скорби
     nominative: Руна скорби
@@ -1300,17 +1272,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 241
-  - 1000
-  - 0
+  - '0'
+  - '241'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
@@ -1318,9 +1290,9 @@
   level: 1
   sex: kFemale
   max_in_world: 50
-  minimum_remorts: 0
 
 42:
+  # Object #242
   names:
     aliases: руна порядка
     nominative: руна порядка
@@ -1333,27 +1305,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 242
-  - 1000
-  - 0
+  - '0'
+  - '242'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 43:
+  # Object #243
   names:
     aliases: руна хаоса
     nominative: Руна хаоса
@@ -1366,27 +1337,26 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 243
-  - 1000
-  - 0
+  - '0'
+  - '243'
+  - '1000'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 50
   rent_on: 50
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 90
   timer: 43200
   spell: -1
   level: 1
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 44:
+  # Object #244
   names:
     aliases: бочка
     nominative: бочка
@@ -1397,12 +1367,14 @@
     prepositional: бочке
   short_desc: Бочка с характерным запахом стоит здесь.
   type: kFountain
-  material: 9
+  extra_flags:
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 999
-  - 999
-  - 3
-  - 0
+  - '999'
+  - '999'
+  - '3'
+  - '0'
   weight: 1004
   cost: 10000
   rent_off: 10000
@@ -1414,10 +1386,9 @@
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 45:
+  # Object #245
   names:
     aliases: руна грозы
     nominative: Руна грозы
@@ -1430,17 +1401,17 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 3
+  material: 3  # булат
   values:
-  - 0
-  - 245
-  - 1000
-  - 0
+  - '0'
+  - '245'
+  - '1000'
+  - '0'
   weight: 2
   cost: 100
   rent_off: 20
   rent_on: 20
-  spec_param: 0
+  spec_param: 19
   max_durability: 100
   cur_durability: 100
   timer: 44640
@@ -1448,9 +1419,9 @@
   level: 0
   sex: kFemale
   max_in_world: 50
-  minimum_remorts: 0
 
 50:
+  # Object #250
   names:
     aliases: доска объявлений для богов
     nominative: доска для сообщений богов
@@ -1461,12 +1432,16 @@
     prepositional: доске объявлений
   short_desc: Доска для сообщений богов летает тут
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1479,9 +1454,9 @@
   level: 0
   sex: kFemale
   max_in_world: 10000
-  minimum_remorts: 0
 
 51:
+  # Object #251
   names:
     aliases: доска объявлений
     nominative: доска заявок и предложений
@@ -1492,12 +1467,17 @@
     prepositional: доске заявок и предложений
   short_desc: Доска для различных заметок и объявлений прибита тут
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kNoinvis
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1510,9 +1490,9 @@
   level: 0
   sex: kFemale
   max_in_world: 10000
-  minimum_remorts: 0
 
 52:
+  # Object #252
   names:
     aliases: доска объявлений
     nominative: доска объявлений
@@ -1523,12 +1503,16 @@
     prepositional: доске объявлений
   short_desc: Доска для различных заметок и объявлений прибита тут
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1541,9 +1525,9 @@
   level: 0
   sex: kFemale
   max_in_world: 2
-  minimum_remorts: 0
 
 53:
+  # Object #253
   names:
     aliases: доска объявлений
     nominative: доска объявлений
@@ -1554,12 +1538,16 @@
     prepositional: доске объявлений
   short_desc: На этой доске пишем известные баги
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1572,9 +1560,9 @@
   level: 0
   sex: kFemale
   max_in_world: 100
-  minimum_remorts: 0
 
 54:
+  # Object #254
   names:
     aliases: доска объявлений
     nominative: доска объявлений
@@ -1585,12 +1573,17 @@
     prepositional: доске объявлений
   short_desc: Доска для различных заметок и объявлений прибита тут
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kNoinvis
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1602,10 +1595,9 @@
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 55:
+  # Object #255
   names:
     aliases: мортальный доска
     nominative: мортальная доска
@@ -1616,12 +1608,16 @@
     prepositional: мортальной доске
   short_desc: Сияющая доска для мортальных сообщений парит в воздухе
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1633,10 +1629,9 @@
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 56:
+  # Object #256
   names:
     aliases: доска объявлений
     nominative: доска объявлений
@@ -1647,12 +1642,16 @@
     prepositional: доске объявлений
   short_desc: Доска для различных заметок и объявлений прибита тут
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1664,10 +1663,9 @@
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 57:
+  # Object #257
   names:
     aliases: доска сообщений наказания
     nominative: доска
@@ -1678,12 +1676,16 @@
     prepositional: доске
   short_desc: Доска для сообщений об наказаниях вырезанна тут
   type: kNote
-  material: 9
+  extra_flags:
+  - kHum
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1696,9 +1698,9 @@
   level: 0
   sex: kFemale
   max_in_world: 1
-  minimum_remorts: 0
 
 58:
+  # Object #258
   names:
     aliases: доска объявлений
     nominative: доска объявлений
@@ -1709,12 +1711,16 @@
     prepositional: доске объявлений
   short_desc: Доска для различных заметок и объявлений прибита тут
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1726,10 +1732,9 @@
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 59:
+  # Object #259
   names:
     aliases: доска объявлений
     nominative: доска объявлений
@@ -1740,12 +1745,16 @@
     prepositional: доске объявлений
   short_desc: Доска для написания сообщений билдеров прибита тут
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1758,9 +1767,9 @@
   level: 0
   sex: kFemale
   max_in_world: 1
-  minimum_remorts: 0
 
 60:
+  # Object #260
   names:
     aliases: доска наказаний
     nominative: доска наказаний
@@ -1771,12 +1780,14 @@
     prepositional: доске наказаний
   short_desc: Доска наказаний стоит тут
   type: kNote
-  material: 16
+  extra_flags:
+  - kGlow
+  material: 16  # платина
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1788,10 +1799,9 @@
   spell: 0
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 61:
+  # Object #261
   names:
     aliases: колечко янтарное
     nominative: янтарное колечко
@@ -1803,16 +1813,18 @@
   short_desc: Красивое янтарное колечко сверкает на земле.
   type: kWorm
   extra_flags:
-  - kNorent
+  - kNodecay
   wear_flags:
   - kTake
   - kFinger
-  material: 18
+  affect_flags:
+  - kDetectAlign
+  material: 18  # алмаз
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 1
   cost: 100
   rent_off: 10
@@ -1824,10 +1836,9 @@
   spell: 0
   level: 0
   sex: kNeutral
-  max_in_world: 0
-  minimum_remorts: 0
 
 62:
+  # Object #262
   names:
     aliases: рубль
     nominative: рубль
@@ -1837,16 +1848,18 @@
     instrumental: рублем
     prepositional: рубле
   short_desc: Грязная бумажка валяется в пыли.
+  action_desc: |2+
+
   type: kTrash
   wear_flags:
   - kTake
   - kWield
-  material: 17
+  material: 17  # митрил
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 1
   rent_off: 0
@@ -1858,10 +1871,9 @@
   spell: 0
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 66:
+  # Object #266
   names:
     aliases: красна цепь
     nominative: красна цепь
@@ -1875,12 +1887,12 @@
   wear_flags:
   - kTake
   - kNeck
-  material: 4
+  material: 4  # кристалл
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 1
   cost: 10
   rent_off: 100
@@ -1893,12 +1905,11 @@
   level: 0
   sex: kNeutral
   applies:
-  - location: 6
+  - location: 6  # kCha
     modifier: 10
-  max_in_world: 0
-  minimum_remorts: 0
 
 67:
+  # Object #267
   names:
     aliases: доска объявлений
     nominative: доска объявлений
@@ -1909,12 +1920,16 @@
     prepositional: доске объявлений
   short_desc: Доска для записей покачивается в пространстве между колоннами.
   type: kNote
-  material: 9
+  extra_flags:
+  - kGlow
+  - kMagic
+  - kNodecay
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1927,9 +1942,9 @@
   level: 0
   sex: kFemale
   max_in_world: 1
-  minimum_remorts: 0
 
 68:
+  # Object #268
   names:
     aliases: доска объявлений
     nominative: доска объявлений
@@ -1940,12 +1955,17 @@
     prepositional: доске объявлений
   short_desc: Доска объявлений от Бессмертных стоит здесь.
   type: kNote
-  material: 13
+  extra_flags:
+  - kGlow
+  - kNodecay
+  - kFlying
+  - kNolocate
+  material: 13  # камень
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 1
   cost: 0
   rent_off: 0
@@ -1957,10 +1977,9 @@
   spell: 0
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 91:
+  # Object #291
   names:
     aliases: новый предмет
     nominative: это что
@@ -1973,12 +1992,12 @@
   type: kItemUndefined
   wear_flags:
   - kTake
-  material: 0
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -1990,5 +2009,3 @@
   spell: 0
   level: 0
   sex: kNeutral
-  max_in_world: 0
-  minimum_remorts: 0

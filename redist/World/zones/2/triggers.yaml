@@ -1,13 +1,14 @@
 # Triggers for zone 2
 
 0:
+  # Trigger #200
   name: триггнаелке
   attach_type: kObjTrigger
   trigger_types:
   - kCommand
   narg: 100
   arglist: хоровод
-  script: |-
+  script: |
     osend %actor.name% Вы вспомнили детство и с радостью стали прыгать вокруг елочки.
     wait 2s
     if %actor.sex%==1

@@ -1,6 +1,7 @@
 # Mobs for zone 2
 
 0:
+  # Mob #200
   names:
     aliases: моб первого уровня
     nominative: моб первого уровня
@@ -10,9 +11,9 @@
     instrumental: мобом первого уровня
     prepositional: мобе первого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Моб первого уровня прохаживается здесь
-    long_desc: |-
+    long_desc: |
       Приглядевшись повнимательнее, Вы заметили, что это существо всего лишь
       первого уровня
   action_flags:
@@ -24,7 +25,7 @@
   mob_type: E
   stats:
     level: 1
-    hitroll_penalty: 0
+    hitroll_penalty: 20
     armor: 10
     hp:
       dice_count: 5
@@ -43,26 +44,19 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 31
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 3
   enhanced:
     special_bitvector: '0'
 
 1:
+  # Mob #201
   names:
     aliases: моб первого уровня
     nominative: моб первого уровня
@@ -72,9 +66,9 @@
     instrumental: мобом первого уровня
     prepositional: мобе первого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Моб первого уровня прохаживается здесь
-    long_desc: |-
+    long_desc: |
       Приглядевшись повнимательнее, Вы заметили, что это существо всего лишь
       первого уровня
   action_flags:
@@ -86,7 +80,7 @@
   mob_type: E
   stats:
     level: 1
-    hitroll_penalty: 0
+    hitroll_penalty: 20
     armor: 10
     hp:
       dice_count: 5
@@ -105,26 +99,19 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 31
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 3
   enhanced:
     special_bitvector: '0'
 
 2:
+  # Mob #202
   names:
     aliases: моб второго уровня
     nominative: моб второго уровня
@@ -134,9 +121,9 @@
     instrumental: мобом второго уровня
     prepositional: мобе второго уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Маленький моб стоит и размышляет о жизни
-    long_desc: |-
+    long_desc: |
       Странно, подумали Вы, взглянув на это создание, что такое умное на вид
       существо всего лишь второго уровня
   action_flags:
@@ -148,7 +135,7 @@
   mob_type: E
   stats:
     level: 2
-    hitroll_penalty: 1
+    hitroll_penalty: 19
     armor: 10
     hp:
       dice_count: 5
@@ -167,26 +154,19 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 32
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 6
   enhanced:
     special_bitvector: '0'
 
 3:
+  # Mob #203
   names:
     aliases: моб третьего уровня
     nominative: моб третьего уровня
@@ -196,9 +176,9 @@
     instrumental: мобом третьего уровня
     prepositional: мобе третьего уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Пузатая мелочь шныряет под ногами
-    long_desc: |-
+    long_desc: |
       Приглядевшись внимательнее, Вы заметили, что эта пузатая мелочь
       третьего уровня
   action_flags:
@@ -210,7 +190,7 @@
   mob_type: E
   stats:
     level: 3
-    hitroll_penalty: 2
+    hitroll_penalty: 18
     armor: 9
     hp:
       dice_count: 10
@@ -229,26 +209,19 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 33
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 9
   enhanced:
     special_bitvector: '0'
 
 4:
+  # Mob #204
   names:
     aliases: моб четвертого уровня
     nominative: моб четвертого уровня
@@ -258,9 +231,9 @@
     instrumental: мобом четвертого уровня
     prepositional: мобе четвертого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Пузатая немелочь расхаживает взад вперед
-    long_desc: |-
+    long_desc: |
       Странно, подумали Вы, взглянув на это создание, что такое умное на вид
       существо всего лишь четвертого уровня
   action_flags:
@@ -272,7 +245,7 @@
   mob_type: E
   stats:
     level: 4
-    hitroll_penalty: 3
+    hitroll_penalty: 17
     armor: 9
     hp:
       dice_count: 20
@@ -291,26 +264,19 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 34
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 12
   enhanced:
     special_bitvector: '0'
 
 5:
+  # Mob #205
   names:
     aliases: чармис пятого уровня
     nominative: чармис пятого уровня дамагер
@@ -320,8 +286,10 @@
     instrumental: чармисом пятого уровня
     prepositional: чармисе пятого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Это просто чармис пятого уровня
+    long_desc: |2+
+
   action_flags:
   - kNpc
   affect_flags:
@@ -330,7 +298,7 @@
   mob_type: E
   stats:
     level: 5
-    hitroll_penalty: 6
+    hitroll_penalty: 14
     armor: 9
     hp:
       dice_count: 5
@@ -349,26 +317,19 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 35
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 15
   enhanced:
     special_bitvector: '0'
 
 6:
+  # Mob #206
   names:
     aliases: чармис шестого уровня
     nominative: чармис шестого уровня танк
@@ -378,8 +339,10 @@
     instrumental: чармисом шестого уровня
     prepositional: чармисе шестого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис шестого уровня стоит тут
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -389,7 +352,7 @@
   mob_type: E
   stats:
     level: 6
-    hitroll_penalty: 5
+    hitroll_penalty: 15
     armor: 8
     hp:
       dice_count: 10
@@ -408,28 +371,21 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 36
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 18
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 10
   enhanced:
     special_bitvector: '0'
 
 7:
+  # Mob #207
   names:
     aliases: чармис седьмого уровня
     nominative: чармис седьмого уровня_дамаг
@@ -439,8 +395,10 @@
     instrumental: чармисом седьмого уровня
     prepositional: чармисе седьмого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис седьмого уровня расположился тут
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -450,7 +408,7 @@
   mob_type: E
   stats:
     level: 7
-    hitroll_penalty: 7
+    hitroll_penalty: 13
     armor: 8
     hp:
       dice_count: 10
@@ -469,26 +427,19 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 37
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 21
   enhanced:
     special_bitvector: '0'
 
 8:
+  # Mob #208
   names:
     aliases: чармис восьмого уровня
     nominative: чармис восьмого уровня_танк
@@ -498,8 +449,10 @@
     instrumental: чармисом восьмого уровня
     prepositional: чармисе восьмого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Несколько раздобревший вширь чармис стоит здесь
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -509,7 +462,7 @@
   mob_type: E
   stats:
     level: 8
-    hitroll_penalty: 7
+    hitroll_penalty: 13
     armor: 8
     hp:
       dice_count: 15
@@ -528,28 +481,21 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 38
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 24
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 16
   enhanced:
     special_bitvector: '0'
 
 9:
+  # Mob #209
   names:
     aliases: чармис девятого уровня
     nominative: чармис девятого уровня_дамаг
@@ -559,8 +505,10 @@
     instrumental: чармисом девятого уровня
     prepositional: чармисе девятого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Несколько раздобревший вширь и ввысь чармис стоит туточки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -570,7 +518,7 @@
   mob_type: E
   stats:
     level: 9
-    hitroll_penalty: 9
+    hitroll_penalty: 11
     armor: 7
     hp:
       dice_count: 25
@@ -589,27 +537,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 39
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 27
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 10:
+  # Mob #210
   names:
     aliases: чармис десятого уровня
     nominative: чармис десятого уровня_танк
@@ -619,8 +560,10 @@
     instrumental: чармисом десятого уровня
     prepositional: чармисе десятого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Несколько обнаглевший чармис смотрит на Вас, не отрываясь.
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -630,7 +573,7 @@
   mob_type: E
   stats:
     level: 10
-    hitroll_penalty: 9
+    hitroll_penalty: 11
     armor: 7
     hp:
       dice_count: 40
@@ -649,29 +592,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 40
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 30
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 22
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 11:
+  # Mob #211
   names:
     aliases: чармис одиннадцатого уровня
     nominative: чармис одиннадцатого уровня_дамаг
@@ -681,8 +617,10 @@
     instrumental: чармисом одиннадцатого уровня
     prepositional: чармисе одиннадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис средних размеров глазеет на окружающих
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -692,7 +630,7 @@
   mob_type: E
   stats:
     level: 11
-    hitroll_penalty: 11
+    hitroll_penalty: 9
     armor: 6
     hp:
       dice_count: 25
@@ -711,27 +649,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 41
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 33
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 12:
+  # Mob #212
   names:
     aliases: чармис двенадцатого уровня
     nominative: чармис двенадцатого уровня_танк
@@ -741,8 +672,10 @@
     instrumental: чармисом двенадцатого уровня
     prepositional: чармисе двенадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис средних размеров обозревает окрестности
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -771,29 +704,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 42
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 36
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 28
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 13:
+  # Mob #213
   names:
     aliases: чармис тринадцатого уровня
     nominative: чармис тринадцатого уровня_дамаг
@@ -803,8 +729,10 @@
     instrumental: чармисом тринадцатого уровня
     prepositional: чармисе тринадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Маленький чертенок считает до дюжины
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -814,7 +742,7 @@
   mob_type: E
   stats:
     level: 13
-    hitroll_penalty: 11
+    hitroll_penalty: 9
     armor: 5
     hp:
       dice_count: 20
@@ -833,27 +761,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 43
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 39
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 14:
+  # Mob #214
   names:
     aliases: чармис четырнадцатого уровня
     nominative: чармис четырнадцатого уровня
@@ -863,8 +784,10 @@
     instrumental: чармисом четырнадцатого уровня
     prepositional: чармисе четырнадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Высокий дылда опирается на сучковатую дубину
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -874,7 +797,7 @@
   mob_type: E
   stats:
     level: 14
-    hitroll_penalty: 12
+    hitroll_penalty: 8
     armor: 5
     hp:
       dice_count: 20
@@ -893,29 +816,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 44
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 42
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 34
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 15:
+  # Mob #215
   names:
     aliases: чармис пятнадцатого уровня
     nominative: чармис пятнадцатого уровня
@@ -925,8 +841,10 @@
     instrumental: чармисом пятнадцатого уровня
     prepositional: чармисе пятнадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Просто чармис просто пятнадцатого уровня.
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -936,7 +854,7 @@
   mob_type: E
   stats:
     level: 15
-    hitroll_penalty: 12
+    hitroll_penalty: 8
     armor: 5
     hp:
       dice_count: 10
@@ -955,27 +873,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 45
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 45
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 16:
+  # Mob #216
   names:
     aliases: чармис шестнадцатого уровня
     nominative: чармис шестнадцатого уровня
@@ -985,8 +896,10 @@
     instrumental: чармисом шестнадцатого уровня
     prepositional: чармисе шестнадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Просто чармис шестнадцатого уровня.
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -996,7 +909,7 @@
   mob_type: E
   stats:
     level: 16
-    hitroll_penalty: 13
+    hitroll_penalty: 7
     armor: 4
     hp:
       dice_count: 10
@@ -1015,29 +928,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 46
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 48
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 40
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 17:
+  # Mob #217
   names:
     aliases: чармис семнадцатого уровня
     nominative: чармис семнадцатого уровня
@@ -1047,8 +953,10 @@
     instrumental: чармисом семнадцатого уровня
     prepositional: чармисе семнадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Чармис семнадцатого уровня мается дурью.
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1058,7 +966,7 @@
   mob_type: E
   stats:
     level: 17
-    hitroll_penalty: 13
+    hitroll_penalty: 7
     armor: 4
     hp:
       dice_count: 20
@@ -1077,27 +985,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 47
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 51
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 18:
+  # Mob #218
   names:
     aliases: чармис восемнадцатого уровня
     nominative: чармис восемнадцатого уровня
@@ -1107,8 +1008,10 @@
     instrumental: чармисом восемнадцатого уровня
     prepositional: чармисе восемнадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Чармис восемнадцатого уровня просто стоит тут.
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1118,7 +1021,7 @@
   mob_type: E
   stats:
     level: 18
-    hitroll_penalty: 14
+    hitroll_penalty: 6
     armor: 4
     hp:
       dice_count: 20
@@ -1137,29 +1040,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 48
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 54
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 46
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 19:
+  # Mob #219
   names:
     aliases: чармис девятнадцатого уровня
     nominative: чармис девятнадцатого уровня
@@ -1169,8 +1065,10 @@
     instrumental: чармисом девятнадцатого уровня
     prepositional: чармисе девятнадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       Девятнадцатиуровневый монстр рычит на Вас.
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1180,7 +1078,7 @@
   mob_type: E
   stats:
     level: 19
-    hitroll_penalty: 14
+    hitroll_penalty: 6
     armor: 3
     hp:
       dice_count: 40
@@ -1199,27 +1097,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 49
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 57
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 20:
+  # Mob #220
   names:
     aliases: чармис двадцатого уровня
     nominative: чармис двадцатого уровня_танк
@@ -1229,8 +1120,10 @@
     instrumental: чармисом двадцатого уровня
     prepositional: чармисе двадцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1240,7 +1133,7 @@
   mob_type: E
   stats:
     level: 20
-    hitroll_penalty: 15
+    hitroll_penalty: 5
     armor: 3
     hp:
       dice_count: 50
@@ -1259,29 +1152,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 50
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 60
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 52
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 21:
+  # Mob #221
   names:
     aliases: чармис двадцать первого уровня
     nominative: чармис двадцать первого уровня_дамаг
@@ -1291,8 +1177,10 @@
     instrumental: чармисом двадцать первого уровня
     prepositional: чармисе двадцать первого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцать первого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1302,7 +1190,7 @@
   mob_type: E
   stats:
     level: 21
-    hitroll_penalty: 16
+    hitroll_penalty: 4
     armor: 3
     hp:
       dice_count: 20
@@ -1321,27 +1209,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 51
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 63
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 22:
+  # Mob #222
   names:
     aliases: чармис двадцать второго уровня
     nominative: чармис двадцать второго уровня_танк
@@ -1351,8 +1232,10 @@
     instrumental: чармисом двадцать второго уровня
     prepositional: чармисе двадцать второго уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцать второго уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1362,7 +1245,7 @@
   mob_type: E
   stats:
     level: 22
-    hitroll_penalty: 17
+    hitroll_penalty: 3
     armor: 2
     hp:
       dice_count: 20
@@ -1381,29 +1264,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 52
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 66
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 58
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 23:
+  # Mob #223
   names:
     aliases: чармис двадцать третьего уровня
     nominative: чармис двадцать третьего уровня_дамаг
@@ -1413,8 +1289,10 @@
     instrumental: чармисом двадцать третьего уровня
     prepositional: чармисе двадцать третьего уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцать третьего уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1424,7 +1302,7 @@
   mob_type: E
   stats:
     level: 23
-    hitroll_penalty: 17
+    hitroll_penalty: 3
     armor: 2
     hp:
       dice_count: 40
@@ -1443,27 +1321,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 53
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 69
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 24:
+  # Mob #224
   names:
     aliases: чармис двадцать четвертого уровня
     nominative: чармис двадцать четвертого уровня_танк
@@ -1473,8 +1344,10 @@
     instrumental: чармисом двадцать четвертого уровня
     prepositional: чармисе двадцать четвертого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцать четвертого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1484,7 +1357,7 @@
   mob_type: E
   stats:
     level: 24
-    hitroll_penalty: 18
+    hitroll_penalty: 2
     armor: 2
     hp:
       dice_count: 100
@@ -1503,29 +1376,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 54
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 72
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 64
   enhanced:
     extra_attack: 1
     special_bitvector: '0'
 
 25:
+  # Mob #225
   names:
     aliases: чармис двадцать пятого уровня
     nominative: чармис двадцать пятого уровня_дамаг
@@ -1535,8 +1401,10 @@
     instrumental: чармисом двадцать пятого уровня
     prepositional: чармисе двадцать пятого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцать пятого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1546,7 +1414,7 @@
   mob_type: E
   stats:
     level: 25
-    hitroll_penalty: 18
+    hitroll_penalty: 2
     armor: 1
     hp:
       dice_count: 40
@@ -1565,27 +1433,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 55
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 75
   enhanced:
     extra_attack: 2
     special_bitvector: '0'
 
 26:
+  # Mob #226
   names:
     aliases: чармис двадцать шестого уровня
     nominative: чармис двадцать шестого уровня_танк
@@ -1595,8 +1456,10 @@
     instrumental: чармисом двадцать шестого уровня
     prepositional: чармисе двадцать шестого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцать шестого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1606,7 +1469,7 @@
   mob_type: E
   stats:
     level: 26
-    hitroll_penalty: 18
+    hitroll_penalty: 2
     armor: 1
     hp:
       dice_count: 100
@@ -1625,29 +1488,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 56
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 78
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 70
   enhanced:
     extra_attack: 2
     special_bitvector: '0'
 
 27:
+  # Mob #227
   names:
     aliases: чармис двадцать седьмого уровня
     nominative: чармис двадцать седьмого уровня_дамаг
@@ -1657,8 +1513,10 @@
     instrumental: чармисом двадцать седьмого уровня
     prepositional: чармисе двадцать седьмого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцать седьмого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1668,7 +1526,7 @@
   mob_type: E
   stats:
     level: 27
-    hitroll_penalty: 19
+    hitroll_penalty: 1
     armor: 0
     hp:
       dice_count: 40
@@ -1687,27 +1545,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 57
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 81
   enhanced:
     extra_attack: 2
     special_bitvector: '0'
 
 28:
+  # Mob #228
   names:
     aliases: чармис двадцать восьмого уровня
     nominative: чармис двадцать восьмого уровня_танк
@@ -1717,8 +1568,10 @@
     instrumental: чармисом двадцать восьмого уровня
     prepositional: чармисе двадцать восьмого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцать восьмого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1728,7 +1581,7 @@
   mob_type: E
   stats:
     level: 28
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -1
     hp:
       dice_count: 100
@@ -1747,29 +1600,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 58
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 84
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 76
   enhanced:
     extra_attack: 2
     special_bitvector: '0'
 
 29:
+  # Mob #229
   names:
     aliases: чармис двадцать девятого уровня
     nominative: чармис двадцать девятого уровня_дамаг
@@ -1779,8 +1625,10 @@
     instrumental: чармисом двадцать девятого уровня
     prepositional: чармисе двадцать девятого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис двадцать девятого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1790,7 +1638,7 @@
   mob_type: E
   stats:
     level: 29
-    hitroll_penalty: 21
+    hitroll_penalty: -1
     armor: -2
     hp:
       dice_count: 100
@@ -1809,27 +1657,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 59
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 87
   enhanced:
     extra_attack: 3
     special_bitvector: '0'
 
 30:
+  # Mob #230
   names:
     aliases: чармис тридцатого уровня
     nominative: чармис тридцатого уровня_танк
@@ -1839,8 +1680,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1850,7 +1693,7 @@
   mob_type: E
   stats:
     level: 30
-    hitroll_penalty: 21
+    hitroll_penalty: -1
     armor: -3
     hp:
       dice_count: 100
@@ -1870,28 +1713,23 @@
     start: kStand
   sex: kMale
   attributes:
-    strength: 11
     dexterity: 25
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 60
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 90
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 82
   enhanced:
     extra_attack: 3
     special_bitvector: '0'
 
 31:
+  # Mob #231
   names:
     aliases: чармис тридцать первого уровня_дамаг
     nominative: чармис тридцать первого уровня_дамаг
@@ -1901,8 +1739,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1912,7 +1752,7 @@
   mob_type: E
   stats:
     level: 31
-    hitroll_penalty: 21
+    hitroll_penalty: -1
     armor: -2
     hp:
       dice_count: 100
@@ -1931,27 +1771,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 61
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 93
   enhanced:
     extra_attack: 3
     special_bitvector: '0'
 
 32:
+  # Mob #232
   names:
     aliases: чармис тридцать воторого уровня_танк
     nominative: чармис тридцать воторого уровня_танк
@@ -1961,8 +1794,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -1972,7 +1807,7 @@
   mob_type: E
   stats:
     level: 32
-    hitroll_penalty: 22
+    hitroll_penalty: -2
     armor: -3
     hp:
       dice_count: 100
@@ -1991,29 +1826,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 63
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 96
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 88
   enhanced:
     extra_attack: 3
     special_bitvector: '0'
 
 33:
+  # Mob #233
   names:
     aliases: чармис тридцать третего уровня_дамаг
     nominative: чармис тридцать третего уровня_дамаг
@@ -2023,8 +1851,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2034,7 +1864,7 @@
   mob_type: E
   stats:
     level: 33
-    hitroll_penalty: 22
+    hitroll_penalty: -2
     armor: -3
     hp:
       dice_count: 100
@@ -2053,27 +1883,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 63
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 99
   enhanced:
     extra_attack: 3
     special_bitvector: '0'
 
 34:
+  # Mob #234
   names:
     aliases: чармис тридцать четвертого уровня_танк
     nominative: чармис тридцать четвертого уровня_танк
@@ -2083,8 +1906,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2094,7 +1919,7 @@
   mob_type: E
   stats:
     level: 34
-    hitroll_penalty: 23
+    hitroll_penalty: -3
     armor: -4
     hp:
       dice_count: 100
@@ -2113,29 +1938,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 63
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 102
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 94
   enhanced:
     extra_attack: 3
     special_bitvector: '0'
 
 35:
+  # Mob #235
   names:
     aliases: чармис тридцать пятого уровня_дамаг
     nominative: чармис тридцать пятого уровня_дамаг
@@ -2145,8 +1963,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2156,7 +1976,7 @@
   mob_type: E
   stats:
     level: 35
-    hitroll_penalty: 24
+    hitroll_penalty: -4
     armor: -3
     hp:
       dice_count: 100
@@ -2175,27 +1995,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 63
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 105
   enhanced:
     extra_attack: 3
     special_bitvector: '0'
 
 36:
+  # Mob #236
   names:
     aliases: чармис тридцать шестого уровня_танк
     nominative: чармис тридцать шестого уровня_танк
@@ -2205,8 +2018,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2216,7 +2031,7 @@
   mob_type: E
   stats:
     level: 36
-    hitroll_penalty: 25
+    hitroll_penalty: -5
     armor: -5
     hp:
       dice_count: 100
@@ -2235,29 +2050,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 63
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 108
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 100
   enhanced:
     extra_attack: 3
     special_bitvector: '0'
 
 37:
+  # Mob #237
   names:
     aliases: чармис тридцать седьмого уровня_дамаг
     nominative: чармис тридцать седьмого уровня_дамаг
@@ -2267,8 +2075,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2278,7 +2088,7 @@
   mob_type: E
   stats:
     level: 37
-    hitroll_penalty: 26
+    hitroll_penalty: -6
     armor: -4
     hp:
       dice_count: 100
@@ -2297,27 +2107,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 63
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 111
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 38:
+  # Mob #238
   names:
     aliases: чармис тридцать восьмого уровня_танк
     nominative: чармис тридцать восьмого уровня_танк
@@ -2327,8 +2130,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2338,7 +2143,7 @@
   mob_type: E
   stats:
     level: 38
-    hitroll_penalty: 26
+    hitroll_penalty: -6
     armor: -6
     hp:
       dice_count: 100
@@ -2357,29 +2162,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 65
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 114
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 106
   enhanced:
     extra_attack: 3
     special_bitvector: '0'
 
 39:
+  # Mob #239
   names:
     aliases: чармис тридцать девятого уровня_дамаг
     nominative: чармис тридцать девятого уровня_дамаг
@@ -2389,8 +2187,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2400,7 +2200,7 @@
   mob_type: E
   stats:
     level: 39
-    hitroll_penalty: 27
+    hitroll_penalty: -7
     armor: -5
     hp:
       dice_count: 100
@@ -2419,27 +2219,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 63
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 117
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 40:
+  # Mob #240
   names:
     aliases: чармис сорокового уровня_танк
     nominative: чармис сорокового уровня_танк
@@ -2449,8 +2242,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2460,7 +2255,7 @@
   mob_type: E
   stats:
     level: 40
-    hitroll_penalty: 27
+    hitroll_penalty: -7
     armor: -7
     hp:
       dice_count: 100
@@ -2479,29 +2274,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 65
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 120
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 112
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 41:
+  # Mob #241
   names:
     aliases: чармис сорок первого уровня_дамаг
     nominative: чармис сорок первого уровня_дамаг
@@ -2511,8 +2299,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2522,7 +2312,7 @@
   mob_type: E
   stats:
     level: 41
-    hitroll_penalty: 28
+    hitroll_penalty: -8
     armor: -6
     hp:
       dice_count: 100
@@ -2541,27 +2331,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 65
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 123
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 42:
+  # Mob #242
   names:
     aliases: чармис сорок второго  уровня_танк
     nominative: чармис сорок второго  уровня_танк
@@ -2571,8 +2354,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2582,7 +2367,7 @@
   mob_type: E
   stats:
     level: 42
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -8
     hp:
       dice_count: 100
@@ -2601,29 +2386,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 67
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 126
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 118
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 43:
+  # Mob #243
   names:
     aliases: чармис сорок третего уровня_дамаг
     nominative: чармис сорок третего уровня_дамаг
@@ -2633,8 +2411,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2644,7 +2424,7 @@
   mob_type: E
   stats:
     level: 43
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -7
     hp:
       dice_count: 100
@@ -2663,27 +2443,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 65
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 129
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 44:
+  # Mob #244
   names:
     aliases: чармис сорок четвертого  уровня_танк
     nominative: чармис сорок четвертого  уровня_танк
@@ -2693,8 +2466,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2704,7 +2479,7 @@
   mob_type: E
   stats:
     level: 44
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -8
     hp:
       dice_count: 100
@@ -2723,29 +2498,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 67
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 132
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 124
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 45:
+  # Mob #245
   names:
     aliases: чармис сорок пятого уровня_дамаг
     nominative: чармис сорок пятого уровня_дамаг
@@ -2755,8 +2523,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2766,7 +2536,7 @@
   mob_type: E
   stats:
     level: 45
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -8
     hp:
       dice_count: 100
@@ -2785,27 +2555,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 67
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 135
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 46:
+  # Mob #246
   names:
     aliases: чармис сорок шестого уровня_танк
     nominative: чармис сорок шестого уровня_танк
@@ -2815,8 +2578,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2826,7 +2591,7 @@
   mob_type: E
   stats:
     level: 46
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -9
     hp:
       dice_count: 100
@@ -2845,29 +2610,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 70
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 138
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 130
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 47:
+  # Mob #247
   names:
     aliases: чармис сорок седьмого уровня_дамаг
     nominative: чармис сорок седьмого уровня_дамаг
@@ -2877,8 +2635,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2888,7 +2648,7 @@
   mob_type: E
   stats:
     level: 47
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -8
     hp:
       dice_count: 100
@@ -2907,27 +2667,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 70
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 141
   enhanced:
     extra_attack: 5
     special_bitvector: '0'
 
 48:
+  # Mob #248
   names:
     aliases: чармис сорок восьмого уровня_танк
     nominative: чармис сорок восьмого уровня_танк
@@ -2937,8 +2690,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -2948,7 +2703,7 @@
   mob_type: E
   stats:
     level: 48
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -9
     hp:
       dice_count: 100
@@ -2967,29 +2722,22 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 72
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 144
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 136
   enhanced:
     extra_attack: 4
     special_bitvector: '0'
 
 49:
+  # Mob #249
   names:
     aliases: чармис тридцатого уровня
     nominative: чармис сорок девятого уровня_дамаг
@@ -2999,8 +2747,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -3010,7 +2760,7 @@
   mob_type: E
   stats:
     level: 49
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -9
     hp:
       dice_count: 100
@@ -3029,27 +2779,20 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 70
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 147
   enhanced:
     extra_attack: 5
     special_bitvector: '0'
 
 50:
+  # Mob #250
   names:
     aliases: чармис пятидесятого уровня_танк
     nominative: чармис пятидесятого уровня_танк
@@ -3059,8 +2802,10 @@
     instrumental: чармисом тридцатого уровня
     prepositional: чармисе тридцатого уровня
   descriptions:
-    short_desc: |-
+    short_desc: |
       чармис тридцатого уровня стоит здесь и мается со скуки
+    long_desc: |2+
+
   action_flags:
   - kNpc
   - kStayZone
@@ -3070,7 +2815,7 @@
   mob_type: E
   stats:
     level: 50
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: -10
     hp:
       dice_count: 100
@@ -3089,23 +2834,15 @@
     default: kStand
     start: kStand
   sex: kMale
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 75
   mob_class: 100
   race: 100
   height: 198
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 150
-  - skill_id: 137
+  - skill_id: 137  # kRescue
     value: 142
   enhanced:
     extra_attack: 5

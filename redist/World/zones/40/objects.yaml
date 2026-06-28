@@ -1,6 +1,7 @@
 # Objects for zone 40
 
 0:
+  # Object #4000
   names:
     aliases: идол изваяние деревянный
     nominative: идол
@@ -11,12 +12,15 @@
     prepositional: идоле
   short_desc: Деревянное изваяние языческого бога стоит здесь посередине капища.
   type: kOther
-  material: 0
+  extra_flags:
+  - kNoinvis
+  - kNodecay
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 50
   cost: 0
   rent_off: 0
@@ -29,9 +33,9 @@
   level: 0
   sex: kMale
   max_in_world: 1
-  minimum_remorts: 0
 
 1:
+  # Object #4001
   names:
     aliases: колодец 1род
     nominative: колодец
@@ -41,14 +45,19 @@
     instrumental: колодцем
     prepositional: колодце
   short_desc: Колодец выкопан здесь.
-  action_desc: Вы можете набрать воды отсюда.
+  action_desc: |
+    Вы можете набрать воды отсюда.
   type: kFountain
-  material: 0
+  extra_flags:
+  - kNoinvis
+  - kMagic
+  - kNodecay
+  material: 0  # бронза
   values:
-  - 999
-  - 999
-  - 0
-  - 0
+  - '999'
+  - '999'
+  - '0'
+  - '0'
   weight: 1004
   cost: 0
   rent_off: 0
@@ -61,9 +70,9 @@
   level: 1
   sex: kMale
   max_in_world: 100
-  minimum_remorts: 0
 
 2:
+  # Object #4002
   names:
     aliases: объявление доска
     nominative: объявление
@@ -76,12 +85,15 @@
   type: kOther
   extra_flags:
   - kNoinvis
-  material: 0
+  - kNodecay
+  affect_flags:
+  - kDetectMagic
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 1
   cost: 0
   rent_off: 0
@@ -95,15 +107,15 @@
   sex: kNeutral
   extra_descriptions:
   - keywords: объявление
-    description: |2-
+    description: |2
          Приветствую тебя путник, я умею выделывать шкурки животных, и я заплачу,
       если ты принесешь мне труп ценного пушного зверя. Кстати, в деревне развелось
       много мышей, они портят мои товары, я буду платить за каждый принесенный 
       мне труп.
   max_in_world: 1
-  minimum_remorts: 0
 
 3:
+  # Object #4003
   names:
     aliases: тяжелая решетка с замком
     nominative: тяжелая решетка с замком
@@ -114,12 +126,19 @@
     prepositional: тяжелой решетке с замком
   short_desc: Тяжелая решетка с замком закрывает что-то здесь.
   type: kOther
-  material: 5
+  extra_flags:
+  - kNorent
+  - kNodonate
+  - kNoinvis
+  - kNosell
+  - kZonedecay
+  - kNodecay
+  material: 5  # дерево
   values:
-  - 0
-  - 1
-  - 5
-  - 11
+  - '0'
+  - '1'
+  - '5'
+  - '11'
   weight: 200
   cost: 1000
   rent_off: 1000
@@ -132,9 +151,9 @@
   level: 0
   sex: kFemale
   max_in_world: 1
-  minimum_remorts: 0
 
 4:
+  # Object #4004
   names:
     aliases: карта окрестностей лесной деревни
     nominative: карта окрестностей лесной деревни
@@ -145,15 +164,20 @@
     prepositional: карте окрестностей лесной деревни
   short_desc: Карта окрестностей лесной деревни лежит здесь.
   type: kOther
+  extra_flags:
+  - kNorent
+  - kNosell
+  - kDecay
+  - kSwimming
   wear_flags:
   - kTake
   - kBoth
-  material: 17
+  material: 17  # митрил
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 1
   cost: 10
   rent_off: 0
@@ -167,7 +191,7 @@
   sex: kFemale
   extra_descriptions:
   - keywords: карта
-    description: |-
+    description: |
       Достаточно грубая, но понятная схема деревни и прилегающей местности.
 
                   мельня------поперечная улица-----------(к болоту)
@@ -205,9 +229,9 @@
 
       Обозначения: в скобках направления или названия местностей-зон
   max_in_world: 100000
-  minimum_remorts: 0
 
 5:
+  # Object #4005
   names:
     aliases: книга пьянки
     nominative: книга пьянки
@@ -218,14 +242,18 @@
     prepositional: книге пьянки
   short_desc: Испускающая крепкий запах браги пухлая книга лежит тут.
   type: kBook
+  extra_flags:
+  - kNorent
+  - kNodonate
+  - kNosell
   wear_flags:
   - kTake
-  material: 17
+  material: 17  # митрил
   values:
-  - 0
-  - 32
-  - 0
-  - 0
+  - '0'
+  - '32'
+  - '0'
+  - '0'
   weight: 1
   cost: 5000
   rent_off: 10
@@ -239,17 +267,17 @@
   sex: kFemale
   extra_descriptions:
   - keywords: книга пьянки
-    description: |-
+    description: |
       Толстая засаленая книга испускающая
       запах крепкой браги и медовухи.
       Можно попробовать ее &Yпрочитать&n
   max_in_world: 10000
-  minimum_remorts: 0
   triggers:
   - 4010
   - 4012
 
 6:
+  # Object #4006
   names:
     aliases: рунный камень
     nominative: рунный камень
@@ -260,12 +288,15 @@
     prepositional: рунном камне
   short_desc: Рунный камень вкопан десь в землю.
   type: kOther
-  material: 12
+  extra_flags:
+  - kNoinvis
+  - kNodecay
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 1000
   cost: 1000
   rent_off: 1
@@ -279,7 +310,7 @@
   sex: kMale
   extra_descriptions:
   - keywords: рунный камень
-    description: |-
+    description: |
       На источеной временем поверхности камня высечена руна:
       __
       _____ | /
@@ -287,9 +318,9 @@
       _______|
       _______|
   max_in_world: 1
-  minimum_remorts: 0
 
 7:
+  # Object #4007
   names:
     aliases: баночка
     nominative: баночка
@@ -302,12 +333,12 @@
   type: kLiquidContainer
   wear_flags:
   - kTake
-  material: 11
+  material: 11  # адамантит
   values:
-  - 30
-  - 30
-  - 24
-  - 1
+  - '30'
+  - '30'
+  - '24'
+  - '1'
   weight: 31
   cost: 100
   rent_off: 1
@@ -319,5 +350,3 @@
   spell: 0
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0

@@ -1,14 +1,82 @@
 # Triggers for zone 40
 
 0:
+  # Trigger #4000
   name: 'триггер на скорняке '
   attach_type: kMobTrigger
   trigger_types:
   - kReceive
   narg: 100
-  script: "wait 2\r\nswitch %object.name% \r\n  case труп мыши\r\n    say  Благодарствую, ты меня выручаешь, получи плату. \r\n    %self.gold(+1)%\r\n    дать 1 кун %actor.name%\r\n    mpurge труп \r\n  break\r\n  case труп норки\r\n    say    Благодарствую, получится хорошая шкурка на шубу, получи плату. \r\n    %self.gold(+20)%\r\n    дать   20 кун %actor.name%\r\n    mpurge труп \r\n  break\r\n  case труп лисы\r\n    say    Благодарствую, получится хорошая шкурка на шубу, получи плату. \r\n    %self.gold(+30)%\r\n    дать   30 кун %actor.name%\r\n    mpurge труп \r\n  break\r\n  case труп медведя\r\n    say    Благодарствую, получится превосходный тулуп, получи плату. \r\n    %self.gold(+80)%\r\n    дать   80 кун %actor.name%\r\n    mpurge труп \r\n  break\r\n  case труп зайца\r\n    say    Благодарствую, получится хорошая шапка, получи плату. \r\n    %self.gold(+10)%\r\n    дать   10 кун %actor.name%\r\n    mpurge труп \r\n  break\r\n  case труп ондатры\r\n    say    Благодарствую, получится хороший воротник, получи плату. \r\n    %self.gold(+40)%\r\n    дать   40 кун %actor.name%\r\n    mpurge труп \r\n  break\r\n  case труп бобра\r\n    say    Благодарствую, хороший мех, получи плату. \r\n    %self.gold(+25)%\r\n    дать   25 кун %actor.name%\r\n    mpurge труп \r\n  break\r\n  case труп барсука\r\n    say    Благодарствую, хороший мех, получи плату. \r\n    %self.gold(+25)%\r\n    дать   25 кун %actor.name%\r\n    mpurge труп \r\n  break\r\n  case труп выдры\r\n    say    Благодарствую, хороший мех, получи плату. \r\n    %self.gold(+22)%\r\n    дать   22 кун %actor.name%\r\n    mpurge труп \r\n  break\r\n  default\r\n    say  Зачем мне это? \r\n    eval getobject %object.name%\r\n    if  %getobject.car% == труп\r\n      mpurge труп\r\n    else\r\n      броси %getobject.car%.%getobject.cdr%\r\n    end\r\n  break\r\ndone "
+  script: |-
+    wait 2
+    switch %object.name% 
+      case труп мыши
+        say  Благодарствую, ты меня выручаешь, получи плату. 
+        %self.gold(+1)%
+        дать 1 кун %actor.name%
+        mpurge труп 
+      break
+      case труп норки
+        say    Благодарствую, получится хорошая шкурка на шубу, получи плату. 
+        %self.gold(+20)%
+        дать   20 кун %actor.name%
+        mpurge труп 
+      break
+      case труп лисы
+        say    Благодарствую, получится хорошая шкурка на шубу, получи плату. 
+        %self.gold(+30)%
+        дать   30 кун %actor.name%
+        mpurge труп 
+      break
+      case труп медведя
+        say    Благодарствую, получится превосходный тулуп, получи плату. 
+        %self.gold(+80)%
+        дать   80 кун %actor.name%
+        mpurge труп 
+      break
+      case труп зайца
+        say    Благодарствую, получится хорошая шапка, получи плату. 
+        %self.gold(+10)%
+        дать   10 кун %actor.name%
+        mpurge труп 
+      break
+      case труп ондатры
+        say    Благодарствую, получится хороший воротник, получи плату. 
+        %self.gold(+40)%
+        дать   40 кун %actor.name%
+        mpurge труп 
+      break
+      case труп бобра
+        say    Благодарствую, хороший мех, получи плату. 
+        %self.gold(+25)%
+        дать   25 кун %actor.name%
+        mpurge труп 
+      break
+      case труп барсука
+        say    Благодарствую, хороший мех, получи плату. 
+        %self.gold(+25)%
+        дать   25 кун %actor.name%
+        mpurge труп 
+      break
+      case труп выдры
+        say    Благодарствую, хороший мех, получи плату. 
+        %self.gold(+22)%
+        дать   22 кун %actor.name%
+        mpurge труп 
+      break
+      default
+        say  Зачем мне это? 
+        eval getobject %object.name%
+        if  %getobject.car% == труп
+          mpurge труп
+        else
+          броси %getobject.car%.%getobject.cdr%
+        end
+      break
+    done 
 
 1:
+  # Trigger #4001
   name: 'триггер на хозяйке мельницы '
   attach_type: kMobTrigger
   trigger_types:
@@ -37,6 +105,7 @@
     end
 
 2:
+  # Trigger #4002
   name: входнапостой
   attach_type: kMobTrigger
   trigger_types:
@@ -78,6 +147,7 @@
     done
 
 3:
+  # Trigger #4003
   name: нападениежителя
   attach_type: kMobTrigger
   trigger_types:
@@ -122,6 +192,7 @@
     end
 
 4:
+  # Trigger #4004
   name: выходаизямы
   attach_type: kRoomTrigger
   trigger_types:
@@ -152,6 +223,7 @@
     end
 
 5:
+  # Trigger #4005
   name: призовой триг на лисе
   attach_type: kMobTrigger
   trigger_types:
@@ -169,6 +241,7 @@
     end
 
 6:
+  # Trigger #4006
   name: ПКиллер заходит к помощникам
   attach_type: kMobTrigger
   trigger_types:
@@ -203,19 +276,57 @@
       else
         крича %actor.name%, мерзавка, хватай ее! Вяжи ее!
       end
-      Крича %actor.name% - вот он%actor.g% где, хватай, ребяты!
+      крича %actor.name% - вот он%actor.g% где, хватай, ребяты!
       mkill %actor% 
     end
 
 7:
+  # Trigger #4007
   name: Помощник заходик к ПКиллеру
   attach_type: kMobTrigger
   trigger_types:
   - kIncomePC
   narg: 100
-  script: "wait 1\r\nif %actor.clan% != null\r\n  halt\r\nend\r\nforeach char %self.pc%\r\n  if %char.agressor% > 4000\r\n    if %char.agressor% < 4099\r\n      set target %char%\r\n    break\r\n  end\r\nend\r\nif %char.agressor% > 4300\r\n  if %char.agressor% < 4399\r\n    set target %char%\r\n  break\r\nend\r\nend\r\nif %char.agressor% > 4800\r\n  if %char.agressor% < 4899\r\n    set target %char%\r\n  break\r\nend\r\nend\r\ndone\r\nif !%target%\r\n  halt\r\nend\r\nif %target.sex% == 1\r\n  крича %target.name%, - вот он, убивец, хватай его! Вяжи его!\r\nelse\r\n  крича %target.name%, мерзавка, хватай ее! Вяжи ее!\r\nend\r\nКрича %target.name% - вот он%target.g% где, хватай, ребяты!\r\nпояв\r\nmforce %target.name% трепет\r\nmkill %target% "
+  script: |-
+    wait 1
+    if %actor.clan% != null
+      halt
+    end
+    foreach char %self.pc%
+      if %char.agressor% > 4000
+        if %char.agressor% < 4099
+          set target %char%
+        break
+      end
+    end
+    if %char.agressor% > 4300
+      if %char.agressor% < 4399
+        set target %char%
+      break
+    end
+    end
+    if %char.agressor% > 4800
+      if %char.agressor% < 4899
+        set target %char%
+      break
+    end
+    end
+    done
+    if !%target%
+      halt
+    end
+    if %target.sex% == 1
+      крича %target.name%, - вот он, убивец, хватай его! Вяжи его!
+    else
+      крича %target.name%, мерзавка, хватай ее! Вяжи ее!
+    end
+    крича %target.name% - вот он%target.g% где, хватай, ребяты!
+    появ
+    mforce %target.name% трепет
+    mkill %target% 
 
 8:
+  # Trigger #4008
   name: Пьянка
   attach_type: kMobTrigger
   trigger_types:
@@ -355,6 +466,7 @@
     done
 
 9:
+  # Trigger #4009
   name: Скиллы
   attach_type: kObjTrigger
   trigger_types:
@@ -366,6 +478,7 @@
     oecho Чититят только колзы и педерасты.
 
 10:
+  # Trigger #4010
   name: Подключение ПЬЯНКИ
   attach_type: kObjTrigger
   trigger_types:
@@ -384,15 +497,16 @@
     opurge %self%
 
 11:
+  # Trigger #4011
   name: Тест портала
   attach_type: kRoomTrigger
   trigger_types:
   - kAuto
   narg: 100
-  script: |-
-    wportal 50040 2
+  script: wportal 50040 2
 
 12:
+  # Trigger #4012
   name: Подобрали книжку
   attach_type: kObjTrigger
   trigger_types:
@@ -404,15 +518,16 @@
     osend %actor% Вы принялись читать книгу.
 
 14:
+  # Trigger #4014
   name: Экспа
   attach_type: kMobTrigger
   trigger_types:
   - kDeath
   narg: 100
-  script: |-
-    log вызван читерный триггер на прибавление экспы, юзавший %actor.name%
+  script: log вызван читерный триггер на прибавление экспы, юзавший %actor.name%
 
 15:
+  # Trigger #4015
   name: Рента
   attach_type: kMobTrigger
   trigger_types:
@@ -425,6 +540,7 @@
     log Рента - %actor.name%
 
 16:
+  # Trigger #4016
   name: Крысса жретЪ
   attach_type: kMobTrigger
   trigger_types:
@@ -442,6 +558,7 @@
     end
 
 17:
+  # Trigger #4017
   name: Крыса спаит
   attach_type: kMobTrigger
   trigger_types:
@@ -480,15 +597,16 @@
     done
 
 18:
+  # Trigger #4018
   name: Падальщик воет
   attach_type: kMobTrigger
   trigger_types:
   - kRandom
   narg: 15
-  script: |-
-    крича Ууууууууу!!!
+  script: крича Ууууууууу!!!
 
 19:
+  # Trigger #4019
   name: Крыса жрет стаф
   attach_type: kMobTrigger
   trigger_types:
@@ -502,6 +620,7 @@
     done
 
 20:
+  # Trigger #4020
   name: Сказитель рассказывает сказки
   attach_type: kMobTrigger
   trigger_types:

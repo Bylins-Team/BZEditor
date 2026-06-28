@@ -1,12 +1,8 @@
-vnum: 2
+# Zone #2
 name: Тронный чертог
-first_room: 200
 top_room: 299
-mode: 1
-zone_type: 0
-zone_group: 1
-entrance: 200
+mode: 1  # level
+zone_type: 0 # Ингридиентов нет
 lifespan: 10
 reset_mode: 0
 reset_idle: 0
-under_construction: 0

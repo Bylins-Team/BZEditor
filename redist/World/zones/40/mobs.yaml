@@ -1,6 +1,7 @@
 # Mobs for zone 40
 
 0:
+  # Mob #4000
   names:
     aliases: седой крепкий старейшина
     nominative: старейшина
@@ -10,9 +11,9 @@
     instrumental: старейшиной
     prepositional: старейшине
   descriptions:
-    short_desc: |-
+    short_desc: |
       Седой крепкий мужичонка с цепким взглядом стоит здесь.
-    long_desc: |-
+    long_desc: |
       Пожилой седовласый старец.
       Уважаемый человек в деревне.
   action_flags:
@@ -64,9 +65,8 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 45
   enhanced:
     like_work: 90
@@ -74,6 +74,7 @@
     special_bitvector: '0'
 
 1:
+  # Mob #4001
   names:
     aliases: жена старейшина дородная женщина
     nominative: жена старейшины
@@ -83,9 +84,9 @@
     instrumental: женой старейшины
     prepositional: жене старейшины
   descriptions:
-    short_desc: |-
+    short_desc: |
       Дородная румяная женщина стоит здесь.
-    long_desc: |-
+    long_desc: |
       Почтенная хозяйка дома.
   action_flags:
   - kSentinel
@@ -100,7 +101,7 @@
   mob_type: E
   stats:
     level: 13
-    hitroll_penalty: 8
+    hitroll_penalty: 12
     armor: 5
     hp:
       dice_count: 10
@@ -131,15 +132,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 39
   enhanced:
     bare_hand_attack: 2
     special_bitvector: '0'
 
 2:
+  # Mob #4002
   names:
     aliases: сын старейшины
     nominative: сын старейшины
@@ -149,9 +150,9 @@
     instrumental: сыном старейшины
     prepositional: сыне старейшины
   descriptions:
-    short_desc: |-
+    short_desc: |
       Сын старейшины стоит здесь.
-    long_desc: |-
+    long_desc: |
       Стройный молодой парень.
   action_flags:
   - kNpc
@@ -164,7 +165,7 @@
   mob_type: E
   stats:
     level: 12
-    hitroll_penalty: 3
+    hitroll_penalty: 17
     armor: 5
     hp:
       dice_count: 5
@@ -195,9 +196,8 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 36
   triggers:
   - 4003
@@ -207,6 +207,7 @@
     special_bitvector: '0'
 
 3:
+  # Mob #4003
   names:
     aliases: кузнец
     nominative: кузнец
@@ -216,9 +217,9 @@
     instrumental: кузнецом
     prepositional: кузнеце
   descriptions:
-    short_desc: |-
+    short_desc: |
       Крепкий мужчина стоит возле горна.
-    long_desc: |-
+    long_desc: |
       Крепкий мужчина в кожаном халате.
       От постоянной тяжелой работы тело
       его окрепло и огрубело.
@@ -234,7 +235,7 @@
   mob_type: E
   stats:
     level: 20
-    hitroll_penalty: 12
+    hitroll_penalty: 8
     armor: 0
     hp:
       dice_count: 10
@@ -265,9 +266,8 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 60
   enhanced:
     bare_hand_attack: 5
@@ -276,6 +276,7 @@
     special_bitvector: '0'
 
 4:
+  # Mob #4004
   names:
     aliases: подмастерье помощник подручный
     nominative: подмастерье
@@ -285,9 +286,9 @@
     instrumental: подмастерьем
     prepositional: подмастерье
   descriptions:
-    short_desc: |-
+    short_desc: |
       Подручный кузнеца стоит здесь.
-    long_desc: |-
+    long_desc: |
       Молодой проворный юноша.
   action_flags:
   - kNpc
@@ -300,7 +301,7 @@
   mob_type: E
   stats:
     level: 12
-    hitroll_penalty: 5
+    hitroll_penalty: 15
     armor: 5
     hp:
       dice_count: 10
@@ -331,9 +332,8 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 36
   triggers:
   - 4003
@@ -342,6 +342,7 @@
     special_bitvector: '0'
 
 5:
+  # Mob #4005
   names:
     aliases: седой отшельник
     nominative: отшельник
@@ -351,9 +352,9 @@
     instrumental: отшельником
     prepositional: отшельнике
   descriptions:
-    short_desc: |-
+    short_desc: |
       Седой отшельник сидит у окна.
-    long_desc: |-
+    long_desc: |
       Седой старик.
   action_flags:
   - kSentinel
@@ -366,7 +367,7 @@
   mob_type: E
   stats:
     level: 20
-    hitroll_penalty: 15
+    hitroll_penalty: 5
     armor: -10
     hp:
       dice_count: 10
@@ -397,9 +398,8 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 60
   enhanced:
     like_work: 70
@@ -407,6 +407,7 @@
     special_bitvector: '0'
 
 6:
+  # Mob #4006
   names:
     aliases: ведунья колдунья старуха
     nominative: ведунья
@@ -416,9 +417,9 @@
     instrumental: ведуньей
     prepositional: ведунье
   descriptions:
-    short_desc: |-
+    short_desc: |
       Косматая старуха с ожерельем на шее стоит здесь.
-    long_desc: |-
+    long_desc: |
       Седая косматая старуха.
   action_flags:
   - kSentinel
@@ -462,15 +463,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 45
   enhanced:
     max_factor: 10
     special_bitvector: '0'
 
 7:
+  # Mob #4007
   names:
     aliases: травник лекарь старик
     nominative: травник
@@ -480,9 +481,9 @@
     instrumental: травником
     prepositional: травнике
   descriptions:
-    short_desc: |-
+    short_desc: |
       Невысокий мужчина с окладистой бородой стоит здесь.
-    long_desc: |-
+    long_desc: |
       Немолодой крепкий мужчина.
   action_flags:
   - kSentinel
@@ -495,7 +496,7 @@
   mob_type: E
   stats:
     level: 20
-    hitroll_penalty: 15
+    hitroll_penalty: 5
     armor: 5
     hp:
       dice_count: 10
@@ -526,15 +527,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 60
   enhanced:
     max_factor: 10
     special_bitvector: '0'
 
 8:
+  # Mob #4008
   names:
     aliases: старец седой
     nominative: седой старец
@@ -544,9 +545,9 @@
     instrumental: седым старцем
     prepositional: седом старце
   descriptions:
-    short_desc: |-
+    short_desc: |
       Седой, как лунь, старец стоит здесь.
-    long_desc: |-
+    long_desc: |
       Седоволосый старец в белых одеждах.
   action_flags:
   - kSentinel
@@ -559,7 +560,7 @@
   mob_type: E
   stats:
     level: 20
-    hitroll_penalty: 20
+    hitroll_penalty: 0
     armor: 5
     hp:
       dice_count: 10
@@ -590,15 +591,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 60
   enhanced:
     max_factor: 10
     special_bitvector: '0'
 
 9:
+  # Mob #4009
   names:
     aliases: трактирщик
     nominative: трактирщик
@@ -608,9 +609,9 @@
     instrumental: трактирщиком
     prepositional: трактирщике
   descriptions:
-    short_desc: |-
+    short_desc: |
       Огромный, с сизым носом, трактирщик отдыхает за стойкой.
-    long_desc: |-
+    long_desc: |
       Крепкий мужик, не дурак выпить.
       С удовольствием за хорошие деньги угостит любого.
   action_flags:
@@ -625,7 +626,7 @@
   mob_type: E
   stats:
     level: 15
-    hitroll_penalty: 15
+    hitroll_penalty: 5
     armor: 5
     hp:
       dice_count: 10
@@ -656,15 +657,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 45
   enhanced:
     max_factor: 10
     special_bitvector: '0'
 
 10:
+  # Mob #4010
   names:
     aliases: пьяный мужчина
     nominative: пьяница
@@ -674,9 +675,9 @@
     instrumental: пьяницей
     prepositional: пьянице
   descriptions:
-    short_desc: |-
+    short_desc: |
       Пьяный мужчина бредет потихоньку домой.
-    long_desc: |-
+    long_desc: |
       Оборванный и грязный, с бутылками, торчащими из кармана, прется немолодой
       уже человек, не разбирая дороги.
   action_flags:
@@ -690,7 +691,7 @@
   mob_type: E
   stats:
     level: 3
-    hitroll_penalty: 0
+    hitroll_penalty: 20
     armor: 10
     hp:
       dice_count: 5
@@ -721,15 +722,15 @@
   race: 101
   height: 170
   weight: 120
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 15
   enhanced:
     max_factor: 10
-    special_bitvector: 'y0'
+    special_bitvector: y0
 
 11:
+  # Mob #4011
   names:
     aliases: скорняк продавец
     nominative: скорняк
@@ -739,9 +740,9 @@
     instrumental: скорняком
     prepositional: скорняке
   descriptions:
-    short_desc: |-
+    short_desc: |
       Скорняк кроит шапку из шкуры бобра.
-    long_desc: |-
+    long_desc: |
       Плотный мужчина с задубевшей от растворов кожей.
   action_flags:
   - kSentinel
@@ -790,9 +791,8 @@
   race: 101
   height: 198
   weight: 100
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 90
   triggers:
   - 4000
@@ -801,6 +801,7 @@
     special_bitvector: '0'
 
 12:
+  # Mob #4012
   names:
     aliases: охотник следопыт
     nominative: охотник
@@ -810,9 +811,9 @@
     instrumental: охотником
     prepositional: охотнике
   descriptions:
-    short_desc: |-
+    short_desc: |
       Стройный молодой охотник-следопыт проходит здесь.
-    long_desc: |-
+    long_desc: |
       Стройный мужчина.
   action_flags:
   - kNpc
@@ -825,7 +826,7 @@
   mob_type: E
   stats:
     level: 10
-    hitroll_penalty: 7
+    hitroll_penalty: 13
     armor: 0
     hp:
       dice_count: 10
@@ -856,9 +857,8 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 30
   triggers:
   - 4003
@@ -867,6 +867,7 @@
     special_bitvector: '0'
 
 13:
+  # Mob #4013
   names:
     aliases: лихой человек убивец
     nominative: лихой человек
@@ -876,9 +877,9 @@
     instrumental: лихим человеком
     prepositional: лихом человеке
   descriptions:
-    short_desc: |-
+    short_desc: |
       Лихой человек сидит на стуле.
-    long_desc: |-
+    long_desc: |
       Неприметный человек с вороватым взглядом.
   action_flags:
   - kSentinel
@@ -924,9 +925,8 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 45
   enhanced:
     like_work: 80
@@ -934,6 +934,7 @@
     special_bitvector: '0'
 
 14:
+  # Mob #4014
   names:
     aliases: конь
     nominative: конь
@@ -943,9 +944,9 @@
     instrumental: конем
     prepositional: коне
   descriptions:
-    short_desc: |-
+    short_desc: |
       Конь стоит здесь.
-    long_desc: |-
+    long_desc: |
       Просто конь.
   action_flags:
   - kSentinel
@@ -990,9 +991,8 @@
   race: 104
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 18
   enhanced:
     bare_hand_attack: 13
@@ -1001,6 +1001,7 @@
     special_bitvector: '0'
 
 15:
+  # Mob #4015
   names:
     aliases: дурачок юродивый
     nominative: дурачок
@@ -1010,9 +1011,9 @@
     instrumental: дурачком
     prepositional: дурачке
   descriptions:
-    short_desc: |-
+    short_desc: |
       Местный дурачок, кривляясь и корчась, проходит мимо.
-    long_desc: |-
+    long_desc: |
       Местный придурок, который толи таким уродился,
       толи стал таким. В деревне его никто не любит
       и не уважает.
@@ -1025,7 +1026,7 @@
   mob_type: E
   stats:
     level: 10
-    hitroll_penalty: 5
+    hitroll_penalty: 15
     armor: 5
     hp:
       dice_count: 10
@@ -1056,15 +1057,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 30
   enhanced:
     max_factor: 10
     special_bitvector: '0'
 
 16:
+  # Mob #4016
   names:
     aliases: коза белый
     nominative: коза
@@ -1074,9 +1075,9 @@
     instrumental: козой
     prepositional: козе
   descriptions:
-    short_desc: |-
+    short_desc: |
       Белая коза щиплет тут травку.
-    long_desc: |-
+    long_desc: |
       Кто-то явно решил, что и на этом пустыре растет хорошая трава, нечего козу 
       выводить на пастбище.
   action_flags:
@@ -1089,7 +1090,7 @@
   mob_type: E
   stats:
     level: 2
-    hitroll_penalty: 0
+    hitroll_penalty: 20
     armor: 10
     hp:
       dice_count: 5
@@ -1120,15 +1121,15 @@
   race: 104
   height: 110
   weight: 50
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 3
   enhanced:
     max_factor: 10
     special_bitvector: '0'
 
 17:
+  # Mob #4017
   names:
     aliases: пес дворняжка
     nominative: пес
@@ -1138,9 +1139,9 @@
     instrumental: псом
     prepositional: псе
   descriptions:
-    short_desc: |-
+    short_desc: |
       Дворовый пес пробегает мимо Вас.
-    long_desc: |-
+    long_desc: |
       Рыжеватый ободранный пес.
   action_flags:
   - kNpc
@@ -1153,7 +1154,7 @@
   mob_type: E
   stats:
     level: 21
-    hitroll_penalty: 2
+    hitroll_penalty: 18
     armor: 10
     hp:
       dice_count: 5
@@ -1184,9 +1185,8 @@
   race: 110
   height: 80
   weight: 25
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 15
   enhanced:
     bare_hand_attack: 4
@@ -1194,6 +1194,7 @@
     special_bitvector: '0'
 
 18:
+  # Mob #4018
   names:
     aliases: крестьянин
     nominative: крестьянин
@@ -1203,9 +1204,9 @@
     instrumental: крестьянином
     prepositional: крестьянине
   descriptions:
-    short_desc: |-
+    short_desc: |
       Крестьянин идет по своим делам.
-    long_desc: |-
+    long_desc: |
       Работник полей явно сейчас свободен от пахоты, 
       наверняка он занимается домашними делами.
   action_flags:
@@ -1249,9 +1250,8 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 30
   triggers:
   - 4003
@@ -1260,6 +1260,7 @@
     special_bitvector: '0'
 
 19:
+  # Mob #4019
   names:
     aliases: крестьянка
     nominative: крестьянка
@@ -1269,9 +1270,9 @@
     instrumental: крестьянкой
     prepositional: крестьянке
   descriptions:
-    short_desc: |-
+    short_desc: |
       Крестьянка с корзинкой проходит мимо.
-    long_desc: |-
+    long_desc: |
       Крестьянская женщина неспешно проходит здесь.
   action_flags:
   - kNpc
@@ -1283,7 +1284,7 @@
   mob_type: E
   stats:
     level: 8
-    hitroll_penalty: 5
+    hitroll_penalty: 15
     armor: 5
     hp:
       dice_count: 10
@@ -1314,9 +1315,8 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 24
   triggers:
   - 4003
@@ -1325,6 +1325,7 @@
     special_bitvector: '0'
 
 20:
+  # Mob #4020
   names:
     aliases: паук
     nominative: паук
@@ -1334,9 +1335,9 @@
     instrumental: пауком
     prepositional: пауке
   descriptions:
-    short_desc: |-
+    short_desc: |
       Паук плетет здесь свою паутину.
-    long_desc: |-
+    long_desc: |
       Обычный домашний паук.
   action_flags:
   - kSentinel
@@ -1349,7 +1350,7 @@
   mob_type: E
   stats:
     level: 1
-    hitroll_penalty: 2
+    hitroll_penalty: 18
     armor: 10
     hp:
       dice_count: 5
@@ -1380,16 +1381,16 @@
   race: 107
   height: 1
   weight: 1
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 3
   enhanced:
     bare_hand_attack: 4
     max_factor: 10
-    special_bitvector: 'g0'
+    special_bitvector: g0
 
 21:
+  # Mob #4021
   names:
     aliases: мышь
     nominative: мышь
@@ -1399,9 +1400,9 @@
     instrumental: мышью
     prepositional: мыше
   descriptions:
-    short_desc: |-
+    short_desc: |
       Серая мышь пытается юркнуть в подходящую норку.
-    long_desc: |-
+    long_desc: |
       Обычная домовая мышь.
   action_flags:
   - kNpc
@@ -1416,7 +1417,7 @@
   mob_type: E
   stats:
     level: 1
-    hitroll_penalty: 2
+    hitroll_penalty: 18
     armor: 9
     hp:
       dice_count: 5
@@ -1447,21 +1448,16 @@
   race: 104
   height: 4
   weight: 1
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 9
   enhanced:
     bare_hand_attack: 4
     max_factor: 10
-    special_bitvector: 'i0'
-  ingredients:
-  - type_name: шерсть
-    power: 0
-    probability: 5
-    power_auto: true
+    special_bitvector: i0
 
 22:
+  # Mob #4022
   names:
     aliases: хозяин постоялый двор родовая
     nominative: хозяин
@@ -1471,9 +1467,9 @@
     instrumental: хозяином
     prepositional: хозяине
   descriptions:
-    short_desc: |-
+    short_desc: |
       Хозяин постоялого двора с интересом рассматривает Вас.
-    long_desc: |-
+    long_desc: |
       Крепкий мужчина с добродушным лицом.
   action_flags:
   - kSentinel
@@ -1493,7 +1489,7 @@
   mob_type: E
   stats:
     level: 15
-    hitroll_penalty: 15
+    hitroll_penalty: 5
     armor: 5
     hp:
       dice_count: 10
@@ -1524,15 +1520,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 45
   enhanced:
     max_factor: 10
-    special_bitvector: 'b1c1'
+    special_bitvector: b1c1
 
 23:
+  # Mob #4023
   names:
     aliases: конюх
     nominative: конюх
@@ -1542,9 +1538,9 @@
     instrumental: конюхом
     prepositional: конюхе
   descriptions:
-    short_desc: |-
+    short_desc: |
       Конюх стоит здесь, с интересом поглядывая по сторонам.
-    long_desc: |-
+    long_desc: |
       Молодой парень с простодушным лицом.
   action_flags:
   - kSentinel
@@ -1558,7 +1554,7 @@
   mob_type: E
   stats:
     level: 12
-    hitroll_penalty: 15
+    hitroll_penalty: 5
     armor: 5
     hp:
       dice_count: 10
@@ -1589,15 +1585,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 36
   enhanced:
     max_factor: 10
     special_bitvector: '0'
 
 24:
+  # Mob #4024
   names:
     aliases: трактирщик хитрый
     nominative: трактирщик
@@ -1607,9 +1603,9 @@
     instrumental: трактирщиком
     prepositional: трактирщике
   descriptions:
-    short_desc: |-
+    short_desc: |
       Подвыпивший трактирщик с хитрым взглядом стоит за стойкой.
-    long_desc: |-
+    long_desc: |
       Крепкий мужик, не дурак выпить.
   action_flags:
   - kSentinel
@@ -1623,7 +1619,7 @@
   mob_type: E
   stats:
     level: 15
-    hitroll_penalty: 15
+    hitroll_penalty: 5
     armor: 5
     hp:
       dice_count: 10
@@ -1654,15 +1650,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 45
   enhanced:
     max_factor: 10
     special_bitvector: '0'
 
 25:
+  # Mob #4025
   names:
     aliases: ремесленник умелец
     nominative: умелец
@@ -1672,9 +1668,9 @@
     instrumental: умельцем
     prepositional: умельце
   descriptions:
-    short_desc: |-
+    short_desc: |
       Деревенский умелец простодушно смотрит на Вас.
-    long_desc: |-
+    long_desc: |
       Местный самородок.
   action_flags:
   - kSentinel
@@ -1688,7 +1684,7 @@
   mob_type: E
   stats:
     level: 15
-    hitroll_penalty: 15
+    hitroll_penalty: 5
     armor: 5
     hp:
       dice_count: 10
@@ -1719,15 +1715,15 @@
   race: 101
   height: 180
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 45
   enhanced:
     max_factor: 10
     special_bitvector: '0'
 
 26:
+  # Mob #4026
   names:
     aliases: дочка ведуньи
     nominative: дочка ведуньи
@@ -1737,9 +1733,9 @@
     instrumental: дочкой ведуньи
     prepositional: дочке ведуньи
   descriptions:
-    short_desc: |-
+    short_desc: |
       Уже взрослая дочка ведуньи стоит тут, торгуя магическими вещами.
-    long_desc: |-
+    long_desc: |
       Придет время и она, вместо своей матери начнет помогать людям в своих
       проблемах.
   action_flags:
@@ -1752,7 +1748,7 @@
   mob_type: E
   stats:
     level: 9
-    hitroll_penalty: 5
+    hitroll_penalty: 15
     armor: 0
     hp:
       dice_count: 30
@@ -1783,15 +1779,15 @@
   race: 101
   height: 198
   weight: 200
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 3
   enhanced:
     like_work: 50
     special_bitvector: '0'
 
 27:
+  # Mob #4027
   names:
     aliases: вдова мельника немолодая женщина
     nominative: вдова мельника
@@ -1801,9 +1797,9 @@
     instrumental: вдовой мельника
     prepositional: вдове мельника
   descriptions:
-    short_desc: |-
+    short_desc: |
       Немолодая женщина с открытым лицом с грустью смотрит на Вас.
-    long_desc: |2-
+    long_desc: |2
          Немолодая уже женщина, тяжелая судьба которой наложила свой отпечаток
       на ее лицо.
   action_flags:
@@ -1819,7 +1815,7 @@
   mob_type: E
   stats:
     level: 13
-    hitroll_penalty: 8
+    hitroll_penalty: 12
     armor: 5
     hp:
       dice_count: 10
@@ -1850,9 +1846,8 @@
   race: 101
   height: 150
   weight: 60
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 39
   triggers:
   - 4001
@@ -1862,6 +1857,7 @@
     special_bitvector: '0'
 
 52:
+  # Mob #4052
   names:
     aliases: мышь
     nominative: мышь
@@ -1871,9 +1867,9 @@
     instrumental: мышь
     prepositional: мышь
   descriptions:
-    short_desc: |-
+    short_desc: |
       МЫШЬ бегает тут.
-    long_desc: |-
+    long_desc: |
       Выглядит достаточно незавершенно.
   action_flags:
   - kNpc
@@ -1881,7 +1877,7 @@
   mob_type: E
   stats:
     level: 48
-    hitroll_penalty: 0
+    hitroll_penalty: 20
     armor: 0
     hp:
       dice_count: 1
@@ -1900,19 +1896,11 @@
     default: kStand
     start: kStand
   sex: kNeutral
-  attributes:
-    strength: 11
-    dexterity: 11
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 30
   mob_class: 100
   race: 100
   height: 198
   weight: 200
-  max_in_world: -1
   enhanced:
     special_bitvector: '0'
     saves:
@@ -1922,6 +1910,7 @@
       kReflex: -78
 
 53:
+  # Mob #4053
   names:
     aliases: Делан моб
     nominative: Делан
@@ -1931,9 +1920,9 @@
     instrumental: Деланом
     prepositional: Делане
   descriptions:
-    short_desc: |-
+    short_desc: |
       Дух восставшего из делета Опытного Кайсяку Делана (бывшего боярина НД) летает здесь.
-    long_desc: |-
+    long_desc: |
       Над Ленгом, где скалистые вершины
       Штурмуют неприступный небосвод,
       С приходом ночи зарево встает,
@@ -1963,7 +1952,7 @@
   mob_type: E
   stats:
     level: 3
-    hitroll_penalty: 0
+    hitroll_penalty: 20
     armor: 1
     hp:
       dice_count: 0
@@ -1994,42 +1983,46 @@
   race: 101
   height: 198
   weight: 200
-  max_in_world: -1
   skills:
-  - skill_id: 3
+  - skill_id: 3  # kLeftHit
     value: 140
-  - skill_id: 5
+  - skill_id: 5  # kOverwhelm
     value: 200
-  - skill_id: 22
+  - skill_id: 22  # kAwake
     value: 200
-  - skill_id: 133
+  - skill_id: 133  # kHide
     value: 125
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 90
-  - skill_id: 138
+  - skill_id: 138  # kSneak
     value: 125
-  - skill_id: 140
+  - skill_id: 140  # kTrack
     value: 120
-  - skill_id: 141
+  - skill_id: 141  # kClubs
     value: 120
-  - skill_id: 142
+  - skill_id: 142  # kAxes
     value: 120
-  - skill_id: 143
+  - skill_id: 143  # kLongBlades
     value: 120
-  - skill_id: 144
+  - skill_id: 144  # kShortBlades
     value: 120
-  - skill_id: 145
+  - skill_id: 145  # kNonstandart
     value: 120
-  - skill_id: 146
+  - skill_id: 146  # kTwohands
     value: 120
-  - skill_id: 147
+  - skill_id: 147  # kPicks
     value: 120
-  - skill_id: 148
+  - skill_id: 148  # kSpades
     value: 120
-  - skill_id: 149
+  - skill_id: 149  # kSideAttack
     value: 90
-  - skill_id: 157
+  - skill_id: 157  # kDodge
     value: 125
+  dead_load:
+  - obj_vnum: 1720
+    load_prob: 100
+    load_type: 0
+    spec_param: 0
   triggers:
   - 4005
   enhanced:
@@ -2052,13 +2045,9 @@
       kCritical: 60
       kStability: 60
       kReflex: 60
-  dead_load:
-  - obj_vnum: 1720
-    load_prob: 100
-    load_type: 0
-    spec_param: 0
 
 54:
+  # Mob #4054
   names:
     aliases: r1guard помощник деревенского старосты
     nominative: помощник деревенского старосты
@@ -2068,9 +2057,9 @@
     instrumental: помощником деревенского старосты
     prepositional: помощнике деревенского старосты
   descriptions:
-    short_desc: |-
+    short_desc: |
       Крепкий плечистый крестьянин в нарядной одежде идет по улице.
-    long_desc: |-
+    long_desc: |
       Крепкий плечистый мужик - помощник местного деревенского старосты
       в нелегком деле поддержания порядка в деревне.
   action_flags:
@@ -2096,7 +2085,7 @@
   mob_type: E
   stats:
     level: 20
-    hitroll_penalty: 16
+    hitroll_penalty: 4
     armor: 0
     hp:
       dice_count: 10
@@ -2127,13 +2116,12 @@
   race: 104
   height: 180
   weight: 180
-  max_in_world: -1
   skills:
-  - skill_id: 3
+  - skill_id: 3  # kLeftHit
     value: 100
-  - skill_id: 4
+  - skill_id: 4  # kHammer
     value: 60
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 60
   triggers:
   - 4006
@@ -2148,6 +2136,7 @@
     - 28
 
 55:
+  # Mob #4055
   names:
     aliases: подмастерье
     nominative: подмастерье
@@ -2157,9 +2146,9 @@
     instrumental: подмастерьем
     prepositional: подмастерье
   descriptions:
-    short_desc: |-
+    short_desc: |
       Подмастерье скорняка торгует здесь товаром.
-    long_desc: |-
+    long_desc: |
       Деревенский парнишка - ученик скорняка.
   action_flags:
   - kSentinel
@@ -2176,7 +2165,7 @@
   mob_type: E
   stats:
     level: 26
-    hitroll_penalty: 12
+    hitroll_penalty: 8
     armor: 0
     hp:
       dice_count: 1
@@ -2207,9 +2196,8 @@
   race: 101
   height: 160
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 78
   enhanced:
     like_work: 30
@@ -2217,6 +2205,7 @@
     special_bitvector: '0'
 
 56:
+  # Mob #4056
   names:
     aliases: скупщик купец
     nominative: скупщик
@@ -2226,9 +2215,9 @@
     instrumental: скупщиком
     prepositional: скупщике
   descriptions:
-    short_desc: |-
+    short_desc: |
       Заезжий купец скупает звериные шкурки у охотников.
-    long_desc: |-
+    long_desc: |
       Крепкий жилистый мужик, облаченный в отороченный мехом кафтан.
   action_flags:
   - kSentinel
@@ -2245,7 +2234,7 @@
   mob_type: E
   stats:
     level: 30
-    hitroll_penalty: 21
+    hitroll_penalty: -1
     armor: 0
     hp:
       dice_count: 1
@@ -2276,9 +2265,8 @@
   race: 101
   height: 168
   weight: 150
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 90
   enhanced:
     like_work: 1
@@ -2286,6 +2274,7 @@
     special_bitvector: '0'
 
 57:
+  # Mob #4057
   names:
     aliases: жирная крыса bigrat
     nominative: жирная крыса
@@ -2295,9 +2284,9 @@
     instrumental: жирной крысой
     prepositional: жирной крысе
   descriptions:
-    short_desc: |-
+    short_desc: |
       Жирная крыса сидит здесь. (нагло ухмыляется)
-    long_desc: |-
+    long_desc: |
       СПАЙ!!!
   action_flags:
   - kSentinel
@@ -2310,7 +2299,7 @@
   mob_type: E
   stats:
     level: 34
-    hitroll_penalty: 30
+    hitroll_penalty: -10
     armor: -2
     hp:
       dice_count: 1
@@ -2341,7 +2330,6 @@
   race: 104
   height: 198
   weight: 200
-  max_in_world: -1
   triggers:
   - 4017
   - 4016
@@ -2351,6 +2339,7 @@
     special_bitvector: '0'
 
 58:
+  # Mob #4058
   names:
     aliases: сказитель
     nominative: сказитель
@@ -2360,9 +2349,9 @@
     instrumental: сказителем
     prepositional: неоконченном мобе
   descriptions:
-    short_desc: |-
+    short_desc: |
       Седовласый сказитель готов поделиться с Вами интересной историей.
-    long_desc: |-
+    long_desc: |
       Седовласый странник хранит в своей памяти сотни сказаний и былин.
       Можно попросить его рассказать сказку - авось не откажет.
   action_flags:
@@ -2379,7 +2368,7 @@
   mob_type: E
   stats:
     level: 30
-    hitroll_penalty: 21
+    hitroll_penalty: -1
     armor: 0
     hp:
       dice_count: 1
@@ -2410,7 +2399,6 @@
   race: 101
   height: 168
   weight: 150
-  max_in_world: -1
   triggers:
   - 4020
   enhanced:
@@ -2419,6 +2407,7 @@
     special_bitvector: '0'
 
 70:
+  # Mob #4070
   names:
     aliases: ямщик
     nominative: ямщик
@@ -2428,9 +2417,11 @@
     instrumental: ямщиком
     prepositional: ямщике
   descriptions:
-    short_desc: |-
+    short_desc: |
       Ямщик готов помочь Вам доставить весточку родным и близким.
-    long_desc: "Огромный мужик, хоть и немножко подвыпивший, но еще в состоянии понять, куда и\r\nкому вы хотите отправить письмо.    "
+    long_desc: |
+      Огромный мужик, хоть и немножко подвыпивший, но еще в состоянии понять, куда и
+      кому вы хотите отправить письмо.    
   action_flags:
   - kSentinel
   - kNpc
@@ -2448,7 +2439,7 @@
   mob_type: E
   stats:
     level: 30
-    hitroll_penalty: 5
+    hitroll_penalty: 15
     armor: -10
     hp:
       dice_count: 1
@@ -2470,18 +2461,13 @@
   attributes:
     strength: 20
     dexterity: 20
-    intelligence: 11
-    wisdom: 11
-    constitution: 11
-    charisma: 11
   size: 30
   mob_class: 102
   race: 101
   height: 198
   weight: 200
-  max_in_world: -1
   skills:
-  - skill_id: 136
+  - skill_id: 136  # kPunch
     value: 75
   enhanced:
-    special_bitvector: 'd1'
+    special_bitvector: d1

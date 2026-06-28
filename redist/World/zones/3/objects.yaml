@@ -1,6 +1,7 @@
 # Objects for zone 3
 
 0:
+  # Object #300
   names:
     aliases: шелепуга
     nominative: шелепуга
@@ -13,27 +14,26 @@
   type: kWeapon
   wear_flags:
   - kTake
-  material: 0
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 6
+  - '0'
+  - '0'
+  - '0'
+  - '6'
   weight: 0
   cost: 150
   rent_off: 100
   rent_on: 75
-  spec_param: 0
+  spec_param: 141
   max_durability: -1
   cur_durability: 0
   timer: 30000
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 1:
+  # Object #301
   names:
     aliases: меч
     nominative: меч
@@ -48,27 +48,26 @@
   - kTake
   - kWield
   - kBoth
-  material: 3
+  material: 3  # булат
   values:
-  - 0
-  - 0
-  - 0
-  - 7
+  - '0'
+  - '0'
+  - '0'
+  - '7'
   weight: 20
   cost: 100
   rent_off: 100
   rent_on: 75
-  spec_param: 0
+  spec_param: 143
   max_durability: 100
   cur_durability: 100
   timer: 30000
   spell: -1
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 2:
+  # Object #302
   names:
     aliases: сабля
     nominative: сабля
@@ -82,27 +81,26 @@
   wear_flags:
   - kTake
   - kHold
-  material: 0
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 7
+  - '0'
+  - '0'
+  - '0'
+  - '7'
   weight: 0
   cost: 1
   rent_off: 80
   rent_on: 60
-  spec_param: 0
+  spec_param: 144
   max_durability: -1
   cur_durability: 0
   timer: 30000
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 3:
+  # Object #303
   names:
     aliases: нож
     nominative: нож
@@ -117,27 +115,26 @@
   - kTake
   - kWield
   - kHold
-  material: 3
+  material: 3  # булат
   values:
-  - 0
-  - 0
-  - 0
-  - 7
+  - '0'
+  - '0'
+  - '0'
+  - '7'
   weight: 1
   cost: 100
   rent_off: 75
   rent_on: 25
-  spec_param: 0
+  spec_param: 147
   max_durability: 65000
   cur_durability: 0
   timer: 30000
   spell: -1
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 4:
+  # Object #304
   names:
     aliases: топор
     nominative: топор
@@ -151,27 +148,26 @@
   wear_flags:
   - kTake
   - kWield
-  material: 0
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 3
+  - '0'
+  - '0'
+  - '0'
+  - '3'
   weight: 0
   cost: 150
   rent_off: 120
   rent_on: 100
-  spec_param: 0
+  spec_param: 142
   max_durability: -1
   cur_durability: 0
   timer: 30000
   spell: -1
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 5:
+  # Object #305
   names:
     aliases: плеть
     nominative: плеть
@@ -186,27 +182,26 @@
   - kTake
   - kWield
   - kBoth
-  material: 16
+  material: 16  # платина
   values:
-  - 0
-  - 0
-  - 0
-  - 2
+  - '0'
+  - '0'
+  - '0'
+  - '2'
   weight: 0
   cost: 0
   rent_off: 0
   rent_on: 0
-  spec_param: 0
+  spec_param: 145
   max_durability: -1
   cur_durability: 0
   timer: 30000
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 6:
+  # Object #306
   names:
     aliases: дубина
     nominative: дубина
@@ -221,27 +216,26 @@
   - kTake
   - kWield
   - kBoth
-  material: 9
+  material: 9  # кожа
   values:
-  - 0
-  - 0
-  - 0
-  - 5
+  - '0'
+  - '0'
+  - '0'
+  - '5'
   weight: 0
   cost: 0
   rent_off: 0
   rent_on: 0
-  spec_param: 0
+  spec_param: 141
   max_durability: -1
   cur_durability: 0
   timer: 30000
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 7:
+  # Object #307
   names:
     aliases: кольчуга
     nominative: кольчуга
@@ -255,12 +249,12 @@
   wear_flags:
   - kTake
   - kBody
-  material: 3
+  material: 3  # булат
   values:
-  - 10
-  - 10
-  - 0
-  - 0
+  - '10'
+  - '10'
+  - '0'
+  - '0'
   weight: 0
   cost: 150
   rent_off: 120
@@ -272,10 +266,9 @@
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 8:
+  # Object #308
   names:
     aliases: наручи
     nominative: наручи
@@ -289,12 +282,12 @@
   wear_flags:
   - kTake
   - kArms
-  material: 0
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 100
   rent_off: 75
@@ -306,10 +299,9 @@
   spell: -1
   level: 0
   sex: kPoly
-  max_in_world: 0
-  minimum_remorts: 0
 
 9:
+  # Object #309
   names:
     aliases: поножи
     nominative: поножи
@@ -323,12 +315,12 @@
   wear_flags:
   - kTake
   - kLegs
-  material: 0
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 100
   rent_off: 75
@@ -340,10 +332,9 @@
   spell: -1
   level: 0
   sex: kPoly
-  max_in_world: 0
-  minimum_remorts: 0
 
 10:
+  # Object #310
   names:
     aliases: шлем
     nominative: шлем
@@ -357,12 +348,12 @@
   wear_flags:
   - kTake
   - kHead
-  material: 0
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 150
   rent_off: 100
@@ -374,10 +365,9 @@
   spell: -1
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 11:
+  # Object #311
   names:
     aliases: каменный уголь
     nominative: уголь
@@ -390,12 +380,12 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12
+  material: 12  # драгоценный камень
   values:
-  - 0
-  - 311
-  - 0
-  - 0
+  - '0'
+  - '311'
+  - '0'
+  - '0'
   weight: 5
   cost: 10
   rent_off: 5
@@ -408,9 +398,9 @@
   level: 0
   sex: kMale
   max_in_world: 10000
-  minimum_remorts: 0
 
 12:
+  # Object #312
   names:
     aliases: составной лук
     nominative: составной лук
@@ -423,27 +413,26 @@
   type: kWeapon
   wear_flags:
   - kTake
-  material: 0
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 9
+  - '0'
+  - '0'
+  - '0'
+  - '9'
   weight: 0
   cost: 150
   rent_off: 100
   rent_on: 75
-  spec_param: 0
+  spec_param: 154
   max_durability: -1
   cur_durability: 0
   timer: 43200
   spell: -1
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 13:
+  # Object #313
   names:
     aliases: гибкая палка
     nominative: гибкая палка
@@ -456,12 +445,12 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 9
+  material: 9  # кожа
   values:
-  - 0
-  - 313
-  - 0
-  - 0
+  - '0'
+  - '313'
+  - '0'
+  - '0'
   weight: 15
   cost: 10
   rent_off: 5
@@ -473,10 +462,9 @@
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 14:
+  # Object #314
   names:
     aliases: тетива
     nominative: тетива
@@ -489,12 +477,12 @@
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 9
+  material: 9  # кожа
   values:
-  - 0
-  - 314
-  - 0
-  - 0
+  - '0'
+  - '314'
+  - '0'
+  - '0'
   weight: 5
   cost: 10
   rent_off: 5
@@ -506,10 +494,9 @@
   spell: -1
   level: 0
   sex: kFemale
-  max_in_world: 0
-  minimum_remorts: 0
 
 20:
+  # Object #320
   names:
     aliases: маленький кусок мяса
     nominative: маленький кусок мяса
@@ -522,12 +509,12 @@
   type: kFood
   wear_flags:
   - kTake
-  material: 16
+  material: 16  # платина
   values:
-  - 4
-  - 0
-  - 0
-  - 0
+  - '4'
+  - '0'
+  - '0'
+  - '0'
   weight: 1
   cost: 2
   rent_off: 0
@@ -539,10 +526,9 @@
   spell: -1
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 21:
+  # Object #321
   names:
     aliases: небольшой кусок мяса
     nominative: небольшой кусок мяса
@@ -555,12 +541,12 @@
   type: kFood
   wear_flags:
   - kTake
-  material: 16
+  material: 16  # платина
   values:
-  - 8
-  - 0
-  - 0
-  - 0
+  - '8'
+  - '0'
+  - '0'
+  - '0'
   weight: 1
   cost: 2
   rent_off: 0
@@ -572,10 +558,9 @@
   spell: -1
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 22:
+  # Object #322
   names:
     aliases: кусок мяса
     nominative: кусок мяса
@@ -588,12 +573,12 @@
   type: kFood
   wear_flags:
   - kTake
-  material: 16
+  material: 16  # платина
   values:
-  - 12
-  - 0
-  - 0
-  - 0
+  - '12'
+  - '0'
+  - '0'
+  - '0'
   weight: 2
   cost: 4
   rent_off: 0
@@ -605,10 +590,9 @@
   spell: -1
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 23:
+  # Object #323
   names:
     aliases: большой кусок мяса
     nominative: большой кусок мяса
@@ -621,12 +605,12 @@
   type: kFood
   wear_flags:
   - kTake
-  material: 16
+  material: 16  # платина
   values:
-  - 16
-  - 0
-  - 0
-  - 0
+  - '16'
+  - '0'
+  - '0'
+  - '0'
   weight: 1
   cost: 6
   rent_off: 0
@@ -638,10 +622,9 @@
   spell: -1
   level: 0
   sex: kMale
-  max_in_world: 0
-  minimum_remorts: 0
 
 30:
+  # Object #330
   names:
     aliases: волшебный сундук
     nominative: волшебный сундук
@@ -652,12 +635,16 @@
     prepositional: волшебном сундуке
   short_desc: Волшебный сундук так и манит к себе...
   type: kContainer
-  material: 0
+  extra_flags:
+  - kNoinvis
+  - kNodecay
+  - kNolocate
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -669,10 +656,9 @@
   spell: 0
   level: 0
   sex: kNeutral
-  max_in_world: 0
-  minimum_remorts: 0
 
 31:
+  # Object #331
   names:
     aliases: Ваш походный сундучок
     nominative: ваш походный сундучок
@@ -683,12 +669,19 @@
     prepositional: вашем походном сундучке
   short_desc: Ваш походный сундучок стоит здесь.
   type: kContainer
-  material: 0
+  extra_flags:
+  - kNorent
+  - kNodonate
+  - kNoinvis
+  - kNosell
+  - kNodecay
+  - kNolocate
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -700,10 +693,9 @@
   spell: 0
   level: 0
   sex: kNeutral
-  max_in_world: 0
-  minimum_remorts: 0
 
 32:
+  # Object #332
   names:
     aliases: короб склад снаряжения ватаги
     nominative: склад снаряжения вашей ватаги
@@ -714,12 +706,19 @@
     prepositional: склад снаряжения вашей ватаги
   short_desc: Короб для хранения снаряжения вашей ватаги пристроен в углу.
   type: kContainer
-  material: 0
+  extra_flags:
+  - kNorent
+  - kNodonate
+  - kNoinvis
+  - kNosell
+  - kNodecay
+  - kNolocate
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -731,10 +730,9 @@
   spell: 0
   level: 0
   sex: kNeutral
-  max_in_world: 0
-  minimum_remorts: 0
 
 33:
+  # Object #333
   names:
     aliases: короб хранения ингредиентов
     nominative: короб для хранения ингредиентов
@@ -745,12 +743,16 @@
     prepositional: коробе для хранения ингредиентов
   short_desc: Короб для хранения ингредиентов пристроен в углу.
   type: kContainer
-  material: 0
+  extra_flags:
+  - kNoinvis
+  - kNodecay
+  - kNolocate
+  material: 0  # бронза
   values:
-  - 0
-  - 0
-  - 0
-  - 0
+  - '0'
+  - '0'
+  - '0'
+  - '0'
   weight: 0
   cost: 0
   rent_off: 0
@@ -762,5 +764,3 @@
   spell: 0
   level: 0
   sex: kNeutral
-  max_in_world: 0
-  minimum_remorts: 0

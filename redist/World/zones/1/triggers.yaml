@@ -1,6 +1,7 @@
 # Triggers for zone 1
 
 0:
+  # Trigger #100
   name: перемещение
   attach_type: kRoomTrigger
   trigger_types:
@@ -17,32 +18,27 @@
     end
     if %arg.contains(0)% || %arg.contains(трон)%
       wteleport %actor% 100
-      %echo% &G%actor.name% шагнул в тронный зал Богов!&n
     end
     if %arg.contains(1)% || %arg.contains(темница)%
       wteleport %actor% 101
-      %echo% &G%actor.name% шагнул в темницу!&n
-    end
-    if %arg.contains(2)% || %arg.contains(прокси)%
-      wteleport %actor% 103
-      %echo% &G%actor.name% шагнул в комнату незарегистрированных игроков!&n
     end
     if %arg.contains(5)% || %arg.contains(имена)%
-      %echo% БАММ!!! 
+      %echo% &Y БАММ!!! &n
       *wteleport %actor% 105
     end
 
 1:
+  # Trigger #101
   name: тест1
   attach_type: kObjTrigger
   trigger_types:
   - kCommand
   narg: 1
   arglist: таймер
-  script: |-
-    otransform 1061
+  script: otransform 1061
 
 2:
+  # Trigger #102
   name: приветствие старика
   attach_type: kMobTrigger
   trigger_types:
@@ -127,16 +123,8 @@
     done
     г ...или  какую другую. Скажи только ее название.
 
-3:
-  name: умирает искра
-  attach_type: kMobTrigger
-  trigger_types:
-  - kDeath
-  narg: 100
-  script: |-
-    load obj 1070
-
 10:
+  # Trigger #110
   name: зеленый самоцвет
   attach_type: kMobTrigger
   trigger_types:
@@ -164,6 +152,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 11:
+  # Trigger #111
   name: лук_самострел
   attach_type: kMobTrigger
   trigger_types:
@@ -192,6 +181,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 12:
+  # Trigger #112
   name: синь кафтан
   attach_type: kMobTrigger
   trigger_types:
@@ -222,6 +212,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 13:
+  # Trigger #113
   name: жемчужина
   attach_type: kMobTrigger
   trigger_types:
@@ -254,6 +245,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 14:
+  # Trigger #114
   name: шелом
   attach_type: kMobTrigger
   trigger_types:
@@ -296,6 +288,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 15:
+  # Trigger #115
   name: злата цепь
   attach_type: kMobTrigger
   trigger_types:
@@ -321,6 +314,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 16:
+  # Trigger #116
   name: руна трансформации
   attach_type: kMobTrigger
   trigger_types:
@@ -346,6 +340,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 17:
+  # Trigger #117
   name: дрын
   attach_type: kMobTrigger
   trigger_types:
@@ -373,6 +368,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 18:
+  # Trigger #118
   name: постоялый двор
   attach_type: kMobTrigger
   trigger_types:
@@ -396,6 +392,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 19:
+  # Trigger #119
   name: перчатки ловчего
   attach_type: kMobTrigger
   trigger_types:
@@ -424,6 +421,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 20:
+  # Trigger #120
   name: кинжал дурака
   attach_type: kMobTrigger
   trigger_types:
@@ -448,6 +446,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 21:
+  # Trigger #121
   name: новенький кистень
   attach_type: kMobTrigger
   trigger_types:
@@ -473,6 +472,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 22:
+  # Trigger #122
   name: подчинить разум
   attach_type: kMobTrigger
   trigger_types:
@@ -497,6 +497,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 23:
+  # Trigger #123
   name: богатырский молот
   attach_type: kMobTrigger
   trigger_types:
@@ -538,6 +539,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 24:
+  # Trigger #124
   name: призматическая аура
   attach_type: kMobTrigger
   trigger_types:
@@ -564,6 +566,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 25:
+  # Trigger #125
   name: ледяная аура
   attach_type: kMobTrigger
   trigger_types:
@@ -591,6 +594,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 26:
+  # Trigger #126
   name: исцеление
   attach_type: kMobTrigger
   trigger_types:
@@ -619,6 +623,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 27:
+  # Trigger #127
   name: критическое исцеление
   attach_type: kMobTrigger
   trigger_types:
@@ -641,6 +646,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 28:
+  # Trigger #128
   name: длительное оцепенение
   attach_type: kMobTrigger
   trigger_types:
@@ -670,6 +676,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 29:
+  # Trigger #129
   name: шкура дикого вепря
   attach_type: kMobTrigger
   trigger_types:
@@ -695,6 +702,7 @@
     mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 30:
+  # Trigger #130
   name: зеленый камзол
   attach_type: kMobTrigger
   trigger_types:
@@ -703,7 +711,7 @@
   arglist: зеленый камзол
   script: |-
     wait 1s
-    mecho Дряхлый старец покряхтел поудобнее устраиваясь на завалинке и начал  вещать.
+    mecho  Дряхлый старец покряхтел поудобнее устраиваясь на завалинке и начал  вещать.
     wait 1s
     mecho -  Окак, да, бывали времена, сам носил я такой, да вот состарился,
     mecho -  ловкость  потерял  сноровку.  
@@ -715,66 +723,25 @@
     mecho -  Да только делиться ими они ни с кем не намерены, и сильны и ловки они,  так что
     mecho -  если силой отбирать надумаешь то сразу готовься... к схватке....  лютой...  
     wait 1s
-    mecho Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
+    mecho  Дряхлый старик, говоривший все тише и тише, совсем замолчал и впал в дрему.
 
 31:
+  # Trigger #131
   name: В воспитательных целях
   attach_type: kMobTrigger
   trigger_types:
   - kRandomGlobal
   - kRandom
   narg: 100
-  arglist: 100
+  arglist: '100'
   script: |-
-    set charlist Ярмола
+    set charlist Андора
     foreach target %charlist%
       tell .%target% &CЕсть кто? Ну, есть кто? Ау!!! Есть кто там! А? Не?!! Не а?! Ну кто-то же есть, а?! Есть кто, не?!&n
     done
 
-32:
-  name: test Milich
-  attach_type: kObjTrigger
-  trigger_types:
-  - kCommand
-  narg: 3
-  arglist: распить
-  script: |-
-    osend %actor% cmd:%cmd%, arg.car:%arg.car%
-    osend %actor% arg.words:%arg.words%, val0:%self.val0%
-    osend %actor% words(1):%arg.words(1)%, words(2):%arg.words(2)%, words(3):%arg.words(3)%, words(4):%arg.words(4)%.
-    if !(%arg.car% == чарка)
-      osend %actor% Что же вы хотите распить?!
-      halt
-    end
-    eval nsobut %arg.words%-1
-    if %nsobut% >= 4
-      osend %actor% Жаль маленький сосуд, на всю деревню не хватит!
-      halt
-    end
-    while %nsobut% >= 1
-      eval slovo %nsobut%+1
-      osend %actor% word:%arg.words(%slovo%)%(%slovo%)
-      if %arg.words(%slovo%)%==%actor.iname%
-        osend %actor% Дааа, я сам себе отличный собутыльник!!! ...ик!
-        halt
-      end
-      set estigrok 0
-      foreach pc %self.pc%
-        if (%pc.iname%==%arg.words(%slovo%)%)
-          set estigrok 1
-          eval sobut %pc%
-        end
-      done
-      if %estigrok%==0
-        osend %actor% Ну и где Вы видите этого собутыльника?! %arg.words(%slovo%)%, аууу!
-        halt
-      else
-        osend %actor% Вот и Ваш собутыльник: %sobut.iname%!
-      end
-      eval nsobut %nsobut%-1
-    done
-
 40:
+  # Trigger #140
   name: капля
   attach_type: kObjTrigger
   trigger_types:
@@ -799,50 +766,27 @@
       end
     done
 
-52:
-  name: тест
-  attach_type: kRoomTrigger
-  trigger_types:
-  - kCommand
-  narg: 100
-  arglist: тест
-  script: |-
-    eval tmp 1
-    %echo% %tmp.name%
-    %echo% %tmp.vnum%
-
-55:
-  name: undefined
-  attach_type: kMobTrigger
-  narg: 0
-
-56:
-  name: new trigger
-  attach_type: kRoomTrigger
-  trigger_types:
-  - kAuto
-  narg: 100
-  script: |-
-    log триг 156 сработал
-
 65:
+  # Trigger #165
   name: тест
   attach_type: kMobTrigger
   trigger_types:
   - kSpeech
   narg: 0
   arglist: секс
+  script: ''
 
 66:
+  # Trigger #166
   name: Тестим oecho
   attach_type: kObjTrigger
   trigger_types:
   - kReceive
   narg: 100
-  script: |-
-    oecho Это тест-тест-тест...
+  script: oecho Это тест-тест-тест...
 
 67:
+  # Trigger #167
   name: вошли к кошмару
   attach_type: kMobTrigger
   trigger_types:
@@ -855,6 +799,7 @@
     say &CЗайдите, &Wпожалуйста&C, позже!&n
 
 80:
+  # Trigger #180
   name: LAAAAAAAAG
   attach_type: kMobTrigger
   trigger_types:
@@ -878,6 +823,7 @@
     mforce lag1 хохот .%actor.name%
 
 81:
+  # Trigger #181
   name: ЛАГ2
   attach_type: kMobTrigger
   trigger_types:
@@ -910,6 +856,7 @@
     end
 
 82:
+  # Trigger #182
   name: LAG loaded
   attach_type: kMobTrigger
   trigger_types:
@@ -923,6 +870,7 @@
     end
 
 83:
+  # Trigger #183
   name: НИИИИИЗЯ!
   attach_type: kMobTrigger
   trigger_types:
@@ -938,6 +886,7 @@
     end
 
 89:
+  # Trigger #189
   name: Маты у заплечных дел мастера
   attach_type: kMobTrigger
   trigger_types:
@@ -954,17 +903,17 @@
     end
 
 90:
-  name: '&Gmaxobj > curobj = purge&n'
-  attach_type: kObjTrigger
+  # Trigger #190
+  name: й
+  attach_type: kRoomTrigger
   trigger_types:
-  - kLoad
-  narg: 100
-  script: |-
-    if (%world.curobjs(%self.vnum%)% > %world.maxobj(%self.vnum%)%)
-      opurge %self%
-    end
+  - kCommand
+  narg: 1
+  arglist: cheat
+  script: '*'
 
 92:
+  # Trigger #192
   name: Дамадж триггер у палача.
   attach_type: kMobTrigger
   trigger_types:
@@ -977,6 +926,7 @@
     %damage% %actor% %dmg%
 
 93:
+  # Trigger #193
   name: Кто-то что-то сказал в комнате с палачом
   attach_type: kMobTrigger
   trigger_types:
@@ -1022,6 +972,7 @@
     end
 
 94:
+  # Trigger #194
   name: Палач зашел к жертве
   attach_type: kMobTrigger
   trigger_types:
@@ -1070,6 +1021,7 @@
     done
 
 95:
+  # Trigger #195
   name: Жертва зашла к палачу
   attach_type: kMobTrigger
   trigger_types:
@@ -1111,6 +1063,7 @@
     end
 
 96:
+  # Trigger #196
   name: назначение целей палачу
   attach_type: kMobTrigger
   trigger_types:
@@ -1151,6 +1104,7 @@
     done
 
 97:
+  # Trigger #197
   name: Подавление агров и врат
   attach_type: kRoomTrigger
   trigger_types:
@@ -1236,6 +1190,7 @@
     return 0
 
 98:
+  # Trigger #198
   name: подавление врат в аду
   attach_type: kRoomTrigger
   trigger_types:
@@ -1246,9 +1201,10 @@
     return 0
     wechoaround %actor% %actor.name% не смог%actor.q% открыть Врата.
     wsend %actor% Вы приложили максимум усилий, но ничего не произошло.
-    log &R %actor.name% пытался поставить врата из комнаты %self.vnum% !!!&g
+    log &R %actor.name% пытался поставить врата из комнаты %self.vnum% !!!
 
 99:
+  # Trigger #199
   name: выдача чешуи триглаву
   attach_type: kMobTrigger
   trigger_types:
