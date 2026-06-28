@@ -42,6 +42,7 @@
     <Compile Include="EngineCodecTests.cs" />
     <Compile Include="YamlDiceTests.cs" />
     <Compile Include="NamedIntMapTests.cs" />
+    <Compile Include="DataPreservationTests.cs" />
     <Compile Include="ZoneDiscoveryTests.cs" />
     <Compile Include="ProdWorldIntegrationTests.cs" />
   </ItemGroup>
