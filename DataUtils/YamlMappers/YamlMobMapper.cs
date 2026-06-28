@@ -22,13 +22,15 @@ namespace DataUtils.YamlMappers
             };
 
             // Names: aliases + the six Russian grammatical cases, using the engine's key names.
-            yaml.Names["aliases"] = mob.Alias ?? "";
-            yaml.Names["nominative"] = mob.Cases.Imen ?? "";
-            yaml.Names["genitive"] = mob.Cases.Rod ?? "";
-            yaml.Names["dative"] = mob.Cases.Dat ?? "";
-            yaml.Names["accusative"] = mob.Cases.Vin ?? "";
-            yaml.Names["instrumental"] = mob.Cases.Tvor ?? "";
-            yaml.Names["prepositional"] = mob.Cases.Pred ?? "";
+            // TrimEnd: trailing whitespace in a name is junk (some worlds carry a stray tab)
+            // and YAML strips it on the next read, so trim on write to keep re-saves stable.
+            yaml.Names["aliases"] = (mob.Alias ?? "").TrimEnd();
+            yaml.Names["nominative"] = (mob.Cases.Imen ?? "").TrimEnd();
+            yaml.Names["genitive"] = (mob.Cases.Rod ?? "").TrimEnd();
+            yaml.Names["dative"] = (mob.Cases.Dat ?? "").TrimEnd();
+            yaml.Names["accusative"] = (mob.Cases.Vin ?? "").TrimEnd();
+            yaml.Names["instrumental"] = (mob.Cases.Tvor ?? "").TrimEnd();
+            yaml.Names["prepositional"] = (mob.Cases.Pred ?? "").TrimEnd();
 
             // Descriptions: engine short_desc = room one-liner, long_desc = look text
             yaml.Descriptions = new YamlMobDescriptions

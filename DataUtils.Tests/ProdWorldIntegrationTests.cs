@@ -80,10 +80,10 @@ namespace DataUtils.Tests
                     var z2 = Load(a, zn, koi); Save(z2, b, zn);
                     if (!ZoneFilesEqual(a, b, zn, koi)) drift.Add(z);
                 }
-                // A re-save should be byte-stable. A few known data-artifact edges remain
-                // (e.g. a trailing tab in a mob name, an F reset-command ordering case),
-                // so allow a small margin while still catching real regressions.
-                Assert.That(drift.Count, Is.LessThanOrEqualTo(5),
+                // A re-save must be byte-stable. The whole production world round-trips
+                // cleanly; a tiny margin tolerates one-off junk in future world data while
+                // still catching any systemic regression (which would drift many zones).
+                Assert.That(drift.Count, Is.LessThanOrEqualTo(2),
                     "too many zones drift on re-save: " + string.Join(", ", drift));
             }
             finally

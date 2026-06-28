@@ -18,13 +18,15 @@ namespace DataUtils.YamlMappers
             };
 
             // Names: aliases + the six Russian grammatical cases, using the engine's key names.
-            yaml.Names["aliases"] = obj.Alias ?? "";
-            yaml.Names["nominative"] = obj.Cases.Imen ?? "";
-            yaml.Names["genitive"] = obj.Cases.Rod ?? "";
-            yaml.Names["dative"] = obj.Cases.Dat ?? "";
-            yaml.Names["accusative"] = obj.Cases.Vin ?? "";
-            yaml.Names["instrumental"] = obj.Cases.Tvor ?? "";
-            yaml.Names["prepositional"] = obj.Cases.Pred ?? "";
+            // TrimEnd: trailing whitespace in a name is junk and YAML strips it on the next
+            // read, so trim on write to keep re-saves stable.
+            yaml.Names["aliases"] = (obj.Alias ?? "").TrimEnd();
+            yaml.Names["nominative"] = (obj.Cases.Imen ?? "").TrimEnd();
+            yaml.Names["genitive"] = (obj.Cases.Rod ?? "").TrimEnd();
+            yaml.Names["dative"] = (obj.Cases.Dat ?? "").TrimEnd();
+            yaml.Names["accusative"] = (obj.Cases.Vin ?? "").TrimEnd();
+            yaml.Names["instrumental"] = (obj.Cases.Tvor ?? "").TrimEnd();
+            yaml.Names["prepositional"] = (obj.Cases.Pred ?? "").TrimEnd();
 
             yaml.ShortDesc = obj.Desc ?? "";
             // Whitespace-only action_desc (e.g. a world's empty ">2" folded block) carries
