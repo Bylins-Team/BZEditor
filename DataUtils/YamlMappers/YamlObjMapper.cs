@@ -27,7 +27,9 @@ namespace DataUtils.YamlMappers
             yaml.Names["prepositional"] = obj.Cases.Pred ?? "";
 
             yaml.ShortDesc = obj.Desc ?? "";
-            yaml.ActionDesc = string.IsNullOrEmpty(obj.ActionDesc) ? null : obj.ActionDesc;
+            // Whitespace-only action_desc (e.g. a world's empty ">2" folded block) carries
+            // no content; omit it so a re-save is idempotent instead of dropping it next pass.
+            yaml.ActionDesc = string.IsNullOrWhiteSpace(obj.ActionDesc) ? null : obj.ActionDesc;
             yaml.Type = EngineCodec.EnumName(obj.Type, EngineDictionaries.ObjTypes);
 
             // Flag bitvectors as engine symbolic names

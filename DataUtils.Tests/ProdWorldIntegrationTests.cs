@@ -80,8 +80,10 @@ namespace DataUtils.Tests
                     var z2 = Load(a, zn, koi); Save(z2, b, zn);
                     if (!ZoneFilesEqual(a, b, zn, koi)) drift.Add(z);
                 }
-                // Allow the known empty-action_desc cosmetic drift; assert nothing worse.
-                Assert.That(drift.Count, Is.LessThanOrEqualTo(40),
+                // A re-save should be byte-stable. A few known data-artifact edges remain
+                // (e.g. a trailing tab in a mob name, an F reset-command ordering case),
+                // so allow a small margin while still catching real regressions.
+                Assert.That(drift.Count, Is.LessThanOrEqualTo(5),
                     "too many zones drift on re-save: " + string.Join(", ", drift));
             }
             finally
