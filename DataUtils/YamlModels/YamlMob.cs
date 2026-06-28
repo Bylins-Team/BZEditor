@@ -174,23 +174,6 @@ namespace DataUtils.YamlModels
     }
 
     /// <summary>
-    /// Mob spell entry
-    /// </summary>
-    public class YamlMobSpell
-    {
-        public int SpellId { get; set; }
-        public int Count { get; set; }
-
-        public YamlMobSpell() { }
-
-        public YamlMobSpell(int spellId, int count)
-        {
-            SpellId = spellId;
-            Count = count;
-        }
-    }
-
-    /// <summary>
     /// Enhanced E-spec mob fields
     /// </summary>
     public class YamlMobEnhanced
@@ -224,7 +207,13 @@ namespace DataUtils.YamlModels
         public List<int> Resistances { get; set; }
         public List<int> Saves { get; set; }
         public List<int> Feats { get; set; }
-        public List<YamlMobSpell> Spells { get; set; }
+
+        /// <summary>
+        /// Memorized spells as a flat list of spell ids, each id repeated `count`
+        /// times: the engine reads each entry as a bare int and increments the
+        /// memorized-slot count per occurrence (yaml_world_data_source.cpp ~1745).
+        /// </summary>
+        public List<int> Spells { get; set; }
         public List<int> Helpers { get; set; }
         public List<int> Destinations { get; set; }
     }

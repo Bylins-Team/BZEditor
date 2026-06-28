@@ -171,13 +171,16 @@ namespace DataUtils.YamlMappers
                 hasEnhanced = true;
             }
 
-            // Spells
+            // Spells: emit a flat int list, repeating each id `count` times
+            // (the engine reads bare ints and counts occurrences as memorized slots).
             if (mob.Spells.Count > 0)
             {
-                enhanced.Spells = new List<YamlMobSpell>();
+                enhanced.Spells = new List<int>();
                 foreach (MobSpell spell in mob.Spells)
                 {
-                    enhanced.Spells.Add(new YamlMobSpell(spell.VNum, spell.Count));
+                    int count = spell.Count < 1 ? 1 : spell.Count;
+                    for (int i = 0; i < count; i++)
+                        enhanced.Spells.Add(spell.VNum);
                 }
                 hasEnhanced = true;
             }
@@ -385,11 +388,19 @@ namespace DataUtils.YamlMappers
                         mob.Feats.Add(feat);
                 }
 
-                // Spells
+                // Spells: the flat int list repeats each id once per memorized slot;
+                // group consecutive-or-not occurrences back into (id, count) entries.
                 if (enh.Spells != null)
                 {
-                    foreach (var spell in enh.Spells)
-                        mob.Spells.Add(new MobSpell(spell.SpellId, spell.Count));
+                    var counts = new Dictionary<int, int>();
+                    var order = new List<int>();
+                    foreach (int spellId in enh.Spells)
+                    {
+                        if (!counts.ContainsKey(spellId)) { counts[spellId] = 0; order.Add(spellId); }
+                        counts[spellId]++;
+                    }
+                    foreach (int spellId in order)
+                        mob.Spells.Add(new MobSpell(spellId, counts[spellId]));
                 }
 
                 // Helpers
