@@ -137,6 +137,12 @@ namespace DataUtils.YamlModels
         public List<YamlExtraDesc> ExtraDescriptions { get; set; } = new List<YamlExtraDesc>();
 
         /// <summary>
+        /// Extra values (potion/liquid spell data, the legacy V-lines) as an engine-named
+        /// map. Null when absent so it is omitted; preserved verbatim so saving never drops it.
+        /// </summary>
+        public Dictionary<string, int> ExtraValues { get; set; }
+
+        /// <summary>
         /// Max in world
         /// </summary>
         public int MaxInWorld { get; set; }

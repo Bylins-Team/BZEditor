@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace DataUtils
 {
@@ -13,6 +14,9 @@ namespace DataUtils
         public Cases Cases = new Cases();
 
         public ExtraDescCollection ExtraDescriptions = new ExtraDescCollection();
+        // Object extra values (legacy V-lines: potion/liquid spell data). Preserved
+        // verbatim through YAML save so it is not lost; keyed by the engine value name.
+        public Dictionary<string, int> ExtraValues = new Dictionary<string, int>();
         private string actionDesc = "";
         private string alias = "";
         private string cantTouch = "";

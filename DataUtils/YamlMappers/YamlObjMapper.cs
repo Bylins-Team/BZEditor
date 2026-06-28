@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DataUtils.YamlModels;
 
 namespace DataUtils.YamlMappers
@@ -95,6 +96,10 @@ namespace DataUtils.YamlMappers
                 });
             }
 
+            // Extra values (potion/liquid V-lines): preserved verbatim.
+            if (obj.ExtraValues != null && obj.ExtraValues.Count > 0)
+                yaml.ExtraValues = new Dictionary<string, int>(obj.ExtraValues);
+
             // Triggers
             foreach (var trig in obj.TriggersList)
             {
@@ -179,6 +184,12 @@ namespace DataUtils.YamlMappers
                 foreach (var ed in yaml.ExtraDescriptions)
                     obj.ExtraDescriptions.Add(new ExtraDesc(ed.Keywords ?? "", ed.Description ?? ""));
             }
+
+            // Extra values (potion/liquid V-lines): preserved verbatim.
+            obj.ExtraValues.Clear();
+            if (yaml.ExtraValues != null)
+                foreach (var kv in yaml.ExtraValues)
+                    obj.ExtraValues[kv.Key] = kv.Value;
 
             // Triggers
             if (yaml.Triggers != null)
