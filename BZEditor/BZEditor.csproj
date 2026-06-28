@@ -582,4 +582,20 @@ if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)
   <Target Name="AfterBuild">
   </Target>
   -->
+  <!-- Keep the runtime data (Bases / Configurations / World) next to the built exe so the
+       editor runs the same way from Visual Studio (F5), from a direct BZEditorBuild\BZEditor.exe
+       run, and from the CI package. The data lives in redist\ at the repo root. -->
+  <Target Name="CopyRuntimeData" AfterTargets="Build">
+    <ItemGroup>
+      <_RuntimeData Include="$(MSBuildProjectDirectory)\..\redist\**\*"
+                    Exclude="$(MSBuildProjectDirectory)\..\redist\BZEditorConfig.xml" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_RuntimeData)"
+          DestinationFiles="@(_RuntimeData->'$(OutDir)%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+    <!-- Seed a default config only when none exists; never overwrite the user's. -->
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\..\redist\BZEditorConfig.xml"
+          DestinationFolder="$(OutDir)"
+          Condition="!Exists('$(OutDir)BZEditorConfig.xml')" />
+  </Target>
 </Project>
