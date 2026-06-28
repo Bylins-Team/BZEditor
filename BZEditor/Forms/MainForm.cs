@@ -1440,8 +1440,8 @@ namespace BZEditor
             if (StaticData.BackupZones)
             {
                 BackupManager bm = new BackupManager();
-                bm.Backup(zdm);
                 bm.BackupFinished += BackupFinished;
+                bm.Backup(zdm);
             }
             else
                 zdm.SaveData();

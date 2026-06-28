@@ -1,7 +1,7 @@
 ﻿namespace BZEditor
 {
-    using System.Windows.Forms;
     using System.IO;
+    using System.IO.Compression;
     using DataUtils;
     using System;
 
@@ -20,68 +20,40 @@
         public void Backup(ZoneDataManager zdm)
         {
             this.zdm = zdm;
-            string backupPath = Path.Combine(StaticData.WorldFolderPath, "ZonesBackup");
-            Utils.EnsureDirectory(backupPath);
-            string filePath = Path.Combine(backupPath, this.zdm.Zone.Number + "__" + DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss") + ".7z");
-
-            if (File.Exists(filePath))
-                File.Delete(filePath);
-
-            ProcessCaller processCaller = new ProcessCaller(null)
+            try
             {
-                FileName = Path.Combine(Application.StartupPath, "7z.exe"),
-                Arguments = GetArguments(filePath, this.zdm.Zone.Number.ToString())
-            };
-            processCaller.StdErrReceived += WriteStreamInfo;
-            processCaller.StdOutReceived += WriteStreamInfo;
-            processCaller.Completed += ProcessCompleted;
-            processCaller.Failed += ProcessFailed;
-            processCaller.Start();
-        }
+                string backupPath = Path.Combine(StaticData.WorldFolderPath, "ZonesBackup");
+                Utils.EnsureDirectory(backupPath);
+                string zoneNum = zdm.Zone.Number.ToString();
+                string filePath = Path.Combine(backupPath,
+                    zoneNum + "__" + DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss") + ".zip");
+                if (File.Exists(filePath))
+                    File.Delete(filePath);
 
-        private static string GetArguments(string filePath, string zoneNum)
-        {
-            string res = "a \"" + filePath + "\"";
-            string fpath = Path.Combine(StaticData.WorldFolderPath, @"mob\" + zoneNum + ".mob");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"obj\" + zoneNum + ".obj");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"shp\" + zoneNum + ".shp");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"trg\" + zoneNum + ".trg");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"wld\" + zoneNum + ".wld");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"wld\" + zoneNum + ".map");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"wld\" + zoneNum + ".skt");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"zon\" + zoneNum + ".zon");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            res += " -y -mx9 -ms -mmt=on";
-            return res;
-        }
-        private void WriteStreamInfo(object sender, DataReceivedEventArgs e)
-        {
+                // A YAML zone is the whole zones/<n>/ directory. On the very first
+                // save the directory may not exist yet -- that is not a failure,
+                // there is simply nothing to back up.
+                string zoneDir = Path.Combine(StaticData.WorldFolderPath, "zones", zoneNum);
+                if (Directory.Exists(zoneDir))
+                {
+                    using (ZipArchive zip = ZipFile.Open(filePath, ZipArchiveMode.Create))
+                    {
+                        foreach (string file in Directory.GetFiles(zoneDir, "*", SearchOption.AllDirectories))
+                        {
+                            string rel = file.Substring(zoneDir.Length)
+                                             .TrimStart(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
+                                             .Replace(Path.DirectorySeparatorChar, '/');
+                            zip.CreateEntryFromFile(file, zoneNum + "/" + rel, CompressionLevel.Optimal);
+                        }
+                    }
+                }
 
-        }
-
-        private void ProcessCompleted(object sender, EventArgs e)
-        {
-            BackupFinished?.Invoke(true, zdm);
-        }
-
-        private void ProcessFailed(object sender, System.Threading.ThreadExceptionEventArgs e)
-        {
-            BackupFinished?.Invoke(false, zdm);
+                BackupFinished?.Invoke(true, zdm);
+            }
+            catch
+            {
+                BackupFinished?.Invoke(false, zdm);
+            }
         }
     }
 }
