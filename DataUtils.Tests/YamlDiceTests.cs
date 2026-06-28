@@ -1,4 +1,4 @@
-using DataUtils.YamlModels;
+﻿using DataUtils.YamlModels;
 using NUnit.Framework;
 
 namespace DataUtils.Tests

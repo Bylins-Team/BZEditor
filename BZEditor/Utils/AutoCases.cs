@@ -1,19 +1,19 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     public class AutoCases
     {
-        private readonly char[] buk0 = new char[13] {'б', 'в', 'д', 'з', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'ц'};
-        private readonly char[] buk1 = new char[13] {'е', 'е', 'у', 'ю', 'у', 'а', 'у', 'у', 'у', 'у', 'у', 'у', 'у'};
-        private readonly char[] buk2 = new char[13] {'б', 'в', 'д', 'з', 'л', 'м', 'м', 'п', 'р', 'с', 'м', 'ф', 'ц'};
-        private readonly char[] ship = new char[4] {'ч', 'ш', 'щ', 'ц'};
+        private readonly char[] buk0 = new char[13] {'Р±', 'РІ', 'Рґ', 'Р·', 'Р»', 'Рј', 'РЅ', 'Рї', 'СЂ', 'СЃ', 'С‚', 'С„', 'С†'};
+        private readonly char[] buk1 = new char[13] {'Рµ', 'Рµ', 'Сѓ', 'СЋ', 'Сѓ', 'Р°', 'Сѓ', 'Сѓ', 'Сѓ', 'Сѓ', 'Сѓ', 'Сѓ', 'Сѓ'};
+        private readonly char[] buk2 = new char[13] {'Р±', 'РІ', 'Рґ', 'Р·', 'Р»', 'Рј', 'Рј', 'Рї', 'СЂ', 'СЃ', 'Рј', 'С„', 'С†'};
+        private readonly char[] ship = new char[4] {'С‡', 'С€', 'С‰', 'С†'};
 
         private readonly char[] sogl =
             new[]
                 {
-                    'б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ'
+                    'Р±', 'РІ', 'Рі', 'Рґ', 'Р¶', 'Р·', 'Р№', 'Рє', 'Р»', 'Рј', 'РЅ', 'Рї', 'СЂ', 'СЃ', 'С‚', 'С„', 'С…', 'С†', 'С‡', 'С€', 'С‰'
                 };
 
-        //private char[] zvon = new char[9] {'б', 'в', 'г', 'д', 'ж', 'з', 'н', 'р', 'ц'};
+        //private char[] zvon = new char[9] {'Р±', 'РІ', 'Рі', 'Рґ', 'Р¶', 'Р·', 'РЅ', 'СЂ', 'С†'};
 
         private bool My(int ar, char bukv)
         {
@@ -75,17 +75,17 @@ namespace BZEditor
         //    //char[] latb = new char[] {"a","b","v","g","d","ye","zh","z","i","j","k","l","m","n","o","p","r","s","t","u","f","h","ts","ch","sh","sh","","y","","e","yu","ya"};
         //    //char clet;
 
-        //    //Тут транслитерация
+        //    //РўСѓС‚ С‚СЂР°РЅСЃР»РёС‚РµСЂР°С†РёСЏ
         //    /*newstr[0]='\0';
 
         //    for ( int i = 0 ; i <= strlen( str ) ; i++ ) 
         //    {
         //        clet = lowc( str[ i ] );
-        //        if ( clet >= 'а' && clet <= 'п' ) 
-        //            strcat( newstr, latb[ clet - 'а' ] );
-        //        if ( clet >= 'р' && clet <= 'я' ) 
-        //            strcat( newstr, latb[ clet - 'р' + 16 ] );
-        //        if ( clet == 'ё' ) 
+        //        if ( clet >= 'Р°' && clet <= 'Рї' ) 
+        //            strcat( newstr, latb[ clet - 'Р°' ] );
+        //        if ( clet >= 'СЂ' && clet <= 'СЏ' ) 
+        //            strcat( newstr, latb[ clet - 'СЂ' + 16 ] );
+        //        if ( clet == 'С‘' ) 
         //            strcat( newstr, "yo" );
         //    }
         //    if ( newstr[ 0 ] ==  '\0' )
@@ -93,7 +93,7 @@ namespace BZEditor
         //    return str;
         //}
 
-        //Нахер ненужный бред
+        //РќР°С…РµСЂ РЅРµРЅСѓР¶РЅС‹Р№ Р±СЂРµРґ
         //private bool isspace1(char c)
         //{
         //    if (c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == 0)
@@ -102,7 +102,7 @@ namespace BZEditor
         //}
 
         /// <summary>
-        /// Тупо определение количества слов
+        /// РўСѓРїРѕ РѕРїСЂРµРґРµР»РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЃР»РѕРІ
         /// </summary>
         private int StrCount(string str)
         {
@@ -123,7 +123,7 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Типо получение слова под номером num
+        /// РўРёРїРѕ РїРѕР»СѓС‡РµРЅРёРµ СЃР»РѕРІР° РїРѕРґ РЅРѕРјРµСЂРѕРј num
         /// </summary>
         private string TakeWord(int num, string str)
         {
@@ -160,12 +160,12 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Получение количества значимых для парсинга слов
+        /// РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° Р·РЅР°С‡РёРјС‹С… РґР»СЏ РїР°СЂСЃРёРЅРіР° СЃР»РѕРІ
         /// </summary>
         private int StrCount1(string str)
         {
             string[] exclude =
-                new[] {"для", "от", "из", "против", "на", "в", "с", "за", "под", "со", "про", "над"};
+                new[] {"РґР»СЏ", "РѕС‚", "РёР·", "РїСЂРѕС‚РёРІ", "РЅР°", "РІ", "СЃ", "Р·Р°", "РїРѕРґ", "СЃРѕ", "РїСЂРѕ", "РЅР°Рґ"};
             int cnt = 0;
             string[] words = str.Split(new[] {' ', '\n', '\r', '\t'});
             foreach (string w in words)
@@ -205,13 +205,13 @@ namespace BZEditor
         }
 
 //        /// <summary>
-//        /// Преобразование в нижний регистр с заменой Ё на е
+//        /// РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ РЅРёР¶РЅРёР№ СЂРµРіРёСЃС‚СЂ СЃ Р·Р°РјРµРЅРѕР№ РЃ РЅР° Рµ
 //        /// </summary>
 //        private string toLowWithE(string str)
 //        {
-//            return str.ToLower().Replace("ё", "е");
-//            /*char up[] =   "АБВГДЕЁёЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"; 
-//            char down[] =   "абвгдееежзийклмнопрстуфхчцшщъыьэюя";
+//            return str.ToLower().Replace("С‘", "Рµ");
+//            /*char up[] =   "РђР‘Р’Р“Р”Р•РЃС‘Р–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇ"; 
+//            char down[] =   "Р°Р±РІРіРґРµРµРµР¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С‡С†С€С‰СЉС‹СЊСЌСЋСЏ";
 //
 //            for ( int i = 0; i < (int) strlen( s ); i++ )
 //                for ( int j = 0; j < (int) strlen( up ); j++ )
@@ -231,7 +231,7 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Автоопределение пола
+        /// РђРІС‚РѕРѕРїСЂРµРґРµР»РµРЅРёРµ РїРѕР»Р°
         /// </summary>
         /// <param name="iGender"></param>
         /// <param name="str"></param>
@@ -242,13 +242,13 @@ namespace BZEditor
             {
                 switch (str[str.Length - 1])
                 {
-                    case 'й':
+                    case 'Р№':
                         return 0;
-                    case 'о':
+                    case 'Рѕ':
                         return 2;
-                    case 'е':
+                    case 'Рµ':
                         return 2;
-                    case 'ё':
+                    case 'С‘':
                         return 2;
                 }
             }
@@ -257,7 +257,7 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Получение родительного падежа
+        /// РџРѕР»СѓС‡РµРЅРёРµ СЂРѕРґРёС‚РµР»СЊРЅРѕРіРѕ РїР°РґРµР¶Р°
         /// </summary>
         public string Rpad(string nslv, bool edChislo, int gender)
         {
@@ -275,331 +275,331 @@ namespace BZEditor
                     leng = slv.Length;
                     switch (slv[leng - 1])
                     {
-                            // 1- ое склонение   ( + часть третьего)
-                        case 'а':
+                            // 1- РѕРµ СЃРєР»РѕРЅРµРЅРёРµ   ( + С‡Р°СЃС‚СЊ С‚СЂРµС‚СЊРµРіРѕ)
+                        case 'Р°':
                             if (!edChislo && !Issogl(slv[leng - 3]) && Issogl(slv[leng - 2]))
                             {
-                                if (slv[leng - 3] == 'е')
+                                if (slv[leng - 3] == 'Рµ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 3, 'ё');
+                                    slv = ReplaceChar(slv, leng - 3, 'С‘');
                                     slv.Remove(leng - 1);
                                     break;
                                 }
-                                if (slv[leng - 3] == 'о')
+                                if (slv[leng - 3] == 'Рѕ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'о');
-                                    slv += "в";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рѕ');
+                                    slv += "РІ";
                                     break;
                                 }
                                 slv.Remove(leng - 1);
                                 break;
-                            } //<гл><согл>а
+                            } //<РіР»><СЃРѕРіР»>Р°
                             if (!edChislo && Issogl(slv[leng - 3]) && Issogl(slv[leng - 2]))
                             {
-                                if (slv[leng - 2] == 'д')
+                                if (slv[leng - 2] == 'Рґ')
                                 {
                                     slv.Remove(leng - 1);
                                     break;
                                 }
                                 slv = ReplaceChar(slv, leng - 1, slv[leng - 2]);
-                                slv = ReplaceChar(slv, leng - 2, 'е');
+                                slv = ReplaceChar(slv, leng - 2, 'Рµ');
                                 break;
-                            } //<согл><согл>а
+                            } //<СЃРѕРіР»><СЃРѕРіР»>Р°
                             if (My(0, slv[leng - 2]))
-                                slv = ReplaceChar(slv, leng - 1, 'ы');
+                                slv = ReplaceChar(slv, leng - 1, 'С‹');
                             else
-                                slv = ReplaceChar(slv, leng - 1, 'и');
+                                slv = ReplaceChar(slv, leng - 1, 'Рё');
                             break;
-                        case 'я':
-                            if (edChislo) // Единств. число -я
+                        case 'СЏ':
+                            if (edChislo) // Р•РґРёРЅСЃС‚РІ. С‡РёСЃР»Рѕ -СЏ
                             {
-                                if (slv[leng - 2] == 'м')
+                                if (slv[leng - 2] == 'Рј')
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    slv += "ни";
-                                } // проверка окончания "-мя"
-                                else if (Isship(slv[leng - 3]) && slv[leng - 2] == 'а')
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    slv += "РЅРё";
+                                } // РїСЂРѕРІРµСЂРєР° РѕРєРѕРЅС‡Р°РЅРёСЏ "-РјСЏ"
+                                else if (Isship(slv[leng - 3]) && slv[leng - 2] == 'Р°')
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'о');
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
+                                    slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
                                 }
-                                else if (slv[leng - 2] == 'а' && i != StrCount(nslv))
+                                else if (slv[leng - 2] == 'Р°' && i != StrCount(nslv))
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'о');
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
+                                    slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
                                 }
-                                else if (slv[leng - 2] == 'я')
+                                else if (slv[leng - 2] == 'СЏ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'е');
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
+                                    slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
                                 }
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'и');
+                                    slv = ReplaceChar(slv, leng - 1, 'Рё');
                             }
-                            else // Множественное число -я
+                            else // РњРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕРµ С‡РёСЃР»Рѕ -СЏ
                             {
-                                if (slv[leng - 2] == 'ь')
+                                if (slv[leng - 2] == 'СЊ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    slv += "в";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    slv += "РІ";
                                 }
                                 else if (Issogl(slv[leng - 2]))
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    slv += "й";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    slv += "Р№";
                                 }
-                                else if (slv[leng - 2] == 'и')
-                                    //Тут было так, непонятно зачем,м.б. ошибка (slv[leng-2]='и')
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
+                                else if (slv[leng - 2] == 'Рё')
+                                    //РўСѓС‚ Р±С‹Р»Рѕ С‚Р°Рє, РЅРµРїРѕРЅСЏС‚РЅРѕ Р·Р°С‡РµРј,Рј.Р±. РѕС€РёР±РєР° (slv[leng-2]='Рё')
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
                             }
                             break;
-                            // 2- ое склонение
-                        case 'й':
+                            // 2- РѕРµ СЃРєР»РѕРЅРµРЅРёРµ
+                        case 'Р№':
                             if (My(1, slv[leng - 2]))
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'я');
+                                slv = ReplaceChar(slv, leng - 1, 'СЏ');
                                 break;
                             }
-                            if (slv[leng - 2] == 'и')
+                            if (slv[leng - 2] == 'Рё')
                             {
                                 if (i != StrCount(nslv))
                                 {
-                                    if (slv[leng - 3] == 'к' || slv[leng - 3] == 'г')
+                                    if (slv[leng - 3] == 'Рє' || slv[leng - 3] == 'Рі')
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'о');
-                                        slv = ReplaceChar(slv, leng - 1, 'г');
-                                        slv += "о";
+                                        slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                        slv = ReplaceChar(slv, leng - 1, 'Рі');
+                                        slv += "Рѕ";
                                         break;
                                     }
-                                    if (slv[leng - 3] == 'б' || slv[leng - 3] == 'з' || slv[leng - 3] == 'с')
+                                    if (slv[leng - 3] == 'Р±' || slv[leng - 3] == 'Р·' || slv[leng - 3] == 'СЃ')
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'ь');
-                                        slv = ReplaceChar(slv, leng - 1, 'е');
-                                        slv += "го";
+                                        slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                        slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                        slv += "РіРѕ";
                                         break;
                                     }
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'е');
-                                        slv = ReplaceChar(slv, leng - 1, 'г');
-                                        slv += "о";
+                                        slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                        slv = ReplaceChar(slv, leng - 1, 'Рі');
+                                        slv += "Рѕ";
                                         break;
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
                                     break;
-                                } //-ий
+                                } //-РёР№
                             }
-                            if (slv[leng - 2] == 'о')
+                            if (slv[leng - 2] == 'Рѕ')
                             {
                                 if (i == StrCount(nslv))
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
                                     break;
                                 }
                             }
-                            if (slv[leng - 2] == 'ы')
+                            if (slv[leng - 2] == 'С‹')
                             {
                                 if (i == StrCount(nslv))
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'о');
-                                    slv = ReplaceChar(slv, leng - 1, 'г');
-                                    slv += "о";
+                                    slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                    slv = ReplaceChar(slv, leng - 1, 'Рі');
+                                    slv += "Рѕ";
                                     break;
                                 }
                             }
                             else
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'г');
-                                slv += "о";
+                                slv = ReplaceChar(slv, leng - 1, 'Рі');
+                                slv += "Рѕ";
                                 break;
-                            } // -ой
-                            if (slv[leng - 2] == 'ы')
+                            } // -РѕР№
+                            if (slv[leng - 2] == 'С‹')
                             {
                                 if (i != StrCount(nslv))
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'о');
-                                    slv = ReplaceChar(slv, leng - 1, 'г');
-                                    slv += "о";
+                                    slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                    slv = ReplaceChar(slv, leng - 1, 'Рі');
+                                    slv += "Рѕ";
                                     break;
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
                                     break;
-                                } //-ый
+                                } //-С‹Р№
                             }
-                            slv = ReplaceChar(slv, leng - 1, 'и');
+                            slv = ReplaceChar(slv, leng - 1, 'Рё');
                             break;
-                        case 'о':
+                        case 'Рѕ':
                             if (Issogl(slv[leng - 2]))
-                                slv = ReplaceChar(slv, leng - 1, 'а');
+                                slv = ReplaceChar(slv, leng - 1, 'Р°');
                             break;
-                        case 'е':
-                            if (i != StrCount(nslv)) //прилагательное
+                        case 'Рµ':
+                            if (i != StrCount(nslv)) //РїСЂРёР»Р°РіР°С‚РµР»СЊРЅРѕРµ
                             {
                                 if (!edChislo)
-                                    slv = ReplaceChar(slv, leng - 1, 'х');
+                                    slv = ReplaceChar(slv, leng - 1, 'С…');
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'г');
-                                    slv += "о";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рі');
+                                    slv += "Рѕ";
                                 }
                             }
                             else
                             {
-                                // существительное
+                                // СЃСѓС‰РµСЃС‚РІРёС‚РµР»СЊРЅРѕРµ
                                 if (Issogl(slv[leng - 2]) && !Isship(slv[leng - 2]))
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
-                                else if (slv[leng - 2] == 'ь') //(slv[leng-2]='ь')
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
+                                else if (slv[leng - 2] == 'СЊ') //(slv[leng-2]='СЊ')
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
                             }
                             break;
-                        case 'ё':
+                        case 'С‘':
                             if (Issogl(slv[leng - 2]))
-                                slv = ReplaceChar(slv, leng - 1, 'я');
-                            else if (slv[leng - 2] == 'ь') //(slv[leng-2]='ь') 
-                                slv = ReplaceChar(slv, leng - 1, 'я');
+                                slv = ReplaceChar(slv, leng - 1, 'СЏ');
+                            else if (slv[leng - 2] == 'СЊ') //(slv[leng-2]='СЊ') 
+                                slv = ReplaceChar(slv, leng - 1, 'СЏ');
                             break;
-                        case 'к':
-                            if (slv[leng - 2] == 'о')
+                        case 'Рє':
+                            if (slv[leng - 2] == 'Рѕ')
                             {
-                                slv = ReplaceChar(slv, leng - 2, 'к');
-                                slv = ReplaceChar(slv, leng - 1, 'а');
+                                slv = ReplaceChar(slv, leng - 2, 'Рє');
+                                slv = ReplaceChar(slv, leng - 1, 'Р°');
                             }
-                            else if (slv[leng - 2] == 'е')
+                            else if (slv[leng - 2] == 'Рµ')
                             {
-                                slv = ReplaceChar(slv, leng - 2, 'к');
-                                slv = ReplaceChar(slv, leng - 1, 'а');
+                                slv = ReplaceChar(slv, leng - 2, 'Рє');
+                                slv = ReplaceChar(slv, leng - 1, 'Р°');
                             }
-                            else if (slv[leng - 2] == 'ё' && leng > 3) // -ёк
+                            else if (slv[leng - 2] == 'С‘' && leng > 3) // -С‘Рє
                             {
                                 if (Issogl(slv[leng - 3]))
                                 {
                                     if (Issogl(slv[leng - 4]))
-                                        slv += "а";
+                                        slv += "Р°";
                                     else
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'ь');
-                                        slv = ReplaceChar(slv, leng - 1, 'к');
-                                        slv += "а";
+                                        slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                        slv = ReplaceChar(slv, leng - 1, 'Рє');
+                                        slv += "Р°";
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'й');
-                                    slv = ReplaceChar(slv, leng - 1, 'к');
-                                    slv += "а";
+                                    slv = ReplaceChar(slv, leng - 2, 'Р№');
+                                    slv = ReplaceChar(slv, leng - 1, 'Рє');
+                                    slv += "Р°";
                                 }
                             }
                             else if (gender != 1)
-                                slv += "а";
+                                slv += "Р°";
                             break;
-                        case 'ц':
-                            if (slv[leng - 2] == 'е' || slv[leng - 2] == 'я') // - ец  -яц
+                        case 'С†':
+                            if (slv[leng - 2] == 'Рµ' || slv[leng - 2] == 'СЏ') // - РµС†  -СЏС†
                             {
-                                if (Issogl(slv[leng - 3])) // -<согл>ец <согл>яц
+                                if (Issogl(slv[leng - 3])) // -<СЃРѕРіР»>РµС† <СЃРѕРіР»>СЏС†
                                 {
                                     if (Issogl(slv[leng - 4]))
-                                        slv += "а";
+                                        slv += "Р°";
                                     else
                                     {
-                                        if (slv[leng - 3] == 'л')
+                                        if (slv[leng - 3] == 'Р»')
                                         {
-                                            slv = ReplaceChar(slv, leng - 2, 'ь');
-                                            slv = ReplaceChar(slv, leng - 1, 'ц');
-                                            slv += "а";
+                                            slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                            slv = ReplaceChar(slv, leng - 1, 'С†');
+                                            slv += "Р°";
                                         }
                                         else
                                         {
-                                            slv = ReplaceChar(slv, leng - 2, 'ц');
-                                            slv = ReplaceChar(slv, leng - 1, 'а');
+                                            slv = ReplaceChar(slv, leng - 2, 'С†');
+                                            slv = ReplaceChar(slv, leng - 1, 'Р°');
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'й');
-                                    slv = ReplaceChar(slv, leng - 1, 'ц');
-                                    slv += "а";
+                                    slv = ReplaceChar(slv, leng - 2, 'Р№');
+                                    slv = ReplaceChar(slv, leng - 1, 'С†');
+                                    slv += "Р°";
                                 }
                             }
                             else
-                                slv += "а";
-                            break; // -лец
-                            // 3- ье склонение
-                        case 'ь':
-                            if (slv[leng - 3] == 'е' && slv[leng - 2] == 'н')
+                                slv += "Р°";
+                            break; // -Р»РµС†
+                            // 3- СЊРµ СЃРєР»РѕРЅРµРЅРёРµ
+                        case 'СЊ':
+                            if (slv[leng - 3] == 'Рµ' && slv[leng - 2] == 'РЅ')
                             {
                                 if (gender != 1)
                                 {
-                                    slv = ReplaceChar(slv, leng - 3, 'н');
-                                    slv = ReplaceChar(slv, leng - 2, 'я');
+                                    slv = ReplaceChar(slv, leng - 3, 'РЅ');
+                                    slv = ReplaceChar(slv, leng - 2, 'СЏ');
                                     slv.Remove(leng - 1);
                                 }
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'и');
+                                    slv = ReplaceChar(slv, leng - 1, 'Рё');
                             }
                             else if (gender == 1)
-                                slv = ReplaceChar(slv, leng - 1, 'и');
+                                slv = ReplaceChar(slv, leng - 1, 'Рё');
                             else
-                                slv = ReplaceChar(slv, leng - 1, 'я');
+                                slv = ReplaceChar(slv, leng - 1, 'СЏ');
                             break;
-                        case 'в':
+                        case 'РІ':
                             if (gender != 1)
-                                slv += "а";
+                                slv += "Р°";
                             break;
-                        case 'и':
+                        case 'Рё':
                             if (!edChislo)
                             {
-                                if (slv[leng - 2] == 'к') // - ки
+                                if (slv[leng - 2] == 'Рє') // - РєРё
                                 {
                                     if (gender == 1)
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'о');
-                                        slv = ReplaceChar(slv, leng - 1, 'к');
+                                        slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                        slv = ReplaceChar(slv, leng - 1, 'Рє');
                                     }
                                     else
                                     {
-                                        slv = ReplaceChar(slv, leng - 1, 'о');
-                                        slv += "в";
+                                        slv = ReplaceChar(slv, leng - 1, 'Рѕ');
+                                        slv += "РІ";
                                     }
                                 }
-                                else // Мн. число -и
+                                else // РњРЅ. С‡РёСЃР»Рѕ -Рё
                                 {
                                     if (Issogl(slv[leng - 2]))
                                     {
-                                        slv = ReplaceChar(slv, leng - 1, 'е');
-                                        slv += "й";
+                                        slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                        slv += "Р№";
                                     }
                                     else
                                     {
                                         if (gender == 1)
-                                            slv = ReplaceChar(slv, leng - 1, 'й');
+                                            slv = ReplaceChar(slv, leng - 1, 'Р№');
                                         else
                                         {
-                                            slv = ReplaceChar(slv, leng - 1, 'е');
-                                            slv += "в";
+                                            slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                            slv += "РІ";
                                         }
                                     }
                                 }
                             }
-                            break; // Несклоняемые или множественые
-                        case 'ы':
+                            break; // РќРµСЃРєР»РѕРЅСЏРµРјС‹Рµ РёР»Рё РјРЅРѕР¶РµСЃС‚РІРµРЅС‹Рµ
+                        case 'С‹':
                             if (!edChislo)
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'о');
-                                slv += "в";
+                                slv = ReplaceChar(slv, leng - 1, 'Рѕ');
+                                slv += "РІ";
                             }
                             break;
-                        case 'у':
+                        case 'Сѓ':
                             break;
                         default:
                             if (gender != 1)
-                                slv += "а"; // Разносклоняемые
+                                slv += "Р°"; // Р Р°Р·РЅРѕСЃРєР»РѕРЅСЏРµРјС‹Рµ
                             break;
                     }
                     if (i == 1)
@@ -614,7 +614,7 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Получение родительного падежа
+        /// РџРѕР»СѓС‡РµРЅРёРµ СЂРѕРґРёС‚РµР»СЊРЅРѕРіРѕ РїР°РґРµР¶Р°
         /// </summary>
         public string Dpad(string nslv, bool edChislo, int gender)
         {
@@ -632,324 +632,324 @@ namespace BZEditor
                     leng = slv.Length;
                     switch (slv[leng - 1])
                     {
-                            // 1- ое склонение   (+часть третьего)
-                        case 'а':
+                            // 1- РѕРµ СЃРєР»РѕРЅРµРЅРёРµ   (+С‡Р°СЃС‚СЊ С‚СЂРµС‚СЊРµРіРѕ)
+                        case 'Р°':
                             if (!edChislo && !Issogl(slv[leng - 3]) && Issogl(slv[leng - 2]))
                             {
-                                slv += "м";
+                                slv += "Рј";
                                 break;
                             }
                             if (!edChislo)
                             {
-                                slv += "м";
+                                slv += "Рј";
                                 break;
                             }
                             else
-                                slv = ReplaceChar(slv, leng - 1, 'е');
-                            //slv[leng-1]='е'; 
+                                slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                            //slv[leng-1]='Рµ'; 
                             break;
-                        case 'я':
-                            if (edChislo) // Ед. число
+                        case 'СЏ':
+                            if (edChislo) // Р•Рґ. С‡РёСЃР»Рѕ
                             {
-                                if (slv[leng - 2] == 'м')
+                                if (slv[leng - 2] == 'Рј')
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    //slv[leng-1]='е';
-                                    slv += "ни";
-                                } // проверка окончания "-мя" (ср.р.)
-                                else if (Isship(slv[leng - 3]) && slv[leng - 2] == 'а')
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    //slv[leng-1]='Рµ';
+                                    slv += "РЅРё";
+                                } // РїСЂРѕРІРµСЂРєР° РѕРєРѕРЅС‡Р°РЅРёСЏ "-РјСЏ" (СЃСЂ.СЂ.)
+                                else if (Isship(slv[leng - 3]) && slv[leng - 2] == 'Р°')
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'о');
-                                    //slv[leng-2]='о';
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
-                                    //slv[leng-1]='й';
+                                    slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                    //slv[leng-2]='Рѕ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
+                                    //slv[leng-1]='Р№';
                                 }
-                                else if (slv[leng - 2] == 'а' && i != StrCount(nslv))
+                                else if (slv[leng - 2] == 'Р°' && i != StrCount(nslv))
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'о');
-                                    //slv[leng-2]='о';
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
-                                    //slv[leng-1]='й';
+                                    slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                    //slv[leng-2]='Рѕ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
+                                    //slv[leng-1]='Р№';
                                 }
-                                else if (slv[leng - 2] == 'я')
+                                else if (slv[leng - 2] == 'СЏ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'е');
-                                    //slv[leng-2]='е';
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
-                                    //slv[leng-1]='й';
+                                    slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                    //slv[leng-2]='Рµ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
+                                    //slv[leng-1]='Р№';
                                 }
-                                else if (slv[leng - 2] == 'и')
-                                    slv = ReplaceChar(slv, leng - 1, 'и');
-                                    //slv[leng-1]='и';
+                                else if (slv[leng - 2] == 'Рё')
+                                    slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                    //slv[leng-1]='Рё';
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                //slv[leng-1]='е'; 
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                //slv[leng-1]='Рµ'; 
                             }
-                            else // Множественное число
+                            else // РњРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕРµ С‡РёСЃР»Рѕ
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'я');
-                                //slv[leng-1]='я';
-                                slv += "м";
+                                slv = ReplaceChar(slv, leng - 1, 'СЏ');
+                                //slv[leng-1]='СЏ';
+                                slv += "Рј";
                             }
 
                             break;
-                            // 2- ое склонение
-                        case 'й':
+                            // 2- РѕРµ СЃРєР»РѕРЅРµРЅРёРµ
+                        case 'Р№':
                             if (My(1, slv[leng - 2]))
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'ю');
-                                //slv[leng-1]='ю'; 
+                                slv = ReplaceChar(slv, leng - 1, 'СЋ');
+                                //slv[leng-1]='СЋ'; 
                                 break;
                             }
-                            if (slv[leng - 2] == 'и')
+                            if (slv[leng - 2] == 'Рё')
                             {
                                 if (i != StrCount(nslv))
                                 {
-                                    if (slv[leng - 3] == 'к' || slv[leng - 3] == 'г')
+                                    if (slv[leng - 3] == 'Рє' || slv[leng - 3] == 'Рі')
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'о');
-                                        //slv[leng-2]='о';
-                                        slv = ReplaceChar(slv, leng - 1, 'м');
-                                        //slv[leng-1]='м'; 
-                                        slv += "у";
+                                        slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                        //slv[leng-2]='Рѕ';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                        //slv[leng-1]='Рј'; 
+                                        slv += "Сѓ";
                                     }
-                                    else if (slv[leng - 3] == 'б' || slv[leng - 3] == 'з' || slv[leng - 3] == 'с')
+                                    else if (slv[leng - 3] == 'Р±' || slv[leng - 3] == 'Р·' || slv[leng - 3] == 'СЃ')
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'ь');
-                                        //slv[leng-2]='ь';
-                                        slv = ReplaceChar(slv, leng - 1, 'е');
-                                        //slv[leng-1]='е'; 
-                                        slv += "му";
+                                        slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                        //slv[leng-2]='СЊ';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                        //slv[leng-1]='Рµ'; 
+                                        slv += "РјСѓ";
                                     }
                                     else
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'е');
-                                        //slv[leng-2]='е';
-                                        slv = ReplaceChar(slv, leng - 1, 'м');
-                                        //slv[leng-1]='м'; 
-                                        slv += "у";
+                                        slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                        //slv[leng-2]='Рµ';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                        //slv[leng-1]='Рј'; 
+                                        slv += "Сѓ";
                                     }
                                     break;
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'ю');
-                                    //slv[leng-1]='ю'; 
+                                    slv = ReplaceChar(slv, leng - 1, 'СЋ');
+                                    //slv[leng-1]='СЋ'; 
                                     break;
-                                } //-ий
+                                } //-РёР№
                             }
-                            if (slv[leng - 2] == 'о')
+                            if (slv[leng - 2] == 'Рѕ')
                             {
                                 if (i == StrCount(nslv))
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'ю');
-                                    //slv[leng-1]='ю';
+                                    slv = ReplaceChar(slv, leng - 1, 'СЋ');
+                                    //slv[leng-1]='СЋ';
                                     break;
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м'; 
-                                    slv += "у";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј'; 
+                                    slv += "Сѓ";
                                     break;
                                 }
-                            } //-ой
-                            if (slv[leng - 2] == 'ы')
+                            } //-РѕР№
+                            if (slv[leng - 2] == 'С‹')
                             {
                                 if (i != StrCount(nslv))
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'о');
-                                    //slv[leng-2]='о'; 
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м'; 
-                                    slv += "у";
+                                    slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                    //slv[leng-2]='Рѕ'; 
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј'; 
+                                    slv += "Сѓ";
                                     break;
                                 }
                             }
-                            slv = ReplaceChar(slv, leng - 1, 'и');
-                            //slv[leng-1]='и';				
+                            slv = ReplaceChar(slv, leng - 1, 'Рё');
+                            //slv[leng-1]='Рё';				
                             break;
-                        case 'о':
-                            slv = ReplaceChar(slv, leng - 1, 'у');
-                            //slv[leng-1]='у';
+                        case 'Рѕ':
+                            slv = ReplaceChar(slv, leng - 1, 'Сѓ');
+                            //slv[leng-1]='Сѓ';
                             break;
-                        case 'е':
-                            if (i != StrCount(nslv)) //прилагательное
+                        case 'Рµ':
+                            if (i != StrCount(nslv)) //РїСЂРёР»Р°РіР°С‚РµР»СЊРЅРѕРµ
                             {
-                                if (!edChislo) //(СР == 0)
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м'; 
+                                if (!edChislo) //(РЎР  == 0)
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј'; 
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м'; 
-                                    slv += "у";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј'; 
+                                    slv += "Сѓ";
                                 }
                             }
                             else
                             {
-                                // существительные
-                                if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'ь')
+                                // СЃСѓС‰РµСЃС‚РІРёС‚РµР»СЊРЅС‹Рµ
+                                if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'СЊ')
                                 {
                                     if (Isship(slv[leng - 2]))
-                                        slv = ReplaceChar(slv, leng - 1, 'у');
-                                        //slv[leng-1]='у'; 
+                                        slv = ReplaceChar(slv, leng - 1, 'Сѓ');
+                                        //slv[leng-1]='Сѓ'; 
                                     else
-                                        slv = ReplaceChar(slv, leng - 1, 'ю');
-                                    //slv[leng-1]='ю';
+                                        slv = ReplaceChar(slv, leng - 1, 'СЋ');
+                                    //slv[leng-1]='СЋ';
                                 }
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'ю');
-                                //slv[leng-1]='ю';
+                                    slv = ReplaceChar(slv, leng - 1, 'СЋ');
+                                //slv[leng-1]='СЋ';
                             }
                             break;
-                        case 'ё':
-                            if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'ь')
-                                slv = ReplaceChar(slv, leng - 1, 'ю');
-                            //slv[leng-1]='ю';  
+                        case 'С‘':
+                            if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'СЊ')
+                                slv = ReplaceChar(slv, leng - 1, 'СЋ');
+                            //slv[leng-1]='СЋ';  
                             break;
-                        case 'к':
-                            if (slv[leng - 2] == 'о')
+                        case 'Рє':
+                            if (slv[leng - 2] == 'Рѕ')
                             {
-                                slv = ReplaceChar(slv, leng - 2, 'к');
-                                //slv[leng-2]='к';
-                                slv = ReplaceChar(slv, leng - 1, 'у');
-                                //slv[leng-1]='у'; 
+                                slv = ReplaceChar(slv, leng - 2, 'Рє');
+                                //slv[leng-2]='Рє';
+                                slv = ReplaceChar(slv, leng - 1, 'Сѓ');
+                                //slv[leng-1]='Сѓ'; 
                             }
-                            else if (slv[leng - 2] == 'е')
+                            else if (slv[leng - 2] == 'Рµ')
                             {
-                                slv = ReplaceChar(slv, leng - 2, 'к');
-                                //slv[leng-2]='к';
-                                slv = ReplaceChar(slv, leng - 1, 'у');
-                                //slv[leng-1]='у';
+                                slv = ReplaceChar(slv, leng - 2, 'Рє');
+                                //slv[leng-2]='Рє';
+                                slv = ReplaceChar(slv, leng - 1, 'Сѓ');
+                                //slv[leng-1]='Сѓ';
                             }
-                            else if (slv[leng - 2] == 'ё' && leng > 3) // -ёк
+                            else if (slv[leng - 2] == 'С‘' && leng > 3) // -С‘Рє
                             {
                                 if (Issogl(slv[leng - 3]))
                                 {
                                     if (Issogl(slv[leng - 4]))
-                                        slv += "у";
+                                        slv += "Сѓ";
                                     else
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'ь');
-                                        //slv[leng-2]='ь'; 
-                                        slv = ReplaceChar(slv, leng - 1, 'к');
-                                        //slv[leng-1]='к'; 
-                                        slv += "у";
+                                        slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                        //slv[leng-2]='СЊ'; 
+                                        slv = ReplaceChar(slv, leng - 1, 'Рє');
+                                        //slv[leng-1]='Рє'; 
+                                        slv += "Сѓ";
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'й');
-                                    //slv[leng-2]='й';
-                                    slv = ReplaceChar(slv, leng - 1, 'к');
-                                    //slv[leng-1]='к'; 
-                                    slv += "у";
+                                    slv = ReplaceChar(slv, leng - 2, 'Р№');
+                                    //slv[leng-2]='Р№';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рє');
+                                    //slv[leng-1]='Рє'; 
+                                    slv += "Сѓ";
                                 }
                             }
                             else if (gender != 1)
-                                slv += "у";
+                                slv += "Сѓ";
                             break;
-                        case 'ц':
-                            if ((slv[leng - 2] == 'е' || slv[leng - 2] == 'я') && leng > 3)
+                        case 'С†':
+                            if ((slv[leng - 2] == 'Рµ' || slv[leng - 2] == 'СЏ') && leng > 3)
                             {
-                                // - ец  -яц
+                                // - РµС†  -СЏС†
                                 if (Issogl(slv[leng - 3]))
                                 {
-                                    // -<согл>ец <согл>яц
+                                    // -<СЃРѕРіР»>РµС† <СЃРѕРіР»>СЏС†
                                     if (Issogl(slv[leng - 4]))
-                                        slv += "у";
+                                        slv += "Сѓ";
                                     else
                                     {
-                                        if (slv[leng - 3] == 'л')
+                                        if (slv[leng - 3] == 'Р»')
                                         {
-                                            slv = ReplaceChar(slv, leng - 2, 'ь');
-                                            //slv[leng-2]='ь'; 
-                                            slv = ReplaceChar(slv, leng - 1, 'ц');
-                                            //slv[leng-1]='ц'; 
-                                            slv += "у";
+                                            slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                            //slv[leng-2]='СЊ'; 
+                                            slv = ReplaceChar(slv, leng - 1, 'С†');
+                                            //slv[leng-1]='С†'; 
+                                            slv += "Сѓ";
                                         }
                                         else
                                         {
-                                            slv = ReplaceChar(slv, leng - 2, 'ц');
-                                            //slv[leng-2]='ц'; 
-                                            slv = ReplaceChar(slv, leng - 1, 'у');
-                                            //slv[leng-1]='у';
+                                            slv = ReplaceChar(slv, leng - 2, 'С†');
+                                            //slv[leng-2]='С†'; 
+                                            slv = ReplaceChar(slv, leng - 1, 'Сѓ');
+                                            //slv[leng-1]='Сѓ';
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'й');
-                                    //slv[leng-2]='й';
-                                    slv = ReplaceChar(slv, leng - 1, 'ц');
-                                    //slv[leng-1]='ц'; 
-                                    slv += "у";
+                                    slv = ReplaceChar(slv, leng - 2, 'Р№');
+                                    //slv[leng-2]='Р№';
+                                    slv = ReplaceChar(slv, leng - 1, 'С†');
+                                    //slv[leng-1]='С†'; 
+                                    slv += "Сѓ";
                                 }
                             }
                             else
-                                slv += "у";
-                            break; // -лец
-                            // 3- ье склонение
-                        case 'ь':
-                            if (slv[leng - 3] == 'е' && slv[leng - 2] == 'н')
+                                slv += "Сѓ";
+                            break; // -Р»РµС†
+                            // 3- СЊРµ СЃРєР»РѕРЅРµРЅРёРµ
+                        case 'СЊ':
+                            if (slv[leng - 3] == 'Рµ' && slv[leng - 2] == 'РЅ')
                             {
                                 if (gender != 1)
                                 {
-                                    slv = ReplaceChar(slv, leng - 3, 'н');
-                                    //slv[leng-3]='н'; 
-                                    slv = ReplaceChar(slv, leng - 2, 'ю');
-                                    //slv[leng-2]='ю';
+                                    slv = ReplaceChar(slv, leng - 3, 'РЅ');
+                                    //slv[leng-3]='РЅ'; 
+                                    slv = ReplaceChar(slv, leng - 2, 'СЋ');
+                                    //slv[leng-2]='СЋ';
                                     slv.Remove(leng - 1);
                                 }
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'и');
-                                //slv[leng-1]='и';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                //slv[leng-1]='Рё';
                             }
                             else if (gender == 1)
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'и');
-                                //slv[leng-1]='и' ;
+                                slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                //slv[leng-1]='Рё' ;
                             }
                             else
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'ю');
-                                //slv[leng-1]='ю'; 
+                                slv = ReplaceChar(slv, leng - 1, 'СЋ');
+                                //slv[leng-1]='СЋ'; 
                             }
                             break;
-                        case 'в':
+                        case 'РІ':
                             if (gender != 1)
-                                slv += "у";
+                                slv += "Сѓ";
                             break;
-                        case 'и':
+                        case 'Рё':
                             if (!edChislo)
                             {
-                                if (Isship(slv[leng - 2]) || slv[leng - 2] == 'г' ||
-                                    slv[leng - 2] == 'ж' || slv[leng - 2] == 'к' ||
-                                    slv[leng - 2] == 'х')
-                                    slv = ReplaceChar(slv, leng - 1, 'а');
+                                if (Isship(slv[leng - 2]) || slv[leng - 2] == 'Рі' ||
+                                    slv[leng - 2] == 'Р¶' || slv[leng - 2] == 'Рє' ||
+                                    slv[leng - 2] == 'С…')
+                                    slv = ReplaceChar(slv, leng - 1, 'Р°');
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
                                 
                                 //if (!edChislo)
-                                    slv += "м";
-                                    //else // Непонятно когда должно выполняться это условие, но так, как оно расположено сейчас, оно вообще не выполнится
-                                //    slv += "у";
+                                    slv += "Рј";
+                                    //else // РќРµРїРѕРЅСЏС‚РЅРѕ РєРѕРіРґР° РґРѕР»Р¶РЅРѕ РІС‹РїРѕР»РЅСЏС‚СЊСЃСЏ СЌС‚Рѕ СѓСЃР»РѕРІРёРµ, РЅРѕ С‚Р°Рє, РєР°Рє РѕРЅРѕ СЂР°СЃРїРѕР»РѕР¶РµРЅРѕ СЃРµР№С‡Р°СЃ, РѕРЅРѕ РІРѕРѕР±С‰Рµ РЅРµ РІС‹РїРѕР»РЅРёС‚СЃСЏ
+                                //    slv += "Сѓ";
                             }
-                            break; // Несклоняемые или множественые
-                        case 'ы':
+                            break; // РќРµСЃРєР»РѕРЅСЏРµРјС‹Рµ РёР»Рё РјРЅРѕР¶РµСЃС‚РІРµРЅС‹Рµ
+                        case 'С‹':
                             if (!edChislo)
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'а');
-                                //slv[leng-1]='а';
-                                slv += "м";
+                                slv = ReplaceChar(slv, leng - 1, 'Р°');
+                                //slv[leng-1]='Р°';
+                                slv += "Рј";
                             }
                             break;
-                        case 'у':
+                        case 'Сѓ':
                             break;
                         default:
                             if (gender != 1)
-                                slv += "у"; // Разносклоняемые и прочие
+                                slv += "Сѓ"; // Р Р°Р·РЅРѕСЃРєР»РѕРЅСЏРµРјС‹Рµ Рё РїСЂРѕС‡РёРµ
                             break;
                     }
                     if (i == 1)
@@ -964,7 +964,7 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Получение дательного падежа
+        /// РџРѕР»СѓС‡РµРЅРёРµ РґР°С‚РµР»СЊРЅРѕРіРѕ РїР°РґРµР¶Р°
         /// </summary>
         public string Vpad(string nslv, bool edChislo, bool odushevl, int gender)
         {
@@ -991,30 +991,30 @@ namespace BZEditor
                     {
                         switch (slv[leng - 1])
                         {
-                            case 'й':
+                            case 'Р№':
                                 if (My(1, slv[leng - 2]))
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
-                                //slv[leng-1]='я';
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
+                                //slv[leng-1]='СЏ';
                                 break;
-                            case 'а':
+                            case 'Р°':
                                 if (!edChislo)
                                 {
                                 }
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'у');
-                                //slv[leng-1]='у'; 
+                                    slv = ReplaceChar(slv, leng - 1, 'Сѓ');
+                                //slv[leng-1]='Сѓ'; 
                                 break;
-                            case 'я':
-                                if (slv[leng - 2] == 'а')
+                            case 'СЏ':
+                                if (slv[leng - 2] == 'Р°')
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'у');
-                                    //slv[leng-2]='у';
-                                    slv = ReplaceChar(slv, leng - 1, 'ю');
-                                    //slv[leng-1]='ю'; 
+                                    slv = ReplaceChar(slv, leng - 2, 'Сѓ');
+                                    //slv[leng-2]='Сѓ';
+                                    slv = ReplaceChar(slv, leng - 1, 'СЋ');
+                                    //slv[leng-1]='СЋ'; 
                                 }
-                                else if ((Issogl(slv[leng - 2]) || slv[leng - 2] == 'ь') && edChislo)
-                                    slv = ReplaceChar(slv, leng - 1, 'ю');
-                                //slv[leng-1]='ю';
+                                else if ((Issogl(slv[leng - 2]) || slv[leng - 2] == 'СЊ') && edChislo)
+                                    slv = ReplaceChar(slv, leng - 1, 'СЋ');
+                                //slv[leng-1]='СЋ';
                                 break;
                         }
                     }
@@ -1030,7 +1030,7 @@ namespace BZEditor
         }
 
         /// <summary>
-        /// Получение творительного падежа
+        /// РџРѕР»СѓС‡РµРЅРёРµ С‚РІРѕСЂРёС‚РµР»СЊРЅРѕРіРѕ РїР°РґРµР¶Р°
         /// </summary>
         public string Tpad(string nslv, bool edChislo, int gender)
         {
@@ -1048,313 +1048,313 @@ namespace BZEditor
                     leng = slv.Length;
                     switch (slv[leng - 1])
                     {
-                            // 1- ое склонение   (+часть третьего)
-                        case 'а':
+                            // 1- РѕРµ СЃРєР»РѕРЅРµРЅРёРµ   (+С‡Р°СЃС‚СЊ С‚СЂРµС‚СЊРµРіРѕ)
+                        case 'Р°':
                             if (!edChislo)
                             {
-                                slv += "ми";
+                                slv += "РјРё";
                                 break;
                             }
                             else
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'о');
-                                //slv[leng - 1] = 'о'; 
-                                slv += "й";
+                                slv = ReplaceChar(slv, leng - 1, 'Рѕ');
+                                //slv[leng - 1] = 'Рѕ'; 
+                                slv += "Р№";
                             }
                             break;
-                        case 'я':
+                        case 'СЏ':
                             if (edChislo)
                             {
-                                //Ед.ч -я
-                                if (slv[leng - 2] == 'м')
+                                //Р•Рґ.С‡ -СЏ
+                                if (slv[leng - 2] == 'Рј')
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    //slv[leng-1]='е';
-                                    slv += "нем";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    //slv[leng-1]='Рµ';
+                                    slv += "РЅРµРј";
                                 }
-                                else if (i != StrCount(nslv) && slv[leng - 2] == 'а')
+                                else if (i != StrCount(nslv) && slv[leng - 2] == 'Р°')
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'о');
-                                    //slv[leng - 2] = 'о';
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
-                                    //slv[leng - 1] = 'й';
+                                    slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                    //slv[leng - 2] = 'Рѕ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
+                                    //slv[leng - 1] = 'Р№';
                                 }
-                                else if (slv[leng - 2] == 'я')
+                                else if (slv[leng - 2] == 'СЏ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'е');
-                                    //slv[leng - 2] = 'е';
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
-                                    // slv[leng - 1] = 'й';
+                                    slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                    //slv[leng - 2] = 'Рµ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
+                                    // slv[leng - 1] = 'Р№';
                                 }
                                 else if (Issogl(slv[leng - 3]))
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'ё');
-                                    //slv[leng - 1] = 'ё';
-                                    slv += "й";
+                                    slv = ReplaceChar(slv, leng - 1, 'С‘');
+                                    //slv[leng - 1] = 'С‘';
+                                    slv += "Р№";
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    //slv[leng - 1] = 'е';
-                                    slv += "й";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    //slv[leng - 1] = 'Рµ';
+                                    slv += "Р№";
                                 }
                             }
                             else
                             {
-                                //Мн. ч. -я
-                                if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'ь')
+                                //РњРЅ. С‡. -СЏ
+                                if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'СЊ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
-                                    //slv[leng-1]='я';
-                                    slv += "ми";
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
+                                    //slv[leng-1]='СЏ';
+                                    slv += "РјРё";
                                 }
                             }
                             break;
-                            // 2- ое склонение или прилаг
-                        case 'й':
-                            if (slv[leng - 2] == 'о' && i == StrCount(nslv))
+                            // 2- РѕРµ СЃРєР»РѕРЅРµРЅРёРµ РёР»Рё РїСЂРёР»Р°Рі
+                        case 'Р№':
+                            if (slv[leng - 2] == 'Рѕ' && i == StrCount(nslv))
                             {
-                                //-ой сущ
-                                slv = ReplaceChar(slv, leng - 1, 'е');
-                                //slv[leng-1]='е';
-                                slv += "м";
+                                //-РѕР№ СЃСѓС‰
+                                slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                //slv[leng-1]='Рµ';
+                                slv += "Рј";
                                 break;
                             }
-                            if (slv[leng - 2] == 'и')
+                            if (slv[leng - 2] == 'Рё')
                             {
                                 if (i != StrCount(nslv))
                                 {
-                                    // -ий прилаг
-                                    if (slv[leng - 3] == 'г' || slv[leng - 3] == 'к' || slv[leng - 3] == 'ж')
+                                    // -РёР№ РїСЂРёР»Р°Рі
+                                    if (slv[leng - 3] == 'Рі' || slv[leng - 3] == 'Рє' || slv[leng - 3] == 'Р¶')
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'и');
-                                        //slv[leng-2]='и';
-                                        slv = ReplaceChar(slv, leng - 1, 'м');
-                                        //slv[leng-1]='м';
+                                        slv = ReplaceChar(slv, leng - 2, 'Рё');
+                                        //slv[leng-2]='Рё';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                        //slv[leng-1]='Рј';
                                     }
-                                    else if (slv[leng - 3] == 'б' || slv[leng - 3] == 'з' || slv[leng - 3] == 'с')
+                                    else if (slv[leng - 3] == 'Р±' || slv[leng - 3] == 'Р·' || slv[leng - 3] == 'СЃ')
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'ь');
-                                        //slv[leng-2]='ь';
-                                        slv = ReplaceChar(slv, leng - 1, 'и');
-                                        //slv[leng-1]='и';
-                                        slv += "м";
+                                        slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                        //slv[leng-2]='СЊ';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                        //slv[leng-1]='Рё';
+                                        slv += "Рј";
                                     }
                                     else
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'е');
-                                        //slv[leng-2]='е';
-                                        slv = ReplaceChar(slv, leng - 1, 'м');
-                                        //slv[leng-1]='м';
+                                        slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                        //slv[leng-2]='Рµ';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                        //slv[leng-1]='Рј';
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    //slv[leng-1]='е';
-                                    slv += "м";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    //slv[leng-1]='Рµ';
+                                    slv += "Рј";
                                 }
                                 break;
                             }
-                            if (slv[leng - 2] == 'о')
+                            if (slv[leng - 2] == 'Рѕ')
                             {
                                 if (!Isship(slv[leng - 3]))
-                                    slv = ReplaceChar(slv, leng - 2, 'ы'); 
-                                    //slv[leng-2]='ы'; 
+                                    slv = ReplaceChar(slv, leng - 2, 'С‹'); 
+                                    //slv[leng-2]='С‹'; 
                                 else
-                                    slv = ReplaceChar(slv, leng - 2, 'и');
-                                //slv[leng-2]='и';
-                                slv = ReplaceChar(slv, leng - 1, 'м');
-                                //slv[leng-1]='м'; 
+                                    slv = ReplaceChar(slv, leng - 2, 'Рё');
+                                //slv[leng-2]='Рё';
+                                slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                //slv[leng-1]='Рј'; 
                                 break;
                             }
-                            if (slv[leng - 2] == 'ы' || (slv[leng - 2] == 'и' && i != StrCount(nslv)))
-                                slv = ReplaceChar(slv, leng - 1, 'м'); 
-                                //slv[leng-1]='м';
+                            if (slv[leng - 2] == 'С‹' || (slv[leng - 2] == 'Рё' && i != StrCount(nslv)))
+                                slv = ReplaceChar(slv, leng - 1, 'Рј'); 
+                                //slv[leng-1]='Рј';
                             else
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'е');
-                                //slv[leng-1]='е'; 
-                                slv += "м";
+                                slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                //slv[leng-1]='Рµ'; 
+                                slv += "Рј";
                             }
                             break;
-                        case 'о':
-                            slv += "м";
+                        case 'Рѕ':
+                            slv += "Рј";
                             break;
-                        case 'е':
+                        case 'Рµ':
                             if (i != StrCount(nslv))
                             {
-                                //прилагательное
+                                //РїСЂРёР»Р°РіР°С‚РµР»СЊРЅРѕРµ
                                 if (!edChislo)
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м'; 
-                                    slv += "и";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј'; 
+                                    slv += "Рё";
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'ы');
-                                    //slv[leng-2]='ы';
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м';
+                                    slv = ReplaceChar(slv, leng - 2, 'С‹');
+                                    //slv[leng-2]='С‹';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј';
                                 }
                             }
                             else
                             {
-                                //  существительное
-                                slv += "м";
+                                //  СЃСѓС‰РµСЃС‚РІРёС‚РµР»СЊРЅРѕРµ
+                                slv += "Рј";
                             }
                             break;
-                        case 'ё':
-                            slv += "м";
+                        case 'С‘':
+                            slv += "Рј";
                             break;
-                        case 'к':
-                            if (slv[leng - 2] == 'о')
+                        case 'Рє':
+                            if (slv[leng - 2] == 'Рѕ')
                             {
-                                slv = ReplaceChar(slv, leng - 2, 'к');
-                                //slv[leng-2]='к';
-                                slv = ReplaceChar(slv, leng - 1, 'о');
-                                //slv[leng-1]='о'; 
-                                slv += "м";
+                                slv = ReplaceChar(slv, leng - 2, 'Рє');
+                                //slv[leng-2]='Рє';
+                                slv = ReplaceChar(slv, leng - 1, 'Рѕ');
+                                //slv[leng-1]='Рѕ'; 
+                                slv += "Рј";
                             }
-                            else if (slv[leng - 2] == 'е')
+                            else if (slv[leng - 2] == 'Рµ')
                             {
-                                slv = ReplaceChar(slv, leng - 2, 'к');
-                                //slv[leng-2]='к';
-                                slv = ReplaceChar(slv, leng - 1, 'о');
-                                //slv[leng-1]='о'; 
-                                slv += "м";
+                                slv = ReplaceChar(slv, leng - 2, 'Рє');
+                                //slv[leng-2]='Рє';
+                                slv = ReplaceChar(slv, leng - 1, 'Рѕ');
+                                //slv[leng-1]='Рѕ'; 
+                                slv += "Рј";
                             }
-                            else if (slv[leng - 2] == 'ё' && leng > 3) // -ёк
+                            else if (slv[leng - 2] == 'С‘' && leng > 3) // -С‘Рє
                             {
                                 if (Issogl(slv[leng - 3]))
                                 {
                                     if (Issogl(slv[leng - 4]))
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'ь');
-                                        //slv[leng-2]='ь';
-                                        slv = ReplaceChar(slv, leng - 1, 'к');
-                                        //slv[leng-1]='к';
-                                        slv += "ом";
+                                        slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                        //slv[leng-2]='СЊ';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рє');
+                                        //slv[leng-1]='Рє';
+                                        slv += "РѕРј";
                                     }
                                     else
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'ь');
-                                        //slv[leng-2]='ь';
-                                        slv = ReplaceChar(slv, leng - 1, 'к');
-                                        //slv[leng-1]='к'; 
-                                        slv += "ом";
+                                        slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                        //slv[leng-2]='СЊ';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рє');
+                                        //slv[leng-1]='Рє'; 
+                                        slv += "РѕРј";
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'й');
-                                    //slv[leng-2]='й';
-                                    slv = ReplaceChar(slv, leng - 1, 'к');
-                                    //slv[leng-1]='к'; 
-                                    slv += "ом";
+                                    slv = ReplaceChar(slv, leng - 2, 'Р№');
+                                    //slv[leng-2]='Р№';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рє');
+                                    //slv[leng-1]='Рє'; 
+                                    slv += "РѕРј";
                                 }
                             }
                             else if (gender != 1) //////?????????????????? stas
-                                slv += "ом";
+                                slv += "РѕРј";
                             break;
-                        case 'ц':
-                            if ((slv[leng - 2] == 'е' || slv[leng - 2] == 'я') && leng > 3)
+                        case 'С†':
+                            if ((slv[leng - 2] == 'Рµ' || slv[leng - 2] == 'СЏ') && leng > 3)
                             {
-                                // - ец  -яц
+                                // - РµС†  -СЏС†
                                 if (Issogl(slv[leng - 3]))
                                 {
-                                    // -<согл>ец <согл>яц
+                                    // -<СЃРѕРіР»>РµС† <СЃРѕРіР»>СЏС†
                                     if (Issogl(slv[leng - 4]))
-                                        slv += "ом";
+                                        slv += "РѕРј";
                                     else
                                     {
-                                        if (slv[leng - 3] == 'л')
+                                        if (slv[leng - 3] == 'Р»')
                                         {
-                                            slv = ReplaceChar(slv, leng - 2, 'ь');
-                                            //slv[leng-2]='ь';
-                                            slv = ReplaceChar(slv, leng - 1, 'ц');
-                                            //slv[leng-1]='ц'; 
-                                            slv += "ем";
+                                            slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                            //slv[leng-2]='СЊ';
+                                            slv = ReplaceChar(slv, leng - 1, 'С†');
+                                            //slv[leng-1]='С†'; 
+                                            slv += "РµРј";
                                         }
                                         else
                                         {
-                                            slv = ReplaceChar(slv, leng - 2, 'ц');
-                                            //slv[leng-2]='ц';
-                                            slv = ReplaceChar(slv, leng - 1, 'о');
-                                            //slv[leng-1]='о'; 
-                                            slv += "м";
+                                            slv = ReplaceChar(slv, leng - 2, 'С†');
+                                            //slv[leng-2]='С†';
+                                            slv = ReplaceChar(slv, leng - 1, 'Рѕ');
+                                            //slv[leng-1]='Рѕ'; 
+                                            slv += "Рј";
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'й');
-                                    //slv[leng-2]='й';
-                                    slv = ReplaceChar(slv, leng - 1, 'ц');
-                                    //slv[leng-1]='ц'; 
-                                    slv += "ем";
+                                    slv = ReplaceChar(slv, leng - 2, 'Р№');
+                                    //slv[leng-2]='Р№';
+                                    slv = ReplaceChar(slv, leng - 1, 'С†');
+                                    //slv[leng-1]='С†'; 
+                                    slv += "РµРј";
                                 }
                             }
                             else
-                                slv += "ем";
-                            break; // -лец
-                            // 3- ье склонение
-                        case 'ь':
-                            if (slv[leng - 3] == 'е' && slv[leng - 2] == 'н')
+                                slv += "РµРј";
+                            break; // -Р»РµС†
+                            // 3- СЊРµ СЃРєР»РѕРЅРµРЅРёРµ
+                        case 'СЊ':
+                            if (slv[leng - 3] == 'Рµ' && slv[leng - 2] == 'РЅ')
                             {
                                 if (gender != 1)
                                 {
-                                    slv = ReplaceChar(slv, leng - 3, 'н');
-                                    //slv[leng-3]='н';
-                                    slv = ReplaceChar(slv, leng - 2, 'е');
-                                    //slv[leng-2]='е';
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м';
+                                    slv = ReplaceChar(slv, leng - 3, 'РЅ');
+                                    //slv[leng-3]='РЅ';
+                                    slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                    //slv[leng-2]='Рµ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј';
                                 }
                                 else
-                                    slv += "ю";
+                                    slv += "СЋ";
                                 break;
                             }
                             else if (gender == 1)
-                                slv += "ю";
+                                slv += "СЋ";
                             else
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'е');
-                                //slv[leng-1]='е';
-                                slv += "м";
+                                slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                //slv[leng-1]='Рµ';
+                                slv += "Рј";
                             }
                             break;
-                        case 'и':
+                        case 'Рё':
                             if (!edChislo)
                             {
-                                if ((Isship(slv[leng - 2])) || slv[leng - 2] == 'ж' || slv[leng - 2] == 'к' ||
-                                    slv[leng - 2] == 'х')
-                                    slv = ReplaceChar(slv, leng - 1, 'а');
-                                //slv[leng-1]='а';
-                                if ((Isship(slv[leng - 2])) || slv[leng - 2] == 'ж' || slv[leng - 2] == 'к' ||
-                                    slv[leng - 2] == 'х')
-                                    slv = ReplaceChar(slv, leng - 1, 'а');
-                                    //slv[leng-1]='а';
+                                if ((Isship(slv[leng - 2])) || slv[leng - 2] == 'Р¶' || slv[leng - 2] == 'Рє' ||
+                                    slv[leng - 2] == 'С…')
+                                    slv = ReplaceChar(slv, leng - 1, 'Р°');
+                                //slv[leng-1]='Р°';
+                                if ((Isship(slv[leng - 2])) || slv[leng - 2] == 'Р¶' || slv[leng - 2] == 'Рє' ||
+                                    slv[leng - 2] == 'С…')
+                                    slv = ReplaceChar(slv, leng - 1, 'Р°');
+                                    //slv[leng-1]='Р°';
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
-                                //slv[leng-1]='я';
-                                slv += "ми";
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
+                                //slv[leng-1]='СЏ';
+                                slv += "РјРё";
                             }
-                            break; // Несклоняемые или множественые
-                        case 'ы':
+                            break; // РќРµСЃРєР»РѕРЅСЏРµРјС‹Рµ РёР»Рё РјРЅРѕР¶РµСЃС‚РІРµРЅС‹Рµ
+                        case 'С‹':
                             if (!edChislo)
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'а');
-                                //slv[leng-1]='а';
-                                slv += "ми";
+                                slv = ReplaceChar(slv, leng - 1, 'Р°');
+                                //slv[leng-1]='Р°';
+                                slv += "РјРё";
                             }
                             break;
-                        case 'у':
+                        case 'Сѓ':
                             break;
                         default:
                             if (gender != 1)
-                                slv += "ом"; // Разносклоняемые
+                                slv += "РѕРј"; // Р Р°Р·РЅРѕСЃРєР»РѕРЅСЏРµРјС‹Рµ
                             break;
                     }
                     if (i == 1)
@@ -1370,8 +1370,8 @@ namespace BZEditor
 
 /*void Tpad1( char * nslv, int CH, char * out ) {
 //
-//    Дополнительная (художественная или украинизированная)
-//                 форма творительного падежа
+//    Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ (С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅР°СЏ РёР»Рё СѓРєСЂР°РёРЅРёР·РёСЂРѕРІР°РЅРЅР°СЏ)
+//                 С„РѕСЂРјР° С‚РІРѕСЂРёС‚РµР»СЊРЅРѕРіРѕ РїР°РґРµР¶Р°
 //
 	char * slv = (char *) malloc(2008);
 	char * reslv = (char *) malloc(2009);
@@ -1383,19 +1383,19 @@ namespace BZEditor
 		if (strlen(slv)>1 && (i<=maxi)) {
 			leng=(int)strlen(slv);
 			switch (slv[leng-1]) {
-				case 'а':
-						slv[leng-1]='о';
-						strcat(slv,"ю");
+				case 'Р°':
+						slv[leng-1]='Рѕ';
+						strcat(slv,"СЋ");
 						break;
-				case 'я':
+				case 'СЏ':
 					if (issogl(slv[leng-2])) {
-						slv[leng-1]='е';
-						strcat(slv,"ю");
+						slv[leng-1]='Рµ';
+						strcat(slv,"СЋ");
 					}
 					else
-					if (slv[leng-2]=='а') {
-						slv[leng-2]='о';
-						slv[leng-1]='ю';
+					if (slv[leng-2]=='Р°') {
+						slv[leng-2]='Рѕ';
+						slv[leng-1]='СЋ';
 					}
 				break;
 				default : {}
@@ -1431,306 +1431,306 @@ namespace BZEditor
                     leng = slv.Length;
                     switch (slv[leng - 1])
                     {
-                            // 1- ое склонение   (+часть третьего)
-                        case 'а':
+                            // 1- РѕРµ СЃРєР»РѕРЅРµРЅРёРµ   (+С‡Р°СЃС‚СЊ С‚СЂРµС‚СЊРµРіРѕ)
+                        case 'Р°':
                             if (!edChislo)
                             {
-                                slv += "х";
+                                slv += "С…";
                                 break;
                             }
                             else
-                                slv = ReplaceChar(slv, leng - 1, 'е');
-                            //slv[leng-1]='е'; 
+                                slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                            //slv[leng-1]='Рµ'; 
                             break;
-                        case 'я':
+                        case 'СЏ':
                             if (edChislo)
                             {
-                                if (slv[leng - 2] == 'м')
+                                if (slv[leng - 2] == 'Рј')
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    //slv[leng-1]='е';
-                                    slv += "ни";
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    //slv[leng-1]='Рµ';
+                                    slv += "РЅРё";
                                 }
-                                else if (i != StrCount(nslv) && slv[leng - 2] == 'а')
+                                else if (i != StrCount(nslv) && slv[leng - 2] == 'Р°')
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'о');
-                                    //slv[leng-2]='о';
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
-                                    //slv[leng-1]='й'; 
+                                    slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                    //slv[leng-2]='Рѕ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
+                                    //slv[leng-1]='Р№'; 
                                 }
-                                else if (slv[leng - 2] == 'я')
+                                else if (slv[leng - 2] == 'СЏ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'е');
-                                    //slv[leng-2]='е';
-                                    slv = ReplaceChar(slv, leng - 1, 'й');
-                                    //slv[leng-1]='й'; 
+                                    slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                    //slv[leng-2]='Рµ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Р№');
+                                    //slv[leng-1]='Р№'; 
                                 }
-                                else if (slv[leng - 2] == 'ь')
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    //slv[leng-1]='е';
-                                else if (slv[leng - 2] == 'и')
-                                    slv = ReplaceChar(slv, leng - 1, 'и');
-                                    //slv[leng-1]='и';
-                                else if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'ь')
+                                else if (slv[leng - 2] == 'СЊ')
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    //slv[leng-1]='Рµ';
+                                else if (slv[leng - 2] == 'Рё')
+                                    slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                    //slv[leng-1]='Рё';
+                                else if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'СЊ')
                                 {
                                     if (gender == 1)
-                                        slv = ReplaceChar(slv, leng - 1, 'е');
-                                        //slv[leng-1]='е';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                        //slv[leng-1]='Рµ';
                                     else
-                                        slv = ReplaceChar(slv, leng - 1, 'и');
-                                    //slv[leng-1]='и';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                    //slv[leng-1]='Рё';
                                 }
                                 else
-                                    slv = ReplaceChar(slv, leng - 2, 'е');
-                                //slv[leng-2]='е'; 
+                                    slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                //slv[leng-2]='Рµ'; 
                             }
                             else
                             {
-                                if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'ь')
+                                if (Issogl(slv[leng - 2]) || slv[leng - 2] == 'СЊ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
-                                    //slv[leng-1]='я';
-                                    slv += "х";
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
+                                    //slv[leng-1]='СЏ';
+                                    slv += "С…";
                                 }
                             }
                             break;
-                            // 2- ое склонение
-                        case 'й':
+                            // 2- РѕРµ СЃРєР»РѕРЅРµРЅРёРµ
+                        case 'Р№':
                             if (i == StrCount(nslv))
                             {
-                                //существительное
-                                if (slv[leng - 2] == 'о')
+                                //СЃСѓС‰РµСЃС‚РІРёС‚РµР»СЊРЅРѕРµ
+                                if (slv[leng - 2] == 'Рѕ')
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    //slv[leng-1]='е';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    //slv[leng-1]='Рµ';
                                     break;
                                 }
-                                if (slv[leng - 2] == 'и')
+                                if (slv[leng - 2] == 'Рё')
                                 {
-                                    if (slv[leng - 3] == 'ш')
+                                    if (slv[leng - 3] == 'С€')
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'е');
-                                        //slv[leng-2]='е';
-                                        slv = ReplaceChar(slv, leng - 1, 'м');
-                                        //slv[leng-1]='м';
+                                        slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                        //slv[leng-2]='Рµ';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                        //slv[leng-1]='Рј';
                                     }
                                     else
-                                        slv = ReplaceChar(slv, leng - 1, 'и');
-                                    //slv[leng-1]='и';
-                                } // прилагательное
+                                        slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                    //slv[leng-1]='Рё';
+                                } // РїСЂРёР»Р°РіР°С‚РµР»СЊРЅРѕРµ
                             }
-                            else if (slv[leng - 2] == 'о')
-                                slv = ReplaceChar(slv, leng - 1, 'м');
-                                //slv[leng-1]='м';
-                            else if (slv[leng - 2] == 'ы')
+                            else if (slv[leng - 2] == 'Рѕ')
+                                slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                //slv[leng-1]='Рј';
+                            else if (slv[leng - 2] == 'С‹')
                             {
-                                slv = ReplaceChar(slv, leng - 2, 'о');
-                                //slv[leng-2]='о';
-                                slv = ReplaceChar(slv, leng - 1, 'м');
-                                //slv[leng-1]='м';
+                                slv = ReplaceChar(slv, leng - 2, 'Рѕ');
+                                //slv[leng-2]='Рѕ';
+                                slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                //slv[leng-1]='Рј';
                             }
-                            else if (slv[leng - 2] == 'и')
+                            else if (slv[leng - 2] == 'Рё')
                             {
-                                // -ий
-                                if (slv[leng - 3] == 'н' || slv[leng - 3] == 'ж')
+                                // -РёР№
+                                if (slv[leng - 3] == 'РЅ' || slv[leng - 3] == 'Р¶')
                                 {
-                                    // -ний -жий
-                                    slv = ReplaceChar(slv, leng - 2, 'е');
-                                    //slv[leng-2]='е';
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м';
+                                    // -РЅРёР№ -Р¶РёР№
+                                    slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                    //slv[leng-2]='Рµ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј';
                                 }
-                                else if (slv[leng - 3] == 'б' || slv[leng - 3] == 'з' || slv[leng - 3] == 'с')
+                                else if (slv[leng - 3] == 'Р±' || slv[leng - 3] == 'Р·' || slv[leng - 3] == 'СЃ')
                                 {
-                                    // -бий -зий -сий
-                                    slv = ReplaceChar(slv, leng - 2, 'ь');
-                                    //slv[leng-2]='ь';
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    //slv[leng-1]='е';
-                                    slv += "м";
+                                    // -Р±РёР№ -Р·РёР№ -СЃРёР№
+                                    slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                    //slv[leng-2]='СЊ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    //slv[leng-1]='Рµ';
+                                    slv += "Рј";
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 1, 'о');
-                                    //slv[leng-2]='о';
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рѕ');
+                                    //slv[leng-2]='Рѕ';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј';
                                 }
                             }
                             else
-                                slv = ReplaceChar(slv, leng - 1, 'е');
-                            //slv[leng-1]='е'; 
+                                slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                            //slv[leng-1]='Рµ'; 
                             break;
-                        case 'о':
-                            slv = ReplaceChar(slv, leng - 1, 'е');
-                            //slv[leng-1]='е'; 
+                        case 'Рѕ':
+                            slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                            //slv[leng-1]='Рµ'; 
                             break;
-                        case 'е':
+                        case 'Рµ':
                             if (i != StrCount(nslv))
                             {
-                                //прилагательное
+                                //РїСЂРёР»Р°РіР°С‚РµР»СЊРЅРѕРµ
                                 if (edChislo)
-                                    slv = ReplaceChar(slv, leng - 1, 'м');
-                                    //slv[leng-1]='м'; 
+                                    slv = ReplaceChar(slv, leng - 1, 'Рј');
+                                    //slv[leng-1]='Рј'; 
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'х');
-                                //slv[leng-1]='х';
+                                    slv = ReplaceChar(slv, leng - 1, 'С…');
+                                //slv[leng-1]='С…';
                             }
                             else
                             {
-                                // Существительное
-                                if (slv[leng - 2] == 'и')
-                                    slv = ReplaceChar(slv, leng - 1, 'и');
-                                //slv[leng-1]='и';
+                                // РЎСѓС‰РµСЃС‚РІРёС‚РµР»СЊРЅРѕРµ
+                                if (slv[leng - 2] == 'Рё')
+                                    slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                //slv[leng-1]='Рё';
                             }
                             break;
-                        case 'ё':
-                            slv = ReplaceChar(slv, leng - 1, 'е');
-                            //slv[leng-1]='е'; 
+                        case 'С‘':
+                            slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                            //slv[leng-1]='Рµ'; 
                             break;
-                        case 'к':
-                            if (slv[leng - 2] == 'о')
+                        case 'Рє':
+                            if (slv[leng - 2] == 'Рѕ')
                             {
-                                slv = ReplaceChar(slv, leng - 2, 'к');
-                                //slv[leng-2]='к';
-                                slv = ReplaceChar(slv, leng - 1, 'е');
-                                //slv[leng-1]='е'; 
+                                slv = ReplaceChar(slv, leng - 2, 'Рє');
+                                //slv[leng-2]='Рє';
+                                slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                //slv[leng-1]='Рµ'; 
                                 break;
                             }
-                            if (slv[leng - 2] == 'е')
+                            if (slv[leng - 2] == 'Рµ')
                             {
                                 if (Isship(slv[leng - 3]))
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'к');
-                                    //slv[leng-2]='к';
-                                    slv = ReplaceChar(slv, leng - 1, 'е');
-                                    //slv[leng-1]='е'; 
+                                    slv = ReplaceChar(slv, leng - 2, 'Рє');
+                                    //slv[leng-2]='Рє';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                    //slv[leng-1]='Рµ'; 
                                     break;
                                 }
                                 else
-                                    slv += "а";
+                                    slv += "Р°";
                                 break;
                             }
-                            if (slv[leng - 2] == 'ё')
+                            if (slv[leng - 2] == 'С‘')
                             {
-                                // -ёк
+                                // -С‘Рє
                                 if (Issogl(slv[leng - 3]))
                                 {
                                     if (Issogl(slv[leng - 4]))
-                                        slv += "е";
+                                        slv += "Рµ";
                                     else
                                     {
-                                        slv = ReplaceChar(slv, leng - 2, 'ь');
-                                        //slv[leng-2]='ь';
-                                        slv = ReplaceChar(slv, leng - 1, 'к');
-                                        //slv[leng-1]='к'; 
-                                        slv += "е";
+                                        slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                        //slv[leng-2]='СЊ';
+                                        slv = ReplaceChar(slv, leng - 1, 'Рє');
+                                        //slv[leng-1]='Рє'; 
+                                        slv += "Рµ";
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'й');
-                                    //slv[leng-2]='й';
-                                    slv = ReplaceChar(slv, leng - 1, 'к');
-                                    //slv[leng-1]='к'; 
-                                    slv += "е";
+                                    slv = ReplaceChar(slv, leng - 2, 'Р№');
+                                    //slv[leng-2]='Р№';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рє');
+                                    //slv[leng-1]='Рє'; 
+                                    slv += "Рµ";
                                 }
                                 break;
                             }
                             if (gender != 1)
-                                slv += "е";
+                                slv += "Рµ";
                             break;
-                        case 'ц':
-                            if ((slv[leng - 2] == 'е' || slv[leng - 2] == 'я') && leng > 3)
+                        case 'С†':
+                            if ((slv[leng - 2] == 'Рµ' || slv[leng - 2] == 'СЏ') && leng > 3)
                             {
-                                // - ец  -яц
+                                // - РµС†  -СЏС†
                                 if (Issogl(slv[leng - 3]))
                                 {
-                                    // -<согл>ец <согл>яц
+                                    // -<СЃРѕРіР»>РµС† <СЃРѕРіР»>СЏС†
                                     if (Issogl(slv[leng - 4]))
-                                        slv += "е";
+                                        slv += "Рµ";
                                     else
                                     {
-                                        if (slv[leng - 3] == 'л')
+                                        if (slv[leng - 3] == 'Р»')
                                         {
-                                            slv = ReplaceChar(slv, leng - 2, 'ь');
-                                            //slv[leng-2]='ь';
-                                            slv = ReplaceChar(slv, leng - 1, 'ц');
-                                            //slv[leng-1]='ц'; 
-                                            slv += "е";
+                                            slv = ReplaceChar(slv, leng - 2, 'СЊ');
+                                            //slv[leng-2]='СЊ';
+                                            slv = ReplaceChar(slv, leng - 1, 'С†');
+                                            //slv[leng-1]='С†'; 
+                                            slv += "Рµ";
                                         }
                                         else
                                         {
-                                            slv = ReplaceChar(slv, leng - 2, 'ц');
-                                            //slv[leng-2]='ц';
-                                            slv = ReplaceChar(slv, leng - 1, 'е');
-                                            //slv[leng-1]='е';
+                                            slv = ReplaceChar(slv, leng - 2, 'С†');
+                                            //slv[leng-2]='С†';
+                                            slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                                            //slv[leng-1]='Рµ';
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    slv = ReplaceChar(slv, leng - 2, 'й');
-                                    //slv[leng-2]='й';
-                                    slv = ReplaceChar(slv, leng - 1, 'ц');
-                                    //slv[leng-1]='ц'; 
-                                    slv += "е";
+                                    slv = ReplaceChar(slv, leng - 2, 'Р№');
+                                    //slv[leng-2]='Р№';
+                                    slv = ReplaceChar(slv, leng - 1, 'С†');
+                                    //slv[leng-1]='С†'; 
+                                    slv += "Рµ";
                                 }
                             }
                             else
-                                slv += "е";
-                            break; // -лец
-                            // 3- ье склонение
-                        case 'ь':
-                            if (slv[leng - 3] == 'е' && slv[leng - 2] == 'н')
+                                slv += "Рµ";
+                            break; // -Р»РµС†
+                            // 3- СЊРµ СЃРєР»РѕРЅРµРЅРёРµ
+                        case 'СЊ':
+                            if (slv[leng - 3] == 'Рµ' && slv[leng - 2] == 'РЅ')
                             {
                                 if (gender != 1)
                                 {
-                                    slv = ReplaceChar(slv, leng - 3, 'н');
-                                    //slv[leng-3]='н';
-                                    slv = ReplaceChar(slv, leng - 2, 'е');
-                                    //slv[leng-2]='е';
+                                    slv = ReplaceChar(slv, leng - 3, 'РЅ');
+                                    //slv[leng-3]='РЅ';
+                                    slv = ReplaceChar(slv, leng - 2, 'Рµ');
+                                    //slv[leng-2]='Рµ';
                                     slv = ReplaceChar(slv, leng - 1, '\0');
                                     //slv[leng-1]='\0';
                                 }
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'и');
-                                //slv[leng-1]='и';
+                                    slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                //slv[leng-1]='Рё';
                             }
                             else if (gender != 0)
-                                slv = ReplaceChar(slv, leng - 1, 'и');
-                                //slv[leng-1]='и'; 
+                                slv = ReplaceChar(slv, leng - 1, 'Рё');
+                                //slv[leng-1]='Рё'; 
                             else
-                                slv = ReplaceChar(slv, leng - 1, 'е');
-                            //slv[leng-1]='е';
+                                slv = ReplaceChar(slv, leng - 1, 'Рµ');
+                            //slv[leng-1]='Рµ';
                             break;
-                        case 'и':
+                        case 'Рё':
                             if (!edChislo)
                             {
-                                if (slv[leng - 2] == 'г' || slv[leng - 2] == 'ж' || slv[leng - 2] == 'к' ||
-                                    slv[leng - 2] == 'х' || slv[leng - 2] == 'ч' || slv[leng - 2] == 'ш' ||
-                                    slv[leng - 2] == 'щ')
-                                    slv = ReplaceChar(slv, leng - 1, 'а');
-                                    //slv[leng-1]='а';
+                                if (slv[leng - 2] == 'Рі' || slv[leng - 2] == 'Р¶' || slv[leng - 2] == 'Рє' ||
+                                    slv[leng - 2] == 'С…' || slv[leng - 2] == 'С‡' || slv[leng - 2] == 'С€' ||
+                                    slv[leng - 2] == 'С‰')
+                                    slv = ReplaceChar(slv, leng - 1, 'Р°');
+                                    //slv[leng-1]='Р°';
                                 else
-                                    slv = ReplaceChar(slv, leng - 1, 'я');
-                                //slv[leng-1]='я';
-                                slv += "х";
+                                    slv = ReplaceChar(slv, leng - 1, 'СЏ');
+                                //slv[leng-1]='СЏ';
+                                slv += "С…";
                             }
-                            break; // Несклоняемые или множественые
-                        case 'ы':
+                            break; // РќРµСЃРєР»РѕРЅСЏРµРјС‹Рµ РёР»Рё РјРЅРѕР¶РµСЃС‚РІРµРЅС‹Рµ
+                        case 'С‹':
                             if (!edChislo)
                             {
-                                slv = ReplaceChar(slv, leng - 1, 'а');
-                                //slv[leng-1]='а';
-                                slv += "х";
+                                slv = ReplaceChar(slv, leng - 1, 'Р°');
+                                //slv[leng-1]='Р°';
+                                slv += "С…";
                             }
                             break;
-                        case 'у':
+                        case 'Сѓ':
                             break;
                         default:
                             if (gender != 1)
-                                slv += "е"; // Разносклоняемые
+                                slv += "Рµ"; // Р Р°Р·РЅРѕСЃРєР»РѕРЅСЏРµРјС‹Рµ
                             break;
                     }
                     if (i == 1)

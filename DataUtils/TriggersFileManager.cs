@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -28,16 +28,16 @@ namespace DataUtils
             string trigArg = "";
             while (true)
             {
-                if (input == null) break; //åñëè êîíåö ôàéëà, ïðåêðàùàåì îáðàáîòêó ôàéëà
-                if (input.IndexOf("* Ñãåíåðèðîâàíî BZEditor") == -1 && input.IndexOf("* Êîëè÷åñòâî òðèããåðîâ : ") == -1 &&
-                    input.IndexOf("* Ñîõðàíåíî ") == -1)
+                if (input == null) break; //ÐµÑÐ»Ð¸ ÐºÐ¾Ð½ÐµÑ† Ñ„Ð°Ð¹Ð»Ð°, Ð¿Ñ€ÐµÐºÑ€Ð°Ñ‰Ð°ÐµÐ¼ Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÑƒ Ñ„Ð°Ð¹Ð»Ð°
+                if (input.IndexOf("* Ð¡Ð³ÐµÐ½ÐµÑ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¾ BZEditor") == -1 && input.IndexOf("* ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ð¾Ð² : ") == -1 &&
+                    input.IndexOf("* Ð¡Ð¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¾ ") == -1)
                 {
                     Match m = tnum.Match(input);
                     Match m1 = tname.Match(input);
                     Match m2 = tparam.Match(input);
                     if (m.Success)
                     {
-                        //Çàïèñü ïðåäûäóùåãî òðèããåðà trignumber åñëè òàêîâîé áûë ïðî÷èòàí
+                        //Ð—Ð°Ð¿Ð¸ÑÑŒ Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰ÐµÐ³Ð¾ Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ð° trignumber ÐµÑÐ»Ð¸ Ñ‚Ð°ÐºÐ¾Ð²Ð¾Ð¹ Ð±Ñ‹Ð» Ð¿Ñ€Ð¾Ñ‡Ð¸Ñ‚Ð°Ð½
                         if (curTrigNum != -1)
                         {
                             var trigger = new Trigger(curTrigNum)
@@ -58,22 +58,22 @@ namespace DataUtils
                             trigArg = "";
                         }
 
-                        //Ñáðîñ ïîçèöèè â ÷èòàåìîì òðèããåðå
+                        //Ð¡Ð±Ñ€Ð¾Ñ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ð¸ Ð² Ñ‡Ð¸Ñ‚Ð°ÐµÐ¼Ð¾Ð¼ Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ðµ
                         trigPos = 0;
                         curTrigNum = Convert.ToInt32(m.Groups["Num"].ToString());
                         if (curTrigNum == 75574) Debug.WriteLine("test");
                         trigBody = "";
                     }
-                        //ðàñïîçíàâàíèå âñåõ ñòðîê çàâåðøàþùèõñÿ ~ ñ ó÷åòîì ïîçèöèè â òðèããåðå
+                        //Ñ€Ð°ÑÐ¿Ð¾Ð·Ð½Ð°Ð²Ð°Ð½Ð¸Ðµ Ð²ÑÐµÑ… ÑÑ‚Ñ€Ð¾Ðº Ð·Ð°Ð²ÐµÑ€ÑˆÐ°ÑŽÑ‰Ð¸Ñ…ÑÑ ~ Ñ ÑƒÑ‡ÐµÑ‚Ð¾Ð¼ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ð¸ Ð² Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ðµ
                     else if (m1.Success)
                     {
                         string text = m1.Groups["Name"].ToString();
-                        if (trigPos == 0) //Íàçâàíèå òðèããåðà					
+                        if (trigPos == 0) //ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ð°					
                         {
                             trigPos = 1;
                             trigName = text;
                         }
-                        else if (trigPos == 2) //àðãóìåíò
+                        else if (trigPos == 2) //Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚
                         {
                             trigPos = 3;
                             trigArg = text;
@@ -87,11 +87,11 @@ namespace DataUtils
                         trigType = gcoll["trig_type"].ToString();
                         trigNumArg = Convert.ToInt32(gcoll["num_arg"].ToString());
                     }
-                    else //Òåëî òðèããåðà
+                    else //Ð¢ÐµÐ»Ð¾ Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ð°
                     {
                         trigPos++;
                         if (input != "~" && input != "$")
-                            //$ îáðåçàåòñÿ ÷òîá â ïîñëåäíåì òðèããåðå íå ïîÿâëÿëèñü îáîçíà÷åíèÿ êîíöà ôàéëà
+                            //$ Ð¾Ð±Ñ€ÐµÐ·Ð°ÐµÑ‚ÑÑ Ñ‡Ñ‚Ð¾Ð± Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÐµÐ¼ Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ðµ Ð½Ðµ Ð¿Ð¾ÑÐ²Ð»ÑÐ»Ð¸ÑÑŒ Ð¾Ð±Ð¾Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ ÐºÐ¾Ð½Ñ†Ð° Ñ„Ð°Ð¹Ð»Ð°
                         {
                             if (trigBody != "") trigBody += "\r\n";
                             trigBody += input;
@@ -124,9 +124,9 @@ namespace DataUtils
                 new FileStream(StaticData.WorldFolderPath + @"\TRG\" + zoneNumber + ".trg", FileMode.Create,
                                FileAccess.Write);
             var sw = new StreamWriter(fs, StaticData.CurrentEncoding) {NewLine = "\n"};
-            //sw.WriteLine("* Ñãåíåðèðîâàíî BZEditor");
-            //sw.WriteLine("* Êîëè÷åñòâî òðèããåðîâ : " + triggersCollection.Count);
-            //sw.WriteLine("* Ñîõðàíåíî " + DateTime.Now);
+            //sw.WriteLine("* Ð¡Ð³ÐµÐ½ÐµÑ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¾ BZEditor");
+            //sw.WriteLine("* ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ð¾Ð² : " + triggersCollection.Count);
+            //sw.WriteLine("* Ð¡Ð¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¾ " + DateTime.Now);
 
             if (triggersCollection.Count > 0)
             {

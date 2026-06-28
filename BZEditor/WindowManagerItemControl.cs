@@ -1,4 +1,4 @@
-using System.ComponentModel;
+п»їusing System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -153,7 +153,7 @@ namespace BZEditor
             // miCloseWindow
             // 
             this.miCloseWindow.Index = 0;
-            this.miCloseWindow.Text = "Закрыть окно";
+            this.miCloseWindow.Text = "Р—Р°РєСЂС‹С‚СЊ РѕРєРЅРѕ";
             this.miCloseWindow.Click += new System.EventHandler(this.miCloseWindow_Click);
             // 
             // lIcon

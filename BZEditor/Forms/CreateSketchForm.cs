@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Windows.Forms;
 using DataUtils;
 
@@ -29,7 +29,7 @@ namespace BZEditor
         {
             if (string.IsNullOrEmpty(tbSketchName.Text))
             {
-                errorProvider.SetError(tbSketchName, "Не задано наименование эскиза");
+                errorProvider.SetError(tbSketchName, "РќРµ Р·Р°РґР°РЅРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЌСЃРєРёР·Р°");
                 return;
             }
             errorProvider.SetError(tbSketchName, "");
@@ -42,7 +42,7 @@ namespace BZEditor
         {
             if (!tbFileName.ReadOnly && string.IsNullOrEmpty(tbFileName.Text))
             {
-                errorProvider.SetError(tbFileName, "Не задано имя файла эскиза");
+                errorProvider.SetError(tbFileName, "РќРµ Р·Р°РґР°РЅРѕ РёРјСЏ С„Р°Р№Р»Р° СЌСЃРєРёР·Р°");
                 return;
             }
             errorProvider.SetError(tbFileName, "");

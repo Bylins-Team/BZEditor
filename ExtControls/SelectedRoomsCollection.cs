@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections;
 using DataUtils;
 
@@ -7,7 +7,7 @@ namespace ExtControls
     public class SelectedRoomsCollection : ArrayList
     {
         /// <summary>
-        /// Если есть комната то она будет удалена, если нет - добавлена
+        /// Р•СЃР»Рё РµСЃС‚СЊ РєРѕРјРЅР°С‚Р° С‚Рѕ РѕРЅР° Р±СѓРґРµС‚ СѓРґР°Р»РµРЅР°, РµСЃР»Рё РЅРµС‚ - РґРѕР±Р°РІР»РµРЅР°
         /// </summary>
         public void SmartAddRemoveRoom(int NewRoomVNum)
         {
@@ -53,7 +53,7 @@ namespace ExtControls
         }
 
         /// <summary>
-        /// Добавляет только новые не удаляя если такая уже есть
+        /// Р”РѕР±Р°РІР»СЏРµС‚ С‚РѕР»СЊРєРѕ РЅРѕРІС‹Рµ РЅРµ СѓРґР°Р»СЏСЏ РµСЃР»Рё С‚Р°РєР°СЏ СѓР¶Рµ РµСЃС‚СЊ
         /// </summary>
         /// <param name="NewRoomVNum"></param>
         public void SmartAddRoom(int NewRoomVNum)

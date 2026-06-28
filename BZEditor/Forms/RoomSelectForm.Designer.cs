@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class RoomSelectForm
     {
@@ -64,12 +64,12 @@ namespace BZEditor
             // 
             // chMainListVNum
             // 
-            this.chMainListVNum.Text = "Номер";
+            this.chMainListVNum.Text = "РќРѕРјРµСЂ";
             this.chMainListVNum.Width = 50;
             // 
             // chMainListItemName
             // 
-            this.chMainListItemName.Text = "Название";
+            this.chMainListItemName.Text = "РќР°Р·РІР°РЅРёРµ";
             this.chMainListItemName.Width = 274;
             // 
             // tboxMainListFilter
@@ -88,7 +88,7 @@ namespace BZEditor
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(49, 16);
             this.label29.TabIndex = 105;
-            this.label29.Text = "Фильтр";
+            this.label29.Text = "Р¤РёР»СЊС‚СЂ";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbAhowAllRooms
@@ -98,7 +98,7 @@ namespace BZEditor
             this.cbAhowAllRooms.Name = "cbAhowAllRooms";
             this.cbAhowAllRooms.Size = new System.Drawing.Size(198, 17);
             this.cbAhowAllRooms.TabIndex = 107;
-            this.cbAhowAllRooms.Text = "Отображать комнаты из всех зон";
+            this.cbAhowAllRooms.Text = "РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РєРѕРјРЅР°С‚С‹ РёР· РІСЃРµС… Р·РѕРЅ";
             this.cbAhowAllRooms.UseVisualStyleBackColor = true;
             this.cbAhowAllRooms.CheckedChanged += new System.EventHandler(this.cbAhowAllRooms_CheckedChanged);
             // 
@@ -111,7 +111,7 @@ namespace BZEditor
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 108;
-            this.btnOk.Text = "Ок";
+            this.btnOk.Text = "РћРє";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
@@ -123,7 +123,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 108;
-            this.btnCancel.Text = "Отмена";
+            this.btnCancel.Text = "РћС‚РјРµРЅР°";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 

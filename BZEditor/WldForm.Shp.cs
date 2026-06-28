@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Drawing;
 using System.Windows.Forms;
 using DataUtils;
@@ -29,7 +29,7 @@ namespace BZEditor
         {
             if (WindowParentForm == null) return;
             MobsCollection allMobs = WindowParentForm.GetAllKnownMobs();
-            var msf = new MobSelectForm("Выберите моба-продавца", allMobs, ZoneDM.Zone.Number, false, true);
+            var msf = new MobSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РјРѕР±Р°-РїСЂРѕРґР°РІС†Р°", allMobs, ZoneDM.Zone.Number, false, true);
             DialogResult dres = msf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -166,7 +166,7 @@ namespace BZEditor
         {
             ObjsCollection allObjects = WindowParentForm.GetAllKnownObjects();
             var osf =
-                new ObjSelectForm("Выберите постоянно продаваемые предметы", allObjects, ZoneDM.Zone.Number, true, false);
+                new ObjSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РїРѕСЃС‚РѕСЏРЅРЅРѕ РїСЂРѕРґР°РІР°РµРјС‹Рµ РїСЂРµРґРјРµС‚С‹", allObjects, ZoneDM.Zone.Number, true, false);
             DialogResult dres = osf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -211,7 +211,7 @@ namespace BZEditor
         private void btnAddToBuyList_Click(object sender, EventArgs e)
         {
             if (!tboxWordToBuyList.ReadOnly && tboxWordToBuyList.Text.Length <= 0)
-                return; //Чтоб пустоту попусту не добавлять :)
+                return; //Р§С‚РѕР± РїСѓСЃС‚РѕС‚Сѓ РїРѕРїСѓСЃС‚Сѓ РЅРµ РґРѕР±Р°РІР»СЏС‚СЊ :)
             string aValue = !tboxWordToBuyList.ReadOnly ? tboxWordToBuyList.Text : (cboxTypeToBuyList.SelectedIndex + 1).ToString();
             if (lvMainList.SelectedItems.Count <= 0) return;
             if (!currentShop.BuyingObjectsList.Contains(aValue))
@@ -241,7 +241,7 @@ namespace BZEditor
         private void btnAddToChangeList_Click(object sender, EventArgs e)
         {
             if (!tboxWordToChangeList.ReadOnly && tboxWordToChangeList.Text.Length <= 0)
-                return; //Чтоб пустоту попусту не добавлять :)
+                return; //Р§С‚РѕР± РїСѓСЃС‚РѕС‚Сѓ РїРѕРїСѓСЃС‚Сѓ РЅРµ РґРѕР±Р°РІР»СЏС‚СЊ :)
             if (lvMainList.SelectedItems.Count <= 0) return;
             string aValue = !tboxWordToChangeList.ReadOnly ? tboxWordToChangeList.Text : (cboxTypeToChangeList.SelectedIndex + 1).ToString();
             if (!currentShop.ChangingObjectsList.Contains(aValue))
@@ -303,12 +303,12 @@ namespace BZEditor
             if (lvMainList.SelectedItems.Count == 0) return;
             if (
                 MessageBox.Show(
-                    "При добавлении магазина в локацию, в эту локацию\nдобавляется моб-продавец с загружаемыми товарами.\nДобавть локацию?",
-                    "Подтверждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+                    "РџСЂРё РґРѕР±Р°РІР»РµРЅРёРё РјР°РіР°Р·РёРЅР° РІ Р»РѕРєР°С†РёСЋ, РІ СЌС‚Сѓ Р»РѕРєР°С†РёСЋ\nРґРѕР±Р°РІР»СЏРµС‚СЃСЏ РјРѕР±-РїСЂРѕРґР°РІРµС† СЃ Р·Р°РіСЂСѓР¶Р°РµРјС‹РјРё С‚РѕРІР°СЂР°РјРё.\nР”РѕР±Р°РІС‚СЊ Р»РѕРєР°С†РёСЋ?",
+                    "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
             if (currentShop.ShopLocationsList.Count != 0) return;
-            //Добвление собственно локации
+            //Р”РѕР±РІР»РµРЅРёРµ СЃРѕР±СЃС‚РІРµРЅРЅРѕ Р»РѕРєР°С†РёРё
             currentShop.ShopLocationsList.Add(Convert.ToInt32(nudShopLocationVNum.Value));
-            //Добавление моба-продавца
+            //Р”РѕР±Р°РІР»РµРЅРёРµ РјРѕР±Р°-РїСЂРѕРґР°РІС†Р°
             Room room = WindowParentForm.GetAllKnownRooms()[Convert.ToInt32(nudShopLocationVNum.Value), 0];
             if (room != null)
             {
@@ -320,8 +320,8 @@ namespace BZEditor
             else
             {
                 MessageBox.Show(
-                    "Локация, в которую добавляется магазин, в загруженных зонах не найдена.\nЛибо удалить локацию из списка и выберите новую, либо добавьте в дальнейшем моб-продавца самостоятельно.",
-                    "Не найдена локация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "Р›РѕРєР°С†РёСЏ, РІ РєРѕС‚РѕСЂСѓСЋ РґРѕР±Р°РІР»СЏРµС‚СЃСЏ РјР°РіР°Р·РёРЅ, РІ Р·Р°РіСЂСѓР¶РµРЅРЅС‹С… Р·РѕРЅР°С… РЅРµ РЅР°Р№РґРµРЅР°.\nР›РёР±Рѕ СѓРґР°Р»РёС‚СЊ Р»РѕРєР°С†РёСЋ РёР· СЃРїРёСЃРєР° Рё РІС‹Р±РµСЂРёС‚Рµ РЅРѕРІСѓСЋ, Р»РёР±Рѕ РґРѕР±Р°РІСЊС‚Рµ РІ РґР°Р»СЊРЅРµР№С€РµРј РјРѕР±-РїСЂРѕРґР°РІС†Р° СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ.",
+                    "РќРµ РЅР°Р№РґРµРЅР° Р»РѕРєР°С†РёСЏ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             RefreshShopLocations(currentShop);
             if (lvShopLocations.Items.Count <= 0) return;
@@ -345,7 +345,7 @@ namespace BZEditor
                 int locvnum = Convert.ToInt32(lvi.Tag);
                 if (currentShop.ShopLocationsList.Contains(locvnum))
                     currentShop.ShopLocationsList.Remove(locvnum);
-                //Удаляем из комнаты продавца
+                //РЈРґР°Р»СЏРµРј РёР· РєРѕРјРЅР°С‚С‹ РїСЂРѕРґР°РІС†Р°
                 MobsCollection allMobs = WindowParentForm.GetAllKnownMobs();
                 Room room = WindowParentForm.GetAllKnownRooms()[locvnum, 0];
                 if (room == null) continue;
@@ -360,13 +360,13 @@ namespace BZEditor
                 }
                 if (seller != null)
                 {
-                    string tmp = "Удалить из локации [" + room.VNum + "]" + room.Name + " моба-продавца [" +
+                    string tmp = "РЈРґР°Р»РёС‚СЊ РёР· Р»РѕРєР°С†РёРё [" + room.VNum + "]" + room.Name + " РјРѕР±Р°-РїСЂРѕРґР°РІС†Р° [" +
                                  seller.VNum + "]";
                     Mob m = allMobs[seller.VNum, 0];
                     if (m != null)
                         tmp += m.Cases.Imen;
                     if (
-                        MessageBox.Show(tmp + "?", "Найден моб-продавец", MessageBoxButtons.YesNo,
+                        MessageBox.Show(tmp + "?", "РќР°Р№РґРµРЅ РјРѕР±-РїСЂРѕРґР°РІРµС†", MessageBoxButtons.YesNo,
                                         MessageBoxIcon.Question) == DialogResult.Yes)
                         room.LoadedMobsCollection.Remove(seller);
                 }
@@ -392,7 +392,7 @@ namespace BZEditor
             if (WindowParentForm == null) return;
             RoomsCollection allMobs = WindowParentForm.GetAllKnownRooms();
             var rsf =
-                new RoomSelectForm("Выберите место размещения магазина", allMobs, ZoneDM.Zone.Number, false, false);
+                new RoomSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РјРµСЃС‚Рѕ СЂР°Р·РјРµС‰РµРЅРёСЏ РјР°РіР°Р·РёРЅР°", allMobs, ZoneDM.Zone.Number, false, false);
             DialogResult dres = rsf.ShowDialog();
             if (dres == DialogResult.OK)
                 nudShopLocationVNum.Value = ((Room) rsf.SelectedRooms[0]).VNum;
@@ -421,7 +421,7 @@ namespace BZEditor
             foreach (Shop shop in ZoneDM.ShopsCollection)
             {
                 var lvi =
-                    new ListViewItem(new[] {shop.VNum.ToString(), "Магазин №" + shop.VNum}) {Tag = shop.VNum};
+                    new ListViewItem(new[] {shop.VNum.ToString(), "РњР°РіР°Р·РёРЅ в„–" + shop.VNum}) {Tag = shop.VNum};
                 if (shop.Modifyed)
                     lvi.ImageIndex = 47;
                 if (tboxMainListFilter.Text.Length > 0)
@@ -442,7 +442,7 @@ namespace BZEditor
             foreach (int vNum in shop.PermanentlySellingList)
             {
                 Obj o = objects[vNum, 0];
-                string objName = (o != null) ? o.Cases.Imen : "Отбъект из незагруженной зоны";
+                string objName = (o != null) ? o.Cases.Imen : "РћС‚Р±СЉРµРєС‚ РёР· РЅРµР·Р°РіСЂСѓР¶РµРЅРЅРѕР№ Р·РѕРЅС‹";
                 var lvi = new ListViewItem(new[] {vNum.ToString(), objName}) {Tag = vNum};
                 lvSellingObjects.Items.Add(lvi);
             }

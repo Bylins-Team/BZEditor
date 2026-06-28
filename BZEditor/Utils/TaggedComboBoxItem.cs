@@ -1,4 +1,4 @@
-namespace BZEditor
+﻿namespace BZEditor
 {
     public class TaggedComboBoxItem : object
     {

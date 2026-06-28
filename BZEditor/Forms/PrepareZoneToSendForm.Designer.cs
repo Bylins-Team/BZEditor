@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class PrepareZoneToSendForm
     {
@@ -50,7 +50,7 @@ namespace BZEditor
             this.lInfo.Name = "lInfo";
             this.lInfo.Size = new System.Drawing.Size(38, 13);
             this.lInfo.TabIndex = 0;
-            this.lInfo.Text = "Зона: ";
+            this.lInfo.Text = "Р—РѕРЅР°: ";
             this.lInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // bContinuePreparing
@@ -61,7 +61,7 @@ namespace BZEditor
             this.bContinuePreparing.Size = new System.Drawing.Size(179, 23);
             this.bContinuePreparing.TabIndex = 1;
             this.bContinuePreparing.Tag = "0";
-            this.bContinuePreparing.Text = "Продолжить >>";
+            this.bContinuePreparing.Text = "РџСЂРѕРґРѕР»Р¶РёС‚СЊ >>";
             this.bContinuePreparing.UseVisualStyleBackColor = true;
             this.bContinuePreparing.Click += new System.EventHandler(this.bContinuePreparing_Click);
             // 
@@ -74,7 +74,7 @@ namespace BZEditor
             this.bCancelPreparing.Size = new System.Drawing.Size(74, 23);
             this.bCancelPreparing.TabIndex = 2;
             this.bCancelPreparing.Tag = "0";
-            this.bCancelPreparing.Text = "Отмена";
+            this.bCancelPreparing.Text = "РћС‚РјРµРЅР°";
             this.bCancelPreparing.UseVisualStyleBackColor = true;
             this.bCancelPreparing.Click += new System.EventHandler(this.bCancelPreparing_Click);
             // 
@@ -97,7 +97,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Название архива:";
+            this.label1.Text = "РќР°Р·РІР°РЅРёРµ Р°СЂС…РёРІР°:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // errorProvider
@@ -113,7 +113,7 @@ namespace BZEditor
             this.lStatus.Name = "lStatus";
             this.lStatus.Size = new System.Drawing.Size(153, 13);
             this.lStatus.TabIndex = 5;
-            this.lStatus.Text = "Статус: Выбор имени архива";
+            this.lStatus.Text = "РЎС‚Р°С‚СѓСЃ: Р’С‹Р±РѕСЂ РёРјРµРЅРё Р°СЂС…РёРІР°";
             this.lStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbMapIncluding
@@ -125,7 +125,7 @@ namespace BZEditor
             this.cbMapIncluding.Name = "cbMapIncluding";
             this.cbMapIncluding.Size = new System.Drawing.Size(253, 17);
             this.cbMapIncluding.TabIndex = 6;
-            this.cbMapIncluding.Text = "Включая файлы расположения комнат (map)";
+            this.cbMapIncluding.Text = "Р’РєР»СЋС‡Р°СЏ С„Р°Р№Р»С‹ СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РєРѕРјРЅР°С‚ (map)";
             this.cbMapIncluding.UseVisualStyleBackColor = true;
             // 
             // cbSktIncluding
@@ -135,7 +135,7 @@ namespace BZEditor
             this.cbSktIncluding.Name = "cbSktIncluding";
             this.cbSktIncluding.Size = new System.Drawing.Size(178, 17);
             this.cbSktIncluding.TabIndex = 6;
-            this.cbSktIncluding.Text = "Включая файлы эскизов (skt) ";
+            this.cbSktIncluding.Text = "Р’РєР»СЋС‡Р°СЏ С„Р°Р№Р»С‹ СЌСЃРєРёР·РѕРІ (skt) ";
             this.cbSktIncluding.UseVisualStyleBackColor = true;
             // 
             // listBoxOutput
@@ -173,7 +173,7 @@ namespace BZEditor
             this.Name = "PrepareZoneToSendForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Подготовка архива зоны к отправке";
+            this.Text = "РџРѕРґРіРѕС‚РѕРІРєР° Р°СЂС…РёРІР° Р·РѕРЅС‹ Рє РѕС‚РїСЂР°РІРєРµ";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

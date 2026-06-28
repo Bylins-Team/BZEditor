@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -17,7 +17,7 @@ namespace ExtControls
 		#region Get/Set
 
 		[DefaultValue(true)]
-		[Description("Состояние дополнительной панели, для управления которой предусмотрен сплиттер.")]
+		[Description("РЎРѕСЃС‚РѕСЏРЅРёРµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РїР°РЅРµР»Рё, РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ РєРѕС‚РѕСЂРѕР№ РїСЂРµРґСѓСЃРјРѕС‚СЂРµРЅ СЃРїР»РёС‚С‚РµСЂ.")]
 		[Category("Appearance")]
 		public bool IsClosed
 		{

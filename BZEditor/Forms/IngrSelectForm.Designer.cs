@@ -1,4 +1,4 @@
-namespace BZEditor
+Ôªønamespace BZEditor
 {
     partial class IngrSelectForm
     {
@@ -63,12 +63,12 @@ namespace BZEditor
             // 
             // chMainListVNum
             // 
-            this.chMainListVNum.Text = "ÕÓÏÂ";
+            this.chMainListVNum.Text = "–ù–æ–º–µ—Ä";
             this.chMainListVNum.Width = 150;
             // 
             // chMainListItemName
             // 
-            this.chMainListItemName.Text = "Õ‡Á‚‡ÌËÂ";
+            this.chMainListItemName.Text = "–ù–∞–∑–≤–∞–Ω–∏–µ";
             this.chMainListItemName.Width = 274;
             // 
             // tboxMainListFilter
@@ -87,7 +87,7 @@ namespace BZEditor
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(49, 16);
             this.label29.TabIndex = 105;
-            this.label29.Text = "‘ËÎ¸Ú";
+            this.label29.Text = "–§–∏–ª—å—Ç—Ä";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnOk
@@ -98,7 +98,7 @@ namespace BZEditor
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 108;
-            this.btnOk.Text = "ŒÍ";
+            this.btnOk.Text = "–û–∫";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.BtnOkClick);
             // 
@@ -110,7 +110,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 108;
-            this.btnCancel.Text = "ŒÚÏÂÌ‡";
+            this.btnCancel.Text = "–û—Ç–º–µ–Ω–∞";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
             // 
@@ -130,7 +130,7 @@ namespace BZEditor
             this.Name = "IngrSelectForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "¬˚·ÂËÚÂ";
+            this.Text = "–í—ã–±–µ—Ä–∏—Ç–µ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

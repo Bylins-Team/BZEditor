@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -44,7 +44,7 @@ namespace DataUtils
                 {
                     while (true)
                     {
-                        additionalInfo = "îòñóòñòâóåò...";
+                        additionalInfo = "Ð¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ð²ÑƒÐµÑ‚...";
                         var room = new Room(-1);
 
                         var desc = new [] {"", "", "", "", "", ""};
@@ -55,25 +55,25 @@ namespace DataUtils
                         var lockLevel = new [] {"", "", "", "", "", ""};
                         var exitRooms = new [] {"", "", "", "", "", ""};
 
-                        while (input.IndexOf("#", StringComparison.Ordinal) == -1) //Ñìåùàåìñÿ íà íà÷àëî îïèñàíèÿ îáúåêòà
+                        while (input.IndexOf("#", StringComparison.Ordinal) == -1) //Ð¡Ð¼ÐµÑ‰Ð°ÐµÐ¼ÑÑ Ð½Ð° Ð½Ð°Ñ‡Ð°Ð»Ð¾ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ñ Ð¾Ð±ÑŠÐµÐºÑ‚Ð°
                         {
                             input = ReadLine(sr);
-                            if (input == null) break; //åñëè êîíåö ôàéëà, òî ïðåêðàùàåì èñêàòü íà÷àëî ñëåä.îáúåêòà
+                            if (input == null) break; //ÐµÑÐ»Ð¸ ÐºÐ¾Ð½ÐµÑ† Ñ„Ð°Ð¹Ð»Ð°, Ñ‚Ð¾ Ð¿Ñ€ÐµÐºÑ€Ð°Ñ‰Ð°ÐµÐ¼ Ð¸ÑÐºÐ°Ñ‚ÑŒ Ð½Ð°Ñ‡Ð°Ð»Ð¾ ÑÐ»ÐµÐ´.Ð¾Ð±ÑŠÐµÐºÑ‚Ð°
                         }
-                        if (input == null) break; //åñëè êîíåö ôàéëà, ïðåêðàùàåì îáðàáîòêó ôàéëà
+                        if (input == null) break; //ÐµÑÐ»Ð¸ ÐºÐ¾Ð½ÐµÑ† Ñ„Ð°Ð¹Ð»Ð°, Ð¿Ñ€ÐµÐºÑ€Ð°Ñ‰Ð°ÐµÐ¼ Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÑƒ Ñ„Ð°Ð¹Ð»Ð°
 
                         Match m = tnum.Match(input);
                         if (m.Success)
                         {
                             room = new Room(Convert.ToInt32(m.Groups["Num"].ToString()));
-                            additionalInfo = "êîìíàòà [" + m.Groups["Num"] + "]";
+                            additionalInfo = "ÐºÐ¾Ð¼Ð½Ð°Ñ‚Ð° [" + m.Groups["Num"] + "]";
                         }
                         room.Name = ReadLine(sr).Replace("~", "");
                         additionalInfo += " " + room.Name;
 
                         string fullDesc = "";
                         input = ReadLine(sr);
-                        while (input != "~") //×èòàåì âñå îïèñàíèå çîíû äî çàâåðøàþùåé òèëüäû
+                        while (input != "~") //Ð§Ð¸Ñ‚Ð°ÐµÐ¼ Ð²ÑÐµ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ð·Ð¾Ð½Ñ‹ Ð´Ð¾ Ð·Ð°Ð²ÐµÑ€ÑˆÐ°ÑŽÑ‰ÐµÐ¹ Ñ‚Ð¸Ð»ÑŒÐ´Ñ‹
                         {
                             if (input.IndexOf("~", StringComparison.Ordinal) >= 0)
                             {
@@ -206,21 +206,21 @@ namespace DataUtils
                             room.Description.Main = fullDesc;
 
                         input = ReadLine(sr);
-                        string[] parts = input.Replace("  ", " ").Split(' '); //Replace ôèêñèò áàã ÎËÑ
-                        room.ZoneNum = Convert.ToInt32(parts[0]); //Íîìåð çîíû
+                        string[] parts = input.Replace("  ", " ").Split(' '); //Replace Ñ„Ð¸ÐºÑÐ¸Ñ‚ Ð±Ð°Ð³ ÐžÐ›Ð¡
+                        room.ZoneNum = Convert.ToInt32(parts[0]); //ÐÐ¾Ð¼ÐµÑ€ Ð·Ð¾Ð½Ñ‹
 
-                        room.Flags = parts[1] == "0" ? "" : parts[1]; //ôëàãè êîìíàòû
+                        room.Flags = parts[1] == "0" ? "" : parts[1]; //Ñ„Ð»Ð°Ð³Ð¸ ÐºÐ¾Ð¼Ð½Ð°Ñ‚Ñ‹
                         room.SectorType = -1;
-                        if (parts.Length == 3) //Åñëè ïàðàìåòðîâ 2 òî ôîðìàò ôàéëà ñòàðûé
-                            room.SectorType = parts[2].Length > 0 ? Convert.ToInt32(parts[2]) : -1; //òèï ñåêòîðà
+                        if (parts.Length == 3) //Ð•ÑÐ»Ð¸ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð¾Ð² 2 Ñ‚Ð¾ Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚ Ñ„Ð°Ð¹Ð»Ð° ÑÑ‚Ð°Ñ€Ñ‹Ð¹
+                            room.SectorType = parts[2].Length > 0 ? Convert.ToInt32(parts[2]) : -1; //Ñ‚Ð¸Ð¿ ÑÐµÐºÑ‚Ð¾Ñ€Ð°
 
                         input = ReadLine(sr);
-                        while (input[0].ToString() == "D") //×èòàåì âûõîäû
+                        while (input[0].ToString() == "D") //Ð§Ð¸Ñ‚Ð°ÐµÐ¼ Ð²Ñ‹Ñ…Ð¾Ð´Ñ‹
                         {
                             int exitIndex = Convert.ToInt32(input[1].ToString());
-                            //Ïîëîó÷àåì èíäåêñ íàïðàâëåíèÿ c 0 äî 5 (ñåâåð âîñòîê þã çàïàä ââåðõ âíèç)
+                            //ÐŸÐ¾Ð»Ð¾ÑƒÑ‡Ð°ÐµÐ¼ Ð¸Ð½Ð´ÐµÐºÑ Ð½Ð°Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ñ c 0 Ð´Ð¾ 5 (ÑÐµÐ²ÐµÑ€ Ð²Ð¾ÑÑ‚Ð¾Ðº ÑŽÐ³ Ð·Ð°Ð¿Ð°Ð´ Ð²Ð²ÐµÑ€Ñ… Ð²Ð½Ð¸Ð·)
                             input = ReadLine(sr);
-                            while (input != "~") //×èòàåì âñå îïèñàíèå äî çàâåðøàþùåé òèëüäû
+                            while (input != "~") //Ð§Ð¸Ñ‚Ð°ÐµÐ¼ Ð²ÑÐµ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ð´Ð¾ Ð·Ð°Ð²ÐµÑ€ÑˆÐ°ÑŽÑ‰ÐµÐ¹ Ñ‚Ð¸Ð»ÑŒÐ´Ñ‹
                             {
                                 if (input.IndexOf("~", StringComparison.Ordinal) >= 0)
                                 {
@@ -240,12 +240,12 @@ namespace DataUtils
                                 aliases[exitIndex] = exitnameparts[0];
                             if (exitnameparts.Length > 1)
                                 exitNamesVin[exitIndex] = exitnameparts[1];
-                            input = ReadLine(sr); //Ïîñëåäíÿÿ ñòðîêà îïèñàíèÿ âûõîäà
+                            input = ReadLine(sr); //ÐŸÐ¾ÑÐ»ÐµÐ´Ð½ÑÑ ÑÑ‚Ñ€Ð¾ÐºÐ° Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ñ Ð²Ñ‹Ñ…Ð¾Ð´Ð°
                             parts = input.Split(' ');
                             exitFlags[exitIndex] = parts[0];
                             keys[exitIndex] = parts[1];
                             exitRooms[exitIndex] = parts[2];
-                            if (parts.Length == 4) //Â ñòàðûõ çîíàõ íå áûëî ïàðàìåòðà "ñëîæíîñòü çàìêà"
+                            if (parts.Length == 4) //Ð’ ÑÑ‚Ð°Ñ€Ñ‹Ñ… Ð·Ð¾Ð½Ð°Ñ… Ð½Ðµ Ð±Ñ‹Ð»Ð¾ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð° "ÑÐ»Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ Ð·Ð°Ð¼ÐºÐ°"
                                 lockLevel[exitIndex] = parts[3];
                             input = ReadLine(sr);
                         }
@@ -302,11 +302,11 @@ namespace DataUtils
                         {
                             switch (input[0])
                             {
-                                case 'E': //×èòàåì äîïîëíåíèÿ (Extra)
+                                case 'E': //Ð§Ð¸Ñ‚Ð°ÐµÐ¼ Ð´Ð¾Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ (Extra)
                                     string aliasesTmp = ReadLine(sr).Replace("~", "");
                                     string extraDesc = "";
                                     input = ReadLine(sr);
-                                    while (input != "~") //×èòàåì âñå äî çàâåðøàþùåé òèëüäû
+                                    while (input != "~") //Ð§Ð¸Ñ‚Ð°ÐµÐ¼ Ð²ÑÐµ Ð´Ð¾ Ð·Ð°Ð²ÐµÑ€ÑˆÐ°ÑŽÑ‰ÐµÐ¹ Ñ‚Ð¸Ð»ÑŒÐ´Ñ‹
                                     {
                                         if (input.IndexOf("~", StringComparison.Ordinal) >= 0)
                                         {
@@ -322,13 +322,13 @@ namespace DataUtils
                                     }
                                     room.AddExtraDescription(aliasesTmp, extraDesc);
                                     break;
-                                case 'S': //Ñìåùàåìñÿ
+                                case 'S': //Ð¡Ð¼ÐµÑ‰Ð°ÐµÐ¼ÑÑ
                                     break;
-                                case 'T': //×èòàåì òðèããåðû êîìíàòû
+                                case 'T': //Ð§Ð¸Ñ‚Ð°ÐµÐ¼ Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ñ‹ ÐºÐ¾Ð¼Ð½Ð°Ñ‚Ñ‹
                                     var triggerVNum = input.Split(' ')[1];
                                     room.TriggersList.Add(StringUtils.ToIntFast(triggerVNum));
                                     break;
-                                case 'I': //×èòàåì òðèããåðû êîìíàòû
+                                case 'I': //Ð§Ð¸Ñ‚Ð°ÐµÐ¼ Ñ‚Ñ€Ð¸Ð³Ð³ÐµÑ€Ñ‹ ÐºÐ¾Ð¼Ð½Ð°Ñ‚Ñ‹
                                     parts = input.Split(' ');
                                     parts = parts[1].Split(':');
                                     var prob = StringUtils.ToIntFast(parts[1]);
@@ -349,13 +349,13 @@ namespace DataUtils
                 catch (Exception ex)
                 {
                     sr.Close();
-                    FireExceptionEvent("Îøèáêà ïðè çàãðóçêå êîìíàò:\nÔàéë: \"" + filePath + "\"\nÑòðîêà #" + filePos + ": " +
-                            lastString + "\nÄîïîëíèòåëüíàÿ èíôîðìàöèÿ: " + additionalInfo, ex, EventLogEntryType.Warning);
+                    FireExceptionEvent("ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐµ ÐºÐ¾Ð¼Ð½Ð°Ñ‚:\nÐ¤Ð°Ð¹Ð»: \"" + filePath + "\"\nÐ¡Ñ‚Ñ€Ð¾ÐºÐ° #" + filePos + ": " +
+                            lastString + "\nÐ”Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð°Ñ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ: " + additionalInfo, ex, EventLogEntryType.Warning);
                     return false;
                 }
                 sr.Close();
             }
-            //Çàãðóçêà map-ôàéëà
+            //Ð—Ð°Ð³Ñ€ÑƒÐ·ÐºÐ° map-Ñ„Ð°Ð¹Ð»Ð°
             filePos = 0;
             filePath = StaticData.WorldFolderPath + @"\WLD\" + zoneNumber + ".map";
             if (!File.Exists(filePath))
@@ -367,7 +367,7 @@ namespace DataUtils
                     string input;
                     while ((input = ReadLine(sr)) != null)
                     {
-                        additionalInfo = "îòñóòñòâóåò...";
+                        additionalInfo = "Ð¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ð²ÑƒÐµÑ‚...";
                         if (input[0] == '*') continue;
                         //Match mval = t.Match(input);
                         string[] parts = input.Split(' ');
@@ -375,7 +375,7 @@ namespace DataUtils
                         {
                             int vnum = Convert.ToInt32(parts[0].Trim());
                             Room room = roomsCollection[vnum, 0];
-                            additionalInfo = "êîìíàòà íîìåð [" + vnum + "]";
+                            additionalInfo = "ÐºÐ¾Ð¼Ð½Ð°Ñ‚Ð° Ð½Ð¾Ð¼ÐµÑ€ [" + vnum + "]";
                             if (room != null)
                             {
                                 room.X = Convert.ToInt32(parts[1].Trim());
@@ -389,8 +389,8 @@ namespace DataUtils
                 catch (Exception ex)
                 {
                     sr.Close();
-                    FireExceptionEvent("Îøèáêà ïðè çàãðóçêå êàðòû:\nÔàéë: \"" + filePath + "\"\nÑòðîêà #" + filePos + ": " +
-                            lastString + "\nÄîïîëíèòåëüíàÿ èíôîðìàöèÿ: " + additionalInfo, ex, EventLogEntryType.Warning);
+                    FireExceptionEvent("ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐµ ÐºÐ°Ñ€Ñ‚Ñ‹:\nÐ¤Ð°Ð¹Ð»: \"" + filePath + "\"\nÐ¡Ñ‚Ñ€Ð¾ÐºÐ° #" + filePos + ": " +
+                            lastString + "\nÐ”Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð°Ñ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ: " + additionalInfo, ex, EventLogEntryType.Warning);
                 }
                 sr.Close();
                 return true;
@@ -407,9 +407,9 @@ namespace DataUtils
                 new FileStream(StaticData.WorldFolderPath + @"\WLD\" + zoneNumber + ".map", FileMode.Create,
                                FileAccess.Write);
             var swmap = new StreamWriter(fsmap, StaticData.CurrentEncoding);
-            //swwld.WriteLine("* Ñãåíåðèðîâàíî BZEditor");
-            //swwld.WriteLine("* Êîëè÷åñòâî êîìíàò : " + roomsCollection.Count);
-            //swwld.WriteLine("* Ñîõðàíåíî " + DateTime.Now);
+            //swwld.WriteLine("* Ð¡Ð³ÐµÐ½ÐµÑ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¾ BZEditor");
+            //swwld.WriteLine("* ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÐ¾Ð¼Ð½Ð°Ñ‚ : " + roomsCollection.Count);
+            //swwld.WriteLine("* Ð¡Ð¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¾ " + DateTime.Now);
 
             /*if (roomsCollection.Count > 0)
             {
@@ -433,7 +433,7 @@ namespace DataUtils
                 swwld.WriteLine("#" + room.VNum);
                 swwld.WriteLine(room.Name + "~");
 
-                #region Ñîõðàíåíèå îïècàíèé êîìíàòû
+                #region Ð¡Ð¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ðµ Ð¾Ð¿Ð¸cÐ°Ð½Ð¸Ð¹ ÐºÐ¾Ð¼Ð½Ð°Ñ‚Ñ‹
 
                 /*string[] parts1 = room.Description.Main.Replace("\r", "").TrimEnd('\n').Split('\n');
                 for (int i = parts1.Length - 1; i > 0; i--)

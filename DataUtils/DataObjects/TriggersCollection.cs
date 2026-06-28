@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class TriggersCollection : BaseDataArrayList
     {
@@ -17,7 +17,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Возвращает ссылку
+        /// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСЃС‹Р»РєСѓ
         /// </summary>
         public Trigger this[int vNum, int tmp] => GetTrigger(vNum);
 
@@ -36,7 +36,7 @@ namespace DataUtils
             int vnum = GetFirstFreeVNum(zoneNum);
             if (vnum < 0) return 0;
 
-            Trigger trigger = new Trigger(vnum) { Name = ("Новый триггер " + vnum) };
+            Trigger trigger = new Trigger(vnum) { Name = ("РќРѕРІС‹Р№ С‚СЂРёРіРіРµСЂ " + vnum) };
             trigger.Changed += FireChangeEvent;
             Add(trigger);
             Sort(new BaseDataObjectComparer());

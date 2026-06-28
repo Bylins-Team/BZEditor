@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -840,7 +840,7 @@ namespace ExtControls
     }
 
     /// <summary>
-    /// Тип выполняемого действия
+    /// РўРёРї РІС‹РїРѕР»РЅСЏРµРјРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
     /// </summary>
     public enum ActionType
     {

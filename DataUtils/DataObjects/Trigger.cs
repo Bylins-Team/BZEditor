@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class Trigger : BaseDataObject
     {
@@ -15,7 +15,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Текст триггера
+        /// РўРµРєСЃС‚ С‚СЂРёРіРіРµСЂР°
         /// </summary>
         public string Body
         {
@@ -29,7 +29,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Наименование триггера
+        /// РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚СЂРёРіРіРµСЂР°
         /// </summary>
         public string Name
         {
@@ -43,7 +43,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Класс триггера
+        /// РљР»Р°СЃСЃ С‚СЂРёРіРіРµСЂР°
         /// </summary>
         public int Class
         {
@@ -57,7 +57,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тип
+        /// РўРёРї
         /// </summary>
         public string Type
         {
@@ -71,7 +71,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Числовой аргумент
+        /// Р§РёСЃР»РѕРІРѕР№ Р°СЂРіСѓРјРµРЅС‚
         /// </summary>
         public int NumArg
         {
@@ -85,7 +85,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Строковый аргумент
+        /// РЎС‚СЂРѕРєРѕРІС‹Р№ Р°СЂРіСѓРјРµРЅС‚
         /// </summary>
         public string Arg
         {

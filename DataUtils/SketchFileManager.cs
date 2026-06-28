@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -21,8 +21,8 @@ namespace DataUtils
         public bool Load(SketchRoomsCollection sketchRoomsCollection, string zoneNumber, Encoding encoding)
         {
             filePos = 0;
-            const string additionalInfo = "отсутствует...";
-            //Загрузка скетч-файла
+            const string additionalInfo = "РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚...";
+            //Р—Р°РіСЂСѓР·РєР° СЃРєРµС‚С‡-С„Р°Р№Р»Р°
             string filePath = StaticData.WorldFolderPath + @"\WLD\" + zoneNumber + ".skt";
             if (!File.Exists(filePath))
                 return true;
@@ -50,8 +50,8 @@ namespace DataUtils
                 }
                 catch (Exception ex)
                 {
-                    FireExceptionEvent("Ошибка при загрузке эскиза:\nФайл: \"" + filePath + "\"\nСтрока #" + filePos + ": " +
-                            lastString + "\nДополнительная информация: " + additionalInfo, ex, EventLogEntryType.Warning);
+                    FireExceptionEvent("РћС€РёР±РєР° РїСЂРё Р·Р°РіСЂСѓР·РєРµ СЌСЃРєРёР·Р°:\nР¤Р°Р№Р»: \"" + filePath + "\"\nРЎС‚СЂРѕРєР° #" + filePos + ": " +
+                            lastString + "\nР”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ: " + additionalInfo, ex, EventLogEntryType.Warning);
                     sr.Close();
                     return false;
                 }
@@ -68,8 +68,8 @@ namespace DataUtils
                                    FileAccess.Write))
             using (var swskt = new StreamWriter(fsskt, StaticData.CurrentEncoding))
             {
-                swskt.WriteLine("* Сгенерировано BZEditor");
-                swskt.WriteLine("* Количество комнат на эскизе: " + sketchRoomsCollection.Count);
+                swskt.WriteLine("* РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРѕ BZEditor");
+                swskt.WriteLine("* РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ РЅР° СЌСЃРєРёР·Рµ: " + sketchRoomsCollection.Count);
                 swskt.WriteLine("LastSketchColor " + sketchRoomsCollection.LastSketchColor.ToArgb());
                 foreach (SketchRoom room in sketchRoomsCollection)
                 {

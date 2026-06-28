@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -115,7 +115,7 @@ namespace ExtControls
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         [RefreshProperties(RefreshProperties.Repaint)]
-        [Description("Set to TRUE to reset all colors like the Windows XP Progress Bar �")]
+        [Description("Set to TRUE to reset all colors like the Windows XP Progress Bar ®")]
         [Category(CategoryName)]
         [DefaultValue(false)]
         public bool ColorsXP

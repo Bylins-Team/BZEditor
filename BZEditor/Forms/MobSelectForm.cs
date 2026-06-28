@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Windows.Forms;
 using DataUtils;
 
@@ -73,7 +73,7 @@ namespace BZEditor
             else
             {
                 Mob mob = new Mob(Convert.ToInt32(nudMobVnum.Value));
-                mob.Cases.Imen = "Отсутствует в имеющихся зонах.";
+                mob.Cases.Imen = "РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РІ РёРјРµСЋС‰РёС…СЃСЏ Р·РѕРЅР°С….";
                 SelectedMobs.Add(mob);
             }
             DialogResult = DialogResult.OK;

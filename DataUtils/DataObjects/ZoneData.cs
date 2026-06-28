@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 
 namespace DataUtils
 {
     /// <summary>
-    /// Состояния зоны
+    /// РЎРѕСЃС‚РѕСЏРЅРёСЏ Р·РѕРЅС‹
     /// </summary>
     public enum ZoneState
     {
@@ -48,7 +48,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Имя файла
+        /// РРјСЏ С„Р°Р№Р»Р°
         /// </summary>
         public string FileName
         {
@@ -62,7 +62,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Название зоны
+        /// РќР°Р·РІР°РЅРёРµ Р·РѕРЅС‹
         /// </summary>
         public string Name
         {
@@ -76,7 +76,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Состояние зоны
+        /// РЎРѕСЃС‚РѕСЏРЅРёРµ Р·РѕРЅС‹
         /// </summary>
         public ZoneState State
         {

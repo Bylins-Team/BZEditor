@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class SelectBackDirectionForm
     {
@@ -49,7 +49,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(187, 23);
             this.btnCancel.TabIndex = 0;
-            this.btnCancel.Text = "Отмена";
+            this.btnCancel.Text = "РћС‚РјРµРЅР°";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -60,7 +60,7 @@ namespace BZEditor
             this.cbFreeExitsOnly.Name = "cbFreeExitsOnly";
             this.cbFreeExitsOnly.Size = new System.Drawing.Size(190, 17);
             this.cbFreeExitsOnly.TabIndex = 4;
-            this.cbFreeExitsOnly.Text = "Только незянятые направления";
+            this.cbFreeExitsOnly.Text = "РўРѕР»СЊРєРѕ РЅРµР·СЏРЅСЏС‚С‹Рµ РЅР°РїСЂР°РІР»РµРЅРёСЏ";
             this.cbFreeExitsOnly.UseVisualStyleBackColor = true;
             this.cbFreeExitsOnly.CheckedChanged += new System.EventHandler(this.cbFreeExitsOnly_CheckedChanged);
             // 
@@ -71,7 +71,7 @@ namespace BZEditor
             this.btnConfigExitDown.Size = new System.Drawing.Size(60, 20);
             this.btnConfigExitDown.TabIndex = 115;
             this.btnConfigExitDown.Tag = "Down";
-            this.btnConfigExitDown.Text = "Низ";
+            this.btnConfigExitDown.Text = "РќРёР·";
             this.btnConfigExitDown.UseVisualStyleBackColor = true;
             this.btnConfigExitDown.Click += new System.EventHandler(this.btnDir_Click);
             // 
@@ -82,7 +82,7 @@ namespace BZEditor
             this.btnConfigExitSouth.Size = new System.Drawing.Size(60, 20);
             this.btnConfigExitSouth.TabIndex = 116;
             this.btnConfigExitSouth.Tag = "South";
-            this.btnConfigExitSouth.Text = "Юг";
+            this.btnConfigExitSouth.Text = "Р®Рі";
             this.btnConfigExitSouth.UseVisualStyleBackColor = true;
             this.btnConfigExitSouth.Click += new System.EventHandler(this.btnDir_Click);
             // 
@@ -93,7 +93,7 @@ namespace BZEditor
             this.btnConfigExitEast.Size = new System.Drawing.Size(60, 20);
             this.btnConfigExitEast.TabIndex = 117;
             this.btnConfigExitEast.Tag = "East";
-            this.btnConfigExitEast.Text = "Восток";
+            this.btnConfigExitEast.Text = "Р’РѕСЃС‚РѕРє";
             this.btnConfigExitEast.UseVisualStyleBackColor = true;
             this.btnConfigExitEast.Click += new System.EventHandler(this.btnDir_Click);
             // 
@@ -104,7 +104,7 @@ namespace BZEditor
             this.btnConfigExitWest.Size = new System.Drawing.Size(60, 20);
             this.btnConfigExitWest.TabIndex = 112;
             this.btnConfigExitWest.Tag = "West";
-            this.btnConfigExitWest.Text = "Запад";
+            this.btnConfigExitWest.Text = "Р—Р°РїР°Рґ";
             this.btnConfigExitWest.UseVisualStyleBackColor = true;
             this.btnConfigExitWest.Click += new System.EventHandler(this.btnDir_Click);
             // 
@@ -115,7 +115,7 @@ namespace BZEditor
             this.btnConfigExitUp.Size = new System.Drawing.Size(60, 20);
             this.btnConfigExitUp.TabIndex = 113;
             this.btnConfigExitUp.Tag = "Up";
-            this.btnConfigExitUp.Text = "Верх";
+            this.btnConfigExitUp.Text = "Р’РµСЂС…";
             this.btnConfigExitUp.UseVisualStyleBackColor = true;
             this.btnConfigExitUp.Click += new System.EventHandler(this.btnDir_Click);
             // 
@@ -126,7 +126,7 @@ namespace BZEditor
             this.btnConfigExitNorth.Size = new System.Drawing.Size(60, 20);
             this.btnConfigExitNorth.TabIndex = 114;
             this.btnConfigExitNorth.Tag = "North";
-            this.btnConfigExitNorth.Text = "Север";
+            this.btnConfigExitNorth.Text = "РЎРµРІРµСЂ";
             this.btnConfigExitNorth.UseVisualStyleBackColor = true;
             this.btnConfigExitNorth.Click += new System.EventHandler(this.btnDir_Click);
             // 
@@ -159,7 +159,7 @@ namespace BZEditor
             this.Name = "SelectBackDirectionForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Установка втречного выхода";
+            this.Text = "РЈСЃС‚Р°РЅРѕРІРєР° РІС‚СЂРµС‡РЅРѕРіРѕ РІС‹С…РѕРґР°";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

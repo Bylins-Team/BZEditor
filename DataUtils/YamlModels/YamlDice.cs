@@ -1,4 +1,4 @@
-namespace DataUtils.YamlModels
+﻿namespace DataUtils.YamlModels
 {
     /// <summary>
     /// YAML model for dice notation (e.g., hp, damage, gold)

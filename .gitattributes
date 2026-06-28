@@ -1,2 +1,7 @@
+# Source files are UTF-8 (with BOM for .cs/.txt); the charset is enforced for
+# editors via .editorconfig and for the compiler via Directory.Build.props
+# (CodePage 65001). GitHub then renders the Russian text correctly. Line endings
+# are left as-is here to keep encoding and EOL changes from being entangled.
+
 # Bundled world/base data: preserve bytes exactly (no EOL conversion).
 redist/** -text

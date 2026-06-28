@@ -1,4 +1,4 @@
-using ExtControls;
+п»їusing ExtControls;
 using DataUtils;
 using System.Windows.Forms;
 namespace BZEditor
@@ -1210,7 +1210,7 @@ namespace BZEditor
             label152.Name = "label152";
             label152.Size = new System.Drawing.Size(63, 20);
             label152.TabIndex = 0;
-            label152.Text = "Уровень";
+            label152.Text = "РЈСЂРѕРІРµРЅСЊ";
             label152.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label172
@@ -1219,7 +1219,7 @@ namespace BZEditor
             label172.Name = "label172";
             label172.Size = new System.Drawing.Size(103, 17);
             label172.TabIndex = 125;
-            label172.Text = "Сложность замка";
+            label172.Text = "РЎР»РѕР¶РЅРѕСЃС‚СЊ Р·Р°РјРєР°";
             label172.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label87
@@ -1228,7 +1228,7 @@ namespace BZEditor
             label87.Name = "label87";
             label87.Size = new System.Drawing.Size(71, 16);
             label87.TabIndex = 90;
-            label87.Text = "Описание";
+            label87.Text = "РћРїРёСЃР°РЅРёРµ";
             label87.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label88
@@ -1237,7 +1237,7 @@ namespace BZEditor
             label88.Name = "label88";
             label88.Size = new System.Drawing.Size(95, 16);
             label88.TabIndex = 89;
-            label88.Text = "Список альясов";
+            label88.Text = "РЎРїРёСЃРѕРє Р°Р»СЊСЏСЃРѕРІ";
             label88.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label45
@@ -1246,7 +1246,7 @@ namespace BZEditor
             label45.Name = "label45";
             label45.Size = new System.Drawing.Size(59, 16);
             label45.TabIndex = 64;
-            label45.Text = "Род";
+            label45.Text = "Р РѕРґ";
             label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label42
@@ -1255,7 +1255,7 @@ namespace BZEditor
             label42.Name = "label42";
             label42.Size = new System.Drawing.Size(49, 16);
             label42.TabIndex = 84;
-            label42.Text = "Твор.";
+            label42.Text = "РўРІРѕСЂ.";
             label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label41
@@ -1264,7 +1264,7 @@ namespace BZEditor
             label41.Name = "label41";
             label41.Size = new System.Drawing.Size(49, 16);
             label41.TabIndex = 89;
-            label41.Text = "Пред.";
+            label41.Text = "РџСЂРµРґ.";
             label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label33
@@ -1273,7 +1273,7 @@ namespace BZEditor
             label33.Name = "label33";
             label33.Size = new System.Drawing.Size(261, 16);
             label33.TabIndex = 81;
-            label33.Text = "Описание предмета, если он лежит в комнате";
+            label33.Text = "РћРїРёСЃР°РЅРёРµ РїСЂРµРґРјРµС‚Р°, РµСЃР»Рё РѕРЅ Р»РµР¶РёС‚ РІ РєРѕРјРЅР°С‚Рµ";
             label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label39
@@ -1282,7 +1282,7 @@ namespace BZEditor
             label39.Name = "label39";
             label39.Size = new System.Drawing.Size(49, 16);
             label39.TabIndex = 87;
-            label39.Text = "Имен.";
+            label39.Text = "РРјРµРЅ.";
             label39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label38
@@ -1291,7 +1291,7 @@ namespace BZEditor
             label38.Name = "label38";
             label38.Size = new System.Drawing.Size(49, 16);
             label38.TabIndex = 86;
-            label38.Text = "Род.";
+            label38.Text = "Р РѕРґ.";
             label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label28
@@ -1300,7 +1300,7 @@ namespace BZEditor
             label28.Name = "label28";
             label28.Size = new System.Drawing.Size(58, 16);
             label28.TabIndex = 78;
-            label28.Text = "Алиасы";
+            label28.Text = "РђР»РёР°СЃС‹";
             label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label37
@@ -1309,7 +1309,7 @@ namespace BZEditor
             label37.Name = "label37";
             label37.Size = new System.Drawing.Size(49, 16);
             label37.TabIndex = 85;
-            label37.Text = "Дат.";
+            label37.Text = "Р”Р°С‚.";
             label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label36
@@ -1318,7 +1318,7 @@ namespace BZEditor
             label36.Name = "label36";
             label36.Size = new System.Drawing.Size(49, 16);
             label36.TabIndex = 88;
-            label36.Text = "Вин.";
+            label36.Text = "Р’РёРЅ.";
             label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label49
@@ -1327,7 +1327,7 @@ namespace BZEditor
             label49.Name = "label49";
             label49.Size = new System.Drawing.Size(83, 18);
             label49.TabIndex = 68;
-            label49.Text = "Рента (в инв.)";
+            label49.Text = "Р РµРЅС‚Р° (РІ РёРЅРІ.)";
             label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label46
@@ -1336,7 +1336,7 @@ namespace BZEditor
             label46.Name = "label46";
             label46.Size = new System.Drawing.Size(52, 16);
             label46.TabIndex = 65;
-            label46.Text = "Таймер";
+            label46.Text = "РўР°Р№РјРµСЂ";
             label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label47
@@ -1345,7 +1345,7 @@ namespace BZEditor
             label47.Name = "label47";
             label47.Size = new System.Drawing.Size(28, 16);
             label47.TabIndex = 66;
-            label47.Text = "Вес";
+            label47.Text = "Р’РµСЃ";
             label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label48
@@ -1354,7 +1354,7 @@ namespace BZEditor
             label48.Name = "label48";
             label48.Size = new System.Drawing.Size(52, 16);
             label48.TabIndex = 67;
-            label48.Text = "Цена";
+            label48.Text = "Р¦РµРЅР°";
             label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label50
@@ -1363,7 +1363,7 @@ namespace BZEditor
             label50.Name = "label50";
             label50.Size = new System.Drawing.Size(79, 17);
             label50.TabIndex = 73;
-            label50.Text = "Рента (экип.)";
+            label50.Text = "Р РµРЅС‚Р° (СЌРєРёРї.)";
             label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label52
@@ -1372,7 +1372,7 @@ namespace BZEditor
             label52.Name = "label52";
             label52.Size = new System.Drawing.Size(75, 16);
             label52.TabIndex = 74;
-            label52.Text = "Материал";
+            label52.Text = "РњР°С‚РµСЂРёР°Р»";
             label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label53
@@ -1381,7 +1381,7 @@ namespace BZEditor
             label53.Name = "label53";
             label53.Size = new System.Drawing.Size(123, 14);
             label53.TabIndex = 75;
-            label53.Text = "Тренируемый скилл";
+            label53.Text = "РўСЂРµРЅРёСЂСѓРµРјС‹Р№ СЃРєРёР»Р»";
             label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label55
@@ -1390,7 +1390,7 @@ namespace BZEditor
             label55.Name = "label55";
             label55.Size = new System.Drawing.Size(83, 16);
             label55.TabIndex = 69;
-            label55.Text = "Текущ. знач.";
+            label55.Text = "РўРµРєСѓС‰. Р·РЅР°С‡.";
             label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label56
@@ -1399,7 +1399,7 @@ namespace BZEditor
             label56.Name = "label56";
             label56.Size = new System.Drawing.Size(76, 16);
             label56.TabIndex = 70;
-            label56.Text = "Макс. в мире";
+            label56.Text = "РњР°РєСЃ. РІ РјРёСЂРµ";
             label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label54
@@ -1408,7 +1408,7 @@ namespace BZEditor
             label54.Name = "label54";
             label54.Size = new System.Drawing.Size(169, 15);
             label54.TabIndex = 72;
-            label54.Text = "Максимум структурных хитов";
+            label54.Text = "РњР°РєСЃРёРјСѓРј СЃС‚СЂСѓРєС‚СѓСЂРЅС‹С… С…РёС‚РѕРІ";
             label54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label171
@@ -1417,7 +1417,7 @@ namespace BZEditor
             label171.Name = "label171";
             label171.Size = new System.Drawing.Size(103, 17);
             label171.TabIndex = 69;
-            label171.Text = "Сложность замка";
+            label171.Text = "РЎР»РѕР¶РЅРѕСЃС‚СЊ Р·Р°РјРєР°";
             label171.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label139
@@ -1426,7 +1426,7 @@ namespace BZEditor
             label139.Name = "label139";
             label139.Size = new System.Drawing.Size(74, 16);
             label139.TabIndex = 67;
-            label139.Text = "Ключ";
+            label139.Text = "РљР»СЋС‡";
             label139.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label140
@@ -1435,7 +1435,7 @@ namespace BZEditor
             label140.Name = "label140";
             label140.Size = new System.Drawing.Size(78, 17);
             label140.TabIndex = 67;
-            label140.Text = "Вместимость";
+            label140.Text = "Р’РјРµСЃС‚РёРјРѕСЃС‚СЊ";
             label140.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label150
@@ -1444,7 +1444,7 @@ namespace BZEditor
             label150.Name = "label150";
             label150.Size = new System.Drawing.Size(123, 21);
             label150.TabIndex = 67;
-            label150.Text = "Уровень заклинания";
+            label150.Text = "РЈСЂРѕРІРµРЅСЊ Р·Р°РєР»РёРЅР°РЅРёСЏ";
             label150.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label142
@@ -1453,7 +1453,7 @@ namespace BZEditor
             label142.Name = "label142";
             label142.Size = new System.Drawing.Size(48, 20);
             label142.TabIndex = 67;
-            label142.Text = "Броня";
+            label142.Text = "Р‘СЂРѕРЅСЏ";
             label142.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label147
@@ -1480,7 +1480,7 @@ namespace BZEditor
             label145.Name = "label145";
             label145.Size = new System.Drawing.Size(84, 20);
             label145.TabIndex = 67;
-            label145.Text = "Повреждения";
+            label145.Text = "РџРѕРІСЂРµР¶РґРµРЅРёСЏ";
             label145.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label157
@@ -1489,7 +1489,7 @@ namespace BZEditor
             label157.Name = "label157";
             label157.Size = new System.Drawing.Size(210, 20);
             label157.TabIndex = 67;
-            label157.Text = "Текущее количество зарядов";
+            label157.Text = "РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ";
             label157.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label158
@@ -1498,7 +1498,7 @@ namespace BZEditor
             label158.Name = "label158";
             label158.Size = new System.Drawing.Size(210, 20);
             label158.TabIndex = 67;
-            label158.Text = "Количество зарядов посоха";
+            label158.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ РїРѕСЃРѕС…Р°";
             label158.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label160
@@ -1507,7 +1507,7 @@ namespace BZEditor
             label160.Name = "label160";
             label160.Size = new System.Drawing.Size(210, 20);
             label160.TabIndex = 67;
-            label160.Text = "Необходимый минимальный уровень";
+            label160.Text = "РќРµРѕР±С…РѕРґРёРјС‹Р№ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ";
             label160.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label166
@@ -1516,7 +1516,7 @@ namespace BZEditor
             label166.Name = "label166";
             label166.Size = new System.Drawing.Size(210, 20);
             label166.TabIndex = 67;
-            label166.Text = "Текущее количество зарядов";
+            label166.Text = "РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ";
             label166.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label167
@@ -1525,7 +1525,7 @@ namespace BZEditor
             label167.Name = "label167";
             label167.Size = new System.Drawing.Size(210, 20);
             label167.TabIndex = 67;
-            label167.Text = "Количество зарядов палочки";
+            label167.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ РїР°Р»РѕС‡РєРё";
             label167.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label169
@@ -1534,7 +1534,7 @@ namespace BZEditor
             label169.Name = "label169";
             label169.Size = new System.Drawing.Size(210, 20);
             label169.TabIndex = 67;
-            label169.Text = "Необходимый минимальный уровень";
+            label169.Text = "РќРµРѕР±С…РѕРґРёРјС‹Р№ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ";
             label169.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label154
@@ -1543,7 +1543,7 @@ namespace BZEditor
             label154.Name = "label154";
             label154.Size = new System.Drawing.Size(204, 23);
             label154.TabIndex = 67;
-            label154.Text = "Необходимый минимальный уровень";
+            label154.Text = "РќРµРѕР±С…РѕРґРёРјС‹Р№ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ";
             label154.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label161
@@ -1552,7 +1552,7 @@ namespace BZEditor
             label161.Name = "label161";
             label161.Size = new System.Drawing.Size(152, 33);
             label161.TabIndex = 67;
-            label161.Text = "-1 - вечный источник света\r\n0  - выжженый источник";
+            label161.Text = "-1 - РІРµС‡РЅС‹Р№ РёСЃС‚РѕС‡РЅРёРє СЃРІРµС‚Р°\r\n0  - РІС‹Р¶Р¶РµРЅС‹Р№ РёСЃС‚РѕС‡РЅРёРє";
             label161.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label162
@@ -1561,7 +1561,7 @@ namespace BZEditor
             label162.Name = "label162";
             label162.Size = new System.Drawing.Size(152, 33);
             label162.TabIndex = 67;
-            label162.Text = "Запас свечения по времени (в игровых часах)";
+            label162.Text = "Р—Р°РїР°СЃ СЃРІРµС‡РµРЅРёСЏ РїРѕ РІСЂРµРјРµРЅРё (РІ РёРіСЂРѕРІС‹С… С‡Р°СЃР°С…)";
             label162.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label128
@@ -1570,7 +1570,7 @@ namespace BZEditor
             label128.Name = "label128";
             label128.Size = new System.Drawing.Size(132, 24);
             label128.TabIndex = 67;
-            label128.Text = "Осталось применений";
+            label128.Text = "РћСЃС‚Р°Р»РѕСЃСЊ РїСЂРёРјРµРЅРµРЅРёР№";
             label128.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label129
@@ -1579,7 +1579,7 @@ namespace BZEditor
             label129.Name = "label129";
             label129.Size = new System.Drawing.Size(74, 19);
             label129.TabIndex = 67;
-            label129.Text = "Прототип";
+            label129.Text = "РџСЂРѕС‚РѕС‚РёРї";
             label129.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label130
@@ -1588,7 +1588,7 @@ namespace BZEditor
             label130.Name = "label130";
             label130.Size = new System.Drawing.Size(74, 20);
             label130.TabIndex = 67;
-            label130.Text = "Мин.уровень";
+            label130.Text = "РњРёРЅ.СѓСЂРѕРІРµРЅСЊ";
             label130.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label131
@@ -1597,7 +1597,7 @@ namespace BZEditor
             label131.Name = "label131";
             label131.Size = new System.Drawing.Size(74, 20);
             label131.TabIndex = 67;
-            label131.Text = "Лаг(сек.)";
+            label131.Text = "Р›Р°Рі(СЃРµРє.)";
             label131.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label132
@@ -1606,7 +1606,7 @@ namespace BZEditor
             label132.Name = "label132";
             label132.Size = new System.Drawing.Size(210, 20);
             label132.TabIndex = 67;
-            label132.Text = "Текущее количество жидкости";
+            label132.Text = "РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р¶РёРґРєРѕСЃС‚Рё";
             label132.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label133
@@ -1615,7 +1615,7 @@ namespace BZEditor
             label133.Name = "label133";
             label133.Size = new System.Drawing.Size(210, 20);
             label133.TabIndex = 67;
-            label133.Text = "Максимальный объем жидкости";
+            label133.Text = "РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РѕР±СЉРµРј Р¶РёРґРєРѕСЃС‚Рё";
             label133.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label134
@@ -1624,7 +1624,7 @@ namespace BZEditor
             label134.Name = "label134";
             label134.Size = new System.Drawing.Size(120, 14);
             label134.TabIndex = 75;
-            label134.Text = "Тип жидкости";
+            label134.Text = "РўРёРї Р¶РёРґРєРѕСЃС‚Рё";
             label134.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label135
@@ -1633,7 +1633,7 @@ namespace BZEditor
             label135.Name = "label135";
             label135.Size = new System.Drawing.Size(210, 20);
             label135.TabIndex = 67;
-            label135.Text = "Уровень яда (0 если не отравлено)";
+            label135.Text = "РЈСЂРѕРІРµРЅСЊ СЏРґР° (0 РµСЃР»Рё РЅРµ РѕС‚СЂР°РІР»РµРЅРѕ)";
             label135.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label136
@@ -1642,7 +1642,7 @@ namespace BZEditor
             label136.Name = "label136";
             label136.Size = new System.Drawing.Size(104, 16);
             label136.TabIndex = 67;
-            label136.Text = "Количество";
+            label136.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ";
             label136.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label137
@@ -1651,8 +1651,8 @@ namespace BZEditor
             label137.Name = "label137";
             label137.Size = new System.Drawing.Size(304, 33);
             label137.TabIndex = 67;
-            label137.Text = "Уровень яда (0 - не отравлено, 1 - отравлено, >1 - таймер через сколько протухнет" +
-    " в минутах)";
+            label137.Text = "РЈСЂРѕРІРµРЅСЊ СЏРґР° (0 - РЅРµ РѕС‚СЂР°РІР»РµРЅРѕ, 1 - РѕС‚СЂР°РІР»РµРЅРѕ, >1 - С‚Р°Р№РјРµСЂ С‡РµСЂРµР· СЃРєРѕР»СЊРєРѕ РїСЂРѕС‚СѓС…РЅРµС‚" +
+    " РІ РјРёРЅСѓС‚Р°С…)";
             label137.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label138
@@ -1661,7 +1661,7 @@ namespace BZEditor
             label138.Name = "label138";
             label138.Size = new System.Drawing.Size(225, 20);
             label138.TabIndex = 67;
-            label138.Text = "Количесво удовлетвояемых часов голода";
+            label138.Text = "РљРѕР»РёС‡РµСЃРІРѕ СѓРґРѕРІР»РµС‚РІРѕСЏРµРјС‹С… С‡Р°СЃРѕРІ РіРѕР»РѕРґР°";
             label138.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1111
@@ -1670,7 +1670,7 @@ namespace BZEditor
             label1111.Name = "label1111";
             label1111.Size = new System.Drawing.Size(210, 20);
             label1111.TabIndex = 67;
-            label1111.Text = "Текущее количество жидкости";
+            label1111.Text = "РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р¶РёРґРєРѕСЃС‚Рё";
             label1111.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label163
@@ -1679,7 +1679,7 @@ namespace BZEditor
             label163.Name = "label163";
             label163.Size = new System.Drawing.Size(210, 20);
             label163.TabIndex = 67;
-            label163.Text = "Максимальный объем жидкости";
+            label163.Text = "РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РѕР±СЉРµРј Р¶РёРґРєРѕСЃС‚Рё";
             label163.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label164
@@ -1688,7 +1688,7 @@ namespace BZEditor
             label164.Name = "label164";
             label164.Size = new System.Drawing.Size(120, 14);
             label164.TabIndex = 75;
-            label164.Text = "Тип жидкости";
+            label164.Text = "РўРёРї Р¶РёРґРєРѕСЃС‚Рё";
             label164.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label165
@@ -1697,7 +1697,7 @@ namespace BZEditor
             label165.Name = "label165";
             label165.Size = new System.Drawing.Size(210, 20);
             label165.TabIndex = 67;
-            label165.Text = "Уровень яда (0 если не отравлено)";
+            label165.Text = "РЈСЂРѕРІРµРЅСЊ СЏРґР° (0 РµСЃР»Рё РЅРµ РѕС‚СЂР°РІР»РµРЅРѕ)";
             label165.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label123
@@ -1706,7 +1706,7 @@ namespace BZEditor
             label123.Name = "label123";
             label123.Size = new System.Drawing.Size(71, 16);
             label123.TabIndex = 41;
-            label123.Text = "Описание";
+            label123.Text = "РћРїРёСЃР°РЅРёРµ";
             label123.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label125
@@ -1715,7 +1715,7 @@ namespace BZEditor
             label125.Name = "label125";
             label125.Size = new System.Drawing.Size(95, 16);
             label125.TabIndex = 40;
-            label125.Text = "Список алиасов";
+            label125.Text = "РЎРїРёСЃРѕРє Р°Р»РёР°СЃРѕРІ";
             label125.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label127
@@ -1724,7 +1724,7 @@ namespace BZEditor
             label127.Name = "label127";
             label127.Size = new System.Drawing.Size(31, 16);
             label127.TabIndex = 11;
-            label127.Text = "Тип";
+            label127.Text = "РўРёРї";
             label127.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label170
@@ -1733,7 +1733,7 @@ namespace BZEditor
             label170.Name = "label170";
             label170.Size = new System.Drawing.Size(43, 16);
             label170.TabIndex = 11;
-            label170.Text = "Класс";
+            label170.Text = "РљР»Р°СЃСЃ";
             label170.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label27
@@ -1742,7 +1742,7 @@ namespace BZEditor
             label27.Name = "label27";
             label27.Size = new System.Drawing.Size(58, 16);
             label27.TabIndex = 5;
-            label27.Text = "Алиасы";
+            label27.Text = "РђР»РёР°СЃС‹";
             label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
@@ -1751,7 +1751,7 @@ namespace BZEditor
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(31, 16);
             label1.TabIndex = 11;
-            label1.Text = "Пол";
+            label1.Text = "РџРѕР»";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label31
@@ -1760,7 +1760,7 @@ namespace BZEditor
             label31.Name = "label31";
             label31.Size = new System.Drawing.Size(84, 16);
             label31.TabIndex = 8;
-            label31.Text = "Описание";
+            label31.Text = "РћРїРёСЃР°РЅРёРµ";
             label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label24
@@ -1769,7 +1769,7 @@ namespace BZEditor
             label24.Name = "label24";
             label24.Size = new System.Drawing.Size(49, 16);
             label24.TabIndex = 68;
-            label24.Text = "Вин.";
+            label24.Text = "Р’РёРЅ.";
             label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label25
@@ -1778,7 +1778,7 @@ namespace BZEditor
             label25.Name = "label25";
             label25.Size = new System.Drawing.Size(49, 16);
             label25.TabIndex = 64;
-            label25.Text = "Дат.";
+            label25.Text = "Р”Р°С‚.";
             label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label26
@@ -1787,7 +1787,7 @@ namespace BZEditor
             label26.Name = "label26";
             label26.Size = new System.Drawing.Size(49, 16);
             label26.TabIndex = 66;
-            label26.Text = "Род.";
+            label26.Text = "Р РѕРґ.";
             label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label32
@@ -1796,7 +1796,7 @@ namespace BZEditor
             label32.Name = "label32";
             label32.Size = new System.Drawing.Size(49, 16);
             label32.TabIndex = 67;
-            label32.Text = "Имен.";
+            label32.Text = "РРјРµРЅ.";
             label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label59
@@ -1805,7 +1805,7 @@ namespace BZEditor
             label59.Name = "label59";
             label59.Size = new System.Drawing.Size(49, 16);
             label59.TabIndex = 69;
-            label59.Text = "Пред.";
+            label59.Text = "РџСЂРµРґ.";
             label59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label60
@@ -1814,7 +1814,7 @@ namespace BZEditor
             label60.Name = "label60";
             label60.Size = new System.Drawing.Size(49, 16);
             label60.TabIndex = 63;
-            label60.Text = "Твор.";
+            label60.Text = "РўРІРѕСЂ.";
             label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label11
@@ -1823,7 +1823,7 @@ namespace BZEditor
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(52, 16);
             label11.TabIndex = 20;
-            label11.Text = "Уровень";
+            label11.Text = "РЈСЂРѕРІРµРЅСЊ";
             label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -1832,7 +1832,7 @@ namespace BZEditor
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(172, 16);
             label4.TabIndex = 15;
-            label4.Text = "Положение по умолчанию";
+            label4.Text = "РџРѕР»РѕР¶РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
             label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
@@ -1841,7 +1841,7 @@ namespace BZEditor
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(172, 16);
             label3.TabIndex = 14;
-            label3.Text = "Положение при загрузке";
+            label3.Text = "РџРѕР»РѕР¶РµРЅРёРµ РїСЂРё Р·Р°РіСЂСѓР·РєРµ";
             label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label23
@@ -1850,7 +1850,7 @@ namespace BZEditor
             label23.Name = "label23";
             label23.Size = new System.Drawing.Size(48, 16);
             label23.TabIndex = 8;
-            label23.Text = "Хтролл";
+            label23.Text = "РҐС‚СЂРѕР»Р»";
             label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -1868,7 +1868,7 @@ namespace BZEditor
             label19.Name = "label19";
             label19.Size = new System.Drawing.Size(104, 16);
             label19.TabIndex = 15;
-            label19.Text = "Наклонность моба";
+            label19.Text = "РќР°РєР»РѕРЅРЅРѕСЃС‚СЊ РјРѕР±Р°";
             label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label14
@@ -1877,7 +1877,7 @@ namespace BZEditor
             label14.Name = "label14";
             label14.Size = new System.Drawing.Size(38, 16);
             label14.TabIndex = 8;
-            label14.Text = "Опыт";
+            label14.Text = "РћРїС‹С‚";
             label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label21
@@ -1886,7 +1886,7 @@ namespace BZEditor
             label21.Name = "label21";
             label21.Size = new System.Drawing.Size(104, 16);
             label21.TabIndex = 15;
-            label21.Text = "Тип удара";
+            label21.Text = "РўРёРї СѓРґР°СЂР°";
             label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label20
@@ -1904,7 +1904,7 @@ namespace BZEditor
             label22.Name = "label22";
             label22.Size = new System.Drawing.Size(52, 27);
             label22.TabIndex = 8;
-            label22.Text = "Макс.в мире";
+            label22.Text = "РњР°РєСЃ.РІ РјРёСЂРµ";
             label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
@@ -1913,7 +1913,7 @@ namespace BZEditor
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(52, 16);
             label10.TabIndex = 16;
-            label10.Text = "Тело";
+            label10.Text = "РўРµР»Рѕ";
             label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
@@ -1922,7 +1922,7 @@ namespace BZEditor
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(52, 16);
             label6.TabIndex = 22;
-            label6.Text = "Инт.";
+            label6.Text = "РРЅС‚.";
             label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label9
@@ -1931,7 +1931,7 @@ namespace BZEditor
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(52, 16);
             label9.TabIndex = 17;
-            label9.Text = "Обаяние";
+            label9.Text = "РћР±Р°СЏРЅРёРµ";
             label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label18
@@ -1940,7 +1940,7 @@ namespace BZEditor
             label18.Name = "label18";
             label18.Size = new System.Drawing.Size(52, 16);
             label18.TabIndex = 8;
-            label18.Text = "Вес";
+            label18.Text = "Р’РµСЃ";
             label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label17
@@ -1949,7 +1949,7 @@ namespace BZEditor
             label17.Name = "label17";
             label17.Size = new System.Drawing.Size(52, 16);
             label17.TabIndex = 8;
-            label17.Text = "Рост";
+            label17.Text = "Р РѕСЃС‚";
             label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
@@ -1958,7 +1958,7 @@ namespace BZEditor
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(52, 16);
             label8.TabIndex = 18;
-            label8.Text = "Ловк.";
+            label8.Text = "Р›РѕРІРє.";
             label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
@@ -1967,7 +1967,7 @@ namespace BZEditor
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(52, 16);
             label7.TabIndex = 21;
-            label7.Text = "Мудр.";
+            label7.Text = "РњСѓРґСЂ.";
             label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
@@ -1976,7 +1976,7 @@ namespace BZEditor
             label16.Name = "label16";
             label16.Size = new System.Drawing.Size(52, 16);
             label16.TabIndex = 8;
-            label16.Text = "Размер";
+            label16.Text = "Р Р°Р·РјРµСЂ";
             label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
@@ -1985,7 +1985,7 @@ namespace BZEditor
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(188, 16);
             label12.TabIndex = 15;
-            label12.Text = "Вер.примен. умения или спела";
+            label12.Text = "Р’РµСЂ.РїСЂРёРјРµРЅ. СѓРјРµРЅРёСЏ РёР»Рё СЃРїРµР»Р°";
             label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label13
@@ -1994,7 +1994,7 @@ namespace BZEditor
             label13.Name = "label13";
             label13.Size = new System.Drawing.Size(120, 16);
             label13.TabIndex = 15;
-            label13.Text = "Количество доп.атак";
+            label13.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ РґРѕРї.Р°С‚Р°Рє";
             label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
@@ -2003,7 +2003,7 @@ namespace BZEditor
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(52, 16);
             label5.TabIndex = 19;
-            label5.Text = "Сила";
+            label5.Text = "РЎРёР»Р°";
             label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gbOthers
@@ -2034,7 +2034,7 @@ namespace BZEditor
             gbOthers.Size = new System.Drawing.Size(455, 143);
             gbOthers.TabIndex = 35;
             gbOthers.TabStop = false;
-            gbOthers.Text = "Прочее";
+            gbOthers.Text = "РџСЂРѕС‡РµРµ";
             // 
             // label121
             // 
@@ -2042,7 +2042,7 @@ namespace BZEditor
             label121.Name = "label121";
             label121.Size = new System.Drawing.Size(139, 13);
             label121.TabIndex = 39;
-            label121.Text = "Инициатива";
+            label121.Text = "РРЅРёС†РёР°С‚РёРІР°";
             label121.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label113
@@ -2051,7 +2051,7 @@ namespace BZEditor
             label113.Name = "label113";
             label113.Size = new System.Drawing.Size(139, 13);
             label113.TabIndex = 39;
-            label113.Text = "Запоминание";
+            label113.Text = "Р—Р°РїРѕРјРёРЅР°РЅРёРµ";
             label113.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label117
@@ -2060,7 +2060,7 @@ namespace BZEditor
             label117.Name = "label117";
             label117.Size = new System.Drawing.Size(139, 13);
             label117.TabIndex = 39;
-            label117.Text = "Поглощение";
+            label117.Text = "РџРѕРіР»РѕС‰РµРЅРёРµ";
             label117.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label94
@@ -2069,7 +2069,7 @@ namespace BZEditor
             label94.Name = "label94";
             label94.Size = new System.Drawing.Size(139, 13);
             label94.TabIndex = 46;
-            label94.Text = "Иммунитет к физ. повр-м";
+            label94.Text = "РРјРјСѓРЅРёС‚РµС‚ Рє С„РёР·. РїРѕРІСЂ-Рј";
             label94.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label124
@@ -2078,7 +2078,7 @@ namespace BZEditor
             label124.Name = "label124";
             label124.Size = new System.Drawing.Size(139, 13);
             label124.TabIndex = 46;
-            label124.Text = "Иммунитет к маг. повр-м";
+            label124.Text = "РРјРјСѓРЅРёС‚РµС‚ Рє РјР°Рі. РїРѕРІСЂ-Рј";
             label124.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label115
@@ -2087,7 +2087,7 @@ namespace BZEditor
             label115.Name = "label115";
             label115.Size = new System.Drawing.Size(139, 13);
             label115.TabIndex = 39;
-            label115.Text = "Регенерация";
+            label115.Text = "Р РµРіРµРЅРµСЂР°С†РёСЏ";
             label115.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label114
@@ -2096,7 +2096,7 @@ namespace BZEditor
             label114.Name = "label114";
             label114.Size = new System.Drawing.Size(139, 13);
             label114.TabIndex = 46;
-            label114.Text = "Иммунитет к маг. афф-м";
+            label114.Text = "РРјРјСѓРЅРёС‚РµС‚ Рє РјР°Рі. Р°С„С„-Рј";
             label114.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudPResist
@@ -2113,7 +2113,7 @@ namespace BZEditor
             label116.Name = "label116";
             label116.Size = new System.Drawing.Size(139, 17);
             label116.TabIndex = 46;
-            label116.Text = "Броня";
+            label116.Text = "Р‘СЂРѕРЅСЏ";
             label116.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudMResist
@@ -2130,7 +2130,7 @@ namespace BZEditor
             label122.Name = "label122";
             label122.Size = new System.Drawing.Size(139, 17);
             label122.TabIndex = 46;
-            label122.Text = "Успех колдовства";
+            label122.Text = "РЈСЃРїРµС… РєРѕР»РґРѕРІСЃС‚РІР°";
             label122.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label120
@@ -2139,7 +2139,7 @@ namespace BZEditor
             label120.Name = "label120";
             label120.Size = new System.Drawing.Size(139, 17);
             label120.TabIndex = 46;
-            label120.Text = "Удача";
+            label120.Text = "РЈРґР°С‡Р°";
             label120.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudAResist
@@ -2290,7 +2290,7 @@ namespace BZEditor
             gbResists.Size = new System.Drawing.Size(455, 119);
             gbResists.TabIndex = 34;
             gbResists.TabStop = false;
-            gbResists.Text = "Резисты";
+            gbResists.Text = "Р РµР·РёСЃС‚С‹";
             // 
             // label71
             // 
@@ -2298,7 +2298,7 @@ namespace BZEditor
             label71.Name = "label71";
             label71.Size = new System.Drawing.Size(139, 13);
             label71.TabIndex = 48;
-            label71.Text = "Тьмы";
+            label71.Text = "РўСЊРјС‹";
             label71.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudResistDark
@@ -2325,7 +2325,7 @@ namespace BZEditor
             label119.Name = "label119";
             label119.Size = new System.Drawing.Size(139, 13);
             label119.TabIndex = 39;
-            label119.Text = "Иммунитет";
+            label119.Text = "РРјРјСѓРЅРёС‚РµС‚";
             label119.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label111
@@ -2334,7 +2334,7 @@ namespace BZEditor
             label111.Name = "label111";
             label111.Size = new System.Drawing.Size(139, 13);
             label111.TabIndex = 39;
-            label111.Text = "Стихии земли";
+            label111.Text = "РЎС‚РёС…РёРё Р·РµРјР»Рё";
             label111.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label109
@@ -2343,7 +2343,7 @@ namespace BZEditor
             label109.Name = "label109";
             label109.Size = new System.Drawing.Size(139, 13);
             label109.TabIndex = 39;
-            label109.Text = "Стихии воздуха";
+            label109.Text = "РЎС‚РёС…РёРё РІРѕР·РґСѓС…Р°";
             label109.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudResEarth
@@ -2388,7 +2388,7 @@ namespace BZEditor
             label110.Name = "label110";
             label110.Size = new System.Drawing.Size(139, 16);
             label110.TabIndex = 40;
-            label110.Text = "Стихии воды";
+            label110.Text = "РЎС‚РёС…РёРё РІРѕРґС‹";
             label110.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label108
@@ -2397,7 +2397,7 @@ namespace BZEditor
             label108.Name = "label108";
             label108.Size = new System.Drawing.Size(139, 16);
             label108.TabIndex = 40;
-            label108.Text = "Стихии огня";
+            label108.Text = "РЎС‚РёС…РёРё РѕРіРЅСЏ";
             label108.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudResWater
@@ -2442,7 +2442,7 @@ namespace BZEditor
             label112.Name = "label112";
             label112.Size = new System.Drawing.Size(139, 17);
             label112.TabIndex = 46;
-            label112.Text = "Живучесть";
+            label112.Text = "Р–РёРІСѓС‡РµСЃС‚СЊ";
             label112.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudVitality
@@ -2487,7 +2487,7 @@ namespace BZEditor
             label118.Name = "label118";
             label118.Size = new System.Drawing.Size(139, 17);
             label118.TabIndex = 46;
-            label118.Text = "Разум";
+            label118.Text = "Р Р°Р·СѓРј";
             label118.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudImmun
@@ -2514,7 +2514,7 @@ namespace BZEditor
             label107.Name = "label107";
             label107.Size = new System.Drawing.Size(54, 17);
             label107.TabIndex = 39;
-            label107.Text = "Реакция";
+            label107.Text = "Р РµР°РєС†РёСЏ";
             label107.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label104
@@ -2523,7 +2523,7 @@ namespace BZEditor
             label104.Name = "label104";
             label104.Size = new System.Drawing.Size(46, 17);
             label104.TabIndex = 41;
-            label104.Text = "Воля";
+            label104.Text = "Р’РѕР»СЏ";
             label104.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label105
@@ -2532,7 +2532,7 @@ namespace BZEditor
             label105.Name = "label105";
             label105.Size = new System.Drawing.Size(61, 17);
             label105.TabIndex = 40;
-            label105.Text = "Здоровье";
+            label105.Text = "Р—РґРѕСЂРѕРІСЊРµ";
             label105.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label106
@@ -2541,7 +2541,7 @@ namespace BZEditor
             label106.Name = "label106";
             label106.Size = new System.Drawing.Size(71, 17);
             label106.TabIndex = 38;
-            label106.Text = "Стойкость";
+            label106.Text = "РЎС‚РѕР№РєРѕСЃС‚СЊ";
             label106.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label68
@@ -2550,7 +2550,7 @@ namespace BZEditor
             label68.Name = "label68";
             label68.Size = new System.Drawing.Size(83, 22);
             label68.TabIndex = 68;
-            label68.Text = "Валюта";
+            label68.Text = "Р’Р°Р»СЋС‚Р°";
             label68.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label74
@@ -2559,7 +2559,7 @@ namespace BZEditor
             label74.Name = "label74";
             label74.Size = new System.Drawing.Size(83, 16);
             label74.TabIndex = 67;
-            label74.Text = "Ремортов";
+            label74.Text = "Р РµРјРѕСЂС‚РѕРІ";
             label74.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cmsMainTree
@@ -2586,7 +2586,7 @@ namespace BZEditor
             this.tsmiAddItems.Image = global::BZEditor.Properties.Resources.button_createsmth;
             this.tsmiAddItems.Name = "tsmiAddItems";
             this.tsmiAddItems.Size = new System.Drawing.Size(259, 22);
-            this.tsmiAddItems.Text = "Создать";
+            this.tsmiAddItems.Text = "РЎРѕР·РґР°С‚СЊ";
             this.tsmiAddItems.Click += new System.EventHandler(this.TsbAddItemsClick);
             // 
             // tsmiRemoveItems
@@ -2594,7 +2594,7 @@ namespace BZEditor
             this.tsmiRemoveItems.Image = global::BZEditor.Properties.Resources.button_removesmth;
             this.tsmiRemoveItems.Name = "tsmiRemoveItems";
             this.tsmiRemoveItems.Size = new System.Drawing.Size(259, 22);
-            this.tsmiRemoveItems.Text = "Удалить";
+            this.tsmiRemoveItems.Text = "РЈРґР°Р»РёС‚СЊ";
             this.tsmiRemoveItems.Click += new System.EventHandler(this.TsbRemoveItemsClick);
             // 
             // toolStripMenuItem3
@@ -2607,7 +2607,7 @@ namespace BZEditor
             this.tsmiAddTemplate.Image = global::BZEditor.Properties.Resources.button_addtemplate;
             this.tsmiAddTemplate.Name = "tsmiAddTemplate";
             this.tsmiAddTemplate.Size = new System.Drawing.Size(259, 22);
-            this.tsmiAddTemplate.Text = "Создать шаблон";
+            this.tsmiAddTemplate.Text = "РЎРѕР·РґР°С‚СЊ С€Р°Р±Р»РѕРЅ";
             this.tsmiAddTemplate.Click += new System.EventHandler(this.TsbAddTemplateClick);
             // 
             // tsmiCreateClones
@@ -2615,7 +2615,7 @@ namespace BZEditor
             this.tsmiCreateClones.Image = global::BZEditor.Properties.Resources.button_clone;
             this.tsmiCreateClones.Name = "tsmiCreateClones";
             this.tsmiCreateClones.Size = new System.Drawing.Size(259, 22);
-            this.tsmiCreateClones.Text = "Клонировать";
+            this.tsmiCreateClones.Text = "РљР»РѕРЅРёСЂРѕРІР°С‚СЊ";
             this.tsmiCreateClones.Click += new System.EventHandler(this.TsbCreateClonesClick);
             // 
             // toolStripMenuItem2
@@ -2628,7 +2628,7 @@ namespace BZEditor
             this.tsmiCopy.Image = global::BZEditor.Properties.Resources.button_copy;
             this.tsmiCopy.Name = "tsmiCopy";
             this.tsmiCopy.Size = new System.Drawing.Size(259, 22);
-            this.tsmiCopy.Text = "Копировать";
+            this.tsmiCopy.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ";
             this.tsmiCopy.Click += new System.EventHandler(this.TsbCopyClick);
             // 
             // tsmiPaste
@@ -2636,7 +2636,7 @@ namespace BZEditor
             this.tsmiPaste.Image = global::BZEditor.Properties.Resources.button_paste;
             this.tsmiPaste.Name = "tsmiPaste";
             this.tsmiPaste.Size = new System.Drawing.Size(259, 22);
-            this.tsmiPaste.Text = "Вставить скопированное";
+            this.tsmiPaste.Text = "Р’СЃС‚Р°РІРёС‚СЊ СЃРєРѕРїРёСЂРѕРІР°РЅРЅРѕРµ";
             this.tsmiPaste.Click += new System.EventHandler(this.TsbPasteClick);
             // 
             // tsmiPasteAsTemplate
@@ -2644,7 +2644,7 @@ namespace BZEditor
             this.tsmiPasteAsTemplate.Image = global::BZEditor.Properties.Resources.button_pastetemplate;
             this.tsmiPasteAsTemplate.Name = "tsmiPasteAsTemplate";
             this.tsmiPasteAsTemplate.Size = new System.Drawing.Size(259, 22);
-            this.tsmiPasteAsTemplate.Text = "Применить как шаблон";
+            this.tsmiPasteAsTemplate.Text = "РџСЂРёРјРµРЅРёС‚СЊ РєР°Рє С€Р°Р±Р»РѕРЅ";
             this.tsmiPasteAsTemplate.Click += new System.EventHandler(this.TsbPasteAsTemplateClick);
             // 
             // toolStripMenuItem4
@@ -2657,7 +2657,7 @@ namespace BZEditor
             this.tsmiInfo.Image = global::BZEditor.Properties.Resources.button_info;
             this.tsmiInfo.Name = "tsmiInfo";
             this.tsmiInfo.Size = new System.Drawing.Size(259, 22);
-            this.tsmiInfo.Text = "Навигация/Сводная информация";
+            this.tsmiInfo.Text = "РќР°РІРёРіР°С†РёСЏ/РЎРІРѕРґРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ";
             this.tsmiInfo.Click += new System.EventHandler(this.TsmiInfoClick);
             // 
             // tsmiShowRoomOnMap
@@ -2665,7 +2665,7 @@ namespace BZEditor
             this.tsmiShowRoomOnMap.Image = global::BZEditor.Properties.Resources.button_show_room_on_map;
             this.tsmiShowRoomOnMap.Name = "tsmiShowRoomOnMap";
             this.tsmiShowRoomOnMap.Size = new System.Drawing.Size(259, 22);
-            this.tsmiShowRoomOnMap.Text = "Показать комнату на карте";
+            this.tsmiShowRoomOnMap.Text = "РџРѕРєР°Р·Р°С‚СЊ РєРѕРјРЅР°С‚Сѓ РЅР° РєР°СЂС‚Рµ";
             this.tsmiShowRoomOnMap.Click += new System.EventHandler(this.TsmiShowRoomOnMapClick);
             // 
             // cmsNavigation
@@ -2680,7 +2680,7 @@ namespace BZEditor
             this.tsmiNavigateTo.Image = global::BZEditor.Properties.Resources.button_gotosomething;
             this.tsmiNavigateTo.Name = "tsmiNavigateTo";
             this.tsmiNavigateTo.Size = new System.Drawing.Size(139, 22);
-            this.tsmiNavigateTo.Text = "Перейти к...";
+            this.tsmiNavigateTo.Text = "РџРµСЂРµР№С‚Рё Рє...";
             this.tsmiNavigateTo.Click += new System.EventHandler(this.TsmiNavigateToClick);
             // 
             // iListIcons16
@@ -2706,7 +2706,7 @@ namespace BZEditor
             this.iListIcons16.Images.SetKeyName(16, "");
             this.iListIcons16.Images.SetKeyName(17, "");
             this.iListIcons16.Images.SetKeyName(18, "");
-            this.iListIcons16.Images.SetKeyName(19, "монета.png");
+            this.iListIcons16.Images.SetKeyName(19, "РјРѕРЅРµС‚Р°.png");
             this.iListIcons16.Images.SetKeyName(20, "");
             this.iListIcons16.Images.SetKeyName(21, "");
             this.iListIcons16.Images.SetKeyName(22, "");
@@ -2716,22 +2716,22 @@ namespace BZEditor
             this.iListIcons16.Images.SetKeyName(26, "");
             this.iListIcons16.Images.SetKeyName(27, "");
             this.iListIcons16.Images.SetKeyName(28, "");
-            this.iListIcons16.Images.SetKeyName(29, "сундук.png");
+            this.iListIcons16.Images.SetKeyName(29, "СЃСѓРЅРґСѓРє.png");
             this.iListIcons16.Images.SetKeyName(30, "");
             this.iListIcons16.Images.SetKeyName(31, "");
             this.iListIcons16.Images.SetKeyName(32, "");
             this.iListIcons16.Images.SetKeyName(33, "");
-            this.iListIcons16.Images.SetKeyName(34, "броня.png");
-            this.iListIcons16.Images.SetKeyName(35, "мусор.png");
-            this.iListIcons16.Images.SetKeyName(36, "огнестр_оружие.png");
-            this.iListIcons16.Images.SetKeyName(37, "бумага.png");
-            this.iListIcons16.Images.SetKeyName(38, "свиток.png");
-            this.iListIcons16.Images.SetKeyName(39, "посох.png");
-            this.iListIcons16.Images.SetKeyName(40, "рубаха.png");
-            this.iListIcons16.Images.SetKeyName(41, "свеча.png");
-            this.iListIcons16.Images.SetKeyName(42, "плащ.png");
-            this.iListIcons16.Images.SetKeyName(43, "ключ.png");
-            this.iListIcons16.Images.SetKeyName(44, "фонтан.png");
+            this.iListIcons16.Images.SetKeyName(34, "Р±СЂРѕРЅСЏ.png");
+            this.iListIcons16.Images.SetKeyName(35, "РјСѓСЃРѕСЂ.png");
+            this.iListIcons16.Images.SetKeyName(36, "РѕРіРЅРµСЃС‚СЂ_РѕСЂСѓР¶РёРµ.png");
+            this.iListIcons16.Images.SetKeyName(37, "Р±СѓРјР°РіР°.png");
+            this.iListIcons16.Images.SetKeyName(38, "СЃРІРёС‚РѕРє.png");
+            this.iListIcons16.Images.SetKeyName(39, "РїРѕСЃРѕС….png");
+            this.iListIcons16.Images.SetKeyName(40, "СЂСѓР±Р°С…Р°.png");
+            this.iListIcons16.Images.SetKeyName(41, "СЃРІРµС‡Р°.png");
+            this.iListIcons16.Images.SetKeyName(42, "РїР»Р°С‰.png");
+            this.iListIcons16.Images.SetKeyName(43, "РєР»СЋС‡.png");
+            this.iListIcons16.Images.SetKeyName(44, "С„РѕРЅС‚Р°РЅ.png");
             this.iListIcons16.Images.SetKeyName(45, "gg_connecting.png");
             this.iListIcons16.Images.SetKeyName(46, "desc.png");
             this.iListIcons16.Images.SetKeyName(47, "unsaved_changes.png");
@@ -2753,7 +2753,7 @@ namespace BZEditor
             this.tsmiAddRow.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAddRow.Image")));
             this.tsmiAddRow.Name = "tsmiAddRow";
             this.tsmiAddRow.Size = new System.Drawing.Size(139, 22);
-            this.tsmiAddRow.Text = "Добавить";
+            this.tsmiAddRow.Text = "Р”РѕР±Р°РІРёС‚СЊ";
             this.tsmiAddRow.Click += new System.EventHandler(this.TsmiAddRowClick);
             // 
             // tsmiRemoveRow
@@ -2761,7 +2761,7 @@ namespace BZEditor
             this.tsmiRemoveRow.Image = ((System.Drawing.Image)(resources.GetObject("tsmiRemoveRow.Image")));
             this.tsmiRemoveRow.Name = "tsmiRemoveRow";
             this.tsmiRemoveRow.Size = new System.Drawing.Size(139, 22);
-            this.tsmiRemoveRow.Text = "Удалить";
+            this.tsmiRemoveRow.Text = "РЈРґР°Р»РёС‚СЊ";
             this.tsmiRemoveRow.Click += new System.EventHandler(this.TsmiRemoveRowClick);
             // 
             // toolStripMenuItem1
@@ -2774,7 +2774,7 @@ namespace BZEditor
             this.tsmiGoTo.Image = ((System.Drawing.Image)(resources.GetObject("tsmiGoTo.Image")));
             this.tsmiGoTo.Name = "tsmiGoTo";
             this.tsmiGoTo.Size = new System.Drawing.Size(139, 22);
-            this.tsmiGoTo.Text = "Перейти к...";
+            this.tsmiGoTo.Text = "РџРµСЂРµР№С‚Рё Рє...";
             this.tsmiGoTo.Click += new System.EventHandler(this.TsmiGoToClick);
             // 
             // cmsRoomsDescription
@@ -2792,7 +2792,7 @@ namespace BZEditor
             this.tsmiCopyDesc.Image = global::BZEditor.Properties.Resources.button_copy;
             this.tsmiCopyDesc.Name = "tsmiCopyDesc";
             this.tsmiCopyDesc.Size = new System.Drawing.Size(139, 22);
-            this.tsmiCopyDesc.Text = "Копировать";
+            this.tsmiCopyDesc.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ";
             this.tsmiCopyDesc.Click += new System.EventHandler(this.TsmiCopyDescClick);
             // 
             // tsmiCutDesc
@@ -2800,7 +2800,7 @@ namespace BZEditor
             this.tsmiCutDesc.Image = global::BZEditor.Properties.Resources.button_cut;
             this.tsmiCutDesc.Name = "tsmiCutDesc";
             this.tsmiCutDesc.Size = new System.Drawing.Size(139, 22);
-            this.tsmiCutDesc.Text = "Вырезать";
+            this.tsmiCutDesc.Text = "Р’С‹СЂРµР·Р°С‚СЊ";
             this.tsmiCutDesc.Click += new System.EventHandler(this.TsmiCutDescClick);
             // 
             // toolStripMenuItem5
@@ -2813,7 +2813,7 @@ namespace BZEditor
             this.tsmiPasteDesc.Image = global::BZEditor.Properties.Resources.button_paste;
             this.tsmiPasteDesc.Name = "tsmiPasteDesc";
             this.tsmiPasteDesc.Size = new System.Drawing.Size(139, 22);
-            this.tsmiPasteDesc.Text = "Вставить";
+            this.tsmiPasteDesc.Text = "Р’СЃС‚Р°РІРёС‚СЊ";
             this.tsmiPasteDesc.Click += new System.EventHandler(this.TsmiPasteDescClick);
             // 
             // syntaxDocument
@@ -2874,7 +2874,7 @@ namespace BZEditor
             // 
             this.toolTip.ShowAlways = true;
             this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip.ToolTipTitle = "Подсказка";
+            this.toolTip.ToolTipTitle = "РџРѕРґСЃРєР°Р·РєР°";
             // 
             // cbIsertSpaces
             // 
@@ -2885,8 +2885,8 @@ namespace BZEditor
             this.cbIsertSpaces.Name = "cbIsertSpaces";
             this.cbIsertSpaces.Size = new System.Drawing.Size(94, 18);
             this.cbIsertSpaces.TabIndex = 105;
-            this.cbIsertSpaces.Text = "Выравнивать";
-            this.toolTip.SetToolTip(this.cbIsertSpaces, "Выравнивание по ширине");
+            this.cbIsertSpaces.Text = "Р’С‹СЂР°РІРЅРёРІР°С‚СЊ";
+            this.toolTip.SetToolTip(this.cbIsertSpaces, "Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ РїРѕ С€РёСЂРёРЅРµ");
             this.cbIsertSpaces.UseVisualStyleBackColor = true;
             // 
             // checkBox2
@@ -2898,8 +2898,8 @@ namespace BZEditor
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(94, 18);
             this.checkBox2.TabIndex = 105;
-            this.checkBox2.Text = "Выравнивать";
-            this.toolTip.SetToolTip(this.checkBox2, "Выравнивание по ширине");
+            this.checkBox2.Text = "Р’С‹СЂР°РІРЅРёРІР°С‚СЊ";
+            this.toolTip.SetToolTip(this.checkBox2, "Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ РїРѕ С€РёСЂРёРЅРµ");
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox4
@@ -2909,8 +2909,8 @@ namespace BZEditor
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(83, 19);
             this.checkBox4.TabIndex = 98;
-            this.checkBox4.Text = "Замещать";
-            this.toolTip.SetToolTip(this.checkBox4, "Описание замещает общее");
+            this.checkBox4.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
+            this.toolTip.SetToolTip(this.checkBox4, "РћРїРёСЃР°РЅРёРµ Р·Р°РјРµС‰Р°РµС‚ РѕР±С‰РµРµ");
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // nudOptimalCharsInGroup
@@ -2930,8 +2930,8 @@ namespace BZEditor
             this.nudOptimalCharsInGroup.Name = "nudOptimalCharsInGroup";
             this.nudOptimalCharsInGroup.Size = new System.Drawing.Size(80, 20);
             this.nudOptimalCharsInGroup.TabIndex = 11;
-            this.toolTip.SetToolTip(this.nudOptimalCharsInGroup, "Параметр задает оптимальное количество\r\nигроков в группе для групповых зон.\r\n1 = " +
-        "Не групповая зона");
+            this.toolTip.SetToolTip(this.nudOptimalCharsInGroup, "РџР°СЂР°РјРµС‚СЂ Р·Р°РґР°РµС‚ РѕРїС‚РёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ\r\nРёРіСЂРѕРєРѕРІ РІ РіСЂСѓРїРїРµ РґР»СЏ РіСЂСѓРїРїРѕРІС‹С… Р·РѕРЅ.\r\n1 = " +
+        "РќРµ РіСЂСѓРїРїРѕРІР°СЏ Р·РѕРЅР°");
             this.nudOptimalCharsInGroup.Value = new decimal(new int[] {
             1,
             0,
@@ -2947,7 +2947,7 @@ namespace BZEditor
             this.btnAddAZones.Name = "btnAddAZones";
             this.btnAddAZones.Size = new System.Drawing.Size(28, 28);
             this.btnAddAZones.TabIndex = 11;
-            this.toolTip.SetToolTip(this.btnAddAZones, "Добавить зону в список");
+            this.toolTip.SetToolTip(this.btnAddAZones, "Р”РѕР±Р°РІРёС‚СЊ Р·РѕРЅСѓ РІ СЃРїРёСЃРѕРє");
             this.btnAddAZones.Click += new System.EventHandler(this.BtnAddAZonesClick);
             // 
             // btnRemoveAZones
@@ -2958,7 +2958,7 @@ namespace BZEditor
             this.btnRemoveAZones.Name = "btnRemoveAZones";
             this.btnRemoveAZones.Size = new System.Drawing.Size(28, 28);
             this.btnRemoveAZones.TabIndex = 12;
-            this.toolTip.SetToolTip(this.btnRemoveAZones, "Исключить зону из списка");
+            this.toolTip.SetToolTip(this.btnRemoveAZones, "РСЃРєР»СЋС‡РёС‚СЊ Р·РѕРЅСѓ РёР· СЃРїРёСЃРєР°");
             this.btnRemoveAZones.Click += new System.EventHandler(this.BtnRemoveAZonesClick);
             // 
             // btnAddBZones
@@ -2969,7 +2969,7 @@ namespace BZEditor
             this.btnAddBZones.Name = "btnAddBZones";
             this.btnAddBZones.Size = new System.Drawing.Size(28, 28);
             this.btnAddBZones.TabIndex = 14;
-            this.toolTip.SetToolTip(this.btnAddBZones, "Добавить зону в список");
+            this.toolTip.SetToolTip(this.btnAddBZones, "Р”РѕР±Р°РІРёС‚СЊ Р·РѕРЅСѓ РІ СЃРїРёСЃРѕРє");
             this.btnAddBZones.Click += new System.EventHandler(this.BtnAddBZonesClick);
             // 
             // btnRemoveBZones
@@ -2980,7 +2980,7 @@ namespace BZEditor
             this.btnRemoveBZones.Name = "btnRemoveBZones";
             this.btnRemoveBZones.Size = new System.Drawing.Size(28, 28);
             this.btnRemoveBZones.TabIndex = 15;
-            this.toolTip.SetToolTip(this.btnRemoveBZones, "Исключить зону из списка");
+            this.toolTip.SetToolTip(this.btnRemoveBZones, "РСЃРєР»СЋС‡РёС‚СЊ Р·РѕРЅСѓ РёР· СЃРїРёСЃРєР°");
             this.btnRemoveBZones.Click += new System.EventHandler(this.BtnRemoveBZonesClick);
             // 
             // btnValidate
@@ -2991,9 +2991,9 @@ namespace BZEditor
             this.btnValidate.Name = "btnValidate";
             this.btnValidate.Size = new System.Drawing.Size(85, 22);
             this.btnValidate.TabIndex = 2;
-            this.btnValidate.Text = "Проверить";
+            this.btnValidate.Text = "РџСЂРѕРІРµСЂРёС‚СЊ";
             this.btnValidate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip.SetToolTip(this.btnValidate, "Проверка зоны на соответствие правилам");
+            this.toolTip.SetToolTip(this.btnValidate, "РџСЂРѕРІРµСЂРєР° Р·РѕРЅС‹ РЅР° СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ РїСЂР°РІРёР»Р°Рј");
             this.btnValidate.UseVisualStyleBackColor = true;
             this.btnValidate.Click += new System.EventHandler(this.BtnValidateClick);
             // 
@@ -3003,7 +3003,7 @@ namespace BZEditor
             this.tbExitSouth.Name = "tbExitSouth";
             this.tbExitSouth.Size = new System.Drawing.Size(54, 17);
             this.tbExitSouth.TabIndex = 10;
-            this.toolTip.SetToolTip(this.tbExitSouth, "Виртуальный номер целевой комнаты");
+            this.toolTip.SetToolTip(this.tbExitSouth, "Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ С†РµР»РµРІРѕР№ РєРѕРјРЅР°С‚С‹");
             this.tbExitSouth.Validated += new System.EventHandler(this.ExitDirChanged);
             // 
             // tbExitNorth
@@ -3012,7 +3012,7 @@ namespace BZEditor
             this.tbExitNorth.Name = "tbExitNorth";
             this.tbExitNorth.Size = new System.Drawing.Size(54, 17);
             this.tbExitNorth.TabIndex = 9;
-            this.toolTip.SetToolTip(this.tbExitNorth, "Виртуальный номер целевой комнаты");
+            this.toolTip.SetToolTip(this.tbExitNorth, "Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ С†РµР»РµРІРѕР№ РєРѕРјРЅР°С‚С‹");
             this.tbExitNorth.Validated += new System.EventHandler(this.ExitDirChanged);
             // 
             // tbExitDown
@@ -3021,7 +3021,7 @@ namespace BZEditor
             this.tbExitDown.Name = "tbExitDown";
             this.tbExitDown.Size = new System.Drawing.Size(54, 17);
             this.tbExitDown.TabIndex = 13;
-            this.toolTip.SetToolTip(this.tbExitDown, "Виртуальный номер целевой комнаты");
+            this.toolTip.SetToolTip(this.tbExitDown, "Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ С†РµР»РµРІРѕР№ РєРѕРјРЅР°С‚С‹");
             this.tbExitDown.Validated += new System.EventHandler(this.ExitDirChanged);
             // 
             // tbExitUp
@@ -3030,7 +3030,7 @@ namespace BZEditor
             this.tbExitUp.Name = "tbExitUp";
             this.tbExitUp.Size = new System.Drawing.Size(54, 17);
             this.tbExitUp.TabIndex = 12;
-            this.toolTip.SetToolTip(this.tbExitUp, "Виртуальный номер целевой комнаты");
+            this.toolTip.SetToolTip(this.tbExitUp, "Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ С†РµР»РµРІРѕР№ РєРѕРјРЅР°С‚С‹");
             this.tbExitUp.Validated += new System.EventHandler(this.ExitDirChanged);
             // 
             // tbExitEast
@@ -3039,7 +3039,7 @@ namespace BZEditor
             this.tbExitEast.Name = "tbExitEast";
             this.tbExitEast.Size = new System.Drawing.Size(54, 17);
             this.tbExitEast.TabIndex = 11;
-            this.toolTip.SetToolTip(this.tbExitEast, "Виртуальный номер целевой комнаты");
+            this.toolTip.SetToolTip(this.tbExitEast, "Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ С†РµР»РµРІРѕР№ РєРѕРјРЅР°С‚С‹");
             this.tbExitEast.Validated += new System.EventHandler(this.ExitDirChanged);
             // 
             // tbExitWest
@@ -3048,7 +3048,7 @@ namespace BZEditor
             this.tbExitWest.Name = "tbExitWest";
             this.tbExitWest.Size = new System.Drawing.Size(54, 17);
             this.tbExitWest.TabIndex = 10;
-            this.toolTip.SetToolTip(this.tbExitWest, "Виртуальный номер целевой комнаты");
+            this.toolTip.SetToolTip(this.tbExitWest, "Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ С†РµР»РµРІРѕР№ РєРѕРјРЅР°С‚С‹");
             this.tbExitWest.Validated += new System.EventHandler(this.ExitDirChanged);
             // 
             // label93
@@ -3073,7 +3073,7 @@ namespace BZEditor
             this.btnSelectDoorKey.Size = new System.Drawing.Size(24, 24);
             this.btnSelectDoorKey.TabIndex = 120;
             this.btnSelectDoorKey.Text = "...";
-            this.toolTip.SetToolTip(this.btnSelectDoorKey, "Кнопка выбора моба-продавца из списка");
+            this.toolTip.SetToolTip(this.btnSelectDoorKey, "РљРЅРѕРїРєР° РІС‹Р±РѕСЂР° РјРѕР±Р°-РїСЂРѕРґР°РІС†Р° РёР· СЃРїРёСЃРєР°");
             this.btnSelectDoorKey.UseVisualStyleBackColor = true;
             this.btnSelectDoorKey.Click += new System.EventHandler(this.BtnSelectDoorKeyClick);
             // 
@@ -3086,7 +3086,7 @@ namespace BZEditor
             this.tbDoorNameVin.Name = "tbDoorNameVin";
             this.tbDoorNameVin.Size = new System.Drawing.Size(185, 20);
             this.tbDoorNameVin.TabIndex = 105;
-            this.toolTip.SetToolTip(this.tbDoorNameVin, "Например:\r\nИмярек открыл скрипучую резную калитку");
+            this.toolTip.SetToolTip(this.tbDoorNameVin, "РќР°РїСЂРёРјРµСЂ:\r\nРРјСЏСЂРµРє РѕС‚РєСЂС‹Р» СЃРєСЂРёРїСѓС‡СѓСЋ СЂРµР·РЅСѓСЋ РєР°Р»РёС‚РєСѓ");
             this.tbDoorNameVin.Validated += new System.EventHandler(this.TbDoorNameVinValidated);
             // 
             // btnRoomAddObj
@@ -3097,7 +3097,7 @@ namespace BZEditor
             this.btnRoomAddObj.Name = "btnRoomAddObj";
             this.btnRoomAddObj.Size = new System.Drawing.Size(28, 28);
             this.btnRoomAddObj.TabIndex = 45;
-            this.toolTip.SetToolTip(this.btnRoomAddObj, "Добавить помощника мобу.");
+            this.toolTip.SetToolTip(this.btnRoomAddObj, "Р”РѕР±Р°РІРёС‚СЊ РїРѕРјРѕС‰РЅРёРєР° РјРѕР±Сѓ.");
             this.btnRoomAddObj.Click += new System.EventHandler(this.BtnRoomAddObjClick);
             // 
             // btnRoomRemoveObj
@@ -3108,7 +3108,7 @@ namespace BZEditor
             this.btnRoomRemoveObj.Name = "btnRoomRemoveObj";
             this.btnRoomRemoveObj.Size = new System.Drawing.Size(28, 28);
             this.btnRoomRemoveObj.TabIndex = 44;
-            this.toolTip.SetToolTip(this.btnRoomRemoveObj, "Удалить помощника, выбранного в списке");
+            this.toolTip.SetToolTip(this.btnRoomRemoveObj, "РЈРґР°Р»РёС‚СЊ РїРѕРјРѕС‰РЅРёРєР°, РІС‹Р±СЂР°РЅРЅРѕРіРѕ РІ СЃРїРёСЃРєРµ");
             this.btnRoomRemoveObj.Click += new System.EventHandler(this.BtnRoomRemoveObjClick);
             // 
             // elvRoomObjInObj
@@ -3127,7 +3127,7 @@ namespace BZEditor
             this.elvRoomObjInObj.OwnerDraw = true;
             this.elvRoomObjInObj.Size = new System.Drawing.Size(480, 130);
             this.elvRoomObjInObj.TabIndex = 97;
-            this.toolTip.SetToolTip(this.elvRoomObjInObj, "Даблклик на ячейке \"вероятность\" выводит\r\nэту ячейку в режим редактирования");
+            this.toolTip.SetToolTip(this.elvRoomObjInObj, "Р”Р°Р±Р»РєР»РёРє РЅР° СЏС‡РµР№РєРµ \"РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ\" РІС‹РІРѕРґРёС‚\r\nСЌС‚Сѓ СЏС‡РµР№РєСѓ РІ СЂРµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ");
             this.elvRoomObjInObj.UseCompatibleStateImageBehavior = false;
             this.elvRoomObjInObj.View = System.Windows.Forms.View.Details;
             this.elvRoomObjInObj.ItemValueChanged += new ExtControls.ExtListView.ItemValueChangeEvent(this.ElvRoomObjInObjItemValueChanged);
@@ -3142,7 +3142,7 @@ namespace BZEditor
             this.btnRoomAddObjInObj.Name = "btnRoomAddObjInObj";
             this.btnRoomAddObjInObj.Size = new System.Drawing.Size(28, 28);
             this.btnRoomAddObjInObj.TabIndex = 96;
-            this.toolTip.SetToolTip(this.btnRoomAddObjInObj, "Добавить умение мобу.");
+            this.toolTip.SetToolTip(this.btnRoomAddObjInObj, "Р”РѕР±Р°РІРёС‚СЊ СѓРјРµРЅРёРµ РјРѕР±Сѓ.");
             this.btnRoomAddObjInObj.Click += new System.EventHandler(this.BtnRoomAddObjInObjClick);
             // 
             // btnRoomRemoveObjFromObj
@@ -3153,7 +3153,7 @@ namespace BZEditor
             this.btnRoomRemoveObjFromObj.Name = "btnRoomRemoveObjFromObj";
             this.btnRoomRemoveObjFromObj.Size = new System.Drawing.Size(28, 28);
             this.btnRoomRemoveObjFromObj.TabIndex = 95;
-            this.toolTip.SetToolTip(this.btnRoomRemoveObjFromObj, "Удалить умение моба, выбранное в списке");
+            this.toolTip.SetToolTip(this.btnRoomRemoveObjFromObj, "РЈРґР°Р»РёС‚СЊ СѓРјРµРЅРёРµ РјРѕР±Р°, РІС‹Р±СЂР°РЅРЅРѕРµ РІ СЃРїРёСЃРєРµ");
             this.btnRoomRemoveObjFromObj.Click += new System.EventHandler(this.BtnRoomRemoveObjFromObjClick);
             // 
             // btnRoomAddMob
@@ -3164,7 +3164,7 @@ namespace BZEditor
             this.btnRoomAddMob.Name = "btnRoomAddMob";
             this.btnRoomAddMob.Size = new System.Drawing.Size(28, 28);
             this.btnRoomAddMob.TabIndex = 96;
-            this.toolTip.SetToolTip(this.btnRoomAddMob, "Добавить моба в комнату.");
+            this.toolTip.SetToolTip(this.btnRoomAddMob, "Р”РѕР±Р°РІРёС‚СЊ РјРѕР±Р° РІ РєРѕРјРЅР°С‚Сѓ.");
             this.btnRoomAddMob.Click += new System.EventHandler(this.BtnRoomAddMobClick);
             // 
             // btnRoomRemoveMob
@@ -3175,7 +3175,7 @@ namespace BZEditor
             this.btnRoomRemoveMob.Name = "btnRoomRemoveMob";
             this.btnRoomRemoveMob.Size = new System.Drawing.Size(28, 28);
             this.btnRoomRemoveMob.TabIndex = 95;
-            this.toolTip.SetToolTip(this.btnRoomRemoveMob, "Удалить моба, выбранного в списке");
+            this.toolTip.SetToolTip(this.btnRoomRemoveMob, "РЈРґР°Р»РёС‚СЊ РјРѕР±Р°, РІС‹Р±СЂР°РЅРЅРѕРіРѕ РІ СЃРїРёСЃРєРµ");
             this.btnRoomRemoveMob.Click += new System.EventHandler(this.BtnRoomRemoveMobClick);
             // 
             // nudMaxInRoom
@@ -3197,7 +3197,7 @@ namespace BZEditor
             this.nudMaxInRoom.Name = "nudMaxInRoom";
             this.nudMaxInRoom.Size = new System.Drawing.Size(61, 20);
             this.nudMaxInRoom.TabIndex = 84;
-            this.toolTip.SetToolTip(this.nudMaxInRoom, "Максимальное количество мобов\r\nвыбранного типа в комнате.");
+            this.toolTip.SetToolTip(this.nudMaxInRoom, "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјРѕР±РѕРІ\r\nРІС‹Р±СЂР°РЅРЅРѕРіРѕ С‚РёРїР° РІ РєРѕРјРЅР°С‚Рµ.");
             this.nudMaxInRoom.Value = new decimal(new int[] {
             1,
             0,
@@ -3212,9 +3212,9 @@ namespace BZEditor
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(71, 16);
             this.label85.TabIndex = 82;
-            this.label85.Text = "max в комн.";
+            this.label85.Text = "max РІ РєРѕРјРЅ.";
             this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolTip.SetToolTip(this.label85, "Максимум мобов такого типа в комнате");
+            this.toolTip.SetToolTip(this.label85, "РњР°РєСЃРёРјСѓРј РјРѕР±РѕРІ С‚Р°РєРѕРіРѕ С‚РёРїР° РІ РєРѕРјРЅР°С‚Рµ");
             // 
             // btnRoomSpecFormatCommonDesc
             // 
@@ -3224,7 +3224,7 @@ namespace BZEditor
             this.btnRoomSpecFormatCommonDesc.Name = "btnRoomSpecFormatCommonDesc";
             this.btnRoomSpecFormatCommonDesc.Size = new System.Drawing.Size(28, 28);
             this.btnRoomSpecFormatCommonDesc.TabIndex = 44;
-            this.toolTip.SetToolTip(this.btnRoomSpecFormatCommonDesc, "Выровнять по ширине\r\n(без сохранения абзацев).");
+            this.toolTip.SetToolTip(this.btnRoomSpecFormatCommonDesc, "Р’С‹СЂРѕРІРЅСЏС‚СЊ РїРѕ С€РёСЂРёРЅРµ\r\n(Р±РµР· СЃРѕС…СЂР°РЅРµРЅРёСЏ Р°Р±Р·Р°С†РµРІ).");
             this.btnRoomSpecFormatCommonDesc.Click += new System.EventHandler(this.BtnRoomFormatClick);
             // 
             // 
@@ -3236,8 +3236,8 @@ namespace BZEditor
             this.cbInsertSpaces.Name = "cbInsertSpaces";
             this.cbInsertSpaces.Size = new System.Drawing.Size(94, 18);
             this.cbInsertSpaces.TabIndex = 105;
-            this.cbInsertSpaces.Text = "Выравнивать";
-            this.toolTip.SetToolTip(this.cbInsertSpaces, "Выравнивание по ширине");
+            this.cbInsertSpaces.Text = "Р’С‹СЂР°РІРЅРёРІР°С‚СЊ";
+            this.toolTip.SetToolTip(this.cbInsertSpaces, "Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ РїРѕ С€РёСЂРёРЅРµ");
             this.cbInsertSpaces.UseVisualStyleBackColor = true;
             this.cbInsertSpaces.Visible = false;
             // 
@@ -3250,7 +3250,7 @@ namespace BZEditor
             this.btnRoomFormatCommonDesc.Size = new System.Drawing.Size(28, 28);
             this.btnRoomFormatCommonDesc.TabIndex = 44;
             this.btnRoomFormatCommonDesc.Text = " ";
-            this.toolTip.SetToolTip(this.btnRoomFormatCommonDesc, "Выровнять по ширине\r\n(с сохранением абзацев).");
+            this.toolTip.SetToolTip(this.btnRoomFormatCommonDesc, "Р’С‹СЂРѕРІРЅСЏС‚СЊ РїРѕ С€РёСЂРёРЅРµ\r\n(СЃ СЃРѕС…СЂР°РЅРµРЅРёРµРј Р°Р±Р·Р°С†РµРІ).");
             this.btnRoomFormatCommonDesc.Click += new System.EventHandler(this.BtnRoomFormatClick);
             // 
             // btnObjSetAutoCases
@@ -3273,7 +3273,7 @@ namespace BZEditor
             this.tboxObjAliases.Name = "tboxObjAliases";
             this.tboxObjAliases.Size = new System.Drawing.Size(294, 20);
             this.tboxObjAliases.TabIndex = 3;
-            this.toolTip.SetToolTip(this.tboxObjAliases, "Перечень ключевых слов для объекта\r\n(в качетсве разделителя \"пробел\").");
+            this.toolTip.SetToolTip(this.tboxObjAliases, "РџРµСЂРµС‡РµРЅСЊ РєР»СЋС‡РµРІС‹С… СЃР»РѕРІ РґР»СЏ РѕР±СЉРµРєС‚Р°\r\n(РІ РєР°С‡РµС‚СЃРІРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ \"РїСЂРѕР±РµР»\").");
             this.tboxObjAliases.TextChanged += new System.EventHandler(this.ObjValueValidated);
             // 
             // tboxObjTvor
@@ -3284,7 +3284,7 @@ namespace BZEditor
             this.tboxObjTvor.Name = "tboxObjTvor";
             this.tboxObjTvor.Size = new System.Drawing.Size(294, 20);
             this.tboxObjTvor.TabIndex = 9;
-            this.toolTip.SetToolTip(this.tboxObjTvor, "Название объекта в творительном падеже\r\n(отвечает на вопрос \"Любуюсь чем?\")");
+            this.toolTip.SetToolTip(this.tboxObjTvor, "РќР°Р·РІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РІ С‚РІРѕСЂРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"Р›СЋР±СѓСЋСЃСЊ С‡РµРј?\")");
             this.tboxObjTvor.TextChanged += new System.EventHandler(this.ObjValueValidated);
             // 
             // tboxObjVin
@@ -3295,7 +3295,7 @@ namespace BZEditor
             this.tboxObjVin.Name = "tboxObjVin";
             this.tboxObjVin.Size = new System.Drawing.Size(294, 20);
             this.tboxObjVin.TabIndex = 8;
-            this.toolTip.SetToolTip(this.tboxObjVin, "Название объекта в винительном падеже\r\n(отвечает на вопрос \"Вижу что?\")");
+            this.toolTip.SetToolTip(this.tboxObjVin, "РќР°Р·РІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РІ РІРёРЅРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"Р’РёР¶Сѓ С‡С‚Рѕ?\")");
             this.tboxObjVin.TextChanged += new System.EventHandler(this.ObjValueValidated);
             // 
             // tboxObjDat
@@ -3306,7 +3306,7 @@ namespace BZEditor
             this.tboxObjDat.Name = "tboxObjDat";
             this.tboxObjDat.Size = new System.Drawing.Size(294, 20);
             this.tboxObjDat.TabIndex = 7;
-            this.toolTip.SetToolTip(this.tboxObjDat, "Название объекта в дательном падеже\r\n(отвечает на вопрос \"Рад чему?\")");
+            this.toolTip.SetToolTip(this.tboxObjDat, "РќР°Р·РІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РІ РґР°С‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"Р Р°Рґ С‡РµРјСѓ?\")");
             this.tboxObjDat.TextChanged += new System.EventHandler(this.ObjValueValidated);
             // 
             // tboxObjPredl
@@ -3317,7 +3317,7 @@ namespace BZEditor
             this.tboxObjPredl.Name = "tboxObjPredl";
             this.tboxObjPredl.Size = new System.Drawing.Size(294, 20);
             this.tboxObjPredl.TabIndex = 10;
-            this.toolTip.SetToolTip(this.tboxObjPredl, "Название объекта в предложном падеже\r\n(отвечает на вопрос \"Говорю о чём?\")");
+            this.toolTip.SetToolTip(this.tboxObjPredl, "РќР°Р·РІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РІ РїСЂРµРґР»РѕР¶РЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"Р“РѕРІРѕСЂСЋ Рѕ С‡С‘Рј?\")");
             this.tboxObjPredl.TextChanged += new System.EventHandler(this.ObjValueValidated);
             // 
             // tboxObjImen
@@ -3328,7 +3328,7 @@ namespace BZEditor
             this.tboxObjImen.Name = "tboxObjImen";
             this.tboxObjImen.Size = new System.Drawing.Size(294, 20);
             this.tboxObjImen.TabIndex = 4;
-            this.toolTip.SetToolTip(this.tboxObjImen, "Название объекта в именительном падеже\r\n(отвечает на вопрос \"ЧТО?\")");
+            this.toolTip.SetToolTip(this.tboxObjImen, "РќР°Р·РІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РІ РёРјРµРЅРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"Р§РўРћ?\")");
             this.tboxObjImen.TextChanged += new System.EventHandler(this.ObjValueValidated);
             this.tboxObjImen.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TboxObjImenKeyUp);
             // 
@@ -3340,7 +3340,7 @@ namespace BZEditor
             this.tboxObjRod.Name = "tboxObjRod";
             this.tboxObjRod.Size = new System.Drawing.Size(294, 20);
             this.tboxObjRod.TabIndex = 6;
-            this.toolTip.SetToolTip(this.tboxObjRod, "Название объекта в родительном падеже\r\n(отвечает на вопрос \"Нет чего?\")");
+            this.toolTip.SetToolTip(this.tboxObjRod, "РќР°Р·РІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РІ СЂРѕРґРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"РќРµС‚ С‡РµРіРѕ?\")");
             this.tboxObjRod.TextChanged += new System.EventHandler(this.ObjValueValidated);
             // 
             // nudObjContainerKeyVNum
@@ -3360,7 +3360,7 @@ namespace BZEditor
             this.nudObjContainerKeyVNum.Name = "nudObjContainerKeyVNum";
             this.nudObjContainerKeyVNum.Size = new System.Drawing.Size(50, 20);
             this.nudObjContainerKeyVNum.TabIndex = 2;
-            this.toolTip.SetToolTip(this.nudObjContainerKeyVNum, "Виртуальный номер ключа (-1, если нет ключа)");
+            this.toolTip.SetToolTip(this.nudObjContainerKeyVNum, "Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ РєР»СЋС‡Р° (-1, РµСЃР»Рё РЅРµС‚ РєР»СЋС‡Р°)");
             this.nudObjContainerKeyVNum.Value = new decimal(new int[] {
             1,
             0,
@@ -3380,7 +3380,7 @@ namespace BZEditor
             this.nudObjContainerValue.Name = "nudObjContainerValue";
             this.nudObjContainerValue.Size = new System.Drawing.Size(50, 20);
             this.nudObjContainerValue.TabIndex = 1;
-            this.toolTip.SetToolTip(this.nudObjContainerValue, "Максимальный вес внутри");
+            this.toolTip.SetToolTip(this.nudObjContainerValue, "РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РІРµСЃ РІРЅСѓС‚СЂРё");
             this.nudObjContainerValue.ValueChanged += new System.EventHandler(this.ObjTypeSpecParamChanged);
             // 
             // btnSelectFontPorionProto
@@ -3391,7 +3391,7 @@ namespace BZEditor
             this.btnSelectFontPorionProto.Size = new System.Drawing.Size(24, 24);
             this.btnSelectFontPorionProto.TabIndex = 4;
             this.btnSelectFontPorionProto.Text = "...";
-            this.toolTip.SetToolTip(this.btnSelectFontPorionProto, "Кнопка выбора зелья-прототипа\r\nиз списка загруженных зелий");
+            this.toolTip.SetToolTip(this.btnSelectFontPorionProto, "РљРЅРѕРїРєР° РІС‹Р±РѕСЂР° Р·РµР»СЊСЏ-РїСЂРѕС‚РѕС‚РёРїР°\r\nРёР· СЃРїРёСЃРєР° Р·Р°РіСЂСѓР¶РµРЅРЅС‹С… Р·РµР»РёР№");
             this.btnSelectFontPorionProto.UseVisualStyleBackColor = true;
             this.btnSelectFontPorionProto.Visible = false;
             this.btnSelectFontPorionProto.Click += new System.EventHandler(this.BtnSelectPotionProtoClick);
@@ -3404,7 +3404,7 @@ namespace BZEditor
             this.btnSelectPotionProtoVNum.Size = new System.Drawing.Size(24, 24);
             this.btnSelectPotionProtoVNum.TabIndex = 4;
             this.btnSelectPotionProtoVNum.Text = "...";
-            this.toolTip.SetToolTip(this.btnSelectPotionProtoVNum, "Кнопка выбора зелья-прототипа\r\nиз списка загруженных зелий");
+            this.toolTip.SetToolTip(this.btnSelectPotionProtoVNum, "РљРЅРѕРїРєР° РІС‹Р±РѕСЂР° Р·РµР»СЊСЏ-РїСЂРѕС‚РѕС‚РёРїР°\r\nРёР· СЃРїРёСЃРєР° Р·Р°РіСЂСѓР¶РµРЅРЅС‹С… Р·РµР»РёР№");
             this.btnSelectPotionProtoVNum.UseVisualStyleBackColor = true;
             this.btnSelectPotionProtoVNum.Visible = false;
             this.btnSelectPotionProtoVNum.Click += new System.EventHandler(this.BtnSelectPotionProtoClick);
@@ -3417,7 +3417,7 @@ namespace BZEditor
             this.btnAddObjTrigger.Name = "btnAddObjTrigger";
             this.btnAddObjTrigger.Size = new System.Drawing.Size(28, 28);
             this.btnAddObjTrigger.TabIndex = 40;
-            this.toolTip.SetToolTip(this.btnAddObjTrigger, "Добавить помощника мобу.");
+            this.toolTip.SetToolTip(this.btnAddObjTrigger, "Р”РѕР±Р°РІРёС‚СЊ РїРѕРјРѕС‰РЅРёРєР° РјРѕР±Сѓ.");
             this.btnAddObjTrigger.Click += new System.EventHandler(this.BtnAddObjTriggerClick);
             // 
             // btnObjRemoveTrigger
@@ -3428,7 +3428,7 @@ namespace BZEditor
             this.btnObjRemoveTrigger.Name = "btnObjRemoveTrigger";
             this.btnObjRemoveTrigger.Size = new System.Drawing.Size(28, 28);
             this.btnObjRemoveTrigger.TabIndex = 39;
-            this.toolTip.SetToolTip(this.btnObjRemoveTrigger, "Удалить помощника, выбранного в списке");
+            this.toolTip.SetToolTip(this.btnObjRemoveTrigger, "РЈРґР°Р»РёС‚СЊ РїРѕРјРѕС‰РЅРёРєР°, РІС‹Р±СЂР°РЅРЅРѕРіРѕ РІ СЃРїРёСЃРєРµ");
             this.btnObjRemoveTrigger.Click += new System.EventHandler(this.BtnObjRemoveTriggerClick);
             // 
             // btnObjReplaceAddDesc
@@ -3439,7 +3439,7 @@ namespace BZEditor
             this.btnObjReplaceAddDesc.Name = "btnObjReplaceAddDesc";
             this.btnObjReplaceAddDesc.Size = new System.Drawing.Size(28, 28);
             this.btnObjReplaceAddDesc.TabIndex = 85;
-            this.toolTip.SetToolTip(this.btnObjReplaceAddDesc, "Применить изменения описания предмета\r\nвыбранного в списке имеющихся.");
+            this.toolTip.SetToolTip(this.btnObjReplaceAddDesc, "РџСЂРёРјРµРЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ РѕРїРёСЃР°РЅРёСЏ РїСЂРµРґРјРµС‚Р°\r\nРІС‹Р±СЂР°РЅРЅРѕРіРѕ РІ СЃРїРёСЃРєРµ РёРјРµСЋС‰РёС…СЃСЏ.");
             this.btnObjReplaceAddDesc.Click += new System.EventHandler(this.BtnObjReplaceAddDescClick);
             // 
             // btnObjAddAddDesc
@@ -3450,7 +3450,7 @@ namespace BZEditor
             this.btnObjAddAddDesc.Name = "btnObjAddAddDesc";
             this.btnObjAddAddDesc.Size = new System.Drawing.Size(28, 28);
             this.btnObjAddAddDesc.TabIndex = 36;
-            this.toolTip.SetToolTip(this.btnObjAddAddDesc, "Добавить описание предмету.");
+            this.toolTip.SetToolTip(this.btnObjAddAddDesc, "Р”РѕР±Р°РІРёС‚СЊ РѕРїРёСЃР°РЅРёРµ РїСЂРµРґРјРµС‚Сѓ.");
             this.btnObjAddAddDesc.Click += new System.EventHandler(this.BtnObjAddAddDescClick);
             // 
             // btnObjRemoveAddDesc
@@ -3461,7 +3461,7 @@ namespace BZEditor
             this.btnObjRemoveAddDesc.Name = "btnObjRemoveAddDesc";
             this.btnObjRemoveAddDesc.Size = new System.Drawing.Size(28, 28);
             this.btnObjRemoveAddDesc.TabIndex = 35;
-            this.toolTip.SetToolTip(this.btnObjRemoveAddDesc, "Удалить доп.описание предмета\r\nвыбранное в списке.");
+            this.toolTip.SetToolTip(this.btnObjRemoveAddDesc, "РЈРґР°Р»РёС‚СЊ РґРѕРї.РѕРїРёСЃР°РЅРёРµ РїСЂРµРґРјРµС‚Р°\r\nРІС‹Р±СЂР°РЅРЅРѕРµ РІ СЃРїРёСЃРєРµ.");
             this.btnObjRemoveAddDesc.Click += new System.EventHandler(this.BtnObjRemoveAddDescClick);
             // 
             // btnMobSetAutoCases
@@ -3484,7 +3484,7 @@ namespace BZEditor
             this.tboxMobNameTvor.Name = "tboxMobNameTvor";
             this.tboxMobNameTvor.Size = new System.Drawing.Size(288, 20);
             this.tboxMobNameTvor.TabIndex = 11;
-            this.toolTip.SetToolTip(this.tboxMobNameTvor, "Название моба в творительном падеже\r\n(отвечает на вопрос \"Любуюсь кем?\")");
+            this.toolTip.SetToolTip(this.tboxMobNameTvor, "РќР°Р·РІР°РЅРёРµ РјРѕР±Р° РІ С‚РІРѕСЂРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"Р›СЋР±СѓСЋСЃСЊ РєРµРј?\")");
             this.tboxMobNameTvor.TextChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // cboxMobSex
@@ -3495,7 +3495,7 @@ namespace BZEditor
             this.cboxMobSex.Name = "cboxMobSex";
             this.cboxMobSex.Size = new System.Drawing.Size(50, 21);
             this.cboxMobSex.TabIndex = 2;
-            this.toolTip.SetToolTip(this.cboxMobSex, "Пол моба.");
+            this.toolTip.SetToolTip(this.cboxMobSex, "РџРѕР» РјРѕР±Р°.");
             this.cboxMobSex.SelectedValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // tboxMobAliases
@@ -3506,7 +3506,7 @@ namespace BZEditor
             this.tboxMobAliases.Name = "tboxMobAliases";
             this.tboxMobAliases.Size = new System.Drawing.Size(288, 20);
             this.tboxMobAliases.TabIndex = 5;
-            this.toolTip.SetToolTip(this.tboxMobAliases, "Перечень ключевых слов для моба\r\n(в качетсве разделителя \"пробел\").");
+            this.toolTip.SetToolTip(this.tboxMobAliases, "РџРµСЂРµС‡РµРЅСЊ РєР»СЋС‡РµРІС‹С… СЃР»РѕРІ РґР»СЏ РјРѕР±Р°\r\n(РІ РєР°С‡РµС‚СЃРІРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ \"РїСЂРѕР±РµР»\").");
             this.tboxMobAliases.TextChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // tboxMobNameVin
@@ -3517,7 +3517,7 @@ namespace BZEditor
             this.tboxMobNameVin.Name = "tboxMobNameVin";
             this.tboxMobNameVin.Size = new System.Drawing.Size(288, 20);
             this.tboxMobNameVin.TabIndex = 10;
-            this.toolTip.SetToolTip(this.tboxMobNameVin, "Название моба в винительном падеже\r\n(отвечает на вопрос \"Вижу кого?\")");
+            this.toolTip.SetToolTip(this.tboxMobNameVin, "РќР°Р·РІР°РЅРёРµ РјРѕР±Р° РІ РІРёРЅРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"Р’РёР¶Сѓ РєРѕРіРѕ?\")");
             this.tboxMobNameVin.TextChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // tboxMobNameDat
@@ -3528,7 +3528,7 @@ namespace BZEditor
             this.tboxMobNameDat.Name = "tboxMobNameDat";
             this.tboxMobNameDat.Size = new System.Drawing.Size(288, 20);
             this.tboxMobNameDat.TabIndex = 9;
-            this.toolTip.SetToolTip(this.tboxMobNameDat, "Название моба в дательном падеже\r\n(отвечает на вопрос \"Рад кому?\")");
+            this.toolTip.SetToolTip(this.tboxMobNameDat, "РќР°Р·РІР°РЅРёРµ РјРѕР±Р° РІ РґР°С‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"Р Р°Рґ РєРѕРјСѓ?\")");
             this.tboxMobNameDat.TextChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // tboxMobNameRod
@@ -3539,7 +3539,7 @@ namespace BZEditor
             this.tboxMobNameRod.Name = "tboxMobNameRod";
             this.tboxMobNameRod.Size = new System.Drawing.Size(288, 20);
             this.tboxMobNameRod.TabIndex = 8;
-            this.toolTip.SetToolTip(this.tboxMobNameRod, "Название моба в родительном падеже\r\n(отвечает на вопрос \"Нет кого?\")");
+            this.toolTip.SetToolTip(this.tboxMobNameRod, "РќР°Р·РІР°РЅРёРµ РјРѕР±Р° РІ СЂРѕРґРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"РќРµС‚ РєРѕРіРѕ?\")");
             this.tboxMobNameRod.TextChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // tboxMobNameImen
@@ -3550,7 +3550,7 @@ namespace BZEditor
             this.tboxMobNameImen.Name = "tboxMobNameImen";
             this.tboxMobNameImen.Size = new System.Drawing.Size(280, 20);
             this.tboxMobNameImen.TabIndex = 6;
-            this.toolTip.SetToolTip(this.tboxMobNameImen, "Название моба в именительном падеже\r\n(отвечает на вопрос \"КТО?\")");
+            this.toolTip.SetToolTip(this.tboxMobNameImen, "РќР°Р·РІР°РЅРёРµ РјРѕР±Р° РІ РёРјРµРЅРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"РљРўРћ?\")");
             this.tboxMobNameImen.TextChanged += new System.EventHandler(this.MobValueChanged);
             this.tboxMobNameImen.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tboxMobNameImen_KeyUp);
             // 
@@ -3563,7 +3563,7 @@ namespace BZEditor
             this.tboxMobNamePred.Name = "tboxMobNamePred";
             this.tboxMobNamePred.Size = new System.Drawing.Size(288, 20);
             this.tboxMobNamePred.TabIndex = 12;
-            this.toolTip.SetToolTip(this.tboxMobNamePred, "Название моба в предложном падеже\r\n(отвечает на вопрос \"Говорю о ком?\")");
+            this.toolTip.SetToolTip(this.tboxMobNamePred, "РќР°Р·РІР°РЅРёРµ РјРѕР±Р° РІ РїСЂРµРґР»РѕР¶РЅРѕРј РїР°РґРµР¶Рµ\r\n(РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃ \"Р“РѕРІРѕСЂСЋ Рѕ РєРѕРј?\")");
             this.tboxMobNamePred.TextChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // tboxMobDesc
@@ -3574,7 +3574,7 @@ namespace BZEditor
             this.tboxMobDesc.Name = "tboxMobDesc";
             this.tboxMobDesc.Size = new System.Drawing.Size(332, 20);
             this.tboxMobDesc.TabIndex = 13;
-            this.toolTip.SetToolTip(this.tboxMobDesc, "Описание моба одной строкой.\r\nТо, что видит игрок, при входе\r\nв комнату с мобом.");
+            this.toolTip.SetToolTip(this.tboxMobDesc, "РћРїРёСЃР°РЅРёРµ РјРѕР±Р° РѕРґРЅРѕР№ СЃС‚СЂРѕРєРѕР№.\r\nРўРѕ, С‡С‚Рѕ РІРёРґРёС‚ РёРіСЂРѕРє, РїСЂРё РІС…РѕРґРµ\r\nРІ РєРѕРјРЅР°С‚Сѓ СЃ РјРѕР±РѕРј.");
             this.tboxMobDesc.TextChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // nudMobHitroll
@@ -3583,8 +3583,8 @@ namespace BZEditor
             this.nudMobHitroll.Name = "nudMobHitroll";
             this.nudMobHitroll.Size = new System.Drawing.Size(52, 20);
             this.nudMobHitroll.TabIndex = 12;
-            this.toolTip.SetToolTip(this.nudMobHitroll, "Хитролл моба.\r\nОт 0[плохо] до 100[хорошо].\r\nЧем больше значение этого параметра,\r" +
-        "\nтем больше вероятность успешного \r\nпрохождения физ.атаки этого моба.");
+            this.toolTip.SetToolTip(this.nudMobHitroll, "РҐРёС‚СЂРѕР»Р» РјРѕР±Р°.\r\nРћС‚ 0[РїР»РѕС…Рѕ] РґРѕ 100[С…РѕСЂРѕС€Рѕ].\r\nР§РµРј Р±РѕР»СЊС€Рµ Р·РЅР°С‡РµРЅРёРµ СЌС‚РѕРіРѕ РїР°СЂР°РјРµС‚СЂР°,\r" +
+        "\nС‚РµРј Р±РѕР»СЊС€Рµ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ СѓСЃРїРµС€РЅРѕРіРѕ \r\nРїСЂРѕС…РѕР¶РґРµРЅРёСЏ С„РёР·.Р°С‚Р°РєРё СЌС‚РѕРіРѕ РјРѕР±Р°.");
             this.nudMobHitroll.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // nudMobAC
@@ -3603,8 +3603,8 @@ namespace BZEditor
             this.nudMobAC.Name = "nudMobAC";
             this.nudMobAC.Size = new System.Drawing.Size(52, 20);
             this.nudMobAC.TabIndex = 11;
-            this.toolTip.SetToolTip(this.nudMobAC, "АС моба.\r\nЧем AC меньше, тем меньше вероятность\r\nуспешного прохождения по мобу фи" +
-        "з.атаки");
+            this.toolTip.SetToolTip(this.nudMobAC, "РђРЎ РјРѕР±Р°.\r\nР§РµРј AC РјРµРЅСЊС€Рµ, С‚РµРј РјРµРЅСЊС€Рµ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ\r\nСѓСЃРїРµС€РЅРѕРіРѕ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ РїРѕ РјРѕР±Сѓ С„Рё" +
+        "Р·.Р°С‚Р°РєРё");
             this.nudMobAC.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // nudMobMaxInWorld
@@ -3623,13 +3623,13 @@ namespace BZEditor
             this.nudMobMaxInWorld.Name = "nudMobMaxInWorld";
             this.nudMobMaxInWorld.Size = new System.Drawing.Size(52, 20);
             this.nudMobMaxInWorld.TabIndex = 13;
-            this.toolTip.SetToolTip(this.nudMobMaxInWorld, "Максимальное количество \r\nмобов такого типа в мире.");
+            this.toolTip.SetToolTip(this.nudMobMaxInWorld, "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ \r\nРјРѕР±РѕРІ С‚Р°РєРѕРіРѕ С‚РёРїР° РІ РјРёСЂРµ.");
             this.nudMobMaxInWorld.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // dctrlMobHP
             // 
             this.dctrlMobHP.BackColor = System.Drawing.SystemColors.Control;
-            this.dctrlMobHP.LabelText = "Количество хитов";
+            this.dctrlMobHP.LabelText = "РљРѕР»РёС‡РµСЃС‚РІРѕ С…РёС‚РѕРІ";
             this.dctrlMobHP.Location = new System.Drawing.Point(6, 84);
             this.dctrlMobHP.MinRandomValue = -10;
             this.dctrlMobHP.Name = "dctrlMobHP";
@@ -3654,13 +3654,13 @@ namespace BZEditor
             this.dctrlMobHP.SignFixed = true;
             this.dctrlMobHP.Size = new System.Drawing.Size(193, 42);
             this.dctrlMobHP.TabIndex = 14;
-            this.toolTip.SetToolTip(this.dctrlMobHP, "Максимальное количество жизни у моба.");
+            this.toolTip.SetToolTip(this.dctrlMobHP, "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р¶РёР·РЅРё Сѓ РјРѕР±Р°.");
             this.dctrlMobHP.Value = "0d0+0";
             this.dctrlMobHP.ValueChanged += new BZEditor.UcDiceControl.ValueChangeEvent(this.MobValueChanged);
             // 
             // dctrlMobAttack
             // 
-            this.dctrlMobAttack.LabelText = "Сила удара";
+            this.dctrlMobAttack.LabelText = "РЎРёР»Р° СѓРґР°СЂР°";
             this.dctrlMobAttack.Location = new System.Drawing.Point(207, 84);
             this.dctrlMobAttack.MinRandomValue = 1;
             this.dctrlMobAttack.Name = "dctrlMobAttack";
@@ -3685,7 +3685,7 @@ namespace BZEditor
             this.dctrlMobAttack.SignFixed = true;
             this.dctrlMobAttack.Size = new System.Drawing.Size(193, 42);
             this.dctrlMobAttack.TabIndex = 15;
-            this.toolTip.SetToolTip(this.dctrlMobAttack, "Сила удара моба.");
+            this.toolTip.SetToolTip(this.dctrlMobAttack, "РЎРёР»Р° СѓРґР°СЂР° РјРѕР±Р°.");
             this.dctrlMobAttack.Value = "0d0+0";
             this.dctrlMobAttack.ValueChanged += new BZEditor.UcDiceControl.ValueChangeEvent(this.MobValueChanged);
             // 
@@ -3700,7 +3700,7 @@ namespace BZEditor
             this.nudMobWeight.Name = "nudMobWeight";
             this.nudMobWeight.Size = new System.Drawing.Size(52, 20);
             this.nudMobWeight.TabIndex = 10;
-            this.toolTip.SetToolTip(this.nudMobWeight, "Вес моба.");
+            this.toolTip.SetToolTip(this.nudMobWeight, "Р’РµСЃ РјРѕР±Р°.");
             this.nudMobWeight.Value = new decimal(new int[] {
             50,
             0,
@@ -3719,7 +3719,7 @@ namespace BZEditor
             this.nudMobSize.Name = "nudMobSize";
             this.nudMobSize.Size = new System.Drawing.Size(52, 20);
             this.nudMobSize.TabIndex = 8;
-            this.toolTip.SetToolTip(this.nudMobSize, "Размер моба.");
+            this.toolTip.SetToolTip(this.nudMobSize, "Р Р°Р·РјРµСЂ РјРѕР±Р°.");
             this.nudMobSize.Value = new decimal(new int[] {
             10,
             0,
@@ -3738,7 +3738,7 @@ namespace BZEditor
             this.nudMobExpa.Name = "nudMobExpa";
             this.nudMobExpa.Size = new System.Drawing.Size(106, 20);
             this.nudMobExpa.TabIndex = 23;
-            this.toolTip.SetToolTip(this.nudMobExpa, "Количество очков опыта, которое\r\nполучит игрок за первое убийсво моба");
+            this.toolTip.SetToolTip(this.nudMobExpa, "РљРѕР»РёС‡РµСЃС‚РІРѕ РѕС‡РєРѕРІ РѕРїС‹С‚Р°, РєРѕС‚РѕСЂРѕРµ\r\nРїРѕР»СѓС‡РёС‚ РёРіСЂРѕРє Р·Р° РїРµСЂРІРѕРµ СѓР±РёР№СЃРІРѕ РјРѕР±Р°");
             this.nudMobExpa.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // btnSelectMobPath
@@ -3749,9 +3749,9 @@ namespace BZEditor
             this.btnSelectMobPath.Name = "btnSelectMobPath";
             this.btnSelectMobPath.Size = new System.Drawing.Size(71, 22);
             this.btnSelectMobPath.TabIndex = 22;
-            this.btnSelectMobPath.Text = "Изменить";
-            this.toolTip.SetToolTip(this.btnSelectMobPath, "Путь, по которому перемещается моб.\r\nДля изменения: \r\n1.Нажать кнопку\r\n2.Выделить" +
-        " комнаты на карте\r\n3.Еще раз нажать кнопку\r\n(можно править вручную в строке)");
+            this.btnSelectMobPath.Text = "РР·РјРµРЅРёС‚СЊ";
+            this.toolTip.SetToolTip(this.btnSelectMobPath, "РџСѓС‚СЊ, РїРѕ РєРѕС‚РѕСЂРѕРјСѓ РїРµСЂРµРјРµС‰Р°РµС‚СЃСЏ РјРѕР±.\r\nР”Р»СЏ РёР·РјРµРЅРµРЅРёСЏ: \r\n1.РќР°Р¶Р°С‚СЊ РєРЅРѕРїРєСѓ\r\n2.Р’С‹РґРµР»РёС‚СЊ" +
+        " РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ\r\n3.Р•С‰Рµ СЂР°Р· РЅР°Р¶Р°С‚СЊ РєРЅРѕРїРєСѓ\r\n(РјРѕР¶РЅРѕ РїСЂР°РІРёС‚СЊ РІСЂСѓС‡РЅСѓСЋ РІ СЃС‚СЂРѕРєРµ)");
             this.btnSelectMobPath.Click += new System.EventHandler(this.btnSelectMobPath_Click);
             // 
             // tboxMobDestination
@@ -3763,8 +3763,8 @@ namespace BZEditor
             this.tboxMobDestination.ReadOnly = true;
             this.tboxMobDestination.Size = new System.Drawing.Size(319, 20);
             this.tboxMobDestination.TabIndex = 17;
-            this.toolTip.SetToolTip(this.tboxMobDestination, "Путь, по которому перемещается моб.\r\nДля изменения: \r\n1.Нажать кнопку\r\n2.Выделить" +
-        " комнаты на карте\r\n3.Еще раз нажать кнопку\r\n(можно править вручную в строке)");
+            this.toolTip.SetToolTip(this.tboxMobDestination, "РџСѓС‚СЊ, РїРѕ РєРѕС‚РѕСЂРѕРјСѓ РїРµСЂРµРјРµС‰Р°РµС‚СЃСЏ РјРѕР±.\r\nР”Р»СЏ РёР·РјРµРЅРµРЅРёСЏ: \r\n1.РќР°Р¶Р°С‚СЊ РєРЅРѕРїРєСѓ\r\n2.Р’С‹РґРµР»РёС‚СЊ" +
+        " РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ\r\n3.Р•С‰Рµ СЂР°Р· РЅР°Р¶Р°С‚СЊ РєРЅРѕРїРєСѓ\r\n(РјРѕР¶РЅРѕ РїСЂР°РІРёС‚СЊ РІСЂСѓС‡РЅСѓСЋ РІ СЃС‚СЂРѕРєРµ)");
             this.tboxMobDestination.WordWrap = false;
             this.tboxMobDestination.TextChanged += new System.EventHandler(this.tboxMobDestination_TextChanged);
             // 
@@ -3779,7 +3779,7 @@ namespace BZEditor
             this.nudMobHeight.Name = "nudMobHeight";
             this.nudMobHeight.Size = new System.Drawing.Size(52, 20);
             this.nudMobHeight.TabIndex = 9;
-            this.toolTip.SetToolTip(this.nudMobHeight, "Рост моба.");
+            this.toolTip.SetToolTip(this.nudMobHeight, "Р РѕСЃС‚ РјРѕР±Р°.");
             this.nudMobHeight.Value = new decimal(new int[] {
             30,
             0,
@@ -3798,7 +3798,7 @@ namespace BZEditor
             this.nudMobLevel.Name = "nudMobLevel";
             this.nudMobLevel.Size = new System.Drawing.Size(52, 20);
             this.nudMobLevel.TabIndex = 7;
-            this.toolTip.SetToolTip(this.nudMobLevel, "Уровень моба.");
+            this.toolTip.SetToolTip(this.nudMobLevel, "РЈСЂРѕРІРµРЅСЊ РјРѕР±Р°.");
             this.nudMobLevel.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // cboxMobAlign
@@ -3809,7 +3809,7 @@ namespace BZEditor
             this.cboxMobAlign.Name = "cboxMobAlign";
             this.cboxMobAlign.Size = new System.Drawing.Size(190, 21);
             this.cboxMobAlign.TabIndex = 16;
-            this.toolTip.SetToolTip(this.cboxMobAlign, "Наклонность моба.");
+            this.toolTip.SetToolTip(this.cboxMobAlign, "РќР°РєР»РѕРЅРЅРѕСЃС‚СЊ РјРѕР±Р°.");
             this.cboxMobAlign.SelectedIndexChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // cboxMobAttackType
@@ -3820,7 +3820,7 @@ namespace BZEditor
             this.cboxMobAttackType.Name = "cboxMobAttackType";
             this.cboxMobAttackType.Size = new System.Drawing.Size(198, 21);
             this.cboxMobAttackType.TabIndex = 17;
-            this.toolTip.SetToolTip(this.cboxMobAttackType, "Тип атаки моба.");
+            this.toolTip.SetToolTip(this.cboxMobAttackType, "РўРёРї Р°С‚Р°РєРё РјРѕР±Р°.");
             this.cboxMobAttackType.SelectedIndexChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // btnMobAddHelper
@@ -3831,7 +3831,7 @@ namespace BZEditor
             this.btnMobAddHelper.Name = "btnMobAddHelper";
             this.btnMobAddHelper.Size = new System.Drawing.Size(28, 28);
             this.btnMobAddHelper.TabIndex = 29;
-            this.toolTip.SetToolTip(this.btnMobAddHelper, "Добавить помощников мобу.");
+            this.toolTip.SetToolTip(this.btnMobAddHelper, "Р”РѕР±Р°РІРёС‚СЊ РїРѕРјРѕС‰РЅРёРєРѕРІ РјРѕР±Сѓ.");
             this.btnMobAddHelper.Click += new System.EventHandler(this.btnMobAddHelper_Click);
             // 
             // btnRemoveHelpersList
@@ -3842,7 +3842,7 @@ namespace BZEditor
             this.btnRemoveHelpersList.Name = "btnRemoveHelpersList";
             this.btnRemoveHelpersList.Size = new System.Drawing.Size(28, 28);
             this.btnRemoveHelpersList.TabIndex = 28;
-            this.toolTip.SetToolTip(this.btnRemoveHelpersList, "Удалить помощников, \r\nвыбранных в списке.");
+            this.toolTip.SetToolTip(this.btnRemoveHelpersList, "РЈРґР°Р»РёС‚СЊ РїРѕРјРѕС‰РЅРёРєРѕРІ, \r\nРІС‹Р±СЂР°РЅРЅС‹С… РІ СЃРїРёСЃРєРµ.");
             this.btnRemoveHelpersList.Click += new System.EventHandler(this.btnRemoveHelpersList_Click);
             // 
             // btnAddMobTrigger
@@ -3853,7 +3853,7 @@ namespace BZEditor
             this.btnAddMobTrigger.Name = "btnAddMobTrigger";
             this.btnAddMobTrigger.Size = new System.Drawing.Size(28, 28);
             this.btnAddMobTrigger.TabIndex = 34;
-            this.toolTip.SetToolTip(this.btnAddMobTrigger, "Добавить триггеры мобу.");
+            this.toolTip.SetToolTip(this.btnAddMobTrigger, "Р”РѕР±Р°РІРёС‚СЊ С‚СЂРёРіРіРµСЂС‹ РјРѕР±Сѓ.");
             this.btnAddMobTrigger.Click += new System.EventHandler(this.btnAddMobTrigger_Click);
             // 
             // btnMobRemoveTrigger
@@ -3864,7 +3864,7 @@ namespace BZEditor
             this.btnMobRemoveTrigger.Name = "btnMobRemoveTrigger";
             this.btnMobRemoveTrigger.Size = new System.Drawing.Size(28, 28);
             this.btnMobRemoveTrigger.TabIndex = 33;
-            this.toolTip.SetToolTip(this.btnMobRemoveTrigger, "Удалить триггеры, \r\nвыбранные в списке.");
+            this.toolTip.SetToolTip(this.btnMobRemoveTrigger, "РЈРґР°Р»РёС‚СЊ С‚СЂРёРіРіРµСЂС‹, \r\nРІС‹Р±СЂР°РЅРЅС‹Рµ РІ СЃРїРёСЃРєРµ.");
             this.btnMobRemoveTrigger.Click += new System.EventHandler(this.btnMobRemoveTrigger_Click);
             // 
             // nudSaveFightSkills
@@ -3883,7 +3883,7 @@ namespace BZEditor
             this.nudSaveFightSkills.Name = "nudSaveFightSkills";
             this.nudSaveFightSkills.Size = new System.Drawing.Size(45, 20);
             this.nudSaveFightSkills.TabIndex = 4;
-            this.toolTip.SetToolTip(this.nudSaveFightSkills, "РЕАКЦИЯ");
+            this.toolTip.SetToolTip(this.nudSaveFightSkills, "Р Р•РђРљР¦РРЇ");
             this.nudSaveFightSkills.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // nudSaveMagDam
@@ -3902,7 +3902,7 @@ namespace BZEditor
             this.nudSaveMagDam.Name = "nudSaveMagDam";
             this.nudSaveMagDam.Size = new System.Drawing.Size(45, 20);
             this.nudSaveMagDam.TabIndex = 3;
-            this.toolTip.SetToolTip(this.nudSaveMagDam, "СТОЙКОСТЬ");
+            this.toolTip.SetToolTip(this.nudSaveMagDam, "РЎРўРћР™РљРћРЎРўР¬");
             this.nudSaveMagDam.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // nudSaveParalyze
@@ -3921,7 +3921,7 @@ namespace BZEditor
             this.nudSaveParalyze.Name = "nudSaveParalyze";
             this.nudSaveParalyze.Size = new System.Drawing.Size(45, 20);
             this.nudSaveParalyze.TabIndex = 1;
-            this.toolTip.SetToolTip(this.nudSaveParalyze, "ВОЛЯ");
+            this.toolTip.SetToolTip(this.nudSaveParalyze, "Р’РћР›РЇ");
             this.nudSaveParalyze.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // nudSaveMagBreathe
@@ -3940,7 +3940,7 @@ namespace BZEditor
             this.nudSaveMagBreathe.Name = "nudSaveMagBreathe";
             this.nudSaveMagBreathe.Size = new System.Drawing.Size(45, 20);
             this.nudSaveMagBreathe.TabIndex = 2;
-            this.toolTip.SetToolTip(this.nudSaveMagBreathe, "ЖИВУЧЕСТЬ");
+            this.toolTip.SetToolTip(this.nudSaveMagBreathe, "Р–РР’РЈР§Р•РЎРўР¬");
             this.nudSaveMagBreathe.ValueChanged += new System.EventHandler(this.MobValueChanged);
             // 
             // button1
@@ -3952,7 +3952,7 @@ namespace BZEditor
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 28);
             this.button1.TabIndex = 37;
-            this.toolTip.SetToolTip(this.button1, "Добавить триггеры мобу.");
+            this.toolTip.SetToolTip(this.button1, "Р”РѕР±Р°РІРёС‚СЊ С‚СЂРёРіРіРµСЂС‹ РјРѕР±Сѓ.");
             // 
             // button2
             // 
@@ -3963,7 +3963,7 @@ namespace BZEditor
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(28, 28);
             this.button2.TabIndex = 36;
-            this.toolTip.SetToolTip(this.button2, "Удалить триггеры, \r\nвыбранные в списке.");
+            this.toolTip.SetToolTip(this.button2, "РЈРґР°Р»РёС‚СЊ С‚СЂРёРіРіРµСЂС‹, \r\nРІС‹Р±СЂР°РЅРЅС‹Рµ РІ СЃРїРёСЃРєРµ.");
             // 
             // bdtAddMobInVirtualRoom
             // 
@@ -3973,7 +3973,7 @@ namespace BZEditor
             this.bdtAddMobInVirtualRoom.Name = "bdtAddMobInVirtualRoom";
             this.bdtAddMobInVirtualRoom.Size = new System.Drawing.Size(28, 28);
             this.bdtAddMobInVirtualRoom.TabIndex = 96;
-            this.toolTip.SetToolTip(this.bdtAddMobInVirtualRoom, "Добавить моба в виртуальную комнату.");
+            this.toolTip.SetToolTip(this.bdtAddMobInVirtualRoom, "Р”РѕР±Р°РІРёС‚СЊ РјРѕР±Р° РІ РІРёСЂС‚СѓР°Р»СЊРЅСѓСЋ РєРѕРјРЅР°С‚Сѓ.");
             this.bdtAddMobInVirtualRoom.Click += new System.EventHandler(this.bdtAddMobInVirtualRoom_Click);
             // 
             // btnRemoveMobFromVitrualRoom
@@ -3984,7 +3984,7 @@ namespace BZEditor
             this.btnRemoveMobFromVitrualRoom.Name = "btnRemoveMobFromVitrualRoom";
             this.btnRemoveMobFromVitrualRoom.Size = new System.Drawing.Size(28, 28);
             this.btnRemoveMobFromVitrualRoom.TabIndex = 95;
-            this.toolTip.SetToolTip(this.btnRemoveMobFromVitrualRoom, "Удалить из виртуальной комнаты моба, выбранного в списке");
+            this.toolTip.SetToolTip(this.btnRemoveMobFromVitrualRoom, "РЈРґР°Р»РёС‚СЊ РёР· РІРёСЂС‚СѓР°Р»СЊРЅРѕР№ РєРѕРјРЅР°С‚С‹ РјРѕР±Р°, РІС‹Р±СЂР°РЅРЅРѕРіРѕ РІ СЃРїРёСЃРєРµ");
             this.btnRemoveMobFromVitrualRoom.Click += new System.EventHandler(this.btnRemoveMobFromVitrualRoom_Click);
             // 
             // elvVitrualRoomMobObjects
@@ -4003,8 +4003,8 @@ namespace BZEditor
             this.elvVitrualRoomMobObjects.OwnerDraw = true;
             this.elvVitrualRoomMobObjects.Size = new System.Drawing.Size(454, 110);
             this.elvVitrualRoomMobObjects.TabIndex = 98;
-            this.toolTip.SetToolTip(this.elvVitrualRoomMobObjects, "Даблклик на ячейках \"Вероятность\" и \"Положение\"\r\nвыводит их в режим редактировани" +
-        "я");
+            this.toolTip.SetToolTip(this.elvVitrualRoomMobObjects, "Р”Р°Р±Р»РєР»РёРє РЅР° СЏС‡РµР№РєР°С… \"Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ\" Рё \"РџРѕР»РѕР¶РµРЅРёРµ\"\r\nРІС‹РІРѕРґРёС‚ РёС… РІ СЂРµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРё" +
+        "СЏ");
             this.elvVitrualRoomMobObjects.UseCompatibleStateImageBehavior = false;
             this.elvVitrualRoomMobObjects.View = System.Windows.Forms.View.Details;
             this.elvVitrualRoomMobObjects.ItemValueChanged += new ExtControls.ExtListView.ItemValueChangeEvent(this.elvVitrualRoomMobObjects_ItemValueChanged);
@@ -4019,7 +4019,7 @@ namespace BZEditor
             this.btnAddItemToMobInVirtualRoom.Name = "btnAddItemToMobInVirtualRoom";
             this.btnAddItemToMobInVirtualRoom.Size = new System.Drawing.Size(28, 28);
             this.btnAddItemToMobInVirtualRoom.TabIndex = 96;
-            this.toolTip.SetToolTip(this.btnAddItemToMobInVirtualRoom, "Добавить мобу предмет.");
+            this.toolTip.SetToolTip(this.btnAddItemToMobInVirtualRoom, "Р”РѕР±Р°РІРёС‚СЊ РјРѕР±Сѓ РїСЂРµРґРјРµС‚.");
             this.btnAddItemToMobInVirtualRoom.Click += new System.EventHandler(this.btnAddItemToMobInVirtualRoomClick);
             // 
             // btnRemoveItemFromMobInVirtualRoom
@@ -4030,7 +4030,7 @@ namespace BZEditor
             this.btnRemoveItemFromMobInVirtualRoom.Name = "btnRemoveItemFromMobInVirtualRoom";
             this.btnRemoveItemFromMobInVirtualRoom.Size = new System.Drawing.Size(28, 28);
             this.btnRemoveItemFromMobInVirtualRoom.TabIndex = 95;
-            this.toolTip.SetToolTip(this.btnRemoveItemFromMobInVirtualRoom, "Удалить предмет моба, выбранный в списке");
+            this.toolTip.SetToolTip(this.btnRemoveItemFromMobInVirtualRoom, "РЈРґР°Р»РёС‚СЊ РїСЂРµРґРјРµС‚ РјРѕР±Р°, РІС‹Р±СЂР°РЅРЅС‹Р№ РІ СЃРїРёСЃРєРµ");
             this.btnRemoveItemFromMobInVirtualRoom.Click += new System.EventHandler(this.btnRemoveItemFromMobInVirtualRoomClick);
             // 
             // nudVirtualRoomMobMaxInRoom
@@ -4052,7 +4052,7 @@ namespace BZEditor
             this.nudVirtualRoomMobMaxInRoom.Name = "nudVirtualRoomMobMaxInRoom";
             this.nudVirtualRoomMobMaxInRoom.Size = new System.Drawing.Size(61, 20);
             this.nudVirtualRoomMobMaxInRoom.TabIndex = 84;
-            this.toolTip.SetToolTip(this.nudVirtualRoomMobMaxInRoom, "Максимальное количество мобов\r\nвыбранного типа в комнате.");
+            this.toolTip.SetToolTip(this.nudVirtualRoomMobMaxInRoom, "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјРѕР±РѕРІ\r\nРІС‹Р±СЂР°РЅРЅРѕРіРѕ С‚РёРїР° РІ РєРѕРјРЅР°С‚Рµ.");
             this.nudVirtualRoomMobMaxInRoom.Value = new decimal(new int[] {
             1,
             0,
@@ -4067,9 +4067,9 @@ namespace BZEditor
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(71, 16);
             this.label40.TabIndex = 82;
-            this.label40.Text = "max в комн.";
+            this.label40.Text = "max РІ РєРѕРјРЅ.";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolTip.SetToolTip(this.label40, "Максимум мобов такого типа в комнате");
+            this.toolTip.SetToolTip(this.label40, "РњР°РєСЃРёРјСѓРј РјРѕР±РѕРІ С‚Р°РєРѕРіРѕ С‚РёРїР° РІ РєРѕРјРЅР°С‚Рµ");
             // 
             // button3
             // 
@@ -4079,7 +4079,7 @@ namespace BZEditor
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(28, 28);
             this.button3.TabIndex = 100;
-            this.toolTip.SetToolTip(this.button3, "Добавить мобу объект после смерти.");
+            this.toolTip.SetToolTip(this.button3, "Р”РѕР±Р°РІРёС‚СЊ РјРѕР±Сѓ РѕР±СЉРµРєС‚ РїРѕСЃР»Рµ СЃРјРµСЂС‚Рё.");
             this.button3.Click += new System.EventHandler(this.BtnRoomAddObjToMobAfterDeathClick);
             // 
             // elvRoomMobObjectsLoadingAfterDeath
@@ -4098,8 +4098,8 @@ namespace BZEditor
             this.elvRoomMobObjectsLoadingAfterDeath.OwnerDraw = true;
             this.elvRoomMobObjectsLoadingAfterDeath.Size = new System.Drawing.Size(454, 77);
             this.elvRoomMobObjectsLoadingAfterDeath.TabIndex = 101;
-            this.toolTip.SetToolTip(this.elvRoomMobObjectsLoadingAfterDeath, "Даблклик на ячейках \"Вероятность\" и \"Положение\"\r\nвыводит их в режим редактировани" +
-        "я");
+            this.toolTip.SetToolTip(this.elvRoomMobObjectsLoadingAfterDeath, "Р”Р°Р±Р»РєР»РёРє РЅР° СЏС‡РµР№РєР°С… \"Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ\" Рё \"РџРѕР»РѕР¶РµРЅРёРµ\"\r\nРІС‹РІРѕРґРёС‚ РёС… РІ СЂРµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРё" +
+        "СЏ");
             this.elvRoomMobObjectsLoadingAfterDeath.UseCompatibleStateImageBehavior = false;
             this.elvRoomMobObjectsLoadingAfterDeath.View = System.Windows.Forms.View.Details;
             this.elvRoomMobObjectsLoadingAfterDeath.ItemValueChanged += new ExtControls.ExtListView.ItemValueChangeEvent(this.ElvRoomMobObjectsLoadingAfterDeathItemValueChanged);
@@ -4114,7 +4114,7 @@ namespace BZEditor
             this.btnRoomRomoveObjFromMobAfterDeath.Name = "btnRoomRomoveObjFromMobAfterDeath";
             this.btnRoomRomoveObjFromMobAfterDeath.Size = new System.Drawing.Size(28, 28);
             this.btnRoomRomoveObjFromMobAfterDeath.TabIndex = 102;
-            this.toolTip.SetToolTip(this.btnRoomRomoveObjFromMobAfterDeath, "Удалить объект выбранный в списке");
+            this.toolTip.SetToolTip(this.btnRoomRomoveObjFromMobAfterDeath, "РЈРґР°Р»РёС‚СЊ РѕР±СЉРµРєС‚ РІС‹Р±СЂР°РЅРЅС‹Р№ РІ СЃРїРёСЃРєРµ");
             this.btnRoomRomoveObjFromMobAfterDeath.Click += new System.EventHandler(this.BtnRemoveRoomObjFromMobAfterDeathClick);
             // 
             // btnRoomRomoveObjFromMob
@@ -4125,7 +4125,7 @@ namespace BZEditor
             this.btnRoomRomoveObjFromMob.Name = "btnRoomRomoveObjFromMob";
             this.btnRoomRomoveObjFromMob.Size = new System.Drawing.Size(28, 28);
             this.btnRoomRomoveObjFromMob.TabIndex = 95;
-            this.toolTip.SetToolTip(this.btnRoomRomoveObjFromMob, "Удалить объект моба, выбранный в списке");
+            this.toolTip.SetToolTip(this.btnRoomRomoveObjFromMob, "РЈРґР°Р»РёС‚СЊ РѕР±СЉРµРєС‚ РјРѕР±Р°, РІС‹Р±СЂР°РЅРЅС‹Р№ РІ СЃРїРёСЃРєРµ");
             this.btnRoomRomoveObjFromMob.Click += new System.EventHandler(this.BtnRoomRomoveObjFromMobClick);
             // 
             // btnRoomAddObjToMob
@@ -4136,7 +4136,7 @@ namespace BZEditor
             this.btnRoomAddObjToMob.Name = "btnRoomAddObjToMob";
             this.btnRoomAddObjToMob.Size = new System.Drawing.Size(28, 28);
             this.btnRoomAddObjToMob.TabIndex = 96;
-            this.toolTip.SetToolTip(this.btnRoomAddObjToMob, "Добавить мобу объект.");
+            this.toolTip.SetToolTip(this.btnRoomAddObjToMob, "Р”РѕР±Р°РІРёС‚СЊ РјРѕР±Сѓ РѕР±СЉРµРєС‚.");
             this.btnRoomAddObjToMob.Click += new System.EventHandler(this.BtnRoomAddObjToMobClick);
             // 
             // elvRoomMobObjects
@@ -4155,8 +4155,8 @@ namespace BZEditor
             this.elvRoomMobObjects.OwnerDraw = true;
             this.elvRoomMobObjects.Size = new System.Drawing.Size(475, 117);
             this.elvRoomMobObjects.TabIndex = 98;
-            this.toolTip.SetToolTip(this.elvRoomMobObjects, "Даблклик на ячейках \"Вероятность\" и \"Положение\"\r\nвыводит их в режим редактировани" +
-        "я");
+            this.toolTip.SetToolTip(this.elvRoomMobObjects, "Р”Р°Р±Р»РєР»РёРє РЅР° СЏС‡РµР№РєР°С… \"Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ\" Рё \"РџРѕР»РѕР¶РµРЅРёРµ\"\r\nРІС‹РІРѕРґРёС‚ РёС… РІ СЂРµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРё" +
+        "СЏ");
             this.elvRoomMobObjects.UseCompatibleStateImageBehavior = false;
             this.elvRoomMobObjects.View = System.Windows.Forms.View.Details;
             this.elvRoomMobObjects.ItemValueChanged += new ExtControls.ExtListView.ItemValueChangeEvent(this.ElvRoomMobObjectsItemValueChanged);
@@ -4171,7 +4171,7 @@ namespace BZEditor
             this.btnMobSpecFormatCommonDesc.Name = "btnMobSpecFormatCommonDesc";
             this.btnMobSpecFormatCommonDesc.Size = new System.Drawing.Size(28, 28);
             this.btnMobSpecFormatCommonDesc.TabIndex = 44;
-            this.toolTip.SetToolTip(this.btnMobSpecFormatCommonDesc, "Выровнять по ширине\r\n(без сохранения абзацев).");
+            this.toolTip.SetToolTip(this.btnMobSpecFormatCommonDesc, "Р’С‹СЂРѕРІРЅСЏС‚СЊ РїРѕ С€РёСЂРёРЅРµ\r\n(Р±РµР· СЃРѕС…СЂР°РЅРµРЅРёСЏ Р°Р±Р·Р°С†РµРІ).");
             this.btnMobSpecFormatCommonDesc.Click += new System.EventHandler(this.btnMobSpecFormatCommonDesc_Click);
             // 
             // 
@@ -4185,7 +4185,7 @@ namespace BZEditor
             this.btnMobFormatCommonDesc.Size = new System.Drawing.Size(28, 28);
             this.btnMobFormatCommonDesc.TabIndex = 44;
             this.btnMobFormatCommonDesc.Text = " ";
-            this.toolTip.SetToolTip(this.btnMobFormatCommonDesc, "Выровнять по ширине\r\n(с сохранением абзацев).");
+            this.toolTip.SetToolTip(this.btnMobFormatCommonDesc, "Р’С‹СЂРѕРІРЅСЏС‚СЊ РїРѕ С€РёСЂРёРЅРµ\r\n(СЃ СЃРѕС…СЂР°РЅРµРЅРёРµРј Р°Р±Р·Р°С†РµРІ).");
             this.btnMobFormatCommonDesc.Click += new System.EventHandler(this.btnMobFormatCommonDesc_Click);
             // 
             // nudObjMinRemorts
@@ -4205,8 +4205,8 @@ namespace BZEditor
             this.nudObjMinRemorts.Name = "nudObjMinRemorts";
             this.nudObjMinRemorts.Size = new System.Drawing.Size(80, 20);
             this.nudObjMinRemorts.TabIndex = 3;
-            this.toolTip.SetToolTip(this.nudObjMinRemorts, "если x<0 то предмет доступен до x-реморта,\r\nесли x=0, то ограничение расчитываетс" +
-        "я автоматически\r\nесли x>0 то предмет доступен начиная с x-реморта.\r\n");
+            this.toolTip.SetToolTip(this.nudObjMinRemorts, "РµСЃР»Рё x<0 С‚Рѕ РїСЂРµРґРјРµС‚ РґРѕСЃС‚СѓРїРµРЅ РґРѕ x-СЂРµРјРѕСЂС‚Р°,\r\nРµСЃР»Рё x=0, С‚Рѕ РѕРіСЂР°РЅРёС‡РµРЅРёРµ СЂР°СЃС‡РёС‚С‹РІР°РµС‚СЃ" +
+        "СЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё\r\nРµСЃР»Рё x>0 С‚Рѕ РїСЂРµРґРјРµС‚ РґРѕСЃС‚СѓРїРµРЅ РЅР°С‡РёРЅР°СЏ СЃ x-СЂРµРјРѕСЂС‚Р°.\r\n");
             this.nudObjMinRemorts.ValueChanged += new System.EventHandler(this.ObjValueValidated);
             // 
             // btnAddRoomIngredient
@@ -4218,7 +4218,7 @@ namespace BZEditor
             this.btnAddRoomIngredient.Name = "btnAddRoomIngredient";
             this.btnAddRoomIngredient.Size = new System.Drawing.Size(28, 28);
             this.btnAddRoomIngredient.TabIndex = 99;
-            this.toolTip.SetToolTip(this.btnAddRoomIngredient, "Добавить моба в комнату.");
+            this.toolTip.SetToolTip(this.btnAddRoomIngredient, "Р”РѕР±Р°РІРёС‚СЊ РјРѕР±Р° РІ РєРѕРјРЅР°С‚Сѓ.");
             this.btnAddRoomIngredient.Click += new System.EventHandler(this.BtnAddRoomIngredientClick);
             // 
             // btnRemoveRoomIngredient
@@ -4230,7 +4230,7 @@ namespace BZEditor
             this.btnRemoveRoomIngredient.Name = "btnRemoveRoomIngredient";
             this.btnRemoveRoomIngredient.Size = new System.Drawing.Size(28, 28);
             this.btnRemoveRoomIngredient.TabIndex = 98;
-            this.toolTip.SetToolTip(this.btnRemoveRoomIngredient, "Удалить моба, выбранного в списке");
+            this.toolTip.SetToolTip(this.btnRemoveRoomIngredient, "РЈРґР°Р»РёС‚СЊ РјРѕР±Р°, РІС‹Р±СЂР°РЅРЅРѕРіРѕ РІ СЃРїРёСЃРєРµ");
             this.btnRemoveRoomIngredient.Click += new System.EventHandler(this.BtnRemoveRoomIngredientClick);
             // 
             // elvRoomIngredients
@@ -4247,8 +4247,8 @@ namespace BZEditor
             this.elvRoomIngredients.OwnerDraw = true;
             this.elvRoomIngredients.Size = new System.Drawing.Size(484, 282);
             this.elvRoomIngredients.TabIndex = 100;
-            this.toolTip.SetToolTip(this.elvRoomIngredients, "Даблклик на ячейках \"Вероятность\" и \"Положение\"\r\nвыводит их в режим редактировани" +
-        "я");
+            this.toolTip.SetToolTip(this.elvRoomIngredients, "Р”Р°Р±Р»РєР»РёРє РЅР° СЏС‡РµР№РєР°С… \"Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ\" Рё \"РџРѕР»РѕР¶РµРЅРёРµ\"\r\nРІС‹РІРѕРґРёС‚ РёС… РІ СЂРµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРё" +
+        "СЏ");
             this.elvRoomIngredients.UseCompatibleStateImageBehavior = false;
             this.elvRoomIngredients.View = System.Windows.Forms.View.Details;
             this.elvRoomIngredients.ItemValueChanged += new ExtControls.ExtListView.ItemValueChangeEvent(this.ElvRoomIngredientsItemValueChanged);
@@ -4268,7 +4268,7 @@ namespace BZEditor
             this.elvMobIngredients.OwnerDraw = true;
             this.elvMobIngredients.Size = new System.Drawing.Size(423, 317);
             this.elvMobIngredients.TabIndex = 103;
-            this.toolTip.SetToolTip(this.elvMobIngredients, "Даблклик на ячейках выводит их в режим редактирования");
+            this.toolTip.SetToolTip(this.elvMobIngredients, "Р”Р°Р±Р»РєР»РёРє РЅР° СЏС‡РµР№РєР°С… РІС‹РІРѕРґРёС‚ РёС… РІ СЂРµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ");
             this.elvMobIngredients.UseCompatibleStateImageBehavior = false;
             this.elvMobIngredients.View = System.Windows.Forms.View.Details;
             this.elvMobIngredients.ItemValueChanged += new ExtControls.ExtListView.ItemValueChangeEvent(this.ElvMobIngredientsItemValueChanged);
@@ -4282,7 +4282,7 @@ namespace BZEditor
             this.btnAddMobIngredient.Name = "btnAddMobIngredient";
             this.btnAddMobIngredient.Size = new System.Drawing.Size(28, 28);
             this.btnAddMobIngredient.TabIndex = 102;
-            this.toolTip.SetToolTip(this.btnAddMobIngredient, "Добавить моба в комнату.");
+            this.toolTip.SetToolTip(this.btnAddMobIngredient, "Р”РѕР±Р°РІРёС‚СЊ РјРѕР±Р° РІ РєРѕРјРЅР°С‚Сѓ.");
             this.btnAddMobIngredient.Click += new System.EventHandler(this.BtnAddMobIngredientClick);
             // 
             // btnRemoveMobIngredient
@@ -4293,7 +4293,7 @@ namespace BZEditor
             this.btnRemoveMobIngredient.Name = "btnRemoveMobIngredient";
             this.btnRemoveMobIngredient.Size = new System.Drawing.Size(28, 28);
             this.btnRemoveMobIngredient.TabIndex = 101;
-            this.toolTip.SetToolTip(this.btnRemoveMobIngredient, "Удалить моба, выбранного в списке");
+            this.toolTip.SetToolTip(this.btnRemoveMobIngredient, "РЈРґР°Р»РёС‚СЊ РјРѕР±Р°, РІС‹Р±СЂР°РЅРЅРѕРіРѕ РІ СЃРїРёСЃРєРµ");
             this.btnRemoveMobIngredient.Click += new System.EventHandler(this.BtnRemoveMobIngredientClick);
             // 
             // cbRoomDescAllowHyp
@@ -4303,7 +4303,7 @@ namespace BZEditor
             this.cbRoomDescAllowHyp.Name = "cbRoomDescAllowHyp";
             this.cbRoomDescAllowHyp.Size = new System.Drawing.Size(91, 18);
             this.cbRoomDescAllowHyp.TabIndex = 104;
-            this.cbRoomDescAllowHyp.Text = "По слогам";
+            this.cbRoomDescAllowHyp.Text = "РџРѕ СЃР»РѕРіР°Рј";
             this.cbRoomDescAllowHyp.UseVisualStyleBackColor = true;
             // 
             // checkBox3
@@ -4313,7 +4313,7 @@ namespace BZEditor
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(91, 18);
             this.checkBox3.TabIndex = 104;
-            this.checkBox3.Text = "По слогам";
+            this.checkBox3.Text = "РџРѕ СЃР»РѕРіР°Рј";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // tabPage1
@@ -4324,7 +4324,7 @@ namespace BZEditor
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(779, 96);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Общее";
+            this.tabPage1.Text = "РћР±С‰РµРµ";
             // 
             // CExtRichTextBox2
             // 
@@ -4348,7 +4348,7 @@ namespace BZEditor
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(779, 96);
             this.tabPage3.TabIndex = 1;
-            this.tabPage3.Text = "День";
+            this.tabPage3.Text = "Р”РµРЅСЊ";
             // 
             // CExtRichTextBox3
             // 
@@ -4372,7 +4372,7 @@ namespace BZEditor
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(779, 96);
             this.tabPage4.TabIndex = 2;
-            this.tabPage4.Text = "Ночь";
+            this.tabPage4.Text = "РќРѕС‡СЊ";
             // 
             // checkBox6
             // 
@@ -4381,7 +4381,7 @@ namespace BZEditor
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(83, 19);
             this.checkBox6.TabIndex = 99;
-            this.checkBox6.Text = "Замещать";
+            this.checkBox6.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // CExtRichTextBox4
@@ -4406,7 +4406,7 @@ namespace BZEditor
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(779, 96);
             this.tabPage5.TabIndex = 3;
-            this.tabPage5.Text = "Зима[Д]";
+            this.tabPage5.Text = "Р—РёРјР°[Р”]";
             // 
             // checkBox7
             // 
@@ -4415,7 +4415,7 @@ namespace BZEditor
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(83, 19);
             this.checkBox7.TabIndex = 99;
-            this.checkBox7.Text = "Замещать";
+            this.checkBox7.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // CExtRichTextBox5
@@ -4440,7 +4440,7 @@ namespace BZEditor
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(779, 96);
             this.tabPage6.TabIndex = 4;
-            this.tabPage6.Text = "Зима[Н]";
+            this.tabPage6.Text = "Р—РёРјР°[Рќ]";
             // 
             // checkBox8
             // 
@@ -4449,7 +4449,7 @@ namespace BZEditor
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(83, 19);
             this.checkBox8.TabIndex = 99;
-            this.checkBox8.Text = "Замещать";
+            this.checkBox8.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // CExtRichTextBox6
@@ -4474,7 +4474,7 @@ namespace BZEditor
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Size = new System.Drawing.Size(779, 96);
             this.tabPage7.TabIndex = 5;
-            this.tabPage7.Text = "Весна[Д]";
+            this.tabPage7.Text = "Р’РµСЃРЅР°[Р”]";
             // 
             // checkBox9
             // 
@@ -4483,7 +4483,7 @@ namespace BZEditor
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(83, 19);
             this.checkBox9.TabIndex = 99;
-            this.checkBox9.Text = "Замещать";
+            this.checkBox9.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // CExtRichTextBox7
@@ -4508,7 +4508,7 @@ namespace BZEditor
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Size = new System.Drawing.Size(779, 96);
             this.tabPage16.TabIndex = 6;
-            this.tabPage16.Text = "Весна[Н]";
+            this.tabPage16.Text = "Р’РµСЃРЅР°[Рќ]";
             // 
             // checkBox10
             // 
@@ -4517,7 +4517,7 @@ namespace BZEditor
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(83, 19);
             this.checkBox10.TabIndex = 99;
-            this.checkBox10.Text = "Замещать";
+            this.checkBox10.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // CExtRichTextBox8
@@ -4542,7 +4542,7 @@ namespace BZEditor
             this.tabPage17.Name = "tabPage17";
             this.tabPage17.Size = new System.Drawing.Size(779, 96);
             this.tabPage17.TabIndex = 7;
-            this.tabPage17.Text = "Лето[Д]";
+            this.tabPage17.Text = "Р›РµС‚Рѕ[Р”]";
             // 
             // checkBox11
             // 
@@ -4551,7 +4551,7 @@ namespace BZEditor
             this.checkBox11.Name = "checkBox11";
             this.checkBox11.Size = new System.Drawing.Size(83, 19);
             this.checkBox11.TabIndex = 99;
-            this.checkBox11.Text = "Замещать";
+            this.checkBox11.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.checkBox11.UseVisualStyleBackColor = true;
             // 
             // CExtRichTextBox9
@@ -4576,7 +4576,7 @@ namespace BZEditor
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Size = new System.Drawing.Size(779, 96);
             this.tabPage18.TabIndex = 8;
-            this.tabPage18.Text = "Лето[Н]";
+            this.tabPage18.Text = "Р›РµС‚Рѕ[Рќ]";
             // 
             // checkBox12
             // 
@@ -4585,7 +4585,7 @@ namespace BZEditor
             this.checkBox12.Name = "checkBox12";
             this.checkBox12.Size = new System.Drawing.Size(83, 19);
             this.checkBox12.TabIndex = 99;
-            this.checkBox12.Text = "Замещать";
+            this.checkBox12.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.checkBox12.UseVisualStyleBackColor = true;
             // 
             // CExtRichTextBox10
@@ -4610,7 +4610,7 @@ namespace BZEditor
             this.tabPage19.Name = "tabPage19";
             this.tabPage19.Size = new System.Drawing.Size(779, 96);
             this.tabPage19.TabIndex = 9;
-            this.tabPage19.Text = "Осень[Д]";
+            this.tabPage19.Text = "РћСЃРµРЅСЊ[Р”]";
             // 
             // checkBox13
             // 
@@ -4619,7 +4619,7 @@ namespace BZEditor
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(83, 19);
             this.checkBox13.TabIndex = 99;
-            this.checkBox13.Text = "Замещать";
+            this.checkBox13.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.checkBox13.UseVisualStyleBackColor = true;
             // 
             // CExtRichTextBox11
@@ -4644,7 +4644,7 @@ namespace BZEditor
             this.tabPage20.Name = "tabPage20";
             this.tabPage20.Size = new System.Drawing.Size(779, 96);
             this.tabPage20.TabIndex = 10;
-            this.tabPage20.Text = "Осень[Н]";
+            this.tabPage20.Text = "РћСЃРµРЅСЊ[Рќ]";
             // 
             // checkBox14
             // 
@@ -4653,7 +4653,7 @@ namespace BZEditor
             this.checkBox14.Name = "checkBox14";
             this.checkBox14.Size = new System.Drawing.Size(83, 19);
             this.checkBox14.TabIndex = 99;
-            this.checkBox14.Text = "Замещать";
+            this.checkBox14.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.checkBox14.UseVisualStyleBackColor = true;
             // 
             // CExtRichTextBox12
@@ -4676,8 +4676,8 @@ namespace BZEditor
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton1.Text = "Редактировать значение выделенного доп.аффекта";
-            this.toolStripButton1.ToolTipText = "Редактировать значение \r\nвыделенного доп.аффекта";
+            this.toolStripButton1.Text = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РІС‹РґРµР»РµРЅРЅРѕРіРѕ РґРѕРї.Р°С„С„РµРєС‚Р°";
+            this.toolStripButton1.ToolTipText = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ \r\nРІС‹РґРµР»РµРЅРЅРѕРіРѕ РґРѕРї.Р°С„С„РµРєС‚Р°";
             this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1Click);
             // 
             // toolStripButton18
@@ -4713,7 +4713,7 @@ namespace BZEditor
             this.tsmiCodeEditorCopy.Image = global::BZEditor.Properties.Resources.button_copy;
             this.tsmiCodeEditorCopy.Name = "tsmiCodeEditorCopy";
             this.tsmiCodeEditorCopy.Size = new System.Drawing.Size(139, 22);
-            this.tsmiCodeEditorCopy.Text = "Копировать";
+            this.tsmiCodeEditorCopy.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ";
             this.tsmiCodeEditorCopy.Click += new System.EventHandler(this.tsmiCodeEditorCopy_Click);
             // 
             // tsmiCodeEditorCut
@@ -4721,7 +4721,7 @@ namespace BZEditor
             this.tsmiCodeEditorCut.Image = global::BZEditor.Properties.Resources.button_cut;
             this.tsmiCodeEditorCut.Name = "tsmiCodeEditorCut";
             this.tsmiCodeEditorCut.Size = new System.Drawing.Size(139, 22);
-            this.tsmiCodeEditorCut.Text = "Вырезать";
+            this.tsmiCodeEditorCut.Text = "Р’С‹СЂРµР·Р°С‚СЊ";
             this.tsmiCodeEditorCut.Click += new System.EventHandler(this.tsmiCodeEditorCut_Click);
             // 
             // toolStripSeparator17
@@ -4734,7 +4734,7 @@ namespace BZEditor
             this.tsmiCodeEditorPaste.Image = global::BZEditor.Properties.Resources.button_paste;
             this.tsmiCodeEditorPaste.Name = "tsmiCodeEditorPaste";
             this.tsmiCodeEditorPaste.Size = new System.Drawing.Size(139, 22);
-            this.tsmiCodeEditorPaste.Text = "Вставить";
+            this.tsmiCodeEditorPaste.Text = "Р’СЃС‚Р°РІРёС‚СЊ";
             this.tsmiCodeEditorPaste.Click += new System.EventHandler(this.tsmiCodeEditorPaste_Click);
             // 
             // splitContainerBase
@@ -4803,7 +4803,7 @@ namespace BZEditor
             this.tpList.Padding = new System.Windows.Forms.Padding(3);
             this.tpList.Size = new System.Drawing.Size(337, 251);
             this.tpList.TabIndex = 0;
-            this.tpList.Text = "Список";
+            this.tpList.Text = "РЎРїРёСЃРѕРє";
             this.tpList.UseVisualStyleBackColor = true;
             // 
             // tboxMainListFilter
@@ -4822,7 +4822,7 @@ namespace BZEditor
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(49, 16);
             this.label29.TabIndex = 102;
-            this.label29.Text = "Фильтр";
+            this.label29.Text = "Р¤РёР»СЊС‚СЂ";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lvMainList
@@ -4858,12 +4858,12 @@ namespace BZEditor
             // 
             // chMainListVNum
             // 
-            this.chMainListVNum.Text = "Номер";
+            this.chMainListVNum.Text = "РќРѕРјРµСЂ";
             this.chMainListVNum.Width = 66;
             // 
             // chMainListItemName
             // 
-            this.chMainListItemName.Text = "Название";
+            this.chMainListItemName.Text = "РќР°Р·РІР°РЅРёРµ";
             this.chMainListItemName.Width = 245;
             // 
             // cboxMainListConditions
@@ -4888,7 +4888,7 @@ namespace BZEditor
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(51, 16);
             this.label51.TabIndex = 102;
-            this.label51.Text = "Условие";
+            this.label51.Text = "РЈСЃР»РѕРІРёРµ";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lvZoneInfo
@@ -4925,7 +4925,7 @@ namespace BZEditor
             this.tpInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tpInfo.Size = new System.Drawing.Size(337, 251);
             this.tpInfo.TabIndex = 1;
-            this.tpInfo.Text = "Навигация/Сводная информация";
+            this.tpInfo.Text = "РќР°РІРёРіР°С†РёСЏ/РЎРІРѕРґРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ";
             this.tpInfo.UseVisualStyleBackColor = true;
             // 
             // lvDetails
@@ -5060,7 +5060,7 @@ namespace BZEditor
             this.tpZone.Padding = new System.Windows.Forms.Padding(3);
             this.tpZone.Size = new System.Drawing.Size(819, 472);
             this.tpZone.TabIndex = 3;
-            this.tpZone.Text = "Зона";
+            this.tpZone.Text = "Р—РѕРЅР°";
             this.tpZone.UseVisualStyleBackColor = true;
             // 
             // splitContainerZon
@@ -5109,7 +5109,7 @@ namespace BZEditor
             this.btnChangeZoneNumber.Name = "btnChangeZoneNumber";
             this.btnChangeZoneNumber.Size = new System.Drawing.Size(85, 24);
             this.btnChangeZoneNumber.TabIndex = 2;
-            this.btnChangeZoneNumber.Text = "Изменить";
+            this.btnChangeZoneNumber.Text = "РР·РјРµРЅРёС‚СЊ";
             this.btnChangeZoneNumber.Click += new System.EventHandler(this.BtnChangeZoneNumberClick);
             // 
             // nudZoneLevel
@@ -5162,7 +5162,7 @@ namespace BZEditor
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(60, 20);
             this.label69.TabIndex = 0;
-            this.label69.Text = "(в мин.РЛ)";
+            this.label69.Text = "(РІ РјРёРЅ.Р Р›)";
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label63
@@ -5171,7 +5171,7 @@ namespace BZEditor
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(133, 20);
             this.label63.TabIndex = 0;
-            this.label63.Text = "Время перезагрузки";
+            this.label63.Text = "Р’СЂРµРјСЏ РїРµСЂРµР·Р°РіСЂСѓР·РєРё";
             this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label65
@@ -5180,7 +5180,7 @@ namespace BZEditor
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(80, 20);
             this.label65.TabIndex = 0;
-            this.label65.Text = "Номер зоны";
+            this.label65.Text = "РќРѕРјРµСЂ Р·РѕРЅС‹";
             this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cboxZonType
@@ -5203,7 +5203,7 @@ namespace BZEditor
             this.tbZoneAuthor.Name = "tbZoneAuthor";
             this.tbZoneAuthor.Size = new System.Drawing.Size(298, 20);
             this.tbZoneAuthor.TabIndex = 5;
-            this.tbZoneAuthor.Text = "Автор";
+            this.tbZoneAuthor.Text = "РђРІС‚РѕСЂ";
             this.tbZoneAuthor.Validated += new System.EventHandler(this.TbZoneAuthorValidated);
             // 
             // tbZoneDescription
@@ -5214,7 +5214,7 @@ namespace BZEditor
             this.tbZoneDescription.Name = "tbZoneDescription";
             this.tbZoneDescription.Size = new System.Drawing.Size(298, 20);
             this.tbZoneDescription.TabIndex = 5;
-            this.tbZoneDescription.Text = "Описание";
+            this.tbZoneDescription.Text = "РћРїРёСЃР°РЅРёРµ";
             this.tbZoneDescription.Validated += new System.EventHandler(this.TbZoneDescriptionValidated);
             // 
             // tbZoneLocation
@@ -5225,7 +5225,7 @@ namespace BZEditor
             this.tbZoneLocation.Name = "tbZoneLocation";
             this.tbZoneLocation.Size = new System.Drawing.Size(298, 20);
             this.tbZoneLocation.TabIndex = 5;
-            this.tbZoneLocation.Text = "Местоположение";
+            this.tbZoneLocation.Text = "РњРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ";
             this.tbZoneLocation.Validated += new System.EventHandler(this.TbZoneLocationValidated);
             // 
             // tbZoneComment
@@ -5236,7 +5236,7 @@ namespace BZEditor
             this.tbZoneComment.Name = "tbZoneComment";
             this.tbZoneComment.Size = new System.Drawing.Size(298, 20);
             this.tbZoneComment.TabIndex = 5;
-            this.tbZoneComment.Text = "Комментарий";
+            this.tbZoneComment.Text = "РљРѕРјРјРµРЅС‚Р°СЂРёР№";
             this.tbZoneComment.Validated += new System.EventHandler(this.TbZoneCommentValidated);
             // 
             // label66
@@ -5245,7 +5245,7 @@ namespace BZEditor
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(93, 19);
             this.label66.TabIndex = 0;
-            this.label66.Text = "Автор";
+            this.label66.Text = "РђРІС‚РѕСЂ";
             this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label73
@@ -5254,7 +5254,7 @@ namespace BZEditor
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(93, 19);
             this.label73.TabIndex = 0;
-            this.label73.Text = "Описание";
+            this.label73.Text = "РћРїРёСЃР°РЅРёРµ";
             this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label72
@@ -5263,7 +5263,7 @@ namespace BZEditor
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(93, 19);
             this.label72.TabIndex = 0;
-            this.label72.Text = "Местоположение";
+            this.label72.Text = "РњРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ";
             this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tbZoneName
@@ -5274,7 +5274,7 @@ namespace BZEditor
             this.tbZoneName.Name = "tbZoneName";
             this.tbZoneName.Size = new System.Drawing.Size(298, 20);
             this.tbZoneName.TabIndex = 4;
-            this.tbZoneName.Text = "Наименование зоны";
+            this.tbZoneName.Text = "РќР°РёРјРµРЅРѕРІР°РЅРёРµ Р·РѕРЅС‹";
             this.tbZoneName.Validated += new System.EventHandler(this.TbZoneNameValidated);
             // 
             // label91
@@ -5283,7 +5283,7 @@ namespace BZEditor
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(93, 19);
             this.label91.TabIndex = 0;
-            this.label91.Text = "Комментарий";
+            this.label91.Text = "РљРѕРјРјРµРЅС‚Р°СЂРёР№";
             this.label91.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label30
@@ -5292,7 +5292,7 @@ namespace BZEditor
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(136, 15);
             this.label30.TabIndex = 0;
-            this.label30.Text = "Тип зоны";
+            this.label30.Text = "РўРёРї Р·РѕРЅС‹";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label96
@@ -5302,7 +5302,7 @@ namespace BZEditor
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(92, 15);
             this.label96.TabIndex = 0;
-            this.label96.Text = "Опт.чаров в гр.";
+            this.label96.Text = "РћРїС‚.С‡Р°СЂРѕРІ РІ РіСЂ.";
             this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label64
@@ -5311,7 +5311,7 @@ namespace BZEditor
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(93, 19);
             this.label64.TabIndex = 0;
-            this.label64.Text = "Название зоны";
+            this.label64.Text = "РќР°Р·РІР°РЅРёРµ Р·РѕРЅС‹";
             this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tcZon
@@ -5333,7 +5333,7 @@ namespace BZEditor
             this.tpVitrualRoom.Name = "tpVitrualRoom";
             this.tpVitrualRoom.Size = new System.Drawing.Size(492, 438);
             this.tpVitrualRoom.TabIndex = 3;
-            this.tpVitrualRoom.Text = "Виртуальная комната";
+            this.tpVitrualRoom.Text = "Р’РёСЂС‚СѓР°Р»СЊРЅР°СЏ РєРѕРјРЅР°С‚Р°";
             this.tpVitrualRoom.UseVisualStyleBackColor = true;
             // 
             // splitContainerVirtualRoomMobs
@@ -5438,7 +5438,7 @@ namespace BZEditor
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(73, 16);
             this.label43.TabIndex = 82;
-            this.label43.Text = "Следует за";
+            this.label43.Text = "РЎР»РµРґСѓРµС‚ Р·Р°";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label57
@@ -5447,7 +5447,7 @@ namespace BZEditor
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(107, 16);
             this.label57.TabIndex = 81;
-            this.label57.Text = "Объекты моба";
+            this.label57.Text = "РћР±СЉРµРєС‚С‹ РјРѕР±Р°";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // elvVitrualRoomMobObjectsAfterDeath
@@ -5498,7 +5498,7 @@ namespace BZEditor
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(244, 16);
             this.label15.TabIndex = 81;
-            this.label15.Text = "Объекты моба, загружаемые посмертно";
+            this.label15.Text = "РћР±СЉРµРєС‚С‹ РјРѕР±Р°, Р·Р°РіСЂСѓР¶Р°РµРјС‹Рµ РїРѕСЃРјРµСЂС‚РЅРѕ";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tpResetCondition
@@ -5509,7 +5509,7 @@ namespace BZEditor
             this.tpResetCondition.Name = "tpResetCondition";
             this.tpResetCondition.Size = new System.Drawing.Size(492, 438);
             this.tpResetCondition.TabIndex = 4;
-            this.tpResetCondition.Text = "Условие перезагрузки";
+            this.tpResetCondition.Text = "РЈСЃР»РѕРІРёРµ РїРµСЂРµР·Р°РіСЂСѓР·РєРё";
             this.tpResetCondition.UseVisualStyleBackColor = true;
             // 
             // gbResetRelatedZones
@@ -5523,7 +5523,7 @@ namespace BZEditor
             this.gbResetRelatedZones.Size = new System.Drawing.Size(483, 400);
             this.gbResetRelatedZones.TabIndex = 10;
             this.gbResetRelatedZones.TabStop = false;
-            this.gbResetRelatedZones.Text = "Зоны, перезагружаемые одновременно с текущей";
+            this.gbResetRelatedZones.Text = "Р—РѕРЅС‹, РїРµСЂРµР·Р°РіСЂСѓР¶Р°РµРјС‹Рµ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ СЃ С‚РµРєСѓС‰РµР№";
             // 
             // splitContainerRepop
             // 
@@ -5557,7 +5557,7 @@ namespace BZEditor
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(475, 15);
             this.label82.TabIndex = 0;
-            this.label82.Text = "\"A\" перегружаются, если в них нет игроков";
+            this.label82.Text = "\"A\" РїРµСЂРµРіСЂСѓР¶Р°СЋС‚СЃСЏ, РµСЃР»Рё РІ РЅРёС… РЅРµС‚ РёРіСЂРѕРєРѕРІ";
             this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lvAZones
@@ -5621,7 +5621,7 @@ namespace BZEditor
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(475, 15);
             this.label97.TabIndex = 0;
-            this.label97.Text = "\"B\" перегружаются в любом случае";
+            this.label97.Text = "\"B\" РїРµСЂРµРіСЂСѓР¶Р°СЋС‚СЃСЏ РІ Р»СЋР±РѕРј СЃР»СѓС‡Р°Рµ";
             this.label97.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbZoneReopopType
@@ -5649,7 +5649,7 @@ namespace BZEditor
             this.tpStatistics.Name = "tpStatistics";
             this.tpStatistics.Size = new System.Drawing.Size(492, 438);
             this.tpStatistics.TabIndex = 2;
-            this.tpStatistics.Text = "Ошибки и предупреждения";
+            this.tpStatistics.Text = "РћС€РёР±РєРё Рё РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ";
             this.tpStatistics.UseVisualStyleBackColor = true;
             // 
             // mlbValidationResult
@@ -5717,7 +5717,7 @@ namespace BZEditor
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(234, 20);
             this.label126.TabIndex = 0;
-            this.label126.Text = "Отображаемые несоответствия правилам:";
+            this.label126.Text = "РћС‚РѕР±СЂР°Р¶Р°РµРјС‹Рµ РЅРµСЃРѕРѕС‚РІРµС‚СЃС‚РІРёСЏ РїСЂР°РІРёР»Р°Рј:";
             this.label126.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label70
@@ -5730,7 +5730,7 @@ namespace BZEditor
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(449, 13);
             this.label70.TabIndex = 6;
-            this.label70.Text = "Используйте даблклик по сообщениям об ошибках для навигации к источнику ошибки";
+            this.label70.Text = "РСЃРїРѕР»СЊР·СѓР№С‚Рµ РґР°Р±Р»РєР»РёРє РїРѕ СЃРѕРѕР±С‰РµРЅРёСЏРј РѕР± РѕС€РёР±РєР°С… РґР»СЏ РЅР°РІРёРіР°С†РёРё Рє РёСЃС‚РѕС‡РЅРёРєСѓ РѕС€РёР±РєРё";
             this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tpRooms
@@ -5742,7 +5742,7 @@ namespace BZEditor
             this.tpRooms.Name = "tpRooms";
             this.tpRooms.Size = new System.Drawing.Size(819, 472);
             this.tpRooms.TabIndex = 4;
-            this.tpRooms.Text = "Комнаты";
+            this.tpRooms.Text = "РљРѕРјРЅР°С‚С‹";
             this.tpRooms.UseVisualStyleBackColor = true;
             // 
             // splitContainerRoomsDesc
@@ -5810,7 +5810,7 @@ namespace BZEditor
             this.gboxExits.Size = new System.Drawing.Size(276, 102);
             this.gboxExits.TabIndex = 84;
             this.gboxExits.TabStop = false;
-            this.gboxExits.Text = "Выходы";
+            this.gboxExits.Text = "Р’С‹С…РѕРґС‹";
             // 
             // bSelectExitDown
             // 
@@ -5828,7 +5828,7 @@ namespace BZEditor
             this.bSelectExitSouth.Name = "bSelectExitSouth";
             this.bSelectExitSouth.Size = new System.Drawing.Size(20, 20);
             this.bSelectExitSouth.TabIndex = 4;
-            this.bSelectExitSouth.Text = "Ю";
+            this.bSelectExitSouth.Text = "Р®";
             this.bSelectExitSouth.UseVisualStyleBackColor = true;
             this.bSelectExitSouth.Click += new System.EventHandler(this.BSelectExitSouthClick);
             // 
@@ -5838,7 +5838,7 @@ namespace BZEditor
             this.bSelectExitEast.Name = "bSelectExitEast";
             this.bSelectExitEast.Size = new System.Drawing.Size(20, 20);
             this.bSelectExitEast.TabIndex = 6;
-            this.bSelectExitEast.Text = "В";
+            this.bSelectExitEast.Text = "Р’";
             this.bSelectExitEast.UseVisualStyleBackColor = true;
             this.bSelectExitEast.Click += new System.EventHandler(this.BSelectExitEastClick);
             // 
@@ -5848,7 +5848,7 @@ namespace BZEditor
             this.bSelectExitWest.Name = "bSelectExitWest";
             this.bSelectExitWest.Size = new System.Drawing.Size(20, 20);
             this.bSelectExitWest.TabIndex = 5;
-            this.bSelectExitWest.Text = "З";
+            this.bSelectExitWest.Text = "Р—";
             this.bSelectExitWest.UseVisualStyleBackColor = true;
             this.bSelectExitWest.Click += new System.EventHandler(this.BSelectExitWestClick);
             // 
@@ -5868,7 +5868,7 @@ namespace BZEditor
             this.bSelectExitNorth.Name = "bSelectExitNorth";
             this.bSelectExitNorth.Size = new System.Drawing.Size(20, 20);
             this.bSelectExitNorth.TabIndex = 3;
-            this.bSelectExitNorth.Text = "С";
+            this.bSelectExitNorth.Text = "РЎ";
             this.bSelectExitNorth.UseVisualStyleBackColor = true;
             this.bSelectExitNorth.Click += new System.EventHandler(this.BSelectExitNorthClick);
             // 
@@ -5890,7 +5890,7 @@ namespace BZEditor
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(276, 16);
             this.label81.TabIndex = 21;
-            this.label81.Text = "Тип сектора";
+            this.label81.Text = "РўРёРї СЃРµРєС‚РѕСЂР°";
             this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tbRoomName
@@ -5909,7 +5909,7 @@ namespace BZEditor
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(276, 16);
             this.label80.TabIndex = 80;
-            this.label80.Text = "Название";
+            this.label80.Text = "РќР°Р·РІР°РЅРёРµ";
             this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lRoomDesc
@@ -5952,7 +5952,7 @@ namespace BZEditor
             this.tpRoomDoors.Name = "tpRoomDoors";
             this.tpRoomDoors.Size = new System.Drawing.Size(521, 288);
             this.tpRoomDoors.TabIndex = 7;
-            this.tpRoomDoors.Text = "Двери";
+            this.tpRoomDoors.Text = "Р”РІРµСЂРё";
             this.tpRoomDoors.UseVisualStyleBackColor = true;
             // 
             // pDoors
@@ -5998,7 +5998,7 @@ namespace BZEditor
             this.gbDoorType.Size = new System.Drawing.Size(318, 124);
             this.gbDoorType.TabIndex = 121;
             this.gbDoorType.TabStop = false;
-            this.gbDoorType.Text = "Параметры выхода";
+            this.gbDoorType.Text = "РџР°СЂР°РјРµС‚СЂС‹ РІС‹С…РѕРґР°";
             // 
             // nudLockLevel
             // 
@@ -6020,7 +6020,7 @@ namespace BZEditor
             this.cbDoorLocked.Name = "cbDoorLocked";
             this.cbDoorLocked.Size = new System.Drawing.Size(68, 17);
             this.cbDoorLocked.TabIndex = 122;
-            this.cbDoorLocked.Text = "Заперта";
+            this.cbDoorLocked.Text = "Р—Р°РїРµСЂС‚Р°";
             this.cbDoorLocked.UseVisualStyleBackColor = true;
             this.cbDoorLocked.CheckedChanged += new System.EventHandler(this.DoorLockedCheckedChanged);
             // 
@@ -6031,7 +6031,7 @@ namespace BZEditor
             this.cbDoorPeekproof.Name = "cbDoorPeekproof";
             this.cbDoorPeekproof.Size = new System.Drawing.Size(92, 17);
             this.cbDoorPeekproof.TabIndex = 122;
-            this.cbDoorPeekproof.Text = "Не взломать";
+            this.cbDoorPeekproof.Text = "РќРµ РІР·Р»РѕРјР°С‚СЊ";
             this.cbDoorPeekproof.UseVisualStyleBackColor = true;
             this.cbDoorPeekproof.CheckedChanged += new System.EventHandler(this.DoorPeekproofCheckedChanged);
             // 
@@ -6042,7 +6042,7 @@ namespace BZEditor
             this.cbDoorClosed.Name = "cbDoorClosed";
             this.cbDoorClosed.Size = new System.Drawing.Size(70, 17);
             this.cbDoorClosed.TabIndex = 122;
-            this.cbDoorClosed.Text = "Закрыта";
+            this.cbDoorClosed.Text = "Р—Р°РєСЂС‹С‚Р°";
             this.cbDoorClosed.UseVisualStyleBackColor = true;
             this.cbDoorClosed.CheckedChanged += new System.EventHandler(this.DoorClosedCheckedChanged);
             // 
@@ -6053,7 +6053,7 @@ namespace BZEditor
             this.cbExitDoor.Name = "cbExitDoor";
             this.cbExitDoor.Size = new System.Drawing.Size(59, 17);
             this.cbExitDoor.TabIndex = 122;
-            this.cbExitDoor.Text = "Дверь";
+            this.cbExitDoor.Text = "Р”РІРµСЂСЊ";
             this.cbExitDoor.UseVisualStyleBackColor = true;
             this.cbExitDoor.CheckedChanged += new System.EventHandler(this.ExitDoorCheckedChanged);
             // 
@@ -6065,7 +6065,7 @@ namespace BZEditor
             this.cbExitVisible.Size = new System.Drawing.Size(107, 17);
             this.cbExitVisible.TabIndex = 122;
             this.cbExitVisible.Tag = "4";
-            this.cbExitVisible.Text = "Видимый выход";
+            this.cbExitVisible.Text = "Р’РёРґРёРјС‹Р№ РІС‹С…РѕРґ";
             this.cbExitVisible.UseVisualStyleBackColor = true;
             this.cbExitVisible.CheckedChanged += new System.EventHandler(this.ExitVisibleCheckedChanged);
             // 
@@ -6077,7 +6077,7 @@ namespace BZEditor
             this.cbExitHidden.Size = new System.Drawing.Size(106, 17);
             this.cbExitHidden.TabIndex = 122;
             this.cbExitHidden.Tag = "4";
-            this.cbExitHidden.Text = "Скрытый выход";
+            this.cbExitHidden.Text = "РЎРєСЂС‹С‚С‹Р№ РІС‹С…РѕРґ";
             this.cbExitHidden.UseVisualStyleBackColor = true;
             this.cbExitHidden.CheckedChanged += new System.EventHandler(this.ExitHiddenCheckedChanged);
             // 
@@ -6119,7 +6119,7 @@ namespace BZEditor
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(42, 16);
             this.label92.TabIndex = 113;
-            this.label92.Text = "Ключ";
+            this.label92.Text = "РљР»СЋС‡";
             this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnConfigExitDown
@@ -6128,7 +6128,7 @@ namespace BZEditor
             this.btnConfigExitDown.Name = "btnConfigExitDown";
             this.btnConfigExitDown.Size = new System.Drawing.Size(60, 21);
             this.btnConfigExitDown.TabIndex = 109;
-            this.btnConfigExitDown.Text = "Низ";
+            this.btnConfigExitDown.Text = "РќРёР·";
             this.btnConfigExitDown.UseVisualStyleBackColor = true;
             this.btnConfigExitDown.Visible = false;
             this.btnConfigExitDown.Click += new System.EventHandler(this.DoorDirectionSelect);
@@ -6139,7 +6139,7 @@ namespace BZEditor
             this.btnConfigExitSouth.Name = "btnConfigExitSouth";
             this.btnConfigExitSouth.Size = new System.Drawing.Size(60, 21);
             this.btnConfigExitSouth.TabIndex = 110;
-            this.btnConfigExitSouth.Text = "Юг";
+            this.btnConfigExitSouth.Text = "Р®Рі";
             this.btnConfigExitSouth.UseVisualStyleBackColor = true;
             this.btnConfigExitSouth.Visible = false;
             this.btnConfigExitSouth.Click += new System.EventHandler(this.DoorDirectionSelect);
@@ -6150,7 +6150,7 @@ namespace BZEditor
             this.btnConfigExitEast.Name = "btnConfigExitEast";
             this.btnConfigExitEast.Size = new System.Drawing.Size(60, 21);
             this.btnConfigExitEast.TabIndex = 111;
-            this.btnConfigExitEast.Text = "Восток";
+            this.btnConfigExitEast.Text = "Р’РѕСЃС‚РѕРє";
             this.btnConfigExitEast.UseVisualStyleBackColor = true;
             this.btnConfigExitEast.Visible = false;
             this.btnConfigExitEast.Click += new System.EventHandler(this.DoorDirectionSelect);
@@ -6161,7 +6161,7 @@ namespace BZEditor
             this.btnConfigExitWest.Name = "btnConfigExitWest";
             this.btnConfigExitWest.Size = new System.Drawing.Size(60, 21);
             this.btnConfigExitWest.TabIndex = 106;
-            this.btnConfigExitWest.Text = "Запад";
+            this.btnConfigExitWest.Text = "Р—Р°РїР°Рґ";
             this.btnConfigExitWest.UseVisualStyleBackColor = true;
             this.btnConfigExitWest.Visible = false;
             this.btnConfigExitWest.Click += new System.EventHandler(this.DoorDirectionSelect);
@@ -6172,7 +6172,7 @@ namespace BZEditor
             this.btnConfigExitUp.Name = "btnConfigExitUp";
             this.btnConfigExitUp.Size = new System.Drawing.Size(60, 21);
             this.btnConfigExitUp.TabIndex = 107;
-            this.btnConfigExitUp.Text = "Верх";
+            this.btnConfigExitUp.Text = "Р’РµСЂС…";
             this.btnConfigExitUp.UseVisualStyleBackColor = true;
             this.btnConfigExitUp.Visible = false;
             this.btnConfigExitUp.Click += new System.EventHandler(this.DoorDirectionSelect);
@@ -6183,7 +6183,7 @@ namespace BZEditor
             this.btnConfigExitNorth.Name = "btnConfigExitNorth";
             this.btnConfigExitNorth.Size = new System.Drawing.Size(60, 21);
             this.btnConfigExitNorth.TabIndex = 108;
-            this.btnConfigExitNorth.Text = "Север";
+            this.btnConfigExitNorth.Text = "РЎРµРІРµСЂ";
             this.btnConfigExitNorth.UseVisualStyleBackColor = true;
             this.btnConfigExitNorth.Visible = false;
             this.btnConfigExitNorth.Click += new System.EventHandler(this.DoorDirectionSelect);
@@ -6216,7 +6216,7 @@ namespace BZEditor
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(173, 16);
             this.label99.TabIndex = 102;
-            this.label99.Text = "Название выхода в вин. падеже";
+            this.label99.Text = "РќР°Р·РІР°РЅРёРµ РІС‹С…РѕРґР° РІ РІРёРЅ. РїР°РґРµР¶Рµ";
             this.label99.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label86
@@ -6225,7 +6225,7 @@ namespace BZEditor
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(167, 16);
             this.label86.TabIndex = 102;
-            this.label86.Text = "Альясы выхода ";
+            this.label86.Text = "РђР»СЊСЏСЃС‹ РІС‹С…РѕРґР° ";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label89
@@ -6234,7 +6234,7 @@ namespace BZEditor
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(107, 16);
             this.label89.TabIndex = 101;
-            this.label89.Text = "Описание выхода:";
+            this.label89.Text = "РћРїРёСЃР°РЅРёРµ РІС‹С…РѕРґР°:";
             this.label89.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label90
@@ -6243,7 +6243,7 @@ namespace BZEditor
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(146, 16);
             this.label90.TabIndex = 103;
-            this.label90.Text = "Направление:";
+            this.label90.Text = "РќР°РїСЂР°РІР»РµРЅРёРµ:";
             this.label90.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tpRoomFlags
@@ -6254,7 +6254,7 @@ namespace BZEditor
             this.tpRoomFlags.Name = "tpRoomFlags";
             this.tpRoomFlags.Size = new System.Drawing.Size(521, 288);
             this.tpRoomFlags.TabIndex = 5;
-            this.tpRoomFlags.Text = "Флаги";
+            this.tpRoomFlags.Text = "Р¤Р»Р°РіРё";
             this.tpRoomFlags.UseVisualStyleBackColor = true;
             // 
             // tplRoomFlags
@@ -6263,10 +6263,10 @@ namespace BZEditor
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tplRoomFlags.Grouped = true;
-            this.tplRoomFlags.LeftListCaption = "Флаги комнаты";
+            this.tplRoomFlags.LeftListCaption = "Р¤Р»Р°РіРё РєРѕРјРЅР°С‚С‹";
             this.tplRoomFlags.Location = new System.Drawing.Point(3, 17);
             this.tplRoomFlags.Name = "tplRoomFlags";
-            this.tplRoomFlags.RightListCaption = "Доступные флаги";
+            this.tplRoomFlags.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ С„Р»Р°РіРё";
             this.tplRoomFlags.Size = new System.Drawing.Size(515, 268);
             this.tplRoomFlags.SplitterDistance = 242;
             this.tplRoomFlags.TabIndex = 98;
@@ -6282,7 +6282,7 @@ namespace BZEditor
             this.cbShowRoomsWithFlags.Name = "cbShowRoomsWithFlags";
             this.cbShowRoomsWithFlags.Size = new System.Drawing.Size(297, 17);
             this.cbShowRoomsWithFlags.TabIndex = 97;
-            this.cbShowRoomsWithFlags.Text = "Отображать на карте комнаты с выбранным флагом";
+            this.cbShowRoomsWithFlags.Text = "РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РЅР° РєР°СЂС‚Рµ РєРѕРјРЅР°С‚С‹ СЃ РІС‹Р±СЂР°РЅРЅС‹Рј С„Р»Р°РіРѕРј";
             this.cbShowRoomsWithFlags.UseVisualStyleBackColor = true;
             this.cbShowRoomsWithFlags.CheckedChanged += new System.EventHandler(this.CbShowRoomsWithFlagsCheckedChanged);
             // 
@@ -6293,7 +6293,7 @@ namespace BZEditor
             this.tpRoomObjs.Name = "tpRoomObjs";
             this.tpRoomObjs.Size = new System.Drawing.Size(521, 288);
             this.tpRoomObjs.TabIndex = 1;
-            this.tpRoomObjs.Text = "Объекты";
+            this.tpRoomObjs.Text = "РћР±СЉРµРєС‚С‹";
             this.tpRoomObjs.UseVisualStyleBackColor = true;
             // 
             // splitContainerRoomObjects
@@ -6354,7 +6354,7 @@ namespace BZEditor
             this.gbObjInObj.Size = new System.Drawing.Size(514, 147);
             this.gbObjInObj.TabIndex = 97;
             this.gbObjInObj.TabStop = false;
-            this.gbObjInObj.Text = "Объекты загружаемые в объект";
+            this.gbObjInObj.Text = "РћР±СЉРµРєС‚С‹ Р·Р°РіСЂСѓР¶Р°РµРјС‹Рµ РІ РѕР±СЉРµРєС‚";
             // 
             // tpRoomMobs
             // 
@@ -6363,7 +6363,7 @@ namespace BZEditor
             this.tpRoomMobs.Name = "tpRoomMobs";
             this.tpRoomMobs.Size = new System.Drawing.Size(521, 288);
             this.tpRoomMobs.TabIndex = 2;
-            this.tpRoomMobs.Text = "Мобы";
+            this.tpRoomMobs.Text = "РњРѕР±С‹";
             this.tpRoomMobs.UseVisualStyleBackColor = true;
             // 
             // splitContainerRoomMobs
@@ -6431,7 +6431,7 @@ namespace BZEditor
             this.label84.Name = "label84";
             this.label84.Size = new System.Drawing.Size(73, 16);
             this.label84.TabIndex = 82;
-            this.label84.Text = "Следует за";
+            this.label84.Text = "РЎР»РµРґСѓРµС‚ Р·Р°";
             this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tabControl1
@@ -6457,7 +6457,7 @@ namespace BZEditor
             this.tpMobObjectsLoaded.Padding = new System.Windows.Forms.Padding(3);
             this.tpMobObjectsLoaded.Size = new System.Drawing.Size(511, 123);
             this.tpMobObjectsLoaded.TabIndex = 0;
-            this.tpMobObjectsLoaded.Text = "Объекты моба";
+            this.tpMobObjectsLoaded.Text = "РћР±СЉРµРєС‚С‹ РјРѕР±Р°";
             this.tpMobObjectsLoaded.UseVisualStyleBackColor = true;
             // 
             // tpMobObjectsLoadedAfterDeath
@@ -6470,7 +6470,7 @@ namespace BZEditor
             this.tpMobObjectsLoadedAfterDeath.Padding = new System.Windows.Forms.Padding(3);
             this.tpMobObjectsLoadedAfterDeath.Size = new System.Drawing.Size(511, 123);
             this.tpMobObjectsLoadedAfterDeath.TabIndex = 1;
-            this.tpMobObjectsLoadedAfterDeath.Text = "Объекты моба, загружаемые посмертно";
+            this.tpMobObjectsLoadedAfterDeath.Text = "РћР±СЉРµРєС‚С‹ РјРѕР±Р°, Р·Р°РіСЂСѓР¶Р°РµРјС‹Рµ РїРѕСЃРјРµСЂС‚РЅРѕ";
             this.tpMobObjectsLoadedAfterDeath.UseVisualStyleBackColor = true;
             // 
             // cboxMobFollowBy
@@ -6495,7 +6495,7 @@ namespace BZEditor
             this.tpRoomTrgs.Padding = new System.Windows.Forms.Padding(3);
             this.tpRoomTrgs.Size = new System.Drawing.Size(521, 288);
             this.tpRoomTrgs.TabIndex = 0;
-            this.tpRoomTrgs.Text = "Триггеры";
+            this.tpRoomTrgs.Text = "РўСЂРёРіРіРµСЂС‹";
             this.tpRoomTrgs.UseVisualStyleBackColor = true;
             // 
             // btnAddRoomTrigger
@@ -6558,7 +6558,7 @@ namespace BZEditor
             this.tpRoomDelObjs.Name = "tpRoomDelObjs";
             this.tpRoomDelObjs.Size = new System.Drawing.Size(521, 288);
             this.tpRoomDelObjs.TabIndex = 3;
-            this.tpRoomDelObjs.Text = "Удал.объекты";
+            this.tpRoomDelObjs.Text = "РЈРґР°Р».РѕР±СЉРµРєС‚С‹";
             this.tpRoomDelObjs.UseVisualStyleBackColor = true;
             // 
             // btnAddRoomObjectToRemove
@@ -6628,7 +6628,7 @@ namespace BZEditor
             this.tpRoomAddDescrs.Name = "tpRoomAddDescrs";
             this.tpRoomAddDescrs.Size = new System.Drawing.Size(521, 288);
             this.tpRoomAddDescrs.TabIndex = 6;
-            this.tpRoomAddDescrs.Text = "Доп.описания";
+            this.tpRoomAddDescrs.Text = "Р”РѕРї.РѕРїРёСЃР°РЅРёСЏ";
             this.tpRoomAddDescrs.UseVisualStyleBackColor = true;
             // 
             // rtbRoomAddDescText
@@ -6652,7 +6652,7 @@ namespace BZEditor
             this.cbRoomAddDescWordwrap.Name = "cbRoomAddDescWordwrap";
             this.cbRoomAddDescWordwrap.Size = new System.Drawing.Size(311, 17);
             this.cbRoomAddDescWordwrap.TabIndex = 92;
-            this.cbRoomAddDescWordwrap.Text = "Переносить текст описания по словам на новую строку";
+            this.cbRoomAddDescWordwrap.Text = "РџРµСЂРµРЅРѕСЃРёС‚СЊ С‚РµРєСЃС‚ РѕРїРёСЃР°РЅРёСЏ РїРѕ СЃР»РѕРІР°Рј РЅР° РЅРѕРІСѓСЋ СЃС‚СЂРѕРєСѓ";
             this.cbRoomAddDescWordwrap.UseVisualStyleBackColor = true;
             this.cbRoomAddDescWordwrap.CheckedChanged += new System.EventHandler(this.CbRoomAddDescWordwrapCheckedChanged);
             // 
@@ -6701,12 +6701,12 @@ namespace BZEditor
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Альясы";
+            this.columnHeader8.Text = "РђР»СЊСЏСЃС‹";
             this.columnHeader8.Width = 150;
             // 
             // columnHeader12
             // 
-            this.columnHeader12.Text = "Описание";
+            this.columnHeader12.Text = "РћРїРёСЃР°РЅРёРµ";
             this.columnHeader12.Width = 341;
             // 
             // tbRoomAddDescAliases
@@ -6727,7 +6727,7 @@ namespace BZEditor
             this.tpRoomIngrediens.Name = "tpRoomIngrediens";
             this.tpRoomIngrediens.Size = new System.Drawing.Size(521, 288);
             this.tpRoomIngrediens.TabIndex = 8;
-            this.tpRoomIngrediens.Text = "Ингредиенты";
+            this.tpRoomIngrediens.Text = "РРЅРіСЂРµРґРёРµРЅС‚С‹";
             this.tpRoomIngrediens.UseVisualStyleBackColor = true;
             // 
             // panel2
@@ -6790,7 +6790,7 @@ namespace BZEditor
             this.tpRoomDesc.Name = "tpRoomDesc";
             this.tpRoomDesc.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDesc.TabIndex = 0;
-            this.tpRoomDesc.Text = "Общее";
+            this.tpRoomDesc.Text = "РћР±С‰РµРµ";
             this.tpRoomDesc.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescDay
@@ -6800,7 +6800,7 @@ namespace BZEditor
             this.tpRoomDescDay.Name = "tpRoomDescDay";
             this.tpRoomDescDay.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescDay.TabIndex = 1;
-            this.tpRoomDescDay.Text = "День";
+            this.tpRoomDescDay.Text = "Р”РµРЅСЊ";
             this.tpRoomDescDay.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescNight
@@ -6810,7 +6810,7 @@ namespace BZEditor
             this.tpRoomDescNight.Name = "tpRoomDescNight";
             this.tpRoomDescNight.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescNight.TabIndex = 2;
-            this.tpRoomDescNight.Text = "Ночь";
+            this.tpRoomDescNight.Text = "РќРѕС‡СЊ";
             this.tpRoomDescNight.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescWinterDay
@@ -6820,7 +6820,7 @@ namespace BZEditor
             this.tpRoomDescWinterDay.Name = "tpRoomDescWinterDay";
             this.tpRoomDescWinterDay.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescWinterDay.TabIndex = 3;
-            this.tpRoomDescWinterDay.Text = "Зима[Д]";
+            this.tpRoomDescWinterDay.Text = "Р—РёРјР°[Р”]";
             this.tpRoomDescWinterDay.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescWinterNight
@@ -6830,7 +6830,7 @@ namespace BZEditor
             this.tpRoomDescWinterNight.Name = "tpRoomDescWinterNight";
             this.tpRoomDescWinterNight.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescWinterNight.TabIndex = 4;
-            this.tpRoomDescWinterNight.Text = "Зима[Н]";
+            this.tpRoomDescWinterNight.Text = "Р—РёРјР°[Рќ]";
             this.tpRoomDescWinterNight.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescSpringDay
@@ -6840,7 +6840,7 @@ namespace BZEditor
             this.tpRoomDescSpringDay.Name = "tpRoomDescSpringDay";
             this.tpRoomDescSpringDay.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescSpringDay.TabIndex = 5;
-            this.tpRoomDescSpringDay.Text = "Весна[Д]";
+            this.tpRoomDescSpringDay.Text = "Р’РµСЃРЅР°[Р”]";
             this.tpRoomDescSpringDay.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescSpringNight
@@ -6850,7 +6850,7 @@ namespace BZEditor
             this.tpRoomDescSpringNight.Name = "tpRoomDescSpringNight";
             this.tpRoomDescSpringNight.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescSpringNight.TabIndex = 6;
-            this.tpRoomDescSpringNight.Text = "Весна[Н]";
+            this.tpRoomDescSpringNight.Text = "Р’РµСЃРЅР°[Рќ]";
             this.tpRoomDescSpringNight.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescSummerDay
@@ -6860,7 +6860,7 @@ namespace BZEditor
             this.tpRoomDescSummerDay.Name = "tpRoomDescSummerDay";
             this.tpRoomDescSummerDay.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescSummerDay.TabIndex = 7;
-            this.tpRoomDescSummerDay.Text = "Лето[Д]";
+            this.tpRoomDescSummerDay.Text = "Р›РµС‚Рѕ[Р”]";
             this.tpRoomDescSummerDay.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescSummerNight
@@ -6870,7 +6870,7 @@ namespace BZEditor
             this.tpRoomDescSummerNight.Name = "tpRoomDescSummerNight";
             this.tpRoomDescSummerNight.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescSummerNight.TabIndex = 8;
-            this.tpRoomDescSummerNight.Text = "Лето[Н]";
+            this.tpRoomDescSummerNight.Text = "Р›РµС‚Рѕ[Рќ]";
             this.tpRoomDescSummerNight.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescAutumnDay
@@ -6880,7 +6880,7 @@ namespace BZEditor
             this.tpRoomDescAutumnDay.Name = "tpRoomDescAutumnDay";
             this.tpRoomDescAutumnDay.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescAutumnDay.TabIndex = 9;
-            this.tpRoomDescAutumnDay.Text = "Осень[Д]";
+            this.tpRoomDescAutumnDay.Text = "РћСЃРµРЅСЊ[Р”]";
             this.tpRoomDescAutumnDay.UseVisualStyleBackColor = true;
             // 
             // tpRoomDescAutumnNight
@@ -6890,7 +6890,7 @@ namespace BZEditor
             this.tpRoomDescAutumnNight.Name = "tpRoomDescAutumnNight";
             this.tpRoomDescAutumnNight.Size = new System.Drawing.Size(713, 0);
             this.tpRoomDescAutumnNight.TabIndex = 10;
-            this.tpRoomDescAutumnNight.Text = "Осень[Н]";
+            this.tpRoomDescAutumnNight.Text = "РћСЃРµРЅСЊ[Рќ]";
             this.tpRoomDescAutumnNight.UseVisualStyleBackColor = true;
             // 
             // pnlFormating
@@ -6914,7 +6914,7 @@ namespace BZEditor
             this.cbDescReplace.Name = "cbDescReplace";
             this.cbDescReplace.Size = new System.Drawing.Size(83, 19);
             this.cbDescReplace.TabIndex = 99;
-            this.cbDescReplace.Text = "Замещать";
+            this.cbDescReplace.Text = "Р—Р°РјРµС‰Р°С‚СЊ";
             this.cbDescReplace.UseVisualStyleBackColor = true;
             this.cbDescReplace.CheckedChanged += new System.EventHandler(this.CbDescReplaceCheckedChanged);
             // 
@@ -6925,7 +6925,7 @@ namespace BZEditor
             this.cbAllowHyp.Name = "cbAllowHyp";
             this.cbAllowHyp.Size = new System.Drawing.Size(91, 18);
             this.cbAllowHyp.TabIndex = 104;
-            this.cbAllowHyp.Text = "По слогам";
+            this.cbAllowHyp.Text = "РџРѕ СЃР»РѕРіР°Рј";
             this.cbAllowHyp.UseVisualStyleBackColor = true;
             this.cbAllowHyp.Visible = false;
             // 
@@ -6938,7 +6938,7 @@ namespace BZEditor
             this.tpObjects.Padding = new System.Windows.Forms.Padding(3);
             this.tpObjects.Size = new System.Drawing.Size(819, 472);
             this.tpObjects.TabIndex = 1;
-            this.tpObjects.Text = "Объекты";
+            this.tpObjects.Text = "РћР±СЉРµРєС‚С‹";
             this.tpObjects.UseVisualStyleBackColor = true;
             // 
             // splitContainerObj
@@ -7020,7 +7020,7 @@ namespace BZEditor
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(150, 17);
             this.label35.TabIndex = 80;
-            this.label35.Text = "Опиcание при действии";
+            this.label35.Text = "РћРїРёcР°РЅРёРµ РїСЂРё РґРµР№СЃС‚РІРёРё";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label35.Visible = false;
             // 
@@ -7080,7 +7080,7 @@ namespace BZEditor
             this.tpObjParams.Padding = new System.Windows.Forms.Padding(3);
             this.tpObjParams.Size = new System.Drawing.Size(440, 420);
             this.tpObjParams.TabIndex = 9;
-            this.tpObjParams.Text = "Параметры";
+            this.tpObjParams.Text = "РџР°СЂР°РјРµС‚СЂС‹";
             this.tpObjParams.UseVisualStyleBackColor = true;
             // 
             // cboxObjSkill
@@ -7141,9 +7141,9 @@ namespace BZEditor
             this.cboxObjTimerUOM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxObjTimerUOM.ItemHeight = 13;
             this.cboxObjTimerUOM.Items.AddRange(new object[] {
-            "Минут",
-            "Часов",
-            "Суток"});
+            "РњРёРЅСѓС‚",
+            "Р§Р°СЃРѕРІ",
+            "РЎСѓС‚РѕРє"});
             this.cboxObjTimerUOM.Location = new System.Drawing.Point(352, 100);
             this.cboxObjTimerUOM.Name = "cboxObjTimerUOM";
             this.cboxObjTimerUOM.Size = new System.Drawing.Size(82, 21);
@@ -7252,7 +7252,7 @@ namespace BZEditor
             this.gbObjType.Size = new System.Drawing.Size(428, 230);
             this.gbObjType.TabIndex = 99;
             this.gbObjType.TabStop = false;
-            this.gbObjType.Text = "Тип объекта";
+            this.gbObjType.Text = "РўРёРї РѕР±СЉРµРєС‚Р°";
             // 
             // pObjMagIngr
             // 
@@ -7472,7 +7472,7 @@ namespace BZEditor
             this.label168.Name = "label168";
             this.label168.Size = new System.Drawing.Size(120, 14);
             this.label168.TabIndex = 75;
-            this.label168.Text = "Заклинание";
+            this.label168.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ";
             this.label168.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjWeapon
@@ -7501,7 +7501,7 @@ namespace BZEditor
             this.lObjAverageDam.Name = "lObjAverageDam";
             this.lObjAverageDam.Size = new System.Drawing.Size(59, 14);
             this.lObjAverageDam.TabIndex = 81;
-            this.lObjAverageDam.Text = "Ср: ";
+            this.lObjAverageDam.Text = "РЎСЂ: ";
             this.lObjAverageDam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cboxObjWeaponSrikeType
@@ -7559,7 +7559,7 @@ namespace BZEditor
             this.label144.Name = "label144";
             this.label144.Size = new System.Drawing.Size(120, 14);
             this.label144.TabIndex = 75;
-            this.label144.Text = "Тип удара";
+            this.label144.Text = "РўРёРї СѓРґР°СЂР°";
             this.label144.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjPotion
@@ -7639,7 +7639,7 @@ namespace BZEditor
             this.label148.Name = "label148";
             this.label148.Size = new System.Drawing.Size(120, 14);
             this.label148.TabIndex = 75;
-            this.label148.Text = "Заклинание 2";
+            this.label148.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 2";
             this.label148.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label149
@@ -7648,7 +7648,7 @@ namespace BZEditor
             this.label149.Name = "label149";
             this.label149.Size = new System.Drawing.Size(120, 14);
             this.label149.TabIndex = 75;
-            this.label149.Text = "Заклинание 3";
+            this.label149.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 3";
             this.label149.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label151
@@ -7657,7 +7657,7 @@ namespace BZEditor
             this.label151.Name = "label151";
             this.label151.Size = new System.Drawing.Size(120, 14);
             this.label151.TabIndex = 75;
-            this.label151.Text = "Заклинание 1";
+            this.label151.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 1";
             this.label151.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjMoney
@@ -7802,7 +7802,7 @@ namespace BZEditor
             this.label159.Name = "label159";
             this.label159.Size = new System.Drawing.Size(120, 14);
             this.label159.TabIndex = 75;
-            this.label159.Text = "Заклинание";
+            this.label159.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ";
             this.label159.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjMagicScroll
@@ -7882,7 +7882,7 @@ namespace BZEditor
             this.label141.Name = "label141";
             this.label141.Size = new System.Drawing.Size(120, 14);
             this.label141.TabIndex = 75;
-            this.label141.Text = "Заклинание 2";
+            this.label141.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 2";
             this.label141.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label153
@@ -7891,7 +7891,7 @@ namespace BZEditor
             this.label153.Name = "label153";
             this.label153.Size = new System.Drawing.Size(120, 14);
             this.label153.TabIndex = 75;
-            this.label153.Text = "Заклинание 3";
+            this.label153.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 3";
             this.label153.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label155
@@ -7900,7 +7900,7 @@ namespace BZEditor
             this.label155.Name = "label155";
             this.label155.Size = new System.Drawing.Size(120, 14);
             this.label155.TabIndex = 75;
-            this.label155.Text = "Заклинание 1";
+            this.label155.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 1";
             this.label155.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjMagBook
@@ -7930,7 +7930,7 @@ namespace BZEditor
             this.label156.Name = "label156";
             this.label156.Size = new System.Drawing.Size(120, 19);
             this.label156.TabIndex = 75;
-            this.label156.Text = "Заклинание";
+            this.label156.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ";
             this.label156.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjLiquidContainer
@@ -8288,7 +8288,7 @@ namespace BZEditor
             this.label173.Name = "label173";
             this.label173.Size = new System.Drawing.Size(74, 13);
             this.label173.TabIndex = 1;
-            this.label173.Text = "HP в секунду";
+            this.label173.Text = "HP РІ СЃРµРєСѓРЅРґСѓ";
             // 
             // nudObjBandageValue
             // 
@@ -8373,7 +8373,7 @@ namespace BZEditor
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(249, 41);
             this.label146.TabIndex = 75;
-            this.label146.Text = "Значения больше 0 улучшают AC и броню\r\nЗначения меньше 0 ухудшают AC и броню";
+            this.label146.Text = "Р—РЅР°С‡РµРЅРёСЏ Р±РѕР»СЊС€Рµ 0 СѓР»СѓС‡С€Р°СЋС‚ AC Рё Р±СЂРѕРЅСЋ\r\nР—РЅР°С‡РµРЅРёСЏ РјРµРЅСЊС€Рµ 0 СѓС…СѓРґС€Р°СЋС‚ AC Рё Р±СЂРѕРЅСЋ";
             // 
             // tpObjEffects
             // 
@@ -8382,17 +8382,17 @@ namespace BZEditor
             this.tpObjEffects.Name = "tpObjEffects";
             this.tpObjEffects.Size = new System.Drawing.Size(440, 420);
             this.tpObjEffects.TabIndex = 3;
-            this.tpObjEffects.Text = "Эффекты";
+            this.tpObjEffects.Text = "Р­С„С„РµРєС‚С‹";
             this.tpObjEffects.UseVisualStyleBackColor = true;
             // 
             // tplObjEffects
             // 
             this.tplObjEffects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplObjEffects.Grouped = false;
-            this.tplObjEffects.LeftListCaption = "Эффекты объекта";
+            this.tplObjEffects.LeftListCaption = "Р­С„С„РµРєС‚С‹ РѕР±СЉРµРєС‚Р°";
             this.tplObjEffects.Location = new System.Drawing.Point(0, 0);
             this.tplObjEffects.Name = "tplObjEffects";
-            this.tplObjEffects.RightListCaption = "Доступные эффекты";
+            this.tplObjEffects.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СЌС„С„РµРєС‚С‹";
             this.tplObjEffects.Size = new System.Drawing.Size(440, 420);
             this.tplObjEffects.SplitterDistance = 207;
             this.tplObjEffects.TabIndex = 0;
@@ -8405,17 +8405,17 @@ namespace BZEditor
             this.tpObjAffects.Name = "tpObjAffects";
             this.tpObjAffects.Size = new System.Drawing.Size(440, 420);
             this.tpObjAffects.TabIndex = 4;
-            this.tpObjAffects.Text = "Аффекты";
+            this.tpObjAffects.Text = "РђС„С„РµРєС‚С‹";
             this.tpObjAffects.UseVisualStyleBackColor = true;
             // 
             // tplObjAffects
             // 
             this.tplObjAffects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplObjAffects.Grouped = false;
-            this.tplObjAffects.LeftListCaption = "Аффекты объекта";
+            this.tplObjAffects.LeftListCaption = "РђС„С„РµРєС‚С‹ РѕР±СЉРµРєС‚Р°";
             this.tplObjAffects.Location = new System.Drawing.Point(0, 0);
             this.tplObjAffects.Name = "tplObjAffects";
-            this.tplObjAffects.RightListCaption = "Доступные аффекты";
+            this.tplObjAffects.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ Р°С„С„РµРєС‚С‹";
             this.tplObjAffects.Size = new System.Drawing.Size(440, 420);
             this.tplObjAffects.SplitterDistance = 207;
             this.tplObjAffects.TabIndex = 1;
@@ -8428,17 +8428,17 @@ namespace BZEditor
             this.tpObjWearTo.Name = "tpObjWearTo";
             this.tpObjWearTo.Size = new System.Drawing.Size(440, 420);
             this.tpObjWearTo.TabIndex = 0;
-            this.tpObjWearTo.Text = "Где одеть";
+            this.tpObjWearTo.Text = "Р“РґРµ РѕРґРµС‚СЊ";
             this.tpObjWearTo.UseVisualStyleBackColor = true;
             // 
             // tplObjWearTo
             // 
             this.tplObjWearTo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplObjWearTo.Grouped = false;
-            this.tplObjWearTo.LeftListCaption = "Можно одеть";
+            this.tplObjWearTo.LeftListCaption = "РњРѕР¶РЅРѕ РѕРґРµС‚СЊ";
             this.tplObjWearTo.Location = new System.Drawing.Point(0, 0);
             this.tplObjWearTo.Name = "tplObjWearTo";
-            this.tplObjWearTo.RightListCaption = "Доступные варианты";
+            this.tplObjWearTo.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ РІР°СЂРёР°РЅС‚С‹";
             this.tplObjWearTo.Size = new System.Drawing.Size(440, 420);
             this.tplObjWearTo.SplitterDistance = 207;
             this.tplObjWearTo.TabIndex = 0;
@@ -8451,17 +8451,17 @@ namespace BZEditor
             this.tpObjCantTouch.Name = "tpObjCantTouch";
             this.tpObjCantTouch.Size = new System.Drawing.Size(440, 420);
             this.tpObjCantTouch.TabIndex = 6;
-            this.tpObjCantTouch.Text = "Не могут взять";
+            this.tpObjCantTouch.Text = "РќРµ РјРѕРіСѓС‚ РІР·СЏС‚СЊ";
             this.tpObjCantTouch.UseVisualStyleBackColor = true;
             // 
             // tplObjCantTouch
             // 
             this.tplObjCantTouch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplObjCantTouch.Grouped = true;
-            this.tplObjCantTouch.LeftListCaption = "Не могут взять";
+            this.tplObjCantTouch.LeftListCaption = "РќРµ РјРѕРіСѓС‚ РІР·СЏС‚СЊ";
             this.tplObjCantTouch.Location = new System.Drawing.Point(0, 0);
             this.tplObjCantTouch.Name = "tplObjCantTouch";
-            this.tplObjCantTouch.RightListCaption = "Доступные варианты";
+            this.tplObjCantTouch.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ РІР°СЂРёР°РЅС‚С‹";
             this.tplObjCantTouch.Size = new System.Drawing.Size(440, 420);
             this.tplObjCantTouch.SplitterDistance = 207;
             this.tplObjCantTouch.TabIndex = 1;
@@ -8474,17 +8474,17 @@ namespace BZEditor
             this.tpObjCantUse.Name = "tpObjCantUse";
             this.tpObjCantUse.Size = new System.Drawing.Size(440, 420);
             this.tpObjCantUse.TabIndex = 7;
-            this.tpObjCantUse.Text = "Не могут исп.";
+            this.tpObjCantUse.Text = "РќРµ РјРѕРіСѓС‚ РёСЃРї.";
             this.tpObjCantUse.UseVisualStyleBackColor = true;
             // 
             // tplObjCantUse
             // 
             this.tplObjCantUse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplObjCantUse.Grouped = true;
-            this.tplObjCantUse.LeftListCaption = "Не могут использовать";
+            this.tplObjCantUse.LeftListCaption = "РќРµ РјРѕРіСѓС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ";
             this.tplObjCantUse.Location = new System.Drawing.Point(0, 0);
             this.tplObjCantUse.Name = "tplObjCantUse";
-            this.tplObjCantUse.RightListCaption = "Доступные варианты";
+            this.tplObjCantUse.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ РІР°СЂРёР°РЅС‚С‹";
             this.tplObjCantUse.Size = new System.Drawing.Size(440, 420);
             this.tplObjCantUse.SplitterDistance = 207;
             this.tplObjCantUse.TabIndex = 2;
@@ -8499,7 +8499,7 @@ namespace BZEditor
             this.tpObjTriggers.Name = "tpObjTriggers";
             this.tpObjTriggers.Size = new System.Drawing.Size(440, 420);
             this.tpObjTriggers.TabIndex = 8;
-            this.tpObjTriggers.Text = "Триггеры";
+            this.tpObjTriggers.Text = "РўСЂРёРіРіРµСЂС‹";
             this.tpObjTriggers.UseVisualStyleBackColor = true;
             // 
             // lvObjTriggers
@@ -8548,7 +8548,7 @@ namespace BZEditor
             this.tpObjAddDescs.Name = "tpObjAddDescs";
             this.tpObjAddDescs.Size = new System.Drawing.Size(440, 420);
             this.tpObjAddDescs.TabIndex = 2;
-            this.tpObjAddDescs.Text = "Доп.описание";
+            this.tpObjAddDescs.Text = "Р”РѕРї.РѕРїРёСЃР°РЅРёРµ";
             this.tpObjAddDescs.UseVisualStyleBackColor = true;
             // 
             // rtbObjAddDesc
@@ -8570,7 +8570,7 @@ namespace BZEditor
             this.cbMustWordwrapAddDesc.Name = "cbMustWordwrapAddDesc";
             this.cbMustWordwrapAddDesc.Size = new System.Drawing.Size(311, 17);
             this.cbMustWordwrapAddDesc.TabIndex = 83;
-            this.cbMustWordwrapAddDesc.Text = "Переносить текст описания по словам на новую строку";
+            this.cbMustWordwrapAddDesc.Text = "РџРµСЂРµРЅРѕСЃРёС‚СЊ С‚РµРєСЃС‚ РѕРїРёСЃР°РЅРёСЏ РїРѕ СЃР»РѕРІР°Рј РЅР° РЅРѕРІСѓСЋ СЃС‚СЂРѕРєСѓ";
             this.cbMustWordwrapAddDesc.UseVisualStyleBackColor = true;
             this.cbMustWordwrapAddDesc.Visible = false;
             // 
@@ -8598,12 +8598,12 @@ namespace BZEditor
             // 
             // columnHeader24
             // 
-            this.columnHeader24.Text = "Альясы";
+            this.columnHeader24.Text = "РђР»СЊСЏСЃС‹";
             this.columnHeader24.Width = 150;
             // 
             // columnHeader25
             // 
-            this.columnHeader25.Text = "Описание";
+            this.columnHeader25.Text = "РћРїРёСЃР°РЅРёРµ";
             this.columnHeader25.Width = 253;
             // 
             // tboxAddDescAliases
@@ -8622,7 +8622,7 @@ namespace BZEditor
             this.tpObjAddAffects.Name = "tpObjAddAffects";
             this.tpObjAddAffects.Size = new System.Drawing.Size(440, 420);
             this.tpObjAddAffects.TabIndex = 5;
-            this.tpObjAddAffects.Text = "Доп.аффекты";
+            this.tpObjAddAffects.Text = "Р”РѕРї.Р°С„С„РµРєС‚С‹";
             this.tpObjAddAffects.UseVisualStyleBackColor = true;
             // 
             // splitContainerAddAff
@@ -8673,7 +8673,7 @@ namespace BZEditor
             // 
             // chObjAddAffectName
             // 
-            this.chObjAddAffectName.Text = "Доп.аффект";
+            this.chObjAddAffectName.Text = "Р”РѕРї.Р°С„С„РµРєС‚";
             this.chObjAddAffectName.Width = 132;
             // 
             // lvAvailAddAffects
@@ -8695,7 +8695,7 @@ namespace BZEditor
             // 
             // chObjAddAffectAvail
             // 
-            this.chObjAddAffectAvail.Text = "Доступные доп.аффекты";
+            this.chObjAddAffectAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ РґРѕРї.Р°С„С„РµРєС‚С‹";
             this.chObjAddAffectAvail.Width = 175;
             // 
             // toolStripObjAddBonuses
@@ -8720,7 +8720,7 @@ namespace BZEditor
             this.tsbObjAdditAffectAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbObjAdditAffectAdd.Name = "tsbObjAdditAffectAdd";
             this.tsbObjAdditAffectAdd.Size = new System.Drawing.Size(21, 20);
-            this.tsbObjAdditAffectAdd.Text = "Добавить дополнительный аффект";
+            this.tsbObjAdditAffectAdd.Text = "Р”РѕР±Р°РІРёС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ Р°С„С„РµРєС‚";
             this.tsbObjAdditAffectAdd.Click += new System.EventHandler(this.TsbObjAdditAffectAddClick);
             // 
             // tsbObjAdditAffectRemove
@@ -8730,7 +8730,7 @@ namespace BZEditor
             this.tsbObjAdditAffectRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbObjAdditAffectRemove.Name = "tsbObjAdditAffectRemove";
             this.tsbObjAdditAffectRemove.Size = new System.Drawing.Size(21, 20);
-            this.tsbObjAdditAffectRemove.Text = "Убрать дополнительный аффект";
+            this.tsbObjAdditAffectRemove.Text = "РЈР±СЂР°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ Р°С„С„РµРєС‚";
             this.tsbObjAdditAffectRemove.Click += new System.EventHandler(this.TsbObjAdditAffectRemoveClick);
             // 
             // toolStripSeparator15
@@ -8745,7 +8745,7 @@ namespace BZEditor
             this.tsbEditAddAffectValue.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEditAddAffectValue.Name = "tsbEditAddAffectValue";
             this.tsbEditAddAffectValue.Size = new System.Drawing.Size(21, 20);
-            this.tsbEditAddAffectValue.Text = "Изменить числовое значение доб.аффекта";
+            this.tsbEditAddAffectValue.Text = "РР·РјРµРЅРёС‚СЊ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РґРѕР±.Р°С„С„РµРєС‚Р°";
             this.tsbEditAddAffectValue.Click += new System.EventHandler(this.tsbEditAddAffectValue_Click);
             // 
             // tpObjSkillBonus
@@ -8755,7 +8755,7 @@ namespace BZEditor
             this.tpObjSkillBonus.Name = "tpObjSkillBonus";
             this.tpObjSkillBonus.Size = new System.Drawing.Size(440, 420);
             this.tpObjSkillBonus.TabIndex = 10;
-            this.tpObjSkillBonus.Text = "Увеличение % умения";
+            this.tpObjSkillBonus.Text = "РЈРІРµР»РёС‡РµРЅРёРµ % СѓРјРµРЅРёСЏ";
             this.tpObjSkillBonus.UseVisualStyleBackColor = true;
             // 
             // splitContainerSkillBonus
@@ -8806,7 +8806,7 @@ namespace BZEditor
             // 
             // chObjAddSkill
             // 
-            this.chObjAddSkill.Text = "Умение";
+            this.chObjAddSkill.Text = "РЈРјРµРЅРёРµ";
             this.chObjAddSkill.Width = 132;
             // 
             // lvAvailSkillBonuses
@@ -8828,7 +8828,7 @@ namespace BZEditor
             // 
             // chObjAddSkillAvail
             // 
-            this.chObjAddSkillAvail.Text = "Доступные умения";
+            this.chObjAddSkillAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СѓРјРµРЅРёСЏ";
             this.chObjAddSkillAvail.Width = 175;
             // 
             // toolStripObjSkillBonuses
@@ -8852,7 +8852,7 @@ namespace BZEditor
             this.tsbAddSkillBonus.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAddSkillBonus.Name = "tsbAddSkillBonus";
             this.tsbAddSkillBonus.Size = new System.Drawing.Size(21, 20);
-            this.tsbAddSkillBonus.Text = "Добавить умение";
+            this.tsbAddSkillBonus.Text = "Р”РѕР±Р°РІРёС‚СЊ СѓРјРµРЅРёРµ";
             this.tsbAddSkillBonus.Click += new System.EventHandler(this.TsbAddSkillBonusClick);
             // 
             // tsbRemoveSkillBonus
@@ -8862,7 +8862,7 @@ namespace BZEditor
             this.tsbRemoveSkillBonus.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRemoveSkillBonus.Name = "tsbRemoveSkillBonus";
             this.tsbRemoveSkillBonus.Size = new System.Drawing.Size(21, 20);
-            this.tsbRemoveSkillBonus.Text = "Убрать умение";
+            this.tsbRemoveSkillBonus.Text = "РЈР±СЂР°С‚СЊ СѓРјРµРЅРёРµ";
             this.tsbRemoveSkillBonus.Click += new System.EventHandler(this.TsbRemoveSkillBonusClick);
             // 
             // toolStripSeparator16
@@ -8877,7 +8877,7 @@ namespace BZEditor
             this.tsbEditSkillBonus.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEditSkillBonus.Name = "tsbEditSkillBonus";
             this.tsbEditSkillBonus.Size = new System.Drawing.Size(21, 20);
-            this.tsbEditSkillBonus.Text = "Изменить числовое значение бонуса";
+            this.tsbEditSkillBonus.Text = "РР·РјРµРЅРёС‚СЊ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ Р±РѕРЅСѓСЃР°";
             this.tsbEditSkillBonus.Click += new System.EventHandler(this.tsbEditSkillBonus_Click);
             // 
             // tpMobs
@@ -8889,7 +8889,7 @@ namespace BZEditor
             this.tpMobs.Padding = new System.Windows.Forms.Padding(3);
             this.tpMobs.Size = new System.Drawing.Size(819, 472);
             this.tpMobs.TabIndex = 0;
-            this.tpMobs.Text = "Мобы";
+            this.tpMobs.Text = "РњРѕР±С‹";
             this.tpMobs.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
@@ -8985,7 +8985,7 @@ namespace BZEditor
             this.cborMobRemoveOnReload.Name = "cborMobRemoveOnReload";
             this.cborMobRemoveOnReload.Size = new System.Drawing.Size(192, 17);
             this.cborMobRemoveOnReload.TabIndex = 0;
-            this.cborMobRemoveOnReload.Text = "Удалять моба при перезагрузке";
+            this.cborMobRemoveOnReload.Text = "РЈРґР°Р»СЏС‚СЊ РјРѕР±Р° РїСЂРё РїРµСЂРµР·Р°РіСЂСѓР·РєРµ";
             this.cborMobRemoveOnReload.UseVisualStyleBackColor = true;
             this.cborMobRemoveOnReload.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cborMobRemoveOnReload_MouseClick);
             // 
@@ -9069,7 +9069,7 @@ namespace BZEditor
             this.tpMobParameters.Padding = new System.Windows.Forms.Padding(3);
             this.tpMobParameters.Size = new System.Drawing.Size(459, 323);
             this.tpMobParameters.TabIndex = 9;
-            this.tpMobParameters.Text = "Параметры";
+            this.tpMobParameters.Text = "РџР°СЂР°РјРµС‚СЂС‹";
             this.tpMobParameters.UseVisualStyleBackColor = true;
             // 
             // cboxMobDefPosition
@@ -9269,7 +9269,7 @@ namespace BZEditor
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(256, 14);
             this.label34.TabIndex = 15;
-            this.label34.Text = "Список комнат по которым передвигается моб";
+            this.label34.Text = "РЎРїРёСЃРѕРє РєРѕРјРЅР°С‚ РїРѕ РєРѕС‚РѕСЂС‹Рј РїРµСЂРµРґРІРёРіР°РµС‚СЃСЏ РјРѕР±";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudMobStr
@@ -9282,7 +9282,7 @@ namespace BZEditor
             // 
             // dctrlMobMoney
             // 
-            this.dctrlMobMoney.LabelText = "Деньги";
+            this.dctrlMobMoney.LabelText = "Р”РµРЅСЊРіРё";
             this.dctrlMobMoney.Location = new System.Drawing.Point(206, 279);
             this.dctrlMobMoney.MinRandomValue = 0;
             this.dctrlMobMoney.Name = "dctrlMobMoney";
@@ -9317,7 +9317,7 @@ namespace BZEditor
             this.tpMobSkills.Name = "tpMobSkills";
             this.tpMobSkills.Size = new System.Drawing.Size(459, 323);
             this.tpMobSkills.TabIndex = 5;
-            this.tpMobSkills.Text = "Умения";
+            this.tpMobSkills.Text = "РЈРјРµРЅРёСЏ";
             this.tpMobSkills.UseVisualStyleBackColor = true;
             // 
             // splitContainerMobSkills
@@ -9369,7 +9369,7 @@ namespace BZEditor
             // 
             // chMobSkillName
             // 
-            this.chMobSkillName.Text = "Умение";
+            this.chMobSkillName.Text = "РЈРјРµРЅРёРµ";
             this.chMobSkillName.Width = 124;
             // 
             // lvAvailMobSkills
@@ -9391,7 +9391,7 @@ namespace BZEditor
             // 
             // chMobSkillAvail
             // 
-            this.chMobSkillAvail.Text = "Доступные умения";
+            this.chMobSkillAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СѓРјРµРЅРёСЏ";
             this.chMobSkillAvail.Width = 175;
             // 
             // toolStripMobSkills
@@ -9416,7 +9416,7 @@ namespace BZEditor
             this.tsbMobAddSkill.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMobAddSkill.Name = "tsbMobAddSkill";
             this.tsbMobAddSkill.Size = new System.Drawing.Size(21, 20);
-            this.tsbMobAddSkill.Text = "Добавить выбранное";
+            this.tsbMobAddSkill.Text = "Р”РѕР±Р°РІРёС‚СЊ РІС‹Р±СЂР°РЅРЅРѕРµ";
             this.tsbMobAddSkill.Click += new System.EventHandler(this.tsbMobAddSkill_Click);
             // 
             // tsbMobRemoveSkill
@@ -9426,7 +9426,7 @@ namespace BZEditor
             this.tsbMobRemoveSkill.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMobRemoveSkill.Name = "tsbMobRemoveSkill";
             this.tsbMobRemoveSkill.Size = new System.Drawing.Size(21, 20);
-            this.tsbMobRemoveSkill.Text = "Удалить выбранное";
+            this.tsbMobRemoveSkill.Text = "РЈРґР°Р»РёС‚СЊ РІС‹Р±СЂР°РЅРЅРѕРµ";
             this.tsbMobRemoveSkill.Click += new System.EventHandler(this.tsbMobRemoveSkill_Click);
             // 
             // toolStripSeparator18
@@ -9441,7 +9441,7 @@ namespace BZEditor
             this.tsbMobEditSkill.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMobEditSkill.Name = "tsbMobEditSkill";
             this.tsbMobEditSkill.Size = new System.Drawing.Size(21, 20);
-            this.tsbMobEditSkill.Text = "Изменить значение";
+            this.tsbMobEditSkill.Text = "РР·РјРµРЅРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ";
             this.tsbMobEditSkill.Click += new System.EventHandler(this.tsbMobEditSkill_Click);
             // 
             // tpMobSpells
@@ -9451,7 +9451,7 @@ namespace BZEditor
             this.tpMobSpells.Name = "tpMobSpells";
             this.tpMobSpells.Size = new System.Drawing.Size(459, 323);
             this.tpMobSpells.TabIndex = 4;
-            this.tpMobSpells.Text = "Заклинания";
+            this.tpMobSpells.Text = "Р—Р°РєР»РёРЅР°РЅРёСЏ";
             this.tpMobSpells.UseVisualStyleBackColor = true;
             // 
             // splitContainerMobSpells
@@ -9498,12 +9498,12 @@ namespace BZEditor
             // 
             // chMobSpellCnt
             // 
-            this.chMobSpellCnt.Text = "Кол-во";
+            this.chMobSpellCnt.Text = "РљРѕР»-РІРѕ";
             this.chMobSpellCnt.Width = 50;
             // 
             // chMobSpellName
             // 
-            this.chMobSpellName.Text = "Заклинание";
+            this.chMobSpellName.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ";
             this.chMobSpellName.Width = 124;
             // 
             // lvMobAvailSpells
@@ -9525,7 +9525,7 @@ namespace BZEditor
             // 
             // chAvailMobSpellName
             // 
-            this.chAvailMobSpellName.Text = "Заклинание";
+            this.chAvailMobSpellName.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ";
             this.chAvailMobSpellName.Width = 175;
             // 
             // toolStripMobSpells
@@ -9550,7 +9550,7 @@ namespace BZEditor
             this.tsbMobAddSpell.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMobAddSpell.Name = "tsbMobAddSpell";
             this.tsbMobAddSpell.Size = new System.Drawing.Size(21, 20);
-            this.tsbMobAddSpell.Text = "Добавить выбранное";
+            this.tsbMobAddSpell.Text = "Р”РѕР±Р°РІРёС‚СЊ РІС‹Р±СЂР°РЅРЅРѕРµ";
             this.tsbMobAddSpell.Click += new System.EventHandler(this.tsbMobAddSpell_Click);
             // 
             // tsbMobRemoveSpell
@@ -9560,7 +9560,7 @@ namespace BZEditor
             this.tsbMobRemoveSpell.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMobRemoveSpell.Name = "tsbMobRemoveSpell";
             this.tsbMobRemoveSpell.Size = new System.Drawing.Size(21, 20);
-            this.tsbMobRemoveSpell.Text = "Удалить выбранное";
+            this.tsbMobRemoveSpell.Text = "РЈРґР°Р»РёС‚СЊ РІС‹Р±СЂР°РЅРЅРѕРµ";
             this.tsbMobRemoveSpell.Click += new System.EventHandler(this.tsbMobRemoveSpell_Click);
             // 
             // toolStripSeparator19
@@ -9575,7 +9575,7 @@ namespace BZEditor
             this.tsbMobEditSpell.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMobEditSpell.Name = "tsbMobEditSpell";
             this.tsbMobEditSpell.Size = new System.Drawing.Size(21, 20);
-            this.tsbMobEditSpell.Text = "Изменить значение";
+            this.tsbMobEditSpell.Text = "РР·РјРµРЅРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ";
             this.tsbMobEditSpell.Click += new System.EventHandler(this.tsbMobEditSpell_Click);
             // 
             // tpMobFeatures
@@ -9585,17 +9585,17 @@ namespace BZEditor
             this.tpMobFeatures.Name = "tpMobFeatures";
             this.tpMobFeatures.Size = new System.Drawing.Size(459, 323);
             this.tpMobFeatures.TabIndex = 10;
-            this.tpMobFeatures.Text = "Фиты";
+            this.tpMobFeatures.Text = "Р¤РёС‚С‹";
             this.tpMobFeatures.UseVisualStyleBackColor = true;
             // 
             // tplMobFeats
             // 
             this.tplMobFeats.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplMobFeats.Grouped = false;
-            this.tplMobFeats.LeftListCaption = "Фиты моба";
+            this.tplMobFeats.LeftListCaption = "Р¤РёС‚С‹ РјРѕР±Р°";
             this.tplMobFeats.Location = new System.Drawing.Point(0, 0);
             this.tplMobFeats.Name = "tplMobFeats";
-            this.tplMobFeats.RightListCaption = "Доступные фиты";
+            this.tplMobFeats.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ С„РёС‚С‹";
             this.tplMobFeats.Size = new System.Drawing.Size(459, 323);
             this.tplMobFeats.SplitterDistance = 216;
             this.tplMobFeats.TabIndex = 0;
@@ -9608,17 +9608,17 @@ namespace BZEditor
             this.tpMobAffects.Name = "tpMobAffects";
             this.tpMobAffects.Size = new System.Drawing.Size(459, 323);
             this.tpMobAffects.TabIndex = 3;
-            this.tpMobAffects.Text = "Аффекты";
+            this.tpMobAffects.Text = "РђС„С„РµРєС‚С‹";
             this.tpMobAffects.UseVisualStyleBackColor = true;
             // 
             // tplMobAffects
             // 
             this.tplMobAffects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplMobAffects.Grouped = false;
-            this.tplMobAffects.LeftListCaption = "Аффекты моба";
+            this.tplMobAffects.LeftListCaption = "РђС„С„РµРєС‚С‹ РјРѕР±Р°";
             this.tplMobAffects.Location = new System.Drawing.Point(0, 0);
             this.tplMobAffects.Name = "tplMobAffects";
-            this.tplMobAffects.RightListCaption = "Доступные аффекты";
+            this.tplMobAffects.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ Р°С„С„РµРєС‚С‹";
             this.tplMobAffects.Size = new System.Drawing.Size(459, 323);
             this.tplMobAffects.SplitterDistance = 216;
             this.tplMobAffects.TabIndex = 0;
@@ -9631,17 +9631,17 @@ namespace BZEditor
             this.tpMobFlags.Name = "tpMobFlags";
             this.tpMobFlags.Size = new System.Drawing.Size(459, 323);
             this.tpMobFlags.TabIndex = 0;
-            this.tpMobFlags.Text = "Флаги";
+            this.tpMobFlags.Text = "Р¤Р»Р°РіРё";
             this.tpMobFlags.UseVisualStyleBackColor = true;
             // 
             // tplMobFlags
             // 
             this.tplMobFlags.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplMobFlags.Grouped = false;
-            this.tplMobFlags.LeftListCaption = "Флаги моба";
+            this.tplMobFlags.LeftListCaption = "Р¤Р»Р°РіРё РјРѕР±Р°";
             this.tplMobFlags.Location = new System.Drawing.Point(0, 0);
             this.tplMobFlags.Name = "tplMobFlags";
-            this.tplMobFlags.RightListCaption = "Доступные флаги";
+            this.tplMobFlags.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ С„Р»Р°РіРё";
             this.tplMobFlags.Size = new System.Drawing.Size(459, 323);
             this.tplMobFlags.SplitterDistance = 216;
             this.tplMobFlags.TabIndex = 0;
@@ -9654,17 +9654,17 @@ namespace BZEditor
             this.tpMobSpecFlags.Name = "tpMobSpecFlags";
             this.tpMobSpecFlags.Size = new System.Drawing.Size(459, 323);
             this.tpMobSpecFlags.TabIndex = 7;
-            this.tpMobSpecFlags.Text = "Спец.флаги";
+            this.tpMobSpecFlags.Text = "РЎРїРµС†.С„Р»Р°РіРё";
             this.tpMobSpecFlags.UseVisualStyleBackColor = true;
             // 
             // tplMobSpecFlags
             // 
             this.tplMobSpecFlags.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplMobSpecFlags.Grouped = false;
-            this.tplMobSpecFlags.LeftListCaption = "Спецфлаги моба";
+            this.tplMobSpecFlags.LeftListCaption = "РЎРїРµС†С„Р»Р°РіРё РјРѕР±Р°";
             this.tplMobSpecFlags.Location = new System.Drawing.Point(0, 0);
             this.tplMobSpecFlags.Name = "tplMobSpecFlags";
-            this.tplMobSpecFlags.RightListCaption = "Доступные спецфлаги";
+            this.tplMobSpecFlags.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СЃРїРµС†С„Р»Р°РіРё";
             this.tplMobSpecFlags.Size = new System.Drawing.Size(459, 323);
             this.tplMobSpecFlags.SplitterDistance = 216;
             this.tplMobSpecFlags.TabIndex = 0;
@@ -9679,7 +9679,7 @@ namespace BZEditor
             this.tpMobHelpers.Name = "tpMobHelpers";
             this.tpMobHelpers.Size = new System.Drawing.Size(459, 323);
             this.tpMobHelpers.TabIndex = 2;
-            this.tpMobHelpers.Text = "Помощники";
+            this.tpMobHelpers.Text = "РџРѕРјРѕС‰РЅРёРєРё";
             this.tpMobHelpers.UseVisualStyleBackColor = true;
             // 
             // lvMobHelpers
@@ -9723,7 +9723,7 @@ namespace BZEditor
             this.tpMobTriggers.Name = "tpMobTriggers";
             this.tpMobTriggers.Size = new System.Drawing.Size(459, 323);
             this.tpMobTriggers.TabIndex = 6;
-            this.tpMobTriggers.Text = "Триггеры";
+            this.tpMobTriggers.Text = "РўСЂРёРіРіРµСЂС‹";
             this.tpMobTriggers.UseVisualStyleBackColor = true;
             // 
             // lvMobTriggers
@@ -9769,7 +9769,7 @@ namespace BZEditor
             this.tpMobResists.Padding = new System.Windows.Forms.Padding(2);
             this.tpMobResists.Size = new System.Drawing.Size(459, 323);
             this.tpMobResists.TabIndex = 11;
-            this.tpMobResists.Text = "Сейвы/Резисты/Прочее";
+            this.tpMobResists.Text = "РЎРµР№РІС‹/Р РµР·РёСЃС‚С‹/РџСЂРѕС‡РµРµ";
             this.tpMobResists.UseVisualStyleBackColor = true;
             // 
             // gbSaves
@@ -9788,7 +9788,7 @@ namespace BZEditor
             this.gbSaves.Size = new System.Drawing.Size(455, 44);
             this.gbSaves.TabIndex = 36;
             this.gbSaves.TabStop = false;
-            this.gbSaves.Text = "Сейвы";
+            this.gbSaves.Text = "РЎРµР№РІС‹";
             // 
             // tpMobRoles
             // 
@@ -9797,17 +9797,17 @@ namespace BZEditor
             this.tpMobRoles.Name = "tpMobRoles";
             this.tpMobRoles.Size = new System.Drawing.Size(459, 323);
             this.tpMobRoles.TabIndex = 12;
-            this.tpMobRoles.Text = "Роли";
+            this.tpMobRoles.Text = "Р РѕР»Рё";
             this.tpMobRoles.UseVisualStyleBackColor = true;
             // 
             // tplMobRoles
             // 
             this.tplMobRoles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tplMobRoles.Grouped = false;
-            this.tplMobRoles.LeftListCaption = "Роли моба";
+            this.tplMobRoles.LeftListCaption = "Р РѕР»Рё РјРѕР±Р°";
             this.tplMobRoles.Location = new System.Drawing.Point(0, 0);
             this.tplMobRoles.Name = "tplMobRoles";
-            this.tplMobRoles.RightListCaption = "Доступные роли";
+            this.tplMobRoles.RightListCaption = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СЂРѕР»Рё";
             this.tplMobRoles.Size = new System.Drawing.Size(459, 323);
             this.tplMobRoles.SplitterDistance = 216;
             this.tplMobRoles.TabIndex = 1;
@@ -9822,7 +9822,7 @@ namespace BZEditor
             this.tpMobIngredients.Name = "tpMobIngredients";
             this.tpMobIngredients.Size = new System.Drawing.Size(459, 323);
             this.tpMobIngredients.TabIndex = 13;
-            this.tpMobIngredients.Text = "Ингредиенты";
+            this.tpMobIngredients.Text = "РРЅРіСЂРµРґРёРµРЅС‚С‹";
             this.tpMobIngredients.UseVisualStyleBackColor = true;
             // 
             // pnlAddMobDesc
@@ -9873,7 +9873,7 @@ namespace BZEditor
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(278, 13);
             this.label67.TabIndex = 2;
-            this.label67.Text = "Подробное описание моба (по команде \"осмотреть\")";
+            this.label67.Text = "РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ РјРѕР±Р° (РїРѕ РєРѕРјР°РЅРґРµ \"РѕСЃРјРѕС‚СЂРµС‚СЊ\")";
             // 
             // tpTriggers
             // 
@@ -9884,7 +9884,7 @@ namespace BZEditor
             this.tpTriggers.Padding = new System.Windows.Forms.Padding(3);
             this.tpTriggers.Size = new System.Drawing.Size(819, 472);
             this.tpTriggers.TabIndex = 2;
-            this.tpTriggers.Text = "Триггеры";
+            this.tpTriggers.Text = "РўСЂРёРіРіРµСЂС‹";
             this.tpTriggers.UseVisualStyleBackColor = true;
             // 
             // splitContainerTrg
@@ -9937,7 +9937,7 @@ namespace BZEditor
             this.tpTrgParams.Padding = new System.Windows.Forms.Padding(3);
             this.tpTrgParams.Size = new System.Drawing.Size(236, 438);
             this.tpTrgParams.TabIndex = 0;
-            this.tpTrgParams.Text = "Параметры";
+            this.tpTrgParams.Text = "РџР°СЂР°РјРµС‚СЂС‹";
             this.tpTrgParams.UseVisualStyleBackColor = true;
             // 
             // cboxTrgClass
@@ -9962,7 +9962,7 @@ namespace BZEditor
             this.gbObjectsToCreate.Size = new System.Drawing.Size(235, 308);
             this.gbObjectsToCreate.TabIndex = 9;
             this.gbObjectsToCreate.TabStop = false;
-            this.gbObjectsToCreate.Text = "Условия срабатывания триггера";
+            this.gbObjectsToCreate.Text = "РЈСЃР»РѕРІРёСЏ СЃСЂР°Р±Р°С‚С‹РІР°РЅРёСЏ С‚СЂРёРіРіРµСЂР°";
             // 
             // lvTrgActivationConditions
             // 
@@ -10036,7 +10036,7 @@ namespace BZEditor
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(112, 16);
             this.label61.TabIndex = 11;
-            this.label61.Text = "Числовой аргумент";
+            this.label61.Text = "Р§РёСЃР»РѕРІРѕР№ Р°СЂРіСѓРјРµРЅС‚";
             this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label58
@@ -10045,7 +10045,7 @@ namespace BZEditor
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(92, 16);
             this.label58.TabIndex = 16;
-            this.label58.Text = "Класс триггера";
+            this.label58.Text = "РљР»Р°СЃСЃ С‚СЂРёРіРіРµСЂР°";
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label62
@@ -10054,7 +10054,7 @@ namespace BZEditor
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(63, 16);
             this.label62.TabIndex = 12;
-            this.label62.Text = "Аргумент";
+            this.label62.Text = "РђСЂРіСѓРјРµРЅС‚";
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label44
@@ -10063,7 +10063,7 @@ namespace BZEditor
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(63, 16);
             this.label44.TabIndex = 10;
-            this.label44.Text = "Название";
+            this.label44.Text = "РќР°Р·РІР°РЅРёРµ";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tpTrgGlobalVars
@@ -10076,7 +10076,7 @@ namespace BZEditor
             this.tpTrgGlobalVars.Padding = new System.Windows.Forms.Padding(3);
             this.tpTrgGlobalVars.Size = new System.Drawing.Size(236, 438);
             this.tpTrgGlobalVars.TabIndex = 1;
-            this.tpTrgGlobalVars.Text = "Глобальные переменные";
+            this.tpTrgGlobalVars.Text = "Р“Р»РѕР±Р°Р»СЊРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ";
             this.tpTrgGlobalVars.UseVisualStyleBackColor = true;
             // 
             // listView1
@@ -10167,7 +10167,7 @@ namespace BZEditor
             this.tsbTrgClear.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgClear.Name = "tsbTrgClear";
             this.tsbTrgClear.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgClear.ToolTipText = "Очистить поле редактирования";
+            this.tsbTrgClear.ToolTipText = "РћС‡РёСЃС‚РёС‚СЊ РїРѕР»Рµ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ";
             this.tsbTrgClear.Click += new System.EventHandler(this.TsbTrgClearClick);
             // 
             // toolStripSeparator3
@@ -10182,7 +10182,7 @@ namespace BZEditor
             this.tsbTrgUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgUndo.Name = "tsbTrgUndo";
             this.tsbTrgUndo.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgUndo.Text = "Отменить изменения  (Ctrl+Z)";
+            this.tsbTrgUndo.Text = "РћС‚РјРµРЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ  (Ctrl+Z)";
             this.tsbTrgUndo.Click += new System.EventHandler(this.TsbTrgUndoClick);
             // 
             // tsbTrgRedo
@@ -10192,7 +10192,7 @@ namespace BZEditor
             this.tsbTrgRedo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgRedo.Name = "tsbTrgRedo";
             this.tsbTrgRedo.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgRedo.Text = "Вернуть отмененное изменение (Ctrl+Y)";
+            this.tsbTrgRedo.Text = "Р’РµСЂРЅСѓС‚СЊ РѕС‚РјРµРЅРµРЅРЅРѕРµ РёР·РјРµРЅРµРЅРёРµ (Ctrl+Y)";
             this.tsbTrgRedo.Click += new System.EventHandler(this.TsbTrgRedoClick);
             // 
             // toolStripSeparator4
@@ -10207,7 +10207,7 @@ namespace BZEditor
             this.tsbTrgToggleBookmark.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgToggleBookmark.Name = "tsbTrgToggleBookmark";
             this.tsbTrgToggleBookmark.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgToggleBookmark.Text = "Установить/снять метку (Ctrl+F2)";
+            this.tsbTrgToggleBookmark.Text = "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ/СЃРЅСЏС‚СЊ РјРµС‚РєСѓ (Ctrl+F2)";
             this.tsbTrgToggleBookmark.Click += new System.EventHandler(this.TsbTrgToggleBookmarkClick);
             // 
             // tsbTrgGoToPrevBookmark
@@ -10217,7 +10217,7 @@ namespace BZEditor
             this.tsbTrgGoToPrevBookmark.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgGoToPrevBookmark.Name = "tsbTrgGoToPrevBookmark";
             this.tsbTrgGoToPrevBookmark.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgGoToPrevBookmark.Text = "К предыдущей метке (Shift+F2)";
+            this.tsbTrgGoToPrevBookmark.Text = "Рљ РїСЂРµРґС‹РґСѓС‰РµР№ РјРµС‚РєРµ (Shift+F2)";
             this.tsbTrgGoToPrevBookmark.Click += new System.EventHandler(this.TsbTrgGoToPrevBookmarkClick);
             // 
             // tsbTrgGoToNextBookmark
@@ -10227,7 +10227,7 @@ namespace BZEditor
             this.tsbTrgGoToNextBookmark.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgGoToNextBookmark.Name = "tsbTrgGoToNextBookmark";
             this.tsbTrgGoToNextBookmark.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgGoToNextBookmark.Text = "К следующей метке (F2)";
+            this.tsbTrgGoToNextBookmark.Text = "Рљ СЃР»РµРґСѓСЋС‰РµР№ РјРµС‚РєРµ (F2)";
             this.tsbTrgGoToNextBookmark.Click += new System.EventHandler(this.TsbTrgGoToNextBookmarkClick);
             // 
             // toolStripSeparator10
@@ -10242,7 +10242,7 @@ namespace BZEditor
             this.tsbTrgGoToLine.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgGoToLine.Name = "tsbTrgGoToLine";
             this.tsbTrgGoToLine.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgGoToLine.Text = "Перейти к строке №...(Ctrl+G)";
+            this.tsbTrgGoToLine.Text = "РџРµСЂРµР№С‚Рё Рє СЃС‚СЂРѕРєРµ в„–...(Ctrl+G)";
             this.tsbTrgGoToLine.Click += new System.EventHandler(this.TsbTrgGoToLineClick);
             // 
             // tsbTrgSearch
@@ -10252,7 +10252,7 @@ namespace BZEditor
             this.tsbTrgSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgSearch.Name = "tsbTrgSearch";
             this.tsbTrgSearch.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgSearch.Text = "Найти (Ctrl+F)";
+            this.tsbTrgSearch.Text = "РќР°Р№С‚Рё (Ctrl+F)";
             this.tsbTrgSearch.Click += new System.EventHandler(this.TsbTrgSearchClick);
             // 
             // tsbTrgSearchNext
@@ -10262,7 +10262,7 @@ namespace BZEditor
             this.tsbTrgSearchNext.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgSearchNext.Name = "tsbTrgSearchNext";
             this.tsbTrgSearchNext.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgSearchNext.Text = "Найти следующее вхождение (F3)";
+            this.tsbTrgSearchNext.Text = "РќР°Р№С‚Рё СЃР»РµРґСѓСЋС‰РµРµ РІС…РѕР¶РґРµРЅРёРµ (F3)";
             this.tsbTrgSearchNext.Click += new System.EventHandler(this.TsbTrgSearchNextClick);
             // 
             // tsbTrgReplace
@@ -10272,7 +10272,7 @@ namespace BZEditor
             this.tsbTrgReplace.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgReplace.Name = "tsbTrgReplace";
             this.tsbTrgReplace.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgReplace.Text = "Заменить (Ctrl+H)";
+            this.tsbTrgReplace.Text = "Р—Р°РјРµРЅРёС‚СЊ (Ctrl+H)";
             this.tsbTrgReplace.Click += new System.EventHandler(this.TsbTrgReplaceClick);
             // 
             // toolStripSeparator5
@@ -10287,7 +10287,7 @@ namespace BZEditor
             this.tsbTrgIndent.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgIndent.Name = "tsbTrgIndent";
             this.tsbTrgIndent.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgIndent.Text = "Сдвиг выделенного текста вправо (TAB)";
+            this.tsbTrgIndent.Text = "РЎРґРІРёРі РІС‹РґРµР»РµРЅРЅРѕРіРѕ С‚РµРєСЃС‚Р° РІРїСЂР°РІРѕ (TAB)";
             this.tsbTrgIndent.Click += new System.EventHandler(this.TsbTrgIndentClick);
             // 
             // tsbTrgOutdent
@@ -10297,7 +10297,7 @@ namespace BZEditor
             this.tsbTrgOutdent.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgOutdent.Name = "tsbTrgOutdent";
             this.tsbTrgOutdent.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgOutdent.Text = "Сдвиг выделенного текста влево (Shift+TAB)";
+            this.tsbTrgOutdent.Text = "РЎРґРІРёРі РІС‹РґРµР»РµРЅРЅРѕРіРѕ С‚РµРєСЃС‚Р° РІР»РµРІРѕ (Shift+TAB)";
             this.tsbTrgOutdent.Click += new System.EventHandler(this.TsbTrgOutdentClick);
             // 
             // tsbTrgCopy
@@ -10307,7 +10307,7 @@ namespace BZEditor
             this.tsbTrgCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgCopy.Name = "tsbTrgCopy";
             this.tsbTrgCopy.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgCopy.Text = "Копировать (Ctrl+C)";
+            this.tsbTrgCopy.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ (Ctrl+C)";
             this.tsbTrgCopy.Click += new System.EventHandler(this.TsbTrgCopyClick);
             // 
             // tsbTrgCut
@@ -10317,7 +10317,7 @@ namespace BZEditor
             this.tsbTrgCut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgCut.Name = "tsbTrgCut";
             this.tsbTrgCut.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgCut.Text = "Вырезать (Ctrl+X)";
+            this.tsbTrgCut.Text = "Р’С‹СЂРµР·Р°С‚СЊ (Ctrl+X)";
             this.tsbTrgCut.Click += new System.EventHandler(this.TsbTrgCutClick);
             // 
             // tsbTrgPaste
@@ -10327,7 +10327,7 @@ namespace BZEditor
             this.tsbTrgPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTrgPaste.Name = "tsbTrgPaste";
             this.tsbTrgPaste.Size = new System.Drawing.Size(23, 22);
-            this.tsbTrgPaste.Text = "Вставить (Ctrl+V)";
+            this.tsbTrgPaste.Text = "Р’СЃС‚Р°РІРёС‚СЊ (Ctrl+V)";
             this.tsbTrgPaste.Click += new System.EventHandler(this.TsbTrgPasteClick);
             // 
             // toolStripSeparator2
@@ -10342,7 +10342,7 @@ namespace BZEditor
             this.tsbInsertSpellNumber.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbInsertSpellNumber.Name = "tsbInsertSpellNumber";
             this.tsbInsertSpellNumber.Size = new System.Drawing.Size(23, 22);
-            this.tsbInsertSpellNumber.Text = "Вставить номер заклинания";
+            this.tsbInsertSpellNumber.Text = "Р’СЃС‚Р°РІРёС‚СЊ РЅРѕРјРµСЂ Р·Р°РєР»РёРЅР°РЅРёСЏ";
             this.tsbInsertSpellNumber.Click += new System.EventHandler(this.TsbInsertSpellNumberClick);
             // 
             // toolStripPanelTrgRight
@@ -10428,7 +10428,7 @@ namespace BZEditor
             this.tsbReloadWithoutSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbReloadWithoutSave.Name = "tsbReloadWithoutSave";
             this.tsbReloadWithoutSave.Size = new System.Drawing.Size(23, 22);
-            this.tsbReloadWithoutSave.Text = "Перечитать зону из файла без сохранения";
+            this.tsbReloadWithoutSave.Text = "РџРµСЂРµС‡РёС‚Р°С‚СЊ Р·РѕРЅСѓ РёР· С„Р°Р№Р»Р° Р±РµР· СЃРѕС…СЂР°РЅРµРЅРёСЏ";
             this.tsbReloadWithoutSave.Click += new System.EventHandler(this.TsbReloadWithoutSaveClick);
             // 
             // toolStripSeparator14
@@ -10443,8 +10443,8 @@ namespace BZEditor
             this.tsbSaveZone.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSaveZone.Name = "tsbSaveZone";
             this.tsbSaveZone.Size = new System.Drawing.Size(23, 22);
-            this.tsbSaveZone.Text = "Сохранить зону";
-            this.tsbSaveZone.ToolTipText = "Сохранить зону (Ctrl+Shift+S)";
+            this.tsbSaveZone.Text = "РЎРѕС…СЂР°РЅРёС‚СЊ Р·РѕРЅСѓ";
+            this.tsbSaveZone.ToolTipText = "РЎРѕС…СЂР°РЅРёС‚СЊ Р·РѕРЅСѓ (Ctrl+Shift+S)";
             this.tsbSaveZone.Click += new System.EventHandler(this.TsbSaveZoneClick);
             // 
             // tsbSaveCurTabData
@@ -10454,8 +10454,8 @@ namespace BZEditor
             this.tsbSaveCurTabData.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSaveCurTabData.Name = "tsbSaveCurTabData";
             this.tsbSaveCurTabData.Size = new System.Drawing.Size(23, 22);
-            this.tsbSaveCurTabData.Text = "Сохранить данные текущей закладки";
-            this.tsbSaveCurTabData.ToolTipText = "Сохранить данные текущей закладки (Ctrl+S)";
+            this.tsbSaveCurTabData.Text = "РЎРѕС…СЂР°РЅРёС‚СЊ РґР°РЅРЅС‹Рµ С‚РµРєСѓС‰РµР№ Р·Р°РєР»Р°РґРєРё";
+            this.tsbSaveCurTabData.ToolTipText = "РЎРѕС…СЂР°РЅРёС‚СЊ РґР°РЅРЅС‹Рµ С‚РµРєСѓС‰РµР№ Р·Р°РєР»Р°РґРєРё (Ctrl+S)";
             this.tsbSaveCurTabData.Click += new System.EventHandler(this.TsbSaveCurTabDataClick);
             // 
             // toolStripSeparator11
@@ -10470,8 +10470,8 @@ namespace BZEditor
             this.tsbAddItems.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAddItems.Name = "tsbAddItems";
             this.tsbAddItems.Size = new System.Drawing.Size(23, 22);
-            this.tsbAddItems.Text = "Добавить";
-            this.tsbAddItems.ToolTipText = "Создать (Ctrl+N)";
+            this.tsbAddItems.Text = "Р”РѕР±Р°РІРёС‚СЊ";
+            this.tsbAddItems.ToolTipText = "РЎРѕР·РґР°С‚СЊ (Ctrl+N)";
             this.tsbAddItems.Click += new System.EventHandler(this.TsbAddItemsClick);
             // 
             // tsbRemoveItems
@@ -10481,7 +10481,7 @@ namespace BZEditor
             this.tsbRemoveItems.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRemoveItems.Name = "tsbRemoveItems";
             this.tsbRemoveItems.Size = new System.Drawing.Size(23, 22);
-            this.tsbRemoveItems.Text = "Удалить";
+            this.tsbRemoveItems.Text = "РЈРґР°Р»РёС‚СЊ";
             this.tsbRemoveItems.Click += new System.EventHandler(this.TsbRemoveItemsClick);
             // 
             // tsbAddTemplate
@@ -10491,8 +10491,8 @@ namespace BZEditor
             this.tsbAddTemplate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAddTemplate.Name = "tsbAddTemplate";
             this.tsbAddTemplate.Size = new System.Drawing.Size(23, 22);
-            this.tsbAddTemplate.Text = "Добавить в набор шаблонов";
-            this.tsbAddTemplate.ToolTipText = "Добавить в набор шаблонов (Ctrl+T)";
+            this.tsbAddTemplate.Text = "Р”РѕР±Р°РІРёС‚СЊ РІ РЅР°Р±РѕСЂ С€Р°Р±Р»РѕРЅРѕРІ";
+            this.tsbAddTemplate.ToolTipText = "Р”РѕР±Р°РІРёС‚СЊ РІ РЅР°Р±РѕСЂ С€Р°Р±Р»РѕРЅРѕРІ (Ctrl+T)";
             this.tsbAddTemplate.Click += new System.EventHandler(this.TsbAddTemplateClick);
             // 
             // tsbAutolinkingZ
@@ -10506,7 +10506,7 @@ namespace BZEditor
             this.tsbAutolinkingZ.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAutolinkingZ.Name = "tsbAutolinkingZ";
             this.tsbAutolinkingZ.Size = new System.Drawing.Size(23, 22);
-            this.tsbAutolinkingZ.Text = "Автолинковка по Z";
+            this.tsbAutolinkingZ.Text = "РђРІС‚РѕР»РёРЅРєРѕРІРєР° РїРѕ Z";
             this.tsbAutolinkingZ.Click += new System.EventHandler(this.TsbAutolinkingZClick);
             // 
             // tsbAutolinkingY
@@ -10520,7 +10520,7 @@ namespace BZEditor
             this.tsbAutolinkingY.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAutolinkingY.Name = "tsbAutolinkingY";
             this.tsbAutolinkingY.Size = new System.Drawing.Size(23, 22);
-            this.tsbAutolinkingY.Text = "Автолинковка по Y";
+            this.tsbAutolinkingY.Text = "РђРІС‚РѕР»РёРЅРєРѕРІРєР° РїРѕ Y";
             this.tsbAutolinkingY.Click += new System.EventHandler(this.TsbAutolinkingYClick);
             // 
             // tsbAutolinkingX
@@ -10534,7 +10534,7 @@ namespace BZEditor
             this.tsbAutolinkingX.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.tsbAutolinkingX.Name = "tsbAutolinkingX";
             this.tsbAutolinkingX.Size = new System.Drawing.Size(23, 22);
-            this.tsbAutolinkingX.Text = "Автолинковка по X";
+            this.tsbAutolinkingX.Text = "РђРІС‚РѕР»РёРЅРєРѕРІРєР° РїРѕ X";
             this.tsbAutolinkingX.Click += new System.EventHandler(this.TsbAutolinkingXClick);
             // 
             // tsbCreateClones
@@ -10544,8 +10544,8 @@ namespace BZEditor
             this.tsbCreateClones.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCreateClones.Name = "tsbCreateClones";
             this.tsbCreateClones.Size = new System.Drawing.Size(23, 22);
-            this.tsbCreateClones.Text = "Клонировать";
-            this.tsbCreateClones.ToolTipText = "Клонировать (Ctrl+C)";
+            this.tsbCreateClones.Text = "РљР»РѕРЅРёСЂРѕРІР°С‚СЊ";
+            this.tsbCreateClones.ToolTipText = "РљР»РѕРЅРёСЂРѕРІР°С‚СЊ (Ctrl+C)";
             this.tsbCreateClones.Click += new System.EventHandler(this.TsbCreateClonesClick);
             // 
             // toolStripSeparator13
@@ -10560,7 +10560,7 @@ namespace BZEditor
             this.tsbCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCopy.Name = "tsbCopy";
             this.tsbCopy.Size = new System.Drawing.Size(23, 22);
-            this.tsbCopy.Text = "Копировать";
+            this.tsbCopy.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ";
             this.tsbCopy.Click += new System.EventHandler(this.TsbCopyClick);
             // 
             // tsbPaste
@@ -10570,7 +10570,7 @@ namespace BZEditor
             this.tsbPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbPaste.Name = "tsbPaste";
             this.tsbPaste.Size = new System.Drawing.Size(23, 22);
-            this.tsbPaste.Text = "Вставить скопированное";
+            this.tsbPaste.Text = "Р’СЃС‚Р°РІРёС‚СЊ СЃРєРѕРїРёСЂРѕРІР°РЅРЅРѕРµ";
             this.tsbPaste.Click += new System.EventHandler(this.TsbPasteClick);
             // 
             // tsbPasteAsTemplate
@@ -10580,7 +10580,7 @@ namespace BZEditor
             this.tsbPasteAsTemplate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbPasteAsTemplate.Name = "tsbPasteAsTemplate";
             this.tsbPasteAsTemplate.Size = new System.Drawing.Size(23, 22);
-            this.tsbPasteAsTemplate.Text = "Применить к выбранному в списке как шаблон";
+            this.tsbPasteAsTemplate.Text = "РџСЂРёРјРµРЅРёС‚СЊ Рє РІС‹Р±СЂР°РЅРЅРѕРјСѓ РІ СЃРїРёСЃРєРµ РєР°Рє С€Р°Р±Р»РѕРЅ";
             this.tsbPasteAsTemplate.Click += new System.EventHandler(this.TsbPasteAsTemplateClick);
             // 
             // toolStripSeparator8
@@ -10599,8 +10599,8 @@ namespace BZEditor
             this.tsbSetOppositeExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSetOppositeExit.Name = "tsbSetOppositeExit";
             this.tsbSetOppositeExit.Size = new System.Drawing.Size(23, 22);
-            this.tsbSetOppositeExit.Text = "Предлагать установку встречного выхода ";
-            this.tsbSetOppositeExit.ToolTipText = "Предлагать установку встречного выхода\r\nпри установке выходов вручную";
+            this.tsbSetOppositeExit.Text = "РџСЂРµРґР»Р°РіР°С‚СЊ СѓСЃС‚Р°РЅРѕРІРєСѓ РІСЃС‚СЂРµС‡РЅРѕРіРѕ РІС‹С…РѕРґР° ";
+            this.tsbSetOppositeExit.ToolTipText = "РџСЂРµРґР»Р°РіР°С‚СЊ СѓСЃС‚Р°РЅРѕРІРєСѓ РІСЃС‚СЂРµС‡РЅРѕРіРѕ РІС‹С…РѕРґР°\r\nРїСЂРё СѓСЃС‚Р°РЅРѕРІРєРµ РІС‹С…РѕРґРѕРІ РІСЂСѓС‡РЅСѓСЋ";
             // 
             // tsbHistoryBack
             // 
@@ -10609,7 +10609,7 @@ namespace BZEditor
             this.tsbHistoryBack.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbHistoryBack.Name = "tsbHistoryBack";
             this.tsbHistoryBack.Size = new System.Drawing.Size(23, 22);
-            this.tsbHistoryBack.Text = "Назад";
+            this.tsbHistoryBack.Text = "РќР°Р·Р°Рґ";
             this.tsbHistoryBack.Visible = false;
             this.tsbHistoryBack.Click += new System.EventHandler(this.TsbHistoryBackClick);
             // 
@@ -10620,7 +10620,7 @@ namespace BZEditor
             this.tsbHistoryForward.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbHistoryForward.Name = "tsbHistoryForward";
             this.tsbHistoryForward.Size = new System.Drawing.Size(23, 22);
-            this.tsbHistoryForward.Text = "Вперед";
+            this.tsbHistoryForward.Text = "Р’РїРµСЂРµРґ";
             this.tsbHistoryForward.Visible = false;
             this.tsbHistoryForward.Click += new System.EventHandler(this.TsbHistoryForwardClick);
             // 
@@ -10638,7 +10638,7 @@ namespace BZEditor
             this.tsbMapZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMapZoomOut.Name = "tsbMapZoomOut";
             this.tsbMapZoomOut.Size = new System.Drawing.Size(23, 22);
-            this.tsbMapZoomOut.Text = "Отдалить карту";
+            this.tsbMapZoomOut.Text = "РћС‚РґР°Р»РёС‚СЊ РєР°СЂС‚Сѓ";
             this.tsbMapZoomOut.Click += new System.EventHandler(this.TsbMapZoomOutClick);
             // 
             // tsbMapZoomIn
@@ -10649,7 +10649,7 @@ namespace BZEditor
             this.tsbMapZoomIn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMapZoomIn.Name = "tsbMapZoomIn";
             this.tsbMapZoomIn.Size = new System.Drawing.Size(23, 22);
-            this.tsbMapZoomIn.Text = "Приблизить карту";
+            this.tsbMapZoomIn.Text = "РџСЂРёР±Р»РёР·РёС‚СЊ РєР°СЂС‚Сѓ";
             this.tsbMapZoomIn.Click += new System.EventHandler(this.TsbMapZoomInClick);
             // 
             // toolStripSplitButton1
@@ -10666,8 +10666,8 @@ namespace BZEditor
             this.tsbMapZDec.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMapZDec.Name = "tsbMapZDec";
             this.tsbMapZDec.Size = new System.Drawing.Size(23, 22);
-            this.tsbMapZDec.Text = "На уровень ниже по оcи Z";
-            this.tsbMapZDec.ToolTipText = "На уровень ниже по оcи Z\r\n(Shift+Колесо мыши вперед)";
+            this.tsbMapZDec.Text = "РќР° СѓСЂРѕРІРµРЅСЊ РЅРёР¶Рµ РїРѕ РѕcРё Z";
+            this.tsbMapZDec.ToolTipText = "РќР° СѓСЂРѕРІРµРЅСЊ РЅРёР¶Рµ РїРѕ РѕcРё Z\r\n(Shift+РљРѕР»РµСЃРѕ РјС‹С€Рё РІРїРµСЂРµРґ)";
             this.tsbMapZDec.Click += new System.EventHandler(this.TsbMapZDecClick);
             // 
             // tsbMapToZeroRom
@@ -10678,7 +10678,7 @@ namespace BZEditor
             this.tsbMapToZeroRom.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMapToZeroRom.Name = "tsbMapToZeroRom";
             this.tsbMapToZeroRom.Size = new System.Drawing.Size(23, 22);
-            this.tsbMapToZeroRom.Text = "К центру зоны";
+            this.tsbMapToZeroRom.Text = "Рљ С†РµРЅС‚СЂСѓ Р·РѕРЅС‹";
             this.tsbMapToZeroRom.Click += new System.EventHandler(this.ToMapCenterClick);
             // 
             // tsbMapZInc
@@ -10689,8 +10689,8 @@ namespace BZEditor
             this.tsbMapZInc.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMapZInc.Name = "tsbMapZInc";
             this.tsbMapZInc.Size = new System.Drawing.Size(23, 22);
-            this.tsbMapZInc.Text = "На уровень выше по оcи Z";
-            this.tsbMapZInc.ToolTipText = "На уровень выше по оcи Z\r\n(Shift+Колесо мыши назад)";
+            this.tsbMapZInc.Text = "РќР° СѓСЂРѕРІРµРЅСЊ РІС‹С€Рµ РїРѕ РѕcРё Z";
+            this.tsbMapZInc.ToolTipText = "РќР° СѓСЂРѕРІРµРЅСЊ РІС‹С€Рµ РїРѕ РѕcРё Z\r\n(Shift+РљРѕР»РµСЃРѕ РјС‹С€Рё РЅР°Р·Р°Рґ)";
             this.tsbMapZInc.Click += new System.EventHandler(this.TsbMapZIncClick);
             // 
             // toolStripSeparator12
@@ -10708,7 +10708,7 @@ namespace BZEditor
             this.tsbShowRoomTriggers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbShowRoomTriggers.Name = "tsbShowRoomTriggers";
             this.tsbShowRoomTriggers.Size = new System.Drawing.Size(23, 22);
-            this.tsbShowRoomTriggers.Text = "Отображать метки триггеров";
+            this.tsbShowRoomTriggers.Text = "РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РјРµС‚РєРё С‚СЂРёРіРіРµСЂРѕРІ";
             this.tsbShowRoomTriggers.CheckedChanged += new System.EventHandler(this.TsbShowRoomTriggersCheckedChanged);
             // 
             // tsbShowRoomMobs
@@ -10720,7 +10720,7 @@ namespace BZEditor
             this.tsbShowRoomMobs.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbShowRoomMobs.Name = "tsbShowRoomMobs";
             this.tsbShowRoomMobs.Size = new System.Drawing.Size(23, 22);
-            this.tsbShowRoomMobs.Text = "Отображать метки мобов";
+            this.tsbShowRoomMobs.Text = "РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РјРµС‚РєРё РјРѕР±РѕРІ";
             this.tsbShowRoomMobs.CheckedChanged += new System.EventHandler(this.TsbShowRoomMobsCheckedChanged);
             // 
             // tsbShowRoomObjects
@@ -10732,7 +10732,7 @@ namespace BZEditor
             this.tsbShowRoomObjects.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbShowRoomObjects.Name = "tsbShowRoomObjects";
             this.tsbShowRoomObjects.Size = new System.Drawing.Size(23, 22);
-            this.tsbShowRoomObjects.Text = "Отображать метки объектов";
+            this.tsbShowRoomObjects.Text = "РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РјРµС‚РєРё РѕР±СЉРµРєС‚РѕРІ";
             this.tsbShowRoomObjects.CheckedChanged += new System.EventHandler(this.TsbShowRoomObjectsCheckedChanged);
             // 
             // tsbShowRoomNumbers
@@ -10744,7 +10744,7 @@ namespace BZEditor
             this.tsbShowRoomNumbers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbShowRoomNumbers.Name = "tsbShowRoomNumbers";
             this.tsbShowRoomNumbers.Size = new System.Drawing.Size(23, 22);
-            this.tsbShowRoomNumbers.Text = "Отображать номера комнат на карте";
+            this.tsbShowRoomNumbers.Text = "РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РЅРѕРјРµСЂР° РєРѕРјРЅР°С‚ РЅР° РєР°СЂС‚Рµ";
             this.tsbShowRoomNumbers.CheckedChanged += new System.EventHandler(this.TsbShowRoomNumbersCheckedChanged);
             // 
             // tsbShowRoomDetails
@@ -10758,8 +10758,8 @@ namespace BZEditor
             this.tsbShowRoomDetails.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbShowRoomDetails.Name = "tsbShowRoomDetails";
             this.tsbShowRoomDetails.Size = new System.Drawing.Size(23, 22);
-            this.tsbShowRoomDetails.Text = "Детальная информация о комнате под курсором";
-            this.tsbShowRoomDetails.ToolTipText = "Детальная информация о комнате под курсором";
+            this.tsbShowRoomDetails.Text = "Р”РµС‚Р°Р»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РєРѕРјРЅР°С‚Рµ РїРѕРґ РєСѓСЂСЃРѕСЂРѕРј";
+            this.tsbShowRoomDetails.ToolTipText = "Р”РµС‚Р°Р»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РєРѕРјРЅР°С‚Рµ РїРѕРґ РєСѓСЂСЃРѕСЂРѕРј";
             this.tsbShowRoomDetails.CheckedChanged += new System.EventHandler(this.TsbShowRoomDetailsCheckedChanged);
             // 
             // toolStripButton2
@@ -10772,11 +10772,11 @@ namespace BZEditor
             // 
             this.tsbSketchColor.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tsbSketchColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSketchColor.Image = global::BZEditor.Properties.Resources.Выбор_цвета;
+            this.tsbSketchColor.Image = global::BZEditor.Properties.Resources.Р’С‹Р±РѕСЂ_С†РІРµС‚Р°;
             this.tsbSketchColor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSketchColor.Name = "tsbSketchColor";
             this.tsbSketchColor.Size = new System.Drawing.Size(23, 22);
-            this.tsbSketchColor.Text = "Текущий цвет кисти эскиза";
+            this.tsbSketchColor.Text = "РўРµРєСѓС‰РёР№ С†РІРµС‚ РєРёСЃС‚Рё СЌСЃРєРёР·Р°";
             this.tsbSketchColor.Visible = false;
             this.tsbSketchColor.Click += new System.EventHandler(this.TsbSketchColorClick);
             // 
@@ -10789,7 +10789,7 @@ namespace BZEditor
             this.tsbBrush.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBrush.Name = "tsbBrush";
             this.tsbBrush.Size = new System.Drawing.Size(23, 22);
-            this.tsbBrush.Text = "Набросок зоны";
+            this.tsbBrush.Text = "РќР°Р±СЂРѕСЃРѕРє Р·РѕРЅС‹";
             this.tsbBrush.CheckedChanged += new System.EventHandler(this.TsbBrushCheckedChanged);
             // 
             // tsbCreateRoomsBySketch
@@ -10800,18 +10800,18 @@ namespace BZEditor
             this.tsbCreateRoomsBySketch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCreateRoomsBySketch.Name = "tsbCreateRoomsBySketch";
             this.tsbCreateRoomsBySketch.Size = new System.Drawing.Size(23, 22);
-            this.tsbCreateRoomsBySketch.Text = "Сгенерировать комнаты по эскизу";
+            this.tsbCreateRoomsBySketch.Text = "РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РєРѕРјРЅР°С‚С‹ РїРѕ СЌСЃРєРёР·Сѓ";
             this.tsbCreateRoomsBySketch.Click += new System.EventHandler(this.TsbCreateRoomsBySketchClick);
             // 
             // tsbClearSketch
             // 
             this.tsbClearSketch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tsbClearSketch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbClearSketch.Image = global::BZEditor.Properties.Resources.ластик;
+            this.tsbClearSketch.Image = global::BZEditor.Properties.Resources.Р»Р°СЃС‚РёРє;
             this.tsbClearSketch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClearSketch.Name = "tsbClearSketch";
             this.tsbClearSketch.Size = new System.Drawing.Size(23, 22);
-            this.tsbClearSketch.Text = "Удалить набросок зоны";
+            this.tsbClearSketch.Text = "РЈРґР°Р»РёС‚СЊ РЅР°Р±СЂРѕСЃРѕРє Р·РѕРЅС‹";
             this.tsbClearSketch.Click += new System.EventHandler(this.TsbClearSketchClick);
             // 
             // toolStripButton4
@@ -10828,7 +10828,7 @@ namespace BZEditor
             this.tsbGenerateMap.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGenerateMap.Name = "tsbGenerateMap";
             this.tsbGenerateMap.Size = new System.Drawing.Size(23, 22);
-            this.tsbGenerateMap.Text = "Разместить комнаты на карте по выходам";
+            this.tsbGenerateMap.Text = "Р Р°Р·РјРµСЃС‚РёС‚СЊ РєРѕРјРЅР°С‚С‹ РЅР° РєР°СЂС‚Рµ РїРѕ РІС‹С…РѕРґР°Рј";
             this.tsbGenerateMap.Click += new System.EventHandler(this.TsbGenerateMapClick);
             // 
             // errorProvider

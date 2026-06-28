@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class Shop : BaseDataObject
     {
@@ -10,13 +10,13 @@ namespace DataUtils
         private int _closingTime1 = 28;
         private int _closingTime2 = 28;
         private int _emotion;
-        private string _msg1 = "%s Этого нет в списке товаров!";
-        private string _msg2 = "%s Извините, я это не покупаю!";
-        private string _msg3 = "%s Извините, я это не покупаю!";
-        private string _msg4 = "%s Извините, но сейчас у меня нет денег!";
-        private string _msg5 = "%s У вас нет столько денег!";
-        private string _msg6 = "%s Это будет стоить %d.";
-        private string _msg7 = "%s Теперь у Вас есть %d!";
+        private string _msg1 = "%s Р­С‚РѕРіРѕ РЅРµС‚ РІ СЃРїРёСЃРєРµ С‚РѕРІР°СЂРѕРІ!";
+        private string _msg2 = "%s РР·РІРёРЅРёС‚Рµ, СЏ СЌС‚Рѕ РЅРµ РїРѕРєСѓРїР°СЋ!";
+        private string _msg3 = "%s РР·РІРёРЅРёС‚Рµ, СЏ СЌС‚Рѕ РЅРµ РїРѕРєСѓРїР°СЋ!";
+        private string _msg4 = "%s РР·РІРёРЅРёС‚Рµ, РЅРѕ СЃРµР№С‡Р°СЃ Сѓ РјРµРЅСЏ РЅРµС‚ РґРµРЅРµРі!";
+        private string _msg5 = "%s РЈ РІР°СЃ РЅРµС‚ СЃС‚РѕР»СЊРєРѕ РґРµРЅРµРі!";
+        private string _msg6 = "%s Р­С‚Рѕ Р±СѓРґРµС‚ СЃС‚РѕРёС‚СЊ %d.";
+        private string _msg7 = "%s РўРµРїРµСЂСЊ Сѓ Р’Р°СЃ РµСЃС‚СЊ %d!";
         private string _notTradeWithBitvector = "";
         private int _openingTime1;
         private int _openingTime2;
@@ -35,7 +35,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Процент при продаже
+        /// РџСЂРѕС†РµРЅС‚ РїСЂРё РїСЂРѕРґР°Р¶Рµ
         /// </summary>
         public decimal SellCoeff
         {
@@ -49,7 +49,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Процент при покупке
+        /// РџСЂРѕС†РµРЅС‚ РїСЂРё РїРѕРєСѓРїРєРµ
         /// </summary>
         public decimal BuyCoeff
         {
@@ -63,7 +63,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Процент при обмене
+        /// РџСЂРѕС†РµРЅС‚ РїСЂРё РѕР±РјРµРЅРµ
         /// </summary>
         public decimal ChangeCoeff
         {
@@ -77,7 +77,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сооющение 1
+        /// РЎРѕРѕСЋС‰РµРЅРёРµ 1
         /// </summary>
         public string Msg1
         {
@@ -91,7 +91,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сооющение 2
+        /// РЎРѕРѕСЋС‰РµРЅРёРµ 2
         /// </summary>
         public string Msg2
         {
@@ -105,7 +105,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сооющение 3
+        /// РЎРѕРѕСЋС‰РµРЅРёРµ 3
         /// </summary>
         public string Msg3
         {
@@ -119,7 +119,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сооющение 4
+        /// РЎРѕРѕСЋС‰РµРЅРёРµ 4
         /// </summary>
         public string Msg4
         {
@@ -133,7 +133,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сооющение 5
+        /// РЎРѕРѕСЋС‰РµРЅРёРµ 5
         /// </summary>
         public string Msg5
         {
@@ -147,7 +147,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сооющение 6
+        /// РЎРѕРѕСЋС‰РµРЅРёРµ 6
         /// </summary>
         public string Msg6
         {
@@ -161,7 +161,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Сооющение 7
+        /// РЎРѕРѕСЋС‰РµРЅРёРµ 7
         /// </summary>
         public string Msg7
         {
@@ -175,7 +175,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тип реакции моба продавца
+        /// РўРёРї СЂРµР°РєС†РёРё РјРѕР±Р° РїСЂРѕРґР°РІС†Р°
         /// </summary>
         public int Emotion
         {
@@ -189,7 +189,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Битвектор
+        /// Р‘РёС‚РІРµРєС‚РѕСЂ
         /// </summary>
         public string Bitvector
         {
@@ -203,7 +203,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Список флагов определяющий с кем не торгует продавец
+        /// РЎРїРёСЃРѕРє С„Р»Р°РіРѕРІ РѕРїСЂРµРґРµР»СЏСЋС‰РёР№ СЃ РєРµРј РЅРµ С‚РѕСЂРіСѓРµС‚ РїСЂРѕРґР°РІРµС†
         /// </summary>
         public string NotTradeWithBitvector
         {
@@ -217,7 +217,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Виртуальный номер продавца
+        /// Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ РїСЂРѕРґР°РІС†Р°
         /// </summary>
         public int ShopkeeperVNum
         {
@@ -231,7 +231,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Время открытия магазина до обеда
+        /// Р’СЂРµРјСЏ РѕС‚РєСЂС‹С‚РёСЏ РјР°РіР°Р·РёРЅР° РґРѕ РѕР±РµРґР°
         /// </summary>
         public int OpeningTime1
         {
@@ -245,7 +245,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Время закрытия магазина на обед
+        /// Р’СЂРµРјСЏ Р·Р°РєСЂС‹С‚РёСЏ РјР°РіР°Р·РёРЅР° РЅР° РѕР±РµРґ
         /// </summary>
         public int ClosingTime1
         {
@@ -259,7 +259,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Время открытия магазина после обеда
+        /// Р’СЂРµРјСЏ РѕС‚РєСЂС‹С‚РёСЏ РјР°РіР°Р·РёРЅР° РїРѕСЃР»Рµ РѕР±РµРґР°
         /// </summary>
         public int OpeningTime2
         {
@@ -273,7 +273,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Время закрытия магазина на ночь
+        /// Р’СЂРµРјСЏ Р·Р°РєСЂС‹С‚РёСЏ РјР°РіР°Р·РёРЅР° РЅР° РЅРѕС‡СЊ
         /// </summary>
         public int ClosingTime2
         {

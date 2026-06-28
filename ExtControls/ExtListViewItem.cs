@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Windows.Forms;
 
 namespace ExtControls
@@ -25,7 +25,7 @@ namespace ExtControls
             Type = type;
             ImageIndex = imageIndex;
             StateImageIndex = stateImageIndex;
-                //Это можно использовать для отображения измененной зоны и не сохраненной
+                //Р­С‚Рѕ РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РёР·РјРµРЅРµРЅРЅРѕР№ Р·РѕРЅС‹ Рё РЅРµ СЃРѕС…СЂР°РЅРµРЅРЅРѕР№
             ItemGuid = guid;
         }
     }

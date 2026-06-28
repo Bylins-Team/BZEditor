@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
@@ -16,7 +16,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Флаг условия загрузки
+        /// Р¤Р»Р°Рі СѓСЃР»РѕРІРёСЏ Р·Р°РіСЂСѓР·РєРё
         /// </summary>
         public bool ConditionFlag
         {
@@ -30,7 +30,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Максимум в миреы
+        /// РњР°РєСЃРёРјСѓРј РІ РјРёСЂРµС‹
         /// </summary>
         public int MaxInWorld
         {
@@ -44,7 +44,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Позиция объекта
+        /// РџРѕР·РёС†РёСЏ РѕР±СЉРµРєС‚Р°
         /// </summary>
         public int ObjPos
         {
@@ -58,7 +58,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Вероятность загрузки
+        /// Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ Р·Р°РіСЂСѓР·РєРё
         /// </summary>
         public int Probability
         {

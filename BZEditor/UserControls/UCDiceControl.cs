@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.ComponentModel;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -250,7 +250,7 @@ namespace BZEditor
             if (bAction.Text == "-") constVal = constVal * -1;
             if (nudParam1.Value * minVal2 + constVal < MinRandomValue)
             {
-                errorProvider.SetError(groupBox, $" Ìèíèìàëüíîå çíà÷åíèå âûêèíóòîå íà êîñòÿõ\níå äîëæíî áûòü ìåíüøå {MinRandomValue}");
+                errorProvider.SetError(groupBox, $" ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð²Ñ‹ÐºÐ¸Ð½ÑƒÑ‚Ð¾Ðµ Ð½Ð° ÐºÐ¾ÑÑ‚ÑÑ…\nÐ½Ðµ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ {MinRandomValue}");
                 return false;
             }
             errorProvider.SetError(groupBox, "");

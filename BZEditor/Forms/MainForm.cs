@@ -1,4 +1,4 @@
-#region
+п»ї#region
 
 using System;
 using System.Collections;
@@ -62,10 +62,10 @@ namespace BZEditor
         private ToolStripStatusLabel tsslWorlFolderPath;
         public FileListsDataManager FileListsDm;
         private ZonesListForm zonesListForm;
-        private ToolStripMenuItem видToolStripMenuItem;
-        private ToolStripMenuItem списокЗонToolStripMenuItem;
-        private ToolStripMenuItem справкаToolStripMenuItem;
-        private ToolStripMenuItem файлToolStripMenuItem;
+        private ToolStripMenuItem РІРёРґToolStripMenuItem;
+        private ToolStripMenuItem СЃРїРёСЃРѕРєР—РѕРЅToolStripMenuItem;
+        private ToolStripMenuItem СЃРїСЂР°РІРєР°ToolStripMenuItem;
+        private ToolStripMenuItem С„Р°Р№Р»ToolStripMenuItem;
         private ToolStripMenuItem tsmiOptions;
         private ToolStripMenuItem tsmiSameOptionsForAllZones;
         private ToolStripMenuItem tsmiCheckUpdatesOnStartup;
@@ -77,7 +77,7 @@ namespace BZEditor
         private ToolStripSeparator toolStripMenuItemNoConflict;
         private ToolStripMenuItem browseZonesToSend;
         private ToolStripMenuItem tsmiSelectDataFormat;
-        private ToolStripMenuItem шаблоныToolStripMenuItem;
+        private ToolStripMenuItem С€Р°Р±Р»РѕРЅС‹ToolStripMenuItem;
 
         public MainForm()
         {
@@ -124,25 +124,25 @@ namespace BZEditor
             if (tsmiCheckUpdatesOnStartup.Checked)
             {
 #if !DEBUG
-                sf.SetNextState(0, "Поиск обновлений");
+                sf.SetNextState(0, "РџРѕРёСЃРє РѕР±РЅРѕРІР»РµРЅРёР№");
                 Application.DoEvents();
 #endif
                 CheckUpdates(true);
             }
 #if !DEBUG
-            sf.SetNextState(5, "Загрузка базовых данных");
+            sf.SetNextState(5, "Р—Р°РіСЂСѓР·РєР° Р±Р°Р·РѕРІС‹С… РґР°РЅРЅС‹С…");
             Application.DoEvents();
 #endif
             basesDm = new CBasesDataManager(Application.StartupPath);
             basesDm.LoadData();
 #if !DEBUG
-            sf.SetNextState(7, "Загрузка списка зон");
+            sf.SetNextState(7, "Р—Р°РіСЂСѓР·РєР° СЃРїРёСЃРєР° Р·РѕРЅ");
             Application.DoEvents();
 #endif
             FileListsDm = new FileListsDataManager();
             FileListsDm.LoadData();
 #if !DEBUG
-            sf.SetNextState(10, "Загрузка шаблонов");
+            sf.SetNextState(10, "Р—Р°РіСЂСѓР·РєР° С€Р°Р±Р»РѕРЅРѕРІ");
             float step = 90/(float) FileListsDm.LoadedZonesCount;
             float incr = 0;
 #endif
@@ -155,11 +155,11 @@ namespace BZEditor
                 incr += step;
                 if (incr > 1)
                 {
-                    sf.SetNextState((int) Math.Floor(sf.Position + Math.Floor(incr)), "Зона №" + zd.FileName);
+                    sf.SetNextState((int) Math.Floor(sf.Position + Math.Floor(incr)), "Р—РѕРЅР° в„–" + zd.FileName);
                     incr -= (float) Math.Floor(incr);
                 }
                 else
-                    sf.SetNextState("Зона №" + zd.FileName);
+                    sf.SetNextState("Р—РѕРЅР° в„–" + zd.FileName);
                 Application.DoEvents();
 #endif
                 var zoneDm = new ZoneDataManager(zd.FileName, StaticData.CurrentEncoding);
@@ -192,7 +192,7 @@ namespace BZEditor
 
 
 #if !DEBUG
-            sf.SetNextState(100, "Инициализация...");
+            sf.SetNextState(100, "РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ...");
             Application.DoEvents();
 #endif
             foreach (string wname in openedWindowsList)
@@ -210,7 +210,7 @@ namespace BZEditor
             string activeTabName = settings.Read("ActiveTabName", "");
             if (!string.IsNullOrEmpty(activeTabName))
             {
-                //Проверка, а не создана ли уже эта форма, если создана, то передаем ей фокус
+                //РџСЂРѕРІРµСЂРєР°, Р° РЅРµ СЃРѕР·РґР°РЅР° Р»Рё СѓР¶Рµ СЌС‚Р° С„РѕСЂРјР°, РµСЃР»Рё СЃРѕР·РґР°РЅР°, С‚Рѕ РїРµСЂРµРґР°РµРј РµР№ С„РѕРєСѓСЃ
                 foreach (var w in dockContainerMain.Documents)
                 {
                     if (w is WldForm wldForm)
@@ -233,7 +233,7 @@ namespace BZEditor
         private void SetText()
         {
             Text = $"BZ Editor [v.{Application.ProductVersion} {VersionName}]";
-            tsslWorlFolderPath.Text = $"Путь к зонам [{StaticData.WorldFolderPath}]";
+            tsslWorlFolderPath.Text = $"РџСѓС‚СЊ Рє Р·РѕРЅР°Рј [{StaticData.WorldFolderPath}]";
         }
 
         private static void ZoneDmExceptionThrowed(string message, Exception exception, EventLogEntryType type)
@@ -247,8 +247,8 @@ namespace BZEditor
             {
                 if (
                     MessageBox.Show(
-                        "Не найдена дирректория с зонами (обычно назвается world)!\nУкажите пожалуйста путь к директории, содержащей зоны для редактирования.",
-                        "Неверно указан путь", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) ==
+                        "РќРµ РЅР°Р№РґРµРЅР° РґРёСЂСЂРµРєС‚РѕСЂРёСЏ СЃ Р·РѕРЅР°РјРё (РѕР±С‹С‡РЅРѕ РЅР°Р·РІР°РµС‚СЃСЏ world)!\nРЈРєР°Р¶РёС‚Рµ РїРѕР¶Р°Р»СѓР№СЃС‚Р° РїСѓС‚СЊ Рє РґРёСЂРµРєС‚РѕСЂРёРё, СЃРѕРґРµСЂР¶Р°С‰РµР№ Р·РѕРЅС‹ РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ.",
+                        "РќРµРІРµСЂРЅРѕ СѓРєР°Р·Р°РЅ РїСѓС‚СЊ", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) ==
                     DialogResult.Yes)
                     TsmiPathToWorldFolderClick(null, null);
                 else
@@ -257,7 +257,7 @@ namespace BZEditor
             if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "ZON")))
             {
                 if (
-                    MessageBox.Show("Не найдена дирректория \"ZON\"! Будем создавать?", "Не найден путь",
+                    MessageBox.Show("РќРµ РЅР°Р№РґРµРЅР° РґРёСЂСЂРµРєС‚РѕСЂРёСЏ \"ZON\"! Р‘СѓРґРµРј СЃРѕР·РґР°РІР°С‚СЊ?", "РќРµ РЅР°Р№РґРµРЅ РїСѓС‚СЊ",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "ZON"));
                 else
@@ -266,7 +266,7 @@ namespace BZEditor
             if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "WLD")))
             {
                 if (
-                    MessageBox.Show("Не найдена дирректория \"WLD\"! Будем создавать?", "Не найден путь",
+                    MessageBox.Show("РќРµ РЅР°Р№РґРµРЅР° РґРёСЂСЂРµРєС‚РѕСЂРёСЏ \"WLD\"! Р‘СѓРґРµРј СЃРѕР·РґР°РІР°С‚СЊ?", "РќРµ РЅР°Р№РґРµРЅ РїСѓС‚СЊ",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "WLD"));
                 else
@@ -275,7 +275,7 @@ namespace BZEditor
             if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "MOB")))
             {
                 if (
-                    MessageBox.Show("Не найдена дирректория \"MOB\"! Будем создавать?", "Не найден путь",
+                    MessageBox.Show("РќРµ РЅР°Р№РґРµРЅР° РґРёСЂСЂРµРєС‚РѕСЂРёСЏ \"MOB\"! Р‘СѓРґРµРј СЃРѕР·РґР°РІР°С‚СЊ?", "РќРµ РЅР°Р№РґРµРЅ РїСѓС‚СЊ",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "MOB"));
                 else
@@ -284,7 +284,7 @@ namespace BZEditor
             if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "OBJ")))
             {
                 if (
-                    MessageBox.Show("Не найдена дирректория \"OBJ\"! Будем создавать?", "Не найден путь",
+                    MessageBox.Show("РќРµ РЅР°Р№РґРµРЅР° РґРёСЂСЂРµРєС‚РѕСЂРёСЏ \"OBJ\"! Р‘СѓРґРµРј СЃРѕР·РґР°РІР°С‚СЊ?", "РќРµ РЅР°Р№РґРµРЅ РїСѓС‚СЊ",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "OBJ"));
                 else
@@ -293,7 +293,7 @@ namespace BZEditor
             if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "TRG")))
             {
                 if (
-                    MessageBox.Show("Не найдена дирректория \"TRG\"! Будем создавать?", "Не найден путь",
+                    MessageBox.Show("РќРµ РЅР°Р№РґРµРЅР° РґРёСЂСЂРµРєС‚РѕСЂРёСЏ \"TRG\"! Р‘СѓРґРµРј СЃРѕР·РґР°РІР°С‚СЊ?", "РќРµ РЅР°Р№РґРµРЅ РїСѓС‚СЊ",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "TRG"));
                 else
@@ -365,7 +365,7 @@ namespace BZEditor
             zdm.Changed += ZoneDmChanged;
             zdm.Saved += ZoneDmSaved;
             dmArray.Add(zdm);
-            zdm.Zone.Name = "Новая зона";
+            zdm.Zone.Name = "РќРѕРІР°СЏ Р·РѕРЅР°";
             zdm.Zone.Number = czf.ZoneNum;
             zdm.Zone.RepopType = 0;
             zdm.Zone.RepopTimer = 30;
@@ -396,7 +396,7 @@ namespace BZEditor
             if (fbd.ShowDialog() != DialogResult.OK) return;
 
             StaticData.WorldFolderPath = fbd.SelectedPath;
-            MessageBox.Show("Для вступления изменений в силу необходимо перезагрузить редактор.", "Предупреждение",
+            MessageBox.Show("Р”Р»СЏ РІСЃС‚СѓРїР»РµРЅРёСЏ РёР·РјРµРЅРµРЅРёР№ РІ СЃРёР»Сѓ РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµР·Р°РіСЂСѓР·РёС‚СЊ СЂРµРґР°РєС‚РѕСЂ.", "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -412,7 +412,7 @@ namespace BZEditor
 
         private void TsmiHelpClick(object sender, EventArgs e)
         {
-            //ToDo:Переход на сайт в раздел помощи
+            //ToDo:РџРµСЂРµС…РѕРґ РЅР° СЃР°Р№С‚ РІ СЂР°Р·РґРµР» РїРѕРјРѕС‰Рё
         }
 
         private void TsmiWhatsNewClick(object sender, EventArgs e)
@@ -423,7 +423,7 @@ namespace BZEditor
             }
             catch (FileNotFoundException)
             {
-                MessageBox.Show("Файл WhatsNew.txt не найден.", "Файл не найден", MessageBoxButtons.OK,
+                MessageBox.Show("Р¤Р°Р№Р» WhatsNew.txt РЅРµ РЅР°Р№РґРµРЅ.", "Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ", MessageBoxButtons.OK,
                                 MessageBoxIcon.Asterisk);
             }
         }
@@ -456,17 +456,17 @@ namespace BZEditor
             string msg = string.Empty;
             if (unsavedZones.Length > 0)
             {
-                msg += "Изменения в зон";
-                msg += (unsavedZones.TrimEnd(',').IndexOf(',') < 0) ? "е: " : "ах: ";
-                msg += unsavedZones.TrimEnd(',') + " не сохранены.\n";
+                msg += "РР·РјРµРЅРµРЅРёСЏ РІ Р·РѕРЅ";
+                msg += (unsavedZones.TrimEnd(',').IndexOf(',') < 0) ? "Рµ: " : "Р°С…: ";
+                msg += unsavedZones.TrimEnd(',') + " РЅРµ СЃРѕС…СЂР°РЅРµРЅС‹.\n";
             } if (unsavedSketches.Length > 0)
             {
-                msg += "Изменения в эскиз";
-                msg += (unsavedSketches.IndexOf(',') < 0) ? "е: " : "ах: ";
-                msg += unsavedSketches + " не сохранены.\n";
+                msg += "РР·РјРµРЅРµРЅРёСЏ РІ СЌСЃРєРёР·";
+                msg += (unsavedSketches.IndexOf(',') < 0) ? "Рµ: " : "Р°С…: ";
+                msg += unsavedSketches + " РЅРµ СЃРѕС…СЂР°РЅРµРЅС‹.\n";
             }
             if (!string.IsNullOrEmpty(msg))
-                return MessageBox.Show(msg+"\nВыход из редактора приведет к потере изменений!\nЗавершить работу редактора изменений?", "Несохраненные изменения", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK;
+                return MessageBox.Show(msg+"\nР’С‹С…РѕРґ РёР· СЂРµРґР°РєС‚РѕСЂР° РїСЂРёРІРµРґРµС‚ Рє РїРѕС‚РµСЂРµ РёР·РјРµРЅРµРЅРёР№!\nР—Р°РІРµСЂС€РёС‚СЊ СЂР°Р±РѕС‚Сѓ СЂРµРґР°РєС‚РѕСЂР° РёР·РјРµРЅРµРЅРёР№?", "РќРµСЃРѕС…СЂР°РЅРµРЅРЅС‹Рµ РёР·РјРµРЅРµРЅРёСЏ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK;
             return true;
         }
 
@@ -508,7 +508,7 @@ namespace BZEditor
             settings.Save();
         }
 
-        private void СписокЗонToolStripMenuItemClick(object sender, EventArgs e)
+        private void РЎРїРёСЃРѕРєР—РѕРЅToolStripMenuItemClick(object sender, EventArgs e)
         {
             if (!dockContainerMain.Contents.Contains(zonesListForm))
             {
@@ -525,7 +525,7 @@ namespace BZEditor
             zonesListForm.Show(dockContainerMain, DockState.DockLeftAutoHide);
         }
 
-        private void ШаблоныToolStripMenuItemClick(object sender, EventArgs e)
+        private void РЁР°Р±Р»РѕРЅС‹ToolStripMenuItemClick(object sender, EventArgs e)
         {
             if (!dockContainerMain.Contents.Contains(templatesForm))
             {
@@ -560,7 +560,7 @@ namespace BZEditor
                     if (verMajor * 10000 + verMinor * 100 + verFix > verMajorCurr * 10000 + verMinorCurr * 100 + verFixCurr)
                     {
                         if (MessageBox.Show(
-                                string.Format($"Доступно обновление до версии {res} \nЖелаете ознакомиться со списком изменений этой версии?"), "Доступно обновление", MessageBoxButtons.YesNo,
+                                string.Format($"Р”РѕСЃС‚СѓРїРЅРѕ РѕР±РЅРѕРІР»РµРЅРёРµ РґРѕ РІРµСЂСЃРёРё {res} \nР–РµР»Р°РµС‚Рµ РѕР·РЅР°РєРѕРјРёС‚СЊСЃСЏ СЃРѕ СЃРїРёСЃРєРѕРј РёР·РјРµРЅРµРЅРёР№ СЌС‚РѕР№ РІРµСЂСЃРёРё?"), "Р”РѕСЃС‚СѓРїРЅРѕ РѕР±РЅРѕРІР»РµРЅРёРµ", MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Information) == DialogResult.Yes)
                         {
                             //BrowseHomepage();
@@ -573,14 +573,14 @@ namespace BZEditor
                     }
                     else if (!quiet)
                     {
-                        MessageBox.Show("Вы пользуетесь самой свежей версией редактора!", "Обновления отсутствуют",
+                        MessageBox.Show("Р’С‹ РїРѕР»СЊР·СѓРµС‚РµСЃСЊ СЃР°РјРѕР№ СЃРІРµР¶РµР№ РІРµСЂСЃРёРµР№ СЂРµРґР°РєС‚РѕСЂР°!", "РћР±РЅРѕРІР»РµРЅРёСЏ РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‚",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
                 }
                 else if (!quiet)
                 {
-                    MessageBox.Show("Не удалось загрузить информацию об обновлениях!", "Ошибка при проверке обновлений",
+                    MessageBox.Show("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РѕР±РЅРѕРІР»РµРЅРёСЏС…!", "РћС€РёР±РєР° РїСЂРё РїСЂРѕРІРµСЂРєРµ РѕР±РЅРѕРІР»РµРЅРёР№",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Asterisk);
                 }
@@ -588,13 +588,13 @@ namespace BZEditor
             }
             catch (Exception)
             {
-                MessageBox.Show("Ошибка при получении данных о доступном обновлении", "Ошибка при проверке обновлений", 
+                MessageBox.Show("РћС€РёР±РєР° РїСЂРё РїРѕР»СѓС‡РµРЅРёРё РґР°РЅРЅС‹С… Рѕ РґРѕСЃС‚СѓРїРЅРѕРј РѕР±РЅРѕРІР»РµРЅРёРё", "РћС€РёР±РєР° РїСЂРё РїСЂРѕРІРµСЂРєРµ РѕР±РЅРѕРІР»РµРЅРёР№", 
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Asterisk);
             }
         }
 
-        #region работа с HTTP.
+        #region СЂР°Р±РѕС‚Р° СЃ HTTP.
 
         public static bool DLoadFromHttp(string url, string localFileName)
         {
@@ -654,7 +654,7 @@ namespace BZEditor
 
         #endregion
 
-        #region Работа со списком зон
+        #region Р Р°Р±РѕС‚Р° СЃРѕ СЃРїРёСЃРєРѕРј Р·РѕРЅ
 
         private static void ZonesListFormZonePrepareToSendActivated(string zoneNum, string zoneName)
         {
@@ -686,10 +686,10 @@ namespace BZEditor
             zoneDm.Saved += ZoneDmSaved;
             zonesListForm.AddZoneToLoadedList(zoneDm.Zone.Number, zoneDm.Zone.Name);
             if (resave)
-                //Предложить сохранить зону сразу после открытия уже в кои8
+                //РџСЂРµРґР»РѕР¶РёС‚СЊ СЃРѕС…СЂР°РЅРёС‚СЊ Р·РѕРЅСѓ СЃСЂР°Р·Сѓ РїРѕСЃР»Рµ РѕС‚РєСЂС‹С‚РёСЏ СѓР¶Рµ РІ РєРѕРё8
                 if (MessageBox.Show(this,
-                                    "Если Вы уверены что загруженная зона была именно в кодировке Win1251,\nто вы можете сразу сохранить ее в кодировке koi-8r для дальнейшего использования.\n\nСохранить зону в кодировке koi-8r?",
-                                    "Зона загружена", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                                    "Р•СЃР»Рё Р’С‹ СѓРІРµСЂРµРЅС‹ С‡С‚Рѕ Р·Р°РіСЂСѓР¶РµРЅРЅР°СЏ Р·РѕРЅР° Р±С‹Р»Р° РёРјРµРЅРЅРѕ РІ РєРѕРґРёСЂРѕРІРєРµ Win1251,\nС‚Рѕ РІС‹ РјРѕР¶РµС‚Рµ СЃСЂР°Р·Сѓ СЃРѕС…СЂР°РЅРёС‚СЊ РµРµ РІ РєРѕРґРёСЂРѕРІРєРµ koi-8r РґР»СЏ РґР°Р»СЊРЅРµР№С€РµРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ.\n\nРЎРѕС…СЂР°РЅРёС‚СЊ Р·РѕРЅСѓ РІ РєРѕРґРёСЂРѕРІРєРµ koi-8r?",
+                                    "Р—РѕРЅР° Р·Р°РіСЂСѓР¶РµРЅР°", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                     DialogResult.Yes)
                 {
                     zoneDm.SaveData();
@@ -701,7 +701,7 @@ namespace BZEditor
         private void TreeFormItemDoubleClicked(object sender, EventArgs e)
         {
             var etn = ((ExtListViewItem) (((ListView) sender).SelectedItems[0]));
-            //Проверка, а не создана ли уже эта форма, если создана, то передаем ей фокус
+            //РџСЂРѕРІРµСЂРєР°, Р° РЅРµ СЃРѕР·РґР°РЅР° Р»Рё СѓР¶Рµ СЌС‚Р° С„РѕСЂРјР°, РµСЃР»Рё СЃРѕР·РґР°РЅР°, С‚Рѕ РїРµСЂРµРґР°РµРј РµР№ С„РѕРєСѓСЃ
             /*foreach (WldForm f in _dockContainerMain.Documents)
             {
                 if (f.ZoneDm.Zone.Number.ToString() == etn.Num)
@@ -720,7 +720,7 @@ namespace BZEditor
                     return;
                 }
             }      
-            //Создаем новую форму
+            //РЎРѕР·РґР°РµРј РЅРѕРІСѓСЋ С„РѕСЂРјСѓ
             switch (etn.Type.ToLower())
             {
                 case "wld":
@@ -760,7 +760,7 @@ namespace BZEditor
         {
             FileListsDm.ChangeZoneNumber(oldvnum, newvnum);
             zonesListForm.RefreshZonesList();
-            if (MessageBox.Show("Удалить старые файлы зоны с номером " + oldvnum + " ?", "Удаление старых файлов",
+            if (MessageBox.Show("РЈРґР°Р»РёС‚СЊ СЃС‚Р°СЂС‹Рµ С„Р°Р№Р»С‹ Р·РѕРЅС‹ СЃ РЅРѕРјРµСЂРѕРј " + oldvnum + " ?", "РЈРґР°Р»РµРЅРёРµ СЃС‚Р°СЂС‹С… С„Р°Р№Р»РѕРІ",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 FileListsDm.RemoveZone(oldvnum.ToString());
         }
@@ -777,7 +777,7 @@ namespace BZEditor
             {
                 if (zonesListForm.GetSketchState((Guid)(((SketchForm)sender).Tag)) != 8)
                     zonesListForm.SetSketchState((Guid)(((SketchForm)sender).Tag), 6);
-                //ToDo: Удаление из списка открытых окон
+                //ToDo: РЈРґР°Р»РµРЅРёРµ РёР· СЃРїРёСЃРєР° РѕС‚РєСЂС‹С‚С‹С… РѕРєРѕРЅ
                 openedWindowsList.Remove(((SketchForm)sender).SketchName);                
             }
         }
@@ -797,7 +797,7 @@ namespace BZEditor
 
         private void WldFormCursorPositionChanged(int col, int row)
         {
-            tsslTextPosStatus.Text = "Строка: " + (row + 1) + " | Позиция: " + col;
+            tsslTextPosStatus.Text = "РЎС‚СЂРѕРєР°: " + (row + 1) + " | РџРѕР·РёС†РёСЏ: " + col;
             if (col > StaticData.MaxTextWidth) tsslTextPosStatus.ForeColor = Color.Red;
             else if (col > StaticData.OptimalTextWidth) tsslTextPosStatus.ForeColor = Color.DarkGreen;
             else tsslTextPosStatus.ForeColor = SystemColors.ControlText;
@@ -816,7 +816,7 @@ namespace BZEditor
         private void OpenSketchWindow(GlobalSketch sketch, Guid itemGuid)
         {
             sketch.LoadData();
-            SketchForm sf = new SketchForm(sketch) { SketchName = sketch.Name, Tag = itemGuid, TabText = string.Format("[Э] {0}", sketch.Name) };
+            SketchForm sf = new SketchForm(sketch) { SketchName = sketch.Name, Tag = itemGuid, TabText = string.Format("[Р­] {0}", sketch.Name) };
             sf.Changed += SketchChanged;
             sf.Saved += SketchSaved;
             sf.ZonesGenerated += SketchZonesGenerated;
@@ -842,11 +842,11 @@ namespace BZEditor
             {
                 if (
                     MessageBox.Show(this,
-                                    "Номер зоны совпадает с уже имеющимся:" + msg +
-                                    "\nПересоздать зоны с совпадающими номерами?", "Пересоздать",
+                                    "РќРѕРјРµСЂ Р·РѕРЅС‹ СЃРѕРІРїР°РґР°РµС‚ СЃ СѓР¶Рµ РёРјРµСЋС‰РёРјСЃСЏ:" + msg +
+                                    "\nРџРµСЂРµСЃРѕР·РґР°С‚СЊ Р·РѕРЅС‹ СЃ СЃРѕРІРїР°РґР°СЋС‰РёРјРё РЅРѕРјРµСЂР°РјРё?", "РџРµСЂРµСЃРѕР·РґР°С‚СЊ",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //Удалить из списках зон и списак датаменеджеров старые зоны, добавить новые в список и в датаменеджер, запрос на открытие окон с зонами
+                    //РЈРґР°Р»РёС‚СЊ РёР· СЃРїРёСЃРєР°С… Р·РѕРЅ Рё СЃРїРёСЃР°Рє РґР°С‚Р°РјРµРЅРµРґР¶РµСЂРѕРІ СЃС‚Р°СЂС‹Рµ Р·РѕРЅС‹, РґРѕР±Р°РІРёС‚СЊ РЅРѕРІС‹Рµ РІ СЃРїРёСЃРѕРє Рё РІ РґР°С‚Р°РјРµРЅРµРґР¶РµСЂ, Р·Р°РїСЂРѕСЃ РЅР° РѕС‚РєСЂС‹С‚РёРµ РѕРєРѕРЅ СЃ Р·РѕРЅР°РјРё
                     foreach (int vnum in existed)
                     {
                         foreach (ZoneDataManager zdm in dmArray)
@@ -873,7 +873,7 @@ namespace BZEditor
         private void FinishCreatengZones(IEnumerable<ZoneDataManager> zones)
         {
             bool openCreatedZones =
-                MessageBox.Show(this, "Открывать сгенерированные зоны на редактирование?", "Генерация зон",
+                MessageBox.Show(this, "РћС‚РєСЂС‹РІР°С‚СЊ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Рµ Р·РѕРЅС‹ РЅР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ?", "Р“РµРЅРµСЂР°С†РёСЏ Р·РѕРЅ",
                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
             foreach (ZoneDataManager zdm in zones)
             {
@@ -920,7 +920,7 @@ namespace BZEditor
 
         #endregion
 
-        #region Работа с массивом датаменеджеров
+        #region Р Р°Р±РѕС‚Р° СЃ РјР°СЃСЃРёРІРѕРј РґР°С‚Р°РјРµРЅРµРґР¶РµСЂРѕРІ
 
         private void ZoneDmChanged(string dmName, object changedClass, object sender)
         {
@@ -941,7 +941,7 @@ namespace BZEditor
                 }
                 else if (f is SketchForm)
                 {
-                    //ToDo: Сохранение скетча отрисовать, а ждя этого реализовать в эскизе механизм отслеживания изменений
+                    //ToDo: РЎРѕС…СЂР°РЅРµРЅРёРµ СЃРєРµС‚С‡Р° РѕС‚СЂРёСЃРѕРІР°С‚СЊ, Р° Р¶РґСЏ СЌС‚РѕРіРѕ СЂРµР°Р»РёР·РѕРІР°С‚СЊ РІ СЌСЃРєРёР·Рµ РјРµС…Р°РЅРёР·Рј РѕС‚СЃР»РµР¶РёРІР°РЅРёСЏ РёР·РјРµРЅРµРЅРёР№
                 }
             }
             zonesListForm.SetLoadedZoneState(dmName, 0);
@@ -966,8 +966,8 @@ namespace BZEditor
                     }
                     catch (Exception ex)
                     {
-                        // Одна зона не должна срывать сохранение остальных.
-                        ExceptionForm.ExceptionCatcher("Не удалось сохранить зону " + dm.Zone.Number, ex, EventLogEntryType.Error);
+                        // РћРґРЅР° Р·РѕРЅР° РЅРµ РґРѕР»Р¶РЅР° СЃСЂС‹РІР°С‚СЊ СЃРѕС…СЂР°РЅРµРЅРёРµ РѕСЃС‚Р°Р»СЊРЅС‹С….
+                        ExceptionForm.ExceptionCatcher("РќРµ СѓРґР°Р»РѕСЃСЊ СЃРѕС…СЂР°РЅРёС‚СЊ Р·РѕРЅСѓ " + dm.Zone.Number, ex, EventLogEntryType.Error);
                     }
                     tspbSaveProgress.Value++;
                     Application.DoEvents();
@@ -1026,7 +1026,7 @@ namespace BZEditor
 
         /// <summary></summary>
         /// <param name="trgClass">
-        ///   0 - для мобов, 1 - для объектов, 2 - для комнат
+        ///   0 - РґР»СЏ РјРѕР±РѕРІ, 1 - РґР»СЏ РѕР±СЉРµРєС‚РѕРІ, 2 - РґР»СЏ РєРѕРјРЅР°С‚
         /// </param>
         /// <returns></returns>
         public TriggersCollection GetAllKnownTriggers(int trgClass)
@@ -1045,7 +1045,7 @@ namespace BZEditor
 
         public bool IsZoneExists(int vNum)
         {
-            //Сделана проверка среди всех зон в списке, а не только среди загруженных
+            //РЎРґРµР»Р°РЅР° РїСЂРѕРІРµСЂРєР° СЃСЂРµРґРё РІСЃРµС… Р·РѕРЅ РІ СЃРїРёСЃРєРµ, Р° РЅРµ С‚РѕР»СЊРєРѕ СЃСЂРµРґРё Р·Р°РіСЂСѓР¶РµРЅРЅС‹С…
             foreach (ZoneData zd in FileListsDm.ZonesDataList)
                 if (zd.VNum == vNum) return true;
             /*foreach (CZoneDataManager dm in _dmArray)
@@ -1089,7 +1089,7 @@ namespace BZEditor
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.imageListSmallButtons = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.С„Р°Р№Р»ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCreateNewZone = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCreateSketch = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemNoConflict = new System.Windows.Forms.ToolStripSeparator();
@@ -1098,9 +1098,9 @@ namespace BZEditor
             this.tsmiSaveAllZones = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiExitApp = new System.Windows.Forms.ToolStripMenuItem();
-            this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.списокЗонToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.шаблоныToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.РІРёРґToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.СЃРїРёСЃРѕРєР—РѕРЅToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.С€Р°Р±Р»РѕРЅС‹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOptions = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPathToWorldFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSameOptionsForAllZones = new System.Windows.Forms.ToolStripMenuItem();
@@ -1108,7 +1108,7 @@ namespace BZEditor
             this.tsmiBackupZones = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCheckUpdatesOnStartup = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSelectDataFormat = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.СЃРїСЂР°РІРєР°ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiWhatsNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -1139,18 +1139,18 @@ namespace BZEditor
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
-            this.видToolStripMenuItem,
+            this.С„Р°Р№Р»ToolStripMenuItem,
+            this.РІРёРґToolStripMenuItem,
             this.tsmiOptions,
-            this.справкаToolStripMenuItem});
+            this.СЃРїСЂР°РІРєР°ToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(757, 24);
             this.menuStrip.TabIndex = 7;
             // 
-            // файлToolStripMenuItem
+            // С„Р°Р№Р»ToolStripMenuItem
             // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.С„Р°Р№Р»ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiCreateNewZone,
             this.tsmiCreateSketch,
             this.toolStripMenuItemNoConflict,
@@ -1159,16 +1159,16 @@ namespace BZEditor
             this.tsmiSaveAllZones,
             this.toolStripMenuItem1,
             this.tsmiExitApp});
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
+            this.С„Р°Р№Р»ToolStripMenuItem.Name = "С„Р°Р№Р»ToolStripMenuItem";
+            this.С„Р°Р№Р»ToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.С„Р°Р№Р»ToolStripMenuItem.Text = "Р¤Р°Р№Р»";
             // 
             // tsmiCreateNewZone
             // 
             this.tsmiCreateNewZone.Image = global::BZEditor.Properties.Resources.button_addzone;
             this.tsmiCreateNewZone.Name = "tsmiCreateNewZone";
             this.tsmiCreateNewZone.Size = new System.Drawing.Size(250, 22);
-            this.tsmiCreateNewZone.Text = "Создать зону";
+            this.tsmiCreateNewZone.Text = "РЎРѕР·РґР°С‚СЊ Р·РѕРЅСѓ";
             this.tsmiCreateNewZone.Click += new System.EventHandler(this.TsmiCreateNewZoneClick);
             // 
             // tsmiCreateSketch
@@ -1176,7 +1176,7 @@ namespace BZEditor
             this.tsmiCreateSketch.Image = global::BZEditor.Properties.Resources.button_addsketch;
             this.tsmiCreateSketch.Name = "tsmiCreateSketch";
             this.tsmiCreateSketch.Size = new System.Drawing.Size(250, 22);
-            this.tsmiCreateSketch.Text = "Создать эскиз комплекса зон";
+            this.tsmiCreateSketch.Text = "РЎРѕР·РґР°С‚СЊ СЌСЃРєРёР· РєРѕРјРїР»РµРєСЃР° Р·РѕРЅ";
             this.tsmiCreateSketch.Click += new System.EventHandler(this.CreateSketchClick);
             // 
             // toolStripMenuItemNoConflict
@@ -1189,7 +1189,7 @@ namespace BZEditor
             this.browseZonesToSend.Image = global::BZEditor.Properties.Resources.zonesend;
             this.browseZonesToSend.Name = "browseZonesToSend";
             this.browseZonesToSend.Size = new System.Drawing.Size(250, 22);
-            this.browseZonesToSend.Text = "Открыть каталог зон к отправке";
+            this.browseZonesToSend.Text = "РћС‚РєСЂС‹С‚СЊ РєР°С‚Р°Р»РѕРі Р·РѕРЅ Рє РѕС‚РїСЂР°РІРєРµ";
             this.browseZonesToSend.Click += new System.EventHandler(this.BrowseZonesToSendClick);
             // 
             // toolStripMenuItem2
@@ -1202,7 +1202,7 @@ namespace BZEditor
             this.tsmiSaveAllZones.Image = global::BZEditor.Properties.Resources.button_saveall;
             this.tsmiSaveAllZones.Name = "tsmiSaveAllZones";
             this.tsmiSaveAllZones.Size = new System.Drawing.Size(250, 22);
-            this.tsmiSaveAllZones.Text = "Сохранить всё";
+            this.tsmiSaveAllZones.Text = "РЎРѕС…СЂР°РЅРёС‚СЊ РІСЃС‘";
             this.tsmiSaveAllZones.Click += new System.EventHandler(this.TsmiSaveAllZonesClick);
             // 
             // toolStripMenuItem1
@@ -1215,31 +1215,31 @@ namespace BZEditor
             this.tsmiExitApp.Image = global::BZEditor.Properties.Resources.button_exitapp;
             this.tsmiExitApp.Name = "tsmiExitApp";
             this.tsmiExitApp.Size = new System.Drawing.Size(250, 22);
-            this.tsmiExitApp.Text = "Выход";
+            this.tsmiExitApp.Text = "Р’С‹С…РѕРґ";
             this.tsmiExitApp.Click += new System.EventHandler(this.TsmiExitAppClick);
             // 
-            // видToolStripMenuItem
+            // РІРёРґToolStripMenuItem
             // 
-            this.видToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.списокЗонToolStripMenuItem,
-            this.шаблоныToolStripMenuItem});
-            this.видToolStripMenuItem.Name = "видToolStripMenuItem";
-            this.видToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.видToolStripMenuItem.Text = "Вид";
+            this.РІРёРґToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.СЃРїРёСЃРѕРєР—РѕРЅToolStripMenuItem,
+            this.С€Р°Р±Р»РѕРЅС‹ToolStripMenuItem});
+            this.РІРёРґToolStripMenuItem.Name = "РІРёРґToolStripMenuItem";
+            this.РІРёРґToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.РІРёРґToolStripMenuItem.Text = "Р’РёРґ";
             // 
-            // списокЗонToolStripMenuItem
+            // СЃРїРёСЃРѕРєР—РѕРЅToolStripMenuItem
             // 
-            this.списокЗонToolStripMenuItem.Name = "списокЗонToolStripMenuItem";
-            this.списокЗонToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.списокЗонToolStripMenuItem.Text = "Список зон";
-            this.списокЗонToolStripMenuItem.Click += new System.EventHandler(this.СписокЗонToolStripMenuItemClick);
+            this.СЃРїРёСЃРѕРєР—РѕРЅToolStripMenuItem.Name = "СЃРїРёСЃРѕРєР—РѕРЅToolStripMenuItem";
+            this.СЃРїРёСЃРѕРєР—РѕРЅToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.СЃРїРёСЃРѕРєР—РѕРЅToolStripMenuItem.Text = "РЎРїРёСЃРѕРє Р·РѕРЅ";
+            this.СЃРїРёСЃРѕРєР—РѕРЅToolStripMenuItem.Click += new System.EventHandler(this.РЎРїРёСЃРѕРєР—РѕРЅToolStripMenuItemClick);
             // 
-            // шаблоныToolStripMenuItem
+            // С€Р°Р±Р»РѕРЅС‹ToolStripMenuItem
             // 
-            this.шаблоныToolStripMenuItem.Name = "шаблоныToolStripMenuItem";
-            this.шаблоныToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.шаблоныToolStripMenuItem.Text = "Шаблоны";
-            this.шаблоныToolStripMenuItem.Click += new System.EventHandler(this.ШаблоныToolStripMenuItemClick);
+            this.С€Р°Р±Р»РѕРЅС‹ToolStripMenuItem.Name = "С€Р°Р±Р»РѕРЅС‹ToolStripMenuItem";
+            this.С€Р°Р±Р»РѕРЅС‹ToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.С€Р°Р±Р»РѕРЅС‹ToolStripMenuItem.Text = "РЁР°Р±Р»РѕРЅС‹";
+            this.С€Р°Р±Р»РѕРЅС‹ToolStripMenuItem.Click += new System.EventHandler(this.РЁР°Р±Р»РѕРЅС‹ToolStripMenuItemClick);
             // 
             // tsmiOptions
             // 
@@ -1252,21 +1252,21 @@ namespace BZEditor
             this.tsmiCheckUpdatesOnStartup});
             this.tsmiOptions.Name = "tsmiOptions";
             this.tsmiOptions.Size = new System.Drawing.Size(78, 20);
-            this.tsmiOptions.Text = "Настройка";
+            this.tsmiOptions.Text = "РќР°СЃС‚СЂРѕР№РєР°";
             // 
             // tsmiPathToWorldFolder
             // 
             this.tsmiPathToWorldFolder.Image = global::BZEditor.Properties.Resources.button_setworldfolder;
             this.tsmiPathToWorldFolder.Name = "tsmiPathToWorldFolder";
             this.tsmiPathToWorldFolder.Size = new System.Drawing.Size(289, 22);
-            this.tsmiPathToWorldFolder.Text = "Изменить путь к папке \"world\"";
+            this.tsmiPathToWorldFolder.Text = "РР·РјРµРЅРёС‚СЊ РїСѓС‚СЊ Рє РїР°РїРєРµ \"world\"";
             this.tsmiPathToWorldFolder.Click += new System.EventHandler(this.TsmiPathToWorldFolderClick);
             //
             // tsmiSelectDataFormat
             //
             this.tsmiSelectDataFormat.Name = "tsmiSelectDataFormat";
             this.tsmiSelectDataFormat.Size = new System.Drawing.Size(289, 22);
-            this.tsmiSelectDataFormat.Text = "Формат данных мира...";
+            this.tsmiSelectDataFormat.Text = "Р¤РѕСЂРјР°С‚ РґР°РЅРЅС‹С… РјРёСЂР°...";
             this.tsmiSelectDataFormat.Click += new System.EventHandler(this.TsmiSelectDataFormatClick);
             // 
             // tsmiSameOptionsForAllZones
@@ -1274,7 +1274,7 @@ namespace BZEditor
             this.tsmiSameOptionsForAllZones.CheckOnClick = true;
             this.tsmiSameOptionsForAllZones.Name = "tsmiSameOptionsForAllZones";
             this.tsmiSameOptionsForAllZones.Size = new System.Drawing.Size(289, 22);
-            this.tsmiSameOptionsForAllZones.Text = "Общие настройки окон для всех зон";
+            this.tsmiSameOptionsForAllZones.Text = "РћР±С‰РёРµ РЅР°СЃС‚СЂРѕР№РєРё РѕРєРѕРЅ РґР»СЏ РІСЃРµС… Р·РѕРЅ";
             this.tsmiSameOptionsForAllZones.Click += new System.EventHandler(this.TsmiSameOptionsForAllZonesClick);
             // 
             // toolStripMenuItem5
@@ -1287,7 +1287,7 @@ namespace BZEditor
             this.tsmiBackupZones.CheckOnClick = true;
             this.tsmiBackupZones.Name = "tsmiBackupZones";
             this.tsmiBackupZones.Size = new System.Drawing.Size(289, 22);
-            this.tsmiBackupZones.Text = "Всегда сохранять резервные копии зон";
+            this.tsmiBackupZones.Text = "Р’СЃРµРіРґР° СЃРѕС…СЂР°РЅСЏС‚СЊ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё Р·РѕРЅ";
             this.tsmiBackupZones.CheckedChanged += new System.EventHandler(this.BackupZonesCheckedChanged);
             // 
             // tsmiCheckUpdatesOnStartup
@@ -1296,12 +1296,12 @@ namespace BZEditor
             this.tsmiCheckUpdatesOnStartup.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmiCheckUpdatesOnStartup.Name = "tsmiCheckUpdatesOnStartup";
             this.tsmiCheckUpdatesOnStartup.Size = new System.Drawing.Size(289, 22);
-            this.tsmiCheckUpdatesOnStartup.Text = "Проверять обновления при старте";
+            this.tsmiCheckUpdatesOnStartup.Text = "РџСЂРѕРІРµСЂСЏС‚СЊ РѕР±РЅРѕРІР»РµРЅРёСЏ РїСЂРё СЃС‚Р°СЂС‚Рµ";
             this.tsmiCheckUpdatesOnStartup.Click += new System.EventHandler(this.TsmiCheckUpdatesOnStartupClick);
             // 
-            // справкаToolStripMenuItem
+            // СЃРїСЂР°РІРєР°ToolStripMenuItem
             // 
-            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.СЃРїСЂР°РІРєР°ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiHelp,
             this.toolStripMenuItem4,
             this.tsmiWhatsNew,
@@ -1310,16 +1310,16 @@ namespace BZEditor
             this.tsmiGoHomePage,
             this.tsSplitter1,
             this.tsmiAbout});
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.справкаToolStripMenuItem.Text = "Справка";
+            this.СЃРїСЂР°РІРєР°ToolStripMenuItem.Name = "СЃРїСЂР°РІРєР°ToolStripMenuItem";
+            this.СЃРїСЂР°РІРєР°ToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.СЃРїСЂР°РІРєР°ToolStripMenuItem.Text = "РЎРїСЂР°РІРєР°";
             // 
             // tsmiHelp
             // 
             this.tsmiHelp.Image = global::BZEditor.Properties.Resources.help_content;
             this.tsmiHelp.Name = "tsmiHelp";
             this.tsmiHelp.Size = new System.Drawing.Size(198, 22);
-            this.tsmiHelp.Text = "Web - справка";
+            this.tsmiHelp.Text = "Web - СЃРїСЂР°РІРєР°";
             this.tsmiHelp.Visible = false;
             this.tsmiHelp.Click += new System.EventHandler(this.TsmiHelpClick);
             // 
@@ -1333,7 +1333,7 @@ namespace BZEditor
             this.tsmiWhatsNew.Image = global::BZEditor.Properties.Resources.button_whatsnew;
             this.tsmiWhatsNew.Name = "tsmiWhatsNew";
             this.tsmiWhatsNew.Size = new System.Drawing.Size(198, 22);
-            this.tsmiWhatsNew.Text = "Список изменений";
+            this.tsmiWhatsNew.Text = "РЎРїРёСЃРѕРє РёР·РјРµРЅРµРЅРёР№";
             this.tsmiWhatsNew.Click += new System.EventHandler(this.TsmiWhatsNewClick);
             // 
             // tsmiCheckUpdates
@@ -1341,7 +1341,7 @@ namespace BZEditor
             this.tsmiCheckUpdates.Image = global::BZEditor.Properties.Resources.CheckUpdates;
             this.tsmiCheckUpdates.Name = "tsmiCheckUpdates";
             this.tsmiCheckUpdates.Size = new System.Drawing.Size(198, 22);
-            this.tsmiCheckUpdates.Text = "Проверка обновления";
+            this.tsmiCheckUpdates.Text = "РџСЂРѕРІРµСЂРєР° РѕР±РЅРѕРІР»РµРЅРёСЏ";
             this.tsmiCheckUpdates.Click += new System.EventHandler(this.TsmiCheckUpdatesClick);
             // 
             // tsSplitter2
@@ -1354,7 +1354,7 @@ namespace BZEditor
             this.tsmiGoHomePage.Image = global::BZEditor.Properties.Resources.button_home_page;
             this.tsmiGoHomePage.Name = "tsmiGoHomePage";
             this.tsmiGoHomePage.Size = new System.Drawing.Size(198, 22);
-            this.tsmiGoHomePage.Text = "Сайт программы";
+            this.tsmiGoHomePage.Text = "РЎР°Р№С‚ РїСЂРѕРіСЂР°РјРјС‹";
             this.tsmiGoHomePage.Click += new System.EventHandler(this.TsmiGoHomePageClick);
             // 
             // tsSplitter1
@@ -1367,7 +1367,7 @@ namespace BZEditor
             this.tsmiAbout.Image = global::BZEditor.Properties.Resources.ktip1;
             this.tsmiAbout.Name = "tsmiAbout";
             this.tsmiAbout.Size = new System.Drawing.Size(198, 22);
-            this.tsmiAbout.Text = "О программе...";
+            this.tsmiAbout.Text = "Рћ РїСЂРѕРіСЂР°РјРјРµ...";
             this.tsmiAbout.Click += new System.EventHandler(this.TsmiAboutClick);
             // 
             // statusStrip
@@ -1388,8 +1388,8 @@ namespace BZEditor
             // 
             this.tsslTextPosStatus.Name = "tsslTextPosStatus";
             this.tsslTextPosStatus.Size = new System.Drawing.Size(103, 19);
-            this.tsslTextPosStatus.Text = "Позиция курсора";
-            this.tsslTextPosStatus.ToolTipText = "Текущая позиция курсора";
+            this.tsslTextPosStatus.Text = "РџРѕР·РёС†РёСЏ РєСѓСЂСЃРѕСЂР°";
+            this.tsslTextPosStatus.ToolTipText = "РўРµРєСѓС‰Р°СЏ РїРѕР·РёС†РёСЏ РєСѓСЂСЃРѕСЂР°";
             // 
             // tsslSaveIco
             // 
@@ -1457,7 +1457,7 @@ namespace BZEditor
 
         private void TsmiSameOptionsForAllZonesClick(object sender, EventArgs e)
         {
-            //Загрузка во все открытые окна общих настроек
+            //Р—Р°РіСЂСѓР·РєР° РІРѕ РІСЃРµ РѕС‚РєСЂС‹С‚С‹Рµ РѕРєРЅР° РѕР±С‰РёС… РЅР°СЃС‚СЂРѕРµРє
             foreach (var w in dockContainerMain.Documents)
             {
                 ((WldForm) w).ReloadSettings(tsmiSameOptionsForAllZones.Checked);
@@ -1482,7 +1482,7 @@ namespace BZEditor
             }
             catch
             {
-                MessageBox.Show("При попытке открыть домашнюю страницу произошла ошибка.", "Нет возможности открыть добашнюю страницу", MessageBoxButtons.OK,
+                MessageBox.Show("РџСЂРё РїРѕРїС‹С‚РєРµ РѕС‚РєСЂС‹С‚СЊ РґРѕРјР°С€РЅСЋСЋ СЃС‚СЂР°РЅРёС†Сѓ РїСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°.", "РќРµС‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РѕС‚РєСЂС‹С‚СЊ РґРѕР±Р°С€РЅСЋСЋ СЃС‚СЂР°РЅРёС†Сѓ", MessageBoxButtons.OK,
                                 MessageBoxIcon.Asterisk);
             }
         }
@@ -1504,7 +1504,7 @@ namespace BZEditor
         {
             if (!cucces)
             {
-                if(MessageBox.Show(this, string.Format("Не удалось создать архивную копию зоны \"[{0}]{1}\" перед сохранением, продолжить сохранение зоны ?", zdm.Zone.Number, zdm.Zone.Name), "Резервное копирование", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if(MessageBox.Show(this, string.Format("РќРµ СѓРґР°Р»РѕСЃСЊ СЃРѕР·РґР°С‚СЊ Р°СЂС…РёРІРЅСѓСЋ РєРѕРїРёСЋ Р·РѕРЅС‹ \"[{0}]{1}\" РїРµСЂРµРґ СЃРѕС…СЂР°РЅРµРЅРёРµРј, РїСЂРѕРґРѕР»Р¶РёС‚СЊ СЃРѕС…СЂР°РЅРµРЅРёРµ Р·РѕРЅС‹ ?", zdm.Zone.Number, zdm.Zone.Name), "Р РµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     zdm.SaveData();
             }
             else
@@ -1528,7 +1528,7 @@ namespace BZEditor
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show($"Не могу создать папку для отправки. Ошибка: {ex.Message}");
+                    MessageBox.Show($"РќРµ РјРѕРіСѓ СЃРѕР·РґР°С‚СЊ РїР°РїРєСѓ РґР»СЏ РѕС‚РїСЂР°РІРєРё. РћС€РёР±РєР°: {ex.Message}");
                     return;
                 }
             }
@@ -1543,8 +1543,8 @@ namespace BZEditor
                 if (dialog.ShowDialog(this) == DialogResult.OK)
                 {
                     MessageBox.Show(
-                        "Формат данных мира изменён. Мир будет сохранён в выбранном формате при следующем сохранении.",
-                        "Формат данных",
+                        "Р¤РѕСЂРјР°С‚ РґР°РЅРЅС‹С… РјРёСЂР° РёР·РјРµРЅС‘РЅ. РњРёСЂ Р±СѓРґРµС‚ СЃРѕС…СЂР°РЅС‘РЅ РІ РІС‹Р±СЂР°РЅРЅРѕРј С„РѕСЂРјР°С‚Рµ РїСЂРё СЃР»РµРґСѓСЋС‰РµРј СЃРѕС…СЂР°РЅРµРЅРёРё.",
+                        "Р¤РѕСЂРјР°С‚ РґР°РЅРЅС‹С…",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }

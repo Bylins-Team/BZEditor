@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class UcObjectType
     {
@@ -230,7 +230,7 @@ namespace BZEditor
             this.groupBox7.Size = new System.Drawing.Size(292, 210);
             this.groupBox7.TabIndex = 98;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Тип объекта";
+            this.groupBox7.Text = "РўРёРї РѕР±СЉРµРєС‚Р°";
             // 
             // pObjWeapon
             // 
@@ -307,7 +307,7 @@ namespace BZEditor
             this.label144.Name = "label144";
             this.label144.Size = new System.Drawing.Size(120, 14);
             this.label144.TabIndex = 75;
-            this.label144.Text = "Тип удара";
+            this.label144.Text = "РўРёРї СѓРґР°СЂР°";
             this.label144.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label145
@@ -316,7 +316,7 @@ namespace BZEditor
             label145.Name = "label145";
             label145.Size = new System.Drawing.Size(84, 20);
             label145.TabIndex = 67;
-            label145.Text = "Повреждения";
+            label145.Text = "РџРѕРІСЂРµР¶РґРµРЅРёСЏ";
             label145.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjMagStaff
@@ -408,7 +408,7 @@ namespace BZEditor
             label134.Name = "label134";
             label134.Size = new System.Drawing.Size(210, 20);
             label134.TabIndex = 67;
-            label134.Text = "Текущее количество зарядов";
+            label134.Text = "РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ";
             label134.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label139
@@ -417,7 +417,7 @@ namespace BZEditor
             label139.Name = "label139";
             label139.Size = new System.Drawing.Size(210, 20);
             label139.TabIndex = 67;
-            label139.Text = "Количество зарядов посоха";
+            label139.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ РїРѕСЃРѕС…Р°";
             label139.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label140
@@ -426,7 +426,7 @@ namespace BZEditor
             this.label140.Name = "label140";
             this.label140.Size = new System.Drawing.Size(120, 14);
             this.label140.TabIndex = 75;
-            this.label140.Text = "Заклинание";
+            this.label140.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ";
             this.label140.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label141
@@ -435,7 +435,7 @@ namespace BZEditor
             label141.Name = "label141";
             label141.Size = new System.Drawing.Size(210, 20);
             label141.TabIndex = 67;
-            label141.Text = "Необходимый минимальный уровень";
+            label141.Text = "РќРµРѕР±С…РѕРґРёРјС‹Р№ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ";
             label141.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjMagWand
@@ -527,7 +527,7 @@ namespace BZEditor
             label138.Name = "label138";
             label138.Size = new System.Drawing.Size(210, 20);
             label138.TabIndex = 67;
-            label138.Text = "Текущее количество зарядов";
+            label138.Text = "РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ";
             label138.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label137
@@ -536,7 +536,7 @@ namespace BZEditor
             label137.Name = "label137";
             label137.Size = new System.Drawing.Size(210, 20);
             label137.TabIndex = 67;
-            label137.Text = "Количество зарядов палочки";
+            label137.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ РїР°Р»РѕС‡РєРё";
             label137.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label135
@@ -545,7 +545,7 @@ namespace BZEditor
             this.label135.Name = "label135";
             this.label135.Size = new System.Drawing.Size(120, 14);
             this.label135.TabIndex = 75;
-            this.label135.Text = "Заклинание";
+            this.label135.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ";
             this.label135.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label136
@@ -554,7 +554,7 @@ namespace BZEditor
             label136.Name = "label136";
             label136.Size = new System.Drawing.Size(210, 20);
             label136.TabIndex = 67;
-            label136.Text = "Необходимый минимальный уровень";
+            label136.Text = "РќРµРѕР±С…РѕРґРёРјС‹Р№ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ";
             label136.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjMagicScroll
@@ -621,7 +621,7 @@ namespace BZEditor
             this.label133.Name = "label133";
             this.label133.Size = new System.Drawing.Size(120, 14);
             this.label133.TabIndex = 75;
-            this.label133.Text = "Заклинание 2";
+            this.label133.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 2";
             this.label133.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label132
@@ -630,7 +630,7 @@ namespace BZEditor
             this.label132.Name = "label132";
             this.label132.Size = new System.Drawing.Size(120, 14);
             this.label132.TabIndex = 75;
-            this.label132.Text = "Заклинание 3";
+            this.label132.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 3";
             this.label132.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label131
@@ -639,7 +639,7 @@ namespace BZEditor
             label131.Name = "label131";
             label131.Size = new System.Drawing.Size(210, 33);
             label131.TabIndex = 67;
-            label131.Text = "Необходимый минимальный уровень";
+            label131.Text = "РќРµРѕР±С…РѕРґРёРјС‹Р№ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ";
             label131.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label130
@@ -648,7 +648,7 @@ namespace BZEditor
             this.label130.Name = "label130";
             this.label130.Size = new System.Drawing.Size(120, 14);
             this.label130.TabIndex = 75;
-            this.label130.Text = "Заклинание 1";
+            this.label130.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 1";
             this.label130.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjLighter
@@ -687,7 +687,7 @@ namespace BZEditor
             label129.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             label129.Size = new System.Drawing.Size(224, 33);
             label129.TabIndex = 67;
-            label129.Text = "-1 - вечный источник света\r\n0  - выжженый источник";
+            label129.Text = "-1 - РІРµС‡РЅС‹Р№ РёСЃС‚РѕС‡РЅРёРє СЃРІРµС‚Р°\r\n0  - РІС‹Р¶Р¶РµРЅС‹Р№ РёСЃС‚РѕС‡РЅРёРє";
             label129.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label128
@@ -696,7 +696,7 @@ namespace BZEditor
             label128.Name = "label128";
             label128.Size = new System.Drawing.Size(152, 33);
             label128.TabIndex = 67;
-            label128.Text = "Запас свечения по времени (в игровых часах)";
+            label128.Text = "Р—Р°РїР°СЃ СЃРІРµС‡РµРЅРёСЏ РїРѕ РІСЂРµРјРµРЅРё (РІ РёРіСЂРѕРІС‹С… С‡Р°СЃР°С…)";
             label128.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cBoxObjType
@@ -705,33 +705,33 @@ namespace BZEditor
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.cBoxObjType.ItemHeight = 13;
             this.cBoxObjType.Items.AddRange(new object[] {
-            "Источник света",
-            "Магический свиток",
-            "Волшебная палочка",
-            "Магичекий посох",
-            "Оружие",
-            "FIREWEAPON (недоработано)",
-            "MISSILE  (недоработано)",
-            "Сокровища кроме монет (например драгоценные камни)",
-            "Броня (доспехи, шлем и т.п.)",
-            "Магический напиток",
-            "Просто одежда (не дает +AC)",
-            "Обычные (misc) предметы без всяких особенностей",
-            "Мусор (уничтожается дворниками, не продается)",
-            "TRAP (недоработано)",
-            "Контейнер",
-            "Заметка (на нем можно писать)",
-            "Контейнер для жидкостей",
-            "Ключ",
-            "Пища",
-            "Деньги (стальные монеты)",
-            "Ручка",
-            "Лодка; позволяет ходить по SECT_WATER_NOSWIM",
-            "Фонтан",
-            "Магическая книга",
-            "Магический ингридиент",
-            "Ингридиент для отвара",
-            "Материал"});
+            "РСЃС‚РѕС‡РЅРёРє СЃРІРµС‚Р°",
+            "РњР°РіРёС‡РµСЃРєРёР№ СЃРІРёС‚РѕРє",
+            "Р’РѕР»С€РµР±РЅР°СЏ РїР°Р»РѕС‡РєР°",
+            "РњР°РіРёС‡РµРєРёР№ РїРѕСЃРѕС…",
+            "РћСЂСѓР¶РёРµ",
+            "FIREWEAPON (РЅРµРґРѕСЂР°Р±РѕС‚Р°РЅРѕ)",
+            "MISSILE  (РЅРµРґРѕСЂР°Р±РѕС‚Р°РЅРѕ)",
+            "РЎРѕРєСЂРѕРІРёС‰Р° РєСЂРѕРјРµ РјРѕРЅРµС‚ (РЅР°РїСЂРёРјРµСЂ РґСЂР°РіРѕС†РµРЅРЅС‹Рµ РєР°РјРЅРё)",
+            "Р‘СЂРѕРЅСЏ (РґРѕСЃРїРµС…Рё, С€Р»РµРј Рё С‚.Рї.)",
+            "РњР°РіРёС‡РµСЃРєРёР№ РЅР°РїРёС‚РѕРє",
+            "РџСЂРѕСЃС‚Рѕ РѕРґРµР¶РґР° (РЅРµ РґР°РµС‚ +AC)",
+            "РћР±С‹С‡РЅС‹Рµ (misc) РїСЂРµРґРјРµС‚С‹ Р±РµР· РІСЃСЏРєРёС… РѕСЃРѕР±РµРЅРЅРѕСЃС‚РµР№",
+            "РњСѓСЃРѕСЂ (СѓРЅРёС‡С‚РѕР¶Р°РµС‚СЃСЏ РґРІРѕСЂРЅРёРєР°РјРё, РЅРµ РїСЂРѕРґР°РµС‚СЃСЏ)",
+            "TRAP (РЅРµРґРѕСЂР°Р±РѕС‚Р°РЅРѕ)",
+            "РљРѕРЅС‚РµР№РЅРµСЂ",
+            "Р—Р°РјРµС‚РєР° (РЅР° РЅРµРј РјРѕР¶РЅРѕ РїРёСЃР°С‚СЊ)",
+            "РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ Р¶РёРґРєРѕСЃС‚РµР№",
+            "РљР»СЋС‡",
+            "РџРёС‰Р°",
+            "Р”РµРЅСЊРіРё (СЃС‚Р°Р»СЊРЅС‹Рµ РјРѕРЅРµС‚С‹)",
+            "Р СѓС‡РєР°",
+            "Р›РѕРґРєР°; РїРѕР·РІРѕР»СЏРµС‚ С…РѕРґРёС‚СЊ РїРѕ SECT_WATER_NOSWIM",
+            "Р¤РѕРЅС‚Р°РЅ",
+            "РњР°РіРёС‡РµСЃРєР°СЏ РєРЅРёРіР°",
+            "РњР°РіРёС‡РµСЃРєРёР№ РёРЅРіСЂРёРґРёРµРЅС‚",
+            "РРЅРіСЂРёРґРёРµРЅС‚ РґР»СЏ РѕС‚РІР°СЂР°",
+            "РњР°С‚РµСЂРёР°Р»"});
             this.cBoxObjType.Location = new System.Drawing.Point(6, 16);
             this.cBoxObjType.Name = "cBoxObjType";
             this.cBoxObjType.Size = new System.Drawing.Size(279, 21);
@@ -743,7 +743,7 @@ namespace BZEditor
             this.label151.Name = "label151";
             this.label151.Size = new System.Drawing.Size(120, 14);
             this.label151.TabIndex = 75;
-            this.label151.Text = "Заклинание 1";
+            this.label151.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 1";
             this.label151.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label150
@@ -752,7 +752,7 @@ namespace BZEditor
             label150.Name = "label150";
             label150.Size = new System.Drawing.Size(210, 33);
             label150.TabIndex = 67;
-            label150.Text = "Необходимый минимальный уровень";
+            label150.Text = "РќРµРѕР±С…РѕРґРёРјС‹Р№ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ";
             label150.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label149
@@ -761,7 +761,7 @@ namespace BZEditor
             this.label149.Name = "label149";
             this.label149.Size = new System.Drawing.Size(120, 14);
             this.label149.TabIndex = 75;
-            this.label149.Text = "Заклинание 3";
+            this.label149.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 3";
             this.label149.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label148
@@ -770,7 +770,7 @@ namespace BZEditor
             this.label148.Name = "label148";
             this.label148.Size = new System.Drawing.Size(120, 14);
             this.label148.TabIndex = 75;
-            this.label148.Text = "Заклинание 2";
+            this.label148.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ 2";
             this.label148.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudObjPotionMinLev
@@ -846,7 +846,7 @@ namespace BZEditor
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(220, 31);
             this.label146.TabIndex = 75;
-            this.label146.Text = "Значения больше 0 улучшают AC и броню\r\nЗначения меньше 0 ухудшают AC и броню";
+            this.label146.Text = "Р—РЅР°С‡РµРЅРёСЏ Р±РѕР»СЊС€Рµ 0 СѓР»СѓС‡С€Р°СЋС‚ AC Рё Р±СЂРѕРЅСЋ\r\nР—РЅР°С‡РµРЅРёСЏ РјРµРЅСЊС€Рµ 0 СѓС…СѓРґС€Р°СЋС‚ AC Рё Р±СЂРѕРЅСЋ";
             // 
             // label142
             // 
@@ -854,7 +854,7 @@ namespace BZEditor
             label142.Name = "label142";
             label142.Size = new System.Drawing.Size(65, 20);
             label142.TabIndex = 67;
-            label142.Text = "Броня";
+            label142.Text = "Р‘СЂРѕРЅСЏ";
             label142.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudObjArmorAC
@@ -971,7 +971,7 @@ namespace BZEditor
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(217, 26);
             label1.TabIndex = 67;
-            label1.Text = "Виртуальный номер ключа, отпирающего контейнер (-1, если нет ключа)";
+            label1.Text = "Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ РєР»СЋС‡Р°, РѕС‚РїРёСЂР°СЋС‰РµРіРѕ РєРѕРЅС‚РµР№РЅРµСЂ (-1, РµСЃР»Рё РЅРµС‚ РєР»СЋС‡Р°)";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
@@ -980,7 +980,7 @@ namespace BZEditor
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(225, 20);
             label3.TabIndex = 67;
-            label3.Text = "Вместимость (максимальный вес внутри)";
+            label3.Text = "Р’РјРµСЃС‚РёРјРѕСЃС‚СЊ (РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РІРµСЃ РІРЅСѓС‚СЂРё)";
             label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lvObjContainerFlags
@@ -1087,7 +1087,7 @@ namespace BZEditor
             nudObjLiquidContainerCurVal.Name = "nudObjLiquidContainerCurVal";
             nudObjLiquidContainerCurVal.Size = new System.Drawing.Size(210, 20);
             nudObjLiquidContainerCurVal.TabIndex = 67;
-            nudObjLiquidContainerCurVal.Text = "Текущее количество жидкости";
+            nudObjLiquidContainerCurVal.Text = "РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р¶РёРґРєРѕСЃС‚Рё";
             nudObjLiquidContainerCurVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -1096,7 +1096,7 @@ namespace BZEditor
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(210, 20);
             label4.TabIndex = 67;
-            label4.Text = "Максимальный объем жидкости";
+            label4.Text = "РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РѕР±СЉРµРј Р¶РёРґРєРѕСЃС‚Рё";
             label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
@@ -1105,7 +1105,7 @@ namespace BZEditor
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(120, 14);
             label5.TabIndex = 75;
-            label5.Text = "Тип жидкости";
+            label5.Text = "РўРёРї Р¶РёРґРєРѕСЃС‚Рё";
             label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
@@ -1114,7 +1114,7 @@ namespace BZEditor
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(210, 20);
             label6.TabIndex = 67;
-            label6.Text = "Уровень яда (0 если не отравлено)";
+            label6.Text = "РЈСЂРѕРІРµРЅСЊ СЏРґР° (0 РµСЃР»Рё РЅРµ РѕС‚СЂР°РІР»РµРЅРѕ)";
             label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // comboBox1
@@ -1179,7 +1179,7 @@ namespace BZEditor
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(225, 20);
             label2.TabIndex = 67;
-            label2.Text = "Уровень яда (0 - не отравлено)";
+            label2.Text = "РЈСЂРѕРІРµРЅСЊ СЏРґР° (0 - РЅРµ РѕС‚СЂР°РІР»РµРЅРѕ)";
             label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
@@ -1188,7 +1188,7 @@ namespace BZEditor
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(225, 20);
             label7.TabIndex = 67;
-            label7.Text = "Количесво удовлетвояемых часов голода";
+            label7.Text = "РљРѕР»РёС‡РµСЃРІРѕ СѓРґРѕРІР»РµС‚РІРѕСЏРµРјС‹С… С‡Р°СЃРѕРІ РіРѕР»РѕРґР°";
             label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjMoney
@@ -1225,7 +1225,7 @@ namespace BZEditor
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(225, 20);
             label9.TabIndex = 67;
-            label9.Text = "Количесво денег";
+            label9.Text = "РљРѕР»РёС‡РµСЃРІРѕ РґРµРЅРµРі";
             label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjFontan
@@ -1307,7 +1307,7 @@ namespace BZEditor
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(210, 20);
             label8.TabIndex = 67;
-            label8.Text = "Текущее количество жидкости";
+            label8.Text = "РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р¶РёРґРєРѕСЃС‚Рё";
             label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
@@ -1316,7 +1316,7 @@ namespace BZEditor
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(210, 20);
             label10.TabIndex = 67;
-            label10.Text = "Максимальный объем жидкости";
+            label10.Text = "РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РѕР±СЉРµРј Р¶РёРґРєРѕСЃС‚Рё";
             label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label11
@@ -1325,7 +1325,7 @@ namespace BZEditor
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(120, 14);
             label11.TabIndex = 75;
-            label11.Text = "Тип жидкости";
+            label11.Text = "РўРёРї Р¶РёРґРєРѕСЃС‚Рё";
             label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
@@ -1334,7 +1334,7 @@ namespace BZEditor
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(210, 20);
             label12.TabIndex = 67;
-            label12.Text = "Уровень яда (0 если не отравлено)";
+            label12.Text = "РЈСЂРѕРІРµРЅСЊ СЏРґР° (0 РµСЃР»Рё РЅРµ РѕС‚СЂР°РІР»РµРЅРѕ)";
             label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjMagBook
@@ -1361,7 +1361,7 @@ namespace BZEditor
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(120, 14);
             this.label15.TabIndex = 75;
-            this.label15.Text = "Заклинание";
+            this.label15.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pObjMagIngr
@@ -1424,7 +1424,7 @@ namespace BZEditor
             label14.Name = "label14";
             label14.Size = new System.Drawing.Size(74, 20);
             label14.TabIndex = 67;
-            label14.Text = "Лаг(сек.)";
+            label14.Text = "Р›Р°Рі(СЃРµРє.)";
             label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
@@ -1433,7 +1433,7 @@ namespace BZEditor
             label16.Name = "label16";
             label16.Size = new System.Drawing.Size(74, 19);
             label16.TabIndex = 67;
-            label16.Text = "Прототип";
+            label16.Text = "РџСЂРѕС‚РѕС‚РёРї";
             label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // numericUpDown3
@@ -1460,7 +1460,7 @@ namespace BZEditor
             label13.Name = "label13";
             label13.Size = new System.Drawing.Size(74, 20);
             label13.TabIndex = 67;
-            label13.Text = "Мин.уровень";
+            label13.Text = "РњРёРЅ.СѓСЂРѕРІРµРЅСЊ";
             label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label17
@@ -1469,7 +1469,7 @@ namespace BZEditor
             label17.Name = "label17";
             label17.Size = new System.Drawing.Size(80, 31);
             label17.TabIndex = 67;
-            label17.Text = "Осталось применений";
+            label17.Text = "РћСЃС‚Р°Р»РѕСЃСЊ РїСЂРёРјРµРЅРµРЅРёР№";
             label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // numericUpDown1

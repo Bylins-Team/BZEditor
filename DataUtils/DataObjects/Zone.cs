@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class Zone : BaseDataObject
     {
@@ -19,12 +19,12 @@ namespace DataUtils
         private int type;
 
         /// <summary>
-        /// Коллекция мобов, удаляемух при перезагрузке
+        /// РљРѕР»Р»РµРєС†РёСЏ РјРѕР±РѕРІ, СѓРґР°Р»СЏРµРјСѓС… РїСЂРё РїРµСЂРµР·Р°РіСЂСѓР·РєРµ
         /// </summary>
         public readonly OperatedMobsCollection MobsToRemove = new OperatedMobsCollection();
 
         /// <summary>
-        /// Коллекция мобов, загружаемых в виртуальную комнату
+        /// РљРѕР»Р»РµРєС†РёСЏ РјРѕР±РѕРІ, Р·Р°РіСЂСѓР¶Р°РµРјС‹С… РІ РІРёСЂС‚СѓР°Р»СЊРЅСѓСЋ РєРѕРјРЅР°С‚Сѓ
         /// </summary>
         public readonly OperatedMobsCollection MobsLoadedInVirtualRoom = new OperatedMobsCollection();
 
@@ -53,7 +53,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Номер зоны
+        /// РќРѕРјРµСЂ Р·РѕРЅС‹
         /// </summary>
         public int Number
         {
@@ -67,7 +67,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Название зоны
+        /// РќР°Р·РІР°РЅРёРµ Р·РѕРЅС‹
         /// </summary>
         public string Name
         {
@@ -81,7 +81,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Автор зоны
+        /// РђРІС‚РѕСЂ Р·РѕРЅС‹
         /// </summary>
         public string Author
         {
@@ -95,7 +95,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Комментарий
+        /// РљРѕРјРјРµРЅС‚Р°СЂРёР№
         /// </summary>
         public string Comment
         {
@@ -109,7 +109,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Местоположение
+        /// РњРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ
         /// </summary>
         public string Location
         {
@@ -123,7 +123,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Описание
+        /// РћРїРёСЃР°РЅРёРµ
         /// </summary>
         public string Description
         {
@@ -137,7 +137,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Номер последней комнаты меньше 98 принудительно
+        /// РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ РєРѕРјРЅР°С‚С‹ РјРµРЅСЊС€Рµ 98 РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ
         /// </summary>
         public int LastRoomNumber
         {
@@ -151,7 +151,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Уровень зоны
+        /// РЈСЂРѕРІРµРЅСЊ Р·РѕРЅС‹
         /// </summary>
         public int Level
         {
@@ -165,7 +165,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тип зоны
+        /// РўРёРї Р·РѕРЅС‹
         /// </summary>
         public int Type
         {
@@ -179,7 +179,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Оптимальное количество игроков в группе для групповых зон
+        /// РћРїС‚РёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РёРіСЂРѕРєРѕРІ РІ РіСЂСѓРїРїРµ РґР»СЏ РіСЂСѓРїРїРѕРІС‹С… Р·РѕРЅ
         /// </summary>
         public int OptimalCharsInGroup
         {
@@ -193,7 +193,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тип перезагрузки зоны
+        /// РўРёРї РїРµСЂРµР·Р°РіСЂСѓР·РєРё Р·РѕРЅС‹
         /// </summary>
         public int RepopType
         {
@@ -207,7 +207,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Булева переменная, показывающая,очищать ли зону, если в нее никто не заходил после последней ее очистки.
+        /// Р‘СѓР»РµРІР° РїРµСЂРµРјРµРЅРЅР°СЏ, РїРѕРєР°Р·С‹РІР°СЋС‰Р°СЏ,РѕС‡РёС‰Р°С‚СЊ Р»Рё Р·РѕРЅСѓ, РµСЃР»Рё РІ РЅРµРµ РЅРёРєС‚Рѕ РЅРµ Р·Р°С…РѕРґРёР» РїРѕСЃР»Рµ РїРѕСЃР»РµРґРЅРµР№ РµРµ РѕС‡РёСЃС‚РєРё.
         /// </summary>
         public int ResetIdle
         {
@@ -243,7 +243,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Таймер перезагрузки зоны
+        /// РўР°Р№РјРµСЂ РїРµСЂРµР·Р°РіСЂСѓР·РєРё Р·РѕРЅС‹
         /// </summary>
         public int RepopTimer
         {

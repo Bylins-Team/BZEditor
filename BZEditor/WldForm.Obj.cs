@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -265,7 +265,7 @@ namespace BZEditor
         {
             CTriggersCollection allTriggers = WindowParentForm.GetAllKnownTriggers(1);
             TrgSelectForm tsf =
-                new TrgSelectForm("Выберите триггеры для объекта", allTriggers, ZoneDM.Zone.Number, true, false);
+                new TrgSelectForm("Р’С‹Р±РµСЂРёС‚Рµ С‚СЂРёРіРіРµСЂС‹ РґР»СЏ РѕР±СЉРµРєС‚Р°", allTriggers, ZoneDM.Zone.Number, true, false);
             DialogResult dres = tsf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -312,15 +312,15 @@ namespace BZEditor
                     lvAvailAddAffects.Sorting = SortOrder.Descending;
                     lvAvailAddAffects.Sorting = SortOrder.Ascending;
                     lvAvailAddAffects.Sorting = SortOrder.Descending;
-                    chObjAddAffectAvail.Text = "Доступные доп.аффекты v";
+                    chObjAddAffectAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ РґРѕРї.Р°С„С„РµРєС‚С‹ v";
                     break;
                 case SortOrder.Descending:
                     lvAvailAddAffects.Sorting = SortOrder.Ascending;
-                    chObjAddAffectAvail.Text = "Доступные доп.аффекты ^";
+                    chObjAddAffectAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ РґРѕРї.Р°С„С„РµРєС‚С‹ ^";
                     break;
                 case SortOrder.Ascending:
                     lvAvailAddAffects.Sorting = SortOrder.None;
-                    chObjAddAffectAvail.Text = "Доступные доп.аффекты";
+                    chObjAddAffectAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ РґРѕРї.Р°С„С„РµРєС‚С‹";
                     if (lvMainList.SelectedItems.Count <= 0) return;
                     Obj curObject = ZoneDM.ObjectsCollection[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
                     lvAvailAddAffects.BeginUpdate();
@@ -473,11 +473,11 @@ namespace BZEditor
             Obj curObject = ZoneDM.ObjectsCollection[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
             switch (((Control)sender).Name)
             {
-                //Источник света
+                //РСЃС‚РѕС‡РЅРёРє СЃРІРµС‚Р°
                 case "nudObjLighterValue":
                     curObject.Param1 = nudObjLighterValue.Value.ToString();
                     break;
-                //Магический свиток
+                //РњР°РіРёС‡РµСЃРєРёР№ СЃРІРёС‚РѕРє
                 case "nudObjMagScrollMinLev":
                     curObject.Param1 = nudObjMagScrollMinLev.Value.ToString();
                     break;
@@ -490,7 +490,7 @@ namespace BZEditor
                 case "cboxObjMagScrollSpell3":
                     curObject.Param4 = GetCBoxsSelectedValue(cboxObjMagScrollSpell3).ToString();
                     break;
-                //Волшебная палочка
+                //Р’РѕР»С€РµР±РЅР°СЏ РїР°Р»РѕС‡РєР°
                 case "nudObjMagWandMinLev":
                     curObject.Param1 = nudObjMagWandMinLev.Value.ToString();
                     break;
@@ -503,7 +503,7 @@ namespace BZEditor
                 case "cboxObjMagWandSpell":
                     curObject.Param4 = GetCBoxsSelectedValue(cboxObjMagWandSpell).ToString();
                     break;
-                //Магический посох
+                //РњР°РіРёС‡РµСЃРєРёР№ РїРѕСЃРѕС…
                 case "nudObjMagStaffMinLev":
                     curObject.Param1 = nudObjMagStaffMinLev.Value.ToString();
                     break;
@@ -516,30 +516,30 @@ namespace BZEditor
                 case "cboxObjMagStaffSpell":
                     curObject.Param4 = GetCBoxsSelectedValue(cboxObjMagStaffSpell).ToString();
                     break;
-                //Оружие
+                //РћСЂСѓР¶РёРµ
                 case "nudObjWeaponD1":
                     curObject.Param2 = nudObjWeaponD1.Value.ToString();
-                    lObjAverageDam.Text = "Ср: " +
+                    lObjAverageDam.Text = "РЎСЂ: " +
                                           (((nudObjWeaponD1.Value * nudObjWeaponD2.Value) - nudObjWeaponD1.Value) / 2 +
                                            nudObjWeaponD1.Value);
                     break;
                 case "nudObjWeaponD2":
                     curObject.Param3 = nudObjWeaponD2.Value.ToString();
-                    lObjAverageDam.Text = "Ср: " +
+                    lObjAverageDam.Text = "РЎСЂ: " +
                                           (((nudObjWeaponD1.Value * nudObjWeaponD2.Value) - nudObjWeaponD1.Value) / 2 +
                                            nudObjWeaponD1.Value);
                     break;
                 case "cboxObjWeaponSrikeType":
                     curObject.Param4 = GetCBoxsSelectedValue(cboxObjWeaponSrikeType).ToString();
                     break;
-                //Броня
+                //Р‘СЂРѕРЅСЏ
                 case "nudObjArmorAC":
                     curObject.Param1 = nudObjArmorAC.Value.ToString();
                     break;
                 case "nudObjArmorArm":
                     curObject.Param2 = nudObjArmorArm.Value.ToString();
                     break;
-                //Магический напиток
+                //РњР°РіРёС‡РµСЃРєРёР№ РЅР°РїРёС‚РѕРє
                 case "nudObjPotionMinLev":
                     curObject.Param1 = nudObjPotionMinLev.Value.ToString();
                     break;
@@ -552,7 +552,7 @@ namespace BZEditor
                 case "cboxObjPotionSpell3":
                     curObject.Param4 = GetCBoxsSelectedValue(cboxObjPotionSpell3).ToString();
                     break;
-                //Контейнер
+                //РљРѕРЅС‚РµР№РЅРµСЂ
                 case "nudObjContainerValue":
                     curObject.Param1 = nudObjContainerValue.Value.ToString();
                     break;
@@ -568,7 +568,7 @@ namespace BZEditor
                         param += Convert.ToInt32(lvi.Tag);
                     curObject.Param2 = param.ToString();
                     break;
-                //Контейнер для жидкостей
+                //РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ Р¶РёРґРєРѕСЃС‚РµР№
                 case "nudObjLiquidContainerMaxVal":
                     curObject.Param1 = nudObjLiquidContainerMaxVal.Value.ToString();
                     break;
@@ -587,20 +587,20 @@ namespace BZEditor
                     curObject.Param4 = nudObjLiquidContainerPoison.Value.ToString();
                     break;
                 case "nudPotionProtoVNum":
-                    curObject.TrenSkill = Convert.ToInt32(nudPotionProtoVNum.Value); //Хранится вместо тренируемого скила
+                    curObject.TrenSkill = Convert.ToInt32(nudPotionProtoVNum.Value); //РҐСЂР°РЅРёС‚СЃСЏ РІРјРµСЃС‚Рѕ С‚СЂРµРЅРёСЂСѓРµРјРѕРіРѕ СЃРєРёР»Р°
                     break;
-                //Корм
+                //РљРѕСЂРј
                 case "nudObjFoodVal":
                     curObject.Param1 = nudObjFoodVal.Value.ToString();
                     break;
                 case "nudObjFoodPoison":
                     curObject.Param2 = nudObjFoodPoison.Value.ToString();
                     break;
-                //Бабло
+                //Р‘Р°Р±Р»Рѕ
                 case "nudObjMoneyValue":
                     curObject.Param1 = nudObjMoneyValue.Value.ToString();
                     break;
-                //Фонтан
+                //Р¤РѕРЅС‚Р°РЅ
                 case "nudObjFontanMaxVal":
                     curObject.Param1 = nudObjFontanMaxVal.Value.ToString();
                     break;
@@ -620,13 +620,13 @@ namespace BZEditor
                     break;
                 case "nudFontPorionProtoVNum":
                     curObject.TrenSkill = Convert.ToInt32(nudFontPorionProtoVNum.Value);
-                    //Хранится вместо тренируемого скила
+                    //РҐСЂР°РЅРёС‚СЃСЏ РІРјРµСЃС‚Рѕ С‚СЂРµРЅРёСЂСѓРµРјРѕРіРѕ СЃРєРёР»Р°
                     break;
-                //Магическая книга
+                //РњР°РіРёС‡РµСЃРєР°СЏ РєРЅРёРіР°
                 case "cboxObjMagBookSpell":
                     curObject.Param1 = GetCBoxsSelectedValue(cboxObjMagBookSpell).ToString();
                     break;
-                //Магический ингредиент
+                //РњР°РіРёС‡РµСЃРєРёР№ РёРЅРіСЂРµРґРёРµРЅС‚
                 case "lvObjMagIngrFlags":
                     curObject.MagicFlags = "";
                     foreach (ListViewItem lvi in lvObjMagIngrFlags.CheckedItems)
@@ -644,7 +644,7 @@ namespace BZEditor
                 case "nudObjMagIngrUseRemain":
                     curObject.Param3 = nudObjMagIngrUseRemain.Value.ToString();
                     break;
-                //Бинт
+                //Р‘РёРЅС‚
                 case "nudObjBandageValue":
                     curObject.Param1 = nudObjBandageValue.Value.ToString();
                     break;
@@ -694,8 +694,8 @@ namespace BZEditor
             int val = Convert.ToInt32(e.Label);
             if (val > 200 || val < -200)
             {
-                MessageBox.Show("Значение бонуса к уровню владения умением должно быть в пределах от -200 до +200!",
-                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Р—РЅР°С‡РµРЅРёРµ Р±РѕРЅСѓСЃР° Рє СѓСЂРѕРІРЅСЋ РІР»Р°РґРµРЅРёСЏ СѓРјРµРЅРёРµРј РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РІ РїСЂРµРґРµР»Р°С… РѕС‚ -200 РґРѕ +200!",
+                    "РћС€РёР±РєР°", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.CancelEdit = true;
             }
             if (!IsInteger(e.Label)) return;
@@ -770,11 +770,11 @@ namespace BZEditor
         {
             switch (cboxObjType.SelectedIndex)
             {
-                case 0: //Источник света
+                case 0: //РСЃС‚РѕС‡РЅРёРє СЃРІРµС‚Р°
                     SetNumericParam(nudObjLighterValue, obj.Param1);
                     pObjLighter.Visible = true;
                     break;
-                case 1: //Магический свиток
+                case 1: //РњР°РіРёС‡РµСЃРєРёР№ СЃРІРёС‚РѕРє
                     SetNumericParam(nudObjMagScrollMinLev, obj.Param1);
                     SetCBoxsSelectedItem(cboxObjMagScrollSpell1, obj.Param2);
                     SetCBoxsSelectedItem(cboxObjMagScrollSpell2, obj.Param3);
@@ -783,7 +783,7 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;
                     break;
-                case 2: //Волшебная палочка
+                case 2: //Р’РѕР»С€РµР±РЅР°СЏ РїР°Р»РѕС‡РєР°
                     SetNumericParam(nudObjMagWandMinLev, obj.Param1);
                     SetNumericParam(nudObjMagWandZarCnt, obj.Param2);
                     SetNumericParam(nudObjMagWandZarCntCurr, obj.Param3);
@@ -792,7 +792,7 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;
                     break;
-                case 3: //Магический посох
+                case 3: //РњР°РіРёС‡РµСЃРєРёР№ РїРѕСЃРѕС…
                     SetNumericParam(nudObjMagStaffMinLev, obj.Param1);
                     SetNumericParam(nudObjMagStaffZarCnt, obj.Param2);
                     SetNumericParam(nudObjMagStaffZarCntCur, obj.Param3);
@@ -801,21 +801,21 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;
                     break;
-                case 4: //Оружие
+                case 4: //РћСЂСѓР¶РёРµ
                     SetNumericParam(nudObjWeaponD1, obj.Param2);
                     SetNumericParam(nudObjWeaponD2, obj.Param3);
-                    lObjAverageDam.Text = "Ср: " +
+                    lObjAverageDam.Text = "РЎСЂ: " +
                                                (((nudObjWeaponD1.Value * nudObjWeaponD2.Value) -
                                                  nudObjWeaponD1.Value) / 2 + nudObjWeaponD1.Value);
                     SetCBoxsSelectedItem(cboxObjWeaponSrikeType, obj.Param4);
                     pObjWeapon.Visible = true;
                     break;
-                case 8: //Броня
+                case 8: //Р‘СЂРѕРЅСЏ
                     SetNumericParam(nudObjArmorAC, obj.Param1);
                     SetNumericParam(nudObjArmorArm, obj.Param2);
                     pObjArmor.Visible = true;
                     break;
-                case 9: //Магический напиток
+                case 9: //РњР°РіРёС‡РµСЃРєРёР№ РЅР°РїРёС‚РѕРє
                     SetNumericParam(nudObjPotionMinLev, obj.Param1);
                     SetCBoxsSelectedItem(cboxObjPotionSpell1, obj.Param2);
                     SetCBoxsSelectedItem(cboxObjPotionSpell2, obj.Param3);
@@ -824,7 +824,7 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;
                     break;
-                case 14: //Контейнер
+                case 14: //РљРѕРЅС‚РµР№РЅРµСЂ
                     SetNumericParam(nudObjContainerValue, obj.Param1);
                     SetNumericParam(nudObjLockVal, obj.Param4);
                     SetNumericParam(nudObjContainerKeyVNum, obj.Param3);
@@ -847,38 +847,38 @@ namespace BZEditor
                         SetListViewItemChecked(lvObjContainerFlags, 8, false);
                     pObjContainer.Visible = true;
                     break;
-                case 16: //Контейнер для жидкостей
+                case 16: //РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ Р¶РёРґРєРѕСЃС‚РµР№
                     SetNumericParam(nudObjLiquidContainerMaxVal, obj.Param1);
                     SetNumericParam(nudObjLiquidContainerCurVal, obj.Param2);
                     SetCBoxsSelectedItem(cboxObjLiquidContainerDrinkType, obj.Param3);
                     SetNumericParam(nudObjLiquidContainerPoison, obj.Param4);
-                    //Хранится вместо тренируемого скила
-                    //cboxObjLiquidContainerDrink - vnum зелья, например некоторое зелье из какой-то зоны
+                    //РҐСЂР°РЅРёС‚СЃСЏ РІРјРµСЃС‚Рѕ С‚СЂРµРЅРёСЂСѓРµРјРѕРіРѕ СЃРєРёР»Р°
+                    //cboxObjLiquidContainerDrink - vnum Р·РµР»СЊСЏ, РЅР°РїСЂРёРјРµСЂ РЅРµРєРѕС‚РѕСЂРѕРµ Р·РµР»СЊРµ РёР· РєР°РєРѕР№-С‚Рѕ Р·РѕРЅС‹
                     nudPotionProtoVNum.Value = obj.TrenSkill;
                     cboxObjSkill.Enabled = false;
                     pObjLiquidContainer.Visible = true;
                     break;
-                case 18: //Корм
+                case 18: //РљРѕСЂРј
                     SetNumericParam(nudObjFoodVal, obj.Param1);
                     SetNumericParam(nudObjFoodPoison, obj.Param2);
                     pObjFood.Visible = true;
                     break;
-                case 19: //Бабло
+                case 19: //Р‘Р°Р±Р»Рѕ
                     SetNumericParam(nudObjMoneyValue, obj.Param1);
                     pObjMoney.Visible = true;
                     break;
-                case 22: //Фонтан
+                case 22: //Р¤РѕРЅС‚Р°РЅ
                     SetNumericParam(nudObjFontanMaxVal, obj.Param1);
                     SetNumericParam(nudObjFontanCurVal, obj.Param2);
                     SetCBoxsSelectedItem(cboxObjFontanDrinkType, obj.Param3);
                     SetNumericParam(nudObjFontanPoison, obj.Param4);
                     pObjFontan.Visible = true;
                     break;
-                case 23: //Магическая книга
+                case 23: //РњР°РіРёС‡РµСЃРєР°СЏ РєРЅРёРіР°
                     SetCBoxsSelectedItem(cboxObjMagBookSpell, obj.Param2);
                     pObjMagBook.Visible = true;
                     break;
-                case 24: //Магический ингредиент
+                case 24: //РњР°РіРёС‡РµСЃРєРёР№ РёРЅРіСЂРµРґРёРµРЅС‚
                     foreach (ListViewItem lvi in lvObjMagIngrFlags.Items)
                         lvi.Checked = obj.MagicFlags.ToLower().Contains(lvi.Tag.ToString().ToLower());
                     string param1 = obj.Param1;
@@ -896,9 +896,9 @@ namespace BZEditor
                     SetNumericParam(nudObjMagIngrUseRemain, param3);
                     pObjMagIngr.Visible = true;
                     break;
-                case 25: //Ингридиент для отвара
+                case 25: //РРЅРіСЂРёРґРёРµРЅС‚ РґР»СЏ РѕС‚РІР°СЂР°
                     break;
-                case 26: //Бинт
+                case 26: //Р‘РёРЅС‚
                     SetNumericParam(nudObjBandageValue, obj.Param1);
                     pObjBandage.Visible = true;
                     break;
@@ -909,11 +909,11 @@ namespace BZEditor
         {
             switch (cboxObjType.SelectedIndex)
             {
-                case 0: //Источник света
+                case 0: //РСЃС‚РѕС‡РЅРёРє СЃРІРµС‚Р°
                     /*SetNumericParam(nudObjLighterValue, Object.Param1);
                     pObjLighter.Visible = true;*/
                     break;
-                case 1: //Магический свиток
+                case 1: //РњР°РіРёС‡РµСЃРєРёР№ СЃРІРёС‚РѕРє
                     /*SetNumericParam(nudObjMagScrollMinLev, Object.Param1);
                     SetCBoxsSelectedItem(cboxObjMagScrollSpell1, Object.Param2);
                     SetCBoxsSelectedItem(cboxObjMagScrollSpell2, Object.Param3);
@@ -922,7 +922,7 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;*/
                     break;
-                case 2: //Волшебная палочка
+                case 2: //Р’РѕР»С€РµР±РЅР°СЏ РїР°Р»РѕС‡РєР°
                     /*SetNumericParam(nudObjMagWandMinLev, Object.Param1);
                     SetNumericParam(nudObjMagWandZarCnt, Object.Param2);
                     SetNumericParam(nudObjMagWandZarCntCurr, Object.Param3);
@@ -931,7 +931,7 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;*/
                     break;
-                case 3: //Магический посох
+                case 3: //РњР°РіРёС‡РµСЃРєРёР№ РїРѕСЃРѕС…
                     /*SetNumericParam(nudObjMagStaffMinLev, Object.Param1);
                     SetNumericParam(nudObjMagStaffZarCnt, Object.Param2);
                     SetNumericParam(nudObjMagStaffZarCntCur, Object.Param3);
@@ -940,19 +940,19 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;*/
                     break;
-                case 4: //Оружие
+                case 4: //РћСЂСѓР¶РёРµ
                     /*SetNumericParam(nudObjWeaponD1, Object.Param2);
                     SetNumericParam(nudObjWeaponD2, Object.Param3);
-                    lObjAverageDam.Text = "Ср: " + (((nudObjWeaponD1.Value * nudObjWeaponD2.Value) - nudObjWeaponD1.Value) / 2 + nudObjWeaponD1.Value).ToString();
+                    lObjAverageDam.Text = "РЎСЂ: " + (((nudObjWeaponD1.Value * nudObjWeaponD2.Value) - nudObjWeaponD1.Value) / 2 + nudObjWeaponD1.Value).ToString();
                     SetCBoxsSelectedItem(cboxObjWeaponSrikeType, Object.Param4);
                     pObjWeapon.Visible = true;*/
                     break;
-                case 8: //Броня
+                case 8: //Р‘СЂРѕРЅСЏ
                     /*SetNumericParam(nudObjArmorAC, Object.Param1);
                     SetNumericParam(nudObjArmorArm, Object.Param2);
                     pObjArmor.Visible = true;*/
                     break;
-                case 9: //Магический напиток
+                case 9: //РњР°РіРёС‡РµСЃРєРёР№ РЅР°РїРёС‚РѕРє
                     /*SetNumericParam(nudObjPotionMinLev, Object.Param1);
                     SetCBoxsSelectedItem(cboxObjPotionSpell1, Object.Param2);
                     SetCBoxsSelectedItem(cboxObjPotionSpell2, Object.Param3);
@@ -961,44 +961,44 @@ namespace BZEditor
                     tboxObjActionDesc.Visible = true;
                     label35.Visible = true;*/
                     break;
-                case 14: //Контейнер
+                case 14: //РљРѕРЅС‚РµР№РЅРµСЂ
                     obj.Param2 = "0";
                     obj.Param1 = "0";
                     obj.Param3 = "-1";
                     //int Param = Convert.ToInt32(Object.Param2);
                     break;
-                case 16: //Контейнер для жидкостей
+                case 16: //РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ Р¶РёРґРєРѕСЃС‚РµР№
                     /*SetNumericParam(nudObjLiquidContainerMaxVal, Object.Param1);
                     SetNumericParam(nudObjLiquidContainerCurVal, Object.Param2);
                     SetCBoxsSelectedItem(cboxObjLiquidContainerDrinkType, Object.Param3);
                     SetNumericParam(nudObjLiquidContainerPoison, Object.Param4);
-                    //Хранится вместо тренируемого скила
-                    //cboxObjLiquidContainerDrink - vnum зелья, например некоторое зелье из какой-то зоны
+                    //РҐСЂР°РЅРёС‚СЃСЏ РІРјРµСЃС‚Рѕ С‚СЂРµРЅРёСЂСѓРµРјРѕРіРѕ СЃРєРёР»Р°
+                    //cboxObjLiquidContainerDrink - vnum Р·РµР»СЊСЏ, РЅР°РїСЂРёРјРµСЂ РЅРµРєРѕС‚РѕСЂРѕРµ Р·РµР»СЊРµ РёР· РєР°РєРѕР№-С‚Рѕ Р·РѕРЅС‹
                     nudPotionProtoVNum.Value = Object.TrenSkill;
                     cboxObjSkill.Enabled = false;
                     pObjLiquidContainer.Visible = true;*/
                     break;
-                case 18: //Корм
+                case 18: //РљРѕСЂРј
                     /*SetNumericParam(nudObjFoodVal, Object.Param1);
                     SetNumericParam(nudObjFoodPoison, Object.Param2);
                     pObjFood.Visible = true;*/
                     break;
-                case 19: //Бабло
+                case 19: //Р‘Р°Р±Р»Рѕ
                     /*SetNumericParam(nudObjMoneyValue, Object.Param1);
                     pObjMoney.Visible = true;*/
                     break;
-                case 22: //Фонтан
+                case 22: //Р¤РѕРЅС‚Р°РЅ
                     /*SetNumericParam(nudObjFontanMaxVal, Object.Param1);
                     SetNumericParam(nudObjFontanCurVal, Object.Param2);
                     SetCBoxsSelectedItem(cboxObjFontanDrinkType, Object.Param3);
                     SetNumericParam(nudObjFontanPoison, Object.Param4);
                     pObjFontan.Visible = true;*/
                     break;
-                case 23: //Магическая книга
+                case 23: //РњР°РіРёС‡РµСЃРєР°СЏ РєРЅРёРіР°
                     /*SetCBoxsSelectedItem(cboxObjMagBookSpell, Object.Param2);
                     pObjMagBook.Visible = true;*/
                     break;
-                case 24: //Магический ингредиент
+                case 24: //РњР°РіРёС‡РµСЃРєРёР№ РёРЅРіСЂРµРґРёРµРЅС‚
                     /*foreach (ListViewItem lvi in lvObjMagIngrFlags.Items)
                     {
                         if (Object.MagicFlags.ToLower().Contains(lvi.Tag.ToString().ToLower()))
@@ -1057,7 +1057,7 @@ namespace BZEditor
             foreach (int vNum in obj.TriggersList)
             {
                 Trigger t = allTriggers.GetTrigger(vNum);
-                string triggerName = (t != null) ? t.Name : "Триггер из незагруженной зоны";
+                string triggerName = (t != null) ? t.Name : "РўСЂРёРіРіРµСЂ РёР· РЅРµР·Р°РіСЂСѓР¶РµРЅРЅРѕР№ Р·РѕРЅС‹";
                 //string TriggerName = AllTriggers.GetTrigger(VNum).Name;
                 ListViewItem lvi = new ListViewItem(new[] { vNum.ToString(), triggerName }) { Tag = vNum };
                 lvObjTriggers.Items.Add(lvi);
@@ -1105,15 +1105,15 @@ namespace BZEditor
                     lvAvailSkillBonuses.Sorting = SortOrder.Descending;
                     lvAvailSkillBonuses.Sorting = SortOrder.Ascending;
                     lvAvailSkillBonuses.Sorting = SortOrder.Descending;
-                    chObjAddSkillAvail.Text = "Доступные умения v";
+                    chObjAddSkillAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СѓРјРµРЅРёСЏ v";
                     break;
                 case SortOrder.Descending:
                     lvAvailSkillBonuses.Sorting = SortOrder.Ascending;
-                    chObjAddSkillAvail.Text = "Доступные умения ^";
+                    chObjAddSkillAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СѓРјРµРЅРёСЏ ^";
                     break;
                 case SortOrder.Ascending:
                     lvAvailSkillBonuses.Sorting = SortOrder.None;
-                    chObjAddSkillAvail.Text = "Доступные умения";
+                    chObjAddSkillAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СѓРјРµРЅРёСЏ";
                     lvAvailSkillBonuses.BeginUpdate();
                     lvAvailSkillBonuses.Items.Clear();
                     lvAvailSkillBonuses.Groups.Clear();
@@ -1239,7 +1239,7 @@ namespace BZEditor
                     nudObjPrice.Value = obj.Price;
                     nudObjWeight.Value = obj.Weight;
                     nudObjMaxInWorld.Value = obj.MaxInWorld;
-                    //Тут обработку для автовыбора единиц измерения
+                    //РўСѓС‚ РѕР±СЂР°Р±РѕС‚РєСѓ РґР»СЏ Р°РІС‚РѕРІС‹Р±РѕСЂР° РµРґРёРЅРёС† РёР·РјРµСЂРµРЅРёСЏ
                     if (obj.Timer > 1440)
                     {
                         cboxObjTimerUOM.SelectedIndex = 2;
@@ -1298,8 +1298,8 @@ namespace BZEditor
             lvDetails.BeginUpdate();
             ClearDetails();
             wldMap.HighlightedRooms.Clear();
-            lvDetails.Groups.Add(new ListViewGroup("Загружается в комнаты", HorizontalAlignment.Left));
-            lvDetails.Groups.Add(new ListViewGroup("Помещается в контейнеры в комнатах", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("Р—Р°РіСЂСѓР¶Р°РµС‚СЃСЏ РІ РєРѕРјРЅР°С‚С‹", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("РџРѕРјРµС‰Р°РµС‚СЃСЏ РІ РєРѕРЅС‚РµР№РЅРµСЂС‹ РІ РєРѕРјРЅР°С‚Р°С…", HorizontalAlignment.Left));
             foreach (Room r in ZoneDM.RoomsCollection)
             {
                 foreach (LoadedObj lo in r.LoadedObjectsCollection)
@@ -1317,7 +1317,7 @@ namespace BZEditor
                     foreach (LoadedObj lino in lo.ObjectsInObject)
                     {
                         if (lino.VNum != curObject.VNum) continue;
-                        lvDetails.Items.Add(new EXListViewItem("[" + r.VNum + "] " + r.Name + ", в контейнер [" + lo.VNum + "] <" +
+                        lvDetails.Items.Add(new EXListViewItem("[" + r.VNum + "] " + r.Name + ", РІ РєРѕРЅС‚РµР№РЅРµСЂ [" + lo.VNum + "] <" +
                                                lino.Probability + "%>")
                         {
                             Tag = r.VNum,
@@ -1329,7 +1329,7 @@ namespace BZEditor
                 }
             }
 
-            lvDetails.Groups.Add(new ListViewGroup("Помещается в мобов в комнатах", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("РџРѕРјРµС‰Р°РµС‚СЃСЏ РІ РјРѕР±РѕРІ РІ РєРѕРјРЅР°С‚Р°С…", HorizontalAlignment.Left));
             foreach (Room r in ZoneDM.RoomsCollection)
             {
                 foreach (LoadedMob lm in r.LoadedMobsCollection)
@@ -1338,7 +1338,7 @@ namespace BZEditor
                     {
                         if (mo.VNum != curObject.VNum) continue;
                         lvDetails.Items.Add(
-                            new EXListViewItem("[" + r.VNum + "] " + r.Name + ", в моба [" + lm.VNum + "] <" +
+                            new EXListViewItem("[" + r.VNum + "] " + r.Name + ", РІ РјРѕР±Р° [" + lm.VNum + "] <" +
                                                mo.Probability + "%>")
                             {
                                 TrgVNum = lm.VNum,
@@ -1353,7 +1353,7 @@ namespace BZEditor
             }
             wldMap.RedrawBitmap();
 
-            lvDetails.Groups.Add(new ListViewGroup("Удаляется из комнат", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("РЈРґР°Р»СЏРµС‚СЃСЏ РёР· РєРѕРјРЅР°С‚", HorizontalAlignment.Left));
             foreach (Room r in ZoneDM.RoomsCollection)
             {
                 foreach (LoadedObj ro in r.RemoovingObjects)
@@ -1368,7 +1368,7 @@ namespace BZEditor
                 }
             }
 
-            lvDetails.Groups.Add(new ListViewGroup("Триггеры", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("РўСЂРёРіРіРµСЂС‹", HorizontalAlignment.Left));
             foreach (int vnum in curObject.TriggersList)
             {
                 Trigger t = ZoneDM.TriggersCollection[vnum, 0];

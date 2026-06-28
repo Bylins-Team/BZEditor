@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class MobStats : BaseDataObject
     {
@@ -13,7 +13,7 @@ namespace DataUtils
         private int wis = 11;
 
         /// <summary>
-        /// Сила
+        /// РЎРёР»Р°
         /// </summary>
         public int Str
         {
@@ -27,7 +27,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Интеллект
+        /// РРЅС‚РµР»Р»РµРєС‚
         /// </summary>
         public int Int
         {
@@ -41,7 +41,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Мудрость
+        /// РњСѓРґСЂРѕСЃС‚СЊ
         /// </summary>
         public int Wis
         {
@@ -55,7 +55,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Ловкость
+        /// Р›РѕРІРєРѕСЃС‚СЊ
         /// </summary>
         public int Dex
         {
@@ -69,7 +69,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тело
+        /// РўРµР»Рѕ
         /// </summary>
         public int Con
         {
@@ -83,7 +83,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Обаяние
+        /// РћР±Р°СЏРЅРёРµ
         /// </summary>
         public int Cha
         {
@@ -97,7 +97,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Размер
+        /// Р Р°Р·РјРµСЂ
         /// </summary>
         public int Size
         {
@@ -111,7 +111,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Рост
+        /// Р РѕСЃС‚
         /// </summary>
         public int Height
         {
@@ -125,7 +125,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Вес
+        /// Р’РµСЃ
         /// </summary>
         public int Weight
         {

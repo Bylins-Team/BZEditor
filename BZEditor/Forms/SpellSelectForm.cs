@@ -1,4 +1,4 @@
-namespace BZEditor
+﻿namespace BZEditor
 {
     using System;
     using System.Data;

@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class CreateZoneForm
     {
@@ -46,7 +46,7 @@ namespace BZEditor
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 0;
-            this.btnCreate.Text = "Создать";
+            this.btnCreate.Text = "РЎРѕР·РґР°С‚СЊ";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
@@ -58,7 +58,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 0;
-            this.btnCancel.Text = "Отмена";
+            this.btnCancel.Text = "РћС‚РјРµРЅР°";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -69,7 +69,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Номер создаваемой зоны";
+            this.label1.Text = "РќРѕРјРµСЂ СЃРѕР·РґР°РІР°РµРјРѕР№ Р·РѕРЅС‹";
             // 
             // nbCount
             // 
@@ -99,7 +99,7 @@ namespace BZEditor
             this.flcAlert.Name = "flcAlert";
             this.flcAlert.Size = new System.Drawing.Size(244, 36);
             this.flcAlert.TabIndex = 7;
-            this.flcAlert.Text = "Перед созданием зоны свяжитесь со Стрибогом и получите номер зоны";
+            this.flcAlert.Text = "РџРµСЂРµРґ СЃРѕР·РґР°РЅРёРµРј Р·РѕРЅС‹ СЃРІСЏР¶РёС‚РµСЃСЊ СЃРѕ РЎС‚СЂРёР±РѕРіРѕРј Рё РїРѕР»СѓС‡РёС‚Рµ РЅРѕРјРµСЂ Р·РѕРЅС‹";
             this.flcAlert.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.flcAlert_LinkClicked);
             // 
             // cbOpenCreatedZone
@@ -111,7 +111,7 @@ namespace BZEditor
             this.cbOpenCreatedZone.Name = "cbOpenCreatedZone";
             this.cbOpenCreatedZone.Size = new System.Drawing.Size(261, 17);
             this.cbOpenCreatedZone.TabIndex = 8;
-            this.cbOpenCreatedZone.Text = "Открыть созданную зону для редактирования";
+            this.cbOpenCreatedZone.Text = "РћС‚РєСЂС‹С‚СЊ СЃРѕР·РґР°РЅРЅСѓСЋ Р·РѕРЅСѓ РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ";
             this.cbOpenCreatedZone.UseVisualStyleBackColor = true;
             // 
             // CreateZoneForm
@@ -134,7 +134,7 @@ namespace BZEditor
             this.Name = "CreateZoneForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Добавление зоны";
+            this.Text = "Р”РѕР±Р°РІР»РµРЅРёРµ Р·РѕРЅС‹";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

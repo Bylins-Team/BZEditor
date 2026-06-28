@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
@@ -19,7 +19,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Возвращает ссылку
+        /// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСЃС‹Р»РєСѓ
         /// </summary>
         public Obj this[int vNum, int tmp] => GetObject(vNum);
 
@@ -34,13 +34,13 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Создает заданное количество новых предметов
+        /// РЎРѕР·РґР°РµС‚ Р·Р°РґР°РЅРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЅРѕРІС‹С… РїСЂРµРґРјРµС‚РѕРІ
         /// </summary>
-        /// <param name="count">Требуемое количество предметов</param>
+        /// <param name="count">РўСЂРµР±СѓРµРјРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґРјРµС‚РѕРІ</param>
         /// <param name="zoneNum"></param>
         /// <param name="templatesDm"></param>
         /// <param name="guid"></param>
-        /// <returns>Количество созданных предметов</returns>
+        /// <returns>РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕР·РґР°РЅРЅС‹С… РїСЂРµРґРјРµС‚РѕРІ</returns>
         public int AddObjects(int count, int zoneNum, TemplatesDataManager templatesDm, Guid guid)
         {
             int firstId = -1;
@@ -50,7 +50,7 @@ namespace DataUtils
                 if (vnum < 0) break;
                 if (firstId == -1)
                     firstId = vnum;
-                var obj = new Obj(vnum) { Cases = { Imen = "Новый объект " + vnum } };
+                var obj = new Obj(vnum) { Cases = { Imen = "РќРѕРІС‹Р№ РѕР±СЉРµРєС‚ " + vnum } };
                 if (guid != Guid.Empty)
                     templatesDm.ApplyTemplate(ref obj, guid);
                 Add(obj);

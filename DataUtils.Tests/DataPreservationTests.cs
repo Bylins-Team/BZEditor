@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using DataUtils;
 using DataUtils.YamlMappers;
 using NUnit.Framework;

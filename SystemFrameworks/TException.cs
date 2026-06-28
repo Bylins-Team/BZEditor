@@ -1,14 +1,14 @@
-using System;
+п»їusing System;
 using System.Diagnostics;
 
 namespace SystemFrameworks
 {
 	/// <summary>
-	/// Ошибка Есиап.
+	/// РћС€РёР±РєР° Р•СЃРёР°Рї.
 	/// </summary>
 	public class TEsiapException : System.ApplicationException
 	{
-		// Тип ошибки есиап.(Если заданн тип Error, тогда сообщение об ошибке будет записанно в БД.)
+		// РўРёРї РѕС€РёР±РєРё РµСЃРёР°Рї.(Р•СЃР»Рё Р·Р°РґР°РЅРЅ С‚РёРї Error, С‚РѕРіРґР° СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРµ Р±СѓРґРµС‚ Р·Р°РїРёСЃР°РЅРЅРѕ РІ Р‘Р”.)
 		private EventLogEntryType ErrorType;
 		private Exception initException;
 
@@ -34,16 +34,16 @@ namespace SystemFrameworks
 		}
 
 		/// <summary>
-		/// Возвращает тип исключительной ситуации
+		/// Р’РѕР·РІСЂР°С‰Р°РµС‚ С‚РёРї РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅРѕР№ СЃРёС‚СѓР°С†РёРё
 		/// </summary>
-		/// <returns>тип исключительной ситуации</returns>
+		/// <returns>С‚РёРї РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅРѕР№ СЃРёС‚СѓР°С†РёРё</returns>
 		public EventLogEntryType GetErrorType()
 		{
 			return ErrorType;
 		}
 
 		/// <summary>
-		/// Указывает является ли данное исключение оберткой для системного исключения
+		/// РЈРєР°Р·С‹РІР°РµС‚ СЏРІР»СЏРµС‚СЃСЏ Р»Рё РґР°РЅРЅРѕРµ РёСЃРєР»СЋС‡РµРЅРёРµ РѕР±РµСЂС‚РєРѕР№ РґР»СЏ СЃРёСЃС‚РµРјРЅРѕРіРѕ РёСЃРєР»СЋС‡РµРЅРёСЏ
 		/// </summary>
 		public bool isWrapped
 		{
@@ -54,12 +54,12 @@ namespace SystemFrameworks
 			}
 		}
 		/// <summary>
-		/// Возвращает информацию первоначального исключения
+		/// Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РїРµСЂРІРѕРЅР°С‡Р°Р»СЊРЅРѕРіРѕ РёСЃРєР»СЋС‡РµРЅРёСЏ
 		/// </summary>
 		/// <returns></returns>
 		public string GetWrappInfo()
 		{
-			return " Вложенная ошибка\n\n Message="+initException.Message+" Stack = "+initException.StackTrace+" Source = "+initException.Source;
+			return " Р’Р»РѕР¶РµРЅРЅР°СЏ РѕС€РёР±РєР°\n\n Message="+initException.Message+" Stack = "+initException.StackTrace+" Source = "+initException.Source;
 		}
 	}
 }

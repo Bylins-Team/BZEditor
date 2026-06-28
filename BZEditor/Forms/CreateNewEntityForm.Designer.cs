@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class CreateNewEntityForm
     {
@@ -44,7 +44,7 @@ namespace BZEditor
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 0;
-            this.btnCreate.Text = "Создать";
+            this.btnCreate.Text = "РЎРѕР·РґР°С‚СЊ";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.BtnCreateClick);
             // 
@@ -56,7 +56,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Отмена";
+            this.btnCancel.Text = "РћС‚РјРµРЅР°";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
             // 
@@ -67,7 +67,7 @@ namespace BZEditor
             this.cbUseTemplate.Name = "cbUseTemplate";
             this.cbUseTemplate.Size = new System.Drawing.Size(111, 17);
             this.cbUseTemplate.TabIndex = 5;
-            this.cbUseTemplate.Text = "Выбрать шаблон";
+            this.cbUseTemplate.Text = "Р’С‹Р±СЂР°С‚СЊ С€Р°Р±Р»РѕРЅ";
             this.cbUseTemplate.UseVisualStyleBackColor = true;
             this.cbUseTemplate.CheckedChanged += new System.EventHandler(this.CbUseTemplateCheckedChanged);
             // 
@@ -89,7 +89,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Количество создаваемых объектов от 1 до 98";
+            this.label1.Text = "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕР·РґР°РІР°РµРјС‹С… РѕР±СЉРµРєС‚РѕРІ РѕС‚ 1 РґРѕ 98";
             // 
             // nbCount
             // 
@@ -121,7 +121,7 @@ namespace BZEditor
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Добавление мобов";
+            this.Text = "Р”РѕР±Р°РІР»РµРЅРёРµ РјРѕР±РѕРІ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

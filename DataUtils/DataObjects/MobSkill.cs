@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     public class MobSkill : BaseDataObject
     {
@@ -11,7 +11,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Процент владения скиллом
+        /// РџСЂРѕС†РµРЅС‚ РІР»Р°РґРµРЅРёСЏ СЃРєРёР»Р»РѕРј
         /// </summary>
         public int Percent
         {

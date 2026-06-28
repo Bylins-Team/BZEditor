@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class CtreateTemplateForm
     {
@@ -42,7 +42,7 @@ namespace BZEditor
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 0;
-            this.btnCreate.Text = "Создать";
+            this.btnCreate.Text = "РЎРѕР·РґР°С‚СЊ";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
@@ -54,7 +54,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Отмена";
+            this.btnCancel.Text = "РћС‚РјРµРЅР°";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -74,7 +74,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(290, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Наименование шаблона (будет отображаться в списке)";
+            this.label1.Text = "РќР°РёРјРµРЅРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° (Р±СѓРґРµС‚ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ РІ СЃРїРёСЃРєРµ)";
             // 
             // CtreateTemplateForm
             // 
@@ -94,7 +94,7 @@ namespace BZEditor
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Добавление шаблона";
+            this.Text = "Р”РѕР±Р°РІР»РµРЅРёРµ С€Р°Р±Р»РѕРЅР°";
             this.ResumeLayout(false);
             this.PerformLayout();
 

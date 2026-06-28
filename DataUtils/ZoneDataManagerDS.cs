@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Data;
 using System.IO;
 using System.Text;
@@ -9,9 +9,9 @@ namespace DataUtils
 	public class ZoneDataManagerDS				
 	{
 		public DataSet DS;
-		private int number;//Номер зоны
-		private string name;//Название зоны
-		private int lastRoomNum;//Номер последнец комнаты < 98 принудительно
+		private int number;//РќРѕРјРµСЂ Р·РѕРЅС‹
+		private string name;//РќР°Р·РІР°РЅРёРµ Р·РѕРЅС‹
+		private int lastRoomNum;//РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµС† РєРѕРјРЅР°С‚С‹ < 98 РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ
 		private int repopType;
 		private int repopTimer;
 		private string Path;
@@ -69,7 +69,7 @@ namespace DataUtils
 			}
 			set
 			{
-				//Тут нужна хитрая обработка (логика смены номера зоны, исправление всех номеров)
+				//РўСѓС‚ РЅСѓР¶РЅР° С…РёС‚СЂР°СЏ РѕР±СЂР°Р±РѕС‚РєР° (Р»РѕРіРёРєР° СЃРјРµРЅС‹ РЅРѕРјРµСЂР° Р·РѕРЅС‹, РёСЃРїСЂР°РІР»РµРЅРёРµ РІСЃРµС… РЅРѕРјРµСЂРѕРІ)
                 throw new NotImplementedException();
 				//this.number = value;
 			}
@@ -414,7 +414,7 @@ namespace DataUtils
 						this.repopTimer = Convert.ToInt32(gcoll["Patram2"].ToString());
 						this.repopType = Convert.ToInt32(gcoll["Patram3"].ToString());
 					}
-					//Мобы, удаляемые при перезапуске
+					//РњРѕР±С‹, СѓРґР°Р»СЏРµРјС‹Рµ РїСЂРё РїРµСЂРµР·Р°РїСѓСЃРєРµ
 					m = tq.Match(input);
 					if (m.Success)
 					{
@@ -424,7 +424,7 @@ namespace DataUtils
                         drq["mob_vnum"] = gcoll["mob_vnum"].ToString();
                         RemovingMobsData.Rows.Add(drq);
 					}
-					//Мобы, заргужаемые в комнаты
+					//РњРѕР±С‹, Р·Р°СЂРіСѓР¶Р°РµРјС‹Рµ РІ РєРѕРјРЅР°С‚С‹
 					m = tm.Match(input);
 					if (m.Success)
 					{
@@ -439,7 +439,7 @@ namespace DataUtils
 						drm["name"] = gcoll["name"].ToString();
 						LoadingMobsData.Rows.Add(drm);
 					}
-					//Объекты, заргужаемые в комнаты
+					//РћР±СЉРµРєС‚С‹, Р·Р°СЂРіСѓР¶Р°РµРјС‹Рµ РІ РєРѕРјРЅР°С‚С‹
 					m = to.Match(input);
 					if (m.Success)
 					{
@@ -453,7 +453,7 @@ namespace DataUtils
 						dro["name"] = gcoll["name"].ToString();
 						LoadingObjectsData.Rows.Add(dro);
 					}
-					//Мобы следуют в группе
+					//РњРѕР±С‹ СЃР»РµРґСѓСЋС‚ РІ РіСЂСѓРїРїРµ
 					m = tf.Match(input);
 					if (m.Success)
 					{
@@ -467,7 +467,7 @@ namespace DataUtils
 						drf["name"] = gcoll["name"].ToString();
 						MobsFollowingData.Rows.Add(drf);
 					}
-					//Поместить предмет в предмет
+					//РџРѕРјРµСЃС‚РёС‚СЊ РїСЂРµРґРјРµС‚ РІ РїСЂРµРґРјРµС‚
 					m = tp.Match(input);
 					if (m.Success)
 					{
@@ -481,7 +481,7 @@ namespace DataUtils
 						drf["name"] = gcoll["name"].ToString();
 						PlaceObjInObjData.Rows.Add(drf);
 					}
-					//Дать предмет мобу (который загружен предыдущей командой)
+					//Р”Р°С‚СЊ РїСЂРµРґРјРµС‚ РјРѕР±Сѓ (РєРѕС‚РѕСЂС‹Р№ Р·Р°РіСЂСѓР¶РµРЅ РїСЂРµРґС‹РґСѓС‰РµР№ РєРѕРјР°РЅРґРѕР№)
 					m = tg.Match(input);
 					if (m.Success)
 					{
@@ -496,7 +496,7 @@ namespace DataUtils
 						drf["name"] = gcoll["name"].ToString();
 						PutObjToMobInvData.Rows.Add(drf);
 					}
-					//Экипировать предмет мобу (который загружен предыдущей командой)
+					//Р­РєРёРїРёСЂРѕРІР°С‚СЊ РїСЂРµРґРјРµС‚ РјРѕР±Сѓ (РєРѕС‚РѕСЂС‹Р№ Р·Р°РіСЂСѓР¶РµРЅ РїСЂРµРґС‹РґСѓС‰РµР№ РєРѕРјР°РЅРґРѕР№)
 					m = te.Match(input);
 					if (m.Success)
 					{
@@ -510,7 +510,7 @@ namespace DataUtils
 						drf["name"] = gcoll["name"].ToString();
 						EquipMobByObjData.Rows.Add(drf);
 					}
-					//Удалить предмет из комнаты
+					//РЈРґР°Р»РёС‚СЊ РїСЂРµРґРјРµС‚ РёР· РєРѕРјРЅР°С‚С‹
 					m = tr.Match(input);
 					if (m.Success)
 					{
@@ -524,7 +524,7 @@ namespace DataUtils
 						drf["name"] = gcoll["name"].ToString();
 						RemoveObjFromRoomData.Rows.Add(drf);
 					}
-					//Установить состояние существующего выхода
+					//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРѕСЃС‚РѕСЏРЅРёРµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ РІС‹С…РѕРґР°
 					m = td.Match(input);
 					if (m.Success)
 					{
@@ -571,7 +571,7 @@ namespace DataUtils
 					Match m2 = tparam.Match(input);
 					if (m.Success)
 					{
-						//Запись предыдущего триггера trignumber если таковой был прочитан
+						//Р—Р°РїРёСЃСЊ РїСЂРµРґС‹РґСѓС‰РµРіРѕ С‚СЂРёРіРіРµСЂР° trignumber РµСЃР»Рё С‚Р°РєРѕРІРѕР№ Р±С‹Р» РїСЂРѕС‡РёС‚Р°РЅ
 						if (CurTrigNum != -1)
 						{
 							DataRow dr = TriggersData.NewRow();
@@ -585,22 +585,22 @@ namespace DataUtils
 							TriggersData.Rows.Add(dr);
 						}
 
-						//Сброс позиции в читаемом триггере
+						//РЎР±СЂРѕСЃ РїРѕР·РёС†РёРё РІ С‡РёС‚Р°РµРјРѕРј С‚СЂРёРіРіРµСЂРµ
 						TrigPos = 0;							
 						CurTrigNum = Convert.ToInt32(m.Groups["Num"].ToString());
 						TrigBody = "";
 					}
-						//распознавание всех строк завершающихся ~ с учетом позиции в триггере
+						//СЂР°СЃРїРѕР·РЅР°РІР°РЅРёРµ РІСЃРµС… СЃС‚СЂРѕРє Р·Р°РІРµСЂС€Р°СЋС‰РёС…СЃСЏ ~ СЃ СѓС‡РµС‚РѕРј РїРѕР·РёС†РёРё РІ С‚СЂРёРіРіРµСЂРµ
 					else if (m1.Success)
 					{						
 						string text = m1.Groups["Name"].ToString();
-						if (TrigPos == 0)//Название триггера					
+						if (TrigPos == 0)//РќР°Р·РІР°РЅРёРµ С‚СЂРёРіРіРµСЂР°					
 						{
 							TrigPos = 1;
 							TrigName = text;
 
 						}
-						else if (TrigPos == 2)//аргумент
+						else if (TrigPos == 2)//Р°СЂРіСѓРјРµРЅС‚
 						{
 							TrigPos = 3;
 							TrigArg = text;
@@ -614,7 +614,7 @@ namespace DataUtils
 						TrigType = gcoll["trig_type"].ToString();
 						TrigNumArg = Convert.ToInt32(gcoll["num_arg"].ToString());
 					}
-					else //Тело триггера
+					else //РўРµР»Рѕ С‚СЂРёРіРіРµСЂР°
 					{
 						TrigPos++;
 						if (input != "~")
@@ -662,12 +662,12 @@ namespace DataUtils
                 string OpeningTime2 = "";
                 string CloingTime2 = "";
 
-				while (input.IndexOf("#") == -1)//Смещаемся на начало описания магазина
+				while (input.IndexOf("#") == -1)//РЎРјРµС‰Р°РµРјСЃСЏ РЅР° РЅР°С‡Р°Р»Рѕ РѕРїРёСЃР°РЅРёСЏ РјР°РіР°Р·РёРЅР°
 				{
 					input=sr.ReadLine();
-					if (input == null) break; //если конец файла, то прекращаем искать начало след.шопа
+					if (input == null) break; //РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, С‚Рѕ РїСЂРµРєСЂР°С‰Р°РµРј РёСЃРєР°С‚СЊ РЅР°С‡Р°Р»Рѕ СЃР»РµРґ.С€РѕРїР°
 				}
-				if (input == null) break;//если конец файла, прекращаем обработку файла
+				if (input == null) break;//РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, РїСЂРµРєСЂР°С‰Р°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ С„Р°Р№Р»Р°
 				
 				Match mold = tnumold.Match(input);
 				if (mold.Success)
@@ -681,7 +681,7 @@ namespace DataUtils
 					CurShpNum = Convert.ToInt32(m.Groups["Num"].ToString());
 				}
 				input=sr.ReadLine();
-				while (input != "-1") //Читаем список товаров, которые постоянно есть в магазине	(до -1)
+				while (input != "-1") //Р§РёС‚Р°РµРј СЃРїРёСЃРѕРє С‚РѕРІР°СЂРѕРІ, РєРѕС‚РѕСЂС‹Рµ РїРѕСЃС‚РѕСЏРЅРЅРѕ РµСЃС‚СЊ РІ РјР°РіР°Р·РёРЅРµ	(РґРѕ -1)
 				{
 					DataRow dr = PermanentlySellingData.NewRow();
 					dr["shop_vnum"] = CurShpNum;
@@ -690,28 +690,28 @@ namespace DataUtils
 					input=sr.ReadLine();
 				}
 				input=sr.ReadLine();
-				SellCoeff = Convert.ToDouble(input.Replace(".",",")); //число - коэффициент стоимости при продаже
+				SellCoeff = Convert.ToDouble(input.Replace(".",",")); //С‡РёСЃР»Рѕ - РєРѕСЌС„С„РёС†РёРµРЅС‚ СЃС‚РѕРёРјРѕСЃС‚Рё РїСЂРё РїСЂРѕРґР°Р¶Рµ
 				input=sr.ReadLine();
-				BuyCoeff = Convert.ToDouble(input.Replace(".",",")); //число - коэффициент стоимости при покупке
+				BuyCoeff = Convert.ToDouble(input.Replace(".",",")); //С‡РёСЃР»Рѕ - РєРѕСЌС„С„РёС†РёРµРЅС‚ СЃС‚РѕРёРјРѕСЃС‚Рё РїСЂРё РїРѕРєСѓРїРєРµ
 				if (NewFormat)
 				{
 					input=sr.ReadLine();
-					ChangeCoeff = Convert.ToDouble(input.Replace(".",",")); //число - коэффициент стоимости при обмене
+					ChangeCoeff = Convert.ToDouble(input.Replace(".",",")); //С‡РёСЃР»Рѕ - РєРѕСЌС„С„РёС†РёРµРЅС‚ СЃС‚РѕРёРјРѕСЃС‚Рё РїСЂРё РѕР±РјРµРЅРµ
 				}
 				input=sr.ReadLine();
-				while (input != "-1") //тип предмета для покупки или строка.покупаются предметы, 
-					//имеющие это слово(а) в имени или флагах предмета. (до -1)
+				while (input != "-1") //С‚РёРї РїСЂРµРґРјРµС‚Р° РґР»СЏ РїРѕРєСѓРїРєРё РёР»Рё СЃС‚СЂРѕРєР°.РїРѕРєСѓРїР°СЋС‚СЃСЏ РїСЂРµРґРјРµС‚С‹, 
+					//РёРјРµСЋС‰РёРµ СЌС‚Рѕ СЃР»РѕРІРѕ(Р°) РІ РёРјРµРЅРё РёР»Рё С„Р»Р°РіР°С… РїСЂРµРґРјРµС‚Р°. (РґРѕ -1)
 				{
 					DataRow dr = BuyingObjectsData.NewRow();
 					dr["shop_vnum"] = CurShpNum;
-					dr["obj_vnum"] = input.Replace("~",""); //Чистить строку от ~ если пришла строка
+					dr["obj_vnum"] = input.Replace("~",""); //Р§РёСЃС‚РёС‚СЊ СЃС‚СЂРѕРєСѓ РѕС‚ ~ РµСЃР»Рё РїСЂРёС€Р»Р° СЃС‚СЂРѕРєР°
 					BuyingObjectsData.Rows.Add(dr);
 					input=sr.ReadLine();
 				}
 				if (NewFormat)
 				{
 					input=sr.ReadLine();
-					while (input != "-1") //тип предмета для обмена (аналогично) (до -1)
+					while (input != "-1") //С‚РёРї РїСЂРµРґРјРµС‚Р° РґР»СЏ РѕР±РјРµРЅР° (Р°РЅР°Р»РѕРіРёС‡РЅРѕ) (РґРѕ -1)
 					{
 						DataRow dr = ChangingObjectsData.NewRow();
 						dr["shop_vnum"] = CurShpNum;
@@ -721,13 +721,13 @@ namespace DataUtils
 					}
 				}
 
-				Msg1 = sr.ReadLine().Replace("~",""); //Этого нет в списке товаров!
-				Msg2 = sr.ReadLine().Replace("~",""); //Таким барахлом я не торгую!
-				Msg3 = sr.ReadLine().Replace("~",""); //Таким барахлом я не торгую!
-				Msg4 = sr.ReadLine().Replace("~",""); //Извините, но сейчас у меня нет денег!
-				Msg5 = sr.ReadLine().Replace("~",""); //У вас нет столько денег!
-				Msg6 = sr.ReadLine().Replace("~",""); //За это с тебя будет %d.
-				Msg7 = sr.ReadLine().Replace("~",""); //За это я дам не больше %d!
+				Msg1 = sr.ReadLine().Replace("~",""); //Р­С‚РѕРіРѕ РЅРµС‚ РІ СЃРїРёСЃРєРµ С‚РѕРІР°СЂРѕРІ!
+				Msg2 = sr.ReadLine().Replace("~",""); //РўР°РєРёРј Р±Р°СЂР°С…Р»РѕРј СЏ РЅРµ С‚РѕСЂРіСѓСЋ!
+				Msg3 = sr.ReadLine().Replace("~",""); //РўР°РєРёРј Р±Р°СЂР°С…Р»РѕРј СЏ РЅРµ С‚РѕСЂРіСѓСЋ!
+				Msg4 = sr.ReadLine().Replace("~",""); //РР·РІРёРЅРёС‚Рµ, РЅРѕ СЃРµР№С‡Р°СЃ Сѓ РјРµРЅСЏ РЅРµС‚ РґРµРЅРµРі!
+				Msg5 = sr.ReadLine().Replace("~",""); //РЈ РІР°СЃ РЅРµС‚ СЃС‚РѕР»СЊРєРѕ РґРµРЅРµРі!
+				Msg6 = sr.ReadLine().Replace("~",""); //Р—Р° СЌС‚Рѕ СЃ С‚РµР±СЏ Р±СѓРґРµС‚ %d.
+				Msg7 = sr.ReadLine().Replace("~",""); //Р—Р° СЌС‚Рѕ СЏ РґР°Рј РЅРµ Р±РѕР»СЊС€Рµ %d!
 
 				input=sr.ReadLine();
 				Emotion = Convert.ToInt32(input);
@@ -740,17 +740,17 @@ namespace DataUtils
 				else Bitvector = input; 
 				
 				input=sr.ReadLine();
-				ShopkeeperVNum = Convert.ToInt32(input); //число  - номер продавца
+				ShopkeeperVNum = Convert.ToInt32(input); //С‡РёСЃР»Рѕ  - РЅРѕРјРµСЂ РїСЂРѕРґР°РІС†Р°
 				
 				input=sr.ReadLine(); 
 				if (input == "0") 
 				{
 					NotTradeWithBitvector = "";
 				}
-				else NotTradeWithBitvector = input; //строка - битвектор профессий с которыми НЕ ТОРГУЕТ
+				else NotTradeWithBitvector = input; //СЃС‚СЂРѕРєР° - Р±РёС‚РІРµРєС‚РѕСЂ РїСЂРѕС„РµСЃСЃРёР№ СЃ РєРѕС‚РѕСЂС‹РјРё РќР• РўРћР Р“РЈР•Рў
 
 				input=sr.ReadLine();
-				while (input != "-1") //виртуальные номера комнат магазина(до -1)
+				while (input != "-1") //РІРёСЂС‚СѓР°Р»СЊРЅС‹Рµ РЅРѕРјРµСЂР° РєРѕРјРЅР°С‚ РјР°РіР°Р·РёРЅР°(РґРѕ -1)
 				{
 					DataRow dr = ShopRoomsData.NewRow();
 					dr["shop_vnum"] = CurShpNum;
@@ -759,12 +759,12 @@ namespace DataUtils
 					input=sr.ReadLine();
 				}
 
-				OpeningTime1 = sr.ReadLine(); //число - время открытия 1
-				CloingTime1 = sr.ReadLine(); //число - время закрытия 1
-				OpeningTime2 = sr.ReadLine(); //число - время открытия 2
-				CloingTime2 = sr.ReadLine(); //число - время закрытия 2	
+				OpeningTime1 = sr.ReadLine(); //С‡РёСЃР»Рѕ - РІСЂРµРјСЏ РѕС‚РєСЂС‹С‚РёСЏ 1
+				CloingTime1 = sr.ReadLine(); //С‡РёСЃР»Рѕ - РІСЂРµРјСЏ Р·Р°РєСЂС‹С‚РёСЏ 1
+				OpeningTime2 = sr.ReadLine(); //С‡РёСЃР»Рѕ - РІСЂРµРјСЏ РѕС‚РєСЂС‹С‚РёСЏ 2
+				CloingTime2 = sr.ReadLine(); //С‡РёСЃР»Рѕ - РІСЂРµРјСЏ Р·Р°РєСЂС‹С‚РёСЏ 2	
 
-                if (CurShpNum != -1)//Запись предыдущего магазина если таковой был прочитан
+                if (CurShpNum != -1)//Р—Р°РїРёСЃСЊ РїСЂРµРґС‹РґСѓС‰РµРіРѕ РјР°РіР°Р·РёРЅР° РµСЃР»Рё С‚Р°РєРѕРІРѕР№ Р±С‹Р» РїСЂРѕС‡РёС‚Р°РЅ
                 {
                     DataRow dr = ShopsData.NewRow();
                     dr["vnum"] = CurShpNum;
@@ -830,9 +830,9 @@ namespace DataUtils
                 string Discomfort = "";
                 string Bans = "";
 
-                string Kind = "";	//Тип предмета				
-                string Flags = ""; //экстрафлаги
-                string WearFlags = ""; //флаги, куда можно одеть
+                string Kind = "";	//РўРёРї РїСЂРµРґРјРµС‚Р°				
+                string Flags = ""; //СЌРєСЃС‚СЂР°С„Р»Р°РіРё
+                string WearFlags = ""; //С„Р»Р°РіРё, РєСѓРґР° РјРѕР¶РЅРѕ РѕРґРµС‚СЊ
 
                 string Param1 = "";
                 string Param2 = "";
@@ -844,28 +844,28 @@ namespace DataUtils
                 string RentInv = "";
                 string RentWear = "";
 
-				while (input.IndexOf("#") == -1)//Смещаемся на начало описания объекта
+				while (input.IndexOf("#") == -1)//РЎРјРµС‰Р°РµРјСЃСЏ РЅР° РЅР°С‡Р°Р»Рѕ РѕРїРёСЃР°РЅРёСЏ РѕР±СЉРµРєС‚Р°
 				{
 					input=sr.ReadLine();
-					if (input == null) break; //если конец файла, то прекращаем искать начало след.объекта
+					if (input == null) break; //РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, С‚Рѕ РїСЂРµРєСЂР°С‰Р°РµРј РёСЃРєР°С‚СЊ РЅР°С‡Р°Р»Рѕ СЃР»РµРґ.РѕР±СЉРµРєС‚Р°
 				}
-				if (input == null) break;//если конец файла, прекращаем обработку файла
+				if (input == null) break;//РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, РїСЂРµРєСЂР°С‰Р°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ С„Р°Р№Р»Р°
 
 				Match m = tnum.Match(input);
-				if (m.Success)//строка - виртуальный номер предмета = Номер зоны * 100 + номер предмета в зоне - начинается с #
+				if (m.Success)//СЃС‚СЂРѕРєР° - РІРёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ РїСЂРµРґРјРµС‚Р° = РќРѕРјРµСЂ Р·РѕРЅС‹ * 100 + РЅРѕРјРµСЂ РїСЂРµРґРјРµС‚Р° РІ Р·РѕРЅРµ - РЅР°С‡РёРЅР°РµС‚СЃСЏ СЃ #
 				{							
 					CurObjNum = Convert.ToInt32(m.Groups["Num"].ToString());
 				}
 
-				Alias = sr.ReadLine().Replace("~","");//синонимы предмета - на какие названия он будет откликаться - заканчивается ~
-				Imen = sr.ReadLine().Replace("~","");//имя предмета в именительном падеже - заканчивается ~
-				Rod = sr.ReadLine().Replace("~","");//имя предмета в родительном падеже - заканчивается ~
-				Dat = sr.ReadLine().Replace("~","");//имя предмета в дательном падеже - заканчивается ~
-				Vin = sr.ReadLine().Replace("~","");//имя предмета в винительном падеже - заканчивается ~
-				Tvor = sr.ReadLine().Replace("~","");//имя предмета в творительном падеже - заканчивается ~
-				Pred = sr.ReadLine().Replace("~","");//имя предмета в предложном падеже - заканчивается ~
-				Desc = sr.ReadLine().Replace("~","");//описание предмета, если он лежит в комнате - заканчивается ~
-				//Action = sr.ReadLine().Replace("~","");//описание при действии палочки или посоха - заканчивается ~
+				Alias = sr.ReadLine().Replace("~","");//СЃРёРЅРѕРЅРёРјС‹ РїСЂРµРґРјРµС‚Р° - РЅР° РєР°РєРёРµ РЅР°Р·РІР°РЅРёСЏ РѕРЅ Р±СѓРґРµС‚ РѕС‚РєР»РёРєР°С‚СЊСЃСЏ - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ ~
+				Imen = sr.ReadLine().Replace("~","");//РёРјСЏ РїСЂРµРґРјРµС‚Р° РІ РёРјРµРЅРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ ~
+				Rod = sr.ReadLine().Replace("~","");//РёРјСЏ РїСЂРµРґРјРµС‚Р° РІ СЂРѕРґРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ ~
+				Dat = sr.ReadLine().Replace("~","");//РёРјСЏ РїСЂРµРґРјРµС‚Р° РІ РґР°С‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ ~
+				Vin = sr.ReadLine().Replace("~","");//РёРјСЏ РїСЂРµРґРјРµС‚Р° РІ РІРёРЅРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ ~
+				Tvor = sr.ReadLine().Replace("~","");//РёРјСЏ РїСЂРµРґРјРµС‚Р° РІ С‚РІРѕСЂРёС‚РµР»СЊРЅРѕРј РїР°РґРµР¶Рµ - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ ~
+				Pred = sr.ReadLine().Replace("~","");//РёРјСЏ РїСЂРµРґРјРµС‚Р° РІ РїСЂРµРґР»РѕР¶РЅРѕРј РїР°РґРµР¶Рµ - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ ~
+				Desc = sr.ReadLine().Replace("~","");//РѕРїРёСЃР°РЅРёРµ РїСЂРµРґРјРµС‚Р°, РµСЃР»Рё РѕРЅ Р»РµР¶РёС‚ РІ РєРѕРјРЅР°С‚Рµ - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ ~
+				//Action = sr.ReadLine().Replace("~","");//РѕРїРёСЃР°РЅРёРµ РїСЂРё РґРµР№СЃС‚РІРёРё РїР°Р»РѕС‡РєРё РёР»Рё РїРѕСЃРѕС…Р° - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ ~
 				Action = "";
 				input=sr.ReadLine();
 				while (input != "~")
@@ -890,39 +890,39 @@ namespace DataUtils
 					TrenSkill = "0";
 					MagicVector = "";
 				}
-				else if (m.Success) //Значит передено число
+				else if (m.Success) //Р—РЅР°С‡РёС‚ РїРµСЂРµРґРµРЅРѕ С‡РёСЃР»Рѕ
 				{
 					TrenSkill = Parts[0];
 					MagicVector = "";
 				}
-				else //Передана строка
+				else //РџРµСЂРµРґР°РЅР° СЃС‚СЂРѕРєР°
 				{
 					TrenSkill = "0";
 					MagicVector = Parts[0];					
 				}
 				
-				MaxDurab = Parts[1]; //Максимальная прочность предмета
-				CurrDurab = Parts[2]; //Текущая прочность предмета
-				Material = Parts[3]; //Материал, из которого сделан предмет
+				MaxDurab = Parts[1]; //РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РїСЂРѕС‡РЅРѕСЃС‚СЊ РїСЂРµРґРјРµС‚Р°
+				CurrDurab = Parts[2]; //РўРµРєСѓС‰Р°СЏ РїСЂРѕС‡РЅРѕСЃС‚СЊ РїСЂРµРґРјРµС‚Р°
+				Material = Parts[3]; //РњР°С‚РµСЂРёР°Р», РёР· РєРѕС‚РѕСЂРѕРіРѕ СЃРґРµР»Р°РЅ РїСЂРµРґРјРµС‚
 
 				input = sr.ReadLine();
 				Parts = input.Split(' ');
-				Sex = Parts[0];	//пол предмета				
-				Timer = Parts[1]; //время жизни предмета в тиках
-				Spell = Parts[2]; //спел, кастуемый предметом
-				SpellLevel = Parts[3]; //уровень кастуемого спела
+				Sex = Parts[0];	//РїРѕР» РїСЂРµРґРјРµС‚Р°				
+				Timer = Parts[1]; //РІСЂРµРјСЏ Р¶РёР·РЅРё РїСЂРµРґРјРµС‚Р° РІ С‚РёРєР°С…
+				Spell = Parts[2]; //СЃРїРµР», РєР°СЃС‚СѓРµРјС‹Р№ РїСЂРµРґРјРµС‚РѕРј
+				SpellLevel = Parts[3]; //СѓСЂРѕРІРµРЅСЊ РєР°СЃС‚СѓРµРјРѕРіРѕ СЃРїРµР»Р°
 
 				input = sr.ReadLine();
 				Parts = input.Split(' ');
-				Effects = Parts[0]=="0" ? "": Parts[0];	//аффекты, накладываемые при надевании предмета				
-				Discomfort = Parts[1]=="0" ? "": Parts[1]; //флаги неудобств (не может одеть на себя)
-				Bans = Parts[2]=="0" ? "": Parts[2]; //флаги запретов (не может даже взять в руки)
+				Effects = Parts[0]=="0" ? "": Parts[0];	//Р°С„С„РµРєС‚С‹, РЅР°РєР»Р°РґС‹РІР°РµРјС‹Рµ РїСЂРё РЅР°РґРµРІР°РЅРёРё РїСЂРµРґРјРµС‚Р°				
+				Discomfort = Parts[1]=="0" ? "": Parts[1]; //С„Р»Р°РіРё РЅРµСѓРґРѕР±СЃС‚РІ (РЅРµ РјРѕР¶РµС‚ РѕРґРµС‚СЊ РЅР° СЃРµР±СЏ)
+				Bans = Parts[2]=="0" ? "": Parts[2]; //С„Р»Р°РіРё Р·Р°РїСЂРµС‚РѕРІ (РЅРµ РјРѕР¶РµС‚ РґР°Р¶Рµ РІР·СЏС‚СЊ РІ СЂСѓРєРё)
 				
 				input = sr.ReadLine();
 				Parts = input.Split(' ');
-				Kind = Parts[0];	//Тип предмета	
-				/*if (Kind == "25" && TrenSkill != "0") //Для маг.ингр.
-				 * тут такая вот обработка:
+				Kind = Parts[0];	//РўРёРї РїСЂРµРґРјРµС‚Р°	
+				/*if (Kind == "25" && TrenSkill != "0") //Р”Р»СЏ РјР°Рі.РёРЅРіСЂ.
+				 * С‚СѓС‚ С‚Р°РєР°СЏ РІРѕС‚ РѕР±СЂР°Р±РѕС‚РєР°:
 		    MagicVector := '';
             for i := 0 to 5 do
              if (TrenSkill and (1 shl i)) <> 0 then //1 * 2^i
@@ -935,13 +935,13 @@ namespace DataUtils
 						
 					}
 				}*/
-				Flags = Parts[1]; //экстрафлаги
-				WearFlags = Parts[2]; //флаги, куда можно одеть
+				Flags = Parts[1]; //СЌРєСЃС‚СЂР°С„Р»Р°РіРё
+				WearFlags = Parts[2]; //С„Р»Р°РіРё, РєСѓРґР° РјРѕР¶РЅРѕ РѕРґРµС‚СЊ
 
 				input = sr.ReadLine();
 				Parts = input.Split(' ');
 				Param1 = Parts[0];
-				/*Есть в коде старого редактора такая обработка на случай если флаги не числом а строкой
+				/*Р•СЃС‚СЊ РІ РєРѕРґРµ СЃС‚Р°СЂРѕРіРѕ СЂРµРґР°РєС‚РѕСЂР° С‚Р°РєР°СЏ РѕР±СЂР°Р±РѕС‚РєР° РЅР° СЃР»СѓС‡Р°Р№ РµСЃР»Рё С„Р»Р°РіРё РЅРµ С‡РёСЃР»РѕРј Р° СЃС‚СЂРѕРєРѕР№
 				* Val(Param1, i, j);
 				if j <> 0 then
 				begin
@@ -966,7 +966,7 @@ namespace DataUtils
 				{
 					DataRow dr = ObjExtraDesc.NewRow();
 					dr["obj_vnum"] = CurObjNum;
-					dr["aliases"] = sr.ReadLine().Replace("~","");// ключевое слово - строка заканчиваемая ~
+					dr["aliases"] = sr.ReadLine().Replace("~","");// РєР»СЋС‡РµРІРѕРµ СЃР»РѕРІРѕ - СЃС‚СЂРѕРєР° Р·Р°РєР°РЅС‡РёРІР°РµРјР°СЏ ~
 					string ExtraDescTmp = ""; 
 					input=sr.ReadLine();
 					while (input != "~")
@@ -1008,7 +1008,7 @@ namespace DataUtils
 					input=sr.ReadLine();
 				}
 
-                if (CurObjNum != -1)//Запись объекта если таковой был прочитан
+                if (CurObjNum != -1)//Р—Р°РїРёСЃСЊ РѕР±СЉРµРєС‚Р° РµСЃР»Рё С‚Р°РєРѕРІРѕР№ Р±С‹Р» РїСЂРѕС‡РёС‚Р°РЅ
                 {
                     DataRow dr = ObjectsData.NewRow();
                     dr["vnum"] = CurObjNum;
@@ -1105,12 +1105,12 @@ namespace DataUtils
                 string[] Keys = new string[6] { "", "", "", "", "", "" };
                 string[] ExitRooms = new string[6] { "", "", "", "", "", "" };
 
-                while (input.IndexOf("#") == -1)//Смещаемся на начало описания объекта
+                while (input.IndexOf("#") == -1)//РЎРјРµС‰Р°РµРјСЃСЏ РЅР° РЅР°С‡Р°Р»Рѕ РѕРїРёСЃР°РЅРёСЏ РѕР±СЉРµРєС‚Р°
 				{
 					input=sr.ReadLine();
-					if (input == null) break; //если конец файла, то прекращаем искать начало след.объекта
+					if (input == null) break; //РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, С‚Рѕ РїСЂРµРєСЂР°С‰Р°РµРј РёСЃРєР°С‚СЊ РЅР°С‡Р°Р»Рѕ СЃР»РµРґ.РѕР±СЉРµРєС‚Р°
 				}
-				if (input == null) break;//если конец файла, прекращаем обработку файла
+				if (input == null) break;//РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, РїСЂРµРєСЂР°С‰Р°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ С„Р°Р№Р»Р°
 				
 				Match m = tnum.Match(input);
 				if (m.Success)
@@ -1120,7 +1120,7 @@ namespace DataUtils
 				RoomName = sr.ReadLine().Replace("~","");
 				string FullDesc = "";
 				input=sr.ReadLine();
-				while (input != "~")//Читаем все описание зоны до завершающей тильды
+				while (input != "~")//Р§РёС‚Р°РµРј РІСЃРµ РѕРїРёСЃР°РЅРёРµ Р·РѕРЅС‹ РґРѕ Р·Р°РІРµСЂС€Р°СЋС‰РµР№ С‚РёР»СЊРґС‹
 				{
 					if (input.IndexOf("~") >=0)
 					{
@@ -1235,31 +1235,31 @@ namespace DataUtils
 
 				input = sr.ReadLine();
 				string[] Parts = input.Split(' ');
-				ZoneNum = Parts[0];	//Номер зоны
-				Flags = Parts[1]=="0" ? "": Parts[1]; //флаги комнаты
-				Sector = Parts[2]; //тип сектора
+				ZoneNum = Parts[0];	//РќРѕРјРµСЂ Р·РѕРЅС‹
+				Flags = Parts[1]=="0" ? "": Parts[1]; //С„Р»Р°РіРё РєРѕРјРЅР°С‚С‹
+				Sector = Parts[2]; //С‚РёРї СЃРµРєС‚РѕСЂР°
 
 				input=sr.ReadLine();
-				while (input[0].ToString() == "D")//Читаем выходы
+				while (input[0].ToString() == "D")//Р§РёС‚Р°РµРј РІС‹С…РѕРґС‹
 				{
-					int exitIndex = Convert.ToInt32(input[1].ToString());//Полоучаем индекс направления c 0 до 5 (север восток юг запад вверх вниз)
+					int exitIndex = Convert.ToInt32(input[1].ToString());//РџРѕР»РѕСѓС‡Р°РµРј РёРЅРґРµРєСЃ РЅР°РїСЂР°РІР»РµРЅРёСЏ c 0 РґРѕ 5 (СЃРµРІРµСЂ РІРѕСЃС‚РѕРє СЋРі Р·Р°РїР°Рґ РІРІРµСЂС… РІРЅРёР·)
 					Desc[exitIndex] = sr.ReadLine().Replace("~","");
 					Names[exitIndex] = sr.ReadLine().Replace("~","");
-					input = sr.ReadLine();//Последняя строка описания выхода
+					input = sr.ReadLine();//РџРѕСЃР»РµРґРЅСЏСЏ СЃС‚СЂРѕРєР° РѕРїРёСЃР°РЅРёСЏ РІС‹С…РѕРґР°
 					Parts = input.Split(' ');
 					ExitFlags[exitIndex] = Parts[0];
 					Keys[exitIndex] = Parts[1];
 					ExitRooms[exitIndex] = Parts[2];
 					input=sr.ReadLine();
 				}
-				while (input[0].ToString() == "E")//Читаем дополнения (Extra)
+				while (input[0].ToString() == "E")//Р§РёС‚Р°РµРј РґРѕРїРѕР»РЅРµРЅРёСЏ (Extra)
 				{	
 					DataRow dr = RoomExtraDesc.NewRow();
 					dr["room_vnum"] = CurRoomNum;
 					dr["alias"] = sr.ReadLine().Replace("~","");
 					string ExtraDesc = "";
 					input=sr.ReadLine();
-					while (input != "~")//Читаем все до завершающей тильды
+					while (input != "~")//Р§РёС‚Р°РµРј РІСЃРµ РґРѕ Р·Р°РІРµСЂС€Р°СЋС‰РµР№ С‚РёР»СЊРґС‹
 					{
 						if (input.IndexOf("~") >=0)
 						{
@@ -1277,11 +1277,11 @@ namespace DataUtils
 					RoomExtraDesc.Rows.Add(dr);
 					input=sr.ReadLine();
 				}
-				while (input[0].ToString() != "S")//Смещаемся
+				while (input[0].ToString() != "S")//РЎРјРµС‰Р°РµРјСЃСЏ
 				{
 					input=sr.ReadLine();
 				}
-				while (input[0].ToString() == "T")//Читаем триггеры комнаты
+				while (input[0].ToString() == "T")//Р§РёС‚Р°РµРј С‚СЂРёРіРіРµСЂС‹ РєРѕРјРЅР°С‚С‹
 				{
 					DataRow dr		= RoomTriggers.NewRow();
 					dr["room_vnum"] = CurRoomNum;
@@ -1289,7 +1289,7 @@ namespace DataUtils
 					input=sr.ReadLine();
 				}
 
-                if (CurRoomNum != -1)//Запись комнаты если таковой был прочитан
+                if (CurRoomNum != -1)//Р—Р°РїРёСЃСЊ РєРѕРјРЅР°С‚С‹ РµСЃР»Рё С‚Р°РєРѕРІРѕР№ Р±С‹Р» РїСЂРѕС‡РёС‚Р°РЅ
                 {
                     DataRow dr = WldData.NewRow();
                     dr["vnum"] = CurRoomNum;
@@ -1358,7 +1358,7 @@ namespace DataUtils
                 }
 			}
 
-			//Загрузка map-файла
+			//Р—Р°РіСЂСѓР·РєР° map-С„Р°Р№Р»Р°
 			Regex t;
 			t = new Regex("(?<vnum>\\d+) (?<x>\\d+) (?<y>\\d+) (?<z>\\d+)");
 			sr = new StreamReader(Path+@"\WLD\"+zoneName+".map", CurrentEncoding);
@@ -1435,12 +1435,12 @@ namespace DataUtils
                 string Weight = "";
                 string SpecialBitvector = "";
 
-				while (input.IndexOf("#") == -1)//Смещаемся на начало описания объекта
+				while (input.IndexOf("#") == -1)//РЎРјРµС‰Р°РµРјСЃСЏ РЅР° РЅР°С‡Р°Р»Рѕ РѕРїРёСЃР°РЅРёСЏ РѕР±СЉРµРєС‚Р°
 				{
 					input=sr.ReadLine();
-					if (input == null) break; //если конец файла, то прекращаем искать начало след.объекта
+					if (input == null) break; //РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, С‚Рѕ РїСЂРµРєСЂР°С‰Р°РµРј РёСЃРєР°С‚СЊ РЅР°С‡Р°Р»Рѕ СЃР»РµРґ.РѕР±СЉРµРєС‚Р°
 				}
-				if (input == null) break;//если конец файла, прекращаем обработку файла
+				if (input == null) break;//РµСЃР»Рё РєРѕРЅРµС† С„Р°Р№Р»Р°, РїСЂРµРєСЂР°С‰Р°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ С„Р°Р№Р»Р°
 				
 				Match m = tnum.Match(input);
 				if (m.Success)
@@ -1455,7 +1455,7 @@ namespace DataUtils
 				Tvor = sr.ReadLine().Replace("~","");
 				Pred = sr.ReadLine().Replace("~","");
 				input=sr.ReadLine();
-				while (input != "~")//Читаем все описание моба до завершающей тильды
+				while (input != "~")//Р§РёС‚Р°РµРј РІСЃРµ РѕРїРёСЃР°РЅРёРµ РјРѕР±Р° РґРѕ Р·Р°РІРµСЂС€Р°СЋС‰РµР№ С‚РёР»СЊРґС‹
 				{
 					if (input.IndexOf("~") >= 0)
 					{
@@ -1470,7 +1470,7 @@ namespace DataUtils
 					}
 				}
 				input=sr.ReadLine();
-				while (input != "~")//Читаем все описание моба до завершающей тильды
+				while (input != "~")//Р§РёС‚Р°РµРј РІСЃРµ РѕРїРёСЃР°РЅРёРµ РјРѕР±Р° РґРѕ Р·Р°РІРµСЂС€Р°СЋС‰РµР№ С‚РёР»СЊРґС‹
 				{
 					if (input.IndexOf("~") >= 0)
 					{
@@ -1487,8 +1487,8 @@ namespace DataUtils
 
 				input = sr.ReadLine();
 				string[] Parts = input.Split(' ');
-				Flags = Parts[0]=="0" ? "": Parts[1]; //флаги
-				Affects = Parts[1]=="0" ? "": Parts[1]; //аффекты
+				Flags = Parts[0]=="0" ? "": Parts[1]; //С„Р»Р°РіРё
+				Affects = Parts[1]=="0" ? "": Parts[1]; //Р°С„С„РµРєС‚С‹
 				Align = Parts[2];
 
 				input = sr.ReadLine();
@@ -1511,7 +1511,7 @@ namespace DataUtils
 				Pol = Parts[2];
 				
 				input=sr.ReadLine();
-				while (input != "E")//Читаем все параметры моба до E
+				while (input != "E")//Р§РёС‚Р°РµРј РІСЃРµ РїР°СЂР°РјРµС‚СЂС‹ РјРѕР±Р° РґРѕ E
 				{
 					Parts = input.Split(' ');
 					switch (input.Split(':')[0])
@@ -1566,7 +1566,7 @@ namespace DataUtils
 							break;
 						case "Spell":
 							DataRow[] drs = MobSpells.Select("mob_vnum = "+CurMobNum+" and spell_num = " + Parts[1]);
-							if (drs.Length > 0)//Инкризим количество спелов
+							if (drs.Length > 0)//РРЅРєСЂРёР·РёРј РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРїРµР»РѕРІ
 								drs[0]["spell_count"] = Convert.ToInt32(drs[0]["spell_count"])+1;
 							else
 							{
@@ -1588,7 +1588,7 @@ namespace DataUtils
 					input=sr.ReadLine();
 				}
 
-                if (CurMobNum != -1)//Запись моба если таковой был прочитан
+                if (CurMobNum != -1)//Р—Р°РїРёСЃСЊ РјРѕР±Р° РµСЃР»Рё С‚Р°РєРѕРІРѕР№ Р±С‹Р» РїСЂРѕС‡РёС‚Р°РЅ
                 {
                     DataRow dr = MobData.NewRow();
                     dr["vnum"] = CurMobNum;
@@ -1775,22 +1775,22 @@ namespace DataUtils
 			ShopsData.Columns.Add("opening_time_2");
 			ShopsData.Columns.Add("closing_time_2");
 
-			//Предметы постоянно в продаже
+			//РџСЂРµРґРјРµС‚С‹ РїРѕСЃС‚РѕСЏРЅРЅРѕ РІ РїСЂРѕРґР°Р¶Рµ
 			DS.Tables.Add("PermanentlySellingData");
 			PermanentlySellingData.Columns.Add("shop_vnum");
 			PermanentlySellingData.Columns.Add("obj_vnum");
 
-			//Покупаемые предметы
+			//РџРѕРєСѓРїР°РµРјС‹Рµ РїСЂРµРґРјРµС‚С‹
 			DS.Tables.Add("BuyingObjectsData");
 			BuyingObjectsData.Columns.Add("shop_vnum");
 			BuyingObjectsData.Columns.Add("obj_vnum");
 
-			//Предметы на обмен
+			//РџСЂРµРґРјРµС‚С‹ РЅР° РѕР±РјРµРЅ
 			DS.Tables.Add("ChangingObjectsData");
 			ChangingObjectsData.Columns.Add("shop_vnum");
 			ChangingObjectsData.Columns.Add("obj_vnum");
 
-			//Список комнат магазина
+			//РЎРїРёСЃРѕРє РєРѕРјРЅР°С‚ РјР°РіР°Р·РёРЅР°
 			DS.Tables.Add("ShopRoomsData");
 			ShopRoomsData.Columns.Add("shop_vnum");
 			ShopRoomsData.Columns.Add("room_vnum");
@@ -2023,7 +2023,7 @@ namespace DataUtils
 
         #region Wld
         /// <summary>
-        /// Метод для получения списка комнат
+        /// РњРµС‚РѕРґ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ СЃРїРёСЃРєР° РєРѕРјРЅР°С‚
         /// </summary>
         /// <param name="ReturnAllRooms"></param>
         /// <returns></returns>
@@ -2078,7 +2078,7 @@ namespace DataUtils
 
         #region Mob
         /// <summary>
-        /// Метод возвращает данные моба для добавления в листвью
+        /// РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РґР°РЅРЅС‹Рµ РјРѕР±Р° РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ РІ Р»РёСЃС‚РІСЊСЋ
         /// </summary>
         /// <param name="vnum"></param>
         /// <returns></returns>

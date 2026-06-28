@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Drawing;
 using System.Windows.Forms;
 using DataUtils;
@@ -10,7 +10,7 @@ namespace BZEditor
     public partial class WldForm
     {
         /// <summary>
-        /// Раскраска выбранный условий срабатывания триггера
+        /// Р Р°СЃРєСЂР°СЃРєР° РІС‹Р±СЂР°РЅРЅС‹Р№ СѓСЃР»РѕРІРёР№ СЃСЂР°Р±Р°С‚С‹РІР°РЅРёСЏ С‚СЂРёРіРіРµСЂР°
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -28,7 +28,7 @@ namespace BZEditor
 
         private void TsbTrgClearClick(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы подтверждаете очистку текста триггера?", "Подтверждение очистки",
+            if (MessageBox.Show("Р’С‹ РїРѕРґС‚РІРµСЂР¶РґР°РµС‚Рµ РѕС‡РёСЃС‚РєСѓ С‚РµРєСЃС‚Р° С‚СЂРёРіРіРµСЂР°?", "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РѕС‡РёСЃС‚РєРё",
                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 codeEditor.SetText("");
         }
@@ -198,13 +198,13 @@ namespace BZEditor
         {
             switch (trgClass)
             {
-                case 0: //Тpиггеp для монстpов
+                case 0: //РўpРёРіРіРµp РґР»СЏ РјРѕРЅСЃС‚pРѕРІ
                     BindListView(lvTrgActivationConditions, BasesDM.MobTriggerBitvector);
                     break;
-                case 1: //Тpиггеp для обьектов
+                case 1: //РўpРёРіРіРµp РґР»СЏ РѕР±СЊРµРєС‚РѕРІ
                     BindListView(lvTrgActivationConditions, BasesDM.ObjTriggerBitvector);
                     break;
-                case 2: //Тpиггеp для комнат
+                case 2: //РўpРёРіРіРµp РґР»СЏ РєРѕРјРЅР°С‚
                     BindListView(lvTrgActivationConditions, BasesDM.WldTriggerBitvector);
                     break;
             }
@@ -236,7 +236,7 @@ namespace BZEditor
             lvDetails.BeginUpdate();
             ClearDetails();
             wldMap.HighlightedRooms.Clear();
-            lvDetails.Groups.Add(new ListViewGroup("Установлен для комнат", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("РЈСЃС‚Р°РЅРѕРІР»РµРЅ РґР»СЏ РєРѕРјРЅР°С‚", HorizontalAlignment.Left));
             foreach (Room r in ZoneDM.RoomsCollection)
             {
                 if (!r.TriggersList.Contains(trigger.VNum)) continue;
@@ -250,7 +250,7 @@ namespace BZEditor
             }
             wldMap.RedrawBitmap();
 
-            lvDetails.Groups.Add(new ListViewGroup("Назначен мобам", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("РќР°Р·РЅР°С‡РµРЅ РјРѕР±Р°Рј", HorizontalAlignment.Left));
             foreach (Mob m in ZoneDM.MobsCollection)
             {
                 if (!m.TriggersList.Contains(trigger.VNum)) continue;
@@ -262,7 +262,7 @@ namespace BZEditor
                 });
             }
 
-            lvDetails.Groups.Add(new ListViewGroup("Назначен объектам", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("РќР°Р·РЅР°С‡РµРЅ РѕР±СЉРµРєС‚Р°Рј", HorizontalAlignment.Left));
             foreach (Obj o in ZoneDM.ObjectsCollection)
             {
                 if (!o.TriggersList.Contains(trigger.VNum)) continue;

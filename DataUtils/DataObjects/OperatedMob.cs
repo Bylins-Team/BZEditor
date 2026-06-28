@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
@@ -20,7 +20,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Флаг условия загрузки
+        /// Р¤Р»Р°Рі СѓСЃР»РѕРІРёСЏ Р·Р°РіСЂСѓР·РєРё
         /// </summary>
         public bool ConditionFlag
         {
@@ -34,7 +34,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Максимум в комнате
+        /// РњР°РєСЃРёРјСѓРј РІ РєРѕРјРЅР°С‚Рµ
         /// </summary>
         public int MaxInRoom
         {
@@ -48,7 +48,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Признак лидерства моба
+        /// РџСЂРёР·РЅР°Рє Р»РёРґРµСЂСЃС‚РІР° РјРѕР±Р°
         /// </summary>
         public bool Leader
         {
@@ -62,7 +62,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Идентификатор лидера за которым следует этот моб
+        /// РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р»РёРґРµСЂР° Р·Р° РєРѕС‚РѕСЂС‹Рј СЃР»РµРґСѓРµС‚ СЌС‚РѕС‚ РјРѕР±
         /// </summary>
         public int FollowsBy
         {

@@ -1,9 +1,9 @@
-/*При изменении количества выбранных строк событие OnSelectedIndexChanged по умолчанию
- * происходит сначала для отмены каждой из выбранных строк, а затем для выбора заново
- * строк, кторые должны быть выбраны в новом состоянии SelectedItems.
- * Оба этих процесса происходят от меньшего индекса к большему!.
- * Причем это только с Shift
- * С Ctrl такого не происходит
+п»ї/*РџСЂРё РёР·РјРµРЅРµРЅРёРё РєРѕР»РёС‡РµСЃС‚РІР° РІС‹Р±СЂР°РЅРЅС‹С… СЃС‚СЂРѕРє СЃРѕР±С‹С‚РёРµ OnSelectedIndexChanged РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+ * РїСЂРѕРёСЃС…РѕРґРёС‚ СЃРЅР°С‡Р°Р»Р° РґР»СЏ РѕС‚РјРµРЅС‹ РєР°Р¶РґРѕР№ РёР· РІС‹Р±СЂР°РЅРЅС‹С… СЃС‚СЂРѕРє, Р° Р·Р°С‚РµРј РґР»СЏ РІС‹Р±РѕСЂР° Р·Р°РЅРѕРІРѕ
+ * СЃС‚СЂРѕРє, РєС‚РѕСЂС‹Рµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РІС‹Р±СЂР°РЅС‹ РІ РЅРѕРІРѕРј СЃРѕСЃС‚РѕСЏРЅРёРё SelectedItems.
+ * РћР±Р° СЌС‚РёС… РїСЂРѕС†РµСЃСЃР° РїСЂРѕРёСЃС…РѕРґСЏС‚ РѕС‚ РјРµРЅСЊС€РµРіРѕ РёРЅРґРµРєСЃР° Рє Р±РѕР»СЊС€РµРјСѓ!.
+ * РџСЂРёС‡РµРј СЌС‚Рѕ С‚РѕР»СЊРєРѕ СЃ Shift
+ * РЎ Ctrl С‚Р°РєРѕРіРѕ РЅРµ РїСЂРѕРёСЃС…РѕРґРёС‚
  */
 using System;
 using System.Windows.Forms;
@@ -20,7 +20,7 @@ namespace ExtControls
 
         protected override void OnSelectedIndexChanged(EventArgs e)
         {
-            if (!MultiSelect && View == View.Details) //Работает только для мультиселекта в Details
+            if (!MultiSelect && View == View.Details) //Р Р°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ РґР»СЏ РјСѓР»СЊС‚РёСЃРµР»РµРєС‚Р° РІ Details
             {
                 base.OnSelectedIndexChanged(e);
                 return;
@@ -35,23 +35,23 @@ namespace ExtControls
             if (!Shift)
                 if (PrevSelectedCount > 0 && SelectedIndices[SelectedIndices.Count - 1] != Curr)
                 {
-                    //Добавил вызов базового метода а то с контролом вообще не работал толком селект :)
+                    //Р”РѕР±Р°РІРёР» РІС‹Р·РѕРІ Р±Р°Р·РѕРІРѕРіРѕ РјРµС‚РѕРґР° Р° С‚Рѕ СЃ РєРѕРЅС‚СЂРѕР»РѕРј РІРѕРѕР±С‰Рµ РЅРµ СЂР°Р±РѕС‚Р°Р» С‚РѕР»РєРѕРј СЃРµР»РµРєС‚ :)
                     base.OnSelectedIndexChanged(e);
                     return;
                 }
 
-            if (Prev + PrevSelectedCount <= Curr) //возможно надо <=
+            if (Prev + PrevSelectedCount <= Curr) //РІРѕР·РјРѕР¶РЅРѕ РЅР°РґРѕ <=
             {
-                //Случай когда выбрано c шифтом с 8 по 3  и не отпуская шифта кликается 10
+                //РЎР»СѓС‡Р°Р№ РєРѕРіРґР° РІС‹Р±СЂР°РЅРѕ c С€РёС„С‚РѕРј СЃ 8 РїРѕ 3  Рё РЅРµ РѕС‚РїСѓСЃРєР°СЏ С€РёС„С‚Р° РєР»РёРєР°РµС‚СЃСЏ 10
                 if (Shift && PrevSelectedCount > 0 && SelectedIndices[SelectedIndices.Count - 1] == Curr)
                 {
                     base.OnSelectedIndexChanged(e);
                     return;
                 }
             }
-            else if (Prev - PrevSelectedCount >= Curr && SelectedIndices.Count > 1) //возможно надо >=
+            else if (Prev - PrevSelectedCount >= Curr && SelectedIndices.Count > 1) //РІРѕР·РјРѕР¶РЅРѕ РЅР°РґРѕ >=
             {
-                //Случай когда выбрано c шифтом с 3 по 8 и не отпуская шифта кликается 1 или 2
+                //РЎР»СѓС‡Р°Р№ РєРѕРіРґР° РІС‹Р±СЂР°РЅРѕ c С€РёС„С‚РѕРј СЃ 3 РїРѕ 8 Рё РЅРµ РѕС‚РїСѓСЃРєР°СЏ С€РёС„С‚Р° РєР»РёРєР°РµС‚СЃСЏ 1 РёР»Рё 2
                 if (Shift && PrevSelectedCount > 0 &&
                     SelectedIndices[SelectedIndices.Count - 2] == Prev - 1 - PrevSelectedCount)
                 {
@@ -61,18 +61,18 @@ namespace ExtControls
             }
             if (SelectedIndices.Count > PrevSelectedCount)
             {
-                //выбрано с 5 по 10, с шифтом кликаем 15
+                //РІС‹Р±СЂР°РЅРѕ СЃ 5 РїРѕ 10, СЃ С€РёС„С‚РѕРј РєР»РёРєР°РµРј 15
                 if (Shift && PrevSelectedCount > 0 && Prev < Curr && SelectedIndices[SelectedIndices.Count - 1] != Curr)
                     return;
-                //Выбран 10 затем с шифтом кликаем 5. при этом последняя выбранная клетка всегда остается с индексом Prev проверяем по строке с индексом на 1 меньше
+                //Р’С‹Р±СЂР°РЅ 10 Р·Р°С‚РµРј СЃ С€РёС„С‚РѕРј РєР»РёРєР°РµРј 5. РїСЂРё СЌС‚РѕРј РїРѕСЃР»РµРґРЅСЏСЏ РІС‹Р±СЂР°РЅРЅР°СЏ РєР»РµС‚РєР° РІСЃРµРіРґР° РѕСЃС‚Р°РµС‚СЃСЏ СЃ РёРЅРґРµРєСЃРѕРј Prev РїСЂРѕРІРµСЂСЏРµРј РїРѕ СЃС‚СЂРѕРєРµ СЃ РёРЅРґРµРєСЃРѕРј РЅР° 1 РјРµРЅСЊС€Рµ
                 if (Shift && PrevSelectedCount > 0 && Prev > Curr &&
                     SelectedIndices[SelectedIndices.Count - 1 - PrevSelectedCount] != Prev - 1) return;
             }
             if (SelectedIndices.Count < PrevSelectedCount)
             {
-                //выбрано с 10 по 3, с шифтом кликаем 5
+                //РІС‹Р±СЂР°РЅРѕ СЃ 10 РїРѕ 3, СЃ С€РёС„С‚РѕРј РєР»РёРєР°РµРј 5
                 if (Shift && PrevSelectedCount > 0 && Prev < Curr && SelectedIndices[0] != Curr) return;
-                //Выбрано с 5 по 10 кликаем 7
+                //Р’С‹Р±СЂР°РЅРѕ СЃ 5 РїРѕ 10 РєР»РёРєР°РµРј 7
                 if (Shift && PrevSelectedCount > 0 && Prev > Curr && SelectedIndices[SelectedIndices.Count - 1] != Curr)
                     return;
             }
@@ -92,7 +92,7 @@ namespace ExtControls
         {
             PrevSelectedCount = SelectedIndices.Count;
             Shift = e.Shift;
-            //Это чтоб кнопки заработали :)
+            //Р­С‚Рѕ С‡С‚РѕР± РєРЅРѕРїРєРё Р·Р°СЂР°Р±РѕС‚Р°Р»Рё :)
             KeyPressed = ((e.KeyData & Keys.KeyCode) == Keys.Up || (e.KeyData & Keys.KeyCode) == Keys.Down ||
                           (e.KeyData & Keys.KeyCode) == Keys.PageUp || (e.KeyData & Keys.KeyCode) == Keys.PageDown ||
                           (e.KeyData & Keys.KeyCode) == Keys.Home || (e.KeyData & Keys.KeyCode) == Keys.End);

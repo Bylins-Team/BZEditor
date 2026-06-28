@@ -1,4 +1,4 @@
-namespace DataUtils.YamlModels
+﻿namespace DataUtils.YamlModels
 {
     /// <summary>
     /// YAML model for room descriptions (10 variants: main + day/night + 4 seasons * 2)

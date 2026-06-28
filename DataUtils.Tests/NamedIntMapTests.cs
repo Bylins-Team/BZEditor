@@ -1,4 +1,4 @@
-using DataUtils.YamlModels;
+﻿using DataUtils.YamlModels;
 using NUnit.Framework;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;

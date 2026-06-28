@@ -1,11 +1,11 @@
-using System.Drawing;
+п»їusing System.Drawing;
 
 namespace DataUtils
 {
     public class Room : BaseDataObject
     {
         /// <summary>
-        /// Описание комнаты
+        /// РћРїРёСЃР°РЅРёРµ РєРѕРјРЅР°С‚С‹
         /// </summary>
         public RoomDescription Description = new RoomDescription();
 
@@ -33,7 +33,7 @@ namespace DataUtils
         public BaseDataArrayList TriggersList = new BaseDataArrayList();
 
         /// <summary>
-        /// Ингредиенты
+        /// РРЅРіСЂРµРґРёРµРЅС‚С‹
         /// </summary>
         public IngredientsCollection Ingredients = new IngredientsCollection();
 
@@ -44,7 +44,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Координата X
+        /// РљРѕРѕСЂРґРёРЅР°С‚Р° X
         /// </summary>
         public int X
         {
@@ -58,7 +58,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Координата Y
+        /// РљРѕРѕСЂРґРёРЅР°С‚Р° Y
         /// </summary>
         public int Y
         {
@@ -72,7 +72,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Координата Z
+        /// РљРѕРѕСЂРґРёРЅР°С‚Р° Z
         /// </summary>
         public int Z
         {
@@ -99,7 +99,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Признак того, что комната размещена на карте
+        /// РџСЂРёР·РЅР°Рє С‚РѕРіРѕ, С‡С‚Рѕ РєРѕРјРЅР°С‚Р° СЂР°Р·РјРµС‰РµРЅР° РЅР° РєР°СЂС‚Рµ
         /// </summary>
         public bool PlacedOnMap
         {
@@ -113,7 +113,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Название комнаты
+        /// РќР°Р·РІР°РЅРёРµ РєРѕРјРЅР°С‚С‹
         /// </summary>
         public string Name
         {
@@ -127,7 +127,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Номер зоны в которой находится комната
+        /// РќРѕРјРµСЂ Р·РѕРЅС‹ РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РєРѕРјРЅР°С‚Р°
         /// </summary>
         public int ZoneNum
         {
@@ -141,7 +141,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Флаги комнаты
+        /// Р¤Р»Р°РіРё РєРѕРјРЅР°С‚С‹
         /// </summary>
         public string Flags
         {
@@ -155,7 +155,7 @@ namespace DataUtils
         }
 
         /// <summary>
-        /// Тип сектора
+        /// РўРёРї СЃРµРєС‚РѕСЂР°
         /// </summary>
         public int SectorType
         {

@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace DataUtils
 {
@@ -17,7 +17,7 @@ namespace DataUtils
         public Guid InternaGuid = Guid.NewGuid();
 
         /// <summary>
-        /// Виртуальный номер
+        /// Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ
         /// </summary>
         public int VNum
         {

@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Windows.Forms;
 using DataUtils;
 using Object = DataUtils.Obj;
@@ -68,7 +68,7 @@ namespace BZEditor
             else
             {
                 Obj obj = new Object(Convert.ToInt32(nudObjVnum.Value))
-                                 {Cases = {Imen = "Отсутствует в имеющихся зонах."}};
+                                 {Cases = {Imen = "РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РІ РёРјРµСЋС‰РёС…СЃСЏ Р·РѕРЅР°С…."}};
                 SelectedObjects.Add(obj);
             }
             DialogResult = DialogResult.OK;

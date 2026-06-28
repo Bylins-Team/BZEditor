@@ -1,4 +1,4 @@
-namespace BZEditor
+п»їnamespace BZEditor
 {
     partial class ZoneSelectForm
     {
@@ -66,12 +66,12 @@ namespace BZEditor
             // 
             // chMainListVNum
             // 
-            this.chMainListVNum.Text = "Номер";
+            this.chMainListVNum.Text = "РќРѕРјРµСЂ";
             this.chMainListVNum.Width = 50;
             // 
             // chMainListItemName
             // 
-            this.chMainListItemName.Text = "Название";
+            this.chMainListItemName.Text = "РќР°Р·РІР°РЅРёРµ";
             this.chMainListItemName.Width = 274;
             // 
             // tboxMainListFilter
@@ -90,7 +90,7 @@ namespace BZEditor
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(49, 16);
             this.label29.TabIndex = 105;
-            this.label29.Text = "Фильтр";
+            this.label29.Text = "Р¤РёР»СЊС‚СЂ";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnOk
@@ -101,7 +101,7 @@ namespace BZEditor
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 108;
-            this.btnOk.Text = "Ок";
+            this.btnOk.Text = "РћРє";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
@@ -113,7 +113,7 @@ namespace BZEditor
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 108;
-            this.btnCancel.Text = "Отмена";
+            this.btnCancel.Text = "РћС‚РјРµРЅР°";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -147,7 +147,7 @@ namespace BZEditor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 16);
             this.label1.TabIndex = 119;
-            this.label1.Text = "Виртуальный номер";
+            this.label1.Text = "Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ZoneSelectForm
@@ -168,7 +168,7 @@ namespace BZEditor
             this.Name = "ZoneSelectForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Выберите зону";
+            this.Text = "Р’С‹Р±РµСЂРёС‚Рµ Р·РѕРЅСѓ";
             ((System.ComponentModel.ISupportInitialize)(this.nudMobVnum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

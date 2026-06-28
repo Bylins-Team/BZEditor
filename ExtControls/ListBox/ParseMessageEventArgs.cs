@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace ExtControls
 {
@@ -7,7 +7,7 @@ namespace ExtControls
     /// </summary>
     public class ParseMessageEventArgs : EventArgs
     {
-        private ParseMessageType msgType = ParseMessageType.Отсутствует;
+        private ParseMessageType msgType = ParseMessageType.РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚;
         public int VNum;
         public ActionType Action = ActionType.DoNothing;
 
@@ -45,9 +45,9 @@ namespace ExtControls
 
     public enum ParseMessageType
     {
-        Отсутствует = -1,
-        Информация = 0,
-        Предупреждение = 1,
-        Ошибка = 2
+        РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚ = -1,
+        РРЅС„РѕСЂРјР°С†РёСЏ = 0,
+        РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ = 1,
+        РћС€РёР±РєР° = 2
     } ;
 }

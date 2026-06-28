@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -327,15 +327,15 @@ namespace BZEditor
             {
                 case SortOrder.None:
                     lvAvailMobSkills.Sorting = SortOrder.Ascending;
-                    chMobSkillAvail.Text = "Доступные умения v";
+                    chMobSkillAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СѓРјРµРЅРёСЏ v";
                     break;
                 case SortOrder.Ascending:
                     lvAvailMobSkills.Sorting = SortOrder.Descending;
-                    chMobSkillAvail.Text = "Доступные умения ^";
+                    chMobSkillAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СѓРјРµРЅРёСЏ ^";
                     break;
                 case SortOrder.Descending:
                     lvAvailMobSkills.Sorting = SortOrder.None;
-                    chMobSkillAvail.Text = "Доступные умения";
+                    chMobSkillAvail.Text = "Р”РѕСЃС‚СѓРїРЅС‹Рµ СѓРјРµРЅРёСЏ";
                     if (lvMainList.SelectedItems.Count <= 0) break;
                     lvAvailMobSkills.BeginUpdate();
                     lvAvailMobSkills.Items.Clear();
@@ -433,15 +433,15 @@ namespace BZEditor
             {
                 case SortOrder.None:
                     lvMobAvailSpells.Sorting = SortOrder.Ascending;
-                    chAvailMobSpellName.Text = "Заклинание v";
+                    chAvailMobSpellName.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ v";
                     break;
                 case SortOrder.Ascending:
                     lvMobAvailSpells.Sorting = SortOrder.Descending;
-                    chAvailMobSpellName.Text = "Заклинание ^";
+                    chAvailMobSpellName.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ ^";
                     break;
                 case SortOrder.Descending:
                     lvMobAvailSpells.Sorting = SortOrder.None;
-                    chAvailMobSpellName.Text = "Заклинание";
+                    chAvailMobSpellName.Text = "Р—Р°РєР»РёРЅР°РЅРёРµ";
                     lvMobAvailSpells.BeginUpdate();
                     lvMobAvailSpells.Items.Clear();
                     foreach (DataRow dr in BasesDM.MobSpells.Rows)
@@ -487,7 +487,7 @@ namespace BZEditor
         private void btnMobAddHelper_Click(object sender, EventArgs e)
         {
             MobsCollection allMobs = WindowParentForm.GetAllKnownMobs();
-            MobSelectForm msf = new MobSelectForm("Выберите мобов-помощников", allMobs, ZoneDM.Zone.Number, true, false);
+            MobSelectForm msf = new MobSelectForm("Р’С‹Р±РµСЂРёС‚Рµ РјРѕР±РѕРІ-РїРѕРјРѕС‰РЅРёРєРѕРІ", allMobs, ZoneDM.Zone.Number, true, false);
             DialogResult dres = msf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -523,7 +523,7 @@ namespace BZEditor
         {
             CTriggersCollection allTriggers = WindowParentForm.GetAllKnownTriggers(0);
             TrgSelectForm tsf =
-                new TrgSelectForm("Выберите триггеры для моба", allTriggers, ZoneDM.Zone.Number, true, false);
+                new TrgSelectForm("Р’С‹Р±РµСЂРёС‚Рµ С‚СЂРёРіРіРµСЂС‹ РґР»СЏ РјРѕР±Р°", allTriggers, ZoneDM.Zone.Number, true, false);
             DialogResult dres = tsf.ShowDialog();
             if (dres == DialogResult.OK)
             {
@@ -557,9 +557,9 @@ namespace BZEditor
 
         public void btnSelectMobPath_Click(object sender, EventArgs e)
         {
-            if (btnSelectMobPath.Text == "Изменить")
+            if (btnSelectMobPath.Text == "РР·РјРµРЅРёС‚СЊ")
             {
-                btnSelectMobPath.Text = "Сохранить";
+                btnSelectMobPath.Text = "РЎРѕС…СЂР°РЅРёС‚СЊ";
                 if (wldMap.ExternalPathSelection == false)
                 {
                     wldMap.PathChanged += wldMap_PathChanged;
@@ -570,7 +570,7 @@ namespace BZEditor
             }
             else
             {
-                btnSelectMobPath.Text = "Изменить";
+                btnSelectMobPath.Text = "РР·РјРµРЅРёС‚СЊ";
                 if (wldMap.ExternalPathSelection)
                 {
                     wldMap.PathChanged -= wldMap_PathChanged;
@@ -579,7 +579,7 @@ namespace BZEditor
                     Mob mob = ZoneDM.MobsCollection[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
                     if (mob != null)
                     {
-                        //Тут делать валидацию пути
+                        //РўСѓС‚ РґРµР»Р°С‚СЊ РІР°Р»РёРґР°С†РёСЋ РїСѓС‚Рё
                         mob.Destination.Clear();
                         string[] parts = tboxMobDestination.Text.Split('/');
                         foreach (string s in parts)
@@ -670,7 +670,7 @@ namespace BZEditor
         public void RefreshMobHelpersList(Mob mob)
         {
             lvMobHelpers.Items.Clear();
-            //этот поиск названия моба по номеру можно выкинуть в датаменеджер и делать 1 раз
+            //СЌС‚РѕС‚ РїРѕРёСЃРє РЅР°Р·РІР°РЅРёСЏ РјРѕР±Р° РїРѕ РЅРѕРјРµСЂСѓ РјРѕР¶РЅРѕ РІС‹РєРёРЅСѓС‚СЊ РІ РґР°С‚Р°РјРµРЅРµРґР¶РµСЂ Рё РґРµР»Р°С‚СЊ 1 СЂР°Р·
             MobsCollection mobs = WindowParentForm.GetAllKnownMobs();
             foreach (int vNum in mob.Helpers)
             {
@@ -755,7 +755,7 @@ namespace BZEditor
             CTriggersCollection allTriggers = WindowParentForm.GetAllKnownTriggers(0);
             foreach (int vNum in mob.TriggersList)
             {
-                string triggerName = "!!!Триггер с таким номером не найден";
+                string triggerName = "!!!РўСЂРёРіРіРµСЂ СЃ С‚Р°РєРёРј РЅРѕРјРµСЂРѕРј РЅРµ РЅР°Р№РґРµРЅ";
                 Trigger trg = allTriggers.GetTrigger(vNum);
                 if (trg != null)
                     triggerName = trg.Name;
@@ -803,7 +803,7 @@ namespace BZEditor
             switch (tcMobs.SelectedTab.Name)
             {
                 case "tpMobParameters":
-                    if (btnSelectMobPath.Text == "Сохранить")
+                    if (btnSelectMobPath.Text == "РЎРѕС…СЂР°РЅРёС‚СЊ")
                         btnSelectMobPath_Click(null, null);
                     //MustUpdateMobData = false;
                     nudMobStr.Value = mob.Stats.Str;
@@ -900,7 +900,7 @@ namespace BZEditor
             lvDetails.BeginUpdate();
             ClearDetails();
             wldMap.HighlightedRooms.Clear();
-            lvDetails.Groups.Add(new ListViewGroup("Загружается в комнаты", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("Р—Р°РіСЂСѓР¶Р°РµС‚СЃСЏ РІ РєРѕРјРЅР°С‚С‹", HorizontalAlignment.Left));
             foreach (Room r in ZoneDM.RoomsCollection)
             {
                 foreach (LoadedMob lm in r.LoadedMobsCollection)
@@ -917,7 +917,7 @@ namespace BZEditor
             }
             wldMap.RedrawBitmap();
 
-            lvDetails.Groups.Add(new ListViewGroup("Асистит мобам", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("РђСЃРёСЃС‚РёС‚ РјРѕР±Р°Рј", HorizontalAlignment.Left));
             foreach (Mob m in ZoneDM.MobsCollection)
             {
                 if (!m.Helpers.Contains(mob.VNum)) continue;
@@ -929,7 +929,7 @@ namespace BZEditor
                 });
             }
 
-            lvDetails.Groups.Add(new ListViewGroup("Триггеры", HorizontalAlignment.Left));
+            lvDetails.Groups.Add(new ListViewGroup("РўСЂРёРіРіРµСЂС‹", HorizontalAlignment.Left));
             foreach (int vnum in mob.TriggersList)
             {
                 Trigger t = ZoneDM.TriggersCollection[vnum, 0];

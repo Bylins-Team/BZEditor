@@ -1,4 +1,4 @@
-namespace DataUtils
+п»їnamespace DataUtils
 {
     /*#define NORTH          0
     #define EAST           1
@@ -7,7 +7,7 @@ namespace DataUtils
     #define UP             4
     #define DOWN           5*/
     /// <summary>
-    /// Направление движения
+    /// РќР°РїСЂР°РІР»РµРЅРёРµ РґРІРёР¶РµРЅРёСЏ
     /// </summary>
     public enum Direction
     {

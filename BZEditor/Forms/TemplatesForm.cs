@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Windows.Forms;
 using DataUtils;
 using WeifenLuo.WinFormsUI.Docking;
@@ -40,11 +40,11 @@ namespace BZEditor
                     listViewObjTemplates.Items.Clear();
                     listViewObjTemplates.Groups.Clear();
 
-                    lvg = new ListViewGroup("Предустановленные", HorizontalAlignment.Left) {Tag = "Const"};
+                    lvg = new ListViewGroup("РџСЂРµРґСѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ", HorizontalAlignment.Left) {Tag = "Const"};
                     listViewObjTemplates.Groups.Add(lvg);
                     AddObjTemplates(templatesDm.ConstObjectsTemplates, lvg);
 
-                    lvg = new ListViewGroup("Пользовательские", HorizontalAlignment.Left) {Tag = "User"};
+                    lvg = new ListViewGroup("РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ", HorizontalAlignment.Left) {Tag = "User"};
                     listViewObjTemplates.Groups.Add(lvg);
                     AddObjTemplates(templatesDm.UserObjectsTemplates, lvg);
                     break;
@@ -52,11 +52,11 @@ namespace BZEditor
                     listViewMobTemplates.Items.Clear();
                     listViewMobTemplates.Groups.Clear();
 
-                    lvg = new ListViewGroup("Предустановленные", HorizontalAlignment.Left) {Tag = "Const"};
+                    lvg = new ListViewGroup("РџСЂРµРґСѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ", HorizontalAlignment.Left) {Tag = "Const"};
                     listViewMobTemplates.Groups.Add(lvg);
                     AddMobTemplates(templatesDm.ConstMobsTemplates, lvg);
 
-                    lvg = new ListViewGroup("Пользовательские", HorizontalAlignment.Left) {Tag = "User"};
+                    lvg = new ListViewGroup("РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ", HorizontalAlignment.Left) {Tag = "User"};
                     listViewMobTemplates.Groups.Add(lvg);
                     AddMobTemplates(templatesDm.UserMobsTemplates, lvg);
                     break;
@@ -66,19 +66,19 @@ namespace BZEditor
                     listViewMobTemplates.Items.Clear();
                     listViewMobTemplates.Groups.Clear();
 
-                    lvg = new ListViewGroup("Предустановленные", HorizontalAlignment.Left) {Tag = "Const"};
+                    lvg = new ListViewGroup("РџСЂРµРґСѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ", HorizontalAlignment.Left) {Tag = "Const"};
                     listViewObjTemplates.Groups.Add(lvg);
                     AddObjTemplates(templatesDm.ConstObjectsTemplates, lvg);
 
-                    lvg = new ListViewGroup("Пользовательские", HorizontalAlignment.Left) {Tag = "User"};
+                    lvg = new ListViewGroup("РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ", HorizontalAlignment.Left) {Tag = "User"};
                     listViewObjTemplates.Groups.Add(lvg);
                     AddObjTemplates(templatesDm.UserObjectsTemplates, lvg);
 
-                    lvg = new ListViewGroup("Предустановленные", HorizontalAlignment.Left) {Tag = "Const"};
+                    lvg = new ListViewGroup("РџСЂРµРґСѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ", HorizontalAlignment.Left) {Tag = "Const"};
                     listViewMobTemplates.Groups.Add(lvg);
                     AddMobTemplates(templatesDm.ConstMobsTemplates, lvg);
 
-                    lvg = new ListViewGroup("Пользовательские", HorizontalAlignment.Left) {Tag = "User"};
+                    lvg = new ListViewGroup("РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ", HorizontalAlignment.Left) {Tag = "User"};
                     listViewMobTemplates.Groups.Add(lvg);
                     AddMobTemplates(templatesDm.UserMobsTemplates, lvg);
                     break;

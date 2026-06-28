@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -25,7 +25,7 @@ namespace BZEditor
             
             zonesToSendPath = Path.Combine(Application.StartupPath, "ZonesToSend");
             this.zoneNum = zoneNum;
-            lInfo.Text = "Зона: [" + zoneNum + "] " + zoneName;
+            lInfo.Text = "Р—РѕРЅР°: [" + zoneNum + "] " + zoneName;
             string s = zoneNum + " " + zoneName + ".7z";
             foreach (char ic in Path.GetInvalidFileNameChars())
                 s = s.Replace(ic, '_').Replace(" ", "_");
@@ -42,7 +42,7 @@ namespace BZEditor
             }
             if (s.Length > 0)
             {
-                errorProvider.SetError(tbArcName, "Название содержит недопустимые символы:" + s);
+                errorProvider.SetError(tbArcName, "РќР°Р·РІР°РЅРёРµ СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹:" + s);
                 return false;
             }
             errorProvider.SetError(tbArcName, "");
@@ -75,11 +75,11 @@ namespace BZEditor
                 if (File.Exists(filePath))
                 {
                     DialogResult dr =
-                        MessageBox.Show($"Файл {filePath} уже существует! Перезаписать?", "Файл уже существует",
+                        MessageBox.Show($"Р¤Р°Р№Р» {filePath} СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚! РџРµСЂРµР·Р°РїРёСЃР°С‚СЊ?", "Р¤Р°Р№Р» СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚",
                                         MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dr == DialogResult.No) return;
                 }
-                bCancelPreparing.Text = "Отмена";
+                bCancelPreparing.Text = "РћС‚РјРµРЅР°";
                 bCancelPreparing.Tag = 1;
                 Cursor = Cursors.AppStarting;
                 
@@ -139,11 +139,11 @@ namespace BZEditor
             Match m = r.Match(e.Text);
             if (m.Success)
             {
-                lStatus.Text = "Статус: Упаковывается " + m.Groups["filename"].Value;
+                lStatus.Text = "РЎС‚Р°С‚СѓСЃ: РЈРїР°РєРѕРІС‹РІР°РµС‚СЃСЏ " + m.Groups["filename"].Value;
                 Application.DoEvents();
             }
             if (e.Text == "Everything is Ok")
-                lStatus.Text = "Статус: Упаковка завершена успешно.";
+                lStatus.Text = "РЎС‚Р°С‚СѓСЃ: РЈРїР°РєРѕРІРєР° Р·Р°РІРµСЂС€РµРЅР° СѓСЃРїРµС€РЅРѕ.";
         }
 
         public static string Convert(string value, Encoding src, Encoding trg)
@@ -159,7 +159,7 @@ namespace BZEditor
         private void ProcessCanceled(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
-            bCancelPreparing.Text = "Закрыть";
+            bCancelPreparing.Text = "Р—Р°РєСЂС‹С‚СЊ";
             bCancelPreparing.Tag = 0;
             Application.DoEvents();
         }
@@ -167,9 +167,9 @@ namespace BZEditor
         private void ProcessCompleted(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
-            bContinuePreparing.Text = "Открыть папку с архивом";
+            bContinuePreparing.Text = "РћС‚РєСЂС‹С‚СЊ РїР°РїРєСѓ СЃ Р°СЂС…РёРІРѕРј";
             bContinuePreparing.Tag = 1;
-            bCancelPreparing.Text = "Закрыть";
+            bCancelPreparing.Text = "Р—Р°РєСЂС‹С‚СЊ";
             bCancelPreparing.Tag = 0;
             Application.DoEvents();
         }
@@ -179,7 +179,7 @@ namespace BZEditor
             if (bCancelPreparing.Tag.ToString() == "1")
             {
                 processCaller?.Cancel();
-                bCancelPreparing.Text = "Закрыть";
+                bCancelPreparing.Text = "Р—Р°РєСЂС‹С‚СЊ";
                 bCancelPreparing.Tag = 0;
             }
             else

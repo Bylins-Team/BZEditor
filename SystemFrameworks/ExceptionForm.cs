@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
@@ -57,19 +57,19 @@ namespace SystemFrameworks
 
             BZedExceptionCatcher tec = new BZedExceptionCatcher(e.Exception);
 
-            // краткая информация
+            // РєСЂР°С‚РєР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ
             ef.rTBWhatHappened.Text = tec.GetUserExceptionInfo();
-            // подробная информация
+            // РїРѕРґСЂРѕР±РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ
             ef.rTBMoreInfo.Text = tec.GetFullExceptionInfo();
-            // заголовок формы (тип сообщения)
+            // Р·Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјС‹ (С‚РёРї СЃРѕРѕР±С‰РµРЅРёСЏ)
             ef.Text = GetFormTitle(tec.GetExceptionIcon());
-            // иконка сообщения (ти сообщения)
+            // РёРєРѕРЅРєР° СЃРѕРѕР±С‰РµРЅРёСЏ (С‚Рё СЃРѕРѕР±С‰РµРЅРёСЏ)
             ef.labelPicture.ImageIndex = GetExceptionIcon(tec.GetExceptionIcon());
-            // проверка типа сообщения
+            // РїСЂРѕРІРµСЂРєР° С‚РёРїР° СЃРѕРѕР±С‰РµРЅРёСЏ
             ef.CheckInfoType(GetExceptionIcon(tec.GetExceptionIcon()));
-            // запись в лог
+            // Р·Р°РїРёСЃСЊ РІ Р»РѕРі
             tec.WriteToErrorLog(GetExceptionIcon(tec.GetExceptionIcon()));
-            // отображение диалога
+            // РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РґРёР°Р»РѕРіР°
             ef.ShowDialog();
         }
 
@@ -79,19 +79,19 @@ namespace SystemFrameworks
 
             BZedExceptionCatcher tec = new BZedExceptionCatcher(ex);
 
-            // краткая информация
+            // РєСЂР°С‚РєР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ
             ef.rTBWhatHappened.Text = tec.GetUserExceptionInfo();
-            // подробная информация
+            // РїРѕРґСЂРѕР±РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ
             ef.rTBMoreInfo.Text = tec.GetFullExceptionInfo();
-            // заголовок формы (тип сообщения)
+            // Р·Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјС‹ (С‚РёРї СЃРѕРѕР±С‰РµРЅРёСЏ)
             ef.Text = GetFormTitle(tec.GetExceptionIcon());
-            // иконка сообщения (ти сообщения)
+            // РёРєРѕРЅРєР° СЃРѕРѕР±С‰РµРЅРёСЏ (С‚Рё СЃРѕРѕР±С‰РµРЅРёСЏ)
             ef.labelPicture.ImageIndex = GetExceptionIcon(tec.GetExceptionIcon());
-            // проверка типа сообщения
+            // РїСЂРѕРІРµСЂРєР° С‚РёРїР° СЃРѕРѕР±С‰РµРЅРёСЏ
             ef.CheckInfoType(GetExceptionIcon(tec.GetExceptionIcon()));
-            // запись в лог
+            // Р·Р°РїРёСЃСЊ РІ Р»РѕРі
             tec.WriteToErrorLog(GetExceptionIcon(tec.GetExceptionIcon()));
-            // отображение диалога
+            // РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РґРёР°Р»РѕРіР°
             ef.ShowDialog();
         }
 
@@ -99,32 +99,32 @@ namespace SystemFrameworks
         {
             ExceptionForm ef = new ExceptionForm();
 
-            // краткая информация
+            // РєСЂР°С‚РєР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ
             ef.rTBWhatHappened.Text = message;
-            // подробная информация
+            // РїРѕРґСЂРѕР±РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ
             ef.rTBMoreInfo.Text = "";
-            // заголовок формы (тип сообщения)
+            // Р·Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјС‹ (С‚РёРї СЃРѕРѕР±С‰РµРЅРёСЏ)
             switch (type)
             {
                 case EventLogEntryType.Error:
                     ef.rTBMoreInfo.Text = ex.StackTrace;
                     ef.labelPicture.ImageIndex = 2;
-                    ef.Text = "Ошибка";
+                    ef.Text = "РћС€РёР±РєР°";
                     break;
                 case EventLogEntryType.Information:
                     ef.labelPicture.ImageIndex = 1;
-                    ef.Text = "Информация";
+                    ef.Text = "РРЅС„РѕСЂРјР°С†РёСЏ";
                     ef.buttonMoreInfo.Hide();
                     ef.btnSendBagReport.Hide();
                     break;
                 case EventLogEntryType.Warning:
                     ef.labelPicture.ImageIndex = 0;
-                    ef.Text = "Предупреждение";
+                    ef.Text = "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ";
                     ef.buttonMoreInfo.Hide();
                     ef.btnSendBagReport.Hide();
                     break;
             }
-            // отображение диалога
+            // РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РґРёР°Р»РѕРіР°
             ef.ShowDialog();
         }
 
@@ -140,24 +140,24 @@ namespace SystemFrameworks
             _src = tec.GetExceptionSource();
             _stck = tec.GetExceptionStack();
 
-            // краткая информация
+            // РєСЂР°С‚РєР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ
             ef.rTBWhatHappened.Text = tec.GetUserExceptionInfo();
-            // подробная информация
+            // РїРѕРґСЂРѕР±РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ
             ef.rTBMoreInfo.Text = tec.GetFullExceptionInfo();
-            // заголовок формы (тип сообщения)
+            // Р·Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјС‹ (С‚РёРї СЃРѕРѕР±С‰РµРЅРёСЏ)
             ef.Text = GetFormTitle(tec.GetExceptionIcon());
-            // иконка сообщения (ти сообщения)
+            // РёРєРѕРЅРєР° СЃРѕРѕР±С‰РµРЅРёСЏ (С‚Рё СЃРѕРѕР±С‰РµРЅРёСЏ)
             ef.labelPicture.ImageIndex = GetExceptionIcon(tec.GetExceptionIcon());
-            // проверка типа сообщения
+            // РїСЂРѕРІРµСЂРєР° С‚РёРїР° СЃРѕРѕР±С‰РµРЅРёСЏ
             ef.CheckInfoType(GetExceptionIcon(tec.GetExceptionIcon()));
-            // запись в лог
+            // Р·Р°РїРёСЃСЊ РІ Р»РѕРі
             tec.WriteToErrorLog(GetExceptionIcon(tec.GetExceptionIcon()));
-            // отображение диалога
+            // РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РґРёР°Р»РѕРіР°
             ef.ShowDialog();
         }
 
         /// <summary>
-        /// получение иконки сообщения
+        /// РїРѕР»СѓС‡РµРЅРёРµ РёРєРѕРЅРєРё СЃРѕРѕР±С‰РµРЅРёСЏ
         /// </summary>
         private static int GetExceptionIcon(MessageBoxIcon inIcon)
         {
@@ -189,7 +189,7 @@ namespace SystemFrameworks
         }
 
         /// <summary>
-        /// получение заголовка формы
+        /// РїРѕР»СѓС‡РµРЅРёРµ Р·Р°РіРѕР»РѕРІРєР° С„РѕСЂРјС‹
         /// </summary>
         private static string GetFormTitle(MessageBoxIcon inIcon)
         {
@@ -227,7 +227,7 @@ namespace SystemFrameworks
         }
 
         /// <summary>
-        /// изменение размера формы
+        /// РёР·РјРµРЅРµРЅРёРµ СЂР°Р·РјРµСЂР° С„РѕСЂРјС‹
         /// </summary>
         private void ChangeFormSize(bool moreInfoIsVisible)
         {
@@ -236,7 +236,7 @@ namespace SystemFrameworks
                 MinimumSize = new Size(492, 311);
                 MaximumSize = new Size(800, 600);
                 Height = FormHeight;
-                buttonMoreInfo.Text = "Скрыть <<<";
+                buttonMoreInfo.Text = "РЎРєСЂС‹С‚СЊ <<<";
             }
 
             else
@@ -245,12 +245,12 @@ namespace SystemFrameworks
                 FormHeight = Height;
                 MaximumSize = new Size(800, 166);
                 Height = 166;
-                buttonMoreInfo.Text = "Подробнее >>>";
+                buttonMoreInfo.Text = "РџРѕРґСЂРѕР±РЅРµРµ >>>";
             }
         }
 
         /// <summary>
-        /// проверка типа сообщения и изменение вида формы в зависимости от этого
+        /// РїСЂРѕРІРµСЂРєР° С‚РёРїР° СЃРѕРѕР±С‰РµРЅРёСЏ Рё РёР·РјРµРЅРµРЅРёРµ РІРёРґР° С„РѕСЂРјС‹ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЌС‚РѕРіРѕ
         /// </summary>
         private void CheckInfoType(int inIconType)
         {
@@ -318,7 +318,7 @@ namespace SystemFrameworks
             s += _src.Replace(" ", "%20");
             s += "%0A%0DStack:%0D";
             s += _stck.Replace("\r", "").Replace("\n", "%0D").Replace(" ", "%20");
-            s += "%0A%0DКомментарий:%0D";
+            s += "%0A%0DРљРѕРјРјРµРЅС‚Р°СЂРёР№:%0D";
             Process.Start(s);
         }
 
@@ -374,13 +374,13 @@ namespace SystemFrameworks
             // menuItem3
             // 
             this.menuItem3.Index = 0;
-            this.menuItem3.Text = "Копировать выделенное";
+            this.menuItem3.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ РІС‹РґРµР»РµРЅРЅРѕРµ";
             this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
             // 
             // menuItem4
             // 
             this.menuItem4.Index = 1;
-            this.menuItem4.Text = "Копировать все";
+            this.menuItem4.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ РІСЃРµ";
             this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
             // 
             // panelMain
@@ -432,13 +432,13 @@ namespace SystemFrameworks
             // menuItem1
             // 
             this.menuItem1.Index = 0;
-            this.menuItem1.Text = "Копировать выделенное";
+            this.menuItem1.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ РІС‹РґРµР»РµРЅРЅРѕРµ";
             this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
             // 
             // menuItem2
             // 
             this.menuItem2.Index = 1;
-            this.menuItem2.Text = "Копировать все";
+            this.menuItem2.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ РІСЃРµ";
             this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
             // 
             // labelPicture
@@ -466,7 +466,7 @@ namespace SystemFrameworks
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 9;
-            this.buttonClose.Text = "Закрыть";
+            this.buttonClose.Text = "Р—Р°РєСЂС‹С‚СЊ";
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // btnSendBagReport
@@ -476,7 +476,7 @@ namespace SystemFrameworks
             this.btnSendBagReport.Name = "btnSendBagReport";
             this.btnSendBagReport.Size = new System.Drawing.Size(138, 23);
             this.btnSendBagReport.TabIndex = 10;
-            this.btnSendBagReport.Text = "Подготовить багрепорт";
+            this.btnSendBagReport.Text = "РџРѕРґРіРѕС‚РѕРІРёС‚СЊ Р±Р°РіСЂРµРїРѕСЂС‚";
             this.btnSendBagReport.Click += new System.EventHandler(this.btnSendBagReport_Click);
             // 
             // buttonMoreInfo
@@ -497,7 +497,7 @@ namespace SystemFrameworks
             this.groupBox.Size = new System.Drawing.Size(491, 134);
             this.groupBox.TabIndex = 1;
             this.groupBox.TabStop = false;
-            this.groupBox.Text = "Содержимое стека";
+            this.groupBox.Text = "РЎРѕРґРµСЂР¶РёРјРѕРµ СЃС‚РµРєР°";
             this.groupBox.Visible = false;
             // 
             // ExceptionForm
@@ -512,7 +512,7 @@ namespace SystemFrameworks
             this.Name = "ExceptionForm";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Сообщение:";
+            this.Text = "РЎРѕРѕР±С‰РµРЅРёРµ:";
             this.TopMost = true;
             this.panelMain.ResumeLayout(false);
             this.groupBox.ResumeLayout(false);
