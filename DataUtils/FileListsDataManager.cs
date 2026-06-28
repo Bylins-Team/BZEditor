@@ -149,74 +149,121 @@ namespace DataUtils
         readonly Regex num = new Regex("^#(?<Num>\\d+)$", RegexOptions.Compiled);
         readonly Regex name = new Regex("^(?<Name>.+)~", RegexOptions.Compiled);
 
+        // Zone-name regex for the YAML layout's zone.yaml (a simple single-line scalar).
+        private static readonly Regex yamlZoneName =
+            new Regex("^name:\\s*(?<Name>.+?)\\s*$", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Rebuilds the available-zones list from whatever world format is currently
+        /// selected (StaticData.WorldDataFormat). Zones no longer present are marked
+        /// NotFound (if preloaded) or dropped; newly found zones are added.
+        /// </summary>
         public bool LoadAvailZones()
         {
-            //Не очищается полностью так как этот список делится на загруженные и доступные и флаг загруженности хранится в списке
-            var targetFolder = new DirectoryInfo(StaticData.WorldFolderPath + @"\ZON\");
+            List<KeyValuePair<string, string>> discovered = DiscoverZones();
+            var present = new HashSet<string>();
+            foreach (var kv in discovered) present.Add(kv.Key);
+
             bool res = false;
-            List<ZoneData> toRemove = new List<ZoneData>(zonesFileList.Count);
+
+            var toRemove = new List<ZoneData>();
             foreach (ZoneData zd in zonesFileList)
             {
-                if (!File.Exists(StaticData.WorldFolderPath + @"\ZON\" + zd.FileName + ".zon"))
+                if (!present.Contains(zd.FileName))
                 {
-                    //Если зона была загружена при закрытии а потом пропала, то просто метим как ненайденную
-                    if (zd.Preloading)
-                        zd.State = ZoneState.NotFound;
-                    else //Иначе удаляем из списка доступных без следа
-                        toRemove.Add(zd);
+                    if (zd.Preloading) zd.State = ZoneState.NotFound;
+                    else toRemove.Add(zd);
                     res = true;
                 }
             }
-            if (toRemove.Count > 0)
-                foreach (ZoneData zd in toRemove)
-                    zonesFileList.Remove(zd);
+            foreach (ZoneData zd in toRemove)
+                zonesFileList.Remove(zd);
 
-            foreach (FileInfo nextFile in targetFolder.GetFiles())
+            foreach (var kv in discovered)
             {
-                if (nextFile.Extension == ".zon")
+                ZoneData zd = zonesFileList[kv.Key];
+                if (zd == null)
                 {
-                    using (var sr = new StreamReader(nextFile.FullName, StaticData.CurrentEncoding))
-                    {
-                        string input;
-                        string newnumber = "";
-                        string newname = "";
-                        while ((input = sr.ReadLine()) != null)
-                        {
-                            if (input == "$")
-                                break;
-                            if (input.IndexOf("*") == 0)
-                                continue;
-                            Match match = num.Match(input);
-                            if (match.Success)
-                            {
-                                newnumber = match.Groups["Num"].ToString();
-                                continue;
-                            }
-                            match = name.Match(input);
-                            if (match.Success)
-                            {
-                                newname = match.Groups["Name"].ToString();
-                                break;
-                            }
-                        }
-                        ZoneData zd = zonesFileList[newnumber];
-                        if (zd == null)
-                        {
-                            zd = new ZoneData(newnumber, newname) {State = ZoneState.Available};
-                            zonesFileList.Add(zd);
-                            res = true;
-                        }
-                        else if (zd.Name != newname)
-                        {
-                            zd.Name = newname;
-                            res = true;
-                        }
-                        sr.Close();
-                    }
+                    zonesFileList.Add(new ZoneData(kv.Key, kv.Value) { State = ZoneState.Available });
+                    res = true;
+                }
+                else if (zd.Name != kv.Value)
+                {
+                    zd.Name = kv.Value;
+                    res = true;
                 }
             }
 
             return res;
+        }
+
+        /// <summary>Discover (number -> name) of zones in the current world for the selected format.</summary>
+        private List<KeyValuePair<string, string>> DiscoverZones()
+        {
+            if (string.Equals(StaticData.WorldDataFormat, "yaml", StringComparison.OrdinalIgnoreCase))
+                return DiscoverZonesYaml();
+            return DiscoverZonesCircle();
+        }
+
+        /// <summary>Legacy layout: parse number + name from each world/ZON/*.zon file.</summary>
+        private List<KeyValuePair<string, string>> DiscoverZonesCircle()
+        {
+            var result = new List<KeyValuePair<string, string>>();
+            var targetFolder = new DirectoryInfo(StaticData.WorldFolderPath + @"\ZON\");
+            if (!targetFolder.Exists) return result;
+
+            foreach (FileInfo nextFile in targetFolder.GetFiles())
+            {
+                if (nextFile.Extension != ".zon") continue;
+                string newnumber = "";
+                string newname = "";
+                using (var sr = new StreamReader(nextFile.FullName, StaticData.CurrentEncoding))
+                {
+                    string input;
+                    while ((input = sr.ReadLine()) != null)
+                    {
+                        if (input == "$") break;
+                        if (input.IndexOf("*") == 0) continue;
+                        Match match = num.Match(input);
+                        if (match.Success) { newnumber = match.Groups["Num"].ToString(); continue; }
+                        match = name.Match(input);
+                        if (match.Success) { newname = match.Groups["Name"].ToString(); break; }
+                    }
+                }
+                if (newnumber.Length > 0)
+                    result.Add(new KeyValuePair<string, string>(newnumber, newname));
+            }
+            return result;
+        }
+
+        /// <summary>Flat/per-file YAML layout: a zone is a world/zones/&lt;n&gt;/ dir with a zone.yaml.</summary>
+        private List<KeyValuePair<string, string>> DiscoverZonesYaml()
+        {
+            var result = new List<KeyValuePair<string, string>>();
+            string zonesDir = Path.Combine(StaticData.WorldFolderPath, "zones");
+            if (!Directory.Exists(zonesDir)) return result;
+
+            Encoding enc = StaticData.CurrentEncoding ?? Encoding.GetEncoding("koi8-r");
+            foreach (string subdir in Directory.GetDirectories(zonesDir))
+            {
+                string number = Path.GetFileName(subdir);
+                string zoneYaml = Path.Combine(subdir, "zone.yaml");
+                if (!File.Exists(zoneYaml)) continue;
+
+                string zname = number;
+                try
+                {
+                    foreach (string line in File.ReadAllLines(zoneYaml, enc))
+                    {
+                        Match m = yamlZoneName.Match(line);
+                        if (m.Success) { zname = m.Groups["Name"].ToString().Trim('\'', '"'); break; }
+                    }
+                }
+                catch { /* unreadable zone.yaml: fall back to the number as the name */ }
+
+                result.Add(new KeyValuePair<string, string>(number, zname));
+            }
+            return result;
         }
 
         public void AddZoneToLoadedList(string number)
