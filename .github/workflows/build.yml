@@ -27,13 +27,26 @@ jobs:
       - name: Build (Release)
         run: msbuild BZEditor.sln -p:Configuration=Release -m
 
+      - name: Run tests
+        shell: pwsh
+        run: |
+          $runner = Get-ChildItem packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe |
+            Select-Object -First 1
+          if (-not $runner) { Write-Error "NUnit console runner not found"; exit 1 }
+          & $runner.FullName BZEditorBuild/DataUtils.Tests.dll --noresult
+          # Integration tests (which need a world via BZED_TEST_WORLD) are skipped here;
+          # exit code reflects only real failures.
+          if ($LASTEXITCODE -ne 0) { Write-Error "tests failed ($LASTEXITCODE)"; exit $LASTEXITCODE }
+
       - name: Assemble installable package
         shell: pwsh
         run: |
           $dist = "dist/BZEditor"
           New-Item -ItemType Directory -Force $dist | Out-Null
-          # binaries (exe + dlls + app config), excluding debug symbols
-          Copy-Item BZEditorBuild/*.exe, BZEditorBuild/*.dll, BZEditorBuild/*.config -Destination $dist
+          # binaries (exe + dlls + app config), excluding debug symbols and test assemblies
+          Get-ChildItem BZEditorBuild/*.exe, BZEditorBuild/*.dll, BZEditorBuild/*.config |
+            Where-Object { $_.Name -notmatch '^(DataUtils\.Tests|nunit)' } |
+            Copy-Item -Destination $dist
           # default data + sample world (ready to run)
           Copy-Item redist/* -Destination $dist -Recurse -Force
 
