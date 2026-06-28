@@ -122,6 +122,7 @@ namespace DataUtils.YamlMappers
             if (mob.LikeWork != 0) { enhanced.LikeWork = mob.LikeWork; hasEnhanced = true; }
             if (mob.MaxFactor != 0) { enhanced.MaxFactor = mob.MaxFactor; hasEnhanced = true; }
             if (mob.ExtraAttack != 0) { enhanced.ExtraAttack = mob.ExtraAttack; hasEnhanced = true; }
+            if (mob.MobRemort != 0) { enhanced.MobRemort = mob.MobRemort; hasEnhanced = true; }
             if (!string.IsNullOrEmpty(mob.SpecialBitvector)) { enhanced.SpecialBitvector = mob.SpecialBitvector; hasEnhanced = true; }
 
             // Role bitvector as a 9-char binary string (same encoding as the legacy "Role:" line)
@@ -228,7 +229,9 @@ namespace DataUtils.YamlMappers
                 yaml.LoadedObjectAfterDeath.Add(new YamlLoadedObjAfterDeath
                 {
                     ObjVNum = obj.VNum,
-                    Probability = obj.LoadProb
+                    Probability = obj.LoadProb,
+                    LoadType = obj.LoadType,
+                    SpecParam = obj.SpecParam
                 });
             }
 
@@ -344,6 +347,7 @@ namespace DataUtils.YamlMappers
                 if (enh.LikeWork.HasValue) mob.LikeWork = enh.LikeWork.Value;
                 if (enh.MaxFactor.HasValue) mob.MaxFactor = enh.MaxFactor.Value;
                 if (enh.ExtraAttack.HasValue) mob.ExtraAttack = enh.ExtraAttack.Value;
+                if (enh.MobRemort.HasValue) mob.MobRemort = enh.MobRemort.Value;
                 if (!string.IsNullOrEmpty(enh.SpecialBitvector)) mob.SpecialBitvector = enh.SpecialBitvector;
 
                 // Role bitvector: positions of set bits (mirrors MobsFileManager "Role:" parsing)
@@ -437,7 +441,9 @@ namespace DataUtils.YamlMappers
                 {
                     mob.LoadedObjectAfterDeath.Add(new LoadedObjAfterDeath(obj.ObjVNum)
                     {
-                        LoadProb = obj.Probability
+                        LoadProb = obj.Probability,
+                        LoadType = obj.LoadType,
+                        SpecParam = obj.SpecParam
                     });
                 }
             }

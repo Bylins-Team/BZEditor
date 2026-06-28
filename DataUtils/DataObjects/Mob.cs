@@ -718,6 +718,19 @@ namespace DataUtils
             }
         }
 
+        private int mobRemort;
+        // Mob remort level (enhanced E-spec). Preserved through YAML save.
+        public int MobRemort
+        {
+            get => mobRemort;
+            set
+            {
+                if (mobRemort == value) return;
+                mobRemort = value;
+                FireChangeEvent(this);
+            }
+        }
+
         /// <summary>
         /// Класс моба
         /// </summary>
