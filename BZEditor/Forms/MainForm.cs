@@ -328,11 +328,22 @@ namespace BZEditor
         private static void Main()
         {
             Application.EnableVisualStyles();
-//#if !DEBUG
             Application.ThreadException += ExceptionForm.ExceptionCatcher;
             AppDomain.CurrentDomain.UnhandledException += ExceptionForm.UnhandledException;
-//#endif
-            Application.Run(new MainForm());
+            // Route unhandled UI-thread exceptions to the error dialog instead of
+            // terminating the process ("crashes on any little error").
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+            try
+            {
+                Application.Run(new MainForm());
+            }
+            catch (Exception ex)
+            {
+                // An exception while constructing the main window (e.g. loading the
+                // world at startup) is thrown before the message loop starts, so the
+                // ThreadException handler never sees it -- show it rather than crash.
+                ExceptionForm.ExceptionCatcher(ex);
+            }
         }
 
         private void TsmiSaveAllZonesClick(object sender, EventArgs e)
@@ -944,16 +955,30 @@ namespace BZEditor
             tsslSaveZoneName.Visible = true;
             tsslSaveIco.Visible = true;
             tspbSaveProgress.Maximum = dmArray.Count;
-            foreach (ZoneDataManager dm in dmArray)
+            try
             {
-                tsslSaveZoneName.Text = "[" + dm.Zone.Number + "]" + dm.Zone.Name;
-                SaveData(dm);
-                tspbSaveProgress.Value++;
-                Application.DoEvents();
+                foreach (ZoneDataManager dm in dmArray)
+                {
+                    tsslSaveZoneName.Text = "[" + dm.Zone.Number + "]" + dm.Zone.Name;
+                    try
+                    {
+                        SaveData(dm);
+                    }
+                    catch (Exception ex)
+                    {
+                        // ќдна зона не должна срывать сохранение остальных.
+                        ExceptionForm.ExceptionCatcher("Ќе удалось сохранить зону " + dm.Zone.Number, ex, EventLogEntryType.Error);
+                    }
+                    tspbSaveProgress.Value++;
+                    Application.DoEvents();
+                }
             }
-            tspbSaveProgress.Visible = false;
-            tsslSaveZoneName.Visible = false;
-            tsslSaveIco.Visible = false;
+            finally
+            {
+                tspbSaveProgress.Visible = false;
+                tsslSaveZoneName.Visible = false;
+                tsslSaveIco.Visible = false;
+            }
         }
 
         private ZoneDataManager GetDataManagerByName(string number)
