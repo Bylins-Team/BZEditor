@@ -88,7 +88,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CBasesDataManager.cs" />
-    <Compile Include="DgScriptEditor.cs" />
+    <Compile Include="DgScriptEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\CreateSketchForm.cs">
       <SubType>Form</SubType>
     </Compile>

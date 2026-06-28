@@ -1518,7 +1518,22 @@ namespace BZEditor
 
         private void BrowseZonesToSendClick(object sender, EventArgs e)
         {
-            Process.Start(Path.Combine(Application.StartupPath, "ZonesToSend"));
+            var path = Path.Combine(Application.StartupPath, "ZonesToSend");
+
+            if (!Directory.Exists(path))
+            {
+                try
+                {
+                    Directory.CreateDirectory(path);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show($"Не могу создать папку для отправки. Ошибка: {ex.Message}");
+                    return;
+                }
+            }
+
+            Process.Start(path);
         }
 
         private void TsmiSelectDataFormatClick(object sender, EventArgs e)
