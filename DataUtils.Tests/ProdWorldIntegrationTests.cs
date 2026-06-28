@@ -42,7 +42,6 @@ namespace DataUtils.Tests
             var koi = Encoding.GetEncoding("koi8-r");
             StaticData.CurrentEncoding = koi;
             StaticData.WorldFolderPath = world;
-            StaticData.WorldDataFormat = "yaml";
 
             var failed = new List<int>();
             foreach (int z in ZoneNumbers(world))
@@ -95,7 +94,6 @@ namespace DataUtils.Tests
         private static ZoneDataManager Load(string dir, string zn, Encoding enc)
         {
             StaticData.WorldFolderPath = dir;
-            StaticData.WorldDataFormat = "yaml";
             var z = new ZoneDataManager(zn, enc);
             z.LoadData();
             return z;

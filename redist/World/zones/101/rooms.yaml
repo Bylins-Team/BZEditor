@@ -1,0 +1,724 @@
+# Rooms for zone 101
+
+0:
+  zone: 101
+  name: На дороге
+  description: |2-
+       Вы стоите на дороге, которая ведет к дому Соловья-разбойника. Дорога под
+    ногами наезжена, видно Соловей со своими сыновьями частенько выезжают на свой
+    промысел.
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10050
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10101
+    lock_complexity: 0
+  triggers:
+  - 10120
+
+1:
+  zone: 101
+  name: Перед воротами
+  description: |2-
+       Вы стоите перед дубовыми воротами. Ворота все железом окованы, а петли у тех
+    ворот булатные. Все это не для красоты, а для крепости сделано.
+  sector: kField
+  exits:
+  - direction: east
+    keywords: ворота
+    exit_flags: 1
+    key: -1
+    to_room: 10102
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10100
+    lock_complexity: 0
+
+2:
+  zone: 101
+  name: На широком дворе
+  description: |2-
+       Вы вошли на широкий двор. Перед вами постройка-строеньице. Крыша-кровля
+    узорно обделана, на крыше, на столбике петушок вырезан, на окошках резные
+    наличники. Это дом Соловья-разбойника.
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10103
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10104
+    lock_complexity: 0
+  - direction: west
+    keywords: ворота
+    exit_flags: 1
+    key: -1
+    to_room: 10101
+    lock_complexity: 0
+
+3:
+  zone: 101
+  name: На широком дворе
+  description: |2-
+       Вы стоите на широком дворе, с западной стороны забор высокий. С восточной
+    стороны дом Соловья и его семейства.
+  sector: kCity
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10102
+    lock_complexity: 0
+
+4:
+  zone: 101
+  name: На широком дворе
+  description: |2-
+       Вы подошли к углу дома, за поворотом должен быть вход в хоромы. С южной
+    стороны виден сад.
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10102
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10109
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10134
+    lock_complexity: 0
+
+5:
+  zone: 101
+  name: В оружейной
+  description: |2-
+       Вы вошли в комнату и не поверили своим глазам. Все ее стены увешаны разным
+    оружием. На полу постелен мягкий ковер и на нем тоже разложено оружие, которому
+    не хватило места на стенах.
+  sector: kInside
+  exits:
+  - direction: east
+    exit_flags: 1
+    key: -1
+    to_room: 10108
+    lock_complexity: 0
+
+6:
+  zone: 101
+  name: На лестнице
+  description: |2-
+       Здесь перед вами небольшие сени. Направо дверь в комнаты, впереди лестница
+    на второй этаж.
+  sector: kInside
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10107
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10109
+    lock_complexity: 0
+  - direction: up
+    exit_flags: 0
+    key: -1
+    to_room: 10114
+    lock_complexity: 0
+
+7:
+  zone: 101
+  name: В коридоре
+  description: |-
+    ___Вы стоите посреди широкого коридора, с трех сторон двери в другие комнаты.
+    На южной стороне окно, из него виден широкий двор. На другом конце двора
+    какой-то сарай.
+  sector: kInside
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10108
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10112
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10106
+    lock_complexity: 0
+
+8:
+  zone: 101
+  name: В спальне Соловья-разбойника
+  description: |-
+    ___Перед вами комната, застеленная богатыми коврами. Посреди нее стоит резная
+    кровать, покрытая дорогими шкурами. Стены также украшены шкурами зверей и
+    щитами, окованными золотом. Судя по всему, эта комната принадлежит самому
+    Соловью. Слева находится дубовая дверь.
+  sector: kInside
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10107
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 1
+    key: -1
+    to_room: 10105
+    lock_complexity: 0
+
+9:
+  zone: 101
+  name: На широком дворе
+  description: "___Вы стоите на дворе возле дома, перед вами (на севере) двери в дом\r\nСоловья-разбойника. "
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10106
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10110
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10104
+    lock_complexity: 0
+
+10:
+  zone: 101
+  name: На широком дворе
+  description: |2-
+       Вы находитесь на широком дворе. С южной стороны стоит сарай. С 
+    северной - стоит дом и прямо во двор выходят резные окна.
+  sector: kCity
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10121
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10113
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10109
+    lock_complexity: 0
+
+11:
+  zone: 101
+  name: На кухне
+  description: |2-
+       Вы пришли на кухню. Напротив стоит большая печь, в печи жарко горит огонь.
+    Подле печи стоит ухват для чугунков. Слева от печи широкий стол, на нем стоят
+    тарелки с разной снедью. На стенах висят полки, на них стоит расписная посуда.
+    Справа (восток) черный ход во двор. Прямо (север) дверь в кладовую.
+  sector: kInside
+  exits:
+  - direction: north
+    exit_flags: 1
+    key: -1
+    to_room: 10126
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 1
+    key: 0
+    to_room: 10120
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10112
+    lock_complexity: 0
+
+12:
+  zone: 101
+  name: В столовой
+  description: |2-
+       Вы стоите в комнате, посреди которой широкий дубовый стол. Вокруг стола
+    множество стульев из того же дуба. Много народа можно посадить за этот стол,
+    большая семья у Соловья-разбойника.
+  sector: kInside
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10111
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10107
+    lock_complexity: 0
+
+13:
+  zone: 101
+  name: В сарае
+  description: "   Вы стоите посреди сарая. Около стены стоят вилы и лопаты. На стенах\r\nразвешаны разные инструменты, молотки, клещи. В самом дальнем углу стоит\r\nбольшая дубовая кадка с дождевой водой. Скорее всего она наполняется во время\r\nдождя. "
+  sector: kInside
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10110
+    lock_complexity: 0
+
+14:
+  zone: 101
+  name: На лестнице
+  description: |2-
+       Вы поднялись по лестнице на второй этаж. На право просторный коридор, прямо
+    вход в светлую комнату. На верху виден люк, с помощью приставленной к стене
+    лестницы можно до него добраться.
+  sector: kInside
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10115
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10118
+    lock_complexity: 0
+  - direction: up
+    exit_flags: 0
+    key: -1
+    to_room: 10130
+    lock_complexity: 0
+  - direction: down
+    exit_flags: 0
+    key: -1
+    to_room: 10106
+    lock_complexity: 0
+
+15:
+  zone: 101
+  name: В комнате с добычей
+  description: "   Вы вошли в комнату, вся она заставлена награбленной добычей, тут и ковры\r\nперсидские, и бархат, и парча, и шелка заморские. Злато-серебра и жемчуга\r\nскатного целые сундуки нагружены. "
+  sector: kInside
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10114
+    lock_complexity: 0
+
+16:
+  zone: 101
+  name: В спальне
+  description: |2-
+       Вы вошли в просторную комнату. По обе стороны стоят кровати дубовые. Это
+    спальня, в которой отдыхают сыновья Соловья-разбойника. Вместо постелей им
+    служат звериные шкуры. Наверняка разбойники их отобрали у купцов, которые
+    пытались проехать прямой дорогой через дубраву.
+  sector: kInside
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10118
+    lock_complexity: 0
+
+17:
+  zone: 101
+  name: В спальне Марьи
+  description: |2-
+       Эта комната Марьи Соловьевны, дочери разбойника. Посреди комнаты стоит
+    кровать резная. По углам кровати коньки вырезаны, гривы у них позолоченные. 
+    На кровати постель пуховая, дорогим шелковым покрывалом застелена. На полу,
+    вместо ковров, меха собольи постелены.
+  sector: kInside
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10119
+    lock_complexity: 0
+
+18:
+  zone: 101
+  name: В коридоре
+  description: |2-
+       Перед вами такой же коридор, как и на первом этаже. По нему можно пройти в
+    другие комнаты.
+  sector: kInside
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10116
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10119
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10114
+    lock_complexity: 0
+
+19:
+  zone: 101
+  name: В горнице
+  description: |2-
+       Вы находитесь в горнице. Посреди стоит столик узорчатый, по обе стороны от
+    него кресла витые. Когда-то эта мебель предназначалась для княжеского дома.
+    А возле окон висят клетки с певчими птицами. Видно Соловей-разбойник добыл все
+    это для своей дочери. А вон и двери в ее опочивальню.
+  sector: kInside
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10117
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10118
+    lock_complexity: 0
+
+20:
+  zone: 101
+  name: На заднем дворе
+  description: |2-
+       Вы стоите на заднем дворе, посреди него стоит телега, груженая сеном, может
+    быть в этой телеге разбойники въезжали в города не замеченные. Вы видите, что
+    здесь есть черный ход в дом Соловья.
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10129
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10123
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10111
+    lock_complexity: 0
+
+21:
+  zone: 101
+  name: На широком дворе
+  description: |2-
+       Вы находитесь на дворе, слева коновязь, разбойники здесь привязывают своих
+    коней, когда возвращаются со своего промысла. На юге стоит конюшня.
+  sector: kCity
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10122
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10127
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10110
+    lock_complexity: 0
+
+22:
+  zone: 101
+  name: На заднем дворе
+  description: |2-
+       Вы пришли на задний двор. Вокруг двора тын нагорожен, вдоль по тыну - копья
+    острые, и на каждом - человеческие головы.
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10123
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10121
+    lock_complexity: 0
+
+23:
+  zone: 101
+  name: На заднем дворе
+  description: |2-
+       Вы стоите на заднем дворе, здесь (запад) двери в подвалы подземельные,
+    надобно открыть отворить их, вдруг там люди в неволе томятся?
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10120
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10122
+    lock_complexity: 0
+  - direction: down
+    exit_flags: 0
+    key: -1
+    to_room: 10124
+    lock_complexity: 0
+
+24:
+  zone: 101
+  name: В туннеле
+  description: |2-
+        Вы вошли в длинный туннель, вокруг стоит запах сырости и гниения. Стены
+    этого коридора сложены из больших камней, которые покрыты серой плесенью и
+    на ощупь влажные и скользкие. Впереди вы видите стальную дверь, закрытую на
+    пудовый замок.
+  sector: kInside
+  exits:
+  - direction: west
+    exit_flags: 9
+    key: 10111
+    to_room: 10125
+    lock_complexity: 0
+  - direction: up
+    exit_flags: 0
+    key: -1
+    to_room: 10123
+    lock_complexity: 0
+
+25:
+  zone: 101
+  name: В темнице
+  description: |2-
+       Вы открыли стальную дверь и вошли в темницу подземельную, в ней полоненые
+    витязи, знать для выкупа богатого их здесь держат. Они все к стенам цепями
+    прикованы, надобно найти чем бы их освободить.
+  sector: kInside
+  exits:
+  - direction: east
+    exit_flags: 9
+    key: 10111
+    to_room: 10124
+    lock_complexity: 0
+
+26:
+  zone: 101
+  name: В кладовой
+  description: |2-
+       Вы пришли в кладовую. На полках лежит много разной снеди. Здесь и сыр, и
+    запас разных круп и много другое. К потолку приделаны крючья, на них висят
+    колбасы, целые окорока копченые. А в углу стоят большие бутыли, оплетенные
+    лозой, в них вина дорогие налиты.
+  sector: kInside
+  exits:
+  - direction: south
+    exit_flags: 1
+    key: -1
+    to_room: 10111
+    lock_complexity: 0
+
+27:
+  zone: 101
+  name: На конюшне
+  description: |2-
+       Вы вошли в просторную конюшню. Здесь стоит конский запах. Вдоль длинного
+    прохода находятся стойла для лошадей. В яслях засыпана белоярая пшеница, у
+    каждых ясель также стоит ведро с чистой водой. Вы замечаете небольшую
+    дверь (восток).
+  sector: kInside
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10121
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10128
+    lock_complexity: 0
+
+28:
+  zone: 101
+  name: В комнатке при конюшне
+  description: |-
+    ___Вы вошли в комнатку, в которой хранится конская сбруя, седла,
+    уздечки. Здесь же в углу лежит большая охапка сена, наверняка на
+    ней спит невольник, который убирает в конюшни и ухаживает за лошадьми.
+  sector: kInside
+  exits:
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10127
+    lock_complexity: 0
+
+29:
+  zone: 101
+  name: На заднем дворе
+  description: |2-
+       Вы пришли в самый дальний конец двора. Посреди него стоит колодец с ключевой
+    водой. Возле него, на скамеечке стоит ведро на цепи. Может быть стоит подойти
+    и испить студеной водички.
+  sector: kCity
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10120
+    lock_complexity: 0
+
+30:
+  zone: 101
+  name: На крыше
+  description: "   Вы поднялись по лестнице на крышу, на северной стороне виден резной петушок.\r\nС восточной стороны видна печная труба.  "
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10131
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10133
+    lock_complexity: 0
+  - direction: down
+    exit_flags: 0
+    key: -1
+    to_room: 10114
+    lock_complexity: 0
+
+31:
+  zone: 101
+  name: На крыше возле петушка
+  description: |2-
+       Вы добрались до самого столбика, на верхушке которого - резной петушок.
+    Отсюда видно, что он не простое украшение на крыше, глаза у него из двух
+    больших рубинов, а хвост украшен изумрудами. Такие большие камни только
+    волшебники используют для своей магии.
+  sector: kCity
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10132
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10130
+    lock_complexity: 0
+
+32:
+  zone: 101
+  name: На краю крыши
+  description: |2-
+       Вы подошли к самому краю крыши, внизу виден весь задний двор, как на ладони.
+    С южной стороны от вас дымит печная труба и дым выбивает из ваших глаз слезы.
+    Надо бы поскорей отсюда убираться.
+  sector: kCity
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10133
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10131
+    lock_complexity: 0
+
+33:
+  zone: 101
+  name: У трубы на крыше
+  description: |2-
+       Вы стоите у самой печной трубы, она сложена из белого кирпича. Верх у трубы
+    черный от идущего из нее дыма.
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10132
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10130
+    lock_complexity: 0
+
+34:
+  zone: 101
+  name: В саду
+  description: |2-
+       Вы вошли в сад. Когда-то это было прекрасное место для отдыха, но видно,
+    что за ним никто давно не ухаживал. Соловей-разбойник со своими сыновьями
+    живут награбленным, зачем им еще работать в саду.
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10104
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10135
+    lock_complexity: 0
+
+35:
+  zone: 101
+  name: В саду
+  description: "   Вы пришли в глубину сада, там царит все то же запустение. Кое-где попадаются\r\nдаже засохшие деревья, которые упали на землю. "
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10134
+    lock_complexity: 0

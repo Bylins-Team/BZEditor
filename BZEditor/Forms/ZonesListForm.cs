@@ -279,10 +279,16 @@ namespace BZEditor
         {
             ExtListViewItem elvi = ((ExtListViewItem)(lvZones.GetItemAt(e.X, e.Y)));
             if (elvi == null) return;
-            tsmiUnloadZone.Enabled = (elvi.StateImageIndex == 0 || elvi.StateImageIndex == 4);
+            // Loaded (0), Opened (2) and NotFound (4) can be unloaded. An open zone
+            // gets its editor tab closed by MainForm before it is dropped. Changed (3)
+            // stays blocked so unsaved edits are not silently thrown away.
+            tsmiUnloadZone.Enabled = (elvi.StateImageIndex == 0 || elvi.StateImageIndex == 2 || elvi.StateImageIndex == 4);
             tsmiUnloadZone.Text = (elvi.StateImageIndex == 4) ? "Убрать из списка" : "Выгрузить";
-            tsmiSaveZone.Enabled = (elvi.StateImageIndex == 3);
-            tsmiEditLoaded.Enabled = (elvi.StateImageIndex != 2);
+            // Save an open zone (2) or one with pending edits (3); writing a clean zone is a harmless no-op.
+            tsmiSaveZone.Enabled = (elvi.StateImageIndex == 2 || elvi.StateImageIndex == 3);
+            // "Edit" opens the zone, or focuses its tab if it is already open
+            // (TreeFormItemDoubleClicked handles both); only a missing zone has nothing to open.
+            tsmiEditLoaded.Enabled = (elvi.StateImageIndex != 4);
             tsmiPrepareAvailToSedind.Enabled = (elvi.StateImageIndex != 3 && elvi.StateImageIndex != 4);
         }
 

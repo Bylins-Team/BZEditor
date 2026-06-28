@@ -62,6 +62,8 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
@@ -167,7 +169,6 @@
     <Compile Include="Forms\PrepareZoneToSendForm.Designer.cs">
       <DependentUpon>PrepareZoneToSendForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\AsyncOperation.cs" />
     <Compile Include="Utils\AutoCases.cs" />
     <Compile Include="Forms\AboutForm.cs">
       <SubType>Form</SubType>
@@ -200,7 +201,6 @@
       <DependentUpon>CtreateTemplateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\TextFormatter.cs" />
-    <Compile Include="Utils\ProcessCaller.cs" />
     <Compile Include="Utils\TaggedComboBoxItem.cs" />
     <Compile Include="Forms\TemplatesForm.cs">
       <SubType>Form</SubType>
@@ -236,9 +236,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormatSelectionDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -582,4 +579,20 @@ if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)
   <Target Name="AfterBuild">
   </Target>
   -->
+  <!-- Keep the runtime data (Bases / Configurations / World) next to the built exe so the
+       editor runs the same way from Visual Studio (F5), from a direct BZEditorBuild\BZEditor.exe
+       run, and from the CI package. The data lives in redist\ at the repo root. -->
+  <Target Name="CopyRuntimeData" AfterTargets="Build">
+    <ItemGroup>
+      <_RuntimeData Include="$(MSBuildProjectDirectory)\..\redist\**\*"
+                    Exclude="$(MSBuildProjectDirectory)\..\redist\BZEditorConfig.xml" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_RuntimeData)"
+          DestinationFiles="@(_RuntimeData->'$(OutDir)%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+    <!-- Seed a default config only when none exists; never overwrite the user's. -->
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\..\redist\BZEditorConfig.xml"
+          DestinationFolder="$(OutDir)"
+          Condition="!Exists('$(OutDir)BZEditorConfig.xml')" />
+  </Target>
 </Project>

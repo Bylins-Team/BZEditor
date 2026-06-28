@@ -1,16 +1,14 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
-using System.Text.RegularExpressions;
+using System.IO.Compression;
 using System.Windows.Forms;
 using DataUtils;
-using System.Text;
 
 namespace BZEditor
 {
     public partial class PrepareZoneToSendForm : BaseDialog
     {
-        private ProcessCaller processCaller;
         private readonly string zoneNum;
         private readonly string zonesToSendPath;
 
@@ -22,14 +20,19 @@ namespace BZEditor
         public PrepareZoneToSendForm(string zoneNum, string zoneName)
             : this()
         {
-            
             zonesToSendPath = Path.Combine(Application.StartupPath, "ZonesToSend");
             this.zoneNum = zoneNum;
             lInfo.Text = "Зона: [" + zoneNum + "] " + zoneName;
-            string s = zoneNum + " " + zoneName + ".7z";
+            string s = zoneNum + " " + zoneName + ".zip";
             foreach (char ic in Path.GetInvalidFileNameChars())
                 s = s.Replace(ic, '_').Replace(" ", "_");
             tbArcName.Text = s;
+
+            // A YAML zone is the whole zones/<n>/ directory (sketches live inside the
+            // room files, there is no separate map/sketch file), so these legacy
+            // "include map / include sketches" toggles no longer mean anything.
+            cbMapIncluding.Visible = false;
+            cbSktIncluding.Visible = false;
         }
 
         private bool ValidateName()
@@ -66,126 +69,75 @@ namespace BZEditor
                 catch
                 {
                 }
+                return;
             }
-            else
+
+            if (!ValidateName()) return;
+            Utils.EnsureDirectory(zonesToSendPath);
+            string filePath = Path.Combine(zonesToSendPath, tbArcName.Text);
+            if (File.Exists(filePath))
             {
-                if (!ValidateName()) return;
-                Utils.EnsureDirectory(zonesToSendPath);
-                string filePath = Path.Combine(zonesToSendPath, tbArcName.Text);
-                if (File.Exists(filePath))
-                {
-                    DialogResult dr =
-                        MessageBox.Show($"Файл {filePath} уже существует! Перезаписать?", "Файл уже существует",
-                                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (dr == DialogResult.No) return;
-                }
-                bCancelPreparing.Text = "Отмена";
-                bCancelPreparing.Tag = 1;
-                Cursor = Cursors.AppStarting;
-                
-                processCaller = new ProcessCaller(this)
-                                    {                                        
-                                        FileName = Path.Combine(Application.StartupPath, "7z.exe"),
-                                        Arguments = GetArguments(filePath)
-                                    };
-                processCaller.StdErrReceived += WriteStreamInfo;
-                processCaller.StdOutReceived += WriteStreamInfo;
-                processCaller.Completed += ProcessCompleted;
-                processCaller.Cancelled += ProcessCanceled;
-                //processCaller.Failed += no event handler for this one, yet.
-                tbArcName.ReadOnly = true;
-                processCaller.Start();
+                DialogResult dr =
+                    MessageBox.Show($"Файл {filePath} уже существует! Перезаписать?", "Файл уже существует",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr == DialogResult.No) return;
             }
-        }
 
-        private string GetArguments(string filePath)
-        {
-            string res = "a \"" + filePath + "\"";
-            string fpath = Path.Combine(StaticData.WorldFolderPath, @"mob\" + zoneNum + ".mob");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"obj\" + zoneNum + ".obj");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"shp\" + zoneNum + ".shp");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"trg\" + zoneNum + ".trg");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"wld\" + zoneNum + ".wld");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"wld\" + zoneNum + ".map");
-            if (cbMapIncluding.Checked && File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"wld\" + zoneNum + ".skt");
-            if (cbSktIncluding.Checked && File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            fpath = Path.Combine(StaticData.WorldFolderPath, @"zon\" + zoneNum + ".zon");
-            if (File.Exists(fpath))
-                res += " \"" + fpath + "\"";
-            res += " -y -mx9 -ms -mmt=on";
-            return res;
-        }
-
-        private void WriteStreamInfo(object sender, DataReceivedEventArgs e)
-        {            
-            string res = Convert(e.Text, Encoding.GetEncoding("cp866"), Encoding.Default);
-
-            listBoxOutput.Items.Add(res);
-            listBoxOutput.TopIndex = listBoxOutput.Items.Count - 1;
-            Regex r = new Regex("Compressing  \\b(?<filename>\\d+)");
-            Match m = r.Match(e.Text);
-            if (m.Success)
+            tbArcName.ReadOnly = true;
+            Cursor = Cursors.WaitCursor;
+            try
             {
-                lStatus.Text = "Статус: Упаковывается " + m.Groups["filename"].Value;
-                Application.DoEvents();
-            }
-            if (e.Text == "Everything is Ok")
+                listBoxOutput.Items.Clear();
+                CreateZip(filePath);
                 lStatus.Text = "Статус: Упаковка завершена успешно.";
+                bContinuePreparing.Text = "Открыть папку с архивом";
+                bContinuePreparing.Tag = 1;
+            }
+            catch (Exception ex)
+            {
+                lStatus.Text = "Статус: Ошибка упаковки.";
+                listBoxOutput.Items.Add("Ошибка: " + ex.Message);
+                MessageBox.Show("Не удалось создать архив:\n" + ex.Message, "Ошибка",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbArcName.ReadOnly = false;
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
         }
 
-        public static string Convert(string value, Encoding src, Encoding trg)
+        /// <summary>
+        /// Packs the zone's whole zones/&lt;n&gt;/ directory into a .zip, with each
+        /// entry prefixed by the zone number so it extracts into a &lt;n&gt;/ folder.
+        /// </summary>
+        private void CreateZip(string zipPath)
         {
-            Decoder dec = src.GetDecoder();
-            byte[] ba = trg.GetBytes(value);
-            int len = dec.GetCharCount(ba, 0, ba.Length);
-            char[] ca = new char[len];
-            dec.GetChars(ba, 0, ba.Length, ca, 0);
-            return new string(ca);
-        }
-        
-        private void ProcessCanceled(object sender, EventArgs e)
-        {
-            Cursor = Cursors.Default;
-            bCancelPreparing.Text = "Закрыть";
-            bCancelPreparing.Tag = 0;
-            Application.DoEvents();
-        }
+            string zoneDir = Path.Combine(StaticData.WorldFolderPath, "zones", zoneNum);
+            if (!Directory.Exists(zoneDir))
+                throw new DirectoryNotFoundException("Каталог зоны не найден: " + zoneDir);
 
-        private void ProcessCompleted(object sender, EventArgs e)
-        {
-            Cursor = Cursors.Default;
-            bContinuePreparing.Text = "Открыть папку с архивом";
-            bContinuePreparing.Tag = 1;
-            bCancelPreparing.Text = "Закрыть";
-            bCancelPreparing.Tag = 0;
-            Application.DoEvents();
+            if (File.Exists(zipPath)) File.Delete(zipPath);
+
+            using (ZipArchive zip = ZipFile.Open(zipPath, ZipArchiveMode.Create))
+            {
+                foreach (string file in Directory.GetFiles(zoneDir, "*", SearchOption.AllDirectories))
+                {
+                    string rel = file.Substring(zoneDir.Length)
+                                     .TrimStart(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
+                                     .Replace(Path.DirectorySeparatorChar, '/');
+                    string entryName = zoneNum + "/" + rel;
+                    zip.CreateEntryFromFile(file, entryName, CompressionLevel.Optimal);
+                    listBoxOutput.Items.Add("Упакован: " + entryName);
+                }
+            }
+            listBoxOutput.Items.Add("Архив: " + zipPath);
+            listBoxOutput.TopIndex = listBoxOutput.Items.Count - 1;
         }
 
         private void bCancelPreparing_Click(object sender, EventArgs e)
         {
-            if (bCancelPreparing.Tag.ToString() == "1")
-            {
-                processCaller?.Cancel();
-                bCancelPreparing.Text = "Закрыть";
-                bCancelPreparing.Tag = 0;
-            }
-            else
-            {
-                DialogResult = bContinuePreparing.Tag.ToString() == "1" ? DialogResult.OK : DialogResult.Cancel;
-            }
+            DialogResult = bContinuePreparing.Tag.ToString() == "1" ? DialogResult.OK : DialogResult.Cancel;
         }
     }
 }

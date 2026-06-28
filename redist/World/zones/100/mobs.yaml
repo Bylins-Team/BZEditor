@@ -1,0 +1,1076 @@
+# Mobs for zone 100
+
+0:
+  names:
+    aliases: соловей разбойник
+    nominative: соловей-разбойник
+    genitive: соловья-разбойника
+    dative: соловью-разбойнику
+    accusative: соловья-разбойника
+    instrumental: соловьем-разбойником
+    prepositional: соловье-разбойнике
+  descriptions:
+    short_desc: |-
+      Соловей-разбойник сидит здесь на семи дубах.
+    long_desc: |-
+      Вы видите, сидит Соловьище, как свинище, на семи дубах, на сорока суках,
+      глазища-то у Соловья и черным-черны, и пустым-пусты. Бородища-то у разбойника
+      из трех волосин, как из трех ветлин. А носище-то у него будто палка-клин
+      дровокольная. Он сидит-глядит, сам посапывает, он пустой башкой да покачивает.
+  action_flags:
+  - kSentinel
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kNoCharm
+  - kNoSummon
+  - kLooter
+  affect_flags:
+  - kDetectInvisible
+  - kDetectLife
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 29
+    hitroll_penalty: 20
+    armor: -8
+    hp:
+      dice_count: 50
+      dice_size: 10
+      bonus: 2000
+    damage:
+      dice_count: 6
+      dice_size: 5
+      bonus: 10
+  gold:
+    dice_count: 20
+    dice_size: 20
+    bonus: 200
+  experience: 200000
+  position:
+    default: kSit
+    start: kSit
+  sex: kMale
+  attributes:
+    strength: 23
+    dexterity: 16
+    intelligence: 13
+    wisdom: 13
+    constitution: 25
+    charisma: 8
+  size: 50
+  mob_class: 102
+  race: 101
+  height: 180
+  weight: 150
+  max_in_world: 1
+  skills:
+  - skill_id: 4
+    value: 80
+  - skill_id: 5
+    value: 60
+  - skill_id: 136
+    value: 90
+  - skill_id: 157
+    value: 80
+  - skill_id: 160
+    value: 100
+  triggers:
+  - 10004
+  - 10010
+  enhanced:
+    absorb: 36
+    bare_hand_attack: 6
+    like_work: 80
+    max_factor: 10
+    extra_attack: 1
+    special_bitvector: 'b1c1'
+    role: '000000001'
+    helpers:
+    - 10002
+    - 10004
+    - 10005
+
+1:
+  names:
+    aliases: разбойничек удалой
+    nominative: удалой разбойничек
+    genitive: удалого разбойничка
+    dative: удалому разбойничку
+    accusative: удалого разбойничка
+    instrumental: удалым разбойничком
+    prepositional: удалом разбойничке
+  descriptions:
+    short_desc: |-
+      Удалой разбойничек, насвистывая, проходит мимо.
+    long_desc: |-
+      Волосатый одноглазый разбойничек с окровавленными
+      руками поджидает одиноких путников.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kWimpy
+  - kAggressiveNight
+  - kHelper
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 21
+    hitroll_penalty: 15
+    armor: 6
+    hp:
+      dice_count: 10
+      dice_size: 15
+      bonus: 300
+    damage:
+      dice_count: 4
+      dice_size: 3
+      bonus: 11
+  gold:
+    dice_count: 10
+    dice_size: 5
+    bonus: 10
+  experience: 50000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 18
+    dexterity: 22
+    intelligence: 15
+    wisdom: 10
+    constitution: 18
+    charisma: 10
+  size: 30
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 6
+  skills:
+  - skill_id: 131
+    value: 40
+  - skill_id: 132
+    value: 60
+  - skill_id: 136
+    value: 50
+  - skill_id: 139
+    value: 60
+  - skill_id: 157
+    value: 35
+  triggers:
+  - 10008
+  enhanced:
+    absorb: 21
+    bare_hand_attack: 10
+    like_work: 30
+    max_factor: 30
+    extra_attack: 1
+    special_bitvector: 'i0a1b1c1'
+
+2:
+  names:
+    aliases: средний зять разбойник
+    nominative: средний зять
+    genitive: среднего зятя
+    dative: среднему зятю
+    accusative: среднего зятя
+    instrumental: средним зятем
+    prepositional: среднем зяте
+  descriptions:
+    short_desc: |-
+      Средний зять Соловья стоит, смотрит на вас и усмехается.
+    long_desc: |-
+      Вы видите, что он мордаст, он глазаст, он ушаст, он горласт, на язык горазд
+      и на брань крикаст, пред тобой, как гора, стоит, губы выпятил, бельма
+      вытаращил.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kMemory
+  - kNoSummon
+  - kLooter
+  affect_flags:
+  - kDetectInvisible
+  - kDetectLife
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 28
+    hitroll_penalty: 18
+    armor: -7
+    hp:
+      dice_count: 20
+      dice_size: 20
+      bonus: 1000
+    damage:
+      dice_count: 5
+      dice_size: 4
+      bonus: 10
+  gold:
+    dice_count: 10
+    dice_size: 5
+    bonus: 100
+  experience: 150000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 21
+    dexterity: 19
+    intelligence: 12
+    wisdom: 12
+    constitution: 23
+    charisma: 9
+  size: 40
+  mob_class: 102
+  race: 101
+  height: 180
+  weight: 150
+  max_in_world: 1
+  skills:
+  - skill_id: 1
+    value: 70
+  - skill_id: 4
+    value: 40
+  - skill_id: 132
+    value: 50
+  - skill_id: 136
+    value: 78
+  - skill_id: 140
+    value: 80
+  - skill_id: 157
+    value: 60
+  triggers:
+  - 10006
+  enhanced:
+    absorb: 28
+    bare_hand_attack: 6
+    like_work: 60
+    max_factor: 10
+    extra_attack: 1
+    special_bitvector: 'b1c1'
+    helpers:
+    - 10006
+
+3:
+  names:
+    aliases: лихой разбойник
+    nominative: лихой разбойник
+    genitive: лихого разбойника
+    dative: лихому разбойнику
+    accusative: лихого разбойника
+    instrumental: лихим разбойником
+    prepositional: лихом разбойнике
+  descriptions:
+    short_desc: |-
+      Лихой разбойник проходит, внимательно озираясь.
+    long_desc: |-
+      Ай да лих, ай да удал сей мужичок!
+      Немало людишек и купчишек нанизал 
+      он на свое оружие! Немалому числу 
+      богатеев вспорол животы.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kHelper
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 23
+    hitroll_penalty: 16
+    armor: -2
+    hp:
+      dice_count: 20
+      dice_size: 10
+      bonus: 400
+    damage:
+      dice_count: 4
+      dice_size: 4
+      bonus: 13
+  gold:
+    dice_count: 10
+    dice_size: 5
+    bonus: 50
+  experience: 75000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 19
+    dexterity: 23
+    intelligence: 20
+    wisdom: 3
+    constitution: 18
+    charisma: 10
+  size: 30
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 6
+  skills:
+  - skill_id: 4
+    value: 30
+  - skill_id: 131
+    value: 60
+  - skill_id: 136
+    value: 60
+  - skill_id: 137
+    value: 70
+  - skill_id: 138
+    value: 70
+  - skill_id: 157
+    value: 50
+  triggers:
+  - 10009
+  enhanced:
+    absorb: 23
+    bare_hand_attack: 11
+    like_work: 40
+    max_factor: 25
+    extra_attack: 1
+    special_bitvector: 'i0a1b1'
+
+4:
+  names:
+    aliases: старший зять разбойник
+    nominative: старший зять
+    genitive: старшего зятя
+    dative: старшему зятю
+    accusative: старшего зятя
+    instrumental: старшим зятем
+    prepositional: старшем зяте
+  descriptions:
+    short_desc: |-
+      Старший зять Соловья стоит здесь, видно настроен он к вам враждебно.
+    long_desc: |-
+      Вы видите, что он стар, горбат, наперед согнут, у него нос крючком, а лицо
+      сморчком, борода клочком, губки трубочкой, волосье на голове редковатое,
+      а глаза у него вороватые, у него синь кафтан - поперек карман, на ногах
+      сапоги - носки лыжами.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kMemory
+  - kNoCharm
+  - kNoSummon
+  - kLooter
+  affect_flags:
+  - kDetectInvisible
+  - kDetectLife
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 28
+    hitroll_penalty: 18
+    armor: -8
+    hp:
+      dice_count: 30
+      dice_size: 20
+      bonus: 1400
+    damage:
+      dice_count: 5
+      dice_size: 5
+      bonus: 10
+  gold:
+    dice_count: 10
+    dice_size: 15
+    bonus: 100
+  experience: 175000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 22
+    dexterity: 18
+    intelligence: 12
+    wisdom: 13
+    constitution: 24
+    charisma: 9
+  size: 45
+  mob_class: 102
+  race: 101
+  height: 180
+  weight: 150
+  max_in_world: 1
+  skills:
+  - skill_id: 5
+    value: 50
+  - skill_id: 132
+    value: 60
+  - skill_id: 136
+    value: 75
+  - skill_id: 137
+    value: 70
+  - skill_id: 140
+    value: 90
+  - skill_id: 150
+    value: 50
+  - skill_id: 157
+    value: 80
+  triggers:
+  - 10005
+  enhanced:
+    absorb: 28
+    like_work: 70
+    max_factor: 10
+    extra_attack: 1
+    special_bitvector: 'a1b1'
+    helpers:
+    - 10007
+
+5:
+  names:
+    aliases: младший зять разбойник
+    nominative: младший зять
+    genitive: младшего зятя
+    dative: младшему зятю
+    accusative: младшего зятя
+    instrumental: младшим зятем
+    prepositional: младшем зяте
+  descriptions:
+    short_desc: |-
+      Младший зять Соловья стоит, глядит на вас, оружием своим поигрывает.
+    long_desc: |-
+      Он высок и могуч как тот дуб, 
+      да видно и ума,
+                   в нем тоже нема.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kWimpy
+  - kAggressiveNight
+  - kAgressiveFullmoon
+  - kNoCharm
+  - kNoSummon
+  - kLooter
+  affect_flags:
+  - kDetectInvisible
+  - kDetectLife
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 27
+    hitroll_penalty: 17
+    armor: -7
+    hp:
+      dice_count: 20
+      dice_size: 10
+      bonus: 800
+    damage:
+      dice_count: 4
+      dice_size: 4
+      bonus: 15
+  gold:
+    dice_count: 10
+    dice_size: 10
+    bonus: 100
+  experience: 120000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 20
+    dexterity: 20
+    intelligence: 3
+    wisdom: 3
+    constitution: 20
+    charisma: 10
+  size: 30
+  mob_class: 102
+  race: 101
+  height: 180
+  weight: 150
+  max_in_world: 1
+  skills:
+  - skill_id: 1
+    value: 50
+  - skill_id: 4
+    value: 50
+  - skill_id: 136
+    value: 80
+  - skill_id: 138
+    value: 50
+  - skill_id: 140
+    value: 50
+  - skill_id: 150
+    value: 30
+  - skill_id: 157
+    value: 55
+  triggers:
+  - 10007
+  enhanced:
+    absorb: 27
+    bare_hand_attack: 2
+    like_work: 50
+    max_factor: 10
+    special_bitvector: 'a1b1c1'
+
+6:
+  names:
+    aliases: разбойничек удалой
+    nominative: удалой разбойничек
+    genitive: удалого разбойничка
+    dative: удалому разбойничку
+    accusative: удалого разбойничка
+    instrumental: удалым разбойничком
+    prepositional: удалом разбойничке
+  descriptions:
+    short_desc: |-
+      Удалой разбойничек, насвистывая, проходит мимо.
+    long_desc: |-
+      Здоровенный разбойничек с пухлыми щеками 
+      и маслянистыми от водки глазами.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kWimpy
+  - kAggressiveNight
+  - kHelper
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 21
+    hitroll_penalty: 15
+    armor: 6
+    hp:
+      dice_count: 10
+      dice_size: 15
+      bonus: 300
+    damage:
+      dice_count: 4
+      dice_size: 3
+      bonus: 11
+  gold:
+    dice_count: 10
+    dice_size: 5
+    bonus: 20
+  experience: 50000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 18
+    dexterity: 22
+    intelligence: 15
+    wisdom: 10
+    constitution: 18
+    charisma: 10
+  size: 30
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 1
+  skills:
+  - skill_id: 131
+    value: 40
+  - skill_id: 132
+    value: 60
+  - skill_id: 136
+    value: 50
+  - skill_id: 139
+    value: 60
+  - skill_id: 157
+    value: 35
+  triggers:
+  - 10008
+  enhanced:
+    absorb: 21
+    bare_hand_attack: 10
+    like_work: 30
+    max_factor: 30
+    extra_attack: 1
+    special_bitvector: 'i0a1b1c1'
+
+7:
+  names:
+    aliases: лихой разбойник
+    nominative: лихой разбойник
+    genitive: лихого разбойника
+    dative: лихому разбойнику
+    accusative: лихого разбойника
+    instrumental: лихим разбойником
+    prepositional: лихом разбойнике
+  descriptions:
+    short_desc: |-
+      Лихой разбойник проходит, внимательно озираясь.
+    long_desc: |-
+      Детина с два аршина, и сила его не в
+      словах, а в больших кулаках.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kHelper
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 23
+    hitroll_penalty: 16
+    armor: -1
+    hp:
+      dice_count: 20
+      dice_size: 10
+      bonus: 400
+    damage:
+      dice_count: 4
+      dice_size: 4
+      bonus: 13
+  gold:
+    dice_count: 10
+    dice_size: 10
+    bonus: 50
+  experience: 75000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 19
+    dexterity: 23
+    intelligence: 20
+    wisdom: 3
+    constitution: 18
+    charisma: 10
+  size: 30
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 1
+  skills:
+  - skill_id: 4
+    value: 30
+  - skill_id: 131
+    value: 60
+  - skill_id: 136
+    value: 60
+  - skill_id: 137
+    value: 70
+  - skill_id: 138
+    value: 70
+  - skill_id: 157
+    value: 50
+  triggers:
+  - 10009
+  enhanced:
+    absorb: 23
+    bare_hand_attack: 11
+    like_work: 40
+    max_factor: 25
+    extra_attack: 1
+    special_bitvector: 'i0a1b1'
+
+8:
+  names:
+    aliases: водяное чудище
+    nominative: водяное чудище
+    genitive: водяного чудища
+    dative: водяному чудищу
+    accusative: водяное чудище
+    instrumental: водяным чудищем
+    prepositional: водяном чудище
+  descriptions:
+    short_desc: |-
+      Страшное чудище лежит на песке и смотрит на вас, похоже оно готовится к прыжку.
+    long_desc: |-
+      Вы видите страшное чудище с огромным рыбьим хвостом и выпученными красными
+      глазами. Все его тело покрыто чешуей и остатками водных растений. У него
+      большие лапы, а на них когти размером с кинжал. Возможно, это оно убило рыбака
+      и разворотило его лодку.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kMemory
+  - kNoCharm
+  - kNoSummon
+  - kNoBash
+  - kSwimming
+  - kOnlySwimming
+  - kAppearsSpring
+  - kAppearsSummer
+  - kAppearsAutumn
+  affect_flags:
+  - kDetectInvisible
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 29
+    hitroll_penalty: 18
+    armor: -8
+    hp:
+      dice_count: 20
+      dice_size: 30
+      bonus: 1200
+    damage:
+      dice_count: 10
+      dice_size: 3
+      bonus: 10
+  gold:
+    dice_count: 0
+    dice_size: 0
+    bonus: 0
+  experience: 200000
+  position:
+    default: kStand
+    start: kStand
+  sex: kNeutral
+  attributes:
+    strength: 23
+    dexterity: 13
+    intelligence: 13
+    wisdom: 13
+    constitution: 30
+    charisma: 8
+  size: 40
+  mob_class: 100
+  race: 114
+  height: 180
+  weight: 150
+  max_in_world: 1
+  skills:
+  - skill_id: 5
+    value: 60
+  - skill_id: 136
+    value: 100
+  triggers:
+  - 10003
+  enhanced:
+    absorb: 29
+    bare_hand_attack: 2
+    like_work: 75
+    max_factor: 10
+    extra_attack: 1
+    special_bitvector: 'g0o0'
+    spells:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 40
+    - 40
+    - 40
+    - 40
+    - 40
+    - 40
+    - 40
+    - 40
+    - 40
+    - 40
+    - 54
+    - 54
+    - 54
+    - 54
+    - 54
+    - 54
+    - 54
+    - 54
+    - 54
+    - 54
+    - 76
+    - 76
+    - 76
+    - 76
+    - 76
+    - 76
+    - 76
+    - 76
+    - 76
+    - 76
+    - 88
+    - 88
+    - 88
+    - 88
+    - 88
+    - 104
+    - 104
+    - 104
+    - 104
+    - 104
+    - 104
+    - 104
+    - 104
+    - 104
+    - 104
+    - 114
+    - 114
+    - 114
+    - 114
+    - 114
+    - 114
+    - 114
+    - 114
+    - 114
+    - 114
+    - 127
+    - 127
+    - 127
+    - 127
+    - 127
+    - 127
+    - 127
+    - 127
+    - 127
+    - 127
+
+9:
+  names:
+    aliases: хлюпало болотное
+    nominative: хлюпало
+    genitive: хлюпала
+    dative: хлюпалу
+    accusative: хлюпало
+    instrumental: хлюпалой
+    prepositional: хлюпале
+  descriptions:
+    short_desc: |-
+      Хлюпало болотное прячется в тине.
+    long_desc: |-
+      Мшистое, водянистое чудище.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kAggressiveNight
+  - kHelper
+  - kNoBash
+  - kLooter
+  - kSwimming
+  - kOnlySwimming
+  - kAppearsSpring
+  - kAppearsSummer
+  - kAppearsAutumn
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 23
+    hitroll_penalty: 16
+    armor: -6
+    hp:
+      dice_count: 20
+      dice_size: 15
+      bonus: 400
+    damage:
+      dice_count: 10
+      dice_size: 2
+      bonus: 10
+  gold:
+    dice_count: 0
+    dice_size: 0
+    bonus: 0
+  experience: 75000
+  position:
+    default: kStand
+    start: kStand
+  sex: kNeutral
+  attributes:
+    strength: 19
+    dexterity: 15
+    intelligence: 13
+    wisdom: 13
+    constitution: 18
+    charisma: 10
+  size: 30
+  mob_class: 100
+  race: 100
+  height: 198
+  weight: 200
+  max_in_world: 4
+  skills:
+  - skill_id: 136
+    value: 54
+  enhanced:
+    absorb: 23
+    bare_hand_attack: 4
+    like_work: 45
+    max_factor: 20
+    extra_attack: 1
+    special_bitvector: 'o0'
+
+10:
+  names:
+    aliases: хлюпало болотное
+    nominative: хлюпало
+    genitive: хлюпала
+    dative: хлюпалу
+    accusative: хлюпало
+    instrumental: хлюпалом
+    prepositional: хлюпале
+  descriptions:
+    short_desc: |-
+      Хлюпало болотное прячется в тине.
+    long_desc: |-
+      Мшистое, водянистое чудище.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kAggressiveNight
+  - kHelper
+  - kNoBash
+  - kLooter
+  - kSwimming
+  - kOnlySwimming
+  - kAppearsSpring
+  - kAppearsSummer
+  - kAppearsAutumn
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 23
+    hitroll_penalty: 16
+    armor: -6
+    hp:
+      dice_count: 20
+      dice_size: 15
+      bonus: 400
+    damage:
+      dice_count: 10
+      dice_size: 2
+      bonus: 10
+  gold:
+    dice_count: 0
+    dice_size: 0
+    bonus: 0
+  experience: 75000
+  position:
+    default: kStand
+    start: kStand
+  sex: kNeutral
+  attributes:
+    strength: 19
+    dexterity: 15
+    intelligence: 13
+    wisdom: 13
+    constitution: 18
+    charisma: 10
+  size: 30
+  mob_class: 100
+  race: 100
+  height: 198
+  weight: 200
+  max_in_world: 1
+  skills:
+  - skill_id: 136
+    value: 54
+  enhanced:
+    absorb: 23
+    bare_hand_attack: 4
+    like_work: 45
+    max_factor: 20
+    extra_attack: 1
+    special_bitvector: 'o0'
+
+11:
+  names:
+    aliases: перепуганный рыбак
+    nominative: перепуганный рыбак
+    genitive: перепуганного рыбака
+    dative: перепуганному рыбаку
+    accusative: перепуганного рыбака
+    instrumental: перепуганным рыбаком
+    prepositional: перепуганном рыбаке
+  descriptions:
+    short_desc: |-
+      Перепуганный рыбак стоит здесь (дрожит как осиновый лист).
+    long_desc: |-
+      Забитый человечек, немало настрадал,
+      ведь воевать с нечистью он еще мал.
+      А может, возьмешься ты? Или боишься
+      отхватить...
+  action_flags:
+  - kSentinel
+  - kNpc
+  - kStayZone
+  - kNoCharm
+  - kAppearsSpring
+  - kAppearsSummer
+  - kAppearsAutumn
+  affect_flags:
+  - kDetectInvisible
+  - kDetectLife
+  - kInfravision
+  alignment: 600
+  mob_type: E
+  stats:
+    level: 1
+    hitroll_penalty: 0
+    armor: 10
+    hp:
+      dice_count: 1
+      dice_size: 1
+      bonus: 1
+    damage:
+      dice_count: 1
+      dice_size: 1
+      bonus: 1
+  gold:
+    dice_count: 0
+    dice_size: 0
+    bonus: 0
+  experience: 0
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 10
+    dexterity: 10
+    intelligence: 10
+    wisdom: 10
+    constitution: 10
+    charisma: 10
+  size: 30
+  mob_class: 107
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 1
+  skills:
+  - skill_id: 136
+    value: 3
+  triggers:
+  - 10000
+  enhanced:
+    special_bitvector: '0'

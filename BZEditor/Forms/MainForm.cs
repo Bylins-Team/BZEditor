@@ -76,7 +76,6 @@ namespace BZEditor
         private ToolStripMenuItem tsmiBackupZones;
         private ToolStripSeparator toolStripMenuItemNoConflict;
         private ToolStripMenuItem browseZonesToSend;
-        private ToolStripMenuItem tsmiSelectDataFormat;
         private ToolStripMenuItem шаблоныToolStripMenuItem;
 
         public MainForm()
@@ -107,7 +106,6 @@ namespace BZEditor
             tsmiSameOptionsForAllZones.Checked = settings.Read("tsmiSameOptionsForAllZones", tsmiSameOptionsForAllZones.Checked);
             tsmiCheckUpdatesOnStartup.Checked = settings.Read("tsmiCheckUpdatesOnStartup", tsmiCheckUpdatesOnStartup.Checked);
             tsmiBackupZones.Checked = settings.Read("tsmiBackupZones", tsmiBackupZones.Checked);
-            StaticData.WorldDataFormat = settings.Read("WorldDataFormat", StaticData.WorldDataFormat);
 
             var sf = new SplashForm
                          {
@@ -150,7 +148,9 @@ namespace BZEditor
             templatesDm.LoadData();
             foreach (ZoneData zd in FileListsDm.ZonesDataList)
             {
-                if (!zd.Preloading) continue;
+                // Only auto-open zones that actually exist in the current world; a stale
+                // preload entry for a zone that is not there is skipped, not error-dialoged.
+                if (!zd.Preloading || zd.State == ZoneState.NotFound) continue;
 #if !DEBUG
                 incr += step;
                 if (incr > 1)
@@ -254,51 +254,8 @@ namespace BZEditor
                 else
                     return false;
             }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "ZON")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"ZON\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "ZON"));
-                else
-                    return false;
-            }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "WLD")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"WLD\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "WLD"));
-                else
-                    return false;
-            }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "MOB")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"MOB\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "MOB"));
-                else
-                    return false;
-            }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "OBJ")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"OBJ\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "OBJ"));
-                else
-                    return false;
-            }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "TRG")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"TRG\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "TRG"));
-                else
-                    return false;
-            }
+            // YAML world: everything lives under zones\ (created on save). No legacy
+            // ZON/WLD/MOB/OBJ/TRG directories are required.
             return true;
         }
 
@@ -503,7 +460,6 @@ namespace BZEditor
             settings.Write("tsmiSameOptionsForAllZones", tsmiSameOptionsForAllZones.Checked);
             settings.Write("tsmiCheckUpdatesOnStartup", tsmiCheckUpdatesOnStartup.Checked);
             settings.Write("tsmiBackupZones", tsmiBackupZones.Checked);
-            settings.Write("WorldDataFormat", StaticData.WorldDataFormat);
             
             settings.Save();
         }
@@ -670,6 +626,19 @@ namespace BZEditor
 
         private void TreeFormZoneUnloadingActivated(string zoneNum)
         {
+            // If the zone is open in an editor tab, close it first -- otherwise the
+            // tab would be left pointing at a zone that is no longer loaded.
+            WldForm openForm = null;
+            foreach (var w in dockContainerMain.Documents)
+            {
+                if (w is WldForm && ((WldForm)w).ZoneDm.Zone.Number.ToString() == zoneNum)
+                {
+                    openForm = (WldForm)w;
+                    break;
+                }
+            }
+            openForm?.Close();
+
             ZoneDataManager zdm = GetDataManagerByName(zoneNum);
             if (zdm == null) return;
             dmArray.Remove(zdm);
@@ -1107,7 +1076,6 @@ namespace BZEditor
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiBackupZones = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCheckUpdatesOnStartup = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSelectDataFormat = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
@@ -1245,7 +1213,6 @@ namespace BZEditor
             // 
             this.tsmiOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiPathToWorldFolder,
-            this.tsmiSelectDataFormat,
             this.tsmiSameOptionsForAllZones,
             this.toolStripMenuItem5,
             this.tsmiBackupZones,
@@ -1262,13 +1229,6 @@ namespace BZEditor
             this.tsmiPathToWorldFolder.Text = "Изменить путь к папке \"world\"";
             this.tsmiPathToWorldFolder.Click += new System.EventHandler(this.TsmiPathToWorldFolderClick);
             //
-            // tsmiSelectDataFormat
-            //
-            this.tsmiSelectDataFormat.Name = "tsmiSelectDataFormat";
-            this.tsmiSelectDataFormat.Size = new System.Drawing.Size(289, 22);
-            this.tsmiSelectDataFormat.Text = "Формат данных мира...";
-            this.tsmiSelectDataFormat.Click += new System.EventHandler(this.TsmiSelectDataFormatClick);
-            // 
             // tsmiSameOptionsForAllZones
             // 
             this.tsmiSameOptionsForAllZones.CheckOnClick = true;
@@ -1493,8 +1453,8 @@ namespace BZEditor
             if (StaticData.BackupZones)
             {
                 BackupManager bm = new BackupManager();
-                bm.Backup(zdm);
                 bm.BackupFinished += BackupFinished;
+                bm.Backup(zdm);
             }
             else
                 zdm.SaveData();
@@ -1536,19 +1496,5 @@ namespace BZEditor
             Process.Start(path);
         }
 
-        private void TsmiSelectDataFormatClick(object sender, EventArgs e)
-        {
-            using (var dialog = new FormatSelectionDialog())
-            {
-                if (dialog.ShowDialog(this) == DialogResult.OK)
-                {
-                    MessageBox.Show(
-                        "Формат данных мира изменён. Мир будет сохранён в выбранном формате при следующем сохранении.",
-                        "Формат данных",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                }
-            }
-        }
     }
 }

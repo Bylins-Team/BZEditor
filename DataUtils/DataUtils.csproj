@@ -80,13 +80,9 @@
     <Compile Include="DataObjects\Sets\Set.cs" />
     <Compile Include="DataObjects\Sets\SetsCollection.cs" />
     <Compile Include="ZonesComplexGenerator.cs" />
-    <Compile Include="MobsFileManager.cs" />
-    <Compile Include="ObjectsFileManager.cs" />
     <Compile Include="BaseManager.cs" />
     <Compile Include="GlobalSketchFileManager.cs" />
     <Compile Include="SketchFileManager.cs" />
-    <Compile Include="WorldFileManager.cs" />
-    <Compile Include="TriggersFileManager.cs" />
     <Compile Include="ExitColors.cs" />
     <Compile Include="ZoneFileManager.cs">
       <SubType>Code</SubType>
@@ -137,8 +133,6 @@
     <Compile Include="FileListsDataManager.cs" />
     <Compile Include="IFormatProvider.cs" />
     <Compile Include="BaseFormatProvider.cs" />
-    <Compile Include="FormatProviderFactory.cs" />
-    <Compile Include="CircleMudFormatProvider.cs" />
     <Compile Include="YamlFormatProvider.cs" />
     <Compile Include="EngineDictionaries.cs" />
     <Compile Include="YamlMappers\EngineCodec.cs" />

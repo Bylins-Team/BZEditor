@@ -1,0 +1,1293 @@
+# Rooms for zone 100
+
+0:
+  zone: 100
+  name: На Почай-реке
+  description: |-
+    ___Здесь над рекой настелен мост. Это очень старая, но надежная
+    переправа через Почай-реку. Правда, говорят, в дубраве, сидит Соловей-
+    разбойник и не дает никому ни проезду, ни проходу.
+  flags:
+  - kBfsMark
+  - kNohorse
+  sector: kWaterNoswim
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10003
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10001
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10023
+    lock_complexity: 0
+
+1:
+  zone: 100
+  name: На Почай-реке
+  description: |-
+    ___На севере виден мост, но отсюда плохо видно, можно ли по нему
+    переправляться, или нет.
+  flags:
+  - kBfsMark
+  - kNohorse
+  sector: kWaterNoswim
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10000
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10053
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10024
+    lock_complexity: 0
+
+2:
+  zone: 100
+  name: В избе рыбака
+  description: |2-
+       Вы вошли в низкую избу. На полу везде разложены сети. Слева - небольшой очаг.
+    В очаге висит закопченный котелок. Справа - небольшое оконце затянутое мутным
+    пузырем.
+  flags:
+  - kNoEntryMob
+  - kIndoors
+  - kPeaceful
+  - kNoMagic
+  - kBfsMark
+  - kForMages
+  - kForSorcerers
+  - kForThieves
+  - kForWarriors
+  - kForAssasines
+  - kForGuards
+  - kForPaladines
+  - kForRangers
+  - kForge
+  - kForMerchants
+  - kForMaguses
+  - kNohorse
+  sector: kInside
+  exits:
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10039
+    lock_complexity: 0
+
+3:
+  zone: 100
+  name: На Почай-реке
+  description: "   Вы плывете по реке, на западном берегу видна старая разбитая\r\nлодка. Не очень-то хотелось отправится в путь на такой. "
+  flags:
+  - kBfsMark
+  - kNohorse
+  sector: kWaterNoswim
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10033
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10052
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10000
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10022
+    lock_complexity: 0
+
+4:
+  zone: 100
+  name: На дороге
+  description: |2-
+       Вы стоите на дороге. На севере и юге виден крутой берег реки. С восточной
+    стороны калинов мост через Почай-реку.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10026
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10021
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10031
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10005
+    lock_complexity: 0
+
+5:
+  zone: 100
+  name: На дороге
+  description: "   Вы стоите на дороге. Все следы на ней стерты ветрами и дождями, сразу видно,\r\nчто по ней давно никто не ездил. Поговаривают, что в здешних краях обитают\r\nразбойники. "
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10042
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10004
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10043
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10044
+    lock_complexity: 0
+
+6:
+  zone: 100
+  name: На болоте
+  description: |2-
+       Вы стоите на болоте. Вокруг заросли камыша и колючей ежевики. Среди таких
+    болот не редко попадаются гиблые места.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10008
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10010
+    lock_complexity: 0
+
+7:
+  zone: 100
+  name: На Калиновом мосту
+  description: |2-
+       Вы стоите на мосту. С севера на юг катит свои воды неспокойная Почай-река.
+    Мост так высок, что с запада, вдали виден город белокаменный, а на восток от
+    вас, за полем, видна роща дубовая.
+  flags:
+  - kNoEntryMob
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10011
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10021
+    lock_complexity: 0
+
+8:
+  zone: 100
+  name: На болоте
+  description: |2-
+       Вокруг простирается ковер из мха. Под ногами хлюпает черная вода, кое-где
+    попадаются небольшие озерца, говорят, в теплые летние ночи в них зацветают
+    белые кувшинки. В народе их называют одолень-трава, которая помогает и в любви
+    и в долгих разлуках.
+  flags:
+  - kBfsMark
+  sector: kWaterSwim
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10047
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10009
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10025
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10006
+    lock_complexity: 0
+
+9:
+  zone: 100
+  name: На болоте
+  description: "   Здесь, на болоте, на редких островках встречаются низенькие, тонкие деревца.\r\nКакие-то птицы принесли сюда их семена и вот теперь они вынуждены бороться за\r\nжизнь в этом гиблом месте. "
+  flags:
+  - kBfsMark
+  sector: kWaterSwim
+  exits:
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10008
+    lock_complexity: 0
+
+10:
+  zone: 100
+  name: В дубраве
+  description: |-
+    ___Среди дубов стали попадаться стройные березки. Они - как тонкие
+    белые свечки на фоне темной дубравы. Скорее всего, здесь близок 
+    выход из чащи.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10006
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10025
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10014
+    lock_complexity: 0
+
+11:
+  zone: 100
+  name: На дороге
+  description: |2-
+       Позади вас к западу Почай-река шумит, через нее калинов мост настелен. На
+    восточную сторону чисто поле, а за полем то ли лес, то ли дубрава стоит. Дерева
+    до самого неба.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10020
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10041
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10017
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10007
+    lock_complexity: 0
+
+12:
+  zone: 100
+  name: В дубраве
+  description: |2-
+       Вы стоите посреди чащи дубовой, перед вами стоят семь дубов-великанов
+    вековых. На семи дубах по сорок суков. Сучья между собой сплелись как гнездо.
+    На суках, в том гнезде, сидит Соловей сын Рахманович. Ходит молва, что
+    Разбойник соловьиным своим посвистом оглушает людей на семи верстах.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10014
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10015
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10019
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10018
+    lock_complexity: 0
+
+13:
+  zone: 100
+  name: На тропинке
+  description: |2-
+       Вы идете по тропинке. Вокруг все такие же дубы узловатые, под ногами вьется
+    тропинка, по ней давно никто не хаживал, не езживал.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10018
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10019
+    lock_complexity: 0
+
+14:
+  zone: 100
+  name: В дубраве
+  description: |2-
+       Что-то странное в этом лесу. Все маленькие деревца с корнем вырваны из земли
+    и от этого лес стал совсем непроходимым. Неужели права людская молва, что от
+    рыка, от шипа разбойничьего темный лес к земле преклоняется.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10010
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10012
+    lock_complexity: 0
+
+15:
+  zone: 100
+  name: В дубраве
+  description: "   Вы находитесь в лесной чаще. Вокруг дерева до самого неба. Да и неба самого\r\nза ними не видать. "
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10016
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10012
+    lock_complexity: 0
+
+16:
+  zone: 100
+  name: В дубраве
+  description: "   Вокруг вас столетние дубы, и сучья у этих дубов как руки у старика,\r\nузловатые и с глубокими бороздам морщин. От их вида становится не по себе. "
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10028
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10029
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10015
+    lock_complexity: 0
+
+17:
+  zone: 100
+  name: На берегу реки
+  description: |2-
+       Вы стоите на песчаном берегу. На западе течет река, но брода через нее не
+    видать. Очевидно, что мост единственная переправа через Почай-реку.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10011
+    lock_complexity: 0
+
+18:
+  zone: 100
+  name: В дубраве
+  description: |2-
+       Вы стоите посреди дубравы. Вокруг стоят великаны дубы столетние, в самое
+    небо упираются. На западе чисто поле у Почай-реки. К югу тропинка нехоженая.
+    Впереди, на востоке чаща дубовая.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10012
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10013
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10041
+    lock_complexity: 0
+
+19:
+  zone: 100
+  name: На тропинке
+  description: |2-
+       Под ногами тропинка вьется. Недалеко дуб могучий с корнями выворочен, может
+    ветром его повалило, а может от посвиста Соловья-разбойника он на сыру землю
+    упал.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10012
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10013
+    lock_complexity: 0
+
+20:
+  zone: 100
+  name: На берегу реки
+  description: |2-
+       Вы стоите на берегу реки. С северной стороны видны рыболовные сети возле
+    покосившейся избушки рыбака.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10039
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10011
+    lock_complexity: 0
+
+21:
+  zone: 100
+  name: На Калиновом мосту
+  description: |2-
+       Под мостом, на котором вы стоите, видна река, а вдоль реки тянется песчаная
+    коса. С северной стороны у самой воды лежит лодка.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10007
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10004
+    lock_complexity: 0
+
+22:
+  zone: 100
+  name: На берегу реки
+  description: "   Вы стоите около лодки, но даже с первого взгляда видно, что на этой лодке\r\nдалеко не уплывешь, ее дно пробито в нескольких местах, да и весел рядом\r\nне видать.  "
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10035
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10003
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10023
+    lock_complexity: 0
+
+23:
+  zone: 100
+  name: На берегу реки
+  description: |2-
+       Над головой вы видите мост, сложенный из бревен, похоже он давно служит
+    надежной переправой с одного берега на другой.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10022
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10000
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10024
+    lock_complexity: 0
+
+24:
+  zone: 100
+  name: На берегу реки
+  description: |2-
+       Вы стоите на берегу реки. У самых ваших ног валяется большая дохлая рыба.
+    Наверняка ее уже давно выбросило из реки и вам она не пригодится.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10023
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10001
+    lock_complexity: 0
+
+25:
+  zone: 100
+  name: В дубраве
+  description: |2-
+       Перед вами густая заросль ежевики. В самой ее гуще много помятых кустов,
+    наверное кабан устраивался здесь на ночь.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10008
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10010
+    lock_complexity: 0
+
+26:
+  zone: 100
+  name: На обрыве
+  description: |2-
+       Вокруг вас чистое поле и лишь с восточной стороны течет Почай-река, но
+    обрыв слишком крут, для того чтобы спуститься надо бы поискать тропинку,
+    ведущую к реке.
+  flags:
+  - kBfsMark
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10027
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10004
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10042
+    lock_complexity: 0
+
+27:
+  zone: 100
+  name: На обрыве
+  description: |2-
+       Вы стоите на краю обрыва. Видно, что другой берег реки не так крут. За
+    рекой стоит дубрава. Наверное в ней промышляет Соловей-разбойник.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10036
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10026
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10045
+    lock_complexity: 0
+
+28:
+  zone: 100
+  name: В дубраве
+  description: |2-
+       Вы стоите в лесу. Здесь, среди дубов, попадаются березы и другие деревья.
+    Лес в этих местах не такой густой и пройти через него не составляет особого
+    труда.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10037
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10016
+    lock_complexity: 0
+
+29:
+  zone: 100
+  name: На поляне
+  description: |2-
+       Здесь, среди могучих дубов, находится небольшая поляна, это чудо, что ее не
+    поглотили до сих пор эти столетние великаны. Возможно, в этой дубраве только
+    на этом месте видно небо...
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10037
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10049
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10038
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10016
+    lock_complexity: 0
+
+30:
+  zone: 100
+  name: На обрыве
+  description: "___Вы стоите на обрыве. Вдоль тропинки кое-где видны редкие пучки прошлогодний\r\nтравы. "
+  flags:
+  - kBfsMark
+  sector: kCity
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10031
+    lock_complexity: 0
+
+31:
+  zone: 100
+  name: На обрыве
+  description: |2-
+       С востока шумит Почай-река. Этот берег реки слишком крут, если спускаться
+    без тропинки то, наверняка, можно свернуть себе шею.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10004
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10030
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10043
+    lock_complexity: 0
+
+32:
+  zone: 100
+  name: На Почай-реке
+  description: |2-
+       Вы плывете по реке. Дальше лежат глухие не обжитые места, может не стоит
+    заходить слишком далеко на север.
+  flags:
+  - kBfsMark
+  - kNohorse
+  sector: kWaterNoswim
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10051
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10033
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10034
+    lock_complexity: 0
+
+33:
+  zone: 100
+  name: На Почай-реке
+  description: |2-
+       Вы на реке, с двух сторон берега, вроде у одной реки, а такие разные. На
+    восточной стороне берег крутой и выйти на него невозможно, а на 
+    западной - пологий песчаный берег.
+  flags:
+  - kBfsMark
+  - kNohorse
+  sector: kWaterNoswim
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10032
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10003
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10035
+    lock_complexity: 0
+
+34:
+  zone: 100
+  name: На берегу реки
+  description: "   Вы стоите на берегу реки, на юг простирается песчаная коса, с северной\r\nстороны вверх убегает тропинка. "
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10032
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10035
+    lock_complexity: 0
+  - direction: up
+    exit_flags: 0
+    key: -1
+    to_room: 10036
+    lock_complexity: 0
+
+35:
+  zone: 100
+  name: На берегу реки
+  description: |2-
+       Вы стоите на песке, с одной стороны очень крутой берег, с другой стороны
+    река. Вдалеке с южной стороны видна лодка. Может быть на ней сюда кто-то
+    приплыл совершенно недавно.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10034
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10033
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10022
+    lock_complexity: 0
+
+36:
+  zone: 100
+  name: На обрыве
+  description: |2-
+       Здесь в южную сторону есть небольшая тропинка вниз к реке и вроде можно
+    спуститься и посмотреть, что там находится на берегу, может что и сгодится.
+  flags:
+  - kBfsMark
+  sector: kCity
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10027
+    lock_complexity: 0
+  - direction: down
+    exit_flags: 0
+    key: -1
+    to_room: 10034
+    lock_complexity: 0
+
+37:
+  zone: 100
+  name: В дубраве
+  description: |2-
+       Вокруг вас деревья-великаны, словно могучие воины на охране своих владений.
+    На юге среди них виден просвет. Там поляна, единственное место куда не
+    распространяется их власть.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10029
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10028
+    lock_complexity: 0
+
+38:
+  zone: 100
+  name: В дубраве
+  description: |2-
+       Вы стоите посреди леса. Недалеко дуб могучий с корнями выворочен, видать он
+    от старости на сыру землю упал и будет здесь лежать, пока не сгниет и не
+    превратится в труху.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10029
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10046
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10050
+    lock_complexity: 0
+
+39:
+  zone: 100
+  name: На берегу реки
+  description: |2-
+       Вы стоите у старой избушки рыбака. Около нее в песок воткнуты длинныe колья,
+    на которыx развешаны сети. Некоторые из них порваны в нескольких местах. Рыбак,
+    наверное, очень беден, потому что новых сетей среди них совсем не видать.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10040
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10002
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10020
+    lock_complexity: 0
+
+40:
+  zone: 100
+  name: На берегу реки
+  description: "   Вы стоите на пологом берегу реки. Рядом валяется куча речных водорослей.\r\nОни еще мокрые, возможно, их вытащил какой-то зверь, вылезая из реки. "
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10039
+    lock_complexity: 0
+
+41:
+  zone: 100
+  name: На дороге
+  description: |2-
+       К западу чисто поле, гладкое хоть яичком кати. С восточной стороны дубрава
+    стоит. Дубы там все столетние, великаны могучие.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10018
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10011
+    lock_complexity: 0
+
+42:
+  zone: 100
+  name: Чисто поле
+  description: |2-
+       Вы стоите посреди чистого поля, вокруг на многие версты нет ни одной души.
+    К югу дорога, а к востоку должна быть Почай-река.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10045
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10026
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10005
+    lock_complexity: 0
+
+43:
+  zone: 100
+  name: В чистом поле
+  description: |2-
+       Вокруг вас поле. Кое-где видны сухие пучки ковыль-травы. Многие дни можно
+    идти по этому полю и никого кроме отчаянных разбойников не встретить.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10005
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10031
+    lock_complexity: 0
+
+44:
+  zone: 100
+  name: На дороге
+  description: |2-
+       Вы стоите на дороге. Прямо перед вами стоит столб верстовой, но что на нем
+    написано разобрать невозможно, ветер и солнце стерли надписи на нем.
+  flags:
+  - kNoEntryMob
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10005
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: 0
+    to_room: 60470
+    lock_complexity: 0
+
+45:
+  zone: 100
+  name: В чистом поле
+  description: |2-
+       Вы стоите посреди поля. Кое-где видны кочки, а на них сухие пучки травы.
+    На многие версты простирается оно вокруг.
+  flags:
+  - kBfsMark
+  sector: kField
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10027
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10042
+    lock_complexity: 0
+
+46:
+  zone: 100
+  name: В дубраве
+  description: |2-
+       Вы стоите посреди дубравы. Вокруг стоят великаны дубы столетние, в самое
+    небо упираются. На западе тропинка нехоженая.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10049
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10038
+    lock_complexity: 0
+
+47:
+  zone: 100
+  name: В топи
+  description: |2-
+       Вы находитесь посреди болота топучего. Ноги проваливаются по самые колени
+    в черную жижу. Подумайте, может не стоит идти дальше. Может вас там кикиморы
+    к себе затянут.
+  flags:
+  - kBfsMark
+  sector: kWaterSwim
+  exits:
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10048
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10008
+    lock_complexity: 0
+
+48:
+  zone: 100
+  name: В топи
+  description: |2-
+       НУ ВОТ И ВСЕ ...... Вы неаккуратно ступив на кочку, споткнувшись упали
+    в черную лужу. Вы захлебнулись вонючей жижей.
+  flags:
+  - kDeathTrap
+  - kBfsMark
+  sector: kUnderwater
+  exits:
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10047
+    lock_complexity: 0
+
+49:
+  zone: 100
+  name: В дубраве
+  description: |-
+    ___Среди дубов стали попадаться стройные березки. Они - как тонкие
+    белые свечки на фоне темной дубравы. Скорее всего, здесь близок 
+    выход из чащи.
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10046
+    lock_complexity: 0
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10029
+    lock_complexity: 0
+
+50:
+  zone: 100
+  name: В дубраве
+  description: "   Вы стоите среди дубов, здесь растут небольшие кусты, на востоке и юге видны\r\nпросветы, этого света кустам достаточно, чтобы расти. Скорее всего, в этом\r\nместе близок выход из дубравы. "
+  flags:
+  - kBfsMark
+  sector: kForest
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10038
+    lock_complexity: 0
+  - direction: south
+    exit_flags: 0
+    key: 0
+    to_room: 10100
+    lock_complexity: 0
+
+51:
+  zone: 100
+  name: На Почай-реке
+  description: |2-
+       Похоже, приплыли. Дальше начинается непролазная топь.
+  flags:
+  - kBfsMark
+  - kNohorse
+  sector: kWaterNoswim
+  exits:
+  - direction: south
+    exit_flags: 0
+    key: -1
+    to_room: 10032
+    lock_complexity: 0
+
+52:
+  zone: 100
+  name: На Почай-реке
+  description: |2-
+       Небольшой заливчик на реке. Место тихое и спокойное.
+  flags:
+  - kBfsMark
+  - kNohorse
+  sector: kWaterNoswim
+  exits:
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10003
+    lock_complexity: 0
+
+53:
+  zone: 100
+  name: На Почай-реке
+  description: |2-
+       Река делает крутой изгиб, поворачивая на восток.
+  flags:
+  - kBfsMark
+  - kNohorse
+  sector: kWaterNoswim
+  exits:
+  - direction: north
+    exit_flags: 0
+    key: -1
+    to_room: 10001
+    lock_complexity: 0
+  - direction: east
+    exit_flags: 0
+    key: -1
+    to_room: 10054
+    lock_complexity: 0
+
+54:
+  zone: 100
+  name: На Почай-реке
+  description: |2-
+       Пути на восток дальше нет - там пороги перегородили реку, вода с бешенным
+    ревом устремляется вниз.
+  flags:
+  - kBfsMark
+  - kNohorse
+  sector: kWaterNoswim
+  exits:
+  - direction: west
+    exit_flags: 0
+    key: -1
+    to_room: 10053
+    lock_complexity: 0

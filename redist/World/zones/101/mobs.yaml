@@ -1,0 +1,1079 @@
+# Mobs for zone 101
+
+0:
+  names:
+    aliases: марья соловьевна
+    nominative: Марья
+    genitive: Марьи
+    dative: Марье
+    accusative: Марью
+    instrumental: Марьей
+    prepositional: Марьи
+  descriptions:
+    short_desc: |-
+      Марья Соловьевна, богатырница грозная, стоит здесь.
+    long_desc: |-
+      Перед вами стоит Марья, дочь Соловья-разбойника. У нее длинные волосы заплетены
+      в косу, но они все растрепались и повыскакивали из прически, сразу видно, что
+      она сильно торопилась вступить с вами в бой. Марья стоит, запыхавшись, но
+      с уверенностью сжимает в руках свое оружие и полна готовности сразиться с вами.
+  action_flags:
+  - kSentinel
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kNoCharm
+  - kNoSummon
+  - kNoBlind
+  - kNoHold
+  - kLooter
+  affect_flags:
+  - kInfravision
+  - kBless
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 28
+    hitroll_penalty: 17
+    armor: -8
+    hp:
+      dice_count: 20
+      dice_size: 20
+      bonus: 1000
+    damage:
+      dice_count: 8
+      dice_size: 3
+      bonus: 10
+  gold:
+    dice_count: 10
+    dice_size: 15
+    bonus: 200
+  experience: 150000
+  position:
+    default: kStand
+    start: kStand
+  sex: kFemale
+  attributes:
+    strength: 20
+    dexterity: 20
+    intelligence: 15
+    wisdom: 15
+    constitution: 18
+    charisma: 11
+  size: 45
+  mob_class: 102
+  race: 101
+  height: 180
+  weight: 150
+  max_in_world: 1
+  skills:
+  - skill_id: 4
+    value: 80
+  - skill_id: 136
+    value: 80
+  - skill_id: 151
+    value: 40
+  - skill_id: 157
+    value: 80
+  triggers:
+  - 10100
+  enhanced:
+    absorb: 35
+    like_work: 70
+    max_factor: 10
+    extra_attack: 1
+    special_bitvector: 'b1c1'
+    role: '000000001'
+    spells:
+    - 28
+    - 28
+    - 28
+    - 28
+    - 28
+    - 66
+    - 66
+    - 66
+    - 66
+    - 66
+    - 124
+    - 124
+    - 124
+    - 124
+    - 124
+
+1:
+  names:
+    aliases: петушок
+    nominative: петушок
+    genitive: петушка
+    dative: петушку
+    accusative: петушка
+    instrumental: петушком
+    prepositional: петушке
+  descriptions:
+    short_desc: |-
+      Резной Петушок стоит здесь на вершине столбика.
+    long_desc: |-
+      Чудо заморское - Петушок, совсем как живой, но смастеренный из красного
+      дерева и самоцветных каменьев.
+  action_flags:
+  - kSentinel
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kNoCharm
+  - kNoSummon
+  affect_flags:
+  - kDetectInvisible
+  - kDetectLife
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 24
+    hitroll_penalty: 15
+    armor: -3
+    hp:
+      dice_count: 20
+      dice_size: 10
+      bonus: 600
+    damage:
+      dice_count: 5
+      dice_size: 3
+      bonus: 20
+  gold:
+    dice_count: 0
+    dice_size: 0
+    bonus: 0
+  experience: 80000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 18
+    dexterity: 20
+    intelligence: 20
+    wisdom: 20
+    constitution: 15
+    charisma: 11
+  size: 30
+  mob_class: 103
+  race: 103
+  height: 180
+  weight: 150
+  max_in_world: -1
+  skills:
+  - skill_id: 136
+    value: 100
+  triggers:
+  - 10107
+  enhanced:
+    absorb: 24
+    bare_hand_attack: 8
+    like_work: 70
+    max_factor: 10
+    extra_attack: 1
+    special_bitvector: '0'
+    spells:
+    - 2
+    - 2
+    - 56
+    - 56
+    - 56
+    - 56
+    - 56
+    - 67
+    - 67
+    - 67
+    - 67
+    - 67
+
+2:
+  names:
+    aliases: средняя дочь Дарья Соловьевна
+    nominative: Дарья
+    genitive: Дарьи
+    dative: Дарье
+    accusative: Дарью
+    instrumental: Дарьей
+    prepositional: Дарье
+  descriptions:
+    short_desc: |-
+      Дарья Соловьевна, средняя дочь, стоит здесь.
+    long_desc: "Перед Вашими очами стоит Дарья, дочь Соловья-разбойника.\r\nОтвагой и смекалкой среди всех молодух она отличается,\r\nзлобна и гневна невиданно. "
+  action_flags:
+  - kSentinel
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kMemory
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 27
+    hitroll_penalty: 16
+    armor: -6
+    hp:
+      dice_count: 20
+      dice_size: 15
+      bonus: 700
+    damage:
+      dice_count: 5
+      dice_size: 4
+      bonus: 10
+  gold:
+    dice_count: 15
+    dice_size: 12
+    bonus: 100
+  experience: 120000
+  position:
+    default: kStand
+    start: kStand
+  sex: kFemale
+  attributes:
+    strength: 18
+    dexterity: 20
+    intelligence: 16
+    wisdom: 25
+    constitution: 17
+    charisma: 11
+  size: 40
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 1
+  skills:
+  - skill_id: 132
+    value: 50
+  - skill_id: 136
+    value: 66
+  - skill_id: 157
+    value: 50
+  triggers:
+  - 10101
+  enhanced:
+    absorb: 27
+    like_work: 60
+    max_factor: 10
+    extra_attack: 1
+    special_bitvector: 'b1c1'
+    spells:
+    - 26
+    - 26
+    - 26
+    - 26
+    - 26
+    - 28
+    - 28
+    - 28
+    - 82
+    - 82
+    - 82
+    - 82
+    - 82
+    helpers:
+    - 10111
+
+3:
+  names:
+    aliases: младшая дочь Евдокия Соловьевна
+    nominative: Евдокия
+    genitive: Евдокии
+    dative: Евдокие
+    accusative: Евдокию
+    instrumental: Евдокией
+    prepositional: Евдокии
+  descriptions:
+    short_desc: |-
+      Евдокия Соловьевна, дочь младшая, любимая, стоит здесь.
+    long_desc: |-
+      Перед Вашими очами стоит Евдокия, малая дочь Соловья-разбойника.
+      Не до детских игр голубе, во взрослые забавы зовет ее кровь
+      горячая-южная.
+  action_flags:
+  - kSentinel
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kNoCharm
+  - kNoSummon
+  affect_flags:
+  - kDetectInvisible
+  - kDetectLife
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 25
+    hitroll_penalty: 16
+    armor: -4
+    hp:
+      dice_count: 15
+      dice_size: 20
+      bonus: 600
+    damage:
+      dice_count: 5
+      dice_size: 3
+      bonus: 10
+  gold:
+    dice_count: 10
+    dice_size: 10
+    bonus: 100
+  experience: 100000
+  position:
+    default: kStand
+    start: kStand
+  sex: kFemale
+  attributes:
+    strength: 18
+    dexterity: 22
+    intelligence: 18
+    wisdom: 18
+    constitution: 15
+    charisma: 11
+  size: 30
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 1
+  skills:
+  - skill_id: 136
+    value: 60
+  - skill_id: 157
+    value: 50
+  triggers:
+  - 10102
+  enhanced:
+    absorb: 25
+    like_work: 50
+    max_factor: 10
+    extra_attack: 1
+    special_bitvector: 'b1c1'
+    spells:
+    - 28
+    - 28
+    - 69
+    - 69
+    - 69
+    - 69
+    - 69
+    - 69
+    - 69
+    - 69
+    - 69
+    - 69
+    helpers:
+    - 10110
+
+4:
+  names:
+    aliases: молодой разбойничек
+    nominative: молодой разбойничек
+    genitive: молодого разбойничка
+    dative: молодому разбойничку
+    accusative: молодого разбойничка
+    instrumental: молодым разбойничком
+    prepositional: молодом разбойничке
+  descriptions:
+    short_desc: |-
+      Молодой разбойничек лениво прохаживается здесь.
+    long_desc: |-
+      Молод и залихваст орлик сизокрылый, полно отваги
+      его сердце, как душа полна злобой и златолюбием.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kWimpy
+  - kAggressiveNight
+  - kHelper
+  - kNoSummon
+  - kLooter
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 21
+    hitroll_penalty: 14
+    armor: -4
+    hp:
+      dice_count: 20
+      dice_size: 10
+      bonus: 350
+    damage:
+      dice_count: 10
+      dice_size: 2
+      bonus: 5
+  gold:
+    dice_count: 5
+    dice_size: 10
+    bonus: 10
+  experience: 50000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 16
+    dexterity: 24
+    intelligence: 10
+    wisdom: 10
+    constitution: 15
+    charisma: 11
+  size: 30
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 5
+  skills:
+  - skill_id: 132
+    value: 20
+  - skill_id: 136
+    value: 48
+  - skill_id: 139
+    value: 50
+  - skill_id: 150
+    value: 30
+  - skill_id: 157
+    value: 40
+  triggers:
+  - 10104
+  enhanced:
+    absorb: 21
+    bare_hand_attack: 11
+    like_work: 30
+    max_factor: 30
+    extra_attack: 1
+    special_bitvector: 'a1b1c1'
+
+5:
+  names:
+    aliases: старый разбойник
+    nominative: старый разбойник
+    genitive: старого разбойника
+    dative: старому разбойнику
+    accusative: старого разбойника
+    instrumental: старым разбойником
+    prepositional: старом разбойнике
+  descriptions:
+    short_desc: |-
+      Старый разбойник отдыхает от "тяжких" трудов здесь.
+    long_desc: |-
+      Пожилой разбойник с волосатыми ручонками,
+      и седой бороденкой.
+  action_flags:
+  - kSentinel
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kHelper
+  - kNoSummon
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 23
+    hitroll_penalty: 18
+    armor: -2
+    hp:
+      dice_count: 15
+      dice_size: 10
+      bonus: 450
+    damage:
+      dice_count: 10
+      dice_size: 3
+      bonus: 10
+  gold:
+    dice_count: 5
+    dice_size: 10
+    bonus: 50
+  experience: 75000
+  position:
+    default: kRest
+    start: kRest
+  sex: kMale
+  attributes:
+    strength: 17
+    dexterity: 18
+    intelligence: 13
+    wisdom: 13
+    constitution: 18
+    charisma: 11
+  size: 35
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 3
+  skills:
+  - skill_id: 132
+    value: 50
+  - skill_id: 136
+    value: 54
+  - skill_id: 137
+    value: 80
+  - skill_id: 150
+    value: 40
+  - skill_id: 157
+    value: 40
+  triggers:
+  - 10103
+  enhanced:
+    absorb: 23
+    bare_hand_attack: 5
+    like_work: 60
+    max_factor: 20
+    extra_attack: 1
+    special_bitvector: 'k0b1c1'
+
+6:
+  names:
+    aliases: старая нянька
+    nominative: старая нянька
+    genitive: старой няньки
+    dative: старой няньке
+    accusative: старую няньку
+    instrumental: старой нянькой
+    prepositional: старой няньке
+  descriptions:
+    short_desc: |-
+      Старая нянька цепким взглядом следит за порядком.
+    long_desc: |-
+      Дородная баба, толстая и мудрая. Только 
+      таким и можно поручить наследие Соловьево.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kHelper
+  - kNoCharm
+  - kNoSummon
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 25
+    hitroll_penalty: 15
+    armor: -8
+    hp:
+      dice_count: 25
+      dice_size: 10
+      bonus: 750
+    damage:
+      dice_count: 8
+      dice_size: 3
+      bonus: 10
+  gold:
+    dice_count: 10
+    dice_size: 3
+    bonus: 100
+  experience: 100000
+  position:
+    default: kStand
+    start: kStand
+  sex: kFemale
+  attributes:
+    strength: 20
+    dexterity: 15
+    intelligence: 13
+    wisdom: 13
+    constitution: 25
+    charisma: 11
+  size: 40
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 4
+  skills:
+  - skill_id: 1
+    value: 90
+  - skill_id: 136
+    value: 66
+  triggers:
+  - 10105
+  enhanced:
+    absorb: 25
+    bare_hand_attack: 2
+    like_work: 55
+    max_factor: 15
+    extra_attack: 1
+    special_bitvector: 'b1c1'
+    spells:
+    - 15
+    - 15
+    - 15
+    - 15
+    - 15
+    - 15
+    - 15
+    - 15
+    - 15
+    - 15
+
+7:
+  names:
+    aliases: дворовая девка
+    nominative: дворовая девка
+    genitive: дворовой девки
+    dative: дворовой девке
+    accusative: дворовую девку
+    instrumental: дворовой девкой
+    prepositional: дворовой девке
+  descriptions:
+    short_desc: |-
+      Дворовая девка хлопочет по хозяйству здесь.
+    long_desc: |-
+      Младая девица для домашних 
+      и не только "потреб".
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kWimpy
+  - kHelper
+  - kNoSummon
+  - kLooter
+  alignment: 0
+  mob_type: E
+  stats:
+    level: 21
+    hitroll_penalty: 15
+    armor: 0
+    hp:
+      dice_count: 20
+      dice_size: 10
+      bonus: 350
+    damage:
+      dice_count: 5
+      dice_size: 3
+      bonus: 5
+  gold:
+    dice_count: 2
+    dice_size: 10
+    bonus: 10
+  experience: 50000
+  position:
+    default: kStand
+    start: kStand
+  sex: kFemale
+  attributes:
+    strength: 18
+    dexterity: 17
+    intelligence: 12
+    wisdom: 12
+    constitution: 18
+    charisma: 11
+  size: 30
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 5
+  skills:
+  - skill_id: 136
+    value: 45
+  - skill_id: 137
+    value: 50
+  - skill_id: 139
+    value: 35
+  enhanced:
+    absorb: 21
+    like_work: 30
+    max_factor: 25
+    extra_attack: 1
+    special_bitvector: 'a1c1'
+    spells:
+    - 17
+    - 17
+    - 17
+    - 17
+    - 17
+
+8:
+  names:
+    aliases: knez101 княжий сын
+    nominative: княжий сын
+    genitive: княжьего сына
+    dative: княжьему сыну
+    accusative: княжьего сына
+    instrumental: княжьим сыном
+    prepositional: княжьем сыне
+  descriptions:
+    short_desc: |-
+      Княжий сын стоит здесь.
+    long_desc: |-
+      Красный молодец с румянцем во всю щеку,
+      да с длинными светлыми прядями волос.
+  action_flags:
+  - kSentinel
+  - kNpc
+  - kStayZone
+  affect_flags:
+  - kDetectInvisible
+  - kDetectLife
+  - kInfravision
+  alignment: 600
+  mob_type: E
+  stats:
+    level: 1
+    hitroll_penalty: 0
+    armor: 9
+    hp:
+      dice_count: 0
+      dice_size: 0
+      bonus: 100
+    damage:
+      dice_count: 1
+      dice_size: 1
+      bonus: 1
+  gold:
+    dice_count: 0
+    dice_size: 0
+    bonus: 0
+  experience: 0
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 10
+    dexterity: 10
+    intelligence: 10
+    wisdom: 10
+    constitution: 10
+    charisma: 10
+  size: 50
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: -1
+  skills:
+  - skill_id: 136
+    value: 3
+  enhanced:
+    special_bitvector: '0'
+
+9:
+  names:
+    aliases: заморский купец
+    nominative: заморский купец
+    genitive: заморского купца
+    dative: заморскому купцу
+    accusative: заморского купца
+    instrumental: заморским купцом
+    prepositional: заморском купце
+  descriptions:
+    short_desc: |-
+      Заморский купец стоит здесь.
+    long_desc: |-
+      Купчина - гость из земель дальних,
+      фряжских а может угорских.
+  action_flags:
+  - kSentinel
+  - kNpc
+  - kStayZone
+  affect_flags:
+  - kDetectInvisible
+  - kDetectLife
+  - kInfravision
+  alignment: 600
+  mob_type: E
+  stats:
+    level: 1
+    hitroll_penalty: 0
+    armor: 10
+    hp:
+      dice_count: 0
+      dice_size: 0
+      bonus: 100
+    damage:
+      dice_count: 1
+      dice_size: 1
+      bonus: 1
+  gold:
+    dice_count: 0
+    dice_size: 0
+    bonus: 0
+  experience: 0
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 10
+    dexterity: 10
+    intelligence: 10
+    wisdom: 10
+    constitution: 10
+    charisma: 11
+  size: 30
+  mob_class: 107
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: -1
+  skills:
+  - skill_id: 136
+    value: 3
+  enhanced:
+    special_bitvector: '0'
+
+10:
+  names:
+    aliases: старая нянька
+    nominative: старая нянька
+    genitive: старой няньки
+    dative: старой няньке
+    accusative: старую няньку
+    instrumental: старой нянькой
+    prepositional: старой няньке
+  descriptions:
+    short_desc: |-
+      Старая нянька цепким взглядом следит за порядком.
+    long_desc: |-
+      Дородная баба, толстая и мудрая. Только 
+      таким и можно поручить наследие Соловьево.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kHelper
+  - kNoCharm
+  - kNoSummon
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 25
+    hitroll_penalty: 15
+    armor: -8
+    hp:
+      dice_count: 25
+      dice_size: 10
+      bonus: 750
+    damage:
+      dice_count: 8
+      dice_size: 3
+      bonus: 10
+  gold:
+    dice_count: 3
+    dice_size: 20
+    bonus: 100
+  experience: 100000
+  position:
+    default: kStand
+    start: kStand
+  sex: kFemale
+  attributes:
+    strength: 20
+    dexterity: 15
+    intelligence: 13
+    wisdom: 13
+    constitution: 25
+    charisma: 11
+  size: 40
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 1
+  skills:
+  - skill_id: 1
+    value: 80
+  - skill_id: 132
+    value: 70
+  - skill_id: 136
+    value: 90
+  - skill_id: 137
+    value: 80
+  triggers:
+  - 10105
+  enhanced:
+    absorb: 25
+    bare_hand_attack: 2
+    like_work: 55
+    max_factor: 15
+    extra_attack: 1
+    special_bitvector: 'b1c1'
+    spells:
+    - 28
+    - 28
+    - 28
+
+11:
+  names:
+    aliases: старая нянька
+    nominative: старая нянька
+    genitive: старой няньки
+    dative: старой няньке
+    accusative: старую няньку
+    instrumental: старой нянькой
+    prepositional: старой няньке
+  descriptions:
+    short_desc: |-
+      Старая нянька цепким взглядом следит за порядком.
+    long_desc: |-
+      Дородная баба, толстая и мудрая. Только 
+      таким и можно поручить наследие Соловьево.
+  action_flags:
+  - kScavenger
+  - kNpc
+  - kStayZone
+  - kHelper
+  - kNoCharm
+  - kNoSummon
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 25
+    hitroll_penalty: 15
+    armor: -8
+    hp:
+      dice_count: 25
+      dice_size: 10
+      bonus: 750
+    damage:
+      dice_count: 8
+      dice_size: 3
+      bonus: 10
+  gold:
+    dice_count: 3
+    dice_size: 20
+    bonus: 100
+  experience: 100000
+  position:
+    default: kStand
+    start: kStand
+  sex: kFemale
+  attributes:
+    strength: 20
+    dexterity: 15
+    intelligence: 13
+    wisdom: 13
+    constitution: 25
+    charisma: 11
+  size: 40
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 1
+  skills:
+  - skill_id: 1
+    value: 80
+  - skill_id: 136
+    value: 100
+  - skill_id: 137
+    value: 90
+  - skill_id: 150
+    value: 70
+  triggers:
+  - 10105
+  enhanced:
+    absorb: 25
+    bare_hand_attack: 2
+    like_work: 55
+    max_factor: 15
+    extra_attack: 1
+    special_bitvector: 'b1c1'
+    spells:
+    - 28
+    - 28
+    - 28
+
+12:
+  names:
+    aliases: злобный разбойник
+    nominative: злобный разбойник
+    genitive: злобного разбойника
+    dative: злобному разбойнику
+    accusative: злобного разбойника
+    instrumental: злобным разбойником
+    prepositional: злобном разбойнике
+  descriptions:
+    short_desc: |-
+      Злобный разбойник стоит здесь, похоже, что-то охраняя.
+    long_desc: |-
+      Свиреп, могуч да волосат сей разбойничек,
+      а руки у него то ли в грязи, то ли в крови испачканы.
+  action_flags:
+  - kSentinel
+  - kScavenger
+  - kNpc
+  - kAgressive
+  - kStayZone
+  - kHelper
+  - kNoSummon
+  - kLooter
+  affect_flags:
+  - kInfravision
+  alignment: -600
+  mob_type: E
+  stats:
+    level: 24
+    hitroll_penalty: 18
+    armor: -6
+    hp:
+      dice_count: 15
+      dice_size: 10
+      bonus: 550
+    damage:
+      dice_count: 10
+      dice_size: 3
+      bonus: 10
+  gold:
+    dice_count: 5
+    dice_size: 10
+    bonus: 60
+  experience: 80000
+  position:
+    default: kStand
+    start: kStand
+  sex: kMale
+  attributes:
+    strength: 18
+    dexterity: 22
+    intelligence: 13
+    wisdom: 13
+    constitution: 18
+    charisma: 11
+  size: 35
+  mob_class: 102
+  race: 101
+  height: 198
+  weight: 200
+  max_in_world: 2
+  skills:
+  - skill_id: 136
+    value: 100
+  - skill_id: 150
+    value: 50
+  - skill_id: 157
+    value: 50
+  enhanced:
+    absorb: 24
+    bare_hand_attack: 5
+    like_work: 65
+    max_factor: 20
+    extra_attack: 1
+    special_bitvector: 'k0b1c1'

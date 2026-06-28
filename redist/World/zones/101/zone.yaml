@@ -1,0 +1,15 @@
+vnum: 101
+name: У Соловья в доме
+metadata:
+  comment: Автор -- Лада
+  location: Севернее Вышгорода
+first_room: 10100
+top_room: 10199
+mode: 23
+zone_type: 8
+zone_group: 1
+entrance: 10100
+lifespan: 21
+reset_mode: 0
+reset_idle: 0
+under_construction: 0

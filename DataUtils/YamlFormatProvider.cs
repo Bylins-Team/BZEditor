@@ -315,6 +315,12 @@ namespace DataUtils
                 string yamlContent = File.ReadAllText(zonePath, encoding ?? DefaultEncoding);
                 var yamlZone = deserializer.Deserialize<YamlZone>(yamlContent);
                 YamlZoneMapper.FromYaml(yamlZone, zone);
+                // In the flat layout the directory name IS the zone number, and the
+                // canonical converter omits vnum from the body (the engine derives it
+                // from the path). Without this, vnum-less zones load as Zone.Number 0,
+                // which breaks lookup/save by number (e.g. the editor couldn't edit or
+                // unload such a zone). The directory is authoritative, so seed from it.
+                zone.Number = ParseZone(zoneNumber);
                 LoadZoneCommands(yamlZone, zone, mobs, rooms, encoding ?? DefaultEncoding);
                 return true;
             }
