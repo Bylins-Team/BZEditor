@@ -150,7 +150,9 @@ namespace BZEditor
             templatesDm.LoadData();
             foreach (ZoneData zd in FileListsDm.ZonesDataList)
             {
-                if (!zd.Preloading) continue;
+                // Only auto-open zones that actually exist in the current world; a stale
+                // preload entry for a zone that is not there is skipped, not error-dialoged.
+                if (!zd.Preloading || zd.State == ZoneState.NotFound) continue;
 #if !DEBUG
                 incr += step;
                 if (incr > 1)
@@ -254,51 +256,8 @@ namespace BZEditor
                 else
                     return false;
             }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "ZON")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"ZON\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "ZON"));
-                else
-                    return false;
-            }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "WLD")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"WLD\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "WLD"));
-                else
-                    return false;
-            }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "MOB")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"MOB\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "MOB"));
-                else
-                    return false;
-            }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "OBJ")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"OBJ\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "OBJ"));
-                else
-                    return false;
-            }
-            if (!Directory.Exists(Path.Combine(StaticData.WorldFolderPath, "TRG")))
-            {
-                if (
-                    MessageBox.Show("Не найдена дирректория \"TRG\"! Будем создавать?", "Не найден путь",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Directory.CreateDirectory(Path.Combine(StaticData.WorldFolderPath, "TRG"));
-                else
-                    return false;
-            }
+            // YAML world: everything lives under zones\ (created on save). No legacy
+            // ZON/WLD/MOB/OBJ/TRG directories are required.
             return true;
         }
 
