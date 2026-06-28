@@ -236,6 +236,7 @@ namespace DataUtils
             if (zd != null)
             {
                 zd.Preloading = true;
+                MarkLoaded(zd);
                 SaveData();
             }
         }
@@ -247,8 +248,17 @@ namespace DataUtils
             {
                 zd.Name = newName;
                 zd.Preloading = true;
+                MarkLoaded(zd);
                 SaveData();
             }
+        }
+
+        // A zone entering the loaded set should read as Loaded (so it can be unloaded),
+        // unless it is already open in an editor (Opened) or has unsaved edits (Changed).
+        private static void MarkLoaded(ZoneData zd)
+        {
+            if (zd.State != ZoneState.Opened && zd.State != ZoneState.Changed)
+                zd.State = ZoneState.Loaded;
         }
 
         public void AddZoneToList(string number)

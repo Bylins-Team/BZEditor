@@ -547,6 +547,26 @@ namespace BZEditor
             return false;
         }
 
+        // A NumericUpDown throws if Value is outside [Minimum, Maximum]; canonical zones
+        // omit fields (e.g. zone_group), so the loaded value can fall out of the editor's
+        // range. Clamp instead of crashing BindUi.
+        private static void SetNudValue(NumericUpDown nud, int value)
+        {
+            decimal v = value;
+            if (v < nud.Minimum) v = nud.Minimum;
+            else if (v > nud.Maximum) v = nud.Maximum;
+            nud.Value = v;
+        }
+
+        // Likewise a ComboBox throws on an out-of-range SelectedIndex.
+        private static void SetComboIndex(ComboBox combo, int index)
+        {
+            if (combo.Items.Count == 0) { combo.SelectedIndex = -1; return; }
+            if (index < 0) index = 0;
+            else if (index >= combo.Items.Count) index = combo.Items.Count - 1;
+            combo.SelectedIndex = index;
+        }
+
         private void BindUi()
         {
             ComboBox cboxBooleanVal = new ComboBox();
@@ -555,20 +575,20 @@ namespace BZEditor
 
             #region Zon
 
-            nudZoneNumber.Value = ZoneDm.Zone.Number;
+            SetNudValue(nudZoneNumber, ZoneDm.Zone.Number);
             tbZoneName.Text = ZoneDm.Zone.Name;
             tbZoneComment.Text = ZoneDm.Zone.Comment;
             tbZoneLocation.Text = ZoneDm.Zone.Location;
             tbZoneDescription.Text = ZoneDm.Zone.Description;
             tbZoneAuthor.Text = ZoneDm.Zone.Author;
-            nudOptimalCharsInGroup.Value = ZoneDm.Zone.OptimalCharsInGroup;
-            nudRepopTimer.Value = ZoneDm.Zone.RepopTimer;
+            SetNudValue(nudOptimalCharsInGroup, ZoneDm.Zone.OptimalCharsInGroup);
+            SetNudValue(nudRepopTimer, ZoneDm.Zone.RepopTimer);
             BindComboBox(cbZoneReopopType, BasesDm.ZonRepop);
             BindComboBox(cboxZonType, BasesDm.ZonType);
-            cbZoneReopopType.SelectedIndex = ZoneDm.Zone.RepopType;
-            cboxZonType.SelectedIndex = ZoneDm.Zone.Type;
+            SetComboIndex(cbZoneReopopType, ZoneDm.Zone.RepopType);
+            SetComboIndex(cboxZonType, ZoneDm.Zone.Type);
             //Закладка ZON-файл
-            nudZoneLevel.Value = Math.Min(nudZoneLevel.Maximum, ZoneDm.Zone.Level);
+            SetNudValue(nudZoneLevel, ZoneDm.Zone.Level);
 
             elvVitrualRoomMobObjects.MySortBrush = SystemBrushes.ControlLight;
             NumericUpDown nudObjLoadInMobProb = new NumericUpDown { Minimum = (-1) };
