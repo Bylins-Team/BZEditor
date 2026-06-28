@@ -91,8 +91,14 @@ namespace BZEditor
             Size = settings.Read("Size", new Size(200, 100));
             Location = settings.Read("Location", new Point(0, 0));
             WindowState = settings.Read("WindowState", FormWindowState.Maximized);
-            StaticData.WorldFolderPath =
-                settings.Read("PathToWorldFolder", Path.Combine(Application.StartupPath, "world"));
+            // A relative world path (the shipped config uses "World") must resolve
+            // against the executable's folder, not the process working directory --
+            // otherwise launching the editor from anywhere but its own folder fails to
+            // find the bundled world.
+            string worldFolderSetting = settings.Read("PathToWorldFolder", "world");
+            StaticData.WorldFolderPath = Path.IsPathRooted(worldFolderSetting)
+                ? worldFolderSetting
+                : Path.Combine(Application.StartupPath, worldFolderSetting);
             string ozl = settings.Read("OpenedZonesList", "");
             try
             {
@@ -353,8 +359,21 @@ namespace BZEditor
             if (fbd.ShowDialog() != DialogResult.OK) return;
 
             StaticData.WorldFolderPath = fbd.SelectedPath;
-            MessageBox.Show("Для вступления изменений в силу необходимо перезагрузить редактор.", "Предупреждение",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            settings.Write("PathToWorldFolder", StaticData.WorldFolderPath);
+            tsslWorlFolderPath.Text = $"Путь к зонам [{StaticData.WorldFolderPath}]";
+
+            // During first-run validation the zone list does not exist yet -- the normal
+            // startup load will use the new path. Otherwise re-scan and refresh in place
+            // so the change takes effect immediately, no restart required.
+            if (zonesListForm != null)
+            {
+                FileListsDm.LoadAvailZones();
+                zonesListForm.RefreshZonesList();
+                if (FileListsDm.ZonesDataList.Count == 0)
+                    MessageBox.Show(
+                        "В выбранной папке не найдено ни одной зоны.\nОжидается, что в ней есть подкаталог \"zones\" с зонами мира.",
+                        "Зоны не найдены", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void TsmiAboutClick(object sender, EventArgs e)
