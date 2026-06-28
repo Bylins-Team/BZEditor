@@ -59,9 +59,9 @@ namespace DataUtils
         public static bool BackupZones;
 
         /// <summary>
-        /// Формат данных мира (circlemud, yaml)
+        /// Формат данных мира (circlemud, yaml). По умолчанию yaml.
         /// </summary>
-        public static string WorldDataFormat = "circlemud";
+        public static string WorldDataFormat = "yaml";
     }
 
     public static class Utils

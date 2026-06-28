@@ -4,7 +4,8 @@
         <add key="templatesFormDockState" value="3" />
         <add key="zonesListFormDockState" value="3" />
         <add key="WindowState" value="0" />
-        <add key="PathToWorldFolder" value="C:\dev\c++\mud\lib.template\world" />
+        <add key="PathToWorldFolder" value="World" />
+        <add key="WorldDataFormat" value="yaml" />
         <add key="ActiveZoneNum" value="-1" />
         <add key="OpenedZonesList" value=",1" />
         <add key="clearSketchAfterGeneratingRooms" value="True" />

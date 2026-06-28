@@ -9,7 +9,7 @@ namespace DataUtils
     public static class FormatProviderFactory
     {
         private static readonly Dictionary<string, IFormatProvider> Providers = new Dictionary<string, IFormatProvider>(StringComparer.OrdinalIgnoreCase);
-        private static string defaultFormatName = "circlemud";
+        private static string defaultFormatName = "yaml";
         private static bool initialized;
 
         /// <summary>

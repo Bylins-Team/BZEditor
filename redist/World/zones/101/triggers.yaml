@@ -1,0 +1,226 @@
+# Triggers for zone 101
+
+0:
+  name: <101 - Marja killed
+  attach_type: kMobTrigger
+  trigger_types:
+  - kDeath
+  narg: 100
+  script: |-
+    mload   obj 10111
+    calcuid Temnica 10125 room
+    attach  10108 %Temnica.id%
+    if (%world.curobjs(10101)% < 10) && (%random.1000% <= 50)
+      mload obj 10101
+    end
+    if (%world.curobjs(10108)% < 10) && (%random.1000% <= 50)
+      mload obj 10108
+    end
+    if (%world.curobjs(558)% < %world.maxobj(558)%) && (%random.1000% <= 100)
+      mload obj 558
+    end
+    if (%world.curobjs(529)% < %world.maxobj(529)%) && (%random.1000% <= 50)
+      mload obj 529
+    end
+
+1:
+  name: <101 - Darja killed
+  attach_type: kMobTrigger
+  trigger_types:
+  - kDeath
+  narg: 100
+  script: |-
+    if (%world.curobjs(10102)% < 10) && (%random.100% <= 5)
+      mload obj 10102
+    end
+    if (%world.curobjs(10109)% < 10) && (%random.100% <= 5)
+      mload obj 10109
+    end
+
+2:
+  name: <101 - Evdokia killed
+  attach_type: kMobTrigger
+  trigger_types:
+  - kDeath
+  narg: 100
+  script: |-
+    if (%world.curobjs(10103)% < 10) && (%random.100% <= 5)
+      mload obj 10103
+    end
+    if (%world.curobjs(10105)% < 10) && (%random.100% <= 5)
+      mload obj 10105
+    end
+
+3:
+  name: <101 - Old robber killed
+  attach_type: kMobTrigger
+  trigger_types:
+  - kDeath
+  narg: 100
+  script: |-
+    if (%world.curobjs(10110)% < 10) && (%random.100% <= 5)
+      mload obj 10110
+    end
+
+4:
+  name: <101 - Young robber killed
+  attach_type: kMobTrigger
+  trigger_types:
+  - kDeath
+  narg: 100
+  script: |-
+    if (%world.curobjs(10004)% < 30) && (%random.100% <= 25)
+      mload obj 10104
+    end
+
+5:
+  name: <101 - Nianika killed
+  attach_type: kMobTrigger
+  trigger_types:
+  - kDeath
+  narg: 100
+  script: |-
+    if (%world.curobjs(10104)% < 10) && (%random.100% <= 5)
+      mload obj 10104
+    end
+
+6:
+  name: <101 - Petushok "Take diamond"
+  attach_type: kRoomTrigger
+  trigger_types:
+  - kCommand
+  narg: 0
+  arglist: вырвать выдрать выковырять достать
+  script: |-
+    if (%actor.vnum% != -1)
+      halt
+    end
+    if !(%arg.contains(камень)%) && !(%arg.contains(самоцвет)%)
+      halt
+    end
+    if !%exist.obj(10100)%
+      halt
+    end
+    wait 1
+    calcuid Petushok 10100 obj
+    wpurge %Petushok%
+    wload mob 10101
+    calcuid Petushok 10101 mob
+    wforce %Petushok% attack %actor.name
+
+7:
+  name: <101 - Petushok killed
+  attach_type: kMobTrigger
+  trigger_types:
+  - kDeath
+  narg: 100
+  script: |-
+    if %random.10% <= 2
+      mload obj 10113
+    end
+
+8:
+  name: <101 - PC open door to temnica
+  attach_type: kRoomTrigger
+  trigger_types:
+  - kReceive
+  narg: 100
+  script: |-
+    if %actor.vnum% != -1
+      halt
+    end
+    set Hero %actor%
+    eval rV %random.1000%
+    wecho ----- %rV% ------
+    if %rV% < 901
+      *90% на оба положительных исхода
+      if %rV% < 451
+        *делим на 2 ветки благополучный исход
+        *1 ветка моб 1109
+        wload mob 10109
+        calcuid target 10109 mob
+        attach 10110 %target%
+        remote Hero %target%
+      else
+        *2 ветка моб 1108
+        wload mob 10108
+        calcuid target 10108 mob
+        attach 10109 %target%
+        remote Hero %target%
+      end
+    end
+    wait 1
+    detach 10108 %self%
+
+9:
+  name: <101 - PC enter to temnica when Kniese Sun
+  attach_type: kMobTrigger
+  trigger_types:
+  - kGreetAll
+  narg: 100
+  script: |-
+    if %actor.id% != %Hero.id%
+      halt
+    end
+    wait 1s
+    if !%self.fighting%
+      questbodrich %actor% 16
+      mecho - Спасибо, что освободил%actor.g% меня, %actor.name%.
+      if (%world.curobjs(10107)% < 10) && (%random.100% <= 25)
+        mload obj 10107
+        mecho - Вот, она досталась мне от деда, возьми ее.
+        give  мурзамецкая.сабля %actor.name%
+      else
+        mechoaround %actor% Княжий сын дал груду монет %actor.dname%.
+        msend       %actor% Княжий сын дал Вам 1000 монет.
+        %actor.gold(+1000)%
+      end
+      calcuid knez101 10108 mob
+      mpurge %knez101%
+    end
+    detach 10109 %self.id%
+
+10:
+  name: <101 - PC enter to temnica when Merchant
+  attach_type: kMobTrigger
+  trigger_types:
+  - kGreetAll
+  narg: 100
+  script: |-
+    if %actor.id% != %Hero.id%
+      halt
+    end
+    wait 1s
+    if !%self.fighting%
+      questbodrich %actor% 17
+      mecho - Спасибо, что освободил%actor.g% меня, %actor.name%.
+      if (%world.curobjs(534)% < %world.maxobj(534)%) && (%random.100% <= 25)
+        mload obj 534
+        mecho - Я хотел ее продать, но пусть это будет твоей наградой.
+        give книг %actor.name%
+      elseif (%random.1000% <= 100)
+        say Возьми эту чекушку, ее ценность намного выше, чем кажется на первый взгляд.
+        wait 1
+        mload obj 103
+        дать чекуш %actor.name%
+      else
+        mechoaround %actor% Заморский купец дал груду монет %actor.dname%.
+        msend %actor% Заморский купец дал Вам 1000 монет.
+        %actor.gold(+1000)%
+      end
+      calcuid merch101 10109 mob
+      mpurge %merch101%
+    end
+    detach 10110 %self.id%
+
+20:
+  name: <101 - Zone reset
+  attach_type: kRoomTrigger
+  trigger_types:
+  - kDeath
+  narg: 100
+  script: |-
+    calcuid room 10131 room
+    attach  10106 %room.id%
+    calcuid room1 10125 room
+    attach 10108 %room1%
