@@ -308,7 +308,15 @@ namespace DataUtils
             ZoneData zd = zonesFileList[number];
             if (zd != null)
             {
-                zd.State = ZoneState.Available;
+                if (zd.State == ZoneState.NotFound)
+                {
+                    zonesFileList.Remove(zd);
+                }
+                else
+                {
+                    zd.State = ZoneState.Available;
+                }
+
                 loadedZonesCount--;
             }
             SaveData();
