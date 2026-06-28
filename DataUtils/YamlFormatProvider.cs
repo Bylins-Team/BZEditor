@@ -31,12 +31,14 @@ namespace DataUtils
             // omitted. This also makes the editor's own YAML round-trip idempotent.
             serializer = new SerializerBuilder()
                 .WithNamingConvention(UnderscoredNamingConvention.Instance)
+                .WithTypeConverter(new NamedIntMapConverter())
                 .ConfigureDefaultValuesHandling(DefaultValuesHandling.OmitNull
                     | DefaultValuesHandling.OmitEmptyCollections)
                 .Build();
 
             deserializer = new DeserializerBuilder()
                 .WithNamingConvention(UnderscoredNamingConvention.Instance)
+                .WithTypeConverter(new NamedIntMapConverter())
                 .IgnoreUnmatchedProperties()
                 .Build();
         }

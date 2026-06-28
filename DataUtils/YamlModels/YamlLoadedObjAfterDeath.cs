@@ -12,5 +12,11 @@ namespace DataUtils.YamlModels
 
         [YamlMember(Alias = "load_prob")]
         public int Probability { get; set; }
+
+        [YamlMember(Alias = "load_type")]
+        public int LoadType { get; set; }
+
+        [YamlMember(Alias = "spec_param")]
+        public int SpecParam { get; set; }
     }
 }

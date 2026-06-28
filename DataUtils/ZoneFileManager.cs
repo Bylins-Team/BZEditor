@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Collections.Generic;
 using SystemFrameworks;
 
 namespace DataUtils
@@ -496,6 +497,7 @@ namespace DataUtils
                         sw.WriteLine($"P {loin.LoadType} {loin.VNum} {oinMax} {lo.VNum} {probin}\t({namein})");
                     }
                 }
+                var followLines = new List<string>();
                 foreach (OperatedMob lm in r.LoadingMobsCollection)
                 {
                     var m = mobsCollection[lm.VNum, 0];
@@ -507,7 +509,10 @@ namespace DataUtils
                     {
                         var mf = mobsCollection[lm.FollowsBy, 0];
                         var namef = mf?.Cases.Imen ?? "";
-                        sw.WriteLine($"F {conditionFlag} {r.VNum} {lm.FollowsBy} {lm.VNum} -1\t({namef})");
+                        // Defer F until after every M in this room: F links two already-loaded
+                        // mobs, so the leader's M must precede it (otherwise both the engine and
+                        // the editor's reader drop the follow). See zone 326.
+                        followLines.Add($"F {conditionFlag} {r.VNum} {lm.FollowsBy} {lm.VNum} -1\t({namef})");
                     }
                     foreach (MobObj moin in lm.Items)
                     {
@@ -535,6 +540,8 @@ namespace DataUtils
                         sw.WriteLine($"L {moin.VNum} {prob} {moin.LoadType} {moin.SpecParam}\t({namein})");
                     }
                 }
+                foreach (var followLine in followLines)
+                    sw.WriteLine(followLine);
                 //0 я хз что такое, дальше : номер комнаты, направление, состояние выхода, остальные аргументы отсутствуют
                 if (r.ExitNorth.DoorState > 0)
                     sw.WriteLine($"D {(r.ExitNorth.ConditionFlag ? "1" : "0")} {r.VNum} 0 {r.ExitNorth.DoorState} -1\t({r.Name})");

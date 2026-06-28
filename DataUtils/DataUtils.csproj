@@ -148,6 +148,7 @@
     <Compile Include="YamlModels\YamlIngredient.cs" />
     <Compile Include="YamlModels\YamlLoadedObjAfterDeath.cs" />
     <Compile Include="YamlModels\YamlMob.cs" />
+    <Compile Include="YamlModels\YamlNamedIntMaps.cs" />
     <Compile Include="YamlModels\YamlMobObj.cs" />
     <Compile Include="YamlModels\YamlMobStats.cs" />
     <Compile Include="YamlModels\YamlObj.cs" />

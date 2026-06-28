@@ -231,6 +231,11 @@ namespace DataUtils
                                     parts = input.Split(' ');
                                     curObject.AddSkillBonus(StringUtils.ToIntFast(parts[0]), StringUtils.ToIntFast(parts[1]));
                                     break;
+                                case 'V':
+                                    parts = input.Split(' ');
+                                    if (parts.Length >= 3)
+                                        curObject.ExtraValues[parts[1]] = StringUtils.ToIntFast(parts[2]);
+                                    break;
                                 case 'T':
                                     if (input.Length > 1)
                                     {
@@ -345,6 +350,8 @@ namespace DataUtils
                     }
                     foreach (int t in curObject.TriggersList)
                         sw.WriteLine($"T {t}");
+                    foreach (var ev in curObject.ExtraValues)
+                        sw.WriteLine($"V {ev.Key} {ev.Value}");
 
                     curObject.Modifyed = false;
                 }

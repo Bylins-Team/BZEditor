@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DataUtils.YamlModels;
 
 namespace DataUtils.YamlMappers
@@ -18,16 +19,20 @@ namespace DataUtils.YamlMappers
             };
 
             // Names: aliases + the six Russian grammatical cases, using the engine's key names.
-            yaml.Names["aliases"] = obj.Alias ?? "";
-            yaml.Names["nominative"] = obj.Cases.Imen ?? "";
-            yaml.Names["genitive"] = obj.Cases.Rod ?? "";
-            yaml.Names["dative"] = obj.Cases.Dat ?? "";
-            yaml.Names["accusative"] = obj.Cases.Vin ?? "";
-            yaml.Names["instrumental"] = obj.Cases.Tvor ?? "";
-            yaml.Names["prepositional"] = obj.Cases.Pred ?? "";
+            // TrimEnd: trailing whitespace in a name is junk and YAML strips it on the next
+            // read, so trim on write to keep re-saves stable.
+            yaml.Names["aliases"] = (obj.Alias ?? "").TrimEnd();
+            yaml.Names["nominative"] = (obj.Cases.Imen ?? "").TrimEnd();
+            yaml.Names["genitive"] = (obj.Cases.Rod ?? "").TrimEnd();
+            yaml.Names["dative"] = (obj.Cases.Dat ?? "").TrimEnd();
+            yaml.Names["accusative"] = (obj.Cases.Vin ?? "").TrimEnd();
+            yaml.Names["instrumental"] = (obj.Cases.Tvor ?? "").TrimEnd();
+            yaml.Names["prepositional"] = (obj.Cases.Pred ?? "").TrimEnd();
 
             yaml.ShortDesc = obj.Desc ?? "";
-            yaml.ActionDesc = string.IsNullOrEmpty(obj.ActionDesc) ? null : obj.ActionDesc;
+            // Whitespace-only action_desc (e.g. a world's empty ">2" folded block) carries
+            // no content; omit it so a re-save is idempotent instead of dropping it next pass.
+            yaml.ActionDesc = string.IsNullOrWhiteSpace(obj.ActionDesc) ? null : obj.ActionDesc;
             yaml.Type = EngineCodec.EnumName(obj.Type, EngineDictionaries.ObjTypes);
 
             // Flag bitvectors as engine symbolic names
@@ -90,6 +95,10 @@ namespace DataUtils.YamlMappers
                     Description = (ed.Description ?? "").TrimEnd('\r', '\n')
                 });
             }
+
+            // Extra values (potion/liquid V-lines): preserved verbatim.
+            if (obj.ExtraValues != null && obj.ExtraValues.Count > 0)
+                yaml.ExtraValues = new Dictionary<string, int>(obj.ExtraValues);
 
             // Triggers
             foreach (var trig in obj.TriggersList)
@@ -175,6 +184,12 @@ namespace DataUtils.YamlMappers
                 foreach (var ed in yaml.ExtraDescriptions)
                     obj.ExtraDescriptions.Add(new ExtraDesc(ed.Keywords ?? "", ed.Description ?? ""));
             }
+
+            // Extra values (potion/liquid V-lines): preserved verbatim.
+            obj.ExtraValues.Clear();
+            if (yaml.ExtraValues != null)
+                foreach (var kv in yaml.ExtraValues)
+                    obj.ExtraValues[kv.Key] = kv.Value;
 
             // Triggers
             if (yaml.Triggers != null)

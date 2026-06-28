@@ -22,13 +22,15 @@ namespace DataUtils.YamlMappers
             };
 
             // Names: aliases + the six Russian grammatical cases, using the engine's key names.
-            yaml.Names["aliases"] = mob.Alias ?? "";
-            yaml.Names["nominative"] = mob.Cases.Imen ?? "";
-            yaml.Names["genitive"] = mob.Cases.Rod ?? "";
-            yaml.Names["dative"] = mob.Cases.Dat ?? "";
-            yaml.Names["accusative"] = mob.Cases.Vin ?? "";
-            yaml.Names["instrumental"] = mob.Cases.Tvor ?? "";
-            yaml.Names["prepositional"] = mob.Cases.Pred ?? "";
+            // TrimEnd: trailing whitespace in a name is junk (some worlds carry a stray tab)
+            // and YAML strips it on the next read, so trim on write to keep re-saves stable.
+            yaml.Names["aliases"] = (mob.Alias ?? "").TrimEnd();
+            yaml.Names["nominative"] = (mob.Cases.Imen ?? "").TrimEnd();
+            yaml.Names["genitive"] = (mob.Cases.Rod ?? "").TrimEnd();
+            yaml.Names["dative"] = (mob.Cases.Dat ?? "").TrimEnd();
+            yaml.Names["accusative"] = (mob.Cases.Vin ?? "").TrimEnd();
+            yaml.Names["instrumental"] = (mob.Cases.Tvor ?? "").TrimEnd();
+            yaml.Names["prepositional"] = (mob.Cases.Pred ?? "").TrimEnd();
 
             // Descriptions: engine short_desc = room one-liner, long_desc = look text
             yaml.Descriptions = new YamlMobDescriptions
@@ -120,6 +122,7 @@ namespace DataUtils.YamlMappers
             if (mob.LikeWork != 0) { enhanced.LikeWork = mob.LikeWork; hasEnhanced = true; }
             if (mob.MaxFactor != 0) { enhanced.MaxFactor = mob.MaxFactor; hasEnhanced = true; }
             if (mob.ExtraAttack != 0) { enhanced.ExtraAttack = mob.ExtraAttack; hasEnhanced = true; }
+            if (mob.MobRemort != 0) { enhanced.MobRemort = mob.MobRemort; hasEnhanced = true; }
             if (!string.IsNullOrEmpty(mob.SpecialBitvector)) { enhanced.SpecialBitvector = mob.SpecialBitvector; hasEnhanced = true; }
 
             // Role bitvector as a 9-char binary string (same encoding as the legacy "Role:" line)
@@ -127,33 +130,29 @@ namespace DataUtils.YamlMappers
             foreach (int r in mob.Roles) roleBits += Convert.ToInt32(Math.Pow(2, r - 1));
             if (roleBits > 0) { enhanced.Role = BinaryUtils.NumberToBinary(roleBits, 9); hasEnhanced = true; }
 
-            // Resistances
-            var resistances = new List<int>
-            {
-                mob.ResistFromFire,
-                mob.ResistFromAir,
-                mob.ResistFromWater,
-                mob.ResistFromEarth,
-                mob.ResistDark,
-                mob.Vitality,
-                mob.Mind,
-                mob.Immunitet
-            };
-            if (resistances.Exists(r => r != 0))
+            // Resistances: engine-named map, non-zero entries only.
+            var resistances = new YamlResistMap();
+            if (mob.ResistFromFire != 0) resistances["kFire"] = mob.ResistFromFire;
+            if (mob.ResistFromAir != 0) resistances["kAir"] = mob.ResistFromAir;
+            if (mob.ResistFromWater != 0) resistances["kWater"] = mob.ResistFromWater;
+            if (mob.ResistFromEarth != 0) resistances["kEarth"] = mob.ResistFromEarth;
+            if (mob.ResistDark != 0) resistances["kDark"] = mob.ResistDark;
+            if (mob.Vitality != 0) resistances["kVitality"] = mob.Vitality;
+            if (mob.Mind != 0) resistances["kMind"] = mob.Mind;
+            if (mob.Immunitet != 0) resistances["kImmunity"] = mob.Immunitet;
+            if (resistances.Count > 0)
             {
                 enhanced.Resistances = resistances;
                 hasEnhanced = true;
             }
 
-            // Saves
-            var saves = new List<int>
-            {
-                mob.SaveParalyzeCast,
-                mob.SaveMagBreathes,
-                mob.SaveMagDamages,
-                mob.SaveFightSkills
-            };
-            if (saves.Exists(s => s != 0))
+            // Saves: engine-named map, non-zero entries only.
+            var saves = new YamlSaveMap();
+            if (mob.SaveParalyzeCast != 0) saves["kWill"] = mob.SaveParalyzeCast;
+            if (mob.SaveMagBreathes != 0) saves["kCritical"] = mob.SaveMagBreathes;
+            if (mob.SaveMagDamages != 0) saves["kStability"] = mob.SaveMagDamages;
+            if (mob.SaveFightSkills != 0) saves["kReflex"] = mob.SaveFightSkills;
+            if (saves.Count > 0)
             {
                 enhanced.Saves = saves;
                 hasEnhanced = true;
@@ -230,7 +229,9 @@ namespace DataUtils.YamlMappers
                 yaml.LoadedObjectAfterDeath.Add(new YamlLoadedObjAfterDeath
                 {
                     ObjVNum = obj.VNum,
-                    Probability = obj.LoadProb
+                    Probability = obj.LoadProb,
+                    LoadType = obj.LoadType,
+                    SpecParam = obj.SpecParam
                 });
             }
 
@@ -346,6 +347,7 @@ namespace DataUtils.YamlMappers
                 if (enh.LikeWork.HasValue) mob.LikeWork = enh.LikeWork.Value;
                 if (enh.MaxFactor.HasValue) mob.MaxFactor = enh.MaxFactor.Value;
                 if (enh.ExtraAttack.HasValue) mob.ExtraAttack = enh.ExtraAttack.Value;
+                if (enh.MobRemort.HasValue) mob.MobRemort = enh.MobRemort.Value;
                 if (!string.IsNullOrEmpty(enh.SpecialBitvector)) mob.SpecialBitvector = enh.SpecialBitvector;
 
                 // Role bitvector: positions of set bits (mirrors MobsFileManager "Role:" parsing)
@@ -359,26 +361,28 @@ namespace DataUtils.YamlMappers
                     }
                 }
 
-                // Resistances
-                if (enh.Resistances != null && enh.Resistances.Count >= 8)
+                // Resistances (named map; the converter also accepts a positional list)
+                if (enh.Resistances != null)
                 {
-                    mob.ResistFromFire = enh.Resistances[0];
-                    mob.ResistFromAir = enh.Resistances[1];
-                    mob.ResistFromWater = enh.Resistances[2];
-                    mob.ResistFromEarth = enh.Resistances[3];
-                    mob.ResistDark = enh.Resistances[4];
-                    mob.Vitality = enh.Resistances[5];
-                    mob.Mind = enh.Resistances[6];
-                    mob.Immunitet = enh.Resistances[7];
+                    int v;
+                    if (enh.Resistances.TryGetValue("kFire", out v)) mob.ResistFromFire = v;
+                    if (enh.Resistances.TryGetValue("kAir", out v)) mob.ResistFromAir = v;
+                    if (enh.Resistances.TryGetValue("kWater", out v)) mob.ResistFromWater = v;
+                    if (enh.Resistances.TryGetValue("kEarth", out v)) mob.ResistFromEarth = v;
+                    if (enh.Resistances.TryGetValue("kDark", out v)) mob.ResistDark = v;
+                    if (enh.Resistances.TryGetValue("kVitality", out v)) mob.Vitality = v;
+                    if (enh.Resistances.TryGetValue("kMind", out v)) mob.Mind = v;
+                    if (enh.Resistances.TryGetValue("kImmunity", out v)) mob.Immunitet = v;
                 }
 
-                // Saves
-                if (enh.Saves != null && enh.Saves.Count >= 4)
+                // Saves (named map; the converter also accepts a positional list)
+                if (enh.Saves != null)
                 {
-                    mob.SaveParalyzeCast = enh.Saves[0];
-                    mob.SaveMagBreathes = enh.Saves[1];
-                    mob.SaveMagDamages = enh.Saves[2];
-                    mob.SaveFightSkills = enh.Saves[3];
+                    int v;
+                    if (enh.Saves.TryGetValue("kWill", out v)) mob.SaveParalyzeCast = v;
+                    if (enh.Saves.TryGetValue("kCritical", out v)) mob.SaveMagBreathes = v;
+                    if (enh.Saves.TryGetValue("kStability", out v)) mob.SaveMagDamages = v;
+                    if (enh.Saves.TryGetValue("kReflex", out v)) mob.SaveFightSkills = v;
                 }
 
                 // Feats
@@ -437,7 +441,9 @@ namespace DataUtils.YamlMappers
                 {
                     mob.LoadedObjectAfterDeath.Add(new LoadedObjAfterDeath(obj.ObjVNum)
                     {
-                        LoadProb = obj.Probability
+                        LoadProb = obj.Probability,
+                        LoadType = obj.LoadType,
+                        SpecParam = obj.SpecParam
                     });
                 }
             }
