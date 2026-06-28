@@ -1,0 +1,11 @@
+vnum: 40
+first_room: 4000
+top_room: 0
+mode: 0
+zone_type: 0
+zone_group: 1
+entrance: 4000
+lifespan: 60
+reset_mode: 1
+reset_idle: 0
+under_construction: 0

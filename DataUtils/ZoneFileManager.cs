@@ -33,6 +33,10 @@ namespace DataUtils
             filePos = 0;
             string additionalInfo = "отсутствует...";
             string filePath = Path.Combine(StaticData.WorldFolderPath + @"\ZON\", zoneNumber + ".zon");
+            // The zone number must be correct even when the .zon is missing or empty (some
+            // worlds ship a placeholder zone without a header); the "#<n>" line below, when
+            // present, overrides this with the same value.
+            zone.Number = StringUtils.ToIntFast(zoneNumber);
             if (!File.Exists(filePath))
             {
                 return true;
