@@ -204,8 +204,10 @@ namespace DataUtils.YamlModels
         public string Role { get; set; }
 
         // Array fields
-        public List<int> Resistances { get; set; }
-        public List<int> Saves { get; set; }
+        /// <summary>Resistances as an engine-named map (kFire: N). Reads a positional list too.</summary>
+        public YamlResistMap Resistances { get; set; }
+        /// <summary>Saving throws as an engine-named map (kWill: N). Reads a positional list too.</summary>
+        public YamlSaveMap Saves { get; set; }
         public List<int> Feats { get; set; }
 
         /// <summary>

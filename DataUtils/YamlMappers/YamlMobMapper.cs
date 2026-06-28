@@ -127,33 +127,29 @@ namespace DataUtils.YamlMappers
             foreach (int r in mob.Roles) roleBits += Convert.ToInt32(Math.Pow(2, r - 1));
             if (roleBits > 0) { enhanced.Role = BinaryUtils.NumberToBinary(roleBits, 9); hasEnhanced = true; }
 
-            // Resistances
-            var resistances = new List<int>
-            {
-                mob.ResistFromFire,
-                mob.ResistFromAir,
-                mob.ResistFromWater,
-                mob.ResistFromEarth,
-                mob.ResistDark,
-                mob.Vitality,
-                mob.Mind,
-                mob.Immunitet
-            };
-            if (resistances.Exists(r => r != 0))
+            // Resistances: engine-named map, non-zero entries only.
+            var resistances = new YamlResistMap();
+            if (mob.ResistFromFire != 0) resistances["kFire"] = mob.ResistFromFire;
+            if (mob.ResistFromAir != 0) resistances["kAir"] = mob.ResistFromAir;
+            if (mob.ResistFromWater != 0) resistances["kWater"] = mob.ResistFromWater;
+            if (mob.ResistFromEarth != 0) resistances["kEarth"] = mob.ResistFromEarth;
+            if (mob.ResistDark != 0) resistances["kDark"] = mob.ResistDark;
+            if (mob.Vitality != 0) resistances["kVitality"] = mob.Vitality;
+            if (mob.Mind != 0) resistances["kMind"] = mob.Mind;
+            if (mob.Immunitet != 0) resistances["kImmunity"] = mob.Immunitet;
+            if (resistances.Count > 0)
             {
                 enhanced.Resistances = resistances;
                 hasEnhanced = true;
             }
 
-            // Saves
-            var saves = new List<int>
-            {
-                mob.SaveParalyzeCast,
-                mob.SaveMagBreathes,
-                mob.SaveMagDamages,
-                mob.SaveFightSkills
-            };
-            if (saves.Exists(s => s != 0))
+            // Saves: engine-named map, non-zero entries only.
+            var saves = new YamlSaveMap();
+            if (mob.SaveParalyzeCast != 0) saves["kWill"] = mob.SaveParalyzeCast;
+            if (mob.SaveMagBreathes != 0) saves["kCritical"] = mob.SaveMagBreathes;
+            if (mob.SaveMagDamages != 0) saves["kStability"] = mob.SaveMagDamages;
+            if (mob.SaveFightSkills != 0) saves["kReflex"] = mob.SaveFightSkills;
+            if (saves.Count > 0)
             {
                 enhanced.Saves = saves;
                 hasEnhanced = true;
@@ -359,26 +355,28 @@ namespace DataUtils.YamlMappers
                     }
                 }
 
-                // Resistances
-                if (enh.Resistances != null && enh.Resistances.Count >= 8)
+                // Resistances (named map; the converter also accepts a positional list)
+                if (enh.Resistances != null)
                 {
-                    mob.ResistFromFire = enh.Resistances[0];
-                    mob.ResistFromAir = enh.Resistances[1];
-                    mob.ResistFromWater = enh.Resistances[2];
-                    mob.ResistFromEarth = enh.Resistances[3];
-                    mob.ResistDark = enh.Resistances[4];
-                    mob.Vitality = enh.Resistances[5];
-                    mob.Mind = enh.Resistances[6];
-                    mob.Immunitet = enh.Resistances[7];
+                    int v;
+                    if (enh.Resistances.TryGetValue("kFire", out v)) mob.ResistFromFire = v;
+                    if (enh.Resistances.TryGetValue("kAir", out v)) mob.ResistFromAir = v;
+                    if (enh.Resistances.TryGetValue("kWater", out v)) mob.ResistFromWater = v;
+                    if (enh.Resistances.TryGetValue("kEarth", out v)) mob.ResistFromEarth = v;
+                    if (enh.Resistances.TryGetValue("kDark", out v)) mob.ResistDark = v;
+                    if (enh.Resistances.TryGetValue("kVitality", out v)) mob.Vitality = v;
+                    if (enh.Resistances.TryGetValue("kMind", out v)) mob.Mind = v;
+                    if (enh.Resistances.TryGetValue("kImmunity", out v)) mob.Immunitet = v;
                 }
 
-                // Saves
-                if (enh.Saves != null && enh.Saves.Count >= 4)
+                // Saves (named map; the converter also accepts a positional list)
+                if (enh.Saves != null)
                 {
-                    mob.SaveParalyzeCast = enh.Saves[0];
-                    mob.SaveMagBreathes = enh.Saves[1];
-                    mob.SaveMagDamages = enh.Saves[2];
-                    mob.SaveFightSkills = enh.Saves[3];
+                    int v;
+                    if (enh.Saves.TryGetValue("kWill", out v)) mob.SaveParalyzeCast = v;
+                    if (enh.Saves.TryGetValue("kCritical", out v)) mob.SaveMagBreathes = v;
+                    if (enh.Saves.TryGetValue("kStability", out v)) mob.SaveMagDamages = v;
+                    if (enh.Saves.TryGetValue("kReflex", out v)) mob.SaveFightSkills = v;
                 }
 
                 // Feats
