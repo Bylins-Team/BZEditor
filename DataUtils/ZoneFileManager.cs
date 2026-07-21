@@ -499,10 +499,9 @@ namespace DataUtils
                     {
                         var oin = objectsCollection[loin.VNum, 0];
                         var namein = oin?.Cases.Imen ?? "";
-                        var oinMax = oin?.MaxInWorld ?? -1;
-                        // 'P' <flag> <obj_vnum> <max_in_world> <target_vnum> <load%|-1> -1 = 100%
+                        // 'P' <flag> <obj_vnum> <room_vnum|-1|0> <target_vnum> <load%|-1> -1 = 100%
                         var probin = loin.Probability;// == 100 ? -1 : loin.Probability;
-                        sw.WriteLine($"P {loin.LoadType} {loin.VNum} {oinMax} {lo.VNum} {probin}\t({namein})");
+                        sw.WriteLine($"P {loin.LoadType} {loin.VNum} {r.VNum} {lo.VNum} {probin}\t({namein})");
                     }
                 }
                 var followLines = new List<string>();
