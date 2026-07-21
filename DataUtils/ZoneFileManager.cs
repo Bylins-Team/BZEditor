@@ -128,8 +128,7 @@ namespace DataUtils
                                 zone.ResetB.Add(StringUtils.ToIntFast(input.Remove(0, 2)));
                                 break;
                             case 'Q': //Мобы, удаляемые при перезапуске
-                                parts = input.Split(' ');
-                                zone.MobsToRemove.Add(StringUtils.ToIntFast(parts[2]), parts[1] == "1", -1);
+                                ProcessMobsRemovedAtRepop(zone, input);
                                 break;
                             case 'M': //Мобы, заргужаемые в комнаты
                                 parts = input.Split(' ');
@@ -169,10 +168,11 @@ namespace DataUtils
                                 break;
                             case 'O': //Объекты, заргужаемые в комнаты
                                 parts = input.Split(' ');
+                                var part5 = GetPartOrDefault(parts, 5);
                                 lastLoadedObject = new OperatedObj(StringUtils.ToIntFast(parts[2]))
                                 {
                                     LoadType = StringUtils.ToIntFast(parts[1]),
-                                    Probability = StringUtils.ToIntFast(parts[5])
+                                    Probability = StringUtils.ToIntFast(part5)
                                 };
                                 if (StringUtils.ToIntFast(parts[4]) >= 0)
                                 {
@@ -254,8 +254,9 @@ namespace DataUtils
                                 break;
                             case 'P': //Поместить предмет в последний загруженный предмет
                                 parts = input.Split(' ');
+                                part5 = GetPartOrDefault(parts, 5);
                                 lastLoadedObject.ObjectsInObject.Add(StringUtils.ToIntFast(parts[2]),
-                                                                     StringUtils.ToIntFast(parts[5]),
+                                                                     StringUtils.ToIntFast(part5),
                                                                      StringUtils.ToIntFast(parts[1]));
                                 break;
                             case 'L': //Загружать предмет в инвентарь после смерпти моба (который загружен предыдущей командой)
@@ -270,6 +271,9 @@ namespace DataUtils
                                 lastLoadedMob.AddObject(StringUtils.ToIntFast(parts[2]),
                                                         (parts[1] == "1"),
                                                         StringUtils.ToIntFast(parts[5]));
+                                break;
+                            case 'E' when input.StartsWith("EXTRACT", StringComparison.OrdinalIgnoreCase): //Мобы, удаляемые при перезапуске
+                                ProcessMobsRemovedAtRepop(zone, input);
                                 break;
                             case 'E': //Экипировать предмет мобу (который загружен предыдущей командой)
                                 parts = input.Split(' ');
@@ -495,10 +499,9 @@ namespace DataUtils
                     {
                         var oin = objectsCollection[loin.VNum, 0];
                         var namein = oin?.Cases.Imen ?? "";
-                        var oinMax = oin?.MaxInWorld ?? -1;
-                        // 'P' <flag> <obj_vnum> <max_in_world> <target_vnum> <load%|-1> -1 = 100%
+                        // 'P' <flag> <obj_vnum> <room_vnum|-1|0> <target_vnum> <load%|-1> -1 = 100%
                         var probin = loin.Probability;// == 100 ? -1 : loin.Probability;
-                        sw.WriteLine($"P {loin.LoadType} {loin.VNum} {oinMax} {lo.VNum} {probin}\t({namein})");
+                        sw.WriteLine($"P {loin.LoadType} {loin.VNum} {r.VNum} {lo.VNum} {probin}\t({namein})");
                     }
                 }
                 var followLines = new List<string>();
@@ -566,6 +569,17 @@ namespace DataUtils
             fs.Close();
             sw.Dispose();
             fs.Dispose();
+        }
+
+        private static void ProcessMobsRemovedAtRepop(Zone zone, string input)
+        {
+            var parts = input.Split(' ');
+            zone.MobsToRemove.Add(StringUtils.ToIntFast(parts[2]), parts[1] == "1", -1);
+        }
+
+        private static string GetPartOrDefault(string[] parts, int index, string defaultValue = "-1")
+        {
+            return parts.Length > index + 1 ? parts[index] : defaultValue;
         }
     }
 }
