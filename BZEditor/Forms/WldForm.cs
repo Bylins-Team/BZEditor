@@ -2596,6 +2596,13 @@ namespace BZEditor
             trigger.NumArg = Convert.ToInt32(nudTrgNumArg.Value);
         }
 
+        private void numTrgAddFlagArg_Validated(object sender, EventArgs e)
+        {
+            if (lvMainList.SelectedItems.Count <= 0) return;
+            Trigger trigger = ZoneDm.Triggers[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
+            trigger.AddFlag = Convert.ToInt32(numTrgAddFlagArg.Value);
+        }
+
         private void LvTrgActivationConditionsLeave(object sender, EventArgs e)
         {
             if (lvMainList.SelectedItems.Count <= 0) return;
@@ -2648,12 +2655,15 @@ namespace BZEditor
             switch (trgClass)
             {
                 case 0: //Тpиггеp для монстpов
+                    numTrgAddFlagArg.Enabled = true;
                     BindListView(lvTrgActivationConditions, BasesDm.MobTriggerBitvector);
                     break;
                 case 1: //Тpиггеp для обьектов
+                    numTrgAddFlagArg.Enabled = false;
                     BindListView(lvTrgActivationConditions, BasesDm.ObjTriggerBitvector);
                     break;
                 case 2: //Тpиггеp для комнат
+                    numTrgAddFlagArg.Enabled = false;
                     BindListView(lvTrgActivationConditions, BasesDm.WldTriggerBitvector);
                     break;
             }
@@ -2666,6 +2676,7 @@ namespace BZEditor
             nudTrgNumArg.Value = trigger.NumArg;
             tbTrgName.Text = trigger.Name;
             tbTrgArgs.Text = trigger.Arg;
+            numTrgAddFlagArg.Value = trigger.AddFlag;
             BlockCodeEditorTextChanging = true;
             codeEditor.SetText(trigger.Body);
             BlockCodeEditorTextChanging = false;

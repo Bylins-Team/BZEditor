@@ -1,7 +1,8 @@
 ﻿namespace DataUtils
 {
-    public class Trigger : BaseDataObject
+    public sealed class Trigger : BaseDataObject
     {
+        private int addflag;
         private string arg = string.Empty;
         private string body = string.Empty;
         private int triggerClass;
@@ -81,6 +82,22 @@
                 if (numArg == value) return;
                 numArg = value;
                 FireChangeEvent(this);
+            }
+        }
+
+        /// <summary>
+        /// Обрабатывать команды моба в стане: 0=нет, 1=да
+        /// </summary>
+        public int AddFlag
+        {
+            get => addflag;
+            set
+            {
+                if (addflag != value)
+                {
+                    addflag = value;
+                    FireChangeEvent(this);
+                }
             }
         }
 

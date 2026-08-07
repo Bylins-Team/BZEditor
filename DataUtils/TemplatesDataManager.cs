@@ -792,6 +792,7 @@ namespace DataUtils
             trg.Body = TrgClip.Body;
             trg.Class = TrgClip.Class;
             trg.NumArg = TrgClip.NumArg;
+            trg.AddFlag = TrgClip.AddFlag;
             trg.Type = TrgClip.Type;
             trg.Name = "Копия триггера \"" + TrgClip.Name + "\"";
         }

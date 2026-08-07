@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DataUtils
@@ -26,7 +27,19 @@ namespace DataUtils
 
         public int Compare(object x, object y)
         {
-            return ((BaseDataObject) x).VNum - ((BaseDataObject) y).VNum;
+            return ((BaseDataObject)x).VNum - ((BaseDataObject)y).VNum;
+        }
+
+        #endregion
+    }
+
+    internal sealed class GenericDataObjectComparer<T> : IComparer<T> where T : BaseDataObject
+    {
+        #region Implementation of IComparer
+
+        public int Compare(T x, T y)
+        {
+            return x.VNum - y.VNum;
         }
 
         #endregion

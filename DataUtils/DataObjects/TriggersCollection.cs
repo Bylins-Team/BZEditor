@@ -1,6 +1,8 @@
-﻿namespace DataUtils
+﻿using System.Linq;
+
+namespace DataUtils
 {
-    public class TriggersCollection : BaseDataArrayList
+    public sealed class TriggersCollection : GenericDataList<Trigger>
     {
         #region Delegates
 
@@ -23,12 +25,7 @@
 
         public Trigger GetTrigger(int vNum)
         {
-            foreach (Trigger trigger in this)
-            {
-                if (trigger.VNum == vNum)
-                    return trigger;
-            }
-            return null;
+            return _list.FirstOrDefault(trigger => trigger.VNum == vNum);
         }
 
         public int AddTrigger(int zoneNum)
@@ -39,7 +36,8 @@
             Trigger trigger = new Trigger(vnum) { Name = ("Новый триггер " + vnum) };
             trigger.Changed += FireChangeEvent;
             Add(trigger);
-            Sort(new BaseDataObjectComparer());
+            var comparer = new GenericDataObjectComparer<Trigger>();
+            _list.Sort(comparer);
             return trigger.VNum;
         }
     }
