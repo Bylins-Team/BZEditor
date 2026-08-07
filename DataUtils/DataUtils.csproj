@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bounds.cs" />
+    <Compile Include="DataObjects\GenericDataList.cs" />
     <Compile Include="DataObjects\Direction.cs" />
     <Compile Include="DataObjects\MobObjAfterDeath.cs" />
     <Compile Include="DataObjects\MobObjsAfterDeathCollection.cs" />

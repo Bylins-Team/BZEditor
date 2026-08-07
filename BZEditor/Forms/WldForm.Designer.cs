@@ -736,6 +736,8 @@ namespace BZEditor
             this.splitContainerTrg = new System.Windows.Forms.SplitContainer();
             this.tcTriggers = new System.Windows.Forms.TabControl();
             this.tpTrgParams = new System.Windows.Forms.TabPage();
+            this.numTrgAddFlagArg = new System.Windows.Forms.NumericUpDown();
+            this.addFlagLbl = new System.Windows.Forms.Label();
             this.cboxTrgClass = new System.Windows.Forms.ComboBox();
             this.gbObjectsToCreate = new System.Windows.Forms.GroupBox();
             this.lvTrgActivationConditions = new System.Windows.Forms.ListView();
@@ -1195,6 +1197,7 @@ namespace BZEditor
             this.splitContainerTrg.SuspendLayout();
             this.tcTriggers.SuspendLayout();
             this.tpTrgParams.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTrgAddFlagArg)).BeginInit();
             this.gbObjectsToCreate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTrgNumArg)).BeginInit();
             this.tpTrgGlobalVars.SuspendLayout();
@@ -2816,9 +2819,6 @@ namespace BZEditor
             this.tsmiPasteDesc.Text = "Вставить";
             this.tsmiPasteDesc.Click += new System.EventHandler(this.TsmiPasteDescClick);
             // 
-            // syntaxDocument
-            // 
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -3001,7 +3001,7 @@ namespace BZEditor
             // 
             this.tbExitSouth.Location = new System.Drawing.Point(69, 73);
             this.tbExitSouth.Name = "tbExitSouth";
-            this.tbExitSouth.Size = new System.Drawing.Size(54, 17);
+            this.tbExitSouth.Size = new System.Drawing.Size(54, 20);
             this.tbExitSouth.TabIndex = 10;
             this.toolTip.SetToolTip(this.tbExitSouth, "Виртуальный номер целевой комнаты");
             this.tbExitSouth.Validated += new System.EventHandler(this.ExitDirChanged);
@@ -3010,7 +3010,7 @@ namespace BZEditor
             // 
             this.tbExitNorth.Location = new System.Drawing.Point(69, 20);
             this.tbExitNorth.Name = "tbExitNorth";
-            this.tbExitNorth.Size = new System.Drawing.Size(54, 17);
+            this.tbExitNorth.Size = new System.Drawing.Size(54, 20);
             this.tbExitNorth.TabIndex = 9;
             this.toolTip.SetToolTip(this.tbExitNorth, "Виртуальный номер целевой комнаты");
             this.tbExitNorth.Validated += new System.EventHandler(this.ExitDirChanged);
@@ -3019,7 +3019,7 @@ namespace BZEditor
             // 
             this.tbExitDown.Location = new System.Drawing.Point(200, 73);
             this.tbExitDown.Name = "tbExitDown";
-            this.tbExitDown.Size = new System.Drawing.Size(54, 17);
+            this.tbExitDown.Size = new System.Drawing.Size(54, 20);
             this.tbExitDown.TabIndex = 13;
             this.toolTip.SetToolTip(this.tbExitDown, "Виртуальный номер целевой комнаты");
             this.tbExitDown.Validated += new System.EventHandler(this.ExitDirChanged);
@@ -3028,7 +3028,7 @@ namespace BZEditor
             // 
             this.tbExitUp.Location = new System.Drawing.Point(200, 20);
             this.tbExitUp.Name = "tbExitUp";
-            this.tbExitUp.Size = new System.Drawing.Size(54, 17);
+            this.tbExitUp.Size = new System.Drawing.Size(54, 20);
             this.tbExitUp.TabIndex = 12;
             this.toolTip.SetToolTip(this.tbExitUp, "Виртуальный номер целевой комнаты");
             this.tbExitUp.Validated += new System.EventHandler(this.ExitDirChanged);
@@ -3037,7 +3037,7 @@ namespace BZEditor
             // 
             this.tbExitEast.Location = new System.Drawing.Point(109, 46);
             this.tbExitEast.Name = "tbExitEast";
-            this.tbExitEast.Size = new System.Drawing.Size(54, 17);
+            this.tbExitEast.Size = new System.Drawing.Size(54, 20);
             this.tbExitEast.TabIndex = 11;
             this.toolTip.SetToolTip(this.tbExitEast, "Виртуальный номер целевой комнаты");
             this.tbExitEast.Validated += new System.EventHandler(this.ExitDirChanged);
@@ -3046,7 +3046,7 @@ namespace BZEditor
             // 
             this.tbExitWest.Location = new System.Drawing.Point(27, 46);
             this.tbExitWest.Name = "tbExitWest";
-            this.tbExitWest.Size = new System.Drawing.Size(54, 17);
+            this.tbExitWest.Size = new System.Drawing.Size(54, 20);
             this.tbExitWest.TabIndex = 10;
             this.toolTip.SetToolTip(this.tbExitWest, "Виртуальный номер целевой комнаты");
             this.tbExitWest.Validated += new System.EventHandler(this.ExitDirChanged);
@@ -3227,8 +3227,6 @@ namespace BZEditor
             this.toolTip.SetToolTip(this.btnRoomSpecFormatCommonDesc, "Выровнять по ширине\r\n(без сохранения абзацев).");
             this.btnRoomSpecFormatCommonDesc.Click += new System.EventHandler(this.BtnRoomFormatClick);
             // 
-            // 
-            // 
             // cbInsertSpaces
             // 
             this.cbInsertSpaces.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -3255,7 +3253,7 @@ namespace BZEditor
             // 
             // btnObjSetAutoCases
             // 
-            this.btnObjSetAutoCases.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnObjSetAutoCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnObjSetAutoCases.Location = new System.Drawing.Point(36, 49);
             this.btnObjSetAutoCases.Name = "btnObjSetAutoCases";
             this.btnObjSetAutoCases.Size = new System.Drawing.Size(20, 20);
@@ -3466,7 +3464,7 @@ namespace BZEditor
             // 
             // btnMobSetAutoCases
             // 
-            this.btnMobSetAutoCases.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnMobSetAutoCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnMobSetAutoCases.Location = new System.Drawing.Point(35, 70);
             this.btnMobSetAutoCases.Name = "btnMobSetAutoCases";
             this.btnMobSetAutoCases.Size = new System.Drawing.Size(20, 20);
@@ -4173,8 +4171,6 @@ namespace BZEditor
             this.btnMobSpecFormatCommonDesc.TabIndex = 44;
             this.toolTip.SetToolTip(this.btnMobSpecFormatCommonDesc, "Выровнять по ширине\r\n(без сохранения абзацев).");
             this.btnMobSpecFormatCommonDesc.Click += new System.EventHandler(this.btnMobSpecFormatCommonDesc_Click);
-            // 
-            // 
             // 
             // btnMobFormatCommonDesc
             // 
@@ -9923,6 +9919,8 @@ namespace BZEditor
             // 
             // tpTrgParams
             // 
+            this.tpTrgParams.Controls.Add(this.numTrgAddFlagArg);
+            this.tpTrgParams.Controls.Add(this.addFlagLbl);
             this.tpTrgParams.Controls.Add(this.cboxTrgClass);
             this.tpTrgParams.Controls.Add(this.gbObjectsToCreate);
             this.tpTrgParams.Controls.Add(this.tbTrgArgs);
@@ -9940,6 +9938,31 @@ namespace BZEditor
             this.tpTrgParams.Text = "Параметры";
             this.tpTrgParams.UseVisualStyleBackColor = true;
             // 
+            // numTrgAddFlagArg
+            // 
+            this.numTrgAddFlagArg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numTrgAddFlagArg.Location = new System.Drawing.Point(204, 128);
+            this.numTrgAddFlagArg.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numTrgAddFlagArg.Name = "numTrgAddFlagArg";
+            this.numTrgAddFlagArg.Size = new System.Drawing.Size(29, 20);
+            this.numTrgAddFlagArg.TabIndex = 50;
+            this.numTrgAddFlagArg.Validated += new System.EventHandler(this.numTrgAddFlagArg_Validated);
+            // 
+            // addFlagLbl
+            // 
+            this.addFlagLbl.AutoSize = true;
+            this.addFlagLbl.Location = new System.Drawing.Point(2, 130);
+            this.addFlagLbl.Name = "addFlagLbl";
+            this.addFlagLbl.Size = new System.Drawing.Size(206, 13);
+            this.addFlagLbl.TabIndex = 45;
+            this.addFlagLbl.Text = "Обрабатывать команды моба в стане?";
+            this.addFlagLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // cboxTrgClass
             // 
             this.cboxTrgClass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -9948,7 +9971,7 @@ namespace BZEditor
             this.cboxTrgClass.Location = new System.Drawing.Point(93, 5);
             this.cboxTrgClass.Name = "cboxTrgClass";
             this.cboxTrgClass.Size = new System.Drawing.Size(140, 21);
-            this.cboxTrgClass.TabIndex = 17;
+            this.cboxTrgClass.TabIndex = 10;
             this.cboxTrgClass.SelectedIndexChanged += new System.EventHandler(this.CboxTrgClassSelectedIndexChanged);
             // 
             // gbObjectsToCreate
@@ -9957,9 +9980,9 @@ namespace BZEditor
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbObjectsToCreate.Controls.Add(this.lvTrgActivationConditions);
-            this.gbObjectsToCreate.Location = new System.Drawing.Point(1, 131);
+            this.gbObjectsToCreate.Location = new System.Drawing.Point(1, 154);
             this.gbObjectsToCreate.Name = "gbObjectsToCreate";
-            this.gbObjectsToCreate.Size = new System.Drawing.Size(235, 308);
+            this.gbObjectsToCreate.Size = new System.Drawing.Size(235, 285);
             this.gbObjectsToCreate.TabIndex = 9;
             this.gbObjectsToCreate.TabStop = false;
             this.gbObjectsToCreate.Text = "Условия срабатывания триггера";
@@ -9977,7 +10000,7 @@ namespace BZEditor
             this.lvTrgActivationConditions.Location = new System.Drawing.Point(3, 16);
             this.lvTrgActivationConditions.Name = "lvTrgActivationConditions";
             this.lvTrgActivationConditions.ShowItemToolTips = true;
-            this.lvTrgActivationConditions.Size = new System.Drawing.Size(229, 289);
+            this.lvTrgActivationConditions.Size = new System.Drawing.Size(229, 266);
             this.lvTrgActivationConditions.TabIndex = 103;
             this.lvTrgActivationConditions.UseCompatibleStateImageBehavior = false;
             this.lvTrgActivationConditions.View = System.Windows.Forms.View.Details;
@@ -9997,7 +10020,7 @@ namespace BZEditor
             this.tbTrgArgs.Location = new System.Drawing.Point(5, 76);
             this.tbTrgArgs.Name = "tbTrgArgs";
             this.tbTrgArgs.Size = new System.Drawing.Size(228, 20);
-            this.tbTrgArgs.TabIndex = 14;
+            this.tbTrgArgs.TabIndex = 30;
             this.tbTrgArgs.Validated += new System.EventHandler(this.TbTrgArgsValidated);
             // 
             // nudTrgNumArg
@@ -10017,7 +10040,7 @@ namespace BZEditor
             -2147483648});
             this.nudTrgNumArg.Name = "nudTrgNumArg";
             this.nudTrgNumArg.Size = new System.Drawing.Size(119, 20);
-            this.nudTrgNumArg.TabIndex = 13;
+            this.nudTrgNumArg.TabIndex = 40;
             this.nudTrgNumArg.Validated += new System.EventHandler(this.NudTrgNumArgValidated);
             // 
             // tbTrgName
@@ -10027,7 +10050,7 @@ namespace BZEditor
             this.tbTrgName.Location = new System.Drawing.Point(5, 40);
             this.tbTrgName.Name = "tbTrgName";
             this.tbTrgName.Size = new System.Drawing.Size(228, 20);
-            this.tbTrgName.TabIndex = 15;
+            this.tbTrgName.TabIndex = 20;
             this.tbTrgName.Validated += new System.EventHandler(this.TbTrgNameValidated);
             // 
             // label61
@@ -10035,7 +10058,7 @@ namespace BZEditor
             this.label61.Location = new System.Drawing.Point(2, 105);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(112, 16);
-            this.label61.TabIndex = 11;
+            this.label61.TabIndex = 35;
             this.label61.Text = "Числовой аргумент";
             this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -10044,7 +10067,7 @@ namespace BZEditor
             this.label58.Location = new System.Drawing.Point(2, 6);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(92, 16);
-            this.label58.TabIndex = 16;
+            this.label58.TabIndex = 5;
             this.label58.Text = "Класс триггера";
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -10053,7 +10076,7 @@ namespace BZEditor
             this.label62.Location = new System.Drawing.Point(2, 60);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(63, 16);
-            this.label62.TabIndex = 12;
+            this.label62.TabIndex = 25;
             this.label62.Text = "Аргумент";
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -10062,7 +10085,7 @@ namespace BZEditor
             this.label44.Location = new System.Drawing.Point(2, 22);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(63, 16);
-            this.label44.TabIndex = 10;
+            this.label44.TabIndex = 15;
             this.label44.Text = "Название";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -10955,6 +10978,7 @@ namespace BZEditor
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerRooms)).EndInit();
             this.splitContainerRooms.ResumeLayout(false);
             this.gboxExits.ResumeLayout(false);
+            this.gboxExits.PerformLayout();
             this.tcRoom.ResumeLayout(false);
             this.tpRoomDoors.ResumeLayout(false);
             this.pDoors.ResumeLayout(false);
@@ -11133,6 +11157,7 @@ namespace BZEditor
             this.tcTriggers.ResumeLayout(false);
             this.tpTrgParams.ResumeLayout(false);
             this.tpTrgParams.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTrgAddFlagArg)).EndInit();
             this.gbObjectsToCreate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudTrgNumArg)).EndInit();
             this.tpTrgGlobalVars.ResumeLayout(false);
@@ -11821,5 +11846,7 @@ namespace BZEditor
         public ExtListView elvMobIngredients;
         public Button btnAddMobIngredient;
         public Button btnRemoveMobIngredient;
+        private Label addFlagLbl;
+        private NumericUpDown numTrgAddFlagArg;
     }
 }

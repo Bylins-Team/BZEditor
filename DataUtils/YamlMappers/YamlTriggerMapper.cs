@@ -18,6 +18,7 @@ namespace DataUtils.YamlMappers
                 Name = trigger.Name ?? "",
                 AttachType = EngineCodec.EnumName(trigger.Class, EngineDictionaries.AttachTypes),
                 Narg = trigger.NumArg,
+                AddFlag = trigger.AddFlag,
                 Arglist = trigger.Arg ?? "",
                 Script = (trigger.Body ?? "").TrimEnd('\r', '\n')
             };
@@ -38,6 +39,7 @@ namespace DataUtils.YamlMappers
                 Name = yaml.Name ?? "",
                 Class = EngineCodec.EnumValue(yaml.AttachType, EngineDictionaries.AttachTypes),
                 NumArg = yaml.Narg,
+                AddFlag = yaml.AddFlag,
                 Arg = yaml.Arglist ?? "",
                 Body = yaml.Script ?? ""
             };

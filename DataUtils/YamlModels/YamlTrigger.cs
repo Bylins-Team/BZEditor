@@ -33,6 +33,12 @@ namespace DataUtils.YamlModels
         public int Narg { get; set; }
 
         /// <summary>
+        /// Обрабатывать команды моба в стане: 0=нет, 1=да
+        /// </summary>
+        [YamlMember(Alias = "add_flag")]
+        public int AddFlag { get; set; }
+
+        /// <summary>
         /// Argument list (keywords, etc.)
         /// </summary>
         public string Arglist { get; set; } = "";
