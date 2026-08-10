@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using DataUtils.YamlModels;
 using SystemFrameworks;
 
@@ -174,13 +175,12 @@ namespace DataUtils.YamlMappers
             // (the engine reads bare ints and counts occurrences as memorized slots).
             if (mob.Spells.Count > 0)
             {
-                enhanced.Spells = new List<int>();
-                foreach (MobSpell spell in mob.Spells)
-                {
-                    int count = spell.Count < 1 ? 1 : spell.Count;
-                    for (int i = 0; i < count; i++)
-                        enhanced.Spells.Add(spell.VNum);
-                }
+                enhanced.Spells = mob.Spells
+                    .GroupBy(mobSpell => mobSpell.VNum)
+                    .ToDictionary(
+                        grouping => grouping.Key,
+                        grouping => grouping.Sum(mobspel => Math.Max(1, mobspel.Count)));
+
                 hasEnhanced = true;
             }
 
@@ -396,15 +396,14 @@ namespace DataUtils.YamlMappers
                 // group consecutive-or-not occurrences back into (id, count) entries.
                 if (enh.Spells != null)
                 {
-                    var counts = new Dictionary<int, int>();
-                    var order = new List<int>();
-                    foreach (int spellId in enh.Spells)
+                    foreach (var kv in enh.Spells)
                     {
-                        if (!counts.ContainsKey(spellId)) { counts[spellId] = 0; order.Add(spellId); }
-                        counts[spellId]++;
+                        var spellId = kv.Key;
+                        var count = kv.Value;
+                        var mobSpell = new MobSpell(spellId, count);
+                    
+                        mob.Spells.Add(mobSpell);
                     }
-                    foreach (int spellId in order)
-                        mob.Spells.Add(new MobSpell(spellId, counts[spellId]));
                 }
 
                 // Helpers

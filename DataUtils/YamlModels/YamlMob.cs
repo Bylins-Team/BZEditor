@@ -215,8 +215,24 @@ namespace DataUtils.YamlModels
         /// times: the engine reads each entry as a bare int and increments the
         /// memorized-slot count per occurrence (yaml_world_data_source.cpp ~1745).
         /// </summary>
-        public List<int> Spells { get; set; }
+        public Dictionary<int, int> Spells { get; set; }
+
+        //[YamlMember(Alias = "spells2")]
+        //public Dictionary<int, int> Spells2 { get; set; }
+        //public List<(int, int)> Spells2 { get; set; }
         public List<int> Helpers { get; set; }
         public List<int> Destinations { get; set; }
+    }
+
+    public class Spelx
+    {
+        [YamlMember(Alias = "16")]
+        public int x16 { get; set; }
+
+        [YamlMember(Alias = "17")]
+        public int x17 { get; set; }
+
+        [YamlMember(Alias = "18")]
+        public int x18 { get; set; }
     }
 }
