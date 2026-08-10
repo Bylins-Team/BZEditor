@@ -3578,6 +3578,11 @@ namespace BZEditor
             // nudMobHitroll
             // 
             this.nudMobHitroll.Location = new System.Drawing.Point(286, 62);
+            this.nudMobHitroll.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.nudMobHitroll.Name = "nudMobHitroll";
             this.nudMobHitroll.Size = new System.Drawing.Size(52, 20);
             this.nudMobHitroll.TabIndex = 12;
