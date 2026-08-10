@@ -32,6 +32,7 @@ namespace DataUtils
             serializer = new SerializerBuilder()
                 .WithNamingConvention(UnderscoredNamingConvention.Instance)
                 .WithTypeConverter(new NamedIntMapConverter())
+                .WithTypeConverter(new MobSpellMapConverter())
                 .ConfigureDefaultValuesHandling(DefaultValuesHandling.OmitNull
                     | DefaultValuesHandling.OmitEmptyCollections)
                 .Build();
@@ -39,6 +40,7 @@ namespace DataUtils
             deserializer = new DeserializerBuilder()
                 .WithNamingConvention(UnderscoredNamingConvention.Instance)
                 .WithTypeConverter(new NamedIntMapConverter())
+                .WithTypeConverter(new MobSpellMapConverter())
                 .IgnoreUnmatchedProperties()
                 .Build();
         }

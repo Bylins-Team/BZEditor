@@ -1,6 +1,6 @@
 ﻿namespace DataUtils
 {
-    public class MobSpellsCollection : BaseDataArrayList
+    public class MobSpellsCollection : GenericDataList<MobSpell>
     {
         public MobSpell Get(int vNum)
         {
