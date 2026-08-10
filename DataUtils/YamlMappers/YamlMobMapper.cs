@@ -175,12 +175,13 @@ namespace DataUtils.YamlMappers
             // (the engine reads bare ints and counts occurrences as memorized slots).
             if (mob.Spells.Count > 0)
             {
-                enhanced.Spells = mob.Spells
+                var mobSpellCountBySpellId = mob.Spells
                     .GroupBy(mobSpell => mobSpell.VNum)
                     .ToDictionary(
                         grouping => grouping.Key,
                         grouping => grouping.Sum(mobspel => Math.Max(1, mobspel.Count)));
 
+                enhanced.Spells = new YamlMobSpellMap(mobSpellCountBySpellId);
                 hasEnhanced = true;
             }
 

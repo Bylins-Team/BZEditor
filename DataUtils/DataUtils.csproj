@@ -80,6 +80,7 @@
     <Compile Include="DataObjects\Sets\SetStuffCollection.cs" />
     <Compile Include="DataObjects\Sets\Set.cs" />
     <Compile Include="DataObjects\Sets\SetsCollection.cs" />
+    <Compile Include="YamlModels\MobSpellMapConverter.cs" />
     <Compile Include="ZonesComplexGenerator.cs" />
     <Compile Include="BaseManager.cs" />
     <Compile Include="GlobalSketchFileManager.cs" />
