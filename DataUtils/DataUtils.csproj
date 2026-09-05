@@ -71,6 +71,7 @@
     <Compile Include="DataObjects\MobObjsAfterDeathCollection.cs" />
     <Compile Include="DataObjects\Ingredient.cs" />
     <Compile Include="DataObjects\IngredientsCollection.cs" />
+    <Compile Include="Resolvers\EncodingResolver.cs" />
     <Compile Include="SetsFileManager.cs" />
     <Compile Include="DataObjects\Sets\ActivationMethod.cs" />
     <Compile Include="DataObjects\Sets\ActivationMethodsCollection.cs" />

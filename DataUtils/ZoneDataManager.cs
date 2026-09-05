@@ -139,7 +139,6 @@ namespace DataUtils
             if (!formatProvider.LoadZone(Zone, Mobs, Rooms, zoneName, encoding))
                 return false;
 
-            StaticData.CurrentEncoding = Encoding.GetEncoding("koi8-r");
             CheckMapForZLimit();
             StaticData.CanFireChangeEvent = true;
             return true;

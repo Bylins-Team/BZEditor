@@ -207,7 +207,6 @@ namespace DataUtils
             string[] lines;
             try
             {
-                if (StaticData.CurrentEncoding == null) StaticData.CurrentEncoding = DefaultEncoding;
                 if (Directory.Exists(tmp)) Directory.Delete(tmp, true);
                 Directory.CreateDirectory(Path.Combine(tmp, "ZON"));
                 StaticData.WorldFolderPath = tmp;

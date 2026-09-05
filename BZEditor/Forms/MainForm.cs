@@ -83,7 +83,6 @@ namespace BZEditor
             InitializeComponent();
             AutoScaleMode = AutoScaleMode.Dpi;
             StaticData.ConfigFolder = Path.Combine(Application.StartupPath, "Configurations");
-            StaticData.CurrentEncoding = Encoding.GetEncoding("koi8-r");
 
             settings.Open();
             clearSketchAfterGeneratingRooms =
