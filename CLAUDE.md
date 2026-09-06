@@ -34,7 +34,17 @@ packages/NUnit.ConsoleRunner.3.16.3/tools/nunit3-console.exe BZEditorBuild/DataU
 ```
 
 `ProdWorldIntegrationTests` load a real world and are **ignored** unless `BZED_TEST_WORLD` points at a
-directory containing `zones/`. That world is game content and is not in this repo; CI runs without it.
+directory containing `zones/`. A full production world is game content and is not in this repo (CI runs
+without it), but the bundled sample world is enough to exercise them — the fastest end-to-end check that a
+change hasn't broken load or save round-tripping:
+
+```sh
+BZED_TEST_WORLD="$PWD/redist/World" packages/NUnit.ConsoleRunner.3.16.3/tools/nunit3-console.exe \
+  BZEditorBuild/DataUtils.Tests.dll --noresult --where "class =~ DataUtils.Tests.ProdWorldIntegrationTests"
+```
+
+Without a world, a green run reports **Overall result: Warning** — that is just the two ignored integration
+tests, not a failure.
 
 Running the app: `BZEditorBuild/BZEditor.exe`. A post-build target copies `redist/**` (Bases, Configurations,
 World, `BZEditorConfig.xml`) next to the exe, so a fresh build is immediately runnable against the bundled
@@ -43,12 +53,15 @@ running editor doesn't break the build.
 
 ## Conventions that bite
 
-- **Encoding.** Source files are UTF-8 **with BOM**, CRLF (`.editorconfig`). World YAML is **written as
-  UTF-8 without a BOM**; reads sniff the bytes and fall back to **koi8-r** for worlds written before that
-  switch (`YamlEncoding` — `Utf8NoBom`/`Legacy`/`Decode`, used by `YamlFormatProvider` and
-  `FileListsDataManager.DiscoverZonesYaml`). The legacy side files (`.zon`, `.shp`, `.skt`, `.gskt`,
-  templates) stay on `StaticData.CurrentEncoding` (koi8-r); the `Bases/*.bb` reference files are
-  **windows-1251**. Reading a world file with the wrong encoding silently mangles the Russian text.
+- **Encoding.** Source files are UTF-8 **with BOM**, CRLF (`.editorconfig`). Everything else is now UTF-8
+  too: `StaticData.CurrentEncoding` is `Encoding.UTF8`, and that single static drives every write — world
+  YAML, the legacy side files (`.zon`, `.shp`, `.skt`, `.gskt`, templates) and the `Bases/*.bb` reference
+  tables alike. The bundled `redist/World` and `redist/Bases` were transcoded from koi8-r / windows-1251 to
+  match. Reading a file with the wrong encoding silently mangles the Russian text, so **reads do not trust
+  the extension** — see `FileEncodingResolver` below.
+  Note `Encoding.UTF8` carries a preamble, so `File.WriteAllText(path, text, DefaultEncoding)` — the shape
+  every `YamlFormatProvider` save uses — emits a **BOM**, even though `FileEncodingResolver` documents world
+  files as BOM-less and strips one on read. Round-trips survive it; an external consumer may not.
   `Directory.Build.props` pins `TargetFrameworkVersion=v4.8` and `CodePage=65001` for all projects — don't
   re-set them per-csproj.
 - **Adding a file requires a csproj edit.** Non-SDK projects list every source explicitly
@@ -116,6 +129,15 @@ Two rules the serializer setup encodes, both load-bearing:
    older worlds and named maps in current ones (`NamedIntMapTests`); mob spells were a list of ids and are now
    id → count (`MobSpellMapConverter`, commits `f326e17` / `7baf2fc`).
 
+The same "read old, write new" rule covers the encoding itself. `FileEncodingResolver` (`DataUtils/`) decides
+per file by content, never by BOM or extension: it runs an incremental UTF-8 well-formedness check (rejecting
+overlong forms, surrogates and >U+10FFFF) and reports `Utf8NoBom` if the whole file validates, **koi8-r**
+otherwise. Pure-ASCII files resolve to UTF-8 harmlessly. Every `YamlFormatProvider.Load*` reads through
+`FileEncodingResolver.ReadAllText`, which also strips a stray leading U+FEFF; saves ignore it and use
+`DefaultEncoding`. So a koi8-r world opens correctly and is silently upgraded to UTF-8 on the next save — which
+means **a save is not byte-reversible on legacy worlds**. `FileEncodingResolverTests` covers the decision table;
+`ProdWorldIntegrationTests` covers the load + stable-resave path over a whole world.
+
 `DataPreservationTests` exists because fields were being silently dropped on save. When adding a field to a
 model, add a round-trip assertion there — it runs in CI with no world data.
 
@@ -125,8 +147,10 @@ duplicates parsing in places. `TemplatesDataManager`, `SetsFileManager`, `ShopsF
 
 ### Reference data ("Bases")
 
-`redist/Bases/*.bb` (copied to `BZEditorBuild/Bases`) are windows-1251 lookup tables — flag names, spell and
-skill lists, sector types, DG Script autocomplete. `BZEditor/CBasesDataManager.cs` parses them into
+`redist/Bases/*.bb` (copied to `BZEditorBuild/Bases`) are UTF-8 lookup tables — flag names, spell and
+skill lists, sector types, DG Script autocomplete. They were windows-1251 until recently; `CBasesDataManager`
+reads them with `StaticData.CurrentEncoding`, so a `.bb` still in the old encoding renders as mojibake in the
+dropdowns rather than failing. `BZEditor/CBasesDataManager.cs` parses them into
 `DataTable`s, dispatching by filename through hardcoded arrays (`twoParamsFiles`, `grouppedTwoParamsFiles`,
 `grouppedFiveParamsFiles`, …), so adding a `.bb` file means adding its name to the right array. These drive
 the UI's dropdowns and checklists; `EngineDictionaries` drives what gets written to disk — separate sources of
