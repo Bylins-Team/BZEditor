@@ -1,361 +1,361 @@
-*Встроенные переменные
-self	self	DarkBlue	UID	Получение владельца триггера	Владелец триггера	1
-exist.mob	exist.mob (vnum)	DarkBlue	UID	Получение владельца триггера	1 – моб существует, 0 – странный результат, nil – моба не существует	1
-exist.obj	exist.obj (vnum)	DarkBlue	число	Получение владельца триггера	1 – предмет существует, 0 – странный результат, nil – предмета не существует	1
-world.curobjs	world.curobjs (vnum)	DarkBlue	число	Количество vmun-предметов в мире(в игре в текущий момент и наренте)	Количество предметов	1
-world.gameobjs	world.gameobjs (vnum)	DarkBlue	число	Количество vmun-предметов в мире (в игре в текущий момент)	Количество предметов	1
-world.people	world.people(vmun)	DarkBlue	число	Количество персонажей в комнате vnum (PC, NPC и др)	Количество персонажей (-1 если комнаты не существует)	1
-world.curmobs	world.curmobs(vmun)	DarkBlue	число	Количество vnum-мобов в мире в текущий момент	Количество мобов	1
-world.zreset	world.zreset (vnum)	DarkBlue	нет	Вызов процедуры ресета зоны vnum	nil	1
-world.mob	world.mob (vnum)	DarkBlue	число	Получение численного значения UID персонажа VNUM	Численное значение UID	1
-world.obj	world.obj (vnum)	DarkBlue	число	Получение численного значения UID пердмета VNUM	Численное значение UID	1
-world.room	world.room (vnum)	DarkBlue	число	Получение численного значения UID комнаты VNUM	Численное значение UID	1
-weather.temp	weather.temp	DarkBlue	число	Температура на дворе	Температура	1
-weather.sky	weather.sky	DarkBlue	число	Облачность в мире	0 - облачно, 1 - пасмурно, 2 - тяжелые тучи, 3 - ясно	1
-weather.sky	weather.sky (vnum)	DarkBlue	число	Облачность в комнате VNUM	0 - облачно, 1 - пасмурно, 2 - тяжелые тучи, 3 - ясно	1
-weather.moon	weather.moon	DarkBlue	число	Возраст луны	Возраст в днях	1
-weather.type	weather.type	DarkBlue	строка	Множество букв, описывающее текущую погоду в мире или в комнате VNUM соответственно	a - резкое похолодание,b - резкое потепление,c - моросящий дождь,d - дождь,e - льет как из ведра,f - дождь с градом,g - снежок,h - снегопад,i - валит снег,j - ветерок,k - умеренный ветер,l - сильный ветер	1
-weather.type	weather.type (vnum)	DarkBlue	строка	Множество букв, описывающее текущую погоду в мире или в комнате VNUM соответственно	a - резкое похолодание,b - резкое потепление,c - моросящий дождь,d - дождь,e - льет как из ведра,f - дождь с градом,g - снежок,h - снегопад,i - валит снег,j - ветерок,k - умеренный ветер,l - сильный ветер	1
-time.hour	time.hour	DarkBlue	число	Игровое время, час	Игровой час	1
-time.day	time.day	DarkBlue	число	Игровое время, день	Игровой день	1
-time.month	time.month	DarkBlue	число	Игровое время, месяц	Игровой месяц	1
-time.year	time.year	DarkBlue	число	Игровое время, год	Игровой год	1
-random.char	random.char	DarkBlue	UID	Случайный выбор (выбор из всех)  персонажа в комнате. В поиск не включаются self, NOHASSLE и невидимые для моба/объекта персонажи.	Случайно выбранный персонаж	1
-random.pc	random.pc	DarkBlue	UID	Случайный выбор (выбор только из pc)  персонажа в комнате. В поиск не включаются self, NOHASSLE и невидимые для моба/объекта персонажи.	Случайно выбранный персонаж	1
-random.npc	random.npc	DarkBlue	UID	Случайный выбор (выбор только из npc)  персонажа в комнате. В поиск не включаются self, NOHASSLE и невидимые для моба/объекта персонажи.	Случайно выбранный персонаж	1
-random.num	random.num	DarkBlue	число	Возвращает случайное число	Случайное число	1
-random.num	random.num (num)	DarkBlue	число	Возвращает случайное число в диапазоне [1,num]	Случайное число	1
+*Р’СЃС‚СЂРѕРµРЅРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ
+self	self	DarkBlue	UID	РџРѕР»СѓС‡РµРЅРёРµ РІР»Р°РґРµР»СЊС†Р° С‚СЂРёРіРіРµСЂР°	Р’Р»Р°РґРµР»РµС† С‚СЂРёРіРіРµСЂР°	1
+exist.mob	exist.mob (vnum)	DarkBlue	UID	РџРѕР»СѓС‡РµРЅРёРµ РІР»Р°РґРµР»СЊС†Р° С‚СЂРёРіРіРµСЂР°	1 вЂ“ РјРѕР± СЃСѓС‰РµСЃС‚РІСѓРµС‚, 0 вЂ“ СЃС‚СЂР°РЅРЅС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚, nil вЂ“ РјРѕР±Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚	1
+exist.obj	exist.obj (vnum)	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РІР»Р°РґРµР»СЊС†Р° С‚СЂРёРіРіРµСЂР°	1 вЂ“ РїСЂРµРґРјРµС‚ СЃСѓС‰РµСЃС‚РІСѓРµС‚, 0 вЂ“ СЃС‚СЂР°РЅРЅС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚, nil вЂ“ РїСЂРµРґРјРµС‚Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚	1
+world.curobjs	world.curobjs (vnum)	DarkBlue	С‡РёСЃР»Рѕ	РљРѕР»РёС‡РµСЃС‚РІРѕ vmun-РїСЂРµРґРјРµС‚РѕРІ РІ РјРёСЂРµ(РІ РёРіСЂРµ РІ С‚РµРєСѓС‰РёР№ РјРѕРјРµРЅС‚ Рё РЅР°СЂРµРЅС‚Рµ)	РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґРјРµС‚РѕРІ	1
+world.gameobjs	world.gameobjs (vnum)	DarkBlue	С‡РёСЃР»Рѕ	РљРѕР»РёС‡РµСЃС‚РІРѕ vmun-РїСЂРµРґРјРµС‚РѕРІ РІ РјРёСЂРµ (РІ РёРіСЂРµ РІ С‚РµРєСѓС‰РёР№ РјРѕРјРµРЅС‚)	РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґРјРµС‚РѕРІ	1
+world.people	world.people(vmun)	DarkBlue	С‡РёСЃР»Рѕ	РљРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ РєРѕРјРЅР°С‚Рµ vnum (PC, NPC Рё РґСЂ)	РљРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂСЃРѕРЅР°Р¶РµР№ (-1 РµСЃР»Рё РєРѕРјРЅР°С‚С‹ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚)	1
+world.curmobs	world.curmobs(vmun)	DarkBlue	С‡РёСЃР»Рѕ	РљРѕР»РёС‡РµСЃС‚РІРѕ vnum-РјРѕР±РѕРІ РІ РјРёСЂРµ РІ С‚РµРєСѓС‰РёР№ РјРѕРјРµРЅС‚	РљРѕР»РёС‡РµСЃС‚РІРѕ РјРѕР±РѕРІ	1
+world.zreset	world.zreset (vnum)	DarkBlue	РЅРµС‚	Р’С‹Р·РѕРІ РїСЂРѕС†РµРґСѓСЂС‹ СЂРµСЃРµС‚Р° Р·РѕРЅС‹ vnum	nil	1
+world.mob	world.mob (vnum)	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ UID РїРµСЂСЃРѕРЅР°Р¶Р° VNUM	Р§РёСЃР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ UID	1
+world.obj	world.obj (vnum)	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ UID РїРµСЂРґРјРµС‚Р° VNUM	Р§РёСЃР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ UID	1
+world.room	world.room (vnum)	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ UID РєРѕРјРЅР°С‚С‹ VNUM	Р§РёСЃР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ UID	1
+weather.temp	weather.temp	DarkBlue	С‡РёСЃР»Рѕ	РўРµРјРїРµСЂР°С‚СѓСЂР° РЅР° РґРІРѕСЂРµ	РўРµРјРїРµСЂР°С‚СѓСЂР°	1
+weather.sky	weather.sky	DarkBlue	С‡РёСЃР»Рѕ	РћР±Р»Р°С‡РЅРѕСЃС‚СЊ РІ РјРёСЂРµ	0 - РѕР±Р»Р°С‡РЅРѕ, 1 - РїР°СЃРјСѓСЂРЅРѕ, 2 - С‚СЏР¶РµР»С‹Рµ С‚СѓС‡Рё, 3 - СЏСЃРЅРѕ	1
+weather.sky	weather.sky (vnum)	DarkBlue	С‡РёСЃР»Рѕ	РћР±Р»Р°С‡РЅРѕСЃС‚СЊ РІ РєРѕРјРЅР°С‚Рµ VNUM	0 - РѕР±Р»Р°С‡РЅРѕ, 1 - РїР°СЃРјСѓСЂРЅРѕ, 2 - С‚СЏР¶РµР»С‹Рµ С‚СѓС‡Рё, 3 - СЏСЃРЅРѕ	1
+weather.moon	weather.moon	DarkBlue	С‡РёСЃР»Рѕ	Р’РѕР·СЂР°СЃС‚ Р»СѓРЅС‹	Р’РѕР·СЂР°СЃС‚ РІ РґРЅСЏС…	1
+weather.type	weather.type	DarkBlue	СЃС‚СЂРѕРєР°	РњРЅРѕР¶РµСЃС‚РІРѕ Р±СѓРєРІ, РѕРїРёСЃС‹РІР°СЋС‰РµРµ С‚РµРєСѓС‰СѓСЋ РїРѕРіРѕРґСѓ РІ РјРёСЂРµ РёР»Рё РІ РєРѕРјРЅР°С‚Рµ VNUM СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ	a - СЂРµР·РєРѕРµ РїРѕС…РѕР»РѕРґР°РЅРёРµ,b - СЂРµР·РєРѕРµ РїРѕС‚РµРїР»РµРЅРёРµ,c - РјРѕСЂРѕСЃСЏС‰РёР№ РґРѕР¶РґСЊ,d - РґРѕР¶РґСЊ,e - Р»СЊРµС‚ РєР°Рє РёР· РІРµРґСЂР°,f - РґРѕР¶РґСЊ СЃ РіСЂР°РґРѕРј,g - СЃРЅРµР¶РѕРє,h - СЃРЅРµРіРѕРїР°Рґ,i - РІР°Р»РёС‚ СЃРЅРµРі,j - РІРµС‚РµСЂРѕРє,k - СѓРјРµСЂРµРЅРЅС‹Р№ РІРµС‚РµСЂ,l - СЃРёР»СЊРЅС‹Р№ РІРµС‚РµСЂ	1
+weather.type	weather.type (vnum)	DarkBlue	СЃС‚СЂРѕРєР°	РњРЅРѕР¶РµСЃС‚РІРѕ Р±СѓРєРІ, РѕРїРёСЃС‹РІР°СЋС‰РµРµ С‚РµРєСѓС‰СѓСЋ РїРѕРіРѕРґСѓ РІ РјРёСЂРµ РёР»Рё РІ РєРѕРјРЅР°С‚Рµ VNUM СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ	a - СЂРµР·РєРѕРµ РїРѕС…РѕР»РѕРґР°РЅРёРµ,b - СЂРµР·РєРѕРµ РїРѕС‚РµРїР»РµРЅРёРµ,c - РјРѕСЂРѕСЃСЏС‰РёР№ РґРѕР¶РґСЊ,d - РґРѕР¶РґСЊ,e - Р»СЊРµС‚ РєР°Рє РёР· РІРµРґСЂР°,f - РґРѕР¶РґСЊ СЃ РіСЂР°РґРѕРј,g - СЃРЅРµР¶РѕРє,h - СЃРЅРµРіРѕРїР°Рґ,i - РІР°Р»РёС‚ СЃРЅРµРі,j - РІРµС‚РµСЂРѕРє,k - СѓРјРµСЂРµРЅРЅС‹Р№ РІРµС‚РµСЂ,l - СЃРёР»СЊРЅС‹Р№ РІРµС‚РµСЂ	1
+time.hour	time.hour	DarkBlue	С‡РёСЃР»Рѕ	РРіСЂРѕРІРѕРµ РІСЂРµРјСЏ, С‡Р°СЃ	РРіСЂРѕРІРѕР№ С‡Р°СЃ	1
+time.day	time.day	DarkBlue	С‡РёСЃР»Рѕ	РРіСЂРѕРІРѕРµ РІСЂРµРјСЏ, РґРµРЅСЊ	РРіСЂРѕРІРѕР№ РґРµРЅСЊ	1
+time.month	time.month	DarkBlue	С‡РёСЃР»Рѕ	РРіСЂРѕРІРѕРµ РІСЂРµРјСЏ, РјРµСЃСЏС†	РРіСЂРѕРІРѕР№ РјРµСЃСЏС†	1
+time.year	time.year	DarkBlue	С‡РёСЃР»Рѕ	РРіСЂРѕРІРѕРµ РІСЂРµРјСЏ, РіРѕРґ	РРіСЂРѕРІРѕР№ РіРѕРґ	1
+random.char	random.char	DarkBlue	UID	РЎР»СѓС‡Р°Р№РЅС‹Р№ РІС‹Р±РѕСЂ (РІС‹Р±РѕСЂ РёР· РІСЃРµС…)  РїРµСЂСЃРѕРЅР°Р¶Р° РІ РєРѕРјРЅР°С‚Рµ. Р’ РїРѕРёСЃРє РЅРµ РІРєР»СЋС‡Р°СЋС‚СЃСЏ self, NOHASSLE Рё РЅРµРІРёРґРёРјС‹Рµ РґР»СЏ РјРѕР±Р°/РѕР±СЉРµРєС‚Р° РїРµСЂСЃРѕРЅР°Р¶Рё.	РЎР»СѓС‡Р°Р№РЅРѕ РІС‹Р±СЂР°РЅРЅС‹Р№ РїРµСЂСЃРѕРЅР°Р¶	1
+random.pc	random.pc	DarkBlue	UID	РЎР»СѓС‡Р°Р№РЅС‹Р№ РІС‹Р±РѕСЂ (РІС‹Р±РѕСЂ С‚РѕР»СЊРєРѕ РёР· pc)  РїРµСЂСЃРѕРЅР°Р¶Р° РІ РєРѕРјРЅР°С‚Рµ. Р’ РїРѕРёСЃРє РЅРµ РІРєР»СЋС‡Р°СЋС‚СЃСЏ self, NOHASSLE Рё РЅРµРІРёРґРёРјС‹Рµ РґР»СЏ РјРѕР±Р°/РѕР±СЉРµРєС‚Р° РїРµСЂСЃРѕРЅР°Р¶Рё.	РЎР»СѓС‡Р°Р№РЅРѕ РІС‹Р±СЂР°РЅРЅС‹Р№ РїРµСЂСЃРѕРЅР°Р¶	1
+random.npc	random.npc	DarkBlue	UID	РЎР»СѓС‡Р°Р№РЅС‹Р№ РІС‹Р±РѕСЂ (РІС‹Р±РѕСЂ С‚РѕР»СЊРєРѕ РёР· npc)  РїРµСЂСЃРѕРЅР°Р¶Р° РІ РєРѕРјРЅР°С‚Рµ. Р’ РїРѕРёСЃРє РЅРµ РІРєР»СЋС‡Р°СЋС‚СЃСЏ self, NOHASSLE Рё РЅРµРІРёРґРёРјС‹Рµ РґР»СЏ РјРѕР±Р°/РѕР±СЉРµРєС‚Р° РїРµСЂСЃРѕРЅР°Р¶Рё.	РЎР»СѓС‡Р°Р№РЅРѕ РІС‹Р±СЂР°РЅРЅС‹Р№ РїРµСЂСЃРѕРЅР°Р¶	1
+random.num	random.num	DarkBlue	С‡РёСЃР»Рѕ	Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ	РЎР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ	1
+random.num	random.num (num)	DarkBlue	С‡РёСЃР»Рѕ	Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ РІ РґРёР°РїР°Р·РѕРЅРµ [1,num]	РЎР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ	1
 		DarkBlue				1
-var.strlen	var.strlen	DarkBlue	число	Вычисление длины строки	Длина строки	1
-var.trim	var.trim	DarkBlue	строка	Удаление начальных и конечных пробелов	Урезаная строка	1
-var.contains	var.contains (str)	DarkBlue	число	Проверка подстроки	1 - str является подстрокой значения переменной var, 0 - str не является подстрокой значения переменной var	1
-var.car	var.car	DarkBlue	строка	Выделение первого слова строки	Первое слово	1
-var.cdr	var.cdr	DarkBlue	строка	Выделение части строки после первого слова.	Остаток строки	1
-var.words	var.words	DarkBlue	число	Определение количества слов в строке (элементов с списке)	Количество слов	1
-var.words	var.words (n)	DarkBlue	строка	Получение n-ого слова строки	Слово	1
-var.mudcommand	var.mudcommand	DarkBlue	строка	Получение полной версии команды MUD по значению переменной var. Ищется стандартная MUD команда, аббревиатурой которой является var.	Команда MUD или nil	1
-char.iname	char.iname	DarkBlue	строка	Имя (именительный падеж)	Имя	1
-char.rname	char.rname	DarkBlue	строка	Имя (родительный падеж)	Имя	1
-char.dname	char.dname	DarkBlue	строка	Имя (дательный падеж)	Имя	1
-char.vname	char.vname	DarkBlue	строка	Имя (винительный падеж)	Имя	1
-char.tname	char.tname	DarkBlue	строка	Имя (творительный падеж)	Имя	1
-char.pname	char.pname	DarkBlue	строка	Имя (предложный падеж)	Имя	1
-char.name	char.name	DarkBlue	строка	Короткое описание (если есть), иначе имя	Имя	1
-char.id	char.id	DarkBlue	число	Получение численного значения UID персонажа char.	Численное значение UID	1
-char.alias	char.alias	DarkBlue	строка	Имя	Имя	1
-char.level	char.level	DarkBlue	число	Уровень персонажа	Уровень	1
-char.hitp	char.hitp	DarkBlue	число	Получение количества hp	Текущее значение hp	1
-char.hitp	char.hitp (num)	DarkBlue	число	Изменение hp. Формат num:num - установить значение в num, +num - увеличить значение на num, -num - уменьшить значение на num	Новое значение hp	1
-char.maxhitp	char.maxhitp	DarkBlue	число	Получение максимального количества hp	Максимальное количество hp	1
-char.mana	char.mana	DarkBlue	число	Получение количества маны	Текущее количество маны	1
-char.mana	char.mana (num)	DarkBlue	число	Изменения маны. Формат num:num - установить значение в num, +num - увеличить значение на num, -num - уменьшить значение на num	Новое значение маны	1
-char.maxmana	char.maxmana	DarkBlue	число	Получение максимального количества маны	Максимальное количество маны	1
-char.move	char.move	DarkBlue	число	Получение количества энергии	Текущее количество энергии	1
-char.move	char.move (num)	DarkBlue	число	Изменение энергии. Формат num: num - установить значение в num, +num - увеличить значение на num, -num - уменьшить значение на num	Новое значение энергии	1
-char.maxmove	char.maxmove	DarkBlue	число	Получение максимального количества энергии	Максимальное количество энергии	1
-char.align	char.align	DarkBlue	число	GET_ALIGNMENT		1
-char.religion	char.religion	DarkBlue	число	Религия персонажа	0 - язычник, 1 - христианин	1
-char.gold	char.gold	DarkBlue	число	Получение количества денег	Количество денег	1
-char.gold	char.gold (num)	DarkBlue	число	Установка количества денег.Формат num: число - установить значение в num, +число - увеличить значение на num, -число - уменьшить значение на num	Новое количество денег	1
-char.bank	char.bank	DarkBlue	число	Получение количества денег в банке	Количество денег в банке	1
-char.bank	char.bank (num)	DarkBlue	число	Установка количества денег в банке.Формат num: число - установить значение в num, +число - увеличить значение на num, -число - уменьшить значение на num	Новое количество денег в банке	1
-char.exp	char.exp	DarkBlue	число	Получение опыта	Текущий опыт	1
-char.exp	char.exp (num)	DarkBlue	число	Изменение опыта. Формат num: num - установить значение в num, +num - увеличить значение на num, -num - уменьшить значение на num	Новый опыт	1
-char.sex	char.sex	DarkBlue	число	Пол персонажа	0 - средний, 1 - мужской, 2 - женский, 3 - мн. число	1
-char.clan	char.clan	DarkBlue	строка	Название клана (в нижнем регистре)	Название клана персонажа	1
-char.clanrank	char.clanrank	DarkBlue	число	Положение в клане	9 - RANK_KNIEZE,7 - RANK_CENTURION,4 - RANK_VETERAN,2 - RANK_JUNIOR,1 - RANK_NOVICE,0 - RANK_GUEST	1
-char.g	char.g	DarkBlue	строка	о//а/и	Суффикс	1
-char.u	char.u	DarkBlue	строка	ось/ся/ась/ись	Суффикс	1
-char.w	char.w	DarkBlue	строка	ое/ый/ая/ые	Суффикс	1
-char.q	char.q	DarkBlue	строка	ло//ла/ли	Суффикс	1
-char.y	char.y	DarkBlue	строка	ло/ел/ла/ли	Суффикс	1
-char.a	char.a	DarkBlue	строка	о//а/ы	Суффикс	1
-char.weight	char.weight	DarkBlue	число	Вес персонажа	Вес персонажа	1
-char.canbeseen	char.canbeseen	DarkBlue	число	Проверка видит ли персонаж self, персонаж char.	0 - self не видит персонажа, 1 - self видит персонажа или self не моб	1
-char.class	char.class	DarkBlue	число	Класс персонажа	0 - CLERIC,1 - BATTLEMAGE,2 - THIEF,3 - WARRIOR,4 - ASSASINE,5 - GUARD,6 - CHARMMAGE,7 - DEFENDERMAGE,8 - NECROMANCER,9 - PALADINE,10 - RANGER,11 - SMITH,12 - MERCHANT, 13 - DRUID	1
-char.race	char.race	DarkBlue	число	Раса персонажа	0 - SEVERANE,1 - POLANE,2 - KRIVICHI,3 - VATICHI,4 - VELANE,5 - DREVLANE	1
-char.fighting	char.fighting	DarkBlue	UID	Получение противника в бою	Противник или nil	1
-char.is_killer	char.is_killer [(on|off)]	DarkBlue	число	Управление флагом ДУШЕГУБ.on - устанавливает флаг,off - сбрасывает флаг	0 - игрок душегуб,1 - игрок не душегуб	1
-char.is_thief	char.is_thief [(on|off)]	DarkBlue	число	Работа с флагом PLR_THIEF	0 - игрок не имеет флага, 1 - игрок имеет флаг	1
-char.rentable	char.rentable	DarkBlue	число	Проверка на боевые действия	0 - не может уйти на постой,1 - может уйти на постой	1
-char.riding	char.riding	DarkBlue	UID	Определение лошади	Лошадь или nil	1
-char.ridden_by	char.ridden_by	DarkBlue	UID	Определение наездника	Наездник или nil	1
-char.vnum	char.vnum	DarkBlue	число	vnum моба. ?1 для PC	VNUM	1
-char.str	char.str	DarkBlue	число	Врожденная сила персонажа	Сила	1
-char.str	char.str (num)	DarkBlue	число	Изменение врожденной силы. num - установить силу равную num, +num - увеличить силу на num, -num - уменьшить силу на num	Сила	1
-char.stradd	char.stradd	DarkBlue	число	Добавочная сила персонажа	Сила	1
-char.int	char.int	DarkBlue	число	Врожденный ум персонажа	Ум	1
-char.int	char.int (num)	DarkBlue	число	Изменение врожденного ума	Ум	1
-char.intadd	char.intadd	DarkBlue	число	Добавочный ум персонажа	Ум	1
-char.wis	char.wis	DarkBlue	число	Врожденная мудрость персонажа	Мудрость	1
-char.wis	char.wis (num)	DarkBlue	число	Изменение врожденной мудрости	Мудрость	1
-char.wisadd	char.wisadd	DarkBlue	число	Добавочная мудрость персонажа	Мудрость	1
-char.dex	char.dex	DarkBlue	число	Врожденная ловкость персонажа	Ловкость	1
-char.dex	char.dex (num)	DarkBlue	число	Изменение врожденной ловкости	Ловкость	1
-char.dexadd	char.dexadd	DarkBlue	число	Добавочная ловкость персонажа	Ловкость	1
-char.con	char.con	DarkBlue	число	Врожденное тело персонажа	Телосложение	1
-char.con	char.con (num)	DarkBlue	число	Изменение врожденного тела	Телосложение	1
-char.conadd	char.conadd	DarkBlue	число	Добавочное тело персонажа	Телосложение	1
-char.cha	char.cha	DarkBlue	число	Врожденное обаяние персонажа	Обаяние	1
-char.cha	char.cha (num)	DarkBlue	число	Изменение врожденного обаяния	Обаяние	1
-char.chaadd	char.chaadd	DarkBlue	число	Добавочное обаяние персонажа	Обаяние	1
-char.size	char.size	DarkBlue	число	Врожденный размер персонажа	Размер	1
-char.size	char.size (num)	DarkBlue	число	Изменение врожденного размера	Размер	1
-char.sizeadd	char.sizeadd	DarkBlue	число	Добавочный размер персонажа	Размер	1
-char.room	char.room	DarkBlue	число	Получение комнаты, в которой находится персонаж	RNUM комнаты	1
-char.realroom	char.realroom	DarkBlue	число	VNUM комнаты, в которой находится персонаж	VNUM комнаты	1
-char.loadroom	char.loadroom	DarkBlue	число	Получение загрузочной комнаты	VNUM комнаты	1
-char.loadroom	char.loadroom (vnum)	DarkBlue	число	Установка загрузочной комнаты	VNUM комнаты	1
-char.skill	char.skill (str)	DarkBlue	число	Уровень умения str у персонажа. Str - название умения	Уровень владения умением	1
-char.spellcount	char.spellcount (str)	DarkBlue	число	Количество у персонажа выученных заклинаний str.Str - имя заклинания	Количество заклинаний	1
-char.spelltype	char.spelltype (str)	DarkBlue	число	Тип запоминания заклинания str у персонажа. Флаги из массива SplKnw. Str ? имя заклинания	?	1
-char.quested	char.quested (num)	DarkBlue	число	Проверка на то, выполнял ли персонаж квест номер num.	1 - выполнял, 0 - не выполнял	1
-char.setquest	char.setquest (num)	DarkBlue	число	Установка признака выполнения квеста номер num	1 ? выполнял	1
-char.eq	char.eq(pos)	DarkBlue	UID	Получение предмета экипировки.pos - позиция (текст или номер позиции)	Предмет или nil	1
-char.haveobj	char.haveobj(obj)	DarkBlue	число	Несет ли персонаж предмет obj? obj может быть vnum или именем предмета.	1 - несет, 0 - не несет	1
-char.varexists	char.varexists (name)	DarkBlue	число	Проверяет у сценария объекта char наличие глобальной переменной name.	1 - есть, 0 - нет	1
-char.position	char.position	DarkBlue	число	Возвращает положение персонажа	0 - dead,1 - mortally wounded,2 - incapacitated,3 - stunned,4 - sleeping,5 - resting,6 - sitting,7 - fighting,8 - standing	1
-char.position	char.position(pos)	DarkBlue	BUG	Устанавливает позицию персонажа. Не действует на богов и т.д.	?	1
-char.wait	char.wait	DarkBlue	число	Возвращает лаг персонажа в секундах.	Лаг	1
-char.wait	char.wait (pause)	DarkBlue	BUG	Устанавливает лаг персонажа в пульсах. Не действует на богов и т.д.	?	1
-char.affect	char.affect (name)	DarkBlue	число	Проверяет наличие на персонаже аффекта name.	1 - аффект есть, 0 - аффекта нет	1
-char.leader	char.leader	DarkBlue	UID	Возвращает лидера для char.	Лидер или nil	1
-char.people	char.people	DarkBlue	UID	Первый персонаж в комнате с char.	Персонаж или nil	1
-char.next_in_room	char.next_in_room	DarkBlue	UID	Следующий за char персонаж в комнате	Персонаж или nil	1
-char.all	char.all	DarkBlue	список из UID	все в комнате	Список персонажей, может быть пустым	1
-char.char	char.char	DarkBlue	список из UID	все PC и чармисы	Список персонажей, может быть пустым	1
-char.pc	char.pc	DarkBlue	список из UID	все PC	Список персонажей, может быть пустым	1
-char.npc	char.npc	DarkBlue	список из UID	все NPC (мобы не чармисы)	Список персонажей, может быть пустым	1
-char.group	char.group	DarkBlue	список из UID	список группы, в которой состоит char. Начинается с лидера, включает всех последователей.	Список персонажей, может быть пустым	1
-char.attackers	char.attackers	DarkBlue	список из UID	список персонажей, атакующих char.	Список персонажей, может быть пустым	1
-char.global	char.global (name)	DarkBlue	строка	Поиск и замена глобальной переменной другого сценария. При поиске переменной используется текущий контекст сценария char.	Значение глобальной переменной сценария char	1
-char.var 	char.var 	DarkBlue	строка	Поиск и замена глобальной переменной другого сценария. При поиске переменной используется текущий контекст сценария self.	Значение глобальной переменной сценария char	1
-obj.iname	obj.iname	DarkBlue	строка	Имя (именительный падеж)	Имя	1
-obj.rname	obj.rname	DarkBlue	строка	Имя (родительный падеж)	Имя	1
-obj.dname	obj.dname	DarkBlue	строка	Имя (дательный падеж)	Имя	1
-obj.vname	obj.vname	DarkBlue	строка	Имя (винительный падеж)	Имя	1
-obj.tname	obj.tname	DarkBlue	строка	Имя (творительный падеж)	Имя	1
-obj.pname	obj.pname	DarkBlue	строка	Имя (предложный падеж)	Имя	1
-obj.name	obj.name	DarkBlue	строка	Имя	Имя	1
-obj.id	obj.id	DarkBlue	число	Получение численного значения UID предмета obj.	Численное значение UID	1
-obj.shortdesc	obj.shortdesc	DarkBlue	строка	Короткое описание	Описание	1
-obj.vnum	obj.vnum	DarkBlue	число	vnum предмета	VNUM	1
-obj.type	obj.type	DarkBlue	число	Тип предмета	Код типа предмета	1
-obj.timer	obj.timer	DarkBlue	число	Таймер предмета	Таймер	1
-obj.val0	obj.val0	DarkBlue	число	Параметр предмета 0	Значение параметра	1
-obj.val1	obj.val1	DarkBlue	число	Параметр предмета 1	Значение параметра	1
-obj.val2	obj.val2	DarkBlue	число	Параметр предмета 2	Значение параметра	1
-obj.val3	obj.val3	DarkBlue	число	Параметр предмета 3	Значение параметра	1
-obj.carried_by	obj.carried_by	DarkBlue	UID	Кто несет	Персонаж или nil	1
-obj.worn_by	obj.worn_by	DarkBlue	UID	На ком одет	Персонаж или nil	1
-obj.g	obj.g	DarkBlue	строка	о//а/и	Суффикс	1
-obj.u	obj.u	DarkBlue	строка	ось/ся/ась/ись	Суффикс	1
-obj.w	obj.w	DarkBlue	строка	ое/ый/ая/ые	Суффикс	1
-obj.q	obj.q	DarkBlue	строка	ло//ла/ли	Суффикс	1
-obj.y	obj.y	DarkBlue	строка	ло//ла/ли	Суффикс	1
-obj.a	obj.a	DarkBlue	строка	о//а/ы	Суффикс	1
-obj.count	obj.count	DarkBlue	число	Количество предметов в мире (в игре в текущий момент и на ренте)	Количество	1
-obj.sex	obj.sex	DarkBlue	число	Род предмета	0 - средний,1 - мужской,2 - женский,3 - мн. число	1
-obj.room	obj.room	DarkBlue	число	Комната, в которой находится предмет, или тот на ком он одет.	VNUM комнаты	1
-obj.all	obj.all	DarkBlue	список из UID	все в комнате	Список персонажей	1
-obj.char	obj.char	DarkBlue	список из UID	все PC и чармисы	Список персонажей	1
-obj.pc	obj.pc	DarkBlue	список из UID	все PC	Список персонажей	1
-obj.npc	obj.npc	DarkBlue	список из UID	все NPC (мобы не чармисы)	Список персонажей	1
-room.name	room.name	DarkBlue	строка	Название комнаты	Название	1
-room.north	room.north	DarkBlue	строка	Проверка выхода на север	north ? есть выход, иначе nil	1
-room.east	room.east	DarkBlue	строка	Проверка выхода на восток	east ? есть выход, иначе nil	1
-room.south	room.south	DarkBlue	строка	Проверка выхода на юг	south ? есть выход, иначе nil	1
-room.west	room.west	DarkBlue	строка	Проверка выхода на запад	west ? есть выход, иначе nil	1
-room.up	room.up	DarkBlue	строка	Проверка выхода вверх	up ? есть выход, иначе nil	1
-room.down	room.down	DarkBlue	строка	Проверка выхода вниз	down ? есть выход, иначе nil	1
-room.vnum	room.vnum	DarkBlue	число	vnum комнаты	VNUM	1
-room.id	room.id	DarkBlue	число	Получение численного значения UID комнаты room.	Численное значение UID	1
-room.people	room.people	DarkBlue	UID	Первый персонаж в комнате room.	Персонаж или nil	1
-actor	actor	DarkBlue	Тип не указан	Actor 	Результат не указан	1
-actor.iname	actor.iname	DarkBlue	Тип не указан	Имя (именительный падеж) 	Результат не указан	1
-actor.rname	actor.rname	DarkBlue	Тип не указан	Имя (родительный падеж) 	Результат не указан	1
-actor.dname	actor.dname	DarkBlue	Тип не указан	Имя (дательный падеж) 	Результат не указан	1
-actor.vname	actor.vname	DarkBlue	Тип не указан	Имя (винительный падеж) 	Результат не указан	1
-actor.tname	actor.tname	DarkBlue	Тип не указан	Имя (творительный падеж) 	Результат не указан	1
-actor.pname	actor.pname	DarkBlue	Тип не указан	Имя (предложный падеж) 	Результат не указан	1
-actor.name	actor.name	DarkBlue	Тип не указан	Имя 	Результат не указан	1
-actor.id	actor.id	DarkBlue	Тип не указан	Получение численного значения UID персонажа 	Результат не указан	1
-actor.level	actor.level	DarkBlue	Тип не указан	Уровень персонажа 	Результат не указан	1
-actor.hitp	actor.hitp	DarkBlue	Тип не указан	Получение количества hp 	Результат не указан	1
-actor.hitp(num)	actor.hitp(num)	DarkBlue	Тип не указан	Изменение hp. Формат num: num – установить значение в num, +num – увеличить значение на num, -num – уменьшить значение на num 	Результат не указан	1
-actor.maxhitp	actor.maxhitp	DarkBlue	Тип не указан	Получение максимального количества hp 	Результат не указан	1
-actor.mana	actor.mana	DarkBlue	Тип не указан	Получение количества манны 	Результат не указан	1
-actor.mana(num)	actor.mana(num)	DarkBlue	Тип не указан	Изменения маны. Формат num: num – установить значение в num, +num – увеличить значение на num, -num – уменьшить значение на num 	Результат не указан	1
-actor.maxmana	actor.maxmana	DarkBlue	Тип не указан	Получение максимального количества манны 	Результат не указан	1
-actor.move	actor.move	DarkBlue	Тип не указан	Получение количества энергии 	Результат не указан	1
-actor.move(num)	actor.move(num)	DarkBlue	Тип не указан	Изменение энергии. Формат num: num – установить значение в num, +num – увеличить значение на num, -num – уменьшить значение на num 	Результат не указан	1
-actor.maxmove	actor.maxmove	DarkBlue	Тип не указан	Получение максимального количества энергии 	Результат не указан	1
-actor.align	actor.align	DarkBlue	Тип не указан	GET_ALIGNMENT 	Результат не указан	1
-actor.religion	actor.religion	DarkBlue	Тип не указан	Религия персонажа 	Результат не указан	1
-actor.gold	actor.gold	DarkBlue	Тип не указан	Получение количества денег 	Результат не указан	1
-actor.gold(num)	actor.gold(num)	DarkBlue	Тип не указан	Установка количества денег Формат num: num – установить значение в num, +num – увеличить значение на num, -num – уменьшить значение на num 	Результат не указан	1
-actor.bank	actor.bank	DarkBlue	Тип не указан	Получение количества денег в банке 	Результат не указан	1
-actor.bank(num)	actor.bank(num)	DarkBlue	Тип не указан	Установка количества денег в банке 	Результат не указан	1
-actor.exp	actor.exp	DarkBlue	Тип не указан	Получение опыта 	Результат не указан	1
-actor.exp(num)	actor.exp(num)	DarkBlue	Тип не указан	Изменение опыта. Формат num: 	Результат не указан	1
-actor.sex	actor.sex	DarkBlue	Тип не указан	Пол персонажа 	Результат не указан	1
-actor.clan	actor.clan	DarkBlue	Тип не указан	Название клана (в нижнем регистре) 	Результат не указан	1
-actor.clanrank	actor.clanrank	DarkBlue	Тип не указан	Положение в клане 	Результат не указан	1
-actor.g	actor.g	DarkBlue	Тип не указан	о//а/и 	Результат не указан	1
-actor.u	actor.u	DarkBlue	Тип не указан	ось/ся/ась/ись 	Результат не указан	1
-actor.w	actor.w	DarkBlue	Тип не указан	ое/ый/ая/ые 	Результат не указан	1
-actor.q	actor.q	DarkBlue	Тип не указан	ло//ла/ли 	Результат не указан	1
-actor.y	actor.y	DarkBlue	Тип не указан	ло/ел/ла/ли 	Результат не указан	1
-actor.a	actor.a	DarkBlue	Тип не указан	о//а/ы 	Результат не указан	1
-actor.weight	actor.weight	DarkBlue	Тип не указан	Вес персонажа 	Результат не указан	1
-actor.canbeseen	actor.canbeseen	DarkBlue	Тип не указан	Проверка видит ли персонаж self, персонаж 	Результат не указан	1
-actor.class	actor.class	DarkBlue	Тип не указан	Класс персонажа 	Результат не указан	1
-actor.race	actor.race	DarkBlue	Тип не указан	Раса персонажа 	Результат не указан	1
-actor.fighting	actor.fighting	DarkBlue	Тип не указан	Получение противника в бою 	Результат не указан	1
-actor.is_killer	actor.is_killer [(on|off)]	DarkBlue	Тип не указан	Управление флагом ДУШЕГУБ.on – устанавливает флаг off – сбрасывает флаг 	Результат не указан	1
-actor.is_thief 	actor.is_thief [(on|off)]	DarkBlue	Тип не указан	Работа с флагом PLR_THIEF 	Результат не указан	1
-actor.rentable	actor.rentable	DarkBlue	Тип не указан	Проверка на боевые действия 	Результат не указан	1
-actor.riding	actor.riding	DarkBlue	Тип не указан	Определение лошади 	Результат не указан	1
-actor.ridden_by	actor.ridden_by	DarkBlue	Тип не указан	Определение наездника 	Результат не указан	1
-actor.vnum	actor.vnum	DarkBlue	Тип не указан	vnum моба. –1 для PC 	Результат не указан	1
-actor.str	actor.str	DarkBlue	Тип не указан	Врожденная сила персонажа 	Результат не указан	1
-actor.str(num)	actor.str(num)	DarkBlue	Тип не указан	Изменение врожденной силы 	Результат не указан	1
-actor.stradd	actor.stradd	DarkBlue	Тип не указан	Добавочная сила персонажа 	Результат не указан	1
-actor.int	actor.int	DarkBlue	Тип не указан	Врожденный ум персонажа 	Результат не указан	1
-actor.int(num)	actor.int(num)	DarkBlue	Тип не указан	Изменение врожденного ума 	Результат не указан	1
-actor.intadd	actor.intadd	DarkBlue	Тип не указан	Добавочный ум персонажа 	Результат не указан	1
-actor.wis	actor.wis	DarkBlue	Тип не указан	Врожденная мудрость персонажа 	Результат не указан	1
-actor.wis(num)	actor.wis(num)	DarkBlue	Тип не указан	Изменение врожденной мудрости 	Результат не указан	1
-actor.wisadd	actor.wisadd	DarkBlue	Тип не указан	Добавочная мудрость персонажа 	Результат не указан	1
-actor.dex	actor.dex	DarkBlue	Тип не указан	Врожденная ловкость персонажа 	Результат не указан	1
-actor.dex(num)	actor.dex(num)	DarkBlue	Тип не указан	Изменение врожденной ловкости 	Результат не указан	1
-actor.dexadd	actor.dexadd	DarkBlue	Тип не указан	Добавочная ловкость персонажа 	Результат не указан	1
-actor.con	actor.con	DarkBlue	Тип не указан	Врожденное тело персонажа 	Результат не указан	1
-actor.con(num)	actor.con(num)	DarkBlue	Тип не указан	Изменение врожденного тела 	Результат не указан	1
-actor.conadd	actor.conadd	DarkBlue	Тип не указан	Добавочное тело персонажа 	Результат не указан	1
-actor.cha	actor.cha	DarkBlue	Тип не указан	Врожденное обаяние персонажа 	Результат не указан	1
-actor.cha(num)	actor.cha(num)	DarkBlue	Тип не указан	Изменение врожденного обаяния 	Результат не указан	1
-actor.chaadd	actor.chaadd	DarkBlue	Тип не указан	Добавочное обаяние персонажа 	Результат не указан	1
-actor.size	actor.size	DarkBlue	Тип не указан	Врожденный размер персонажа 	Результат не указан	1
-actor.size(num)	actor.size(num)	DarkBlue	Тип не указан	Изменение врожденного размера 	Результат не указан	1
-actor.sizeadd	actor.sizeadd	DarkBlue	Тип не указан	Добавочный размер персонажа 	Результат не указан	1
-actor.room	actor.room	DarkBlue	Тип не указан	Получение комнаты, в которой находится персонаж 	Результат не указан	1
-actor.realroom	actor.realroom	DarkBlue	Тип не указан	VNUM комнаты, в которой находится персонаж 	Результат не указан	1
-actor.loadroom	actor.loadroom	DarkBlue	Тип не указан	Получение загрузочной комнаты 	Результат не указан	1
-actor.loadroom(vnum)	actor.loadroom(vnum)	DarkBlue	Тип не указан	Установка загрузочной комнаты 	Результат не указан	1
-actor.skill(str)	actor.skill(str)	DarkBlue	Тип не указан	Уровень умения str у персонажа.Str – название умения 	Результат не указан	1
-actor.spellcount(str)	actor.spellcount(str)	DarkBlue	Тип не указан	Количество у персонажа выученных заклинаний str.Str – имя заклинания 	Результат не указан	1
-actor.spelltype(str)	actor.spelltype(str)	DarkBlue	Тип не указан	Тип запоминания заклинания str у персонажа. Флаги из массива SplKnw. Str – имя заклинания 	Результат не указан	1
-actor.quested(num)	actor.quested(num)	DarkBlue	Тип не указан	Проверка на то, выполнял ли персонаж квест номер num. 	Результат не указан	1
-actor.setquest(num)	actor.setquest(num)	DarkBlue	Тип не указан	Установка признака выполнения квеста номер num 	Результат не указан	1
-actor.eq(pos)	actor.eq(pos)	DarkBlue	Тип не указан	Получение предмета экипировки.pos – позиция (текст или номер позиции) 	Результат не указан	1
-actor.haveobj(obj)	actor.haveobj(obj)	DarkBlue	Тип не указан	Несет ли персонаж предмет obj? obj может быть vnum или именем предмета. 	Результат не указан	1
-actor.varexists(name)	actor.varexists(name)	DarkBlue	Тип не указан	Проверяет у сценария объекта char наличие глобальной переменной name. 	Результат не указан	1
-actor.position	actor.position	DarkBlue	Тип не указан	Возвращает положение персонажа 	Результат не указан	1
-actor.position(pos)	actor.position(pos)	DarkBlue	Тип не указан	Устанавливает позицию персонажа. Не действует на богов и т.д. 	Результат не указан	1
-actor.wait	actor.wait	DarkBlue	Тип не указан	Возвращает лаг персонажа в секундах. 	Результат не указан	1
-actor.wait(pause)	actor.wait(pause)	DarkBlue	Тип не указан	Устанавливает лаг персонажа в пульсах.Не действует на богов и т.д. 	Результат не указан	1
-actor.affect(name)	actor.affect(name)	DarkBlue	Тип не указан	Проверяет наличие на персонаже аффекта name. 	Результат не указан	1
-actor.leader	actor.leader	DarkBlue	Тип не указан	Возвращает лидера для 	Результат не указан	1
-actor.people	actor.people	DarkBlue	Тип не указан	Первый персонаж в комнате с 	Результат не указан	1
-actor.next_in_room	actor.next_in_room	DarkBlue	Тип не указан	Следующий за char персонаж в комнате 	Результат не указан	1
-actor.all 	actor.all 	DarkBlue	Тип не указан	Список персонажей в комнате:all - все в комнате  	Результат не указан	1
-actor.char 	actor.char 	DarkBlue	Тип не указан	Список персонажей в комнате:char - все PC и чармисы 	Результат не указан	1
-actor.pc 	actor.pc 	DarkBlue	Тип не указан	Список персонажей в комнате:pc - все PC  	Результат не указан	1
-actor.npc	actor.npc	DarkBlue	Тип не указан	Список персонажей в комнате:  npc – все NPC (мобы не чармисы) 	Результат не указан	1
-actor.global(name)	actor.global(name)	DarkBlue	Тип не указан	Поиск и замена глобальной переменной другого сценария. При поиске переменной используется текущий контекст сценария 	Результат не указан	1
-actor.var	actor.var	DarkBlue	Тип не указан	Поиск и замена глобальной переменной другого сценария. При поиске переменной используется текущий контекст сценария self. 	Результат не указан	1
-self.iname	self.iname	DarkBlue	Тип не указан	Имя (именительный падеж) 	Результат не указан	1
-self.rname	self.rname	DarkBlue	Тип не указан	Имя (родительный падеж) 	Результат не указан	1
-self.dname	self.dname	DarkBlue	Тип не указан	Имя (дательный падеж) 	Результат не указан	1
-self.vname	self.vname	DarkBlue	Тип не указан	Имя (винительный падеж) 	Результат не указан	1
-self.tname	self.tname	DarkBlue	Тип не указан	Имя (творительный падеж) 	Результат не указан	1
-self.pname	self.pname	DarkBlue	Тип не указан	Имя (предложный падеж) 	Результат не указан	1
-self.name	self.name	DarkBlue	Тип не указан	Короткое описание (если есть), иначе имя 	Результат не указан	1
-self.id	self.id	DarkBlue	Тип не указан	Получение численного значения UID персонажа self. 	Результат не указан	1
-self.alias	self.alias	DarkBlue	Тип не указан	Имя 	Результат не указан	1
-self.level	self.level	DarkBlue	Тип не указан	Уровень персонажа 	Результат не указан	1
-self.hitp	self.hitp	DarkBlue	Тип не указан	Получение количества hp 	Результат не указан	1
-self.hitp(num)	self.hitp(num)	DarkBlue	Тип не указан	Изменение hp. Формат num: num - установить значение в num, +num - увеличить значение на num, -num - уменьшить значение на num 	Результат не указан	1
-self.maxhitp	self.maxhitp	DarkBlue	Тип не указан	Получение максимального количества hp 	Результат не указан	1
-self.mana	self.mana	DarkBlue	Тип не указан	Получение количества манны 	Результат не указан	1
-self.mana(num)	self.mana(num)	DarkBlue	Тип не указан	Изменения маны. Формат num: num - установить значение в num, +num - увеличить значение на num, -num - уменьшить значение на num 	Результат не указан	1
-self.maxmana	self.maxmana	DarkBlue	Тип не указан	Получение максимального количества манны 	Результат не указан	1
-self.move	self.move	DarkBlue	Тип не указан	Получение количества энергии 	Результат не указан	1
-self.move(num)	self.move(num)	DarkBlue	Тип не указан	Изменение энергии. Формат num: num - установить значение в num, +num - увеличить значение на num, -num - уменьшить значение на num 	Результат не указан	1
-self.maxmove	self.maxmove	DarkBlue	Тип не указан	Получение максимального количества энергии 	Результат не указан	1
-self.align	self.align	DarkBlue	Тип не указан	GET_ALIGNMENT 	Результат не указан	1
-self.religion	self.religion	DarkBlue	Тип не указан	Религия персонажа 	Результат не указан	1
-self.gold	self.gold	DarkBlue	Тип не указан	Получение количества денег 	Результат не указан	1
-self.gold(num)	self.gold(num)	DarkBlue	Тип не указан	Установка количества денег Формат num: num - установить значение в num, +num - увеличить значение на num, -num - уменьшить значение на num 	Результат не указан	1
-self.bank	self.bank	DarkBlue	Тип не указан	Получение количества денег в банке 	Результат не указан	1
-self.bank(num)	self.bank(num)	DarkBlue	Тип не указан	Установка количества денег в банке 	Результат не указан	1
-self.exp	self.exp	DarkBlue	Тип не указан	Получение опыта 	Результат не указан	1
-self.exp(num)	self.exp(num)	DarkBlue	Тип не указан	Изменение опыта. Формат num: 	Результат не указан	1
-self.sex	self.sex	DarkBlue	Тип не указан	Пол персонажа 	Результат не указан	1
-self.clan	self.clan	DarkBlue	Тип не указан	Название клана (в нижнем регистре) 	Результат не указан	1
-self.clanrank	self.clanrank	DarkBlue	Тип не указан	Положение в клане 	Результат не указан	1
-self.g	self.g	DarkBlue	Тип не указан	о//а/и 	Результат не указан	1
-self.u	self.u	DarkBlue	Тип не указан	ось/ся/ась/ись 	Результат не указан	1
-self.w	self.w	DarkBlue	Тип не указан	ое/ый/ая/ые 	Результат не указан	1
-self.q	self.q	DarkBlue	Тип не указан	ло//ла/ли 	Результат не указан	1
-self.y	self.y	DarkBlue	Тип не указан	ло/ел/ла/ли 	Результат не указан	1
-self.a	self.a	DarkBlue	Тип не указан	о//а/ы 	Результат не указан	1
-self.weight	self.weight	DarkBlue	Тип не указан	Вес персонажа 	Результат не указан	1
-self.canbeseen	self.canbeseen	DarkBlue	Тип не указан	Проверка видит ли персонаж self, персонаж self.	Результат не указан	1
-self.class	self.class	DarkBlue	Тип не указан	Класс персонажа 	Результат не указан	1
-self.race	self.race	DarkBlue	Тип не указан	Раса персонажа 	Результат не указан	1
-self.fighting	self.fighting	DarkBlue	Тип не указан	Получение противника в бою 	Результат не указан	1
-self.is_killer	self.is_killer [(on|off)]	DarkBlue	Тип не указан	Управление флагом ДУШЕГУБ.on - устанавливает флаг off - сбрасывает флаг 	Результат не указан	1
-self.is_thief	self.is_thief [(on|off)]	DarkBlue	Тип не указан	Работа с флагом PLR_THIEF 	Результат не указан	1
-self.rentable	self.rentable	DarkBlue	Тип не указан	Проверка на боевые действия 	Результат не указан	1
-self.riding	self.riding	DarkBlue	Тип не указан	Определение лошади 	Результат не указан	1
-self.ridden_by	self.ridden_by	DarkBlue	Тип не указан	Определение наездника 	Результат не указан	1
-self.vnum	self.vnum	DarkBlue	Тип не указан	vnum моба. -1 для PC 	Результат не указан	1
-self.str	self.str	DarkBlue	Тип не указан	Врожденная сила персонажа 	Результат не указан	1
-self.str(num)	self.str(num)	DarkBlue	Тип не указан	Изменение врожденной силы 	Результат не указан	1
-self.stradd	self.stradd	DarkBlue	Тип не указан	Добавочная сила персонажа 	Результат не указан	1
-self.int	self.int	DarkBlue	Тип не указан	Врожденный ум персонажа 	Результат не указан	1
-self.int(num)	self.int(num)	DarkBlue	Тип не указан	Изменение врожденного ума 	Результат не указан	1
-self.intadd	self.intadd	DarkBlue	Тип не указан	Добавочный ум персонажа 	Результат не указан	1
-self.wis	self.wis	DarkBlue	Тип не указан	Врожденная мудрость персонажа 	Результат не указан	1
-self.wis(num)	self.wis(num)	DarkBlue	Тип не указан	Изменение врожденной мудрости 	Результат не указан	1
-self.wisadd	self.wisadd	DarkBlue	Тип не указан	Добавочная мудрость персонажа 	Результат не указан	1
-self.dex	self.dex	DarkBlue	Тип не указан	Врожденная ловкость персонажа 	Результат не указан	1
-self.dex(num)	self.dex(num)	DarkBlue	Тип не указан	Изменение врожденной ловкости 	Результат не указан	1
-self.dexadd	self.dexadd	DarkBlue	Тип не указан	Добавочная ловкость персонажа 	Результат не указан	1
-self.con	self.con	DarkBlue	Тип не указан	Врожденное тело персонажа 	Результат не указан	1
-self.con(num)	self.con(num)	DarkBlue	Тип не указан	Изменение врожденного тела 	Результат не указан	1
-self.conadd	self.conadd	DarkBlue	Тип не указан	Добавочное тело персонажа 	Результат не указан	1
-self.cha	self.cha	DarkBlue	Тип не указан	Врожденное обаяние персонажа 	Результат не указан	1
-self.cha(num)	self.cha(num)	DarkBlue	Тип не указан	Изменение врожденного обаяния 	Результат не указан	1
-self.chaadd	self.chaadd	DarkBlue	Тип не указан	Добавочное обаяние персонажа 	Результат не указан	1
-self.size	self.size	DarkBlue	Тип не указан	Врожденный размер персонажа 	Результат не указан	1
-self.size(num)	self.size(num)	DarkBlue	Тип не указан	Изменение врожденного размера 	Результат не указан	1
-self.sizeadd	self.sizeadd	DarkBlue	Тип не указан	Добавочный размер персонажа 	Результат не указан	1
-self.room	self.room	DarkBlue	Тип не указан	Получение комнаты, в которой находится персонаж 	Результат не указан	1
-self.realroom	self.realroom	DarkBlue	Тип не указан	VNUM комнаты, в которой находится персонаж 	Результат не указан	1
-self.loadroom	self.loadroom	DarkBlue	Тип не указан	Получение загрузочной комнаты 	Результат не указан	1
-self.loadroom(vnum)	self.loadroom(vnum)	DarkBlue	Тип не указан	Установка загрузочной комнаты 	Результат не указан	1
-self.skill(str)	self.skill(str)	DarkBlue	Тип не указан	Уровень умения str у персонажа.Str - название умения 	Результат не указан	1
-self.spellcount(str)	self.spellcount(str)	DarkBlue	Тип не указан	Количество у персонажа выученных заклинаний str.Str - имя заклинания 	Результат не указан	1
-self.spelltype(str)	self.spelltype(str)	DarkBlue	Тип не указан	Тип запоминания заклинания str у персонажа. Флаги из массива SplKnw. Str - имя заклинания 	Результат не указан	1
-self.quested(num)	self.quested(num)	DarkBlue	Тип не указан	Проверка на то, выполнял ли персонаж квест номер num. 	Результат не указан	1
-self.setquest(num)	self.setquest(num)	DarkBlue	Тип не указан	Установка признака выполнения квеста номер num 	Результат не указан	1
-self.eq(pos)	self.eq(pos)	DarkBlue	Тип не указан	Получение предмета экипировки.pos - позиция (текст или номер позиции) 	Результат не указан	1
-self.haveobj(obj)	self.haveobj(obj)	DarkBlue	Тип не указан	Несет ли персонаж предмет obj? obj может быть vnum или именем предмета. 	Результат не указан	1
-self.varexists(name)	self.varexists(name)	DarkBlue	Тип не указан	Проверяет у сценария объекта char наличие глобальной переменной name. 	Результат не указан	1
-self.position	self.position	DarkBlue	Тип не указан	Возвращает положение персонажа 	Результат не указан	1
-self.position(pos)	self.position(pos)	DarkBlue	Тип не указан	Устанавливает позицию персонажа. Не действует на богов и т.д. 	Результат не указан	1
-self.wait	self.wait	DarkBlue	Тип не указан	Возвращает лаг персонажа в секундах. 	Результат не указан	1
-self.wait(pause)	self.wait(pause)	DarkBlue	Тип не указан	Устанавливает лаг персонажа в пульсах.Не действует на богов и т.д. 	Результат не указан	1
-self.affect(name)	self.affect(name)	DarkBlue	Тип не указан	Проверяет наличие на персонаже аффекта name. 	Результат не указан	1
-self.leader	self.leader	DarkBlue	Тип не указан	Возвращает лидера для self. 	Результат не указан	1
-self.people	self.people	DarkBlue	Тип не указан	Первый персонаж в комнате с self. 	Результат не указан	1
-self.next_in_room	self.next_in_room	DarkBlue	Тип не указан	Следующий за char персонаж в комнате 	Результат не указан	1
-self.all 	self.all 	DarkBlue	Тип не указан	Список персонажей в комнате:all - все в комнате  	Результат не указан	1
-self.char 	self.char 	DarkBlue	Тип не указан	Список персонажей в комнате:char - все PC и чармисы 	Результат не указан	1
-self.pc 	self.pc 	DarkBlue	Тип не указан	Список персонажей в комнате:pc - все PC  	Результат не указан	1
-self.npc	self.npc	DarkBlue	Тип не указан	Список персонажей в комнате:  npc - все NPC (мобы не чармисы) 	Результат не указан	1
-self.global(name)	self.global(name)	DarkBlue	Тип не указан	Поиск и замена глобальной переменной другого сценария. При поиске переменной используется текущий контекст сценария self.	Результат не указан	1
-self.var	self.var	DarkBlue	Тип не указан	Поиск и замена глобальной переменной другого сценария. При поиске переменной используется текущий контекст сценария self. 	Результат не указан	1
+var.strlen	var.strlen	DarkBlue	С‡РёСЃР»Рѕ	Р’С‹С‡РёСЃР»РµРЅРёРµ РґР»РёРЅС‹ СЃС‚СЂРѕРєРё	Р”Р»РёРЅР° СЃС‚СЂРѕРєРё	1
+var.trim	var.trim	DarkBlue	СЃС‚СЂРѕРєР°	РЈРґР°Р»РµРЅРёРµ РЅР°С‡Р°Р»СЊРЅС‹С… Рё РєРѕРЅРµС‡РЅС‹С… РїСЂРѕР±РµР»РѕРІ	РЈСЂРµР·Р°РЅР°СЏ СЃС‚СЂРѕРєР°	1
+var.contains	var.contains (str)	DarkBlue	С‡РёСЃР»Рѕ	РџСЂРѕРІРµСЂРєР° РїРѕРґСЃС‚СЂРѕРєРё	1 - str СЏРІР»СЏРµС‚СЃСЏ РїРѕРґСЃС‚СЂРѕРєРѕР№ Р·РЅР°С‡РµРЅРёСЏ РїРµСЂРµРјРµРЅРЅРѕР№ var, 0 - str РЅРµ СЏРІР»СЏРµС‚СЃСЏ РїРѕРґСЃС‚СЂРѕРєРѕР№ Р·РЅР°С‡РµРЅРёСЏ РїРµСЂРµРјРµРЅРЅРѕР№ var	1
+var.car	var.car	DarkBlue	СЃС‚СЂРѕРєР°	Р’С‹РґРµР»РµРЅРёРµ РїРµСЂРІРѕРіРѕ СЃР»РѕРІР° СЃС‚СЂРѕРєРё	РџРµСЂРІРѕРµ СЃР»РѕРІРѕ	1
+var.cdr	var.cdr	DarkBlue	СЃС‚СЂРѕРєР°	Р’С‹РґРµР»РµРЅРёРµ С‡Р°СЃС‚Рё СЃС‚СЂРѕРєРё РїРѕСЃР»Рµ РїРµСЂРІРѕРіРѕ СЃР»РѕРІР°.	РћСЃС‚Р°С‚РѕРє СЃС‚СЂРѕРєРё	1
+var.words	var.words	DarkBlue	С‡РёСЃР»Рѕ	РћРїСЂРµРґРµР»РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЃР»РѕРІ РІ СЃС‚СЂРѕРєРµ (СЌР»РµРјРµРЅС‚РѕРІ СЃ СЃРїРёСЃРєРµ)	РљРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕРІ	1
+var.words	var.words (n)	DarkBlue	СЃС‚СЂРѕРєР°	РџРѕР»СѓС‡РµРЅРёРµ n-РѕРіРѕ СЃР»РѕРІР° СЃС‚СЂРѕРєРё	РЎР»РѕРІРѕ	1
+var.mudcommand	var.mudcommand	DarkBlue	СЃС‚СЂРѕРєР°	РџРѕР»СѓС‡РµРЅРёРµ РїРѕР»РЅРѕР№ РІРµСЂСЃРёРё РєРѕРјР°РЅРґС‹ MUD РїРѕ Р·РЅР°С‡РµРЅРёСЋ РїРµСЂРµРјРµРЅРЅРѕР№ var. РС‰РµС‚СЃСЏ СЃС‚Р°РЅРґР°СЂС‚РЅР°СЏ MUD РєРѕРјР°РЅРґР°, Р°Р±Р±СЂРµРІРёР°С‚СѓСЂРѕР№ РєРѕС‚РѕСЂРѕР№ СЏРІР»СЏРµС‚СЃСЏ var.	РљРѕРјР°РЅРґР° MUD РёР»Рё nil	1
+char.iname	char.iname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (РёРјРµРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+char.rname	char.rname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (СЂРѕРґРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+char.dname	char.dname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (РґР°С‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+char.vname	char.vname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (РІРёРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+char.tname	char.tname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (С‚РІРѕСЂРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+char.pname	char.pname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (РїСЂРµРґР»РѕР¶РЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+char.name	char.name	DarkBlue	СЃС‚СЂРѕРєР°	РљРѕСЂРѕС‚РєРѕРµ РѕРїРёСЃР°РЅРёРµ (РµСЃР»Рё РµСЃС‚СЊ), РёРЅР°С‡Рµ РёРјСЏ	РРјСЏ	1
+char.id	char.id	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ UID РїРµСЂСЃРѕРЅР°Р¶Р° char.	Р§РёСЃР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ UID	1
+char.alias	char.alias	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ	РРјСЏ	1
+char.level	char.level	DarkBlue	С‡РёСЃР»Рѕ	РЈСЂРѕРІРµРЅСЊ РїРµСЂСЃРѕРЅР°Р¶Р°	РЈСЂРѕРІРµРЅСЊ	1
+char.hitp	char.hitp	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° hp	РўРµРєСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ hp	1
+char.hitp	char.hitp (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ hp. Р¤РѕСЂРјР°С‚ num:num - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num	РќРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ hp	1
+char.maxhitp	char.maxhitp	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° hp	РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ hp	1
+char.mana	char.mana	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РјР°РЅС‹	РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјР°РЅС‹	1
+char.mana	char.mana (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёСЏ РјР°РЅС‹. Р¤РѕСЂРјР°С‚ num:num - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num	РќРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°РЅС‹	1
+char.maxmana	char.maxmana	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РјР°РЅС‹	РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјР°РЅС‹	1
+char.move	char.move	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЌРЅРµСЂРіРёРё	РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌРЅРµСЂРіРёРё	1
+char.move	char.move (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ СЌРЅРµСЂРіРёРё. Р¤РѕСЂРјР°С‚ num: num - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num	РќРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ СЌРЅРµСЂРіРёРё	1
+char.maxmove	char.maxmove	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° СЌРЅРµСЂРіРёРё	РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌРЅРµСЂРіРёРё	1
+char.align	char.align	DarkBlue	С‡РёСЃР»Рѕ	GET_ALIGNMENT		1
+char.religion	char.religion	DarkBlue	С‡РёСЃР»Рѕ	Р РµР»РёРіРёСЏ РїРµСЂСЃРѕРЅР°Р¶Р°	0 - СЏР·С‹С‡РЅРёРє, 1 - С…СЂРёСЃС‚РёР°РЅРёРЅ	1
+char.gold	char.gold	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі	РљРѕР»РёС‡РµСЃС‚РІРѕ РґРµРЅРµРі	1
+char.gold	char.gold (num)	DarkBlue	С‡РёСЃР»Рѕ	РЈСЃС‚Р°РЅРѕРІРєР° РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі.Р¤РѕСЂРјР°С‚ num: С‡РёСЃР»Рѕ - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +С‡РёСЃР»Рѕ - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -С‡РёСЃР»Рѕ - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num	РќРѕРІРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРµРЅРµРі	1
+char.bank	char.bank	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі РІ Р±Р°РЅРєРµ	РљРѕР»РёС‡РµСЃС‚РІРѕ РґРµРЅРµРі РІ Р±Р°РЅРєРµ	1
+char.bank	char.bank (num)	DarkBlue	С‡РёСЃР»Рѕ	РЈСЃС‚Р°РЅРѕРІРєР° РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі РІ Р±Р°РЅРєРµ.Р¤РѕСЂРјР°С‚ num: С‡РёСЃР»Рѕ - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +С‡РёСЃР»Рѕ - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -С‡РёСЃР»Рѕ - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num	РќРѕРІРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРµРЅРµРі РІ Р±Р°РЅРєРµ	1
+char.exp	char.exp	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РѕРїС‹С‚Р°	РўРµРєСѓС‰РёР№ РѕРїС‹С‚	1
+char.exp	char.exp (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ РѕРїС‹С‚Р°. Р¤РѕСЂРјР°С‚ num: num - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num	РќРѕРІС‹Р№ РѕРїС‹С‚	1
+char.sex	char.sex	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР» РїРµСЂСЃРѕРЅР°Р¶Р°	0 - СЃСЂРµРґРЅРёР№, 1 - РјСѓР¶СЃРєРѕР№, 2 - Р¶РµРЅСЃРєРёР№, 3 - РјРЅ. С‡РёСЃР»Рѕ	1
+char.clan	char.clan	DarkBlue	СЃС‚СЂРѕРєР°	РќР°Р·РІР°РЅРёРµ РєР»Р°РЅР° (РІ РЅРёР¶РЅРµРј СЂРµРіРёСЃС‚СЂРµ)	РќР°Р·РІР°РЅРёРµ РєР»Р°РЅР° РїРµСЂСЃРѕРЅР°Р¶Р°	1
+char.clanrank	char.clanrank	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»РѕР¶РµРЅРёРµ РІ РєР»Р°РЅРµ	9 - RANK_KNIEZE,7 - RANK_CENTURION,4 - RANK_VETERAN,2 - RANK_JUNIOR,1 - RANK_NOVICE,0 - RANK_GUEST	1
+char.g	char.g	DarkBlue	СЃС‚СЂРѕРєР°	Рѕ//Р°/Рё	РЎСѓС„С„РёРєСЃ	1
+char.u	char.u	DarkBlue	СЃС‚СЂРѕРєР°	РѕСЃСЊ/СЃСЏ/Р°СЃСЊ/РёСЃСЊ	РЎСѓС„С„РёРєСЃ	1
+char.w	char.w	DarkBlue	СЃС‚СЂРѕРєР°	РѕРµ/С‹Р№/Р°СЏ/С‹Рµ	РЎСѓС„С„РёРєСЃ	1
+char.q	char.q	DarkBlue	СЃС‚СЂРѕРєР°	Р»Рѕ//Р»Р°/Р»Рё	РЎСѓС„С„РёРєСЃ	1
+char.y	char.y	DarkBlue	СЃС‚СЂРѕРєР°	Р»Рѕ/РµР»/Р»Р°/Р»Рё	РЎСѓС„С„РёРєСЃ	1
+char.a	char.a	DarkBlue	СЃС‚СЂРѕРєР°	Рѕ//Р°/С‹	РЎСѓС„С„РёРєСЃ	1
+char.weight	char.weight	DarkBlue	С‡РёСЃР»Рѕ	Р’РµСЃ РїРµСЂСЃРѕРЅР°Р¶Р°	Р’РµСЃ РїРµСЂСЃРѕРЅР°Р¶Р°	1
+char.canbeseen	char.canbeseen	DarkBlue	С‡РёСЃР»Рѕ	РџСЂРѕРІРµСЂРєР° РІРёРґРёС‚ Р»Рё РїРµСЂСЃРѕРЅР°Р¶ self, РїРµСЂСЃРѕРЅР°Р¶ char.	0 - self РЅРµ РІРёРґРёС‚ РїРµСЂСЃРѕРЅР°Р¶Р°, 1 - self РІРёРґРёС‚ РїРµСЂСЃРѕРЅР°Р¶Р° РёР»Рё self РЅРµ РјРѕР±	1
+char.class	char.class	DarkBlue	С‡РёСЃР»Рѕ	РљР»Р°СЃСЃ РїРµСЂСЃРѕРЅР°Р¶Р°	0 - CLERIC,1 - BATTLEMAGE,2 - THIEF,3 - WARRIOR,4 - ASSASINE,5 - GUARD,6 - CHARMMAGE,7 - DEFENDERMAGE,8 - NECROMANCER,9 - PALADINE,10 - RANGER,11 - SMITH,12 - MERCHANT, 13 - DRUID	1
+char.race	char.race	DarkBlue	С‡РёСЃР»Рѕ	Р Р°СЃР° РїРµСЂСЃРѕРЅР°Р¶Р°	0 - SEVERANE,1 - POLANE,2 - KRIVICHI,3 - VATICHI,4 - VELANE,5 - DREVLANE	1
+char.fighting	char.fighting	DarkBlue	UID	РџРѕР»СѓС‡РµРЅРёРµ РїСЂРѕС‚РёРІРЅРёРєР° РІ Р±РѕСЋ	РџСЂРѕС‚РёРІРЅРёРє РёР»Рё nil	1
+char.is_killer	char.is_killer [(on|off)]	DarkBlue	С‡РёСЃР»Рѕ	РЈРїСЂР°РІР»РµРЅРёРµ С„Р»Р°РіРѕРј Р”РЈРЁР•Р“РЈР‘.on - СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ С„Р»Р°Рі,off - СЃР±СЂР°СЃС‹РІР°РµС‚ С„Р»Р°Рі	0 - РёРіСЂРѕРє РґСѓС€РµРіСѓР±,1 - РёРіСЂРѕРє РЅРµ РґСѓС€РµРіСѓР±	1
+char.is_thief	char.is_thief [(on|off)]	DarkBlue	С‡РёСЃР»Рѕ	Р Р°Р±РѕС‚Р° СЃ С„Р»Р°РіРѕРј PLR_THIEF	0 - РёРіСЂРѕРє РЅРµ РёРјРµРµС‚ С„Р»Р°РіР°, 1 - РёРіСЂРѕРє РёРјРµРµС‚ С„Р»Р°Рі	1
+char.rentable	char.rentable	DarkBlue	С‡РёСЃР»Рѕ	РџСЂРѕРІРµСЂРєР° РЅР° Р±РѕРµРІС‹Рµ РґРµР№СЃС‚РІРёСЏ	0 - РЅРµ РјРѕР¶РµС‚ СѓР№С‚Рё РЅР° РїРѕСЃС‚РѕР№,1 - РјРѕР¶РµС‚ СѓР№С‚Рё РЅР° РїРѕСЃС‚РѕР№	1
+char.riding	char.riding	DarkBlue	UID	РћРїСЂРµРґРµР»РµРЅРёРµ Р»РѕС€Р°РґРё	Р›РѕС€Р°РґСЊ РёР»Рё nil	1
+char.ridden_by	char.ridden_by	DarkBlue	UID	РћРїСЂРµРґРµР»РµРЅРёРµ РЅР°РµР·РґРЅРёРєР°	РќР°РµР·РґРЅРёРє РёР»Рё nil	1
+char.vnum	char.vnum	DarkBlue	С‡РёСЃР»Рѕ	vnum РјРѕР±Р°. ?1 РґР»СЏ PC	VNUM	1
+char.str	char.str	DarkBlue	С‡РёСЃР»Рѕ	Р’СЂРѕР¶РґРµРЅРЅР°СЏ СЃРёР»Р° РїРµСЂСЃРѕРЅР°Р¶Р°	РЎРёР»Р°	1
+char.str	char.str (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕР№ СЃРёР»С‹. num - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРёР»Сѓ СЂР°РІРЅСѓСЋ num, +num - СѓРІРµР»РёС‡РёС‚СЊ СЃРёР»Сѓ РЅР° num, -num - СѓРјРµРЅСЊС€РёС‚СЊ СЃРёР»Сѓ РЅР° num	РЎРёР»Р°	1
+char.stradd	char.stradd	DarkBlue	С‡РёСЃР»Рѕ	Р”РѕР±Р°РІРѕС‡РЅР°СЏ СЃРёР»Р° РїРµСЂСЃРѕРЅР°Р¶Р°	РЎРёР»Р°	1
+char.int	char.int	DarkBlue	С‡РёСЃР»Рѕ	Р’СЂРѕР¶РґРµРЅРЅС‹Р№ СѓРј РїРµСЂСЃРѕРЅР°Р¶Р°	РЈРј	1
+char.int	char.int (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ СѓРјР°	РЈРј	1
+char.intadd	char.intadd	DarkBlue	С‡РёСЃР»Рѕ	Р”РѕР±Р°РІРѕС‡РЅС‹Р№ СѓРј РїРµСЂСЃРѕРЅР°Р¶Р°	РЈРј	1
+char.wis	char.wis	DarkBlue	С‡РёСЃР»Рѕ	Р’СЂРѕР¶РґРµРЅРЅР°СЏ РјСѓРґСЂРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°	РњСѓРґСЂРѕСЃС‚СЊ	1
+char.wis	char.wis (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕР№ РјСѓРґСЂРѕСЃС‚Рё	РњСѓРґСЂРѕСЃС‚СЊ	1
+char.wisadd	char.wisadd	DarkBlue	С‡РёСЃР»Рѕ	Р”РѕР±Р°РІРѕС‡РЅР°СЏ РјСѓРґСЂРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°	РњСѓРґСЂРѕСЃС‚СЊ	1
+char.dex	char.dex	DarkBlue	С‡РёСЃР»Рѕ	Р’СЂРѕР¶РґРµРЅРЅР°СЏ Р»РѕРІРєРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°	Р›РѕРІРєРѕСЃС‚СЊ	1
+char.dex	char.dex (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕР№ Р»РѕРІРєРѕСЃС‚Рё	Р›РѕРІРєРѕСЃС‚СЊ	1
+char.dexadd	char.dexadd	DarkBlue	С‡РёСЃР»Рѕ	Р”РѕР±Р°РІРѕС‡РЅР°СЏ Р»РѕРІРєРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°	Р›РѕРІРєРѕСЃС‚СЊ	1
+char.con	char.con	DarkBlue	С‡РёСЃР»Рѕ	Р’СЂРѕР¶РґРµРЅРЅРѕРµ С‚РµР»Рѕ РїРµСЂСЃРѕРЅР°Р¶Р°	РўРµР»РѕСЃР»РѕР¶РµРЅРёРµ	1
+char.con	char.con (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ С‚РµР»Р°	РўРµР»РѕСЃР»РѕР¶РµРЅРёРµ	1
+char.conadd	char.conadd	DarkBlue	С‡РёСЃР»Рѕ	Р”РѕР±Р°РІРѕС‡РЅРѕРµ С‚РµР»Рѕ РїРµСЂСЃРѕРЅР°Р¶Р°	РўРµР»РѕСЃР»РѕР¶РµРЅРёРµ	1
+char.cha	char.cha	DarkBlue	С‡РёСЃР»Рѕ	Р’СЂРѕР¶РґРµРЅРЅРѕРµ РѕР±Р°СЏРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р°	РћР±Р°СЏРЅРёРµ	1
+char.cha	char.cha (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ РѕР±Р°СЏРЅРёСЏ	РћР±Р°СЏРЅРёРµ	1
+char.chaadd	char.chaadd	DarkBlue	С‡РёСЃР»Рѕ	Р”РѕР±Р°РІРѕС‡РЅРѕРµ РѕР±Р°СЏРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р°	РћР±Р°СЏРЅРёРµ	1
+char.size	char.size	DarkBlue	С‡РёСЃР»Рѕ	Р’СЂРѕР¶РґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РїРµСЂСЃРѕРЅР°Р¶Р°	Р Р°Р·РјРµСЂ	1
+char.size	char.size (num)	DarkBlue	С‡РёСЃР»Рѕ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ СЂР°Р·РјРµСЂР°	Р Р°Р·РјРµСЂ	1
+char.sizeadd	char.sizeadd	DarkBlue	С‡РёСЃР»Рѕ	Р”РѕР±Р°РІРѕС‡РЅС‹Р№ СЂР°Р·РјРµСЂ РїРµСЂСЃРѕРЅР°Р¶Р°	Р Р°Р·РјРµСЂ	1
+char.room	char.room	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕРјРЅР°С‚С‹, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РїРµСЂСЃРѕРЅР°Р¶	RNUM РєРѕРјРЅР°С‚С‹	1
+char.realroom	char.realroom	DarkBlue	С‡РёСЃР»Рѕ	VNUM РєРѕРјРЅР°С‚С‹, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РїРµСЂСЃРѕРЅР°Р¶	VNUM РєРѕРјРЅР°С‚С‹	1
+char.loadroom	char.loadroom	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ Р·Р°РіСЂСѓР·РѕС‡РЅРѕР№ РєРѕРјРЅР°С‚С‹	VNUM РєРѕРјРЅР°С‚С‹	1
+char.loadroom	char.loadroom (vnum)	DarkBlue	С‡РёСЃР»Рѕ	РЈСЃС‚Р°РЅРѕРІРєР° Р·Р°РіСЂСѓР·РѕС‡РЅРѕР№ РєРѕРјРЅР°С‚С‹	VNUM РєРѕРјРЅР°С‚С‹	1
+char.skill	char.skill (str)	DarkBlue	С‡РёСЃР»Рѕ	РЈСЂРѕРІРµРЅСЊ СѓРјРµРЅРёСЏ str Сѓ РїРµСЂСЃРѕРЅР°Р¶Р°. Str - РЅР°Р·РІР°РЅРёРµ СѓРјРµРЅРёСЏ	РЈСЂРѕРІРµРЅСЊ РІР»Р°РґРµРЅРёСЏ СѓРјРµРЅРёРµРј	1
+char.spellcount	char.spellcount (str)	DarkBlue	С‡РёСЃР»Рѕ	РљРѕР»РёС‡РµСЃС‚РІРѕ Сѓ РїРµСЂСЃРѕРЅР°Р¶Р° РІС‹СѓС‡РµРЅРЅС‹С… Р·Р°РєР»РёРЅР°РЅРёР№ str.Str - РёРјСЏ Р·Р°РєР»РёРЅР°РЅРёСЏ	РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РєР»РёРЅР°РЅРёР№	1
+char.spelltype	char.spelltype (str)	DarkBlue	С‡РёСЃР»Рѕ	РўРёРї Р·Р°РїРѕРјРёРЅР°РЅРёСЏ Р·Р°РєР»РёРЅР°РЅРёСЏ str Сѓ РїРµСЂСЃРѕРЅР°Р¶Р°. Р¤Р»Р°РіРё РёР· РјР°СЃСЃРёРІР° SplKnw. Str ? РёРјСЏ Р·Р°РєР»РёРЅР°РЅРёСЏ	?	1
+char.quested	char.quested (num)	DarkBlue	С‡РёСЃР»Рѕ	РџСЂРѕРІРµСЂРєР° РЅР° С‚Рѕ, РІС‹РїРѕР»РЅСЏР» Р»Рё РїРµСЂСЃРѕРЅР°Р¶ РєРІРµСЃС‚ РЅРѕРјРµСЂ num.	1 - РІС‹РїРѕР»РЅСЏР», 0 - РЅРµ РІС‹РїРѕР»РЅСЏР»	1
+char.setquest	char.setquest (num)	DarkBlue	С‡РёСЃР»Рѕ	РЈСЃС‚Р°РЅРѕРІРєР° РїСЂРёР·РЅР°РєР° РІС‹РїРѕР»РЅРµРЅРёСЏ РєРІРµСЃС‚Р° РЅРѕРјРµСЂ num	1 ? РІС‹РїРѕР»РЅСЏР»	1
+char.eq	char.eq(pos)	DarkBlue	UID	РџРѕР»СѓС‡РµРЅРёРµ РїСЂРµРґРјРµС‚Р° СЌРєРёРїРёСЂРѕРІРєРё.pos - РїРѕР·РёС†РёСЏ (С‚РµРєСЃС‚ РёР»Рё РЅРѕРјРµСЂ РїРѕР·РёС†РёРё)	РџСЂРµРґРјРµС‚ РёР»Рё nil	1
+char.haveobj	char.haveobj(obj)	DarkBlue	С‡РёСЃР»Рѕ	РќРµСЃРµС‚ Р»Рё РїРµСЂСЃРѕРЅР°Р¶ РїСЂРµРґРјРµС‚ obj? obj РјРѕР¶РµС‚ Р±С‹С‚СЊ vnum РёР»Рё РёРјРµРЅРµРј РїСЂРµРґРјРµС‚Р°.	1 - РЅРµСЃРµС‚, 0 - РЅРµ РЅРµСЃРµС‚	1
+char.varexists	char.varexists (name)	DarkBlue	С‡РёСЃР»Рѕ	РџСЂРѕРІРµСЂСЏРµС‚ Сѓ СЃС†РµРЅР°СЂРёСЏ РѕР±СЉРµРєС‚Р° char РЅР°Р»РёС‡РёРµ РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ name.	1 - РµСЃС‚СЊ, 0 - РЅРµС‚	1
+char.position	char.position	DarkBlue	С‡РёСЃР»Рѕ	Р’РѕР·РІСЂР°С‰Р°РµС‚ РїРѕР»РѕР¶РµРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р°	0 - dead,1 - mortally wounded,2 - incapacitated,3 - stunned,4 - sleeping,5 - resting,6 - sitting,7 - fighting,8 - standing	1
+char.position	char.position(pos)	DarkBlue	BUG	РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РїРѕР·РёС†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Р°. РќРµ РґРµР№СЃС‚РІСѓРµС‚ РЅР° Р±РѕРіРѕРІ Рё С‚.Рґ.	?	1
+char.wait	char.wait	DarkBlue	С‡РёСЃР»Рѕ	Р’РѕР·РІСЂР°С‰Р°РµС‚ Р»Р°Рі РїРµСЂСЃРѕРЅР°Р¶Р° РІ СЃРµРєСѓРЅРґР°С….	Р›Р°Рі	1
+char.wait	char.wait (pause)	DarkBlue	BUG	РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р»Р°Рі РїРµСЂСЃРѕРЅР°Р¶Р° РІ РїСѓР»СЊСЃР°С…. РќРµ РґРµР№СЃС‚РІСѓРµС‚ РЅР° Р±РѕРіРѕРІ Рё С‚.Рґ.	?	1
+char.affect	char.affect (name)	DarkBlue	С‡РёСЃР»Рѕ	РџСЂРѕРІРµСЂСЏРµС‚ РЅР°Р»РёС‡РёРµ РЅР° РїРµСЂСЃРѕРЅР°Р¶Рµ Р°С„С„РµРєС‚Р° name.	1 - Р°С„С„РµРєС‚ РµСЃС‚СЊ, 0 - Р°С„С„РµРєС‚Р° РЅРµС‚	1
+char.leader	char.leader	DarkBlue	UID	Р’РѕР·РІСЂР°С‰Р°РµС‚ Р»РёРґРµСЂР° РґР»СЏ char.	Р›РёРґРµСЂ РёР»Рё nil	1
+char.people	char.people	DarkBlue	UID	РџРµСЂРІС‹Р№ РїРµСЂСЃРѕРЅР°Р¶ РІ РєРѕРјРЅР°С‚Рµ СЃ char.	РџРµСЂСЃРѕРЅР°Р¶ РёР»Рё nil	1
+char.next_in_room	char.next_in_room	DarkBlue	UID	РЎР»РµРґСѓСЋС‰РёР№ Р·Р° char РїРµСЂСЃРѕРЅР°Р¶ РІ РєРѕРјРЅР°С‚Рµ	РџРµСЂСЃРѕРЅР°Р¶ РёР»Рё nil	1
+char.all	char.all	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	РІСЃРµ РІ РєРѕРјРЅР°С‚Рµ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№, РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј	1
+char.char	char.char	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	РІСЃРµ PC Рё С‡Р°СЂРјРёСЃС‹	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№, РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј	1
+char.pc	char.pc	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	РІСЃРµ PC	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№, РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј	1
+char.npc	char.npc	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	РІСЃРµ NPC (РјРѕР±С‹ РЅРµ С‡Р°СЂРјРёСЃС‹)	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№, РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј	1
+char.group	char.group	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	СЃРїРёСЃРѕРє РіСЂСѓРїРїС‹, РІ РєРѕС‚РѕСЂРѕР№ СЃРѕСЃС‚РѕРёС‚ char. РќР°С‡РёРЅР°РµС‚СЃСЏ СЃ Р»РёРґРµСЂР°, РІРєР»СЋС‡Р°РµС‚ РІСЃРµС… РїРѕСЃР»РµРґРѕРІР°С‚РµР»РµР№.	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№, РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј	1
+char.attackers	char.attackers	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	СЃРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№, Р°С‚Р°РєСѓСЋС‰РёС… char.	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№, РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј	1
+char.global	char.global (name)	DarkBlue	СЃС‚СЂРѕРєР°	РџРѕРёСЃРє Рё Р·Р°РјРµРЅР° РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ РґСЂСѓРіРѕРіРѕ СЃС†РµРЅР°СЂРёСЏ. РџСЂРё РїРѕРёСЃРєРµ РїРµСЂРµРјРµРЅРЅРѕР№ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РµРєСѓС‰РёР№ РєРѕРЅС‚РµРєСЃС‚ СЃС†РµРЅР°СЂРёСЏ char.	Р—РЅР°С‡РµРЅРёРµ РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ СЃС†РµРЅР°СЂРёСЏ char	1
+char.var 	char.var 	DarkBlue	СЃС‚СЂРѕРєР°	РџРѕРёСЃРє Рё Р·Р°РјРµРЅР° РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ РґСЂСѓРіРѕРіРѕ СЃС†РµРЅР°СЂРёСЏ. РџСЂРё РїРѕРёСЃРєРµ РїРµСЂРµРјРµРЅРЅРѕР№ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РµРєСѓС‰РёР№ РєРѕРЅС‚РµРєСЃС‚ СЃС†РµРЅР°СЂРёСЏ self.	Р—РЅР°С‡РµРЅРёРµ РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ СЃС†РµРЅР°СЂРёСЏ char	1
+obj.iname	obj.iname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (РёРјРµРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+obj.rname	obj.rname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (СЂРѕРґРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+obj.dname	obj.dname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (РґР°С‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+obj.vname	obj.vname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (РІРёРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+obj.tname	obj.tname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (С‚РІРѕСЂРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+obj.pname	obj.pname	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ (РїСЂРµРґР»РѕР¶РЅС‹Р№ РїР°РґРµР¶)	РРјСЏ	1
+obj.name	obj.name	DarkBlue	СЃС‚СЂРѕРєР°	РРјСЏ	РРјСЏ	1
+obj.id	obj.id	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ UID РїСЂРµРґРјРµС‚Р° obj.	Р§РёСЃР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ UID	1
+obj.shortdesc	obj.shortdesc	DarkBlue	СЃС‚СЂРѕРєР°	РљРѕСЂРѕС‚РєРѕРµ РѕРїРёСЃР°РЅРёРµ	РћРїРёСЃР°РЅРёРµ	1
+obj.vnum	obj.vnum	DarkBlue	С‡РёСЃР»Рѕ	vnum РїСЂРµРґРјРµС‚Р°	VNUM	1
+obj.type	obj.type	DarkBlue	С‡РёСЃР»Рѕ	РўРёРї РїСЂРµРґРјРµС‚Р°	РљРѕРґ С‚РёРїР° РїСЂРµРґРјРµС‚Р°	1
+obj.timer	obj.timer	DarkBlue	С‡РёСЃР»Рѕ	РўР°Р№РјРµСЂ РїСЂРµРґРјРµС‚Р°	РўР°Р№РјРµСЂ	1
+obj.val0	obj.val0	DarkBlue	С‡РёСЃР»Рѕ	РџР°СЂР°РјРµС‚СЂ РїСЂРµРґРјРµС‚Р° 0	Р—РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°	1
+obj.val1	obj.val1	DarkBlue	С‡РёСЃР»Рѕ	РџР°СЂР°РјРµС‚СЂ РїСЂРµРґРјРµС‚Р° 1	Р—РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°	1
+obj.val2	obj.val2	DarkBlue	С‡РёСЃР»Рѕ	РџР°СЂР°РјРµС‚СЂ РїСЂРµРґРјРµС‚Р° 2	Р—РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°	1
+obj.val3	obj.val3	DarkBlue	С‡РёСЃР»Рѕ	РџР°СЂР°РјРµС‚СЂ РїСЂРµРґРјРµС‚Р° 3	Р—РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°	1
+obj.carried_by	obj.carried_by	DarkBlue	UID	РљС‚Рѕ РЅРµСЃРµС‚	РџРµСЂСЃРѕРЅР°Р¶ РёР»Рё nil	1
+obj.worn_by	obj.worn_by	DarkBlue	UID	РќР° РєРѕРј РѕРґРµС‚	РџРµСЂСЃРѕРЅР°Р¶ РёР»Рё nil	1
+obj.g	obj.g	DarkBlue	СЃС‚СЂРѕРєР°	Рѕ//Р°/Рё	РЎСѓС„С„РёРєСЃ	1
+obj.u	obj.u	DarkBlue	СЃС‚СЂРѕРєР°	РѕСЃСЊ/СЃСЏ/Р°СЃСЊ/РёСЃСЊ	РЎСѓС„С„РёРєСЃ	1
+obj.w	obj.w	DarkBlue	СЃС‚СЂРѕРєР°	РѕРµ/С‹Р№/Р°СЏ/С‹Рµ	РЎСѓС„С„РёРєСЃ	1
+obj.q	obj.q	DarkBlue	СЃС‚СЂРѕРєР°	Р»Рѕ//Р»Р°/Р»Рё	РЎСѓС„С„РёРєСЃ	1
+obj.y	obj.y	DarkBlue	СЃС‚СЂРѕРєР°	Р»Рѕ//Р»Р°/Р»Рё	РЎСѓС„С„РёРєСЃ	1
+obj.a	obj.a	DarkBlue	СЃС‚СЂРѕРєР°	Рѕ//Р°/С‹	РЎСѓС„С„РёРєСЃ	1
+obj.count	obj.count	DarkBlue	С‡РёСЃР»Рѕ	РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґРјРµС‚РѕРІ РІ РјРёСЂРµ (РІ РёРіСЂРµ РІ С‚РµРєСѓС‰РёР№ РјРѕРјРµРЅС‚ Рё РЅР° СЂРµРЅС‚Рµ)	РљРѕР»РёС‡РµСЃС‚РІРѕ	1
+obj.sex	obj.sex	DarkBlue	С‡РёСЃР»Рѕ	Р РѕРґ РїСЂРµРґРјРµС‚Р°	0 - СЃСЂРµРґРЅРёР№,1 - РјСѓР¶СЃРєРѕР№,2 - Р¶РµРЅСЃРєРёР№,3 - РјРЅ. С‡РёСЃР»Рѕ	1
+obj.room	obj.room	DarkBlue	С‡РёСЃР»Рѕ	РљРѕРјРЅР°С‚Р°, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РїСЂРµРґРјРµС‚, РёР»Рё С‚РѕС‚ РЅР° РєРѕРј РѕРЅ РѕРґРµС‚.	VNUM РєРѕРјРЅР°С‚С‹	1
+obj.all	obj.all	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	РІСЃРµ РІ РєРѕРјРЅР°С‚Рµ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№	1
+obj.char	obj.char	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	РІСЃРµ PC Рё С‡Р°СЂРјРёСЃС‹	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№	1
+obj.pc	obj.pc	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	РІСЃРµ PC	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№	1
+obj.npc	obj.npc	DarkBlue	СЃРїРёСЃРѕРє РёР· UID	РІСЃРµ NPC (РјРѕР±С‹ РЅРµ С‡Р°СЂРјРёСЃС‹)	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№	1
+room.name	room.name	DarkBlue	СЃС‚СЂРѕРєР°	РќР°Р·РІР°РЅРёРµ РєРѕРјРЅР°С‚С‹	РќР°Р·РІР°РЅРёРµ	1
+room.north	room.north	DarkBlue	СЃС‚СЂРѕРєР°	РџСЂРѕРІРµСЂРєР° РІС‹С…РѕРґР° РЅР° СЃРµРІРµСЂ	north ? РµСЃС‚СЊ РІС‹С…РѕРґ, РёРЅР°С‡Рµ nil	1
+room.east	room.east	DarkBlue	СЃС‚СЂРѕРєР°	РџСЂРѕРІРµСЂРєР° РІС‹С…РѕРґР° РЅР° РІРѕСЃС‚РѕРє	east ? РµСЃС‚СЊ РІС‹С…РѕРґ, РёРЅР°С‡Рµ nil	1
+room.south	room.south	DarkBlue	СЃС‚СЂРѕРєР°	РџСЂРѕРІРµСЂРєР° РІС‹С…РѕРґР° РЅР° СЋРі	south ? РµСЃС‚СЊ РІС‹С…РѕРґ, РёРЅР°С‡Рµ nil	1
+room.west	room.west	DarkBlue	СЃС‚СЂРѕРєР°	РџСЂРѕРІРµСЂРєР° РІС‹С…РѕРґР° РЅР° Р·Р°РїР°Рґ	west ? РµСЃС‚СЊ РІС‹С…РѕРґ, РёРЅР°С‡Рµ nil	1
+room.up	room.up	DarkBlue	СЃС‚СЂРѕРєР°	РџСЂРѕРІРµСЂРєР° РІС‹С…РѕРґР° РІРІРµСЂС…	up ? РµСЃС‚СЊ РІС‹С…РѕРґ, РёРЅР°С‡Рµ nil	1
+room.down	room.down	DarkBlue	СЃС‚СЂРѕРєР°	РџСЂРѕРІРµСЂРєР° РІС‹С…РѕРґР° РІРЅРёР·	down ? РµСЃС‚СЊ РІС‹С…РѕРґ, РёРЅР°С‡Рµ nil	1
+room.vnum	room.vnum	DarkBlue	С‡РёСЃР»Рѕ	vnum РєРѕРјРЅР°С‚С‹	VNUM	1
+room.id	room.id	DarkBlue	С‡РёСЃР»Рѕ	РџРѕР»СѓС‡РµРЅРёРµ С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ UID РєРѕРјРЅР°С‚С‹ room.	Р§РёСЃР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ UID	1
+room.people	room.people	DarkBlue	UID	РџРµСЂРІС‹Р№ РїРµСЂСЃРѕРЅР°Р¶ РІ РєРѕРјРЅР°С‚Рµ room.	РџРµСЂСЃРѕРЅР°Р¶ РёР»Рё nil	1
+actor	actor	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Actor 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.iname	actor.iname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (РёРјРµРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.rname	actor.rname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (СЂРѕРґРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.dname	actor.dname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (РґР°С‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.vname	actor.vname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (РІРёРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.tname	actor.tname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (С‚РІРѕСЂРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.pname	actor.pname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (РїСЂРµРґР»РѕР¶РЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.name	actor.name	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.id	actor.id	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ UID РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.level	actor.level	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЂРѕРІРµРЅСЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.hitp	actor.hitp	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° hp 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.hitp(num)	actor.hitp(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ hp. Р¤РѕСЂРјР°С‚ num: num вЂ“ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num вЂ“ СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num вЂ“ СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.maxhitp	actor.maxhitp	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° hp 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.mana	actor.mana	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РјР°РЅРЅС‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.mana(num)	actor.mana(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёСЏ РјР°РЅС‹. Р¤РѕСЂРјР°С‚ num: num вЂ“ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num вЂ“ СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num вЂ“ СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.maxmana	actor.maxmana	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РјР°РЅРЅС‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.move	actor.move	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЌРЅРµСЂРіРёРё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.move(num)	actor.move(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ СЌРЅРµСЂРіРёРё. Р¤РѕСЂРјР°С‚ num: num вЂ“ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num вЂ“ СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num вЂ“ СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.maxmove	actor.maxmove	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° СЌРЅРµСЂРіРёРё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.align	actor.align	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	GET_ALIGNMENT 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.religion	actor.religion	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р РµР»РёРіРёСЏ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.gold	actor.gold	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.gold(num)	actor.gold(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅРѕРІРєР° РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі Р¤РѕСЂРјР°С‚ num: num вЂ“ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num вЂ“ СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num вЂ“ СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.bank	actor.bank	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі РІ Р±Р°РЅРєРµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.bank(num)	actor.bank(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅРѕРІРєР° РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі РІ Р±Р°РЅРєРµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.exp	actor.exp	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РѕРїС‹С‚Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.exp(num)	actor.exp(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РѕРїС‹С‚Р°. Р¤РѕСЂРјР°С‚ num: 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.sex	actor.sex	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР» РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.clan	actor.clan	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РќР°Р·РІР°РЅРёРµ РєР»Р°РЅР° (РІ РЅРёР¶РЅРµРј СЂРµРіРёСЃС‚СЂРµ) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.clanrank	actor.clanrank	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»РѕР¶РµРЅРёРµ РІ РєР»Р°РЅРµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.g	actor.g	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Рѕ//Р°/Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.u	actor.u	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РѕСЃСЊ/СЃСЏ/Р°СЃСЊ/РёСЃСЊ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.w	actor.w	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РѕРµ/С‹Р№/Р°СЏ/С‹Рµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.q	actor.q	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р»Рѕ//Р»Р°/Р»Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.y	actor.y	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р»Рѕ/РµР»/Р»Р°/Р»Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.a	actor.a	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Рѕ//Р°/С‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.weight	actor.weight	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’РµСЃ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.canbeseen	actor.canbeseen	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂРєР° РІРёРґРёС‚ Р»Рё РїРµСЂСЃРѕРЅР°Р¶ self, РїРµСЂСЃРѕРЅР°Р¶ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.class	actor.class	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РљР»Р°СЃСЃ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.race	actor.race	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р Р°СЃР° РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.fighting	actor.fighting	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РїСЂРѕС‚РёРІРЅРёРєР° РІ Р±РѕСЋ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.is_killer	actor.is_killer [(on|off)]	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈРїСЂР°РІР»РµРЅРёРµ С„Р»Р°РіРѕРј Р”РЈРЁР•Р“РЈР‘.on вЂ“ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ С„Р»Р°Рі off вЂ“ СЃР±СЂР°СЃС‹РІР°РµС‚ С„Р»Р°Рі 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.is_thief 	actor.is_thief [(on|off)]	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р Р°Р±РѕС‚Р° СЃ С„Р»Р°РіРѕРј PLR_THIEF 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.rentable	actor.rentable	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂРєР° РЅР° Р±РѕРµРІС‹Рµ РґРµР№СЃС‚РІРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.riding	actor.riding	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РћРїСЂРµРґРµР»РµРЅРёРµ Р»РѕС€Р°РґРё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.ridden_by	actor.ridden_by	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РћРїСЂРµРґРµР»РµРЅРёРµ РЅР°РµР·РґРЅРёРєР° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.vnum	actor.vnum	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	vnum РјРѕР±Р°. вЂ“1 РґР»СЏ PC 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.str	actor.str	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅР°СЏ СЃРёР»Р° РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.str(num)	actor.str(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕР№ СЃРёР»С‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.stradd	actor.stradd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅР°СЏ СЃРёР»Р° РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.int	actor.int	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅС‹Р№ СѓРј РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.int(num)	actor.int(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ СѓРјР° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.intadd	actor.intadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅС‹Р№ СѓРј РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.wis	actor.wis	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅР°СЏ РјСѓРґСЂРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.wis(num)	actor.wis(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕР№ РјСѓРґСЂРѕСЃС‚Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.wisadd	actor.wisadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅР°СЏ РјСѓРґСЂРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.dex	actor.dex	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅР°СЏ Р»РѕРІРєРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.dex(num)	actor.dex(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕР№ Р»РѕРІРєРѕСЃС‚Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.dexadd	actor.dexadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅР°СЏ Р»РѕРІРєРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.con	actor.con	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅРѕРµ С‚РµР»Рѕ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.con(num)	actor.con(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ С‚РµР»Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.conadd	actor.conadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅРѕРµ С‚РµР»Рѕ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.cha	actor.cha	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅРѕРµ РѕР±Р°СЏРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.cha(num)	actor.cha(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ РѕР±Р°СЏРЅРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.chaadd	actor.chaadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅРѕРµ РѕР±Р°СЏРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.size	actor.size	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.size(num)	actor.size(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ СЂР°Р·РјРµСЂР° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.sizeadd	actor.sizeadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅС‹Р№ СЂР°Р·РјРµСЂ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.room	actor.room	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕРјРЅР°С‚С‹, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РїРµСЂСЃРѕРЅР°Р¶ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.realroom	actor.realroom	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	VNUM РєРѕРјРЅР°С‚С‹, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РїРµСЂСЃРѕРЅР°Р¶ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.loadroom	actor.loadroom	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ Р·Р°РіСЂСѓР·РѕС‡РЅРѕР№ РєРѕРјРЅР°С‚С‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.loadroom(vnum)	actor.loadroom(vnum)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅРѕРІРєР° Р·Р°РіСЂСѓР·РѕС‡РЅРѕР№ РєРѕРјРЅР°С‚С‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.skill(str)	actor.skill(str)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЂРѕРІРµРЅСЊ СѓРјРµРЅРёСЏ str Сѓ РїРµСЂСЃРѕРЅР°Р¶Р°.Str вЂ“ РЅР°Р·РІР°РЅРёРµ СѓРјРµРЅРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.spellcount(str)	actor.spellcount(str)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РљРѕР»РёС‡РµСЃС‚РІРѕ Сѓ РїРµСЂСЃРѕРЅР°Р¶Р° РІС‹СѓС‡РµРЅРЅС‹С… Р·Р°РєР»РёРЅР°РЅРёР№ str.Str вЂ“ РёРјСЏ Р·Р°РєР»РёРЅР°РЅРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.spelltype(str)	actor.spelltype(str)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РўРёРї Р·Р°РїРѕРјРёРЅР°РЅРёСЏ Р·Р°РєР»РёРЅР°РЅРёСЏ str Сѓ РїРµСЂСЃРѕРЅР°Р¶Р°. Р¤Р»Р°РіРё РёР· РјР°СЃСЃРёРІР° SplKnw. Str вЂ“ РёРјСЏ Р·Р°РєР»РёРЅР°РЅРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.quested(num)	actor.quested(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂРєР° РЅР° С‚Рѕ, РІС‹РїРѕР»РЅСЏР» Р»Рё РїРµСЂСЃРѕРЅР°Р¶ РєРІРµСЃС‚ РЅРѕРјРµСЂ num. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.setquest(num)	actor.setquest(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅРѕРІРєР° РїСЂРёР·РЅР°РєР° РІС‹РїРѕР»РЅРµРЅРёСЏ РєРІРµСЃС‚Р° РЅРѕРјРµСЂ num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.eq(pos)	actor.eq(pos)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РїСЂРµРґРјРµС‚Р° СЌРєРёРїРёСЂРѕРІРєРё.pos вЂ“ РїРѕР·РёС†РёСЏ (С‚РµРєСЃС‚ РёР»Рё РЅРѕРјРµСЂ РїРѕР·РёС†РёРё) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.haveobj(obj)	actor.haveobj(obj)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РќРµСЃРµС‚ Р»Рё РїРµСЂСЃРѕРЅР°Р¶ РїСЂРµРґРјРµС‚ obj? obj РјРѕР¶РµС‚ Р±С‹С‚СЊ vnum РёР»Рё РёРјРµРЅРµРј РїСЂРµРґРјРµС‚Р°. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.varexists(name)	actor.varexists(name)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂСЏРµС‚ Сѓ СЃС†РµРЅР°СЂРёСЏ РѕР±СЉРµРєС‚Р° char РЅР°Р»РёС‡РёРµ РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ name. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.position	actor.position	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’РѕР·РІСЂР°С‰Р°РµС‚ РїРѕР»РѕР¶РµРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.position(pos)	actor.position(pos)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РїРѕР·РёС†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Р°. РќРµ РґРµР№СЃС‚РІСѓРµС‚ РЅР° Р±РѕРіРѕРІ Рё С‚.Рґ. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.wait	actor.wait	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’РѕР·РІСЂР°С‰Р°РµС‚ Р»Р°Рі РїРµСЂСЃРѕРЅР°Р¶Р° РІ СЃРµРєСѓРЅРґР°С…. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.wait(pause)	actor.wait(pause)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р»Р°Рі РїРµСЂСЃРѕРЅР°Р¶Р° РІ РїСѓР»СЊСЃР°С….РќРµ РґРµР№СЃС‚РІСѓРµС‚ РЅР° Р±РѕРіРѕРІ Рё С‚.Рґ. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.affect(name)	actor.affect(name)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂСЏРµС‚ РЅР°Р»РёС‡РёРµ РЅР° РїРµСЂСЃРѕРЅР°Р¶Рµ Р°С„С„РµРєС‚Р° name. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.leader	actor.leader	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’РѕР·РІСЂР°С‰Р°РµС‚ Р»РёРґРµСЂР° РґР»СЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.people	actor.people	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРµСЂРІС‹Р№ РїРµСЂСЃРѕРЅР°Р¶ РІ РєРѕРјРЅР°С‚Рµ СЃ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.next_in_room	actor.next_in_room	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎР»РµРґСѓСЋС‰РёР№ Р·Р° char РїРµСЂСЃРѕРЅР°Р¶ РІ РєРѕРјРЅР°С‚Рµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.all 	actor.all 	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ РєРѕРјРЅР°С‚Рµ:all - РІСЃРµ РІ РєРѕРјРЅР°С‚Рµ  	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.char 	actor.char 	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ РєРѕРјРЅР°С‚Рµ:char - РІСЃРµ PC Рё С‡Р°СЂРјРёСЃС‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.pc 	actor.pc 	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ РєРѕРјРЅР°С‚Рµ:pc - РІСЃРµ PC  	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.npc	actor.npc	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ РєРѕРјРЅР°С‚Рµ:  npc вЂ“ РІСЃРµ NPC (РјРѕР±С‹ РЅРµ С‡Р°СЂРјРёСЃС‹) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.global(name)	actor.global(name)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕРёСЃРє Рё Р·Р°РјРµРЅР° РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ РґСЂСѓРіРѕРіРѕ СЃС†РµРЅР°СЂРёСЏ. РџСЂРё РїРѕРёСЃРєРµ РїРµСЂРµРјРµРЅРЅРѕР№ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РµРєСѓС‰РёР№ РєРѕРЅС‚РµРєСЃС‚ СЃС†РµРЅР°СЂРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+actor.var	actor.var	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕРёСЃРє Рё Р·Р°РјРµРЅР° РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ РґСЂСѓРіРѕРіРѕ СЃС†РµРЅР°СЂРёСЏ. РџСЂРё РїРѕРёСЃРєРµ РїРµСЂРµРјРµРЅРЅРѕР№ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РµРєСѓС‰РёР№ РєРѕРЅС‚РµРєСЃС‚ СЃС†РµРЅР°СЂРёСЏ self. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.iname	self.iname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (РёРјРµРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.rname	self.rname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (СЂРѕРґРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.dname	self.dname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (РґР°С‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.vname	self.vname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (РІРёРЅРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.tname	self.tname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (С‚РІРѕСЂРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.pname	self.pname	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ (РїСЂРµРґР»РѕР¶РЅС‹Р№ РїР°РґРµР¶) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.name	self.name	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РљРѕСЂРѕС‚РєРѕРµ РѕРїРёСЃР°РЅРёРµ (РµСЃР»Рё РµСЃС‚СЊ), РёРЅР°С‡Рµ РёРјСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.id	self.id	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ UID РїРµСЂСЃРѕРЅР°Р¶Р° self. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.alias	self.alias	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РРјСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.level	self.level	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЂРѕРІРµРЅСЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.hitp	self.hitp	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° hp 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.hitp(num)	self.hitp(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ hp. Р¤РѕСЂРјР°С‚ num: num - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.maxhitp	self.maxhitp	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° hp 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.mana	self.mana	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РјР°РЅРЅС‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.mana(num)	self.mana(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёСЏ РјР°РЅС‹. Р¤РѕСЂРјР°С‚ num: num - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.maxmana	self.maxmana	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РјР°РЅРЅС‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.move	self.move	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЌРЅРµСЂРіРёРё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.move(num)	self.move(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ СЌРЅРµСЂРіРёРё. Р¤РѕСЂРјР°С‚ num: num - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.maxmove	self.maxmove	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° СЌРЅРµСЂРіРёРё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.align	self.align	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	GET_ALIGNMENT 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.religion	self.religion	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р РµР»РёРіРёСЏ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.gold	self.gold	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.gold(num)	self.gold(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅРѕРІРєР° РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі Р¤РѕСЂРјР°С‚ num: num - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ num, +num - СѓРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num, -num - СѓРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.bank	self.bank	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі РІ Р±Р°РЅРєРµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.bank(num)	self.bank(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅРѕРІРєР° РєРѕР»РёС‡РµСЃС‚РІР° РґРµРЅРµРі РІ Р±Р°РЅРєРµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.exp	self.exp	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РѕРїС‹С‚Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.exp(num)	self.exp(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РѕРїС‹С‚Р°. Р¤РѕСЂРјР°С‚ num: 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.sex	self.sex	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР» РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.clan	self.clan	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РќР°Р·РІР°РЅРёРµ РєР»Р°РЅР° (РІ РЅРёР¶РЅРµРј СЂРµРіРёСЃС‚СЂРµ) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.clanrank	self.clanrank	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»РѕР¶РµРЅРёРµ РІ РєР»Р°РЅРµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.g	self.g	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Рѕ//Р°/Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.u	self.u	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РѕСЃСЊ/СЃСЏ/Р°СЃСЊ/РёСЃСЊ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.w	self.w	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РѕРµ/С‹Р№/Р°СЏ/С‹Рµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.q	self.q	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р»Рѕ//Р»Р°/Р»Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.y	self.y	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р»Рѕ/РµР»/Р»Р°/Р»Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.a	self.a	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Рѕ//Р°/С‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.weight	self.weight	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’РµСЃ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.canbeseen	self.canbeseen	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂРєР° РІРёРґРёС‚ Р»Рё РїРµСЂСЃРѕРЅР°Р¶ self, РїРµСЂСЃРѕРЅР°Р¶ self.	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.class	self.class	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РљР»Р°СЃСЃ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.race	self.race	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р Р°СЃР° РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.fighting	self.fighting	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РїСЂРѕС‚РёРІРЅРёРєР° РІ Р±РѕСЋ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.is_killer	self.is_killer [(on|off)]	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈРїСЂР°РІР»РµРЅРёРµ С„Р»Р°РіРѕРј Р”РЈРЁР•Р“РЈР‘.on - СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ С„Р»Р°Рі off - СЃР±СЂР°СЃС‹РІР°РµС‚ С„Р»Р°Рі 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.is_thief	self.is_thief [(on|off)]	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р Р°Р±РѕС‚Р° СЃ С„Р»Р°РіРѕРј PLR_THIEF 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.rentable	self.rentable	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂРєР° РЅР° Р±РѕРµРІС‹Рµ РґРµР№СЃС‚РІРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.riding	self.riding	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РћРїСЂРµРґРµР»РµРЅРёРµ Р»РѕС€Р°РґРё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.ridden_by	self.ridden_by	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РћРїСЂРµРґРµР»РµРЅРёРµ РЅР°РµР·РґРЅРёРєР° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.vnum	self.vnum	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	vnum РјРѕР±Р°. -1 РґР»СЏ PC 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.str	self.str	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅР°СЏ СЃРёР»Р° РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.str(num)	self.str(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕР№ СЃРёР»С‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.stradd	self.stradd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅР°СЏ СЃРёР»Р° РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.int	self.int	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅС‹Р№ СѓРј РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.int(num)	self.int(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ СѓРјР° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.intadd	self.intadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅС‹Р№ СѓРј РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.wis	self.wis	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅР°СЏ РјСѓРґСЂРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.wis(num)	self.wis(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕР№ РјСѓРґСЂРѕСЃС‚Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.wisadd	self.wisadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅР°СЏ РјСѓРґСЂРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.dex	self.dex	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅР°СЏ Р»РѕРІРєРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.dex(num)	self.dex(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕР№ Р»РѕРІРєРѕСЃС‚Рё 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.dexadd	self.dexadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅР°СЏ Р»РѕРІРєРѕСЃС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.con	self.con	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅРѕРµ С‚РµР»Рѕ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.con(num)	self.con(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ С‚РµР»Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.conadd	self.conadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅРѕРµ С‚РµР»Рѕ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.cha	self.cha	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅРѕРµ РѕР±Р°СЏРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.cha(num)	self.cha(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ РѕР±Р°СЏРЅРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.chaadd	self.chaadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅРѕРµ РѕР±Р°СЏРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.size	self.size	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’СЂРѕР¶РґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.size(num)	self.size(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РР·РјРµРЅРµРЅРёРµ РІСЂРѕР¶РґРµРЅРЅРѕРіРѕ СЂР°Р·РјРµСЂР° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.sizeadd	self.sizeadd	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р”РѕР±Р°РІРѕС‡РЅС‹Р№ СЂР°Р·РјРµСЂ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.room	self.room	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РєРѕРјРЅР°С‚С‹, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РїРµСЂСЃРѕРЅР°Р¶ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.realroom	self.realroom	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	VNUM РєРѕРјРЅР°С‚С‹, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РїРµСЂСЃРѕРЅР°Р¶ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.loadroom	self.loadroom	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ Р·Р°РіСЂСѓР·РѕС‡РЅРѕР№ РєРѕРјРЅР°С‚С‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.loadroom(vnum)	self.loadroom(vnum)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅРѕРІРєР° Р·Р°РіСЂСѓР·РѕС‡РЅРѕР№ РєРѕРјРЅР°С‚С‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.skill(str)	self.skill(str)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЂРѕРІРµРЅСЊ СѓРјРµРЅРёСЏ str Сѓ РїРµСЂСЃРѕРЅР°Р¶Р°.Str - РЅР°Р·РІР°РЅРёРµ СѓРјРµРЅРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.spellcount(str)	self.spellcount(str)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РљРѕР»РёС‡РµСЃС‚РІРѕ Сѓ РїРµСЂСЃРѕРЅР°Р¶Р° РІС‹СѓС‡РµРЅРЅС‹С… Р·Р°РєР»РёРЅР°РЅРёР№ str.Str - РёРјСЏ Р·Р°РєР»РёРЅР°РЅРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.spelltype(str)	self.spelltype(str)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РўРёРї Р·Р°РїРѕРјРёРЅР°РЅРёСЏ Р·Р°РєР»РёРЅР°РЅРёСЏ str Сѓ РїРµСЂСЃРѕРЅР°Р¶Р°. Р¤Р»Р°РіРё РёР· РјР°СЃСЃРёРІР° SplKnw. Str - РёРјСЏ Р·Р°РєР»РёРЅР°РЅРёСЏ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.quested(num)	self.quested(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂРєР° РЅР° С‚Рѕ, РІС‹РїРѕР»РЅСЏР» Р»Рё РїРµСЂСЃРѕРЅР°Р¶ РєРІРµСЃС‚ РЅРѕРјРµСЂ num. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.setquest(num)	self.setquest(num)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅРѕРІРєР° РїСЂРёР·РЅР°РєР° РІС‹РїРѕР»РЅРµРЅРёСЏ РєРІРµСЃС‚Р° РЅРѕРјРµСЂ num 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.eq(pos)	self.eq(pos)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕР»СѓС‡РµРЅРёРµ РїСЂРµРґРјРµС‚Р° СЌРєРёРїРёСЂРѕРІРєРё.pos - РїРѕР·РёС†РёСЏ (С‚РµРєСЃС‚ РёР»Рё РЅРѕРјРµСЂ РїРѕР·РёС†РёРё) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.haveobj(obj)	self.haveobj(obj)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РќРµСЃРµС‚ Р»Рё РїРµСЂСЃРѕРЅР°Р¶ РїСЂРµРґРјРµС‚ obj? obj РјРѕР¶РµС‚ Р±С‹С‚СЊ vnum РёР»Рё РёРјРµРЅРµРј РїСЂРµРґРјРµС‚Р°. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.varexists(name)	self.varexists(name)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂСЏРµС‚ Сѓ СЃС†РµРЅР°СЂРёСЏ РѕР±СЉРµРєС‚Р° char РЅР°Р»РёС‡РёРµ РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ name. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.position	self.position	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’РѕР·РІСЂР°С‰Р°РµС‚ РїРѕР»РѕР¶РµРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.position(pos)	self.position(pos)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РїРѕР·РёС†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Р°. РќРµ РґРµР№СЃС‚РІСѓРµС‚ РЅР° Р±РѕРіРѕРІ Рё С‚.Рґ. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.wait	self.wait	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’РѕР·РІСЂР°С‰Р°РµС‚ Р»Р°Рі РїРµСЂСЃРѕРЅР°Р¶Р° РІ СЃРµРєСѓРЅРґР°С…. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.wait(pause)	self.wait(pause)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р»Р°Рі РїРµСЂСЃРѕРЅР°Р¶Р° РІ РїСѓР»СЊСЃР°С….РќРµ РґРµР№СЃС‚РІСѓРµС‚ РЅР° Р±РѕРіРѕРІ Рё С‚.Рґ. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.affect(name)	self.affect(name)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџСЂРѕРІРµСЂСЏРµС‚ РЅР°Р»РёС‡РёРµ РЅР° РїРµСЂСЃРѕРЅР°Р¶Рµ Р°С„С„РµРєС‚Р° name. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.leader	self.leader	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	Р’РѕР·РІСЂР°С‰Р°РµС‚ Р»РёРґРµСЂР° РґР»СЏ self. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.people	self.people	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРµСЂРІС‹Р№ РїРµСЂСЃРѕРЅР°Р¶ РІ РєРѕРјРЅР°С‚Рµ СЃ self. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.next_in_room	self.next_in_room	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎР»РµРґСѓСЋС‰РёР№ Р·Р° char РїРµСЂСЃРѕРЅР°Р¶ РІ РєРѕРјРЅР°С‚Рµ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.all 	self.all 	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ РєРѕРјРЅР°С‚Рµ:all - РІСЃРµ РІ РєРѕРјРЅР°С‚Рµ  	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.char 	self.char 	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ РєРѕРјРЅР°С‚Рµ:char - РІСЃРµ PC Рё С‡Р°СЂРјРёСЃС‹ 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.pc 	self.pc 	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ РєРѕРјРЅР°С‚Рµ:pc - РІСЃРµ PC  	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.npc	self.npc	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РЎРїРёСЃРѕРє РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ РєРѕРјРЅР°С‚Рµ:  npc - РІСЃРµ NPC (РјРѕР±С‹ РЅРµ С‡Р°СЂРјРёСЃС‹) 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.global(name)	self.global(name)	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕРёСЃРє Рё Р·Р°РјРµРЅР° РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ РґСЂСѓРіРѕРіРѕ СЃС†РµРЅР°СЂРёСЏ. РџСЂРё РїРѕРёСЃРєРµ РїРµСЂРµРјРµРЅРЅРѕР№ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РµРєСѓС‰РёР№ РєРѕРЅС‚РµРєСЃС‚ СЃС†РµРЅР°СЂРёСЏ self.	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1
+self.var	self.var	DarkBlue	РўРёРї РЅРµ СѓРєР°Р·Р°РЅ	РџРѕРёСЃРє Рё Р·Р°РјРµРЅР° РіР»РѕР±Р°Р»СЊРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ РґСЂСѓРіРѕРіРѕ СЃС†РµРЅР°СЂРёСЏ. РџСЂРё РїРѕРёСЃРєРµ РїРµСЂРµРјРµРЅРЅРѕР№ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РµРєСѓС‰РёР№ РєРѕРЅС‚РµРєСЃС‚ СЃС†РµРЅР°СЂРёСЏ self. 	Р РµР·СѓР»СЊС‚Р°С‚ РЅРµ СѓРєР°Р·Р°РЅ	1

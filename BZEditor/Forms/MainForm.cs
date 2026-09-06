@@ -83,7 +83,6 @@ namespace BZEditor
             InitializeComponent();
             AutoScaleMode = AutoScaleMode.Dpi;
             StaticData.ConfigFolder = Path.Combine(Application.StartupPath, "Configurations");
-            StaticData.CurrentEncoding = Encoding.GetEncoding("koi8-r");
 
             settings.Open();
             clearSketchAfterGeneratingRooms =
@@ -705,7 +704,7 @@ namespace BZEditor
             if (resave)
                 //Предложить сохранить зону сразу после открытия уже в кои8
                 if (MessageBox.Show(this,
-                                    "Если Вы уверены что загруженная зона была именно в кодировке Win1251,\nто вы можете сразу сохранить ее в кодировке koi-8r для дальнейшего использования.\n\nСохранить зону в кодировке koi-8r?",
+                                    "Если Вы уверены что загруженная зона была именно в кодировке koi-8r или windows 1251,\nто вы можете сразу сохранить ее в кодировке utf-8 для дальнейшего использования.\n\nСохранить зону в кодировке utf-8?",
                                     "Зона загружена", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                     DialogResult.Yes)
                 {

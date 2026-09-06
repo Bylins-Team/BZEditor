@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataUtils;
+using System;
 using System.Collections;
 using System.Data;
 using System.IO;
@@ -9,7 +10,7 @@ namespace BZEditor
 {
     public class CBasesDataManager
     {
-        private readonly Encoding currentEncoding = Encoding.GetEncoding("windows-1251");
+        private readonly Encoding currentEncoding = StaticData.CurrentEncoding;
         //private Font fnt = new Font("Courier New", 9f, FontStyle.Bold);
         private readonly string[] fourParamsFiles = new string[] {};
 

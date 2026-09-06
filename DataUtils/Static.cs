@@ -12,7 +12,7 @@ namespace DataUtils
         ///   Максимальное количество символов в описании
         /// </summary>
         public static int MaxTextWidth = 80;
-        
+
         /// <summary>
         ///   Оптимальное количество символов в описании
         /// </summary>
@@ -45,7 +45,7 @@ namespace DataUtils
         /// <summary>
         /// Кодировка в которой будут сохранятся зоны
         /// </summary>
-        public static Encoding CurrentEncoding = Encoding.Default;
+        public static readonly Encoding CurrentEncoding = Encoding.UTF8;
 
         /// <summary>
         /// Путь к файлам зон
@@ -80,7 +80,7 @@ namespace DataUtils
             string res = "";
             var toremove =
                 new List<string>(
-                    new[] {"у", "к", "за", "в", "во", "по", "с", "от", "о", "не", "ни", "а", "и", "но"});
+                    new[] { "у", "к", "за", "в", "во", "по", "с", "от", "о", "не", "ни", "а", "и", "но" });
             var chars =
                 new[]
                     {
