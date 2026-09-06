@@ -44,7 +44,7 @@ namespace DataUtils
                 {
                     try
                     {
-                        var ser = new XmlSerializer(typeof (ZonesDataList));
+                        var ser = new XmlSerializer(typeof(ZonesDataList));
                         ser.Serialize(writer, zonesFileList);
                     }
                     catch (SerializationException e)
@@ -121,7 +121,7 @@ namespace DataUtils
             /*if (_zonesDataList.Count > 0)
                 RefreshAvailZones();
             else*/
-                LoadAvailZones();
+            LoadAvailZones();
             loadedZonesCount = RecalcLoadedZonesCount();
         }
 
@@ -207,7 +207,6 @@ namespace DataUtils
             string zonesDir = Path.Combine(StaticData.WorldFolderPath, "zones");
             if (!Directory.Exists(zonesDir)) return result;
 
-            Encoding enc = StaticData.CurrentEncoding;
             foreach (string subdir in Directory.GetDirectories(zonesDir))
             {
                 string number = Path.GetFileName(subdir);
@@ -217,7 +216,10 @@ namespace DataUtils
                 string zname = number;
                 try
                 {
-                    foreach (string line in File.ReadAllLines(zoneYaml, enc))
+                    var text = FileEncodingResolver.ReadAllText(zoneYaml);
+                    var lines = text.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    foreach (string line in lines)
                     {
                         Match m = yamlZoneName.Match(line);
                         if (m.Success) { zname = m.Groups["Name"].ToString().Trim('\'', '"'); break; }
@@ -270,7 +272,7 @@ namespace DataUtils
         {
             if (zonesFileList[number] == null)
             {
-                var zd = new ZoneData(number, newName) {Preloading = true};
+                var zd = new ZoneData(number, newName) { Preloading = true };
                 zonesFileList.Add(zd);
                 loadedZonesCount++;
             }
@@ -346,7 +348,7 @@ namespace DataUtils
         public string ZoneName(string number)
         {
             ZoneData zd = zonesFileList[number];
-            return (zd != null)?zonesFileList[number].Name:"";
+            return (zd != null) ? zonesFileList[number].Name : "";
         }
 
         public void ReloadSketchesList()
@@ -395,17 +397,17 @@ namespace DataUtils
                 sketchesFileList.Add(zd);
             }
             else
-                return "Эскиз с именем "+ newName +" уже существует";
+                return "Эскиз с именем " + newName + " уже существует";
             SaveData();
             return string.Empty;
         }
-        
+
         public void RemoveSketch(string fileName)
         {
             if (File.Exists(StaticData.WorldFolderPath + @"\GSKT\" + fileName + ".gskt"))
                 File.Delete(StaticData.WorldFolderPath + @"\GSKT\" + fileName + ".gskt");
             sketchesFileList.Remove(sketchesFileList[fileName]);
-            SaveData();            
+            SaveData();
         }
 
         public string GetSketchFileName(string sketchName)
