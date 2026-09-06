@@ -20,7 +20,7 @@ namespace DataUtils
 
         public override string FormatName => "yaml";
         public override string FormatDescription => "YAML Format (Human-Readable)";
-        public override Encoding DefaultEncoding => Encoding.GetEncoding("koi8-r");
+        public override Encoding DefaultEncoding => StaticData.CurrentEncoding;
 
         public YamlFormatProvider()
         {

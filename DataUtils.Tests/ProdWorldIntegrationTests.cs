@@ -39,8 +39,7 @@ namespace DataUtils.Tests
         public void EveryZone_Loads()
         {
             string world = WorldOrIgnore();
-            var koi = Encoding.GetEncoding("koi8-r");
-            StaticData.CurrentEncoding = koi;
+            var utf8 = Encoding.UTF8;
             StaticData.WorldFolderPath = world;
 
             var failed = new List<int>();
@@ -48,7 +47,7 @@ namespace DataUtils.Tests
             {
                 try
                 {
-                    var zdm = new ZoneDataManager(z.ToString(), koi);
+                    var zdm = new ZoneDataManager(z.ToString(), utf8);
                     if (!zdm.LoadData()) failed.Add(z);
                 }
                 catch
@@ -64,8 +63,7 @@ namespace DataUtils.Tests
         public void EveryZone_SaveIsStableOnSecondPass()
         {
             string world = WorldOrIgnore();
-            var koi = Encoding.GetEncoding("koi8-r");
-            StaticData.CurrentEncoding = koi;
+            var utf8 = Encoding.UTF8;
 
             string root = Path.Combine(Path.GetTempPath(), "bzed_rt_" + Guid.NewGuid().ToString("N"));
             string a = Path.Combine(root, "a"), b = Path.Combine(root, "b");
@@ -75,9 +73,9 @@ namespace DataUtils.Tests
                 foreach (int z in ZoneNumbers(world))
                 {
                     string zn = z.ToString();
-                    var z1 = Load(world, zn, koi); Save(z1, a, zn);
-                    var z2 = Load(a, zn, koi); Save(z2, b, zn);
-                    if (!ZoneFilesEqual(a, b, zn, koi)) drift.Add(z);
+                    var z1 = Load(world, zn, utf8); Save(z1, a, zn);
+                    var z2 = Load(a, zn, utf8); Save(z2, b, zn);
+                    if (!ZoneFilesEqual(a, b, zn, utf8)) drift.Add(z);
                 }
                 // A re-save must be byte-stable. The whole production world round-trips
                 // cleanly; a tiny margin tolerates one-off junk in future world data while

@@ -207,7 +207,7 @@ namespace DataUtils
             string zonesDir = Path.Combine(StaticData.WorldFolderPath, "zones");
             if (!Directory.Exists(zonesDir)) return result;
 
-            Encoding enc = StaticData.CurrentEncoding ?? Encoding.GetEncoding("koi8-r");
+            Encoding enc = StaticData.CurrentEncoding;
             foreach (string subdir in Directory.GetDirectories(zonesDir))
             {
                 string number = Path.GetFileName(subdir);

@@ -20,7 +20,6 @@ namespace DataUtils.Tests
         {
             _tmp = Path.Combine(Path.GetTempPath(), "bzed_disc_" + Guid.NewGuid().ToString("N"));
             Directory.CreateDirectory(_tmp);
-            StaticData.CurrentEncoding = Encoding.GetEncoding("koi8-r");
             StaticData.WorldFolderPath = _tmp;
         }
 
