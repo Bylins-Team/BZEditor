@@ -3,18 +3,18 @@
 0:
   # Object #300
   names:
-    aliases: шелепуга
-    nominative: шелепуга
-    genitive: шелепуги
-    dative: шелепуге
-    accusative: шелепугу
-    instrumental: шелепугой
-    prepositional: шелепуге
-  short_desc: Шелепуга лежит здесь.
+    aliases: я┬п╣п╩п╣п©я┐пЁп╟
+    nominative: я┬п╣п╩п╣п©я┐пЁп╟
+    genitive: я┬п╣п╩п╣п©я┐пЁп╦
+    dative: я┬п╣п╩п╣п©я┐пЁп╣
+    accusative: я┬п╣п╩п╣п©я┐пЁя┐
+    instrumental: я┬п╣п╩п╣п©я┐пЁп╬п╧
+    prepositional: я┬п╣п╩п╣п©я┐пЁп╣
+  short_desc: п╗п╣п╩п╣п©я┐пЁп╟ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kWeapon
   wear_flags:
   - kTake
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -35,20 +35,20 @@
 1:
   # Object #301
   names:
-    aliases: меч
-    nominative: меч
-    genitive: меча
-    dative: мечу
-    accusative: меч
-    instrumental: мечом
-    prepositional: мече
-  short_desc: Меч валяется здесь.
+    aliases: п╪п╣я┤
+    nominative: п╪п╣я┤
+    genitive: п╪п╣я┤п╟
+    dative: п╪п╣я┤я┐
+    accusative: п╪п╣я┤
+    instrumental: п╪п╣я┤п╬п╪
+    prepositional: п╪п╣я┤п╣
+  short_desc: п°п╣я┤ п╡п╟п╩я▐п╣я┌я│я▐ п╥п╢п╣я│я▄.
   type: kWeapon
   wear_flags:
   - kTake
   - kWield
   - kBoth
-  material: 3  # булат
+  material: 3  # п╠я┐п╩п╟я┌
   values:
   - '0'
   - '0'
@@ -69,19 +69,19 @@
 2:
   # Object #302
   names:
-    aliases: сабля
-    nominative: сабля
-    genitive: сабли
-    dative: сабле
-    accusative: саблю
-    instrumental: саблей
-    prepositional: сабле
-  short_desc: Сабля лежит здесь.
+    aliases: я│п╟п╠п╩я▐
+    nominative: я│п╟п╠п╩я▐
+    genitive: я│п╟п╠п╩п╦
+    dative: я│п╟п╠п╩п╣
+    accusative: я│п╟п╠п╩я▌
+    instrumental: я│п╟п╠п╩п╣п╧
+    prepositional: я│п╟п╠п╩п╣
+  short_desc: п║п╟п╠п╩я▐ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kWeapon
   wear_flags:
   - kTake
   - kHold
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -102,20 +102,20 @@
 3:
   # Object #303
   names:
-    aliases: нож
-    nominative: нож
-    genitive: ножа
-    dative: ножу
-    accusative: нож
-    instrumental: ножом
-    prepositional: ноже
-  short_desc: Нож брошен здесь за ненадобностью.
+    aliases: п╫п╬п╤
+    nominative: п╫п╬п╤
+    genitive: п╫п╬п╤п╟
+    dative: п╫п╬п╤я┐
+    accusative: п╫п╬п╤
+    instrumental: п╫п╬п╤п╬п╪
+    prepositional: п╫п╬п╤п╣
+  short_desc: п²п╬п╤ п╠я─п╬я┬п╣п╫ п╥п╢п╣я│я▄ п╥п╟ п╫п╣п╫п╟п╢п╬п╠п╫п╬я│я┌я▄я▌.
   type: kWeapon
   wear_flags:
   - kTake
   - kWield
   - kHold
-  material: 3  # булат
+  material: 3  # п╠я┐п╩п╟я┌
   values:
   - '0'
   - '0'
@@ -136,19 +136,19 @@
 4:
   # Object #304
   names:
-    aliases: топор
-    nominative: топор
-    genitive: топора
-    dative: топору
-    accusative: топор
-    instrumental: топором
-    prepositional: топоре
-  short_desc: Брошенный топор ржавеет тут.
+    aliases: я┌п╬п©п╬я─
+    nominative: я┌п╬п©п╬я─
+    genitive: я┌п╬п©п╬я─п╟
+    dative: я┌п╬п©п╬я─я┐
+    accusative: я┌п╬п©п╬я─
+    instrumental: я┌п╬п©п╬я─п╬п╪
+    prepositional: я┌п╬п©п╬я─п╣
+  short_desc: п▒я─п╬я┬п╣п╫п╫я▀п╧ я┌п╬п©п╬я─ я─п╤п╟п╡п╣п╣я┌ я┌я┐я┌.
   type: kWeapon
   wear_flags:
   - kTake
   - kWield
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -169,20 +169,20 @@
 5:
   # Object #305
   names:
-    aliases: плеть
-    nominative: плеть
-    genitive: плети
-    dative: плети
-    accusative: плеть
-    instrumental: плетью
-    prepositional: плети
-  short_desc: Плеть валяется на земле.
+    aliases: п©п╩п╣я┌я▄
+    nominative: п©п╩п╣я┌я▄
+    genitive: п©п╩п╣я┌п╦
+    dative: п©п╩п╣я┌п╦
+    accusative: п©п╩п╣я┌я▄
+    instrumental: п©п╩п╣я┌я▄я▌
+    prepositional: п©п╩п╣я┌п╦
+  short_desc: п÷п╩п╣я┌я▄ п╡п╟п╩я▐п╣я┌я│я▐ п╫п╟ п╥п╣п╪п╩п╣.
   type: kWeapon
   wear_flags:
   - kTake
   - kWield
   - kBoth
-  material: 16  # платина
+  material: 16  # п©п╩п╟я┌п╦п╫п╟
   values:
   - '0'
   - '0'
@@ -203,20 +203,20 @@
 6:
   # Object #306
   names:
-    aliases: дубина
-    nominative: дубина
-    genitive: дубины
-    dative: дубине
-    accusative: дубину
-    instrumental: дубиной
-    prepositional: дубине
-  short_desc: Дубина валяется на земле.
+    aliases: п╢я┐п╠п╦п╫п╟
+    nominative: п╢я┐п╠п╦п╫п╟
+    genitive: п╢я┐п╠п╦п╫я▀
+    dative: п╢я┐п╠п╦п╫п╣
+    accusative: п╢я┐п╠п╦п╫я┐
+    instrumental: п╢я┐п╠п╦п╫п╬п╧
+    prepositional: п╢я┐п╠п╦п╫п╣
+  short_desc: п■я┐п╠п╦п╫п╟ п╡п╟п╩я▐п╣я┌я│я▐ п╫п╟ п╥п╣п╪п╩п╣.
   type: kWeapon
   wear_flags:
   - kTake
   - kWield
   - kBoth
-  material: 9  # кожа
+  material: 9  # п╨п╬п╤п╟
   values:
   - '0'
   - '0'
@@ -237,19 +237,19 @@
 7:
   # Object #307
   names:
-    aliases: кольчуга
-    nominative: кольчуга
-    genitive: кольчуги
-    dative: кольчуге
-    accusative: кольчугу
-    instrumental: кольчугой
-    prepositional: кольчуге
-  short_desc: Кольчуга валяется тут.
+    aliases: п╨п╬п╩я▄я┤я┐пЁп╟
+    nominative: п╨п╬п╩я▄я┤я┐пЁп╟
+    genitive: п╨п╬п╩я▄я┤я┐пЁп╦
+    dative: п╨п╬п╩я▄я┤я┐пЁп╣
+    accusative: п╨п╬п╩я▄я┤я┐пЁя┐
+    instrumental: п╨п╬п╩я▄я┤я┐пЁп╬п╧
+    prepositional: п╨п╬п╩я▄я┤я┐пЁп╣
+  short_desc: п п╬п╩я▄я┤я┐пЁп╟ п╡п╟п╩я▐п╣я┌я│я▐ я┌я┐я┌.
   type: kArmor
   wear_flags:
   - kTake
   - kBody
-  material: 3  # булат
+  material: 3  # п╠я┐п╩п╟я┌
   values:
   - '10'
   - '10'
@@ -270,19 +270,19 @@
 8:
   # Object #308
   names:
-    aliases: наручи
-    nominative: наручи
-    genitive: наручей
-    dative: наручам
-    accusative: наручи
-    instrumental: наручами
-    prepositional: наручах
-  short_desc: Наручи лежат здесь.
+    aliases: п╫п╟я─я┐я┤п╦
+    nominative: п╫п╟я─я┐я┤п╦
+    genitive: п╫п╟я─я┐я┤п╣п╧
+    dative: п╫п╟я─я┐я┤п╟п╪
+    accusative: п╫п╟я─я┐я┤п╦
+    instrumental: п╫п╟я─я┐я┤п╟п╪п╦
+    prepositional: п╫п╟я─я┐я┤п╟я┘
+  short_desc: п²п╟я─я┐я┤п╦ п╩п╣п╤п╟я┌ п╥п╢п╣я│я▄.
   type: kArmor
   wear_flags:
   - kTake
   - kArms
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -303,19 +303,19 @@
 9:
   # Object #309
   names:
-    aliases: поножи
-    nominative: поножи
-    genitive: поножей
-    dative: поножам
-    accusative: поножи
-    instrumental: поножами
-    prepositional: поножах
-  short_desc: Поножи лежат здесь.
+    aliases: п©п╬п╫п╬п╤п╦
+    nominative: п©п╬п╫п╬п╤п╦
+    genitive: п©п╬п╫п╬п╤п╣п╧
+    dative: п©п╬п╫п╬п╤п╟п╪
+    accusative: п©п╬п╫п╬п╤п╦
+    instrumental: п©п╬п╫п╬п╤п╟п╪п╦
+    prepositional: п©п╬п╫п╬п╤п╟я┘
+  short_desc: п÷п╬п╫п╬п╤п╦ п╩п╣п╤п╟я┌ п╥п╢п╣я│я▄.
   type: kArmor
   wear_flags:
   - kTake
   - kLegs
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -336,19 +336,19 @@
 10:
   # Object #310
   names:
-    aliases: шлем
-    nominative: шлем
-    genitive: шлема
-    dative: шлему
-    accusative: шлем
-    instrumental: шлемом
-    prepositional: шлеме
-  short_desc: Шлем лежит здесь.
+    aliases: я┬п╩п╣п╪
+    nominative: я┬п╩п╣п╪
+    genitive: я┬п╩п╣п╪п╟
+    dative: я┬п╩п╣п╪я┐
+    accusative: я┬п╩п╣п╪
+    instrumental: я┬п╩п╣п╪п╬п╪
+    prepositional: я┬п╩п╣п╪п╣
+  short_desc: п╗п╩п╣п╪ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kArmor
   wear_flags:
   - kTake
   - kHead
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -369,18 +369,18 @@
 11:
   # Object #311
   names:
-    aliases: каменный уголь
-    nominative: уголь
-    genitive: угля
-    dative: углю
-    accusative: уголь
-    instrumental: углем
-    prepositional: угле
-  short_desc: Кусок каменного угля лежит здесь.
+    aliases: п╨п╟п╪п╣п╫п╫я▀п╧ я┐пЁп╬п╩я▄
+    nominative: я┐пЁп╬п╩я▄
+    genitive: я┐пЁп╩я▐
+    dative: я┐пЁп╩я▌
+    accusative: я┐пЁп╬п╩я▄
+    instrumental: я┐пЁп╩п╣п╪
+    prepositional: я┐пЁп╩п╣
+  short_desc: п я┐я│п╬п╨ п╨п╟п╪п╣п╫п╫п╬пЁп╬ я┐пЁп╩я▐ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 12  # драгоценный камень
+  material: 12  # п╢я─п╟пЁп╬я├п╣п╫п╫я▀п╧ п╨п╟п╪п╣п╫я▄
   values:
   - '0'
   - '311'
@@ -402,18 +402,18 @@
 12:
   # Object #312
   names:
-    aliases: составной лук
-    nominative: составной лук
-    genitive: составного лука
-    dative: составному луку
-    accusative: составной лук
-    instrumental: составным луком
-    prepositional: составном луке
-  short_desc: Составной лук лежит здесь.
+    aliases: я│п╬я│я┌п╟п╡п╫п╬п╧ п╩я┐п╨
+    nominative: я│п╬я│я┌п╟п╡п╫п╬п╧ п╩я┐п╨
+    genitive: я│п╬я│я┌п╟п╡п╫п╬пЁп╬ п╩я┐п╨п╟
+    dative: я│п╬я│я┌п╟п╡п╫п╬п╪я┐ п╩я┐п╨я┐
+    accusative: я│п╬я│я┌п╟п╡п╫п╬п╧ п╩я┐п╨
+    instrumental: я│п╬я│я┌п╟п╡п╫я▀п╪ п╩я┐п╨п╬п╪
+    prepositional: я│п╬я│я┌п╟п╡п╫п╬п╪ п╩я┐п╨п╣
+  short_desc: п║п╬я│я┌п╟п╡п╫п╬п╧ п╩я┐п╨ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kWeapon
   wear_flags:
   - kTake
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -434,18 +434,18 @@
 13:
   # Object #313
   names:
-    aliases: гибкая палка
-    nominative: гибкая палка
-    genitive: гибкой палки
-    dative: гибкой палке
-    accusative: гибкую палку
-    instrumental: гибкой палкой
-    prepositional: гибкой палке
-  short_desc: Гибкая палка лежит здесь.
+    aliases: пЁп╦п╠п╨п╟я▐ п©п╟п╩п╨п╟
+    nominative: пЁп╦п╠п╨п╟я▐ п©п╟п╩п╨п╟
+    genitive: пЁп╦п╠п╨п╬п╧ п©п╟п╩п╨п╦
+    dative: пЁп╦п╠п╨п╬п╧ п©п╟п╩п╨п╣
+    accusative: пЁп╦п╠п╨я┐я▌ п©п╟п╩п╨я┐
+    instrumental: пЁп╦п╠п╨п╬п╧ п©п╟п╩п╨п╬п╧
+    prepositional: пЁп╦п╠п╨п╬п╧ п©п╟п╩п╨п╣
+  short_desc: п⌠п╦п╠п╨п╟я▐ п©п╟п╩п╨п╟ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 9  # кожа
+  material: 9  # п╨п╬п╤п╟
   values:
   - '0'
   - '313'
@@ -466,18 +466,18 @@
 14:
   # Object #314
   names:
-    aliases: тетива
-    nominative: тетива
-    genitive: тетивы
-    dative: тетиве
-    accusative: тетиву
-    instrumental: тетивой
-    prepositional: тетиве
-  short_desc: Тетива валяется здесь.
+    aliases: я┌п╣я┌п╦п╡п╟
+    nominative: я┌п╣я┌п╦п╡п╟
+    genitive: я┌п╣я┌п╦п╡я▀
+    dative: я┌п╣я┌п╦п╡п╣
+    accusative: я┌п╣я┌п╦п╡я┐
+    instrumental: я┌п╣я┌п╦п╡п╬п╧
+    prepositional: я┌п╣я┌п╦п╡п╣
+  short_desc: п╒п╣я┌п╦п╡п╟ п╡п╟п╩я▐п╣я┌я│я▐ п╥п╢п╣я│я▄.
   type: kMagicIngredient
   wear_flags:
   - kTake
-  material: 9  # кожа
+  material: 9  # п╨п╬п╤п╟
   values:
   - '0'
   - '314'
@@ -498,18 +498,18 @@
 20:
   # Object #320
   names:
-    aliases: маленький кусок мяса
-    nominative: маленький кусок мяса
-    genitive: маленького куска мяса
-    dative: маленькому куску мяса
-    accusative: маленький кусок мяса
-    instrumental: маленьким куском мяса
-    prepositional: маленьком куске мяса
-  short_desc: Маленький кусок мяса лежит здесь.
+    aliases: п╪п╟п╩п╣п╫я▄п╨п╦п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟
+    nominative: п╪п╟п╩п╣п╫я▄п╨п╦п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟
+    genitive: п╪п╟п╩п╣п╫я▄п╨п╬пЁп╬ п╨я┐я│п╨п╟ п╪я▐я│п╟
+    dative: п╪п╟п╩п╣п╫я▄п╨п╬п╪я┐ п╨я┐я│п╨я┐ п╪я▐я│п╟
+    accusative: п╪п╟п╩п╣п╫я▄п╨п╦п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟
+    instrumental: п╪п╟п╩п╣п╫я▄п╨п╦п╪ п╨я┐я│п╨п╬п╪ п╪я▐я│п╟
+    prepositional: п╪п╟п╩п╣п╫я▄п╨п╬п╪ п╨я┐я│п╨п╣ п╪я▐я│п╟
+  short_desc: п°п╟п╩п╣п╫я▄п╨п╦п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kFood
   wear_flags:
   - kTake
-  material: 16  # платина
+  material: 16  # п©п╩п╟я┌п╦п╫п╟
   values:
   - '4'
   - '0'
@@ -530,18 +530,18 @@
 21:
   # Object #321
   names:
-    aliases: небольшой кусок мяса
-    nominative: небольшой кусок мяса
-    genitive: небольшого куска мяса
-    dative: небольшому куску мяса
-    accusative: небольшой кусок мяса
-    instrumental: небольшим куском мяса
-    prepositional: небольшом куске мяса
-  short_desc: Небольшой кусок мяса лежит здесь.
+    aliases: п╫п╣п╠п╬п╩я▄я┬п╬п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟
+    nominative: п╫п╣п╠п╬п╩я▄я┬п╬п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟
+    genitive: п╫п╣п╠п╬п╩я▄я┬п╬пЁп╬ п╨я┐я│п╨п╟ п╪я▐я│п╟
+    dative: п╫п╣п╠п╬п╩я▄я┬п╬п╪я┐ п╨я┐я│п╨я┐ п╪я▐я│п╟
+    accusative: п╫п╣п╠п╬п╩я▄я┬п╬п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟
+    instrumental: п╫п╣п╠п╬п╩я▄я┬п╦п╪ п╨я┐я│п╨п╬п╪ п╪я▐я│п╟
+    prepositional: п╫п╣п╠п╬п╩я▄я┬п╬п╪ п╨я┐я│п╨п╣ п╪я▐я│п╟
+  short_desc: п²п╣п╠п╬п╩я▄я┬п╬п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kFood
   wear_flags:
   - kTake
-  material: 16  # платина
+  material: 16  # п©п╩п╟я┌п╦п╫п╟
   values:
   - '8'
   - '0'
@@ -562,18 +562,18 @@
 22:
   # Object #322
   names:
-    aliases: кусок мяса
-    nominative: кусок мяса
-    genitive: куска мяса
-    dative: куску мяса
-    accusative: кусок мяса
-    instrumental: куском мяса
-    prepositional: куске мяса
-  short_desc: Кусок мяса лежит здесь.
+    aliases: п╨я┐я│п╬п╨ п╪я▐я│п╟
+    nominative: п╨я┐я│п╬п╨ п╪я▐я│п╟
+    genitive: п╨я┐я│п╨п╟ п╪я▐я│п╟
+    dative: п╨я┐я│п╨я┐ п╪я▐я│п╟
+    accusative: п╨я┐я│п╬п╨ п╪я▐я│п╟
+    instrumental: п╨я┐я│п╨п╬п╪ п╪я▐я│п╟
+    prepositional: п╨я┐я│п╨п╣ п╪я▐я│п╟
+  short_desc: п я┐я│п╬п╨ п╪я▐я│п╟ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kFood
   wear_flags:
   - kTake
-  material: 16  # платина
+  material: 16  # п©п╩п╟я┌п╦п╫п╟
   values:
   - '12'
   - '0'
@@ -594,18 +594,18 @@
 23:
   # Object #323
   names:
-    aliases: большой кусок мяса
-    nominative: большой кусок мяса
-    genitive: большого куска мяса
-    dative: большому куску мяса
-    accusative: большой кусок мяса
-    instrumental: большим куском мяса
-    prepositional: большом куске мяса
-  short_desc: Большой кусок мяса лежит здесь.
+    aliases: п╠п╬п╩я▄я┬п╬п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟
+    nominative: п╠п╬п╩я▄я┬п╬п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟
+    genitive: п╠п╬п╩я▄я┬п╬пЁп╬ п╨я┐я│п╨п╟ п╪я▐я│п╟
+    dative: п╠п╬п╩я▄я┬п╬п╪я┐ п╨я┐я│п╨я┐ п╪я▐я│п╟
+    accusative: п╠п╬п╩я▄я┬п╬п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟
+    instrumental: п╠п╬п╩я▄я┬п╦п╪ п╨я┐я│п╨п╬п╪ п╪я▐я│п╟
+    prepositional: п╠п╬п╩я▄я┬п╬п╪ п╨я┐я│п╨п╣ п╪я▐я│п╟
+  short_desc: п▒п╬п╩я▄я┬п╬п╧ п╨я┐я│п╬п╨ п╪я▐я│п╟ п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄.
   type: kFood
   wear_flags:
   - kTake
-  material: 16  # платина
+  material: 16  # п©п╩п╟я┌п╦п╫п╟
   values:
   - '16'
   - '0'
@@ -626,20 +626,20 @@
 30:
   # Object #330
   names:
-    aliases: волшебный сундук
-    nominative: волшебный сундук
-    genitive: волшебного сундука
-    dative: волшебному сундуку
-    accusative: волшебный сундук
-    instrumental: волшебным сундуком
-    prepositional: волшебном сундуке
-  short_desc: Волшебный сундук так и манит к себе...
+    aliases: п╡п╬п╩я┬п╣п╠п╫я▀п╧ я│я┐п╫п╢я┐п╨
+    nominative: п╡п╬п╩я┬п╣п╠п╫я▀п╧ я│я┐п╫п╢я┐п╨
+    genitive: п╡п╬п╩я┬п╣п╠п╫п╬пЁп╬ я│я┐п╫п╢я┐п╨п╟
+    dative: п╡п╬п╩я┬п╣п╠п╫п╬п╪я┐ я│я┐п╫п╢я┐п╨я┐
+    accusative: п╡п╬п╩я┬п╣п╠п╫я▀п╧ я│я┐п╫п╢я┐п╨
+    instrumental: п╡п╬п╩я┬п╣п╠п╫я▀п╪ я│я┐п╫п╢я┐п╨п╬п╪
+    prepositional: п╡п╬п╩я┬п╣п╠п╫п╬п╪ я│я┐п╫п╢я┐п╨п╣
+  short_desc: п▓п╬п╩я┬п╣п╠п╫я▀п╧ я│я┐п╫п╢я┐п╨ я┌п╟п╨ п╦ п╪п╟п╫п╦я┌ п╨ я│п╣п╠п╣...
   type: kContainer
   extra_flags:
   - kNoinvis
   - kNodecay
   - kNolocate
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -660,14 +660,14 @@
 31:
   # Object #331
   names:
-    aliases: Ваш походный сундучок
-    nominative: ваш походный сундучок
-    genitive: вашего походного сундучка
-    dative: вашему походному сундучку
-    accusative: ваш походный сундучок
-    instrumental: вашим походным сундучком
-    prepositional: вашем походном сундучке
-  short_desc: Ваш походный сундучок стоит здесь.
+    aliases: п▓п╟я┬ п©п╬я┘п╬п╢п╫я▀п╧ я│я┐п╫п╢я┐я┤п╬п╨
+    nominative: п╡п╟я┬ п©п╬я┘п╬п╢п╫я▀п╧ я│я┐п╫п╢я┐я┤п╬п╨
+    genitive: п╡п╟я┬п╣пЁп╬ п©п╬я┘п╬п╢п╫п╬пЁп╬ я│я┐п╫п╢я┐я┤п╨п╟
+    dative: п╡п╟я┬п╣п╪я┐ п©п╬я┘п╬п╢п╫п╬п╪я┐ я│я┐п╫п╢я┐я┤п╨я┐
+    accusative: п╡п╟я┬ п©п╬я┘п╬п╢п╫я▀п╧ я│я┐п╫п╢я┐я┤п╬п╨
+    instrumental: п╡п╟я┬п╦п╪ п©п╬я┘п╬п╢п╫я▀п╪ я│я┐п╫п╢я┐я┤п╨п╬п╪
+    prepositional: п╡п╟я┬п╣п╪ п©п╬я┘п╬п╢п╫п╬п╪ я│я┐п╫п╢я┐я┤п╨п╣
+  short_desc: п▓п╟я┬ п©п╬я┘п╬п╢п╫я▀п╧ я│я┐п╫п╢я┐я┤п╬п╨ я│я┌п╬п╦я┌ п╥п╢п╣я│я▄.
   type: kContainer
   extra_flags:
   - kNorent
@@ -676,7 +676,7 @@
   - kNosell
   - kNodecay
   - kNolocate
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -697,14 +697,14 @@
 32:
   # Object #332
   names:
-    aliases: короб склад снаряжения ватаги
-    nominative: склад снаряжения вашей ватаги
-    genitive: склад снаряжения вашей ватагий
-    dative: склад снаряжения вашей ватаги
-    accusative: склад снаряжения вашей ватаги
-    instrumental: склад снаряжения вашей ватаги
-    prepositional: склад снаряжения вашей ватаги
-  short_desc: Короб для хранения снаряжения вашей ватаги пристроен в углу.
+    aliases: п╨п╬я─п╬п╠ я│п╨п╩п╟п╢ я│п╫п╟я─я▐п╤п╣п╫п╦я▐ п╡п╟я┌п╟пЁп╦
+    nominative: я│п╨п╩п╟п╢ я│п╫п╟я─я▐п╤п╣п╫п╦я▐ п╡п╟я┬п╣п╧ п╡п╟я┌п╟пЁп╦
+    genitive: я│п╨п╩п╟п╢ я│п╫п╟я─я▐п╤п╣п╫п╦я▐ п╡п╟я┬п╣п╧ п╡п╟я┌п╟пЁп╦п╧
+    dative: я│п╨п╩п╟п╢ я│п╫п╟я─я▐п╤п╣п╫п╦я▐ п╡п╟я┬п╣п╧ п╡п╟я┌п╟пЁп╦
+    accusative: я│п╨п╩п╟п╢ я│п╫п╟я─я▐п╤п╣п╫п╦я▐ п╡п╟я┬п╣п╧ п╡п╟я┌п╟пЁп╦
+    instrumental: я│п╨п╩п╟п╢ я│п╫п╟я─я▐п╤п╣п╫п╦я▐ п╡п╟я┬п╣п╧ п╡п╟я┌п╟пЁп╦
+    prepositional: я│п╨п╩п╟п╢ я│п╫п╟я─я▐п╤п╣п╫п╦я▐ п╡п╟я┬п╣п╧ п╡п╟я┌п╟пЁп╦
+  short_desc: п п╬я─п╬п╠ п╢п╩я▐ я┘я─п╟п╫п╣п╫п╦я▐ я│п╫п╟я─я▐п╤п╣п╫п╦я▐ п╡п╟я┬п╣п╧ п╡п╟я┌п╟пЁп╦ п©я─п╦я│я┌я─п╬п╣п╫ п╡ я┐пЁп╩я┐.
   type: kContainer
   extra_flags:
   - kNorent
@@ -713,7 +713,7 @@
   - kNosell
   - kNodecay
   - kNolocate
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'
@@ -734,20 +734,20 @@
 33:
   # Object #333
   names:
-    aliases: короб хранения ингредиентов
-    nominative: короб для хранения ингредиентов
-    genitive: короба для хранения ингредиентов
-    dative: коробу для хранения ингредиентов
-    accusative: короб для хранения ингредиентов
-    instrumental: коробом для хранения ингредиентов
-    prepositional: коробе для хранения ингредиентов
-  short_desc: Короб для хранения ингредиентов пристроен в углу.
+    aliases: п╨п╬я─п╬п╠ я┘я─п╟п╫п╣п╫п╦я▐ п╦п╫пЁя─п╣п╢п╦п╣п╫я┌п╬п╡
+    nominative: п╨п╬я─п╬п╠ п╢п╩я▐ я┘я─п╟п╫п╣п╫п╦я▐ п╦п╫пЁя─п╣п╢п╦п╣п╫я┌п╬п╡
+    genitive: п╨п╬я─п╬п╠п╟ п╢п╩я▐ я┘я─п╟п╫п╣п╫п╦я▐ п╦п╫пЁя─п╣п╢п╦п╣п╫я┌п╬п╡
+    dative: п╨п╬я─п╬п╠я┐ п╢п╩я▐ я┘я─п╟п╫п╣п╫п╦я▐ п╦п╫пЁя─п╣п╢п╦п╣п╫я┌п╬п╡
+    accusative: п╨п╬я─п╬п╠ п╢п╩я▐ я┘я─п╟п╫п╣п╫п╦я▐ п╦п╫пЁя─п╣п╢п╦п╣п╫я┌п╬п╡
+    instrumental: п╨п╬я─п╬п╠п╬п╪ п╢п╩я▐ я┘я─п╟п╫п╣п╫п╦я▐ п╦п╫пЁя─п╣п╢п╦п╣п╫я┌п╬п╡
+    prepositional: п╨п╬я─п╬п╠п╣ п╢п╩я▐ я┘я─п╟п╫п╣п╫п╦я▐ п╦п╫пЁя─п╣п╢п╦п╣п╫я┌п╬п╡
+  short_desc: п п╬я─п╬п╠ п╢п╩я▐ я┘я─п╟п╫п╣п╫п╦я▐ п╦п╫пЁя─п╣п╢п╦п╣п╫я┌п╬п╡ п©я─п╦я│я┌я─п╬п╣п╫ п╡ я┐пЁп╩я┐.
   type: kContainer
   extra_flags:
   - kNoinvis
   - kNodecay
   - kNolocate
-  material: 0  # бронза
+  material: 0  # п╠я─п╬п╫п╥п╟
   values:
   - '0'
   - '0'

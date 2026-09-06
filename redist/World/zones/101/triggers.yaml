@@ -90,12 +90,12 @@
   trigger_types:
   - kCommand
   narg: 0
-  arglist: вырвать выдрать выковырять достать
+  arglist: п╡я▀я─п╡п╟я┌я▄ п╡я▀п╢я─п╟я┌я▄ п╡я▀п╨п╬п╡я▀я─я▐я┌я▄ п╢п╬я│я┌п╟я┌я▄
   script: |-
     if (%actor.vnum% != -1)
       halt
     end
-    if !(%arg.contains(камень)%) && !(%arg.contains(самоцвет)%)
+    if !(%arg.contains(п╨п╟п╪п╣п╫я▄)%) && !(%arg.contains(я│п╟п╪п╬я├п╡п╣я┌)%)
       halt
     end
     if !%exist.obj(10100)%
@@ -133,16 +133,16 @@
     eval rV %random.1000%
     wecho ----- %rV% ------
     if %rV% < 901
-      *90% на оба положительных исхода
+      *90% п╫п╟ п╬п╠п╟ п©п╬п╩п╬п╤п╦я┌п╣п╩я▄п╫я▀я┘ п╦я│я┘п╬п╢п╟
       if %rV% < 451
-        *делим на 2 ветки благополучный исход
-        *1 ветка моб 1109
+        *п╢п╣п╩п╦п╪ п╫п╟ 2 п╡п╣я┌п╨п╦ п╠п╩п╟пЁп╬п©п╬п╩я┐я┤п╫я▀п╧ п╦я│я┘п╬п╢
+        *1 п╡п╣я┌п╨п╟ п╪п╬п╠ 1109
         wload mob 10109
         calcuid target 10109 mob
         attach 10110 %target%
         remote Hero %target%
       else
-        *2 ветка моб 1108
+        *2 п╡п╣я┌п╨п╟ п╪п╬п╠ 1108
         wload mob 10108
         calcuid target 10108 mob
         attach 10109 %target%
@@ -165,14 +165,14 @@
     wait 1s
     if !%self.fighting%
       questbodrich %actor% 16
-      mecho - Спасибо, что освободил%actor.g% меня, %actor.name%.
+      mecho - п║п©п╟я│п╦п╠п╬, я┤я┌п╬ п╬я│п╡п╬п╠п╬п╢п╦п╩%actor.g% п╪п╣п╫я▐, %actor.name%.
       if (%world.curobjs(10107)% < 10) && (%random.100% <= 25)
         mload obj 10107
-        mecho - Вот, она досталась мне от деда, возьми ее.
-        give  мурзамецкая.сабля %actor.name%
+        mecho - п▓п╬я┌, п╬п╫п╟ п╢п╬я│я┌п╟п╩п╟я│я▄ п╪п╫п╣ п╬я┌ п╢п╣п╢п╟, п╡п╬п╥я▄п╪п╦ п╣п╣.
+        give  п╪я┐я─п╥п╟п╪п╣я├п╨п╟я▐.я│п╟п╠п╩я▐ %actor.name%
       else
-        mechoaround %actor% Княжий сын дал груду монет %actor.dname%.
-        msend       %actor% Княжий сын дал Вам 1000 монет.
+        mechoaround %actor% п п╫я▐п╤п╦п╧ я│я▀п╫ п╢п╟п╩ пЁя─я┐п╢я┐ п╪п╬п╫п╣я┌ %actor.dname%.
+        msend       %actor% п п╫я▐п╤п╦п╧ я│я▀п╫ п╢п╟п╩ п▓п╟п╪ 1000 п╪п╬п╫п╣я┌.
         %actor.gold(+1000)%
       end
       calcuid knez101 10108 mob
@@ -193,19 +193,19 @@
     wait 1s
     if !%self.fighting%
       questbodrich %actor% 17
-      mecho - Спасибо, что освободил%actor.g% меня, %actor.name%.
+      mecho - п║п©п╟я│п╦п╠п╬, я┤я┌п╬ п╬я│п╡п╬п╠п╬п╢п╦п╩%actor.g% п╪п╣п╫я▐, %actor.name%.
       if (%world.curobjs(534)% < %world.maxobj(534)%) && (%random.100% <= 25)
         mload obj 534
-        mecho - Я хотел ее продать, но пусть это будет твоей наградой.
-        give книг %actor.name%
+        mecho - п╞ я┘п╬я┌п╣п╩ п╣п╣ п©я─п╬п╢п╟я┌я▄, п╫п╬ п©я┐я│я┌я▄ я█я┌п╬ п╠я┐п╢п╣я┌ я┌п╡п╬п╣п╧ п╫п╟пЁя─п╟п╢п╬п╧.
+        give п╨п╫п╦пЁ %actor.name%
       elseif (%random.1000% <= 100)
-        say Возьми эту чекушку, ее ценность намного выше, чем кажется на первый взгляд.
+        say п▓п╬п╥я▄п╪п╦ я█я┌я┐ я┤п╣п╨я┐я┬п╨я┐, п╣п╣ я├п╣п╫п╫п╬я│я┌я▄ п╫п╟п╪п╫п╬пЁп╬ п╡я▀я┬п╣, я┤п╣п╪ п╨п╟п╤п╣я┌я│я▐ п╫п╟ п©п╣я─п╡я▀п╧ п╡п╥пЁп╩я▐п╢.
         wait 1
         mload obj 103
-        дать чекуш %actor.name%
+        п╢п╟я┌я▄ я┤п╣п╨я┐я┬ %actor.name%
       else
-        mechoaround %actor% Заморский купец дал груду монет %actor.dname%.
-        msend %actor% Заморский купец дал Вам 1000 монет.
+        mechoaround %actor% п≈п╟п╪п╬я─я│п╨п╦п╧ п╨я┐п©п╣я├ п╢п╟п╩ пЁя─я┐п╢я┐ п╪п╬п╫п╣я┌ %actor.dname%.
+        msend %actor% п≈п╟п╪п╬я─я│п╨п╦п╧ п╨я┐п©п╣я├ п╢п╟п╩ п▓п╟п╪ 1000 п╪п╬п╫п╣я┌.
         %actor.gold(+1000)%
       end
       calcuid merch101 10109 mob
