@@ -1,12 +1,13 @@
-﻿using System;
+﻿using DataUtils.YamlMappers;
+using DataUtils.YamlModels;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
-using DataUtils.YamlMappers;
-using DataUtils.YamlModels;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DataUtils
 {
@@ -302,6 +303,7 @@ namespace DataUtils
 
         #region Load Operations
 
+        /// <param name="encoding">Игнорируется в будущем надо будет скорее всего удалить</param>
         public override bool LoadZone(Zone zone, MobsCollection mobs, RoomsCollection rooms, string zoneNumber, Encoding encoding)
         {
             try
@@ -313,7 +315,7 @@ namespace DataUtils
                     return false;
                 }
 
-                string yamlContent = File.ReadAllText(zonePath, encoding ?? DefaultEncoding);
+                var yamlContent = FileEncodingResolver.ReadAllText(zonePath, out encoding);
                 var yamlZone = deserializer.Deserialize<YamlZone>(yamlContent);
                 YamlZoneMapper.FromYaml(yamlZone, zone);
                 // In the flat layout the directory name IS the zone number, and the
@@ -332,18 +334,18 @@ namespace DataUtils
             }
         }
 
+        /// <param name="encoding">Игнорируется в будущем надо будет скорее всего удалить</param>
         public override bool LoadRooms(RoomsCollection rooms, string zoneNumber, Encoding encoding)
         {
             try
             {
-                var enc = encoding ?? DefaultEncoding;
-
                 // Flat layout (default): zones/<z>/rooms.yaml is a rel -> body map.
                 string flatPath = Path.Combine(GetZoneDir(zoneNumber), "rooms.yaml");
                 if (File.Exists(flatPath))
                 {
+                    var text = FileEncodingResolver.ReadAllText(flatPath);
                     int zone = ParseZone(zoneNumber);
-                    var map = deserializer.Deserialize<Dictionary<int, YamlRoom>>(File.ReadAllText(flatPath, enc));
+                    var map = deserializer.Deserialize<Dictionary<int, YamlRoom>>(text);
                     if (map != null)
                         foreach (var kv in map)
                         {
@@ -367,7 +369,8 @@ namespace DataUtils
                 foreach (var file in Directory.GetFiles(roomsDir, "*.yaml"))
                 {
                     if (IsIndexFile(file)) continue;
-                    var yamlRoom = deserializer.Deserialize<YamlRoom>(File.ReadAllText(file, enc));
+                    var text = FileEncodingResolver.ReadAllText(file);
+                    var yamlRoom = deserializer.Deserialize<YamlRoom>(text);
                     var room = YamlRoomMapper.FromYaml(yamlRoom);
                     if (room != null)
                         rooms.Add(room);
@@ -381,17 +384,17 @@ namespace DataUtils
             }
         }
 
+        /// <param name="encoding">Игнорируется в будущем надо будет скорее всего удалить</param>
         public override bool LoadMobs(MobsCollection mobs, string zoneNumber, Encoding encoding)
         {
             try
             {
-                var enc = encoding ?? DefaultEncoding;
-
                 string flatPath = Path.Combine(GetZoneDir(zoneNumber), "mobs.yaml");
                 if (File.Exists(flatPath))
                 {
+                    var text = FileEncodingResolver.ReadAllText(flatPath);
                     int zone = ParseZone(zoneNumber);
-                    var map = deserializer.Deserialize<Dictionary<int, YamlMob>>(File.ReadAllText(flatPath, enc));
+                    var map = deserializer.Deserialize<Dictionary<int, YamlMob>>(text);
                     if (map != null)
                         foreach (var kv in map)
                         {
@@ -413,7 +416,8 @@ namespace DataUtils
                 foreach (var file in Directory.GetFiles(mobsDir, "*.yaml"))
                 {
                     if (IsIndexFile(file)) continue;
-                    var yamlMob = deserializer.Deserialize<YamlMob>(File.ReadAllText(file, enc));
+                    var text = FileEncodingResolver.ReadAllText(file);
+                    var yamlMob = deserializer.Deserialize<YamlMob>(text);
                     var mob = YamlMobMapper.FromYaml(yamlMob);
                     if (mob != null)
                         mobs.Add(mob);
@@ -427,17 +431,17 @@ namespace DataUtils
             }
         }
 
+        /// <param name="encoding">Игнорируется в будущем надо будет скорее всего удалить</param>
         public override bool LoadObjects(ObjsCollection objects, string zoneNumber, Encoding encoding)
         {
             try
             {
-                var enc = encoding ?? DefaultEncoding;
-
                 string flatPath = Path.Combine(GetZoneDir(zoneNumber), "objects.yaml");
                 if (File.Exists(flatPath))
                 {
+                    var text = FileEncodingResolver.ReadAllText(flatPath);
                     int zone = ParseZone(zoneNumber);
-                    var map = deserializer.Deserialize<Dictionary<int, YamlObj>>(File.ReadAllText(flatPath, enc));
+                    var map = deserializer.Deserialize<Dictionary<int, YamlObj>>(text);
                     if (map != null)
                         foreach (var kv in map)
                         {
@@ -459,7 +463,8 @@ namespace DataUtils
                 foreach (var file in Directory.GetFiles(objsDir, "*.yaml"))
                 {
                     if (IsIndexFile(file)) continue;
-                    var yamlObj = deserializer.Deserialize<YamlObj>(File.ReadAllText(file, enc));
+                    var text = FileEncodingResolver.ReadAllText(file);
+                    var yamlObj = deserializer.Deserialize<YamlObj>(text);
                     var obj = YamlObjMapper.FromYaml(yamlObj);
                     if (obj != null)
                         objects.Add(obj);
@@ -473,17 +478,17 @@ namespace DataUtils
             }
         }
 
+        /// <param name="encoding">Игнорируется в будущем надо будет скорее всего удалить</param>
         public override bool LoadTriggers(TriggersCollection triggers, string zoneNumber, Encoding encoding)
         {
             try
             {
-                var enc = encoding ?? DefaultEncoding;
-
                 string flatPath = Path.Combine(GetZoneDir(zoneNumber), "triggers.yaml");
                 if (File.Exists(flatPath))
                 {
+                    var text = FileEncodingResolver.ReadAllText(flatPath);
                     int zone = ParseZone(zoneNumber);
-                    var map = deserializer.Deserialize<Dictionary<int, YamlTrigger>>(File.ReadAllText(flatPath, enc));
+                    var map = deserializer.Deserialize<Dictionary<int, YamlTrigger>>(text);
                     if (map != null)
                         foreach (var kv in map)
                         {
@@ -505,7 +510,8 @@ namespace DataUtils
                 foreach (var file in Directory.GetFiles(trigsDir, "*.yaml"))
                 {
                     if (IsIndexFile(file)) continue;
-                    var yamlTrigger = deserializer.Deserialize<YamlTrigger>(File.ReadAllText(file, enc));
+                    var text = FileEncodingResolver.ReadAllText(file);
+                    var yamlTrigger = deserializer.Deserialize<YamlTrigger>(text);
                     var trigger = YamlTriggerMapper.FromYaml(yamlTrigger);
                     if (trigger != null)
                         triggers.Add(trigger);
@@ -519,6 +525,7 @@ namespace DataUtils
             }
         }
 
+        /// <param name="encoding">Игнорируется в будущем надо будет скорее всего удалить</param>
         public override bool LoadSketches(SketchRoomsCollection sketches, string zoneNumber, Encoding encoding)
         {
             // Sketches are stored in the room files, not separately

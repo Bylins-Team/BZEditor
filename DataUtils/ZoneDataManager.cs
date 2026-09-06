@@ -126,6 +126,9 @@ namespace DataUtils
                 formatProvider.ExceptionThrowed += FireZoneLoadingExceptionEvent;
             }
 
+            // Yaml провайдер покачто игнорирует входящий параметр с кодировкой, он сам детектит по файл контенту.
+            // В будущем скорее всего этот параметр уберется.
+
             if (!formatProvider.LoadTriggers(Triggers, zoneName, encoding))
                 return false;
             if (!formatProvider.LoadObjects(Objects, zoneName, encoding))
@@ -160,7 +163,7 @@ namespace DataUtils
         /// Сохранение всех файлов зоны
         /// </summary>
         public void SaveData()
-        {            
+        {
             SaveMobs();
             SaveObjects();
             SaveTriggers();
@@ -221,8 +224,8 @@ namespace DataUtils
         /// <param name="newNumber">Новый номер зоны</param>
         public void ChangeZoneNumber(int newNumber)
         {
-            int oldNum = Zone.Number*100;
-            int newNum = newNumber*100;
+            int oldNum = Zone.Number * 100;
+            int newNum = newNumber * 100;
             int delta = newNum - oldNum;
             foreach (Room r in Rooms)
             {
@@ -288,9 +291,9 @@ namespace DataUtils
                 {
                     for (int i = 0; i < r.TriggersList.Count; i++)
                     {
-                        r.TriggersList[i] = (Math.Abs(((int) (r.TriggersList[i])) - oldNum) < 100)
-                                                ? ((int) (r.TriggersList[i])) + delta
-                                                : ((int) (r.TriggersList[i]));
+                        r.TriggersList[i] = (Math.Abs(((int)(r.TriggersList[i])) - oldNum) < 100)
+                                                ? ((int)(r.TriggersList[i])) + delta
+                                                : ((int)(r.TriggersList[i]));
                     }
                 }
                 r.VNum += delta;
@@ -303,9 +306,9 @@ namespace DataUtils
                 {
                     for (int i = 0; i < o.TriggersList.Count; i++)
                     {
-                        o.TriggersList[i] = (Math.Abs(((int) (o.TriggersList[i])) - oldNum) < 100)
-                                                ? ((int) (o.TriggersList[i])) + delta
-                                                : ((int) (o.TriggersList[i]));
+                        o.TriggersList[i] = (Math.Abs(((int)(o.TriggersList[i])) - oldNum) < 100)
+                                                ? ((int)(o.TriggersList[i])) + delta
+                                                : ((int)(o.TriggersList[i]));
                     }
                 }
                 o.VNum += delta;
@@ -317,9 +320,9 @@ namespace DataUtils
                 {
                     for (int i = 0; i < m.Destination.Count; i++)
                     {
-                        m.Destination[i] = (Math.Abs(((int) (m.Destination[i])) - oldNum) < 100)
-                                               ? ((int) (m.Destination[i])) + delta
-                                               : ((int) (m.Destination[i]));
+                        m.Destination[i] = (Math.Abs(((int)(m.Destination[i])) - oldNum) < 100)
+                                               ? ((int)(m.Destination[i])) + delta
+                                               : ((int)(m.Destination[i]));
                     }
                 }
                 //Асистеры
@@ -327,9 +330,9 @@ namespace DataUtils
                 {
                     for (int i = 0; i < m.Helpers.Count; i++)
                     {
-                        m.Helpers[i] = (Math.Abs(((int) (m.Helpers[i])) - oldNum) < 100)
-                                           ? ((int) (m.Helpers[i])) + delta
-                                           : ((int) (m.Helpers[i]));
+                        m.Helpers[i] = (Math.Abs(((int)(m.Helpers[i])) - oldNum) < 100)
+                                           ? ((int)(m.Helpers[i])) + delta
+                                           : ((int)(m.Helpers[i]));
                     }
                 }
                 //Триггеры моба
@@ -337,9 +340,9 @@ namespace DataUtils
                 {
                     for (int i = 0; i < m.TriggersList.Count; i++)
                     {
-                        m.TriggersList[i] = (Math.Abs(((int) (m.TriggersList[i])) - oldNum) < 100)
-                                                ? ((int) (m.TriggersList[i])) + delta
-                                                : ((int) (m.TriggersList[i]));
+                        m.TriggersList[i] = (Math.Abs(((int)(m.TriggersList[i])) - oldNum) < 100)
+                                                ? ((int)(m.TriggersList[i])) + delta
+                                                : ((int)(m.TriggersList[i]));
                     }
                 }
                 m.VNum += delta;
