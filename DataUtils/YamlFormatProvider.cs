@@ -481,6 +481,19 @@ namespace DataUtils
         /// <param name="encoding">Игнорируется в будущем надо будет скорее всего удалить</param>
         public override bool LoadTriggers(TriggersCollection triggers, string zoneNumber, Encoding encoding)
         {
+            // trigger_types builder errors (a name with another attach type's prefix, an unknown
+            // name) - the engine logs the same cases to syslog. Reported once per zone, not per
+            // trigger: every warning is a modal dialog in the UI.
+            var problems = new List<string>();
+            bool loaded = LoadTriggerFiles(triggers, zoneNumber, problems);
+            if (problems.Count > 0)
+                FireExceptionEvent($"Zone {zoneNumber} is loaded, but its trigger types need fixing:\n"
+                    + string.Join("\n", problems), null, EventLogEntryType.Warning);
+            return loaded;
+        }
+
+        private bool LoadTriggerFiles(TriggersCollection triggers, string zoneNumber, List<string> problems)
+        {
             try
             {
                 string flatPath = Path.Combine(GetZoneDir(zoneNumber), "triggers.yaml");
@@ -495,7 +508,7 @@ namespace DataUtils
                             var yamlTrigger = kv.Value;
                             if (yamlTrigger == null) continue;
                             yamlTrigger.VNum = zone * 100 + kv.Key;
-                            var trigger = LoadTrigger(yamlTrigger);
+                            var trigger = LoadTrigger(yamlTrigger, problems);
                             if (trigger != null) triggers.Add(trigger);
                         }
                     return true;
@@ -512,7 +525,7 @@ namespace DataUtils
                     if (IsIndexFile(file)) continue;
                     var text = FileEncodingResolver.ReadAllText(file);
                     var yamlTrigger = deserializer.Deserialize<YamlTrigger>(text);
-                    var trigger = LoadTrigger(yamlTrigger);
+                    var trigger = LoadTrigger(yamlTrigger, problems);
                     if (trigger != null)
                         triggers.Add(trigger);
                 }
@@ -525,16 +538,12 @@ namespace DataUtils
             }
         }
 
-        /// <summary>
-        /// Maps one trigger, reporting trigger_types builder errors (a name with another attach
-        /// type's prefix, an unknown name) as warnings - the engine logs the same cases to syslog.
-        /// </summary>
-        private Trigger LoadTrigger(YamlTrigger yamlTrigger)
+        private static Trigger LoadTrigger(YamlTrigger yamlTrigger, List<string> problems)
         {
-            var problems = new List<string>();
-            var trigger = YamlTriggerMapper.FromYaml(yamlTrigger, problems);
-            foreach (var problem in problems)
-                FireExceptionEvent($"Trigger {trigger.VNum}: {problem}", null, EventLogEntryType.Warning);
+            var own = new List<string>();
+            var trigger = YamlTriggerMapper.FromYaml(yamlTrigger, own);
+            foreach (var problem in own)
+                problems.Add($"trigger {trigger.VNum}: {problem}");
             return trigger;
         }
 

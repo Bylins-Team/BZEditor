@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using DataUtils.YamlMappers;
 using NUnit.Framework;
 
@@ -75,6 +77,44 @@ namespace DataUtils.Tests
             var problems = new List<string>();
             Assert.That(TriggerTypeCodec.FromNames(new[] { "kNoSuchType", "kMobAct" }, Mob, problems), Is.EqualTo("e"));
             Assert.That(problems, Has.Count.EqualTo(1));
+        }
+
+        [Test]
+        public void ProviderLoad_ReportsForeignPrefixesOnceForTheZone()
+        {
+            string world = Path.Combine(Path.GetTempPath(), "bzed_trg_" + Guid.NewGuid().ToString("N"));
+            string savedWorld = StaticData.WorldFolderPath;
+            try
+            {
+                string zoneDir = Path.Combine(world, "zones", "26");
+                Directory.CreateDirectory(zoneDir);
+                File.WriteAllText(Path.Combine(zoneDir, "triggers.yaml"),
+                    "1:\n  name: mob\n  attach_type: kMobTrigger\n  trigger_types: [kObjFight, kGreet]\n" +
+                    "2:\n  name: room\n  attach_type: kRoomTrigger\n  trigger_types: [kWldEnterPc, kMobDeath]\n" +
+                    "3:\n  name: clean\n  attach_type: kObjTrigger\n  trigger_types: [kObjFight, 10]\n",
+                    StaticData.CurrentEncoding);
+                StaticData.WorldFolderPath = world;
+
+                var warnings = new List<string>();
+                var provider = new YamlFormatProvider();
+                provider.ExceptionThrowed += (message, ex, type) => warnings.Add(message);
+                var triggers = new TriggersCollection();
+
+                Assert.That(provider.LoadTriggers(triggers, "26", StaticData.CurrentEncoding), Is.True);
+                Assert.That(triggers.Count, Is.EqualTo(3));
+                Assert.That(triggers.GetTrigger(2601).Type, Is.EqualTo("eg"));
+                Assert.That(triggers.GetTrigger(2603).Type, Is.EqualTo("ek"));
+
+                Assert.That(warnings, Has.Count.EqualTo(1), "one warning per zone, not per trigger");
+                Assert.That(warnings[0], Does.Contain("trigger 2601").And.Contain("kObjFight"));
+                Assert.That(warnings[0], Does.Contain("trigger 2602").And.Contain("kMobDeath"));
+                Assert.That(warnings[0], Does.Not.Contain("trigger 2603"));
+            }
+            finally
+            {
+                StaticData.WorldFolderPath = savedWorld;
+                try { Directory.Delete(world, true); } catch { /* best effort */ }
+            }
         }
 
         [TestCase(Mob)]
