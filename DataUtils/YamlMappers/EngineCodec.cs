@@ -115,32 +115,6 @@ namespace DataUtils.YamlMappers
             return sb.ToString();
         }
 
-        public static List<string> LetterFlagsToNames(string s, Dictionary<string, int> nameToBit)
-        {
-            var rev = Reverse(nameToBit);
-            var names = new List<string>();
-            foreach (int bit in DecodeLetterFlags(s))
-            {
-                string name;
-                if (rev.TryGetValue(bit, out name)) names.Add(name);
-            }
-            return names;
-        }
-
-        public static string NamesToLetterFlags(IEnumerable<string> names, Dictionary<string, int> nameToBit)
-        {
-            var bits = new List<int>();
-            if (names != null)
-            {
-                foreach (string name in names)
-                {
-                    int bit;
-                    if (name != null && nameToBit.TryGetValue(name, out bit)) bits.Add(bit);
-                }
-            }
-            return EncodeLetterFlags(bits);
-        }
-
         /// <summary>Asciiflag string -> list of symbolic flag names.</summary>
         public static List<string> FlagsToNames(string ascii, Dictionary<string, int> nameToBit)
         {

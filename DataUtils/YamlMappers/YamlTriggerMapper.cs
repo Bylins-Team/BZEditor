@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using DataUtils.YamlModels;
 
 namespace DataUtils.YamlMappers
@@ -23,14 +24,14 @@ namespace DataUtils.YamlMappers
                 Script = (trigger.Body ?? "").TrimEnd('\r', '\n')
             };
 
-            // Trigger types as engine symbolic names (single-plane letter flags)
-            foreach (var name in EngineCodec.LetterFlagsToNames(trigger.Type, EngineDictionaries.TriggerTypes))
-                yaml.TriggerTypes.Add(name);
+            // Trigger types as engine symbolic names; the name of a bit depends on the attach type
+            yaml.TriggerTypes.AddRange(TriggerTypeCodec.ToNames(trigger.Type, trigger.Class));
 
             return yaml;
         }
 
-        public static Trigger FromYaml(YamlTrigger yaml)
+        /// <param name="problems">Receives builder errors in trigger_types (a foreign-prefix or unknown name).</param>
+        public static Trigger FromYaml(YamlTrigger yaml, ICollection<string> problems = null)
         {
             if (yaml == null) return null;
 
@@ -45,7 +46,7 @@ namespace DataUtils.YamlMappers
             };
 
             // Trigger types from engine names back to single-plane letter flags
-            trigger.Type = EngineCodec.NamesToLetterFlags(yaml.TriggerTypes, EngineDictionaries.TriggerTypes);
+            trigger.Type = TriggerTypeCodec.FromNames(yaml.TriggerTypes, trigger.Class, problems);
 
             return trigger;
         }
