@@ -17,11 +17,12 @@ namespace DataUtils.YamlMappers
 
         /// <summary>
         /// Attach type a current dictionary name belongs to, or -1 for a name shared by all types.
+        /// Same test as the engine (trigger_type_names.cpp): the name must be longer than the prefix.
         /// </summary>
         public static int OwnerOf(string name)
         {
             for (int i = 0; i < Prefixes.Length; i++)
-                if (name.StartsWith(Prefixes[i], System.StringComparison.Ordinal))
+                if (name.Length > Prefixes[i].Length && name.StartsWith(Prefixes[i], System.StringComparison.Ordinal))
                     return i;
             return -1;
         }
