@@ -66,9 +66,10 @@ running editor doesn't break the build.
   re-set them per-csproj.
 - **Adding a file requires a csproj edit.** Non-SDK projects list every source explicitly
   (`<Compile Include="..."/>`); a new `.cs` that isn't listed simply won't compile.
-- `WldForm` is one class split across `BZEditor/Forms/WldForm.cs` (~7.7k lines) plus per-tab partials at the
-  project root: `WldForm.Wld.cs` (rooms/map), `.Mob.cs`, `.Obj.cs`, `.Trg.cs`, `.Zon.cs`, `.Shp.cs`,
-  `.Templates.cs`, `.Navigation.cs`. Tab-specific UI code belongs in the matching partial.
+- `WldForm` lives in `BZEditor/Forms/WldForm.cs` (~7.7k lines, plus its `.Designer.cs`); all the tab UI code
+  that runs is there. The `BZEditor/WldForm.*.cs` files (`.Wld`, `.Mob`, `.Obj`, `.Trg`, `.Zon`, `.Shp`,
+  `.Templates`, `.Navigation`) look like per-tab partials but are **not in `BZEditor.csproj`** — dead copies
+  that never compile. Editing them changes nothing.
 - `Main()` lives in `BZEditor/Forms/MainForm.cs`, not a `Program.cs`.
 
 ## Architecture
@@ -119,6 +120,13 @@ Three layers, all under `DataUtils/`:
   - `EngineCodec` — converts the editor's bitflags to/from the engine's symbolic `kXxx` names and decodes the
     legacy "asciiflag" encoding (letter+plane-digit pairs; `bit = letterValue + 30*plane`).
   - `EngineDictionaries` — the `kName -> value` tables generated from the engine's `world/dictionaries/*.yaml`.
+  - `TriggerTypeCodec` — trigger types are the exception to "one name per bit": the engine reuses bits per
+    attach type (bit 4 is `kMobAct` / `kObjFight` / `kWldEnterPc`), so the name written depends on the
+    trigger's attach type — own-prefix name, else an unprefixed common one (`kRandomGlobal`, `kRandom`,
+    `kCommand`, `kAuto`), else the bit number. Reads accept current names, the old unprefixed mob names
+    (`EngineDictionaries.LegacyTriggerTypes`, never written) and plain numbers; a foreign-prefix or unknown
+    name becomes one load warning per zone. The UI checklists come from `Bases/Trigger_BitVector_{MOB,OBJ,WLD}.bb`,
+    and changing a trigger's attach type keeps only the common bits.
 
 Two rules the serializer setup encodes, both load-bearing:
 

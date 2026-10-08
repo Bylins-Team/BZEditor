@@ -80,6 +80,14 @@ namespace DataUtils.Tests
         }
 
         [Test]
+        public void AttachTypeChange_KeepsOnlyCommonBits()
+        {
+            // a b c z are shared; e (mob Act) and k (mob Fight) would change meaning.
+            Assert.That(TriggerTypeCodec.KeepCommonBits("abcekz"), Is.EqualTo("abcz"));
+            Assert.That(TriggerTypeCodec.KeepCommonBits(""), Is.EqualTo(""));
+        }
+
+        [Test]
         public void ProviderLoad_ReportsForeignPrefixesOnceForTheZone()
         {
             string world = Path.Combine(Path.GetTempPath(), "bzed_trg_" + Guid.NewGuid().ToString("N"));

@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using DataUtils;
+using DataUtils.YamlMappers;
 using ExtControls;
 using System.Data;
 using System.Diagnostics;
@@ -2571,7 +2572,17 @@ namespace BZEditor
             RefreshTrgActCondList(cboxTrgClass.SelectedIndex);
             if (lvMainList.SelectedItems.Count <= 0) return;
             Trigger trigger = ZoneDm.Triggers[Convert.ToInt32(lvMainList.SelectedItems[0].Tag), 0];
-            trigger.Class = cboxTrgClass.SelectedIndex;
+            if (trigger.Class != cboxTrgClass.SelectedIndex)
+            {
+                trigger.Class = cboxTrgClass.SelectedIndex;
+                // Type bits mean different things per attach type: keep only the common ones, or a
+                // bit hidden from the new list would be saved under the new type's meaning.
+                trigger.Type = TriggerTypeCodec.KeepCommonBits(trigger.Type);
+            }
+            lvTrgActivationConditions.BeginUpdate();
+            foreach (ListViewItem lvi in lvTrgActivationConditions.Items)
+                lvi.Checked = trigger.Type.IndexOf(lvi.Tag.ToString()) >= 0;
+            lvTrgActivationConditions.EndUpdate();
         }
 
         private void TbTrgNameValidated(object sender, EventArgs e)

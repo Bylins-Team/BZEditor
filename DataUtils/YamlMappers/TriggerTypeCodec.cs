@@ -46,6 +46,28 @@ namespace DataUtils.YamlMappers
             return own ?? common ?? bit.ToString(CultureInfo.InvariantCulture);
         }
 
+        /// <summary>True if the bit means the same for every attach type (it has an unprefixed name).</summary>
+        public static bool IsCommonBit(int bit)
+        {
+            foreach (var kv in EngineDictionaries.TriggerTypes)
+                if (kv.Value == bit && OwnerOf(kv.Key) < 0)
+                    return true;
+            return false;
+        }
+
+        /// <summary>
+        /// Letter flags to keep when a trigger's attach type changes: only the common bits. Any
+        /// other bit would silently take the new type's meaning (mob Act becomes object Fight).
+        /// </summary>
+        public static string KeepCommonBits(string letterFlags)
+        {
+            var kept = new List<int>();
+            foreach (int bit in EngineCodec.DecodeLetterFlags(letterFlags))
+                if (IsCommonBit(bit))
+                    kept.Add(bit);
+            return EngineCodec.EncodeLetterFlags(kept);
+        }
+
         /// <summary>Letter flags -> names for a trigger of the given attach type (ascending by bit).</summary>
         public static List<string> ToNames(string letterFlags, int attachType)
         {
