@@ -495,7 +495,7 @@ namespace DataUtils
                             var yamlTrigger = kv.Value;
                             if (yamlTrigger == null) continue;
                             yamlTrigger.VNum = zone * 100 + kv.Key;
-                            var trigger = YamlTriggerMapper.FromYaml(yamlTrigger);
+                            var trigger = LoadTrigger(yamlTrigger);
                             if (trigger != null) triggers.Add(trigger);
                         }
                     return true;
@@ -512,7 +512,7 @@ namespace DataUtils
                     if (IsIndexFile(file)) continue;
                     var text = FileEncodingResolver.ReadAllText(file);
                     var yamlTrigger = deserializer.Deserialize<YamlTrigger>(text);
-                    var trigger = YamlTriggerMapper.FromYaml(yamlTrigger);
+                    var trigger = LoadTrigger(yamlTrigger);
                     if (trigger != null)
                         triggers.Add(trigger);
                 }
@@ -523,6 +523,19 @@ namespace DataUtils
                 FireExceptionEvent($"Error loading YAML triggers for zone {zoneNumber}", ex, EventLogEntryType.Error);
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Maps one trigger, reporting trigger_types builder errors (a name with another attach
+        /// type's prefix, an unknown name) as warnings - the engine logs the same cases to syslog.
+        /// </summary>
+        private Trigger LoadTrigger(YamlTrigger yamlTrigger)
+        {
+            var problems = new List<string>();
+            var trigger = YamlTriggerMapper.FromYaml(yamlTrigger, problems);
+            foreach (var problem in problems)
+                FireExceptionEvent($"Trigger {trigger.VNum}: {problem}", null, EventLogEntryType.Warning);
+            return trigger;
         }
 
         /// <param name="encoding">Игнорируется в будущем надо будет скорее всего удалить</param>

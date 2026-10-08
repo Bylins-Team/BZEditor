@@ -564,11 +564,82 @@ namespace DataUtils.YamlMappers
             { "kDominationArena", 61 },
         };
 
+        /// <summary>
+        /// Trigger type bits. The same bit means different things for mob, object and room
+        /// triggers, so names carry the attach-type prefix (kMob / kObj / kWld); only the bits
+        /// shared by all types stay unprefixed. Choose names through <see cref="TriggerTypeCodec"/>.
+        /// </summary>
         public static readonly Dictionary<string, int> TriggerTypes = new Dictionary<string, int>
         {
+            // common to all attach types
             { "kRandomGlobal", 0 },
             { "kRandom", 1 },
             { "kCommand", 2 },
+            { "kAuto", 25 },
+
+            // mob
+            { "kMobSpeech", 3 },
+            { "kMobAct", 4 },
+            { "kMobDeath", 5 },
+            { "kMobGreet", 6 },
+            { "kMobGreetAll", 7 },
+            { "kMobEntry", 8 },
+            { "kMobReceive", 9 },
+            { "kMobFight", 10 },
+            { "kMobHitPercent", 11 },
+            { "kMobBribe", 12 },
+            { "kMobLoad", 13 },
+            { "kMobKill", 14 },
+            { "kMobDamage", 15 },
+            { "kMobGreetPc", 16 },
+            { "kMobGreetPcAll", 17 },
+            { "kMobIncome", 18 },
+            { "kMobIncomePc", 19 },
+            { "kMobStartFight", 20 },
+            { "kMobRoundNum", 21 },
+            { "kMobCast", 22 },
+            { "kMobTimeChange", 23 },
+
+            // object
+            { "kObjPurge", 3 },
+            { "kObjFight", 4 },
+            { "kObjTimer", 5 },
+            { "kObjGet", 6 },
+            { "kObjDrop", 7 },
+            { "kObjGive", 8 },
+            { "kObjWear", 9 },
+            { "kObjRemove", 11 },
+            { "kObjLoad", 13 },
+            { "kObjUnlock", 14 },
+            { "kObjOpen", 15 },
+            { "kObjLock", 16 },
+            { "kObjClose", 17 },
+            { "kObjPick", 18 },
+            { "kObjGreetAllPc", 19 },
+            { "kObjTimeChange", 20 },
+            { "kObjPut", 21 },
+
+            // room
+            { "kWldSpeech", 3 },
+            { "kWldEnterPc", 4 },
+            { "kWldReset", 5 },
+            { "kWldEnter", 6 },
+            { "kWldDrop", 7 },
+            { "kWldUnlock", 8 },
+            { "kWldOpen", 9 },
+            { "kWldLock", 10 },
+            { "kWldClose", 11 },
+            { "kWldPick", 12 },
+            { "kWldTimeChange", 13 },
+            { "kWldKillPc", 14 },
+        };
+
+        /// <summary>
+        /// Pre-prefix trigger type names (taken from the mob meanings). Read-only: accepted when
+        /// loading zones that have not been re-saved yet, never written.
+        /// </summary>
+        public static readonly Dictionary<string, int> LegacyTriggerTypes = new Dictionary<string, int>
+        {
             { "kSpeech", 3 },
             { "kAct", 4 },
             { "kDeath", 5 },
@@ -591,7 +662,6 @@ namespace DataUtils.YamlMappers
             { "kMobTrig22", 22 },
             { "kMobTrig23", 23 },
             { "kMobTrig24", 24 },
-            { "kAuto", 25 },
         };
     }
 }

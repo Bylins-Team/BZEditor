@@ -46,6 +46,21 @@ namespace DataUtils.Tests
             Assert.That(dead.SpecParam, Is.EqualTo(5));
         }
 
+        [TestCase(0, "kMobAct")]
+        [TestCase(1, "kObjFight")]
+        [TestCase(2, "kWldEnterPc")]
+        public void Trigger_Types_SurviveRoundTrip_WithAttachTypeNames(int attachType, string bit4Name)
+        {
+            var trigger = new Trigger(2600) { Class = attachType, Type = "bez" };
+
+            var yaml = YamlTriggerMapper.ToYaml(trigger);
+            Assert.That(yaml.TriggerTypes, Is.EqualTo(new[] { "kRandom", bit4Name, "kAuto" }));
+
+            var trigger2 = YamlTriggerMapper.FromYaml(yaml);
+            Assert.That(trigger2.Class, Is.EqualTo(attachType));
+            Assert.That(trigger2.Type, Is.EqualTo("bez"));
+        }
+
         [Test]
         public void Obj_ExtraValues_SurviveRoundTrip()
         {
