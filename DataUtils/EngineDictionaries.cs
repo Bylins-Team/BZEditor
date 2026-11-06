@@ -234,6 +234,11 @@ namespace DataUtils.YamlMappers
             { "kNoHammer", 54 },
             { "kMentalShadow", 55 },
             { "kSummoned", 56 },
+            // The engine enum has kUndead at 57 (B1, "нежить"), but its world dictionary
+            // action_flags.yaml still lists UNUSED_57 there, so the engine saves the flag
+            // under that name and ignores kUndead until the dictionary catches up. Write the
+            // enum's name; LegacyActionFlags keeps UNUSED_57 readable.
+            { "kUndead", 57 },
             { "kFireBreath", 60 },
             { "kGasBreath", 61 },
             { "kFrostBreath", 62 },
@@ -251,6 +256,16 @@ namespace DataUtils.YamlMappers
             { "kNoResurrection", 80 },
             { "kMobAwake", 81 },
             { "kIgnoresFormation", 82 },
+            { "kGreatHelper", 90 },
+        };
+
+        /// <summary>
+        /// Action flag names accepted on load and never written: the engine's world dictionary
+        /// has no kUndead yet and saves bit 57 as UNUSED_57.
+        /// </summary>
+        public static readonly Dictionary<string, int> LegacyActionFlags = new Dictionary<string, int>
+        {
+            { "UNUSED_57", 57 },
         };
 
         public static readonly Dictionary<string, int> AffectFlags = new Dictionary<string, int>

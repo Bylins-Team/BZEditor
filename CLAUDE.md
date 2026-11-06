@@ -120,6 +120,9 @@ Three layers, all under `DataUtils/`:
   - `EngineCodec` — converts the editor's bitflags to/from the engine's symbolic `kXxx` names and decodes the
     legacy "asciiflag" encoding (letter+plane-digit pairs; `bit = letterValue + 30*plane`).
   - `EngineDictionaries` — the `kName -> value` tables generated from the engine's `world/dictionaries/*.yaml`.
+    One deliberate exception: `ActionFlags` names bit 57 `kUndead` (the engine enum's name) while the engine's
+    `action_flags.yaml` still calls it `UNUSED_57`; `LegacyActionFlags` keeps that name readable, never written.
+    Any bit without a name here is silently dropped on save — `BasesFlagTablesTests` guards `Action.bb`.
   - `TriggerTypeCodec` — trigger types are the exception to "one name per bit": the engine reuses bits per
     attach type (bit 4 is `kMobAct` / `kObjFight` / `kWldEnterPc`), so the name written depends on the
     trigger's attach type — own-prefix name, else an unprefixed common one (`kRandomGlobal`, `kRandom`,

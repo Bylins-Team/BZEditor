@@ -132,13 +132,24 @@ namespace DataUtils.YamlMappers
         /// <summary>List of symbolic flag names -> asciiflag string.</summary>
         public static string NamesToFlags(IEnumerable<string> names, Dictionary<string, int> nameToBit)
         {
+            return NamesToFlags(names, nameToBit, null);
+        }
+
+        /// <summary>
+        /// List of symbolic flag names -> asciiflag string, also accepting the read-only
+        /// <paramref name="legacyNameToBit"/> names (never produced by <see cref="FlagsToNames"/>).
+        /// </summary>
+        public static string NamesToFlags(IEnumerable<string> names, Dictionary<string, int> nameToBit,
+                                          Dictionary<string, int> legacyNameToBit)
+        {
             var bits = new List<int>();
             if (names != null)
             {
                 foreach (string name in names)
                 {
                     int bit;
-                    if (name != null && nameToBit.TryGetValue(name, out bit))
+                    if (name != null && (nameToBit.TryGetValue(name, out bit) ||
+                                         (legacyNameToBit != null && legacyNameToBit.TryGetValue(name, out bit))))
                         bits.Add(bit);
                 }
             }

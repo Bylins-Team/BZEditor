@@ -39,6 +39,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasesFlagTablesTests.cs" />
     <Compile Include="EngineCodecTests.cs" />
     <Compile Include="TriggerTypeCodecTests.cs" />
     <Compile Include="YamlDiceTests.cs" />
