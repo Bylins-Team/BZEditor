@@ -266,7 +266,8 @@ namespace DataUtils.YamlMappers
             }
 
             // Action / affect flags from engine names back to asciiflag strings
-            mob.Flags = EngineCodec.NamesToFlags(yaml.ActionFlags, EngineDictionaries.ActionFlags);
+            mob.Flags = EngineCodec.NamesToFlags(yaml.ActionFlags, EngineDictionaries.ActionFlags,
+                                                 EngineDictionaries.LegacyActionFlags);
             mob.Affects = EngineCodec.NamesToFlags(yaml.AffectFlags, EngineDictionaries.AffectFlags);
 
             mob.Align = yaml.Alignment;

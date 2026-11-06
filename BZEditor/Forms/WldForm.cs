@@ -7183,7 +7183,6 @@ namespace BZEditor
 
                 if (mob.Flags.Contains("f0") ||
                     mob.Flags.Contains("v0") || mob.Flags.Contains("w0") ||
-                    mob.Flags.Contains("r2") || mob.Flags.Contains("s2") || mob.Flags.Contains("t2") ||
                     mob.Flags.Contains("i0") || mob.Flags.Contains("j0") || mob.Flags.Contains("k0") ||
                     mob.Flags.Contains("d1") || mob.Flags.Contains("e1") || mob.Flags.Contains("f1") ||
                     mob.Flags.Contains("g1"))
@@ -7218,7 +7217,6 @@ namespace BZEditor
                 if (mob == null) continue;
                 if (mob.Flags.Contains("f0") ||
                     mob.Flags.Contains("v0") || mob.Flags.Contains("w0") ||
-                    mob.Flags.Contains("r2") || mob.Flags.Contains("s2") || mob.Flags.Contains("t2") ||
                     mob.Flags.Contains("i0") || mob.Flags.Contains("j0") || mob.Flags.Contains("k0") ||
                     mob.Flags.Contains("d1") || mob.Flags.Contains("e1") || mob.Flags.Contains("f1") ||
                     mob.Flags.Contains("g1"))

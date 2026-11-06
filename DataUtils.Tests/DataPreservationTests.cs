@@ -46,6 +46,36 @@ namespace DataUtils.Tests
             Assert.That(dead.SpecParam, Is.EqualTo(5));
         }
 
+        [Test]
+        public void Mob_ActionFlags_IncludingPlaneThree_SurviveRoundTrip()
+        {
+            // m0 = kHelper (12), w2 = kIgnoresFormation (82), a3 = kGreatHelper (90) -- the
+            // first flag in the third plane. A bit with no name in EngineDictionaries is
+            // silently dropped by FlagsToNames, so this pins both newest names.
+            var mob = new Mob(7305) { Flags = "m0w2a3" };
+
+            var yaml = YamlMobMapper.ToYaml(mob);
+            Assert.That(yaml.ActionFlags, Is.EquivalentTo(new[] { "kHelper", "kIgnoresFormation", "kGreatHelper" }));
+
+            var mob2 = YamlMobMapper.FromYaml(yaml);
+            Assert.That(EngineCodec.DecodeAsciiFlags(mob2.Flags), Is.EquivalentTo(new[] { 12, 82, 90 }));
+        }
+
+        [Test]
+        public void Mob_Undead_IsWrittenAsKUndead_AndReadFromEngineUnusedName()
+        {
+            // B1 = bit 57. The engine's world dictionary still calls it UNUSED_57, which is what
+            // engine-saved worlds contain; the editor reads that and writes the enum's name.
+            var yaml = YamlMobMapper.ToYaml(new Mob(7305) { Flags = "B1" });
+            Assert.That(yaml.ActionFlags, Is.EqualTo(new[] { "kUndead" }));
+
+            yaml.ActionFlags.Clear();
+            yaml.ActionFlags.Add("UNUSED_57");
+            var mob = YamlMobMapper.FromYaml(yaml);
+            Assert.That(EngineCodec.DecodeAsciiFlags(mob.Flags), Is.EqualTo(new[] { 57 }));
+            Assert.That(YamlMobMapper.ToYaml(mob).ActionFlags, Is.EqualTo(new[] { "kUndead" }));
+        }
+
         [TestCase(0, "kMobAct")]
         [TestCase(1, "kObjFight")]
         [TestCase(2, "kWldEnterPc")]
