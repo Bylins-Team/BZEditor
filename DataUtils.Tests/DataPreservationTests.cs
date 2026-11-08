@@ -62,18 +62,18 @@ namespace DataUtils.Tests
         }
 
         [Test]
-        public void Mob_Undead_IsWrittenAsKUndead_AndReadFromEngineUnusedName()
+        public void Mob_Undead_IsWrittenAsTheDictionaryName_AndKUndeadIsStillRead()
         {
-            // B1 = bit 57. The engine's world dictionary still calls it UNUSED_57, which is what
-            // engine-saved worlds contain; the editor reads that and writes the enum's name.
+            // B1 = bit 57. The engine's world dictionary calls it UNUSED_57 and the YAML loader
+            // drops unknown names, so the editor writes UNUSED_57 and only reads kUndead.
             var yaml = YamlMobMapper.ToYaml(new Mob(7305) { Flags = "B1" });
-            Assert.That(yaml.ActionFlags, Is.EqualTo(new[] { "kUndead" }));
+            Assert.That(yaml.ActionFlags, Is.EqualTo(new[] { "UNUSED_57" }));
 
             yaml.ActionFlags.Clear();
-            yaml.ActionFlags.Add("UNUSED_57");
+            yaml.ActionFlags.Add("kUndead");
             var mob = YamlMobMapper.FromYaml(yaml);
             Assert.That(EngineCodec.DecodeAsciiFlags(mob.Flags), Is.EqualTo(new[] { 57 }));
-            Assert.That(YamlMobMapper.ToYaml(mob).ActionFlags, Is.EqualTo(new[] { "kUndead" }));
+            Assert.That(YamlMobMapper.ToYaml(mob).ActionFlags, Is.EqualTo(new[] { "UNUSED_57" }));
         }
 
         [TestCase(0, "kMobAct")]

@@ -125,6 +125,8 @@ namespace DataUtils.YamlMappers
                 string name;
                 if (rev.TryGetValue(bit, out name))
                     names.Add(name);
+                else
+                    names.Add(UnusedPrefix + bit); // the engine reads/writes unnamed bits as UNUSED_<n>
             }
             return names;
         }
@@ -149,11 +151,26 @@ namespace DataUtils.YamlMappers
                 {
                     int bit;
                     if (name != null && (nameToBit.TryGetValue(name, out bit) ||
-                                         (legacyNameToBit != null && legacyNameToBit.TryGetValue(name, out bit))))
+                                         (legacyNameToBit != null && legacyNameToBit.TryGetValue(name, out bit)) ||
+                                         TryParseUnused(name, out bit)))
                         bits.Add(bit);
                 }
             }
             return EncodeAsciiFlags(bits);
+        }
+
+        /// <summary>Prefix the engine uses for a flag bit that has no dictionary name.</summary>
+        public const string UnusedPrefix = "UNUSED_";
+
+        /// <summary>
+        /// "UNUSED_&lt;n&gt;" -> bit n (plane n/30). The engine accepts and emits these for bits with no
+        /// name, so the editor must round-trip them instead of silently dropping the flag.
+        /// </summary>
+        public static bool TryParseUnused(string name, out int bit)
+        {
+            bit = -1;
+            if (name == null || !name.StartsWith(UnusedPrefix, System.StringComparison.Ordinal)) return false;
+            return int.TryParse(name.Substring(UnusedPrefix.Length), out bit) && bit >= 0;
         }
 
         /// <summary>Enum integer -> symbolic name (falls back to the integer as a string).</summary>

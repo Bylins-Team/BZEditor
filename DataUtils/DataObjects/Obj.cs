@@ -28,7 +28,7 @@ namespace DataUtils
         private string magicFlags = "";
         private int material;
         private int maxDurab = 75;
-        private int maxInWorld;
+        private int maxInWorld = -1;
         private int minimumRemorts;
         private string param1 = "0";
         private string param2 = "0";
