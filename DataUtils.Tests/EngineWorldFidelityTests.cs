@@ -24,6 +24,7 @@ namespace DataUtils.Tests
         private const string ZoneYaml =
             "vnum: 777\nname: Тест\ntop_room: 77799\nlifespan: 10\nreset_mode: 2\nentrance: 77701\ntypeA_zones:\n  - 778\ntypeB_zones:\n  - 779\ncommands:\n" +
             "  - MOB 0 77700 1 77700 1  # max_in_world 1 here...\n" +
+            "  - TRIGGER 1 0 77700  # mob trigger: binds to the mob loaded just before\n" +
             "  - GIVE 1 77700 5\n" +
             "  - EQUIP 1 77701 5 16\n" +
             "  - MOB 0 77700 3 77701 1  # ...and 3 here\n" +
@@ -185,7 +186,20 @@ namespace DataUtils.Tests
             Assert.That(cmds.Any(c => c.StartsWith("EQUIP 3 77701 ") && c.EndsWith(" 16 50")), Is.True,
                 "if_flag 3 (check + persist) kept");
             Assert.That(cmds, Does.Contain("FOLLOW 1 77700 77700 77700"), "an unmodellable FOLLOW is kept verbatim");
-            Assert.That(cmds.Count, Is.EqualTo(13), string.Join("\n", cmds));
+            int m = cmds.IndexOf("MOB 0 77700 1 77700 1");
+            Assert.That(m >= 0 && m + 1 < cmds.Count && cmds[m + 1] == "TRIGGER 1 0 77700", Is.True,
+                "a mob-type TRIGGER stays right after its MOB:\n" + string.Join("\n", cmds));
+            Assert.That(cmds.Count, Is.EqualTo(14), string.Join("\n", cmds));
+        }
+
+        [Test]
+        public void MobMaxInWorld_EditedInUi_AppliesToEveryMobCommand()
+        {
+            var z = Load(Path.Combine(root, "src"));
+            z.Mobs[77700, 0].MaxInWorld = 7;
+            var cmds = Commands(SaveAndRead(z, "zone.yaml"));
+            Assert.That(cmds, Does.Contain("MOB 0 77700 7 77700 1"));
+            Assert.That(cmds, Does.Contain("MOB 0 77700 7 77701 1"));
         }
 
         [Test]

@@ -153,6 +153,7 @@ namespace DataUtils
                                     {
                                         mobData.MaxInWorld = val;
                                     }
+                                    mobData.ZoneMaxAtLoad = mobData.MaxInWorld;
                                 }
 
                                 Room room = roomsCollection[StringUtils.ToIntFast(parts[4]), 0];
@@ -221,6 +222,21 @@ namespace DataUtils
                                 // whole file is read, and keep only the truly unresolvable verbatim
                                 // (same-vnum groups, virtual-room leaders): the engine resolves them at reset.
                                 if (!TryFollow(roomsCollection, parts)) pendingFollows.Add(input);
+                                break;
+                            case 'T': //Триггер (TRIGGER) и переменная триггера (VAR)
+                            case 'V':
+                                {
+                                    // <flag> <type> ...: type 0 = mob (binds to the last loaded mob),
+                                    // 1 = object (last loaded object), 2 = room (uses its room argument).
+                                    parts = input.Split(' ');
+                                    int trigType = parts.Length > 2 ? StringUtils.ToIntFast(parts[2]) : 2;
+                                    if (trigType == 0 && lastLoadedMob.VNum >= 0 && !lastMobVerbatim)
+                                        lastLoadedMob.AnchoredCommands.Add(input.Trim());
+                                    else if (trigType == 1 && lastLoadedObject.VNum >= 0 && !lastObjVerbatim)
+                                        lastLoadedObject.AnchoredCommands.Add(input.Trim());
+                                    else
+                                        KeepVerbatim(zone, input); // room type, or its anchor is itself verbatim
+                                }
                                 break;
                             case 'P': //Поместить предмет в последний загруженный предмет
                                 if (lastObjVerbatim) { KeepVerbatim(zone, input); break; }
@@ -427,6 +443,7 @@ namespace DataUtils
                 var maxInWorld = CommandMax(lm, m);
                 string conditionFlag = IfFlag(lm.ConditionFlag, lm.IfFlagRaw);
                 sw.WriteLine($"M {conditionFlag} {lm.VNum} {maxInWorld} {virualRoomVnum} {lm.MaxInRoom}\t({name}");
+                foreach (string anchored in lm.AnchoredCommands) sw.WriteLine(anchored);
                 if (lm.FollowsBy != -1)
                 {
                     var mf = mobsCollection[lm.FollowsBy, 0];
@@ -473,6 +490,7 @@ namespace DataUtils
                     // 'O' <flag> <obj_vnum> <max_in_world> <room_vnum|-1> <load%|-1> -1 = 100%
                     var prob = lo.Probability;// == 100 ? -1 : lo.Probability;
                     sw.WriteLine($"O {lo.LoadType} {lo.VNum} {oMax} {r.VNum} {prob}\t({name})");//Объект грузится безусловно
+                    foreach (string anchored in lo.AnchoredCommands) sw.WriteLine(anchored);
                     foreach (OperatedObj loin in lo.ObjectsInObject)
                     {
                         var oin = objectsCollection[loin.VNum, 0];
@@ -490,6 +508,7 @@ namespace DataUtils
                     var maxInWorld = CommandMax(lm, m);
                     string conditionFlag = IfFlag(lm.ConditionFlag, lm.IfFlagRaw);
                     sw.WriteLine($"M {conditionFlag} {lm.VNum} {maxInWorld} {r.VNum} {lm.MaxInRoom}\t({name})");
+                    foreach (string anchored in lm.AnchoredCommands) sw.WriteLine(anchored);
                     if (lm.FollowsBy != -1)
                     {
                         var mf = mobsCollection[lm.FollowsBy, 0];
@@ -626,6 +645,8 @@ namespace DataUtils
         {
             int mobMax = m?.MaxInWorld ?? -1;
             if (lm.CommandMaxInWorld <= 0) return mobMax;
+            if (m != null && m.ZoneMaxAtLoad != int.MinValue && m.MaxInWorld != m.ZoneMaxAtLoad)
+                return mobMax; // edited in the UI: the new limit applies to every spawn, as before
             return mobMax > 0 ? Math.Min(lm.CommandMaxInWorld, mobMax) : lm.CommandMaxInWorld;
         }
 

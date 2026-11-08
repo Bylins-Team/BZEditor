@@ -294,7 +294,7 @@ namespace DataUtils
         /// <summary>
         /// Engine reset-command string (yaml_world_data_source.cpp ParseCommandString: keyword or
         /// letter, comment after '#') -> the legacy .zon line ZoneFileManager parses, with every
-        /// positional field present. Returns null for commands the editor does not model (T/V).
+        /// positional field present (T/V are passed unpadded: VAR ends in free text).
         /// The one layout difference: engine G/GIVE is "if obj max [prob]", the .zon layout is
         /// "G if obj max -1 prob". A 6-field "G .. -1 prob" was written by older editor builds;
         /// read it the way it was meant (prob in the last field).
@@ -314,7 +314,7 @@ namespace DataUtils
             {
                 case "T":
                 case "V":
-                    return null;
+                    return string.Join(" ", t); // positional + free text; ZoneFileManager anchors them
                 case "G":
                     if (!(t.Count >= 6 && t[4] == "-1")) t.Insert(4, "-1");
                     break;
@@ -344,6 +344,8 @@ namespace DataUtils
                 case "R": kw = "REMOVE"; keep = 4; break;
                 case "Q": kw = "EXTRACT"; keep = 3; break;
                 case "F": kw = "FOLLOW"; keep = 5; break;
+                case "T": kw = "TRIGGER"; keep = t.Count; break;
+                case "V": kw = "VAR"; keep = t.Count; break;
                 default: return line;
             }
             while (t.Count > keep) t.RemoveAt(t.Count - 1);

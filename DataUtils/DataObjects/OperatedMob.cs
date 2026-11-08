@@ -28,6 +28,13 @@ namespace DataUtils
         public int CommandMaxInWorld { get; set; } = -1;
 
         /// <summary>
+        /// Mob/object-type TRIGGER and VAR reset commands that followed this spawn, as .zon letter lines.
+        /// The engine binds them to the entity loaded just before (tmob/tobj), so they are written right
+        /// after this spawn's own line. There is no UI for them; they are carried through unchanged.
+        /// </summary>
+        public readonly System.Collections.Generic.List<string> AnchoredCommands = new System.Collections.Generic.List<string>();
+
+        /// <summary>
         /// The reset command's if_flag as read (-1 = not loaded). Bit 1 (CHECK_SUCCESS) is what
         /// ConditionFlag edits; bit 2 (FLAG_PERSIST: "don't change the success state") has no UI
         /// and is carried through here so a save does not turn 3 into 1 or 2 into 0.
