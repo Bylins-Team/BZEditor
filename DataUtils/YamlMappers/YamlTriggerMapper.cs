@@ -21,7 +21,8 @@ namespace DataUtils.YamlMappers
                 Narg = trigger.NumArg,
                 AddFlag = trigger.AddFlag,
                 Arglist = trigger.Arg ?? "",
-                Script = (trigger.Body ?? "").TrimEnd('\r', '\n')
+                Script = (trigger.Body ?? "").TrimEnd('\r', '\n'),
+                Language = string.IsNullOrEmpty(trigger.Language) ? null : trigger.Language
             };
 
             // Trigger types as engine symbolic names; the name of a bit depends on the attach type
@@ -42,7 +43,8 @@ namespace DataUtils.YamlMappers
                 NumArg = yaml.Narg,
                 AddFlag = yaml.AddFlag,
                 Arg = yaml.Arglist ?? "",
-                Body = yaml.Script ?? ""
+                Body = yaml.Script ?? "",
+                Language = yaml.Language ?? yaml.ScriptLanguage
             };
 
             // Trigger types from engine names back to single-plane letter flags

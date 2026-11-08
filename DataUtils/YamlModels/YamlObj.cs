@@ -145,7 +145,7 @@ namespace DataUtils.YamlModels
         /// <summary>
         /// Max in world
         /// </summary>
-        public int MaxInWorld { get; set; }
+        public int MaxInWorld { get; set; } = -1; // engine: absent key = UNLIMITED_GLOBAL_MAXIMUM (-1); 0 = never loads
 
         /// <summary>
         /// Minimum remorts required

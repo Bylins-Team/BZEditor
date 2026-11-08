@@ -4811,7 +4811,7 @@ namespace BZEditor
             lvDetails.Groups.Add(new ListViewGroup("Преметы, рассыпающиеся при репопе зоны", HorizontalAlignment.Left));
             foreach (Obj o in ZoneDm.Objects)
             {
-                if (!o.Affects.Contains("D0")) continue;
+                if (!EngineCodec.DecodeAsciiFlags(o.ExctraEffects).Contains(EngineDictionaries.ExtraFlags["kRepopDecay"])) continue;
                 Obj curObj = allobjects[o.VNum, 0];
                 lvDetails.Items.Add(new ExListViewItem("[" + o.VNum + "] " + ((curObj != null) ? curObj.Cases.Imen : ""))
                 {

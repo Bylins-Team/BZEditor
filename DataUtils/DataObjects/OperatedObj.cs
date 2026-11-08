@@ -4,6 +4,14 @@
     {
         public readonly OperatedObjCollection ObjectsInObject = new OperatedObjCollection();
         private int probability = 100;
+
+        /// <summary>
+        /// Mob/object-type TRIGGER and VAR reset commands that followed this spawn, as .zon letter lines.
+        /// The engine binds them to the entity loaded just before (tmob/tobj), so they are written right
+        /// after this spawn's own line. There is no UI for them; they are carried through unchanged.
+        /// </summary>
+        public readonly System.Collections.Generic.List<string> AnchoredCommands = new System.Collections.Generic.List<string>();
+
         private int loadType;
         public OperatedObj(int inVNum)
         {

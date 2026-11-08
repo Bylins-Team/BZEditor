@@ -23,6 +23,13 @@ namespace DataUtils
         public override string FormatDescription => "YAML Format (Human-Readable)";
         public override Encoding DefaultEncoding => StaticData.CurrentEncoding;
 
+        /// <summary>
+        /// Encoding for YAML writes: UTF-8 without a BOM, like the engine's own resave, so a file
+        /// saved by the editor does not differ from the engine's canonical bytes by a preamble.
+        /// </summary>
+        private static Encoding WriteEncoding =>
+            StaticData.CurrentEncoding is UTF8Encoding ? FileEncodingResolver.Utf8NoBom : StaticData.CurrentEncoding;
+
         public YamlFormatProvider()
         {
             // Engine (bylins/mud yaml_world_data_source.cpp) reads snake_case keys.
@@ -31,7 +38,7 @@ namespace DataUtils
             // load. Only null (unset enum names / optional speed) and empty collections are
             // omitted. This also makes the editor's own YAML round-trip idempotent.
             serializer = new SerializerBuilder()
-                .WithNamingConvention(UnderscoredNamingConvention.Instance)
+                .WithNamingConvention(EngineNamingConvention.Instance)
                 .WithTypeConverter(new NamedIntMapConverter())
                 .WithTypeConverter(new MobSpellMapConverter())
                 .ConfigureDefaultValuesHandling(DefaultValuesHandling.OmitNull
@@ -39,7 +46,7 @@ namespace DataUtils
                 .Build();
 
             deserializer = new DeserializerBuilder()
-                .WithNamingConvention(UnderscoredNamingConvention.Instance)
+                .WithNamingConvention(EngineNamingConvention.Instance)
                 .WithTypeConverter(new NamedIntMapConverter())
                 .WithTypeConverter(new MobSpellMapConverter())
                 .IgnoreUnmatchedProperties()
@@ -131,7 +138,7 @@ namespace DataUtils
                     sb.Append('\n');
                     sb.Append(NestUnderRel(e.Key, e.Value));
                 }
-                File.WriteAllText(flatPath, sb.ToString(), DefaultEncoding);
+                File.WriteAllText(flatPath, sb.ToString(), WriteEncoding);
             }
 
             // A zone must not keep both layouts; the engine warns and ignores one otherwise.
@@ -166,7 +173,7 @@ namespace DataUtils
             if (!zones.Contains(zoneVnum)) zones.Add(zoneVnum);
             zones.Sort();
             var index = new Dictionary<string, List<int>> { { "zones", zones } };
-            File.WriteAllText(indexPath, serializer.Serialize(index), DefaultEncoding);
+            File.WriteAllText(indexPath, serializer.Serialize(index), WriteEncoding);
         }
 
         /// <summary>
@@ -191,7 +198,7 @@ namespace DataUtils
 
             if (!config.ContainsKey("line_endings")) config["line_endings"] = "unix";
             config["layout"] = "flat"; // the editor always writes the flat layout
-            File.WriteAllText(configPath, serializer.Serialize(config), DefaultEncoding);
+            File.WriteAllText(configPath, serializer.Serialize(config), WriteEncoding);
         }
 
         /// <summary>
@@ -248,8 +255,106 @@ namespace DataUtils
                 string line = raw;
                 int tab = line.IndexOf('\t');
                 if (tab >= 0) line = line.Substring(0, tab);
-                yamlZone.Commands.Add(line.TrimEnd());
+                yamlZone.Commands.Add(ToEngineCommand(line.TrimEnd()));
             }
+
+            // Commands the editor does not model (TRIGGER/VAR) are kept verbatim from the load.
+            foreach (string c in zone.UnmodeledCommands)
+                yamlZone.Commands.Add(c);
+        }
+
+        /// <summary>
+        /// snake_case like the engine, except for the engine keys that are not snake_case
+        /// (typeA_zones/typeB_zones). YamlDotNet runs [YamlMember(Alias)] through the naming
+        /// convention too, so an alias cannot express them -- they were read and written as
+        /// type_a_zones and the zone's reset links were lost.
+        /// </summary>
+        internal sealed class EngineNamingConvention : INamingConvention
+        {
+            public static readonly EngineNamingConvention Instance = new EngineNamingConvention();
+
+            public string Apply(string value)
+            {
+                switch (value)
+                {
+                    case "TypeAZones": return "typeA_zones";
+                    case "TypeBZones": return "typeB_zones";
+                    default: return UnderscoredNamingConvention.Instance.Apply(value);
+                }
+            }
+        }
+
+        private static readonly Dictionary<string, string> EngineKeywordToLetter = new Dictionary<string, string>
+        {
+            { "MOB", "M" }, { "OBJECT", "O" }, { "GIVE", "G" }, { "EQUIP", "E" }, { "PUT", "P" },
+            { "DOOR", "D" }, { "REMOVE", "R" }, { "TRIGGER", "T" }, { "VAR", "V" }, { "EXTRACT", "Q" },
+            { "FOLLOW", "F" },
+        };
+
+        /// <summary>
+        /// Engine reset-command string (yaml_world_data_source.cpp ParseCommandString: keyword or
+        /// letter, comment after '#') -> the legacy .zon line ZoneFileManager parses, with every
+        /// positional field present (T/V are passed unpadded: VAR ends in free text).
+        /// The one layout difference: engine G/GIVE is "if obj max [prob]", the .zon layout is
+        /// "G if obj max -1 prob". A 6-field "G .. -1 prob" was written by older editor builds;
+        /// read it the way it was meant (prob in the last field).
+        /// </summary>
+        internal static string FromEngineCommand(string command)
+        {
+            string s = command;
+            int hash = s.IndexOf('#');
+            if (hash >= 0) s = s.Substring(0, hash);
+            var t = new List<string>(s.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries));
+            if (t.Count == 0) return null;
+            string kw = t[0].ToUpperInvariant();
+            string letter;
+            if (!EngineKeywordToLetter.TryGetValue(kw, out letter)) letter = kw;
+            t[0] = letter;
+            switch (letter)
+            {
+                case "T":
+                case "V":
+                    return string.Join(" ", t); // positional + free text; ZoneFileManager anchors them
+                case "G":
+                    if (!(t.Count >= 6 && t[4] == "-1")) t.Insert(4, "-1");
+                    break;
+                case "Q":
+                    while (t.Count > 3) t.RemoveAt(t.Count - 1);
+                    break;
+            }
+            while (t.Count < 6) t.Add("-1");
+            return string.Join(" ", t);
+        }
+
+        /// <summary>Legacy .zon command line -> the engine's canonical keyword form.</summary>
+        internal static string ToEngineCommand(string line)
+        {
+            var t = new List<string>(line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
+            if (t.Count == 0) return line;
+            int keep;
+            string kw;
+            switch (t[0])
+            {
+                case "M": kw = "MOB"; keep = 6; break;
+                case "O": kw = "OBJECT"; keep = 6; break;
+                case "E": kw = "EQUIP"; keep = 6; break;
+                case "P": kw = "PUT"; keep = 6; break;
+                case "G": kw = "GIVE"; if (t.Count > 4) t.RemoveAt(4); keep = 5; break;
+                case "D": kw = "DOOR"; keep = 5; break;
+                case "R": kw = "REMOVE"; keep = 4; break;
+                case "Q": kw = "EXTRACT"; keep = 3; break;
+                case "F": kw = "FOLLOW"; keep = 5; break;
+                case "T": kw = "TRIGGER"; keep = t.Count; break;
+                case "V": kw = "VAR"; keep = t.Count; break;
+                default: return line;
+            }
+            while (t.Count > keep) t.RemoveAt(t.Count - 1);
+            // The trailing optional field (max_in_room / load%) defaults to -1 in the engine.
+            if (t.Count == keep && (kw == "OBJECT" || kw == "EQUIP" || kw == "PUT" || kw == "GIVE" || kw == "MOB")
+                && t[keep - 1] == "-1")
+                t.RemoveAt(keep - 1);
+            t[0] = kw;
+            return string.Join(" ", t);
         }
 
         /// <summary>
@@ -281,18 +386,38 @@ namespace DataUtils
                   .Append(yamlZone.Lifespan).Append(" ")
                   .Append(yamlZone.ResetMode).Append(" ")
                   .Append(yamlZone.ResetIdle).Append("\n");
-                foreach (string c in yamlZone.Commands) sb.Append(c).Append("\n");
+                zone.UnmodeledCommands.Clear();
+                foreach (string c in yamlZone.Commands)
+                {
+                    string legacy = FromEngineCommand(c);
+                    if (legacy == null)
+                    {
+                        if (c.Trim().Length > 0) zone.UnmodeledCommands.Add(c.Trim());
+                        continue;
+                    }
+                    sb.Append(legacy).Append("\n");
+                }
                 sb.Append("S\n$\n");
 
                 File.WriteAllText(Path.Combine(Path.Combine(tmp, "ZON"), num + ".zon"), sb.ToString(), encoding);
 
                 StaticData.WorldFolderPath = tmp;
                 var throwaway = new Zone();
-                new ZoneFileManager().Load(throwaway, mobs, rooms, num, encoding);
+                var zfm = new ZoneFileManager();
+                // Surface parse failures: the reader stops at the first bad command, so a silent
+                // failure here used to drop every reset command after it with no warning.
+                zfm.ExceptionThrowed += (message, ex, type) =>
+                    FireExceptionEvent("Reset commands of zone " + num + " were not fully read:\n" + message, ex, type);
+                zfm.Load(throwaway, mobs, rooms, num, encoding);
 
                 // 'Q' (EXTRACT) commands are zone-level and not handled by the mapper.
                 foreach (OperatedMob m in throwaway.MobsToRemove)
                     zone.MobsToRemove.Add(m.VNum, m.ConditionFlag, -1);
+                // Spawns into the zone's virtual room (NN99) and commands the room model cannot hold
+                // were parsed into the throwaway zone; without copying them they vanished on save.
+                foreach (OperatedMob m in throwaway.MobsLoadedInVirtualRoom)
+                    zone.MobsLoadedInVirtualRoom.Add(m);
+                zone.UnmodeledCommands.AddRange(throwaway.UnmodeledCommands);
             }
             finally
             {
@@ -570,7 +695,7 @@ namespace DataUtils
                 PopulateZoneCommands(yamlZone, zone, objects, mobs, rooms);
                 string yaml = serializer.Serialize(yamlZone);
                 string zonePath = Path.Combine(zoneDir, "zone.yaml");
-                File.WriteAllText(zonePath, yaml, DefaultEncoding);
+                File.WriteAllText(zonePath, yaml, WriteEncoding);
 
                 EnsureZoneInGlobalIndex(zone.Number);
                 EnsureWorldConfig();
