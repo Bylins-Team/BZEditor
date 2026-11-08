@@ -36,7 +36,11 @@ namespace DataUtils.Tests
             "  - TRIGGER 0 2 77700 77700\n" +
             "  - MOB 2 77700 2 77799 1  # zone virtual room, persist bit\n" +
             "  - EQUIP 3 77701 5 16 50\n" +
-            "  - FOLLOW 1 77700 77700 77700  # a same-vnum group the room model cannot hold\n";
+            "  - FOLLOW 1 77700 77700 77700  # a same-vnum group the room model cannot hold\n" +
+            "  - MOB 0 77701 1 77799 1  # virtual room again: the follower, loaded before its leader\n" +
+            "  - GIVE 1 77703 5  # if_flag 1: the command before it must stay this mob's own MOB\n" +
+            "  - FOLLOW 1 77799 77702 77701\n" +
+            "  - MOB 0 77702 1 77799 1  # the leader, loaded after the follower\n";
 
         private const string RoomsYaml =
             "0:\n  name: Комната 0\n  sector: kInside\n  exits:\n    - direction: east\n      to_room: 77701\n      exit_flags: 1\n" +
@@ -47,7 +51,9 @@ namespace DataUtils.Tests
             "{aliases: x, nominative: x, genitive: x, dative: x, accusative: x, instrumental: x, prepositional: x}";
 
         private const string MobsYaml =
-            "0:\n  names: " + Names + "\n  stats: {level: 1}\n  action_flags: [kNpc, UNUSED_57, UNUSED_59]\n";
+            "0:\n  names: " + Names + "\n  stats: {level: 1}\n  action_flags: [kNpc, UNUSED_57, UNUSED_59]\n" +
+            "1:\n  names: " + Names + "\n  stats: {level: 1}\n  action_flags: [kNpc]\n" +
+            "2:\n  names: " + Names + "\n  stats: {level: 1}\n  action_flags: [kNpc]\n";
 
         private const string ObjectsYaml =
             "0:\n  names: " + Names + "\n  type: kWeapon\n  spec_param: 143\n" +
@@ -189,7 +195,33 @@ namespace DataUtils.Tests
             int m = cmds.IndexOf("MOB 0 77700 1 77700 1");
             Assert.That(m >= 0 && m + 1 < cmds.Count && cmds[m + 1] == "TRIGGER 1 0 77700", Is.True,
                 "a mob-type TRIGGER stays right after its MOB:\n" + string.Join("\n", cmds));
-            Assert.That(cmds.Count, Is.EqualTo(14), string.Join("\n", cmds));
+            Assert.That(cmds.Count, Is.EqualTo(18), string.Join("\n", cmds));
+        }
+
+        /// <summary>
+        /// Следование в виртуальной комнате зоны (NN99). Её мобы лежат в отдельной коллекции зоны,
+        /// поэтому FOLLOW там не разбирался и уходил в дословные команды, а запись ставила F сразу
+        /// за M последователя -- то есть раньше M лидера (движок такое следование теряет) и между
+        /// мобом и его вещью, у которой бит 1 означает «только если предыдущая команда удалась».
+        /// </summary>
+        [Test]
+        public void VirtualRoomFollow_KeepsItsPlaceAfterTheSpawnsAndItems()
+        {
+            var cmds = Commands(SaveAndRead(Load(Path.Combine(root, "src")), "zone.yaml"));
+            string all = string.Join("\n", cmds);
+
+            int follower = cmds.IndexOf("MOB 0 77701 1 77799 1");
+            int leader = cmds.IndexOf("MOB 0 77702 1 77799 1");
+            int give = cmds.IndexOf("GIVE 1 77703 -1");
+            int follow = cmds.IndexOf("FOLLOW 1 77799 77702 77701");
+
+            Assert.That(follower, Is.GreaterThanOrEqualTo(0), all);
+            Assert.That(leader, Is.GreaterThanOrEqualTo(0), all);
+            Assert.That(follow, Is.GreaterThanOrEqualTo(0), "the follow is modelled, not dropped:\n" + all);
+            Assert.That(cmds.Count(c => c == "FOLLOW 1 77799 77702 77701"), Is.EqualTo(1),
+                "and it is written once:\n" + all);
+            Assert.That(give, Is.EqualTo(follower + 1), "the item follows its own MOB:\n" + all);
+            Assert.That(follow, Is.GreaterThan(leader), "F comes after the leader's MOB:\n" + all);
         }
 
         [Test]

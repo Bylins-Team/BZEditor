@@ -221,7 +221,7 @@ namespace DataUtils
                                 // A FOLLOW can precede the M of its follower; retry those once the
                                 // whole file is read, and keep only the truly unresolvable verbatim
                                 // (same-vnum groups, virtual-room leaders): the engine resolves them at reset.
-                                if (!TryFollow(roomsCollection, parts)) pendingFollows.Add(input);
+                                if (!TryFollow(roomsCollection, zone, parts)) pendingFollows.Add(input);
                                 break;
                             case 'T': //Триггер (TRIGGER) и переменная триггера (VAR)
                             case 'V':
@@ -328,7 +328,7 @@ namespace DataUtils
                         }
                     }
                     foreach (string follow in pendingFollows)
-                        if (!TryFollow(roomsCollection, follow.Split(' ')))
+                        if (!TryFollow(roomsCollection, zone, follow.Split(' ')))
                             KeepVerbatim(zone, follow);
                 }
                 catch (Exception ex)
@@ -436,6 +436,7 @@ namespace DataUtils
             }
 
             var virualRoomVnum = zone.Number * 100 + 99;
+            var virtualFollowLines = new List<string>();
             foreach (OperatedMob lm in zone.MobsLoadedInVirtualRoom)
             {
                 var m = mobsCollection[lm.VNum, 0];
@@ -448,7 +449,11 @@ namespace DataUtils
                 {
                     var mf = mobsCollection[lm.FollowsBy, 0];
                     var namef = mf?.Cases.Imen ?? "";
-                    sw.WriteLine($"F {FollowFlag(lm)} {virualRoomVnum} {lm.FollowsBy} {lm.VNum} -1\t({namef}");
+                    // Откладываем F до конца виртуальной комнаты, как и в цикле по комнатам ниже:
+                    // F связывает двух уже загруженных мобов, поэтому M лидера должна стоять раньше.
+                    // Заодно F не разрывает пару "M моба -- его G/E": у вещи с битом 1 предыдущей
+                    // командой должна остаться загрузка самого моба, а не следование.
+                    virtualFollowLines.Add($"F {FollowFlag(lm)} {virualRoomVnum} {lm.FollowsBy} {lm.VNum} -1\t({namef})");
                 }
                 foreach (MobObj moin in lm.Items)
                 {
@@ -471,9 +476,13 @@ namespace DataUtils
                 {
                     var o = objectsCollection[moin.VNum, 0];
                     var namein = o?.Cases.Imen.ToLowerInvariant() ?? "";
-                    sw.WriteLine($"L {moin.VNum} {moin.Probability} 0 {moin.LoadType} {moin.SpecParam}\t({namein})");
+                    // Раскладка 'L' общая с циклом по комнатам: <vnum> <шанс> <тип> <параметр>.
+                    // Лишнее поле сдвигало тип и параметр при следующей загрузке.
+                    sw.WriteLine($"L {moin.VNum} {moin.Probability} {moin.LoadType} {moin.SpecParam}\t({namein})");
                 }
             }
+            foreach (var followLine in virtualFollowLines)
+                sw.WriteLine(followLine);
             foreach (Room r in roomsCollection)
             {
                 foreach (OperatedObj lo in r.RemoovingObjects)
@@ -574,17 +583,27 @@ namespace DataUtils
             zone.MobsToRemove.Add(StringUtils.ToIntFast(parts[2]), parts[1] == "1", -1);
         }
 
-        private static bool TryFollow(RoomsCollection roomsCollection, string[] parts)
+        // Мобы виртуальной комнаты зоны (NN99) лежат не в комнате, а в своей коллекции зоны:
+        // настоящей комнаты NN99 в мире нет, поэтому FOLLOW там не разбирался вовсе и уходил
+        // в дословные команды, а выставленное в UI следование писалось второй такой же строкой.
+        private static OperatedMobsCollection MobsOfRoom(RoomsCollection roomsCollection, Zone zone, int roomVNum)
+        {
+            if (zone != null && roomVNum == zone.Number * 100 + 99)
+                return zone.MobsLoadedInVirtualRoom;
+            return roomsCollection[roomVNum, 0]?.LoadingMobsCollection;
+        }
+
+        private static bool TryFollow(RoomsCollection roomsCollection, Zone zone, string[] parts)
         {
             int roomVNum = StringUtils.ToIntFast(parts[2]);
             int leaderVNum = StringUtils.ToIntFast(parts[3]);
             int followerVNum = StringUtils.ToIntFast(parts[4]);
-            Room roomF = roomsCollection[roomVNum, 0];
+            OperatedMobsCollection roomMobs = MobsOfRoom(roomsCollection, zone, roomVNum);
             bool success = false;
-            if (roomF != null) //Это хитрожопие сделано из за второй строки в зоне 277
+            if (roomMobs != null) //Это хитрожопие сделано из за второй строки в зоне 277
             {
                 OperatedMob leader = null;
-                foreach (OperatedMob mob in roomF.LoadingMobsCollection)
+                foreach (OperatedMob mob in roomMobs)
                 {
                     //Ищем лидера в комнате
                     if (mob.VNum == leaderVNum && mob.Leader)
@@ -596,7 +615,7 @@ namespace DataUtils
                 if (leader == null)
                 {
                     //если лидера нет, ищем потенциального лидера
-                    foreach (OperatedMob mob in roomF.LoadingMobsCollection)
+                    foreach (OperatedMob mob in roomMobs)
                     {
                         if (mob.VNum == leaderVNum && !mob.Leader && mob.FollowsBy == -1)
                         {
@@ -608,7 +627,7 @@ namespace DataUtils
                 }
                 if (leader != null)
                 {
-                    foreach (OperatedMob mob in roomF.LoadingMobsCollection)
+                    foreach (OperatedMob mob in roomMobs)
                     {
                         if (!mob.Leader && mob.FollowsBy == -1 && mob.VNum == followerVNum)
                         {
