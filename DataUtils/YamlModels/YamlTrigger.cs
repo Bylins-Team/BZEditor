@@ -48,5 +48,14 @@ namespace DataUtils.YamlModels
         /// </summary>
         [YamlMember(ScalarStyle = ScalarStyle.Literal)]
         public string Script { get; set; } = "";
+
+        /// <summary>
+        /// Script language ("dg" when absent, or "lua"). Kept verbatim so a lua trigger is not
+        /// re-saved as a DG one. The engine also accepts the older key script_language.
+        /// </summary>
+        public string Language { get; set; }
+
+        /// <summary>Older spelling of <see cref="Language"/>; read only, never written.</summary>
+        public string ScriptLanguage { get; set; }
     }
 }

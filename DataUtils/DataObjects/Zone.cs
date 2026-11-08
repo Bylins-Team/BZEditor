@@ -1,4 +1,5 @@
-﻿namespace DataUtils
+﻿using System.Collections.Generic;
+namespace DataUtils
 {
     public class Zone : BaseDataObject
     {
@@ -219,6 +220,12 @@
                 FireChangeEvent(this);
             }
         }
+
+        /// <summary>Engine <c>entrance</c> room vnum, kept as loaded; -1 = not set (new zone).</summary>
+        public int Entrance { get; set; } = -1;
+
+        /// <summary>Reset commands the editor does not model (TRIGGER/VAR), kept verbatim for the save.</summary>
+        public readonly List<string> UnmodeledCommands = new List<string>();
 
         public bool Test
         {

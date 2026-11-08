@@ -20,6 +20,24 @@ namespace DataUtils
         }
 
         /// <summary>
+        /// max_in_world of this very reset command as read from the world (-1 = not loaded, e.g. a
+        /// spawn added in the UI). The engine checks it per command (total_online &lt; arg2), so a zone
+        /// may give one mob different limits in different rooms; the save keeps it, clamped to
+        /// Mob.MaxInWorld, instead of overwriting every command with the zone-wide maximum.
+        /// </summary>
+        public int CommandMaxInWorld { get; set; } = -1;
+
+        /// <summary>
+        /// The reset command's if_flag as read (-1 = not loaded). Bit 1 (CHECK_SUCCESS) is what
+        /// ConditionFlag edits; bit 2 (FLAG_PERSIST: "don't change the success state") has no UI
+        /// and is carried through here so a save does not turn 3 into 1 or 2 into 0.
+        /// </summary>
+        public int IfFlagRaw { get; set; } = -1;
+
+        /// <summary>if_flag of the FOLLOW command that made this mob follow (-1 = not loaded).</summary>
+        public int FollowIfFlagRaw { get; set; } = -1;
+
+        /// <summary>
         /// Флаг условия загрузки
         /// </summary>
         public bool ConditionFlag

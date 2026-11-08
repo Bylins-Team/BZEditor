@@ -86,8 +86,13 @@ namespace DataUtils.YamlMappers
 
         private static void AddExitToList(List<YamlExit> exits, string direction, Exit exit)
         {
-            // Only add exit if it has a valid destination
-            if (exit == null || exit.RoomVNum < 0)
+            // An exit without a destination still matters when it carries a description, keywords,
+            // door flags or a key: the engine keeps such "to_room: -1" exits (a door or a view that
+            // leads nowhere), and dropping them lost the text players see on look/open.
+            if (exit == null)
+                return;
+            if (exit.RoomVNum < 0 && string.IsNullOrEmpty(exit.Description) && string.IsNullOrEmpty(exit.Aliases)
+                && exit.ExitFlag == 0 && exit.Key <= 0)
                 return;
 
             exits.Add(new YamlExit

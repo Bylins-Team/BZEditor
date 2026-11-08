@@ -32,7 +32,7 @@ namespace DataUtils
         {
             filePos = 0;
             string additionalInfo = "отсутствует...";
-            string filePath = Path.Combine(StaticData.WorldFolderPath + @"\ZON\", zoneNumber + ".zon");
+            string filePath = Path.Combine(StaticData.WorldFolderPath, "ZON", zoneNumber + ".zon");
             // The zone number must be correct even when the .zon is missing or empty (some
             // worlds ship a placeholder zone without a header); the "#<n>" line below, when
             // present, overrides this with the same value.
@@ -69,6 +69,11 @@ namespace DataUtils
                     string[] parts;
                     var lastLoadedMob = new OperatedMob(-1);
                     var lastLoadedObject = new OperatedObj(-1);
+                    // A command the room model cannot hold (spawn into a room missing from the zone,
+                    // an unresolvable FOLLOW) is kept verbatim in zone.UnmodeledCommands instead of being
+                    // dropped; the G/E/P that hang off such a spawn go with it.
+                    bool lastMobVerbatim = false, lastObjVerbatim = false;
+                    var pendingFollows = new List<string>();
                     bool exit = false;
 
                     while (!exit)
@@ -134,8 +139,9 @@ namespace DataUtils
                                 parts = input.Split(' ');
                                 lastLoadedMob = new OperatedMob(StringUtils.ToIntFast(parts[2]))
                                 {
-                                    ConditionFlag = (parts[1] == "1"),
-                                    //MaxInWorld = StringUtils.ToIntFast(parts[3]),
+                                    ConditionFlag = (StringUtils.ToIntFast(parts[1]) & 1) != 0,
+                                    IfFlagRaw = StringUtils.ToIntFast(parts[1]),
+                                    CommandMaxInWorld = StringUtils.ToIntFast(parts[3]),
                                     MaxInRoom = StringUtils.ToIntFast(parts[5])
                                 };
                                 var mobData = mobsCollection[lastLoadedMob.VNum, 0];
@@ -156,14 +162,16 @@ namespace DataUtils
                                     {
                                         //Виртуальная комната
                                         zone.MobsLoadedInVirtualRoom.Add(lastLoadedMob);
+                                        lastMobVerbatim = false;
                                         break;
                                     }
-                                    //кривой файл 
-                                    additionalInfo += $"\nПопытка загрузить моба ({parts[2]}) в отсутствующую комнату с vnum ({parts[4]}).";
+                                    KeepVerbatim(zone, input);
+                                    lastMobVerbatim = true;
                                 }
                                 else
                                 {
                                     room.LoadingMobsCollection.Add(lastLoadedMob);
+                                    lastMobVerbatim = false;
                                 }
                                 break;
                             case 'O': //Объекты, заргужаемые в комнаты
@@ -179,12 +187,19 @@ namespace DataUtils
                                     Room roomO = roomsCollection[StringUtils.ToIntFast(parts[4]), 0];
                                     if (roomO == null)
                                     {
-                                        additionalInfo += $"\nПопытка загрузить моба ({parts[2]}) в отсутствующую комнату с vnum ({parts[4]}).";
+                                        KeepVerbatim(zone, input);
+                                        lastObjVerbatim = true;
                                     }
                                     else
                                     {
                                         roomO.LoadingObjectsCollection.Add(lastLoadedObject);
+                                        lastObjVerbatim = false;
                                     }
+                                }
+                                else
+                                {
+                                    KeepVerbatim(zone, input);
+                                    lastObjVerbatim = true;
                                 }
                                 break;
                             case 'F': //Мобы следуют в группе
@@ -202,57 +217,13 @@ namespace DataUtils
                                     различных мобов с одинаковыми названиями, как это к примеру реализовано в 3д-север.)
                                  */
                                 //bool ifflag = (parts[1] == "1");
-                                int roomVNum = StringUtils.ToIntFast(parts[2]);
-                                int leaderVNum = StringUtils.ToIntFast(parts[3]);
-                                int followerVNum = StringUtils.ToIntFast(parts[4]);
-                                Room roomF = roomsCollection[roomVNum, 0];
-                                bool success = false;
-                                if (roomF != null) //Это хитрожопие сделано из за второй строки в зоне 277
-                                {
-                                    OperatedMob leader = null;
-                                    foreach (OperatedMob mob in roomF.LoadingMobsCollection)
-                                    {
-                                        //Ищем лидера в комнате
-                                        if (mob.VNum == leaderVNum && mob.Leader)
-                                        {
-                                            leader = mob;
-                                            break;
-                                        }
-                                    }
-                                    if (leader == null)
-                                    {
-                                        //если лидера нет, ищем потенциального лидера
-                                        foreach (OperatedMob mob in roomF.LoadingMobsCollection)
-                                        {
-                                            if (mob.VNum == leaderVNum && !mob.Leader && mob.FollowsBy == -1)
-                                            {
-                                                leader = mob;
-                                                leader.Leader = true;
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    if (leader != null)
-                                    {
-                                        foreach (OperatedMob mob in roomF.LoadingMobsCollection)
-                                        {
-                                            if (!mob.Leader && mob.FollowsBy == -1 && mob.VNum == followerVNum)
-                                            {
-                                                mob.FollowsBy = leaderVNum;
-                                                success = true;
-                                                break;
-                                            }
-                                        }
-                                    }
-
-                                    if (!success)
-                                    {
-                                        //кривой файл 
-                                        additionalInfo += $"\nПроблема при добавлении последователя ({followerVNum}) мобу ({leaderVNum}).";
-                                    }
-                                }
+                                // A FOLLOW can precede the M of its follower; retry those once the
+                                // whole file is read, and keep only the truly unresolvable verbatim
+                                // (same-vnum groups, virtual-room leaders): the engine resolves them at reset.
+                                if (!TryFollow(roomsCollection, parts)) pendingFollows.Add(input);
                                 break;
                             case 'P': //Поместить предмет в последний загруженный предмет
+                                if (lastObjVerbatim) { KeepVerbatim(zone, input); break; }
                                 parts = input.Split(' ');
                                 part5 = GetPartOrDefault(parts, 5);
                                 lastLoadedObject.ObjectsInObject.Add(StringUtils.ToIntFast(parts[2]),
@@ -267,34 +238,38 @@ namespace DataUtils
                                                         StringUtils.ToIntFast(parts[4]));
                                 break;
                             case 'G': //Дать предмет мобу (который загружен предыдущей командой)
+                                if (lastMobVerbatim) { KeepVerbatim(zone, input); break; }
                                 parts = input.Split(' ');
                                 lastLoadedMob.AddObject(StringUtils.ToIntFast(parts[2]),
-                                                        (parts[1] == "1"),
+                                                        (StringUtils.ToIntFast(parts[1]) & 1) != 0,
                                                         StringUtils.ToIntFast(parts[5]));
+                                SetLastItemIfFlag(lastLoadedMob, parts[1]);
                                 break;
                             case 'E' when input.StartsWith("EXTRACT", StringComparison.OrdinalIgnoreCase): //Мобы, удаляемые при перезапуске
                                 ProcessMobsRemovedAtRepop(zone, input);
                                 break;
                             case 'E': //Экипировать предмет мобу (который загружен предыдущей командой)
+                                if (lastMobVerbatim) { KeepVerbatim(zone, input); break; }
                                 parts = input.Split(' ');
                                 lastLoadedMob.AddObject(StringUtils.ToIntFast(parts[2]),
-                                                        (parts[1] == "1"),
+                                                        (StringUtils.ToIntFast(parts[1]) & 1) != 0,
                                                         StringUtils.ToIntFast(parts[4]),
                                                         StringUtils.ToIntFast(parts[5]));
+                                SetLastItemIfFlag(lastLoadedMob, parts[1]);
                                 break;
                             case 'R': //Удалить предмет из комнаты
                                 parts = input.Split(' ');
                                 var roomR = roomsCollection[StringUtils.ToIntFast(parts[2]), 0];
                                 if (roomR != null)
                                 {
+                                    // LoadType carries the REMOVE command's if_flag (written back as-is).
                                     roomR.RemoovingObjects.Add(StringUtils.ToIntFast(parts[3]),
                                         0,
-                                        -1);
+                                        StringUtils.ToIntFast(parts[1]));
                                 }
                                 else
                                 {
-                                    //кривой файл 
-                                    additionalInfo += $"\nПопытка удалить моба ({parts[2]}) из отсутствующей комнаты с vnum ({parts[4]}).";
+                                    KeepVerbatim(zone, input);
                                 }
                                 break;
                             case 'D': //Установить состояние существующего выхода
@@ -336,6 +311,9 @@ namespace DataUtils
                             exit = true;
                         }
                     }
+                    foreach (string follow in pendingFollows)
+                        if (!TryFollow(roomsCollection, follow.Split(' ')))
+                            KeepVerbatim(zone, follow);
                 }
                 catch (Exception ex)
                 {
@@ -383,7 +361,7 @@ namespace DataUtils
                          MobsCollection mobsCollection, RoomsCollection roomsCollection)
         {
             var fs =
-                new FileStream(StaticData.WorldFolderPath + @"\ZON\" + zone.Number + ".zon", FileMode.Create,
+                new FileStream(Path.Combine(StaticData.WorldFolderPath, "ZON", zone.Number + ".zon"), FileMode.Create,
                                FileAccess.Write);
             var sw = new StreamWriter(fs, StaticData.CurrentEncoding) { NewLine = "\n" };
             //sw.WriteLine("* Сгенерировано BZEditor");
@@ -446,30 +424,30 @@ namespace DataUtils
             {
                 var m = mobsCollection[lm.VNum, 0];
                 var name = m?.Cases.Imen ?? "";
-                var maxInWorld = m?.MaxInWorld ?? -1;
-                string conditionFlag = (lm.ConditionFlag) ? "1" : "0";
+                var maxInWorld = CommandMax(lm, m);
+                string conditionFlag = IfFlag(lm.ConditionFlag, lm.IfFlagRaw);
                 sw.WriteLine($"M {conditionFlag} {lm.VNum} {maxInWorld} {virualRoomVnum} {lm.MaxInRoom}\t({name}");
                 if (lm.FollowsBy != -1)
                 {
                     var mf = mobsCollection[lm.FollowsBy, 0];
                     var namef = mf?.Cases.Imen ?? "";
-                    sw.WriteLine($"F {conditionFlag} {lm.VNum} {lm.FollowsBy} {lm.VNum} -1\t({namef}");
+                    sw.WriteLine($"F {FollowFlag(lm)} {virualRoomVnum} {lm.FollowsBy} {lm.VNum} -1\t({namef}");
                 }
                 foreach (MobObj moin in lm.Items)
                 {
                     var oin = objectsCollection[moin.VNum, 0];
                     var namein = oin?.Cases.Imen.ToLowerInvariant() ?? "";
-                    var conditionFlagIn = (moin.ConditionFlag) ? "1" : "0"; //Мне кажется что тут всегда 1
+                    var conditionFlagIn = IfFlag(moin.ConditionFlag, moin.IfFlagRaw); //Мне кажется что тут всегда 1
                     var prob = moin.Probability;// == 100 ? -1 : moin.Probability;
                     if (moin.ObjPos == -1)
                     {
                         // 'G' <flag> <obj_vnum> <max_in_world> <-1> <load%|-1>
-                        sw.WriteLine($"G {conditionFlagIn} {moin.VNum} {oin.MaxInWorld} -1 {prob}\t({namein}");
+                        sw.WriteLine($"G {conditionFlagIn} {moin.VNum} {oin?.MaxInWorld ?? -1} -1 {prob}\t({namein}");
                     }
                     else
                     {
                         // 'E' <flag> <obj_vnum> <max_in_world> <wear_pos> <load%|-1>
-                        sw.WriteLine($"E {conditionFlagIn} {moin.VNum} {oin.MaxInWorld} {moin.ObjPos} {prob}");
+                        sw.WriteLine($"E {conditionFlagIn} {moin.VNum} {oin?.MaxInWorld ?? -1} {moin.ObjPos} {prob}");
                     }
                 }
                 foreach (MobObjAfterDeath moin in lm.ItemsAfterDeath)
@@ -485,7 +463,7 @@ namespace DataUtils
                 {
                     var o = objectsCollection[lo.VNum, 0];
                     var name = o?.Cases.Imen.ToLowerInvariant() ?? "";
-                    sw.WriteLine($"R 0 {r.VNum} {lo.VNum} -1 -1\t({name})");
+                    sw.WriteLine($"R {(lo.LoadType > 0 ? lo.LoadType : 0)} {r.VNum} {lo.VNum} -1 -1\t({name})");
                 }
                 foreach (OperatedObj lo in r.LoadingObjectsCollection)
                 {
@@ -509,8 +487,8 @@ namespace DataUtils
                 {
                     var m = mobsCollection[lm.VNum, 0];
                     var name = m?.Cases.Imen ?? "";
-                    var maxInWorld = m?.MaxInWorld ?? -1;
-                    string conditionFlag = (lm.ConditionFlag) ? "1" : "0";
+                    var maxInWorld = CommandMax(lm, m);
+                    string conditionFlag = IfFlag(lm.ConditionFlag, lm.IfFlagRaw);
                     sw.WriteLine($"M {conditionFlag} {lm.VNum} {maxInWorld} {r.VNum} {lm.MaxInRoom}\t({name})");
                     if (lm.FollowsBy != -1)
                     {
@@ -519,24 +497,24 @@ namespace DataUtils
                         // Defer F until after every M in this room: F links two already-loaded
                         // mobs, so the leader's M must precede it (otherwise both the engine and
                         // the editor's reader drop the follow). See zone 326.
-                        followLines.Add($"F {conditionFlag} {r.VNum} {lm.FollowsBy} {lm.VNum} -1\t({namef})");
+                        followLines.Add($"F {FollowFlag(lm)} {r.VNum} {lm.FollowsBy} {lm.VNum} -1\t({namef})");
                     }
                     foreach (MobObj moin in lm.Items)
                     {
                         var oin = objectsCollection[moin.VNum, 0];
                         var namein = oin?.Cases.Imen.ToLowerInvariant() ?? "";
-                        var conditionFlagIn = (moin.ConditionFlag) ? "1" : "0"; //Мне кажется что тут всегда 1
+                        var conditionFlagIn = IfFlag(moin.ConditionFlag, moin.IfFlagRaw); //Мне кажется что тут всегда 1
                         var prob = moin.Probability;// == 100 ? -1 : moin.Probability;
 
                         if (moin.ObjPos == -1)
                         {
                             // 'G' <flag> <obj_vnum> <max_in_world> <-1> <load%|-1>
-                            sw.WriteLine($"G {conditionFlagIn} {moin.VNum} {oin.MaxInWorld} -1 {prob}\t({namein})");
+                            sw.WriteLine($"G {conditionFlagIn} {moin.VNum} {oin?.MaxInWorld ?? -1} -1 {prob}\t({namein})");
                         }
                         else
                         {
                             // 'E' <flag> <obj_vnum> <max_in_world> <wear_pos> <load%|-1>
-                            sw.WriteLine($"E {conditionFlagIn} {moin.VNum} {oin.MaxInWorld} {moin.ObjPos} {prob}\t({namein})");
+                            sw.WriteLine($"E {conditionFlagIn} {moin.VNum} {oin?.MaxInWorld ?? -1} {moin.ObjPos} {prob}\t({namein})");
                         }
                     }
                     foreach (MobObjAfterDeath moin in lm.ItemsAfterDeath)
@@ -577,9 +555,85 @@ namespace DataUtils
             zone.MobsToRemove.Add(StringUtils.ToIntFast(parts[2]), parts[1] == "1", -1);
         }
 
+        private static bool TryFollow(RoomsCollection roomsCollection, string[] parts)
+        {
+            int roomVNum = StringUtils.ToIntFast(parts[2]);
+            int leaderVNum = StringUtils.ToIntFast(parts[3]);
+            int followerVNum = StringUtils.ToIntFast(parts[4]);
+            Room roomF = roomsCollection[roomVNum, 0];
+            bool success = false;
+            if (roomF != null) //Это хитрожопие сделано из за второй строки в зоне 277
+            {
+                OperatedMob leader = null;
+                foreach (OperatedMob mob in roomF.LoadingMobsCollection)
+                {
+                    //Ищем лидера в комнате
+                    if (mob.VNum == leaderVNum && mob.Leader)
+                    {
+                        leader = mob;
+                        break;
+                    }
+                }
+                if (leader == null)
+                {
+                    //если лидера нет, ищем потенциального лидера
+                    foreach (OperatedMob mob in roomF.LoadingMobsCollection)
+                    {
+                        if (mob.VNum == leaderVNum && !mob.Leader && mob.FollowsBy == -1)
+                        {
+                            leader = mob;
+                            leader.Leader = true;
+                            break;
+                        }
+                    }
+                }
+                if (leader != null)
+                {
+                    foreach (OperatedMob mob in roomF.LoadingMobsCollection)
+                    {
+                        if (!mob.Leader && mob.FollowsBy == -1 && mob.VNum == followerVNum)
+                        {
+                            mob.FollowsBy = leaderVNum;
+                            mob.FollowIfFlagRaw = StringUtils.ToIntFast(parts[1]);
+                            success = true;
+                            break;
+                        }
+                    }
+                }
+
+            }
+            return success;
+        }
+
+        private static void KeepVerbatim(Zone zone, string letterLine) =>
+            zone.UnmodeledCommands.Add(YamlFormatProvider.ToEngineCommand(letterLine.Trim()));
+
+        private static string IfFlag(bool condition, int raw) =>
+            ((raw >= 0 ? raw & ~1 : 0) | (condition ? 1 : 0)).ToString();
+
+        // FOLLOW keeps its own if_flag when it was read; a follow added in the UI inherits the
+        // mob's condition, as before.
+        private static string FollowFlag(OperatedMob lm) =>
+            lm.FollowIfFlagRaw >= 0 ? lm.FollowIfFlagRaw.ToString() : IfFlag(lm.ConditionFlag, lm.IfFlagRaw);
+
+        private static void SetLastItemIfFlag(OperatedMob mob, string flag)
+        {
+            if (mob.Items.Count > 0 && mob.Items[mob.Items.Count - 1] is MobObj item)
+                item.IfFlagRaw = StringUtils.ToIntFast(flag);
+        }
+
+        private static int CommandMax(OperatedMob lm, Mob m)
+        {
+            int mobMax = m?.MaxInWorld ?? -1;
+            if (lm.CommandMaxInWorld <= 0) return mobMax;
+            return mobMax > 0 ? Math.Min(lm.CommandMaxInWorld, mobMax) : lm.CommandMaxInWorld;
+        }
+
         private static string GetPartOrDefault(string[] parts, int index, string defaultValue = "-1")
         {
-            return parts.Length > index + 1 ? parts[index] : defaultValue;
+            // Was 'index + 1': it needed a trailing token after the field, so engine strings
+            // (no trailing comment) lost every load% and every O/P command loaded at 100%.
+            return parts.Length > index ? parts[index].Split('\t')[0] : defaultValue;
         }
     }
 }
