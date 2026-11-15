@@ -45,6 +45,7 @@
     <Compile Include="YamlDiceTests.cs" />
     <Compile Include="NamedIntMapTests.cs" />
     <Compile Include="DataPreservationTests.cs" />
+    <Compile Include="EngineWorldFidelityTests.cs" />
     <Compile Include="ZoneDiscoveryTests.cs" />
     <Compile Include="FileEncodingResolverTests.cs" />
     <Compile Include="ProdWorldIntegrationTests.cs" />

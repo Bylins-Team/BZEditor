@@ -35,8 +35,11 @@ namespace DataUtils.YamlMappers
             yaml.ActionDesc = string.IsNullOrWhiteSpace(obj.ActionDesc) ? null : obj.ActionDesc;
             yaml.Type = EngineCodec.EnumName(obj.Type, EngineDictionaries.ObjTypes);
 
-            // Flag bitvectors as engine symbolic names
-            foreach (var name in EngineCodec.FlagsToNames(obj.Affects, EngineDictionaries.ExtraFlags))
+            // Flag bitvectors as engine symbolic names. Model naming is historical (it mirrors the
+            // CircleMUD reader): Obj.ExctraEffects = extra flags, Obj.Affects = item affects
+            // (EEquipmentAffect), Obj.TrenSkill = spec_param. Obj.MagicFlags is the UI-only
+            // magic-ingredient checklist and has no YAML key.
+            foreach (var name in EngineCodec.FlagsToNames(obj.ExctraEffects, EngineDictionaries.ExtraFlags))
                 yaml.ExtraFlags.Add(name);
             foreach (var name in EngineCodec.FlagsToNames(obj.WearFlags, EngineDictionaries.WearFlags))
                 yaml.WearFlags.Add(name);
@@ -44,7 +47,7 @@ namespace DataUtils.YamlMappers
                 yaml.NoFlags.Add(name);
             foreach (var name in EngineCodec.FlagsToNames(obj.CantUse, EngineDictionaries.AntiFlags))
                 yaml.AntiFlags.Add(name);
-            foreach (var name in EngineCodec.FlagsToNames(obj.MagicFlags, EngineDictionaries.AffectFlags))
+            foreach (var name in EngineCodec.FlagsToNames(obj.Affects, EngineDictionaries.EquipmentAffects))
                 yaml.AffectFlags.Add(name);
 
             yaml.Material = obj.Material;
@@ -64,7 +67,7 @@ namespace DataUtils.YamlMappers
             yaml.Cost = obj.Price;
             yaml.RentOff = obj.RentInv;
             yaml.RentOn = obj.RentWear;
-            yaml.SpecParam = 0; // Not in current model
+            yaml.SpecParam = obj.TrenSkill;
             yaml.MaxDurability = obj.MaxDurab;
             yaml.CurDurability = obj.CurrDurab;
             yaml.Timer = obj.Timer;
@@ -134,11 +137,11 @@ namespace DataUtils.YamlMappers
             obj.Type = EngineCodec.EnumValue(yaml.Type, EngineDictionaries.ObjTypes, 12);
 
             // Flag bitvectors from engine names back to asciiflag strings
-            obj.Affects = EngineCodec.NamesToFlags(yaml.ExtraFlags, EngineDictionaries.ExtraFlags);
+            obj.ExctraEffects = EngineCodec.NamesToFlags(yaml.ExtraFlags, EngineDictionaries.ExtraFlags);
             obj.WearFlags = EngineCodec.NamesToFlags(yaml.WearFlags, EngineDictionaries.WearFlags);
             obj.CantTouch = EngineCodec.NamesToFlags(yaml.NoFlags, EngineDictionaries.NoFlags);
             obj.CantUse = EngineCodec.NamesToFlags(yaml.AntiFlags, EngineDictionaries.AntiFlags);
-            obj.MagicFlags = EngineCodec.NamesToFlags(yaml.AffectFlags, EngineDictionaries.AffectFlags);
+            obj.Affects = EngineCodec.NamesToFlags(yaml.AffectFlags, EngineDictionaries.EquipmentAffects);
 
             obj.Material = yaml.Material;
 
@@ -155,6 +158,7 @@ namespace DataUtils.YamlMappers
             obj.Price = yaml.Cost;
             obj.RentInv = yaml.RentOff;
             obj.RentWear = yaml.RentOn;
+            obj.TrenSkill = yaml.SpecParam;
             obj.MaxDurab = yaml.MaxDurability;
             obj.CurrDurab = yaml.CurDurability;
             obj.Timer = yaml.Timer;

@@ -106,6 +106,13 @@ namespace DataUtils
         }
 
         /// <summary>
+        /// MaxInWorld as it stood after the zone's reset commands were read (int.MinValue = not read).
+        /// If the builder changes MaxInWorld, the save writes the new value into every MOB command;
+        /// otherwise each command keeps its own max_in_world.
+        /// </summary>
+        public int ZoneMaxAtLoad { get; set; } = int.MinValue;
+
+        /// <summary>
         /// Максимум в мире
         /// </summary>
         public int MaxInWorld

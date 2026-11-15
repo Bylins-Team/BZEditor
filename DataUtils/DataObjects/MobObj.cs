@@ -16,6 +16,13 @@ namespace DataUtils
         }
 
         /// <summary>
+        /// The reset command's if_flag as read (-1 = not loaded). Bit 1 (CHECK_SUCCESS) is what
+        /// ConditionFlag edits; bit 2 (FLAG_PERSIST: "don't change the success state") has no UI
+        /// and is carried through here so a save does not turn 3 into 1 or 2 into 0.
+        /// </summary>
+        public int IfFlagRaw { get; set; } = -1;
+
+        /// <summary>
         /// Флаг условия загрузки
         /// </summary>
         public bool ConditionFlag

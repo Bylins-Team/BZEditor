@@ -120,9 +120,12 @@ Three layers, all under `DataUtils/`:
   - `EngineCodec` — converts the editor's bitflags to/from the engine's symbolic `kXxx` names and decodes the
     legacy "asciiflag" encoding (letter+plane-digit pairs; `bit = letterValue + 30*plane`).
   - `EngineDictionaries` — the `kName -> value` tables generated from the engine's `world/dictionaries/*.yaml`.
-    One deliberate exception: `ActionFlags` names bit 57 `kUndead` (the engine enum's name) while the engine's
-    `action_flags.yaml` still calls it `UNUSED_57`; `LegacyActionFlags` keeps that name readable, never written.
-    Any bit without a name here is silently dropped on save — `BasesFlagTablesTests` guards `Action.bb`.
+    One deliberate exception: bit 57 is written as `UNUSED_57` (the world dictionary's name — the engine's YAML
+    loader drops names it does not know), while `kUndead` (the engine enum's name) stays readable via
+    `LegacyActionFlags`. Item `affect_flags` use `EquipmentAffects` (the engine's `EEquipmentAffect`), **not**
+    the mob `AffectFlags` table. A bit without a name round-trips as `UNUSED_<n>`, like the engine writes it.
+  - Obj model field names are historical: `ExctraEffects` = `extra_flags`, `Affects` = item `affect_flags`,
+    `TrenSkill` = `spec_param`; `MagicFlags` is the UI-only ingredient checklist with no YAML key.
   - `TriggerTypeCodec` — trigger types are the exception to "one name per bit": the engine reuses bits per
     attach type (bit 4 is `kMobAct` / `kObjFight` / `kWldEnterPc`), so the name written depends on the
     trigger's attach type — own-prefix name, else an unprefixed common one (`kRandomGlobal`, `kRandom`,
@@ -148,6 +151,12 @@ otherwise. Pure-ASCII files resolve to UTF-8 harmlessly. Every `YamlFormatProvid
 `DefaultEncoding`. So a koi8-r world opens correctly and is silently upgraded to UTF-8 on the next save — which
 means **a save is not byte-reversible on legacy worlds**. `FileEncodingResolverTests` covers the decision table;
 `ProdWorldIntegrationTests` covers the load + stable-resave path over a whole world.
+
+`EngineWorldFidelityTests` load files shaped like the **engine's** output (keyword reset commands, item
+flags, `typeA_zones`, lua triggers) — the round-trip tests start from the editor's own save and cannot see a
+field misread on the first load. Reset commands are normalized from the engine's keyword form to the `.zon`
+layout on load and written back in the engine's form; what the room model cannot hold (TRIGGER/VAR, spawns
+into rooms outside the zone, unresolvable FOLLOW) is kept verbatim in `Zone.UnmodeledCommands`.
 
 `DataPreservationTests` exists because fields were being silently dropped on save. When adding a field to a
 model, add a round-trip assertion there — it runs in CI with no world data.

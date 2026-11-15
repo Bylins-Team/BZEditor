@@ -75,6 +75,7 @@ namespace DataUtils.YamlModels
         /// <summary>
         /// Type A zone list
         /// </summary>
+        // Engine key is typeA_zones, not type_a_zones: see YamlFormatProvider.EngineNamingConvention.
         public List<int> TypeAZones { get; set; }
 
         /// <summary>

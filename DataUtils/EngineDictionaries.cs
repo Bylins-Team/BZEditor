@@ -234,11 +234,12 @@ namespace DataUtils.YamlMappers
             { "kNoHammer", 54 },
             { "kMentalShadow", 55 },
             { "kSummoned", 56 },
-            // The engine enum has kUndead at 57 (B1, "нежить"), but its world dictionary
-            // action_flags.yaml still lists UNUSED_57 there, so the engine saves the flag
-            // under that name and ignores kUndead until the dictionary catches up. Write the
-            // enum's name; LegacyActionFlags keeps UNUSED_57 readable.
-            { "kUndead", 57 },
+            // The engine enum has kUndead at 57 (B1, "нежить"), but the world dictionary
+            // action_flags.yaml (the only thing the YAML loader consults) still lists UNUSED_57,
+            // and an unknown name is silently dropped -- a mob saved as kUndead loses the flag.
+            // Write the dictionary's name; kUndead stays readable via LegacyActionFlags. Swap the
+            // two back once the world dictionary gains kUndead.
+            { "UNUSED_57", 57 },
             { "kFireBreath", 60 },
             { "kGasBreath", 61 },
             { "kFrostBreath", 62 },
@@ -260,12 +261,12 @@ namespace DataUtils.YamlMappers
         };
 
         /// <summary>
-        /// Action flag names accepted on load and never written: the engine's world dictionary
-        /// has no kUndead yet and saves bit 57 as UNUSED_57.
+        /// Action flag names accepted on load and never written: kUndead is the engine enum's
+        /// name for bit 57, which the world dictionary still calls UNUSED_57.
         /// </summary>
         public static readonly Dictionary<string, int> LegacyActionFlags = new Dictionary<string, int>
         {
-            { "UNUSED_57", 57 },
+            { "kUndead", 57 },
         };
 
         public static readonly Dictionary<string, int> AffectFlags = new Dictionary<string, int>
@@ -359,6 +360,62 @@ namespace DataUtils.YamlMappers
             { "kNoCharge", 86 },
             { "kInjured", 87 },
             { "kFrenzy", 88 },
+        };
+
+        /// <summary>
+        /// Item <c>affect_flags</c>: the engine's <c>EEquipmentAffect</c> (equipment_affects.h), which is NOT
+        /// the mob <see cref="AffectFlags"/> table -- different names (kDetectInvisibility vs kDetectInvisible)
+        /// and different bit numbering (no kGroup, bits 11-12 retired). The engine reads item affects with
+        /// ITEM_BY_NAME&lt;EEquipmentAffect&gt;, so writing mob names here makes it drop them. Index =
+        /// plane*30+bit, same as the asciiflag encoding the editor and Bases/Affect.bb use.
+        /// </summary>
+        public static readonly Dictionary<string, int> EquipmentAffects = new Dictionary<string, int>
+        {
+            { "kBlindness", 0 },
+            { "kInvisibility", 1 },
+            { "kDetectAlign", 2 },
+            { "kDetectInvisibility", 3 },
+            { "kDetectMagic", 4 },
+            { "kDetectLife", 5 },
+            { "kWaterWalk", 6 },
+            { "kSanctuary", 7 },
+            { "kCurse", 8 },
+            { "kInfravision", 9 },
+            { "kPoison", 10 },
+            { "kSleep", 13 },
+            { "kNoTrack", 14 },
+            { "kBless", 15 },
+            { "kSneak", 16 },
+            { "kHide", 17 },
+            { "kHold", 18 },
+            { "kFly", 19 },
+            { "kSilence", 20 },
+            { "kAwareness", 21 },
+            { "kBlink", 22 },
+            { "kNoFlee", 23 },
+            { "kSingleLight", 24 },
+            { "kHolyLight", 25 },
+            { "kHolyDark", 26 },
+            { "kDetectPoison", 27 },
+            { "kSlow", 28 },
+            { "kHaste", 29 },
+            { "kWaterBreath", 30 },
+            { "kHaemorrhage", 31 },
+            { "kDisguising", 32 },
+            { "kShield", 33 },
+            { "kAirShield", 34 },
+            { "kFireShield", 35 },
+            { "kIceShield", 36 },
+            { "kMagicGlass", 37 },
+            { "kStoneHand", 38 },
+            { "kPrismaticAura", 39 },
+            { "kAirAura", 40 },
+            { "kFireAura", 41 },
+            { "kIceAura", 42 },
+            { "kDeafness", 43 },
+            { "kComamnder", 44 },
+            { "kEarthAura", 45 },
+            { "kCloudly", 46 },
         };
 
         public static readonly Dictionary<string, int> ExtraFlags = new Dictionary<string, int>

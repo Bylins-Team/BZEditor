@@ -2,6 +2,9 @@
 {
     public sealed class Trigger : BaseDataObject
     {
+        /// <summary>Script language from the world file (null = engine default "dg"); no UI.</summary>
+        public string Language { get; set; }
+
         private int addflag;
         private string arg = string.Empty;
         private string body = string.Empty;

@@ -21,7 +21,7 @@ namespace DataUtils.YamlMappers
                 Mode = zone.Level,
                 ZoneType = zone.Type,
                 ZoneGroup = zone.OptimalCharsInGroup,
-                Entrance = zone.Number * 100, // Default entrance
+                Entrance = zone.Entrance >= 0 ? zone.Entrance : zone.Number * 100, // keep the loaded entrance
                 Lifespan = zone.RepopTimer,
                 ResetMode = zone.RepopType,
                 ResetIdle = zone.ResetIdle,
@@ -86,6 +86,7 @@ namespace DataUtils.YamlMappers
             target.RepopType = yaml.ResetMode;
             target.ResetIdle = yaml.ResetIdle;
             target.Test = yaml.UnderConstruction != 0;
+            target.Entrance = yaml.Entrance;
 
             // Metadata
             if (yaml.Metadata != null)
